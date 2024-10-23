@@ -7,7 +7,7 @@ public class SetObjectGrabable : MonoBehaviour
 {
     [SerializeField] private int _actionId = -1;
     [SerializeField] private InteractionLayerMask interactLayers = 2;
-    [SerializeField] private bool _dynamicAttach = true;
+    [SerializeField] private bool _dynamicAttach = true, _itemSelected;
 
     void Start()
     {
@@ -15,6 +15,8 @@ public class SetObjectGrabable : MonoBehaviour
         grabScript.interactionLayers = interactLayers;
         grabScript.useDynamicAttach = _dynamicAttach;
         grabScript.activated.AddListener(delegate { SetAction(_actionId); });
+        grabScript.selectEntered.AddListener(delegate { SetSelected(true); });
+        grabScript.selectExited.AddListener(delegate { SetSelected(false); });
     }
 
     private void SetAction(int id)
@@ -29,4 +31,10 @@ public class SetObjectGrabable : MonoBehaviour
                 break;
         }
     }
+    private void SetSelected(bool isSelected)
+    {
+        _itemSelected = isSelected;
+    }
+
+    public bool ItemIsSelected() { return _itemSelected; }
 }
