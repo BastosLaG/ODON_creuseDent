@@ -7,10 +7,13 @@ public class SetObjectGrabable : MonoBehaviour
 {
     [SerializeField] private int _actionId = -1;
     [SerializeField] private InteractionLayerMask interactLayers = 2;
-    [SerializeField] private bool _dynamicAttach = true, _itemSelected;
+    [SerializeField] private bool _dynamicAttach = true, _itemSelected, _itemKinematic, _constrainRBody;
 
     void Start()
     {
+        Rigidbody rb = transform.AddComponent<Rigidbody>();
+        rb.isKinematic = _itemKinematic;
+        rb.constraints = _constrainRBody ? RigidbodyConstraints.FreezeAll : RigidbodyConstraints.None;
         XRGrabInteractable grabScript = transform.AddComponent<XRGrabInteractable>();
         grabScript.interactionLayers = interactLayers;
         grabScript.useDynamicAttach = _dynamicAttach;
