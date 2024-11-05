@@ -7,7 +7,7 @@ public class SetObjectGrabable : MonoBehaviour
 {
     [SerializeField] private int _actionId = -1;
     [SerializeField] private InteractionLayerMask interactLayers = 2;
-    [SerializeField] private bool _dynamicAttach = true, _itemSelected, _itemKinematic, _constrainRBody;
+    [SerializeField] private bool _dynamicAttach = true, _itemSelected, _itemKinematic, _constrainRBody, _multipleGrab;
 
     void Start()
     {
@@ -16,6 +16,7 @@ public class SetObjectGrabable : MonoBehaviour
         rb.constraints = _constrainRBody ? RigidbodyConstraints.FreezeAll : RigidbodyConstraints.None;
         XRGrabInteractable grabScript = transform.AddComponent<XRGrabInteractable>();
         grabScript.interactionLayers = interactLayers;
+        grabScript.selectMode = _multipleGrab ? InteractableSelectMode.Multiple : InteractableSelectMode.Single;
         grabScript.useDynamicAttach = _dynamicAttach;
         grabScript.activated.AddListener(delegate { SetAction(_actionId); });
         grabScript.selectEntered.AddListener(delegate { SetSelected(true); });
