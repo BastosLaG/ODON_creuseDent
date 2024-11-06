@@ -11,7 +11,11 @@ public class SetObjectGrabable : MonoBehaviour
 
     void Start()
     {
-        Rigidbody rb = transform.AddComponent<Rigidbody>();
+        Rigidbody rb = null;
+        if (transform.GetComponent<Rigidbody>() != null)
+            rb = transform.GetComponent<Rigidbody>();
+        else
+            rb = transform.AddComponent<Rigidbody>();
         rb.isKinematic = _itemKinematic;
         rb.constraints = _constrainRBody ? RigidbodyConstraints.FreezeAll : RigidbodyConstraints.None;
         XRGrabInteractable grabScript = transform.AddComponent<XRGrabInteractable>();
