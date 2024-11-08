@@ -16,7 +16,7 @@ public class UiWebConnection : MonoBehaviour
     private void Start()
     {
         connectionButt.onClick.AddListener(TryToLogin);
-        bddWeb.OnReturnedError.AddListener(ReturnError);
+        bddWeb.OnUserLogin.AddListener(ReturnError);
     }
 
     private void TryToLogin()

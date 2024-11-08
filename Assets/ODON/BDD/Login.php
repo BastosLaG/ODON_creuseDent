@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 echo "Connected successfully <br>";
 
 // Use prepared statement to avoid SQL injection
-$sql = "SELECT UserName, UserPassword FROM user WHERE UserName = ? OR UserMail = ?";
+$sql = "SELECT UserID, UserName, UserPassword FROM user WHERE UserName = ? OR UserMail = ?";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $loginUser, $loginUser); // "ss" means two string parameters
@@ -30,9 +30,8 @@ $result = $stmt->get_result();
 if ($result->num_rows > 0) {
     // Output data for each row
     while ($row = $result->fetch_assoc()) {
-
         if ($row["UserPassword"] == $loginPass) {
-            echo "Login Success";
+            echo "Login Success" . $row["UserID"];
         } else {
             echo "Password incorrect";
         }
