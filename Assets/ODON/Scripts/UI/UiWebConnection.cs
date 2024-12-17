@@ -5,7 +5,6 @@ using TMPro;
 
 public class UiWebConnection : MonoBehaviour
 {
-    [SerializeField] private Web bddWeb;
     [SerializeField] private TextMeshProUGUI headerText;
     [SerializeField] private TextMeshProUGUI usernameText;
     [SerializeField] private TextMeshProUGUI passwordText;
@@ -21,16 +20,16 @@ public class UiWebConnection : MonoBehaviour
     {
         changeInterfaceButt.onClick.AddListener(Changeinterface);
         connectionButt.onClick.AddListener(TryToLogin);
-        bddWeb.OnUserLogin.AddListener(ReturnError);
+        Web.OnUserLogin.AddListener(ReturnError);
     }
 
     private void TryToLogin()
     {
-        bddWeb.TryConnection(usernameText.text, passwordText.text);
+        StartCoroutine(Web.Login(usernameText.text, passwordText.text));
     }
     private void TryToRegister()
     {
-        bddWeb.TryRegister(usernameText.text, passwordText.text);
+        StartCoroutine(Web.Register(usernameText.text, passwordText.text));
     }
 
     private void ReturnError(string error)
