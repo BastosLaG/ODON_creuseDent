@@ -77,8 +77,11 @@ namespace Keyboard
         public UnityEvent OnKeyPressed;
         public UnityEvent OnEnterPressed;
 
+        private int outputInitPos;
+
         private void Awake()
         {
+            outputInitPos = Mathf.Min(outputField.selectionAnchorPosition, outputField.selectionFocusPosition);
             shiftButtonColors = shiftButton.colors;
 
             CheckTextLength();
@@ -290,11 +293,11 @@ namespace Keyboard
                 UpdateShiftButtonAppearance();
                 onKeyboardModeChanged?.Invoke();
             }
-
             keyHasBeenPressed = false;
         }
 
-        public void SetText(string text) {outputField.Select(); outputField.text = text; outputField.Select(); }
+        public void ResetText() { outputField.text = ""; outputField.selectionAnchorPosition = outputField.selectionFocusPosition = outputInitPos; }
+        public void SetText(string text) { foreach (char letter in text) { KeyPress("" + letter); } }
         public string GetText() => outputField.text;
 
         public bool IsShiftActive() => shiftActive;

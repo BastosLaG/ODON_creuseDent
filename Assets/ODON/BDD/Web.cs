@@ -14,7 +14,8 @@ public class Web : MonoBehaviour
     public void Start()
     {
         PlayerPrefs.SetInt("UserID", 1);
-        StartCoroutine(NewDamInstall("Pose Test 1"));
+        //StartCoroutine(NewDamInstall("Pose Test 1"));
+        StartCoroutine(Register("MathisD", "newPassword"));
     }
 
     public void TryConnection(string username, string password)
@@ -29,6 +30,32 @@ public class Web : MonoBehaviour
         form.AddField("loginPass", password);
 
         using UnityWebRequest www = UnityWebRequest.Post(webAddress + "Login.php", form);
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError(www.error);
+        }
+        else
+        {
+            string data = www.downloadHandler.text;
+            OnUserLogin.Invoke(data);
+            Debug.Log(data);
+            if (data.Contains("Login Success"))
+            {
+                int id = int.Parse(data.Split("Login Success", StringSplitOptions.None)[1]);
+                PlayerPrefs.SetInt("UserID", id);
+            }
+        }
+    }
+
+    IEnumerator Register(string username, string password)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("loginUser", username);
+        form.AddField("loginPass", password);
+
+        using UnityWebRequest www = UnityWebRequest.Post(webAddress + "Register.php", form);
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success)

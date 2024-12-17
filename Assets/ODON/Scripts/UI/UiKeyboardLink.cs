@@ -13,7 +13,7 @@ public class UiKeyboardLink : MonoBehaviour
     private void Start()
     {
         keyboard.OnKeyPressed.AddListener(UpdateUiText);
-        keyboard.OnEnterPressed.AddListener(delegate { SetKeyboardVisibility(false);});
+        keyboard.OnEnterPressed.AddListener(delegate { SetKeyboardVisibility(false); });
         SetKeyboardVisibility(false);
         foreach (var button in buttons)
         {
@@ -30,7 +30,11 @@ public class UiKeyboardLink : MonoBehaviour
     {
         selectedButtonText = getButtonText(button.transform);
         SetKeyboardVisibility(true);
-        keyboard.SetText(selectedButtonText.text);
+        keyboard.ResetText();
+        if (selectedButtonText.text.Length > 2)
+        {
+            keyboard.SetText(selectedButtonText.text);
+        }
     }
 
     private void UpdateUiText()

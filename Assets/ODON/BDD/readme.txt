@@ -11,6 +11,7 @@ au niveau de Apache et de MySQL.
 
 Etape 3:
 Mettre la bdd sur phpmyadmin:
+ - Aller sur http://localhost/phpmyadmin/
  - Cliquer sur nouvelle table puis sur l'onglet exporter
  - Selectionner le fichier sql mis dans Asset > ODON > BDD > odonbdd.sql
  - Descendre tout en bas puis cliquer sur importer

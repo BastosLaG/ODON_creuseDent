@@ -6,8 +6,8 @@ $password = "";
 $dbname = "odonbdd";
 
 // User variables (sanitize inputs)
-$loginUser = $_POST["loginUser"];
-$loginPass = $_POST["loginPass"];
+$loginUser = trim($_POST["loginUser"]);
+$loginPass = trim($_POST["loginPass"]);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -30,8 +30,9 @@ $result = $stmt->get_result();
 if ($result->num_rows > 0) {
     // Output data for each row
     while ($row = $result->fetch_assoc()) {
-        if ($row["UserPassword"] == $loginPass) {
-            echo "Login Success" . $row["UserID"];
+        // Verify the entered password against the stored hash
+        if (password_verify($loginPass, $row["UserPassword"])) {
+            echo "Login Success, UserID: " . $row["UserID"];
         } else {
             echo "Password incorrect";
         }
