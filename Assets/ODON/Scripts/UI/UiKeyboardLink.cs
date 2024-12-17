@@ -2,13 +2,14 @@ using Keyboard;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class UiKeyboardLink : MonoBehaviour
 {
     [SerializeField] private KeyboardManager keyboard;
     [SerializeField] private List<Button> buttons;
 
-    private Text selectedButtonText;
+    private TextMeshProUGUI selectedButtonText;
 
     private void Start()
     {
@@ -45,17 +46,17 @@ public class UiKeyboardLink : MonoBehaviour
         }
     }
 
-    private Text getButtonText(Transform parent)
+    private TextMeshProUGUI getButtonText(Transform parent)
     {
         foreach (Transform child in parent)
         {
-            if (child.GetComponent<Text>())
+            if (child.GetComponent<TextMeshProUGUI>())
             {
-                return child.GetComponent<Text>();
+                return child.GetComponent<TextMeshProUGUI>();
             }
             else
             {
-                Text result = getButtonText(child);
+                TextMeshProUGUI result = getButtonText(child);
                 if (result != null)
                 {
                     return result;

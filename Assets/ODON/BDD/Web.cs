@@ -13,14 +13,16 @@ public class Web : MonoBehaviour
 
     public void Start()
     {
-        PlayerPrefs.SetInt("UserID", 1);
-        //StartCoroutine(NewDamInstall("Pose Test 1"));
-        StartCoroutine(Register("MathisD", "newPassword"));
     }
 
     public void TryConnection(string username, string password)
     {
         StartCoroutine(Login(username, password));
+    }
+
+    public void TryRegister(string username, string password)
+    {
+        StartCoroutine(Register(username, password));
     }
 
     IEnumerator Login(string username, string password)
@@ -45,6 +47,7 @@ public class Web : MonoBehaviour
             {
                 int id = int.Parse(data.Split("Login Success", StringSplitOptions.None)[1]);
                 PlayerPrefs.SetInt("UserID", id);
+                print(PlayerPrefs.GetInt("UserID"));
             }
         }
     }

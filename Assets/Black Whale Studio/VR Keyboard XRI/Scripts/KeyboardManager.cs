@@ -297,7 +297,7 @@ namespace Keyboard
         }
 
         public void ResetText() { outputField.text = ""; outputField.selectionAnchorPosition = outputField.selectionFocusPosition = outputInitPos; }
-        public void SetText(string text) { foreach (char letter in text) { KeyPress("" + letter); } }
+        public void SetText(string text) { foreach (char letter in text) { shiftActive = char.IsUpper(letter);  KeyPress("" + letter); } }
         public string GetText() => outputField.text;
 
         public bool IsShiftActive() => shiftActive;
