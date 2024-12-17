@@ -29,31 +29,32 @@ public class TakeAccessory : MonoBehaviour
     private bool isLeftHand = false;
     private bool isRightHand = false;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        // If the object is not a glove box, proceed with generic pickup
-        if (!isGloves && other.tag == "Player")
-        {
+    private void OnTriggerEnter(Collider other) {
+        
+        if (!isGloves && other.tag == "Player") {
             HandlePickup(other);
         }
-        else
-        {
-            // Vérifie si c'est la main droite ou gauche qui entre en collision
-            if (other.name == "RightHand" && rightHandTarget != null)
-            {
+        else {
+            if (other.name == "RightHand" && rightHandTarget != null) {
                 EquipGlove(rightHandTarget);
-                Debug.Log("Equipement ajouté à la main droite");
+                Debug.Log("Équipement ajouté à la main droite");
                 isRightHand = true;
+
+                if (isRightHand) {
+                    Debug.Log("La main droite a bien ramassé cet accessoire.");
+                }
             }
-            else if (other.name == "LeftHand" && leftHandTarget != null)
-            {
+            else if (other.name == "LeftHand" && leftHandTarget != null) {
                 EquipGlove(leftHandTarget);
-                Debug.Log("Equipement ajouté à la main gauche");
+                Debug.Log("Équipement ajouté à la main gauche");
                 isLeftHand = true;
+
+                if (isLeftHand) {
+                    Debug.Log("La main gauche a bien ramassé cet accessoire.");
+                }
             }
         }
     }
-
     private void HandlePickup(Collider other, Transform customTarget = null)
     {
         Debug.Log("Take accessory");
