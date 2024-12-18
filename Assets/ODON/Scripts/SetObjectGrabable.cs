@@ -43,6 +43,5 @@ public class SetObjectGrabable : MonoBehaviour
     {
         _itemSelected = isSelected;
     }
-
     public bool ItemIsSelected() { return _itemSelected; }
 }
