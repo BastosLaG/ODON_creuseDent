@@ -76,12 +76,11 @@ public static class Web
         else
         {
             string data = www.downloadHandler.text;
-            OnDamInstallCreated.Invoke(data);
-            Debug.Log(data);
             if (data.Contains("Success"))
             {
-                int id = int.Parse(data.Split("Success", StringSplitOptions.None)[1]);
+                int id = int.Parse(data.Split("Success : ", StringSplitOptions.None)[1]);
                 PlayerPrefs.SetInt("installID", id);
+                OnDamInstallCreated.Invoke(data);
             }
         }
     }
@@ -89,8 +88,8 @@ public static class Web
     public static IEnumerator InstallStep(string stepname)
     {
         WWWForm form = new WWWForm();
-        form.AddField("stepName", stepname);
-        form.AddField("dentalDamInstall", PlayerPrefs.GetInt("dentalDamID"));
+        form.AddField("StepName", stepname);
+        form.AddField("dentalDamInstall", PlayerPrefs.GetInt("installID"));
 
         using UnityWebRequest www = UnityWebRequest.Post(webAddress + "Install.php", form);
         yield return www.SendWebRequest();
@@ -103,21 +102,20 @@ public static class Web
         {
             string data = www.downloadHandler.text;
             OnInstallStepCreated.Invoke(data);
-            Debug.Log(data);
             if (data.Contains("Success"))
             {
-                int id = int.Parse(data.Split("Success", StringSplitOptions.None)[1]);
-                PlayerPrefs.SetInt("stepID", id);
+                int id = int.Parse(data.Split("Success : ", StringSplitOptions.None)[1]);
+                PlayerPrefs.SetInt("stepID"+id, id);
             }
         }
     }
 
-    public static IEnumerator StepMistake(string mistakeName)
+    public static IEnumerator StepMistake(string mistakeName, int installId)
     {
 
         WWWForm form = new WWWForm();
         form.AddField("mistakeName", mistakeName);
-        form.AddField("InstallStep", PlayerPrefs.GetInt("InstallStepID"));
+        form.AddField("InstallStep", PlayerPrefs.GetInt("stepID" + installId));
 
         using UnityWebRequest www = UnityWebRequest.Post(webAddress + "Mistake.php", form);
         yield return www.SendWebRequest();
@@ -129,7 +127,7 @@ public static class Web
         else
         {
             OnStepMistakeCreated.Invoke(www.downloadHandler.text);
-            Debug.Log(www.downloadHandler.text);
+            //Debug.Log(www.downloadHandler.text);
         }
     }
 }
