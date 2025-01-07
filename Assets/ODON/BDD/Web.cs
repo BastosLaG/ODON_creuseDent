@@ -60,6 +60,7 @@ public static class Web
         }
     }
 
+    //CREATE THE NEW DAM INSTALL
     public static IEnumerator NewDamInstall(string installname)
     {
         WWWForm form = new WWWForm();
@@ -85,6 +86,29 @@ public static class Web
         }
     }
 
+    //UPDATE THE NEW DAM INSTALL
+    public static IEnumerator UpdateDamInstall(string installTime)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("installID", PlayerPrefs.GetInt("installID"));
+        form.AddField("CompletTime", installTime);
+        form.AddField("user", PlayerPrefs.GetInt("UserID"));
+
+        using UnityWebRequest www = UnityWebRequest.Post(webAddress + "PoseUpdate.php", form);
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError(www.error);
+        }
+        else
+        {
+            string data = www.downloadHandler.text;
+            Debug.Log("UpdateDamInstall : " + data);
+        }
+    }
+
+    // CREATE INSTALL STEP FOR THE DAMINSTALL
     public static IEnumerator InstallStep(string stepname)
     {
         WWWForm form = new WWWForm();
@@ -102,20 +126,38 @@ public static class Web
         {
             string data = www.downloadHandler.text;
             OnInstallStepCreated.Invoke(data);
-            if (data.Contains("Success"))
-            {
-                int id = int.Parse(data.Split("Success : ", StringSplitOptions.None)[1]);
-                PlayerPrefs.SetInt("stepID"+id, id);
-            }
         }
     }
 
+    // UPDATE STEP OF DAMINSTALL
+    public static IEnumerator UpdateStep(string stepname, string stepTime)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("StepName", stepname);
+        form.AddField("dentalDamInstall", PlayerPrefs.GetInt("installID"));
+        form.AddField("StepCompletTime", stepTime);
+
+        using UnityWebRequest www = UnityWebRequest.Post(webAddress + "InstallUpdate.php", form);
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError(www.error);
+        }
+        else
+        {
+            string data = www.downloadHandler.text;
+            Debug.Log("Updatestep : " + data);
+        }
+    }
+
+    // CREATE NEW MISTAKE WITH NAME AND THE INSTALLDAM KEY
     public static IEnumerator StepMistake(string mistakeName, int installId)
     {
 
         WWWForm form = new WWWForm();
         form.AddField("mistakeName", mistakeName);
-        form.AddField("InstallStep", PlayerPrefs.GetInt("stepID" + installId));
+        form.AddField("installID", PlayerPrefs.GetInt("installID"));
 
         using UnityWebRequest www = UnityWebRequest.Post(webAddress + "Mistake.php", form);
         yield return www.SendWebRequest();

@@ -27,22 +27,9 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
-    // If the step already exists, we fetch the StepDoneNumber and increment it
+    // If the step already exists, no update, we simply do nothing here.
     $row = $result->fetch_assoc();
-    $stepDoneNumber = $row['StepDoneNumber'];
-    
-    // Update the existing step with the incremented StepDoneNumber
-    $sql2 = "UPDATE installstep SET StepDoneNumber = ? WHERE StepID = ?";
-    $stmt2 = $conn->prepare($sql2);
-    $stmt2->bind_param("ii", $stepDoneNumber, $row['StepID']);
-    
-    if ($stmt2->execute()) {
-        echo "Install step exists, Success : " . $row["StepID"];
-    } else {
-        echo "Error updating StepDoneNumber: " . $stmt2->error . "<br>";
-    }
-    
-    $stmt2->close(); // Close the second statement
+    echo "Install step exists, no changes needed. StepID: " . $row["StepID"];
 } else {
     // If the step doesn't exist, we create a new entry
     $stepDoneNumber = 0;
@@ -55,7 +42,7 @@ if ($result->num_rows > 0) {
     if ($stmt3->execute()) {
         // Retrieve the inserted StepID
         $stepID = $conn->insert_id;
-        echo "New install step created with StepID, Success : " . $stepID;
+        echo "New install step created with StepID: " . $stepID;
     } else {
         echo "Error inserting new step: " . $stmt3->error . "<br>";
     }
