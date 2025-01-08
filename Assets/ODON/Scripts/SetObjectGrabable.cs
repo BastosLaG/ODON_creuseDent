@@ -1,7 +1,8 @@
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class SetObjectGrabable : MonoBehaviour
 {
@@ -9,16 +10,20 @@ public class SetObjectGrabable : MonoBehaviour
     [SerializeField] private InteractionLayerMask interactLayers = 2;
     [SerializeField] private bool _dynamicAttach = true, _itemSelected, _itemKinematic, _constrainRBody, _multipleGrab;
 
+    private Vector3 grabPoint;
+    private Transform handTransform;
+
     void Start()
     {
         Rigidbody rb = null;
         if (transform.GetComponent<Rigidbody>() != null)
-            rb = transform.GetComponent<Rigidbody>();
+            rb = gameObject.GetComponent<Rigidbody>();
         else
-            rb = transform.AddComponent<Rigidbody>();
+            rb = gameObject.AddComponent<Rigidbody>();
         rb.isKinematic = _itemKinematic;
         rb.constraints = _constrainRBody ? RigidbodyConstraints.FreezeAll : RigidbodyConstraints.None;
-        XRGrabInteractable grabScript = transform.AddComponent<XRGrabInteractable>();
+
+        XRGrabInteractable grabScript = gameObject.AddComponent<XRGrabInteractable>();
         grabScript.interactionLayers = interactLayers;
         grabScript.selectMode = _multipleGrab ? InteractableSelectMode.Multiple : InteractableSelectMode.Single;
         grabScript.useDynamicAttach = _dynamicAttach;
@@ -39,9 +44,65 @@ public class SetObjectGrabable : MonoBehaviour
                 break;
         }
     }
+
     private void SetSelected(bool isSelected)
     {
         _itemSelected = isSelected;
+
+        if (isSelected)
+        {
+            handTransform = GetInteractorTransform();
+            grabPoint = handTransform.position;
+            ProvideHapticFeedback();
+        }
+        else
+        {
+            handTransform = null;
+        }
     }
-    public bool ItemIsSelected() { return _itemSelected; }
+
+    private Transform GetInteractorTransform()
+    {
+        if (TryGetComponent(out XRGrabInteractable grabScript))
+        {
+            var interactor = grabScript.firstInteractorSelecting;
+            if (interactor != null)
+                return interactor.transform;
+        }
+        return null;
+    }
+
+    private void ApplyForceAtGrabPoint()
+    {
+        if (!_itemSelected || handTransform == null) return;
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            Vector3 forceDirection = (handTransform.position - grabPoint).normalized;
+            float forceMagnitude = 10f;
+            rb.AddForceAtPosition(forceDirection * forceMagnitude, grabPoint);
+        }
+    }
+
+    private void ProvideHapticFeedback()
+    {
+        if (TryGetComponent(out XRGrabInteractable grabScript))
+        {
+            foreach (var interactor in grabScript.interactorsSelecting)
+            {
+                if (interactor is XRBaseInputInteractor controllerInteractor)
+                {
+                    controllerInteractor.SendHapticImpulse(0.5f, 0.2f); // Intensité et durée
+                }
+            }
+        }
+    }
+
+    void FixedUpdate()
+    {
+        ApplyForceAtGrabPoint();
+    }
+
+    internal bool ItemIsSelected() { return _itemSelected; }
 }
