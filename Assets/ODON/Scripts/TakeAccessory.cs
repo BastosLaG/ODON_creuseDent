@@ -5,6 +5,7 @@ public class TakeAccessory : MonoBehaviour
     [Header("Options d'équipement")]
     [Tooltip("Indique si l'objet à ramasser est une paire de gants")]
     public bool isGloves = false;
+    public bool isInHands = false;
     
     [Header("Cible par défaut")]
     [Tooltip("Cible de l'accessoire pour un ramassage générique")]
@@ -12,7 +13,13 @@ public class TakeAccessory : MonoBehaviour
     [Tooltip("Position locale de l'objet par rapport à la cible par défaut")]
     public Transform localisedTarget;
 
-    [Header("Équipement spécifique pour les mains")]
+    [Header("Équipement pour l'intérieur de la main")]
+    [Tooltip("Cible de l'accessoire pour un ramassage générique")]
+    public GameObject target_object;
+    [Tooltip("Position locale de l'objet par rapport à la cible par défaut")]
+    public Transform localisedTargetMiddleHands;
+
+    [Header("Équipement spécifique pour les gants")]
     [Tooltip("Main gauche du joueur pour attacher le gant")]
     public GameObject leftHand;
     [Tooltip("Main droite du joueur pour attacher le gant")]
