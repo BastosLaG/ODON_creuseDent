@@ -32,7 +32,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         // Verify the entered password against the stored hash
         if (password_verify($loginPass, $row["UserPassword"])) {
-            echo "Login Success, UserID: " . $row["UserID"];
+            echo "Login Success : " . $row["UserID"];
         } else {
             echo "Password incorrect";
         }
