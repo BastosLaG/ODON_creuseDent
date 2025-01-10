@@ -12,14 +12,18 @@ public class SetObjectGrabable : MonoBehaviour
 
     private Vector3 grabPoint;
     private Transform handTransform;
+    private BoxCollider boxCollider;
 
     void Start()
     {
         Rigidbody rb = null;
+        boxCollider = null;
         if (transform.GetComponent<Rigidbody>() != null)
             rb = gameObject.GetComponent<Rigidbody>();
         else
             rb = gameObject.AddComponent<Rigidbody>();
+        if (transform.GetComponent<BoxCollider>() != null)
+            boxCollider = gameObject.GetComponent<BoxCollider>();
         rb.isKinematic = _itemKinematic;
         rb.constraints = _constrainRBody ? RigidbodyConstraints.FreezeAll : RigidbodyConstraints.None;
 
@@ -54,12 +58,25 @@ public class SetObjectGrabable : MonoBehaviour
             handTransform = GetInteractorTransform();
             grabPoint = handTransform.position;
             ProvideHapticFeedback();
+
+            // Désactiver le BoxCollider
+            if (boxCollider != null)
+            {
+                boxCollider.enabled = false;
+            }
         }
         else
         {
             handTransform = null;
+
+            // Réactiver le BoxCollider
+            if (boxCollider != null)
+            {
+                boxCollider.enabled = true;
+            }
         }
     }
+
 
     private Transform GetInteractorTransform()
     {
