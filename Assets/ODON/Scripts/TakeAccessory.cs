@@ -25,16 +25,25 @@ public class TakeAccessory : MonoBehaviour
     [Tooltip("Main droite du joueur pour attacher le gant")]
     public GameObject rightHand;
     
-    [Tooltip("Préfabriqué du gant à instancier sur la main")]
-    public GameObject glovePrefab;
-    
+    [Tooltip("Préfabriqué du gant gauche à instancier sur la main gauche")]
+    public GameObject leftglovePrefab;    
+    [Tooltip("Préfabriqué du gant droit à instancier sur la main droite")]
+    public GameObject rightglovePrefab;
+
     [Tooltip("Position cible pour le gant sur la main gauche")]
     public Transform leftHandTarget;
     [Tooltip("Position cible pour le gant sur la main droite")]
     public Transform rightHandTarget;
 
+
+    [Header("Configuration des Meshes et Matériaux")]
+    [SerializeField] private MeshRenderer rightHandMeshRenderer;
+    [SerializeField] private MeshRenderer leftHandMeshRenderer;
+    [SerializeField] private Material glovesMaterial;
+
     private bool isLeftHand = false;
     private bool isRightHand = false;
+    private Material originalHandMaterial;
 
     private void OnTriggerEnter(Collider other) {
         
@@ -43,7 +52,7 @@ public class TakeAccessory : MonoBehaviour
         }
         else {
             if (other.name == "RightHand" && rightHandTarget != null) {
-                EquipGlove(rightHandTarget);
+                EquipGlove(true, rightHandTarget);
                 Debug.Log("Équipement ajouté à la main droite");
                 isRightHand = true;
 
@@ -52,7 +61,7 @@ public class TakeAccessory : MonoBehaviour
                 }
             }
             else if (other.name == "LeftHand" && leftHandTarget != null) {
-                EquipGlove(leftHandTarget);
+                EquipGlove(false, leftHandTarget);
                 Debug.Log("Équipement ajouté à la main gauche");
                 isLeftHand = true;
 
@@ -78,12 +87,24 @@ public class TakeAccessory : MonoBehaviour
         if (bc != null) Destroy(bc);
     }
 
-    private void EquipGlove(Transform handTarget)
+    private void EquipGlove(bool isRightHand, Transform handTarget)
     {
         Debug.Log("Take accessory");
         // Crée un nouveau gant et le positionne sur la main cible sans déplacer la boîte
+        GameObject glovePrefab = isRightHand ? rightglovePrefab : leftglovePrefab;
         GameObject glove = Instantiate(glovePrefab, handTarget);
         glove.transform.localPosition = Vector3.zero;
         glove.transform.localRotation = Quaternion.identity;
+
+        if (isRightHand && rightHandMeshRenderer != null && glovesMaterial != null)
+        {
+            rightHandMeshRenderer.material = glovesMaterial;
+            gameObject.SetActive(false);
+        }
+        else if (!isRightHand && leftHandMeshRenderer != null && glovesMaterial != null)
+        {
+            leftHandMeshRenderer.material = glovesMaterial;
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -602,9 +602,13 @@ MonoBehaviour:
   localisedTargetMiddleHands: {fileID: 0}
   leftHand: {fileID: 0}
   rightHand: {fileID: 0}
-  glovePrefab: {fileID: 0}
+  leftglovePrefab: {fileID: 0}
+  rightglovePrefab: {fileID: 0}
   leftHandTarget: {fileID: 0}
   rightHandTarget: {fileID: 0}
+  rightHandMeshRenderer: {fileID: 0}
+  leftHandMeshRenderer: {fileID: 0}
+  glovesMaterial: {fileID: 0}
 --- !u!54 &394803534
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -632,6 +636,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &413559958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1693262999784383869, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+  m_PrefabInstance: {fileID: 6291651052737993985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &413559960 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8906272786395200839, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+  m_PrefabInstance: {fileID: 6291651052737993985}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &419204544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2564,9 +2578,13 @@ MonoBehaviour:
   localisedTargetMiddleHands: {fileID: 0}
   leftHand: {fileID: 0}
   rightHand: {fileID: 0}
-  glovePrefab: {fileID: 0}
+  leftglovePrefab: {fileID: 0}
+  rightglovePrefab: {fileID: 0}
   leftHandTarget: {fileID: 0}
   rightHandTarget: {fileID: 0}
+  rightHandMeshRenderer: {fileID: 0}
+  leftHandMeshRenderer: {fileID: 0}
+  glovesMaterial: {fileID: 0}
 --- !u!54 &1220718038
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2822,55 +2840,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 634384848085388453, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
   m_PrefabInstance: {fileID: 6291651052737993985}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1425478232 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2063738745121924973, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
-  m_PrefabInstance: {fileID: 6291651052737993985}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1425478237
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425478232}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 302821359262797982, guid: 84a83c1bc3e12c74c9782e7134a621c7, type: 3}
---- !u!64 &1425478238
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425478232}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1395276830356302011, guid: 84a83c1bc3e12c74c9782e7134a621c7, type: 3}
 --- !u!1 &1625563992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8978614543953894015, guid: 282289e43157a9d42870d1298238bc1b, type: 3}
@@ -4022,7 +3991,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5391258759189215989, guid: b3d0e09da9f284843a3fb9bfcaf73163, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063738745121924973, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+      propertyPath: m_Name
+      value: rubber_glove
+      objectReference: {fileID: 0}
+    - target: {fileID: 2556881586154618848, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2556881586154618848, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+      propertyPath: glovePrefab
+      value: 
+      objectReference: {fileID: 2063738745121924973, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+    - target: {fileID: 2556881586154618848, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+      propertyPath: glovesMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 7132f577c38ea3b4d8e2ef385868cafe, type: 2}
+    - target: {fileID: 2556881586154618848, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+      propertyPath: leftHandTarget
+      value: 
+      objectReference: {fileID: 801458225}
+    - target: {fileID: 2556881586154618848, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+      propertyPath: leftglovePrefab
+      value: 
+      objectReference: {fileID: 558773219}
+    - target: {fileID: 2556881586154618848, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+      propertyPath: rightHandTarget
+      value: 
+      objectReference: {fileID: 1625563993}
+    - target: {fileID: 2556881586154618848, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+      propertyPath: rightglovePrefab
+      value: 
+      objectReference: {fileID: 413559958}
+    - target: {fileID: 2556881586154618848, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+      propertyPath: leftHandMeshRenderer
+      value: 
+      objectReference: {fileID: 558773221}
+    - target: {fileID: 2556881586154618848, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+      propertyPath: rightHandMeshRenderer
+      value: 
+      objectReference: {fileID: 413559960}
+    - target: {fileID: 2806495956910734699, guid: 47cc7dbddf0d6de4a9ad1eda1881819a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
