@@ -10,13 +10,17 @@ public class DigueManager : MonoBehaviour
 
     [Header("Limit Distance")]
     [Tooltip("The maximum allowed distance between any two points. If exceeded, the digue will reset to the root point.")]
-    [Range(0f, 0.5f)]
-    [SerializeField] private float limitsDistance = 0.2f;
+    [Range(0f, 1.0f)]
+    [SerializeField] private float limitsDistance = 0.4f;
 
     [SerializeField] private int nbrParentPoints;
     [SerializeField] private int nbrRigsPoints;
     [SerializeField] private Transform[] parentsPoints;
     [SerializeField] private Transform[] rigsPoints;
+
+    [Header("Debug")]
+    [SerializeField] private bool debugger = false;
+    [SerializeField] private bool debugDistanceCalculated = false;
 
     void Start()
     {
@@ -24,7 +28,8 @@ public class DigueManager : MonoBehaviour
         if (rootPoint == null)
         {
             rootPoint = transform;
-            Debug.Log("Root point defaulted to the GameObject's transform.");
+            if (debugger)
+                Debug.Log("Root point defaulted to the GameObject's transform.");
         }
 
         // Initialize root parent points
@@ -34,7 +39,8 @@ public class DigueManager : MonoBehaviour
         for (int i = 0; i < nbrParentPoints; i++)
         {
             rootParentsPoints[i] = transform.GetChild(i);
-            Debug.Log($"Root Parent Point {i}: {rootParentsPoints[i].name}, Position: {rootParentsPoints[i].position}");
+            if (debugger)
+                Debug.Log($"Root Parent Point {i}: {rootParentsPoints[i].name}, Position: {rootParentsPoints[i].position}");
         }
 
         // Initialize parent points
@@ -44,13 +50,15 @@ public class DigueManager : MonoBehaviour
         for (int i = 0; i < nbrParentPoints; i++)
         {
             parentsPoints[i] = transform.GetChild(i);
-            Debug.Log($"Parent Point {i}: {parentsPoints[i].name}, Position: {parentsPoints[i].position}");
+            if (debugger)
+                Debug.Log($"Parent Point {i}: {parentsPoints[i].name}, Position: {parentsPoints[i].position}");
         }
 
         // Initialize root rigs points
         if (parentsPoints.Length == 0 || parentsPoints[0] == null)
         {
-            Debug.LogWarning("No parent points found or parentsPoints[0] is null.");
+            if (debugger)
+                Debug.LogWarning("No parent points found or parentsPoints[0] is null.");
             return;
         }
 
@@ -60,7 +68,8 @@ public class DigueManager : MonoBehaviour
         for (int i = 0; i < nbrRigsPoints; i++)
         {
             rootRigsPoints[i] = parentsPoints[0].GetChild(i);
-            Debug.Log($"Root Rig Point {i}: {rootRigsPoints[i].name}, Position: {rootRigsPoints[i].position}");
+            if (debugger)
+                Debug.Log($"Root Rig Point {i}: {rootRigsPoints[i].name}, Position: {rootRigsPoints[i].position}");
         }
 
         UpdateRigsPosition();
@@ -81,7 +90,8 @@ public class DigueManager : MonoBehaviour
     {
         if (parentsPoints.Length == 0 || parentsPoints[0] == null)
         {
-            Debug.LogWarning("No parent points found or parentsPoints[0] is null.");
+            if (debugger)
+                Debug.LogWarning("No parent points found or parentsPoints[0] is null.");
             return;
         }
 
@@ -91,7 +101,8 @@ public class DigueManager : MonoBehaviour
         for (int i = 0; i < nbrRigsPoints; i++)
         {
             rigsPoints[i] = parentsPoints[0].GetChild(i);
-            Debug.Log($"Child Point {i}: {rigsPoints[i].name}, Position: {rigsPoints[i].position}");
+            if (debugger)
+                Debug.Log($"Child Point {i}: {rigsPoints[i].name}, Position: {rigsPoints[i].position}");
         }
     }
 
@@ -99,12 +110,12 @@ public class DigueManager : MonoBehaviour
     {
         if (rigsPoints == null || rigsPoints.Length == 0)
         {
-            Debug.LogWarning("No points available to calculate distances.");
+            if (debugger)
+                Debug.LogWarning("No rigs points available for distance calculation.");
             return 0.0f;
         }
 
-        float totalDistance = 0;
-        int pairCount = 0;
+        float maxDistance = 0;
 
         for (int i = 0; i < rigsPoints.Length; i++)
         {
@@ -114,21 +125,24 @@ public class DigueManager : MonoBehaviour
             {
                 if (rigsPoints[j] == null) continue;
 
-                totalDistance += Vector3.Distance(rigsPoints[i].position, rigsPoints[j].position);
-                pairCount++;
+                float distance = Vector3.Distance(rigsPoints[i].position, rigsPoints[j].position);
+                if (distance > maxDistance)
+                    maxDistance = distance;
             }
         }
 
-        float averageDistance = pairCount > 0 ? totalDistance / pairCount : 0;
-        Debug.Log($"Average Distance Between Points: {averageDistance}");
-        return averageDistance;
+        if (debugger || debugDistanceCalculated)
+            Debug.Log($"Maximum Distance Between Points: {maxDistance}");
+        return maxDistance;
     }
+
 
     public void ResetDigue()
     {
         if (rootPoint == null)
         {
-            Debug.LogError("Root point is null! Cannot reset digue.");
+            if (debugger)
+                Debug.LogError("Root point is null! Cannot reset digue.");
             return;
         }
 
@@ -144,6 +158,7 @@ public class DigueManager : MonoBehaviour
             rigsPoints[i] = rootRigsPoints[i];
         }
 
-        Debug.Log("Digue reset to root point.");
+        if (debugger)
+            Debug.Log("Digue reset to root point.");
     }
 }
