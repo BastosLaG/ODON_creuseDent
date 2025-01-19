@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,28 +36,20 @@ public class SendStatistics : MonoBehaviour
     private int poseNum, etapeNum = 0;
     private Dictionary<string, int> etapes = new ();
 
-    /*
+    
     private void Start()
     {
         // APPEL DE LA FONCTION DE TEST
-        StartCoroutine("BDDTest");
+        BDDEtapesInit();
     }
 
 
-    private IEnumerator BDDTest()
+    private void BDDEtapesInit()
     {
-        print("creation de la pose et de ses étapes et erreurs.");
-        // CETTE FONCTION SERA APPELLÉ AUX CHOIX DE LA POSE DE DIGUE.
-        CreateNewPose(0);
-        for (int i = 0; i < etapeNames[poseNum].Length; i++)
-        {
-            int rand = UnityEngine.Random.Range(1, 5);
-            yield return new WaitForSeconds(rand);
-            print("Etape" + i + "accomplie en" + rand + "secondes.");
-            // CETTE FONCTION SERA APPELLÉ AU CHAQUE FOIS QU'UNE ÉTAPE AURA ÉTÉ COMPLÉTÉE.
-            NextEtape();
-        }
-    }*/
+        print("creation de la pose.");
+        // ASSIGNE UNE POSE DE DIGUE ALEATOIRE.
+        CreateNewPose(UnityEngine.Random.Range(0,2));
+    }
 
 
     // ON CREE LES DONNÉES D'INSTALATION DE LA DIGUE ET DES ÉTAPES QUI LA COMPOSE
