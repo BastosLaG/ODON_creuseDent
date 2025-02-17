@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
@@ -10,9 +11,14 @@ public class SetObjectGrabable : MonoBehaviour
     [SerializeField] private InteractionLayerMask interactLayers = 2;
     [SerializeField] private bool _dynamicAttach = true, _itemSelected, _itemKinematic, _constrainRBody, _multipleGrab;
 
+    [SerializeField] private bool doEventOneTime = false;
+    [SerializeField] private UnityEvent SelectEnter, SelectExit, ActionEnter, ActionExit;
+
     private Vector3 grabPoint;
     private Transform handTransform;
     private BoxCollider boxCollider;
+    private XRGrabInteractable grabScript;
+
 
     void Start()
     {
@@ -27,26 +33,42 @@ public class SetObjectGrabable : MonoBehaviour
         rb.isKinematic = _itemKinematic;
         rb.constraints = _constrainRBody ? RigidbodyConstraints.FreezeAll : RigidbodyConstraints.None;
 
-        XRGrabInteractable grabScript = gameObject.AddComponent<XRGrabInteractable>();
+        grabScript = gameObject.AddComponent<XRGrabInteractable>();
         grabScript.interactionLayers = interactLayers;
         grabScript.selectMode = _multipleGrab ? InteractableSelectMode.Multiple : InteractableSelectMode.Single;
         grabScript.useDynamicAttach = _dynamicAttach;
-        grabScript.activated.AddListener(delegate { SetAction(_actionId); });
+        grabScript.activated.AddListener(OnActionEnter);
+        grabScript.deactivated.AddListener(OnActionExit);
+        grabScript.selectEntered.AddListener(OnSelectEnter);
+        grabScript.selectExited.AddListener(OnSelectExit);
         grabScript.selectEntered.AddListener(delegate { SetSelected(true); });
         grabScript.selectExited.AddListener(delegate { SetSelected(false); });
     }
 
-    private void SetAction(int id)
+    private void OnSelectEnter(SelectEnterEventArgs args)
     {
-        switch (id)
-        {
-            case 0:
-                break;
-            case 1:
-                break;
-            default:
-                break;
-        }
+        SelectEnter?.Invoke();
+        if (doEventOneTime) grabScript.selectEntered.RemoveAllListeners();
+        grabScript.selectEntered.AddListener(delegate { SetSelected(true); });
+    }
+
+    private void OnSelectExit(SelectExitEventArgs args)
+    {
+        SelectExit?.Invoke();
+        if (doEventOneTime) grabScript.selectExited.RemoveAllListeners();
+        grabScript.selectExited.AddListener(delegate { SetSelected(false); });
+    }
+
+    private void OnActionEnter(ActivateEventArgs args)
+    {
+        ActionEnter?.Invoke();
+        if (doEventOneTime) grabScript.activated.RemoveAllListeners();
+    }
+
+    private void OnActionExit(DeactivateEventArgs args)
+    {
+        ActionExit?.Invoke();
+        if (doEventOneTime) grabScript.deactivated.RemoveAllListeners();
     }
 
     private void SetSelected(bool isSelected)

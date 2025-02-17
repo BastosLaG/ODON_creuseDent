@@ -113,9 +113,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685343955664076}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08632959, y: -0.7404348, z: 0.65902317, w: 0.099960014}
+  m_LocalRotation: {x: 0.086331494, y: -0.740433, z: 0.65902483, w: 0.09996109}
   m_LocalPosition: {x: 0.466, y: 1.122, z: -1.351}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25753996, y: 0.25754002, z: 0.25754}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4706570796905144}
@@ -156,6 +156,31 @@ MonoBehaviour:
   _itemKinematic: 0
   _constrainRBody: 0
   _multipleGrab: 1
+  doEventOneTime: 1
+  SelectEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SendStatistics, Assembly-CSharp
+        m_MethodName: NextEtape
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SelectExit:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &4486257143314643179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -366,7 +391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hello world
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -376,7 +401,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

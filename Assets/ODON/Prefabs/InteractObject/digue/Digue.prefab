@@ -2228,8 +2228,9 @@ GameObject:
   m_Component:
   - component: {fileID: 779493210513334311}
   - component: {fileID: 8193939379967253377}
-  - component: {fileID: 6998186038111483438}
   - component: {fileID: 8599051301189817804}
+  - component: {fileID: 6998186038111483438}
+  - component: {fileID: 4651659831386783650}
   m_Layer: 0
   m_Name: DigueMesh
   m_TagString: Untagged
@@ -2316,6 +2317,28 @@ SkinnedMeshRenderer:
     m_Center: {x: -3.5288394e-10, y: -0.012911747, z: -9.313226e-10}
     m_Extent: {x: 0.00010123958, y: 0.014317156, z: 0.014317157}
   m_DirtyAABB: 0
+--- !u!64 &8599051301189817804
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585929880583652352}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2904632915164762085, guid: 36e4dce6f9033e04796cc9d1bbad9b25, type: 3}
 --- !u!54 &6998186038111483438
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2343,28 +2366,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &8599051301189817804
-MeshCollider:
+--- !u!114 &4651659831386783650
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4585929880583652352}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2904632915164762085, guid: 36e4dce6f9033e04796cc9d1bbad9b25, type: 3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintSet:
+  - MainTextureName: _BaseMap
+    normalTextureName: _BumpMap
+    heightTextureName: _ParallaxMap
+    useMainPaint: 1
+    useNormalPaint: 0
+    useHeightPaint: 0
 --- !u!1 &7026562950094488450
 GameObject:
   m_ObjectHideFlags: 0
