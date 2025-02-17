@@ -7,7 +7,6 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class SetObjectGrabable : MonoBehaviour
 {
-    [SerializeField] private int _actionId = -1;
     [SerializeField] private InteractionLayerMask interactLayers = 2;
     [SerializeField] private bool _dynamicAttach = true, _itemSelected, _itemKinematic, _constrainRBody, _multipleGrab;
 
