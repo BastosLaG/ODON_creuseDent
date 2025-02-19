@@ -89,7 +89,10 @@ public class HighlightsTeethManager : MonoBehaviour
 }
 
     public void switchState(int increment){
-        currentState = (currentState+increment)%maxState;
+        if (increment < 0 && currentState == 0)
+            currentState = maxState-1;
+        else
+            currentState = (currentState+increment)%maxState;
         CleanTeeth();
         switch (currentState) {
             case 0:
