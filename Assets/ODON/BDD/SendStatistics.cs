@@ -8,79 +8,74 @@ using UnityEngine.UI;
 
 public class SendStatistics : MonoBehaviour
 {
+
     [SerializeField] private TextMeshProUGUI etapeText;
+    [SerializeField] private calpText calpText;
     [SerializeField] private Transform errorLogParent;
     [SerializeField] private GameObject errorLogPref;
     [SerializeField] private string[][] etapeNames = new string[][] { 
         new string[] {
-            "Étape 1 : Analysez le patient (la dent à soigner + allergie).",
-            "Étape 2 : Equipez vous des équipements obligatoires (Gants, Masque et Blouse).",
-            "Étape 3 : Dessinez sur la digue.",
-            "Étape 4 : Percez la digue.",
-            "Étape 5 : Posez le crampon sur la dent grâce à la pince de Brewer.",
-            "Étape 6 : Posez la digue en faisant attention de bien passer derrière les ailettes.",
-            "Étape 7 : Corrigez a l’aide du fil dentaire et posez le widget." 
+            "ï¿½tape 1 : Analysez le patient (la dent ï¿½ soigner + allergie).",
+            "ï¿½tape 2 : Equipez vous des ï¿½quipements obligatoires (Gants, Masque et Blouse).",
+            "ï¿½tape 3 : Dessinez sur la digue.",
+            "ï¿½tape 4 : Percez la digue.",
+            "ï¿½tape 5 : Posez le crampon sur la dent grï¿½ce ï¿½ la pince de Brewer.",
+            "ï¿½tape 6 : Posez la digue en faisant attention de bien passer derriï¿½re les ailettes.",
+            "ï¿½tape 7 : Corrigez a lï¿½aide du fil dentaire et posez le widget." 
         },
         new string[] {
-            "Étape 1 : Analysez le patient(la dent à soigner + allergie).",
-            "Étape 2 : Equipez vous des équipements obligatoires (Gants, Masque et Blouse).",
-            "Étape 3 : Dessinez sur la digue.",
-            "Étape 4 : Percez la digue.",
-            "Étape 5 : Posez le crampon sur la digue.",
-            "Étape 6 : Posez la digue avec le crampon.",
-            "Étape 7 : Corrigez a l’aide du fil dentaire et posez widget."
+            "ï¿½tape 1 : Analysez le patient(la dent ï¿½ soigner + allergie).",
+            "ï¿½tape 2 : Equipez vous des ï¿½quipements obligatoires (Gants, Masque et Blouse).",
+            "ï¿½tape 3 : Dessinez sur la digue.",
+            "ï¿½tape 4 : Percez la digue.",
+            "ï¿½tape 5 : Posez le crampon sur la digue.",
+            "ï¿½tape 6 : Posez la digue avec le crampon.",
+            "ï¿½tape 7 : Corrigez a lï¿½aide du fil dentaire et posez widget."
         }
     };
 
     [SerializeField] private DateTime daminstallTime, stepTime;
-    private int poseNum, etapeNum = 0;
+    private int etapeNum = 0;
+    private int poseNum;
     private Dictionary<string, int> etapes = new ();
 
     
     private void Start()
     {
-        // APPEL DE LA FONCTION DE TEST
-        BDDEtapesInit();
-    }
-
-
-    private void BDDEtapesInit()
-    {
-        print("creation de la pose.");
         // ASSIGNE UNE POSE DE DIGUE ALEATOIRE.
         CreateNewPose(UnityEngine.Random.Range(0,2));
     }
 
-
-    // ON CREE LES DONNÉES D'INSTALATION DE LA DIGUE ET DES ÉTAPES QUI LA COMPOSE
+    // ON CREE LES DONNï¿½ES D'INSTALATION DE LA DIGUE ET DES ï¿½TAPES QUI LA COMPOSE
     public void CreateNewPose(int poseValue)
     {
         poseNum = poseValue;
+        calpText.UpdateTextboxes(poseNum);
         string poseName = poseValue == 0 ? "Pose crampon d'abord" : "Pose en parachute";
 
-        // ENVOIE DES DONNÉES INSTALL DIGUE
+        // ENVOIE DES DONNï¿½ES INSTALL DIGUE
         StartCoroutine(Web.NewDamInstall(poseName));
         daminstallTime = DateTime.Now;
 
-        // LANCE LA CREATION DES ÉTAPES
+        // LANCE LA CREATION DES ï¿½TAPES
         Web.OnDamInstallCreated.AddListener(CreateSteps);
         Web.OnInstallStepCreated.AddListener(AddEtape);
     }
 
     private void CreateSteps(string data)
     {
-        // ENVOIE DES DONNÉES DES ETAPES D'INSTALL
+        // ENVOIE DES DONNï¿½ES DES ETAPES D'INSTALL
         foreach (var etapeName in etapeNames[poseNum])
         {
-            if (etapeName.Length > 100) Debug.LogError("Nom de l'étape trop long : " + etapeName.Length + " caractères / 100");
+            if (etapeName.Length > 100) Debug.LogError("Nom de l'ï¿½tape trop long : " + etapeName.Length + " caractï¿½res / 100");
             StartCoroutine(Web.InstallStep(etapeName));
         }
-        // AFFICHE L'ÉTAPE COURANTE
+        // AFFICHE L'ï¿½TAPE COURANTE
         showEtape();
         stepTime = DateTime.Now;
     }
 
-    // A CHAQUE ÉTAPE CRÉÉE, ON L'ENREGISTRE DANS UN DICTIONNAIRE POUR POUVOIR LUI AJOUTER SON TEMPS D'EXECUTION LE NOMBRE DE FOIS EXECUTÉE ET SES ERREURS SI BESOIN.
+    // A CHAQUE ï¿½TAPE CRï¿½ï¿½E, ON L'ENREGISTRE DANS UN DICTIONNAIRE POUR POUVOIR LUI AJOUTER SON TEMPS D'EXECUTION LE NOMBRE DE FOIS EXECUTï¿½E ET SES ERREURS SI BESOIN.
     private void AddEtape(string data)
     {
         if (data.Contains("Success"))
@@ -93,7 +88,7 @@ public class SendStatistics : MonoBehaviour
         {
             etapeNum = 0;
             CreateError("Mauvaise lecture du document");
-            CreateError("Mauvaise interprétation du document");
+            CreateError("Mauvaise interprï¿½tation du document");
             CreateError("Mauvaise selection de pose de digue");
         }
     }
@@ -104,13 +99,13 @@ public class SendStatistics : MonoBehaviour
         stepTime = DateTime.Now;
     }
 
-    // AFFICHE L'ÉTAPE EN COURS À L'UTILISATEUR
+    // AFFICHE L'ï¿½TAPE EN COURS ï¿½ L'UTILISATEUR
     private void showEtape()
     {
         etapeText.text = etapeNames[poseNum][etapeNum];
     }
 
-    // VA À L'ÉTAPE SUIVANTE
+    // VA ï¿½ L'ï¿½TAPE SUIVANTE
     public void NextEtape()
     {
         etapeEnded();
@@ -122,11 +117,11 @@ public class SendStatistics : MonoBehaviour
         else
         {
             StartCoroutine(Web.UpdateDamInstall((DateTime.Now - daminstallTime).ToString("hh\\:mm\\:ss")));
-            Debug.Log("toutes les étapes complétées !");
+            Debug.Log("toutes les ï¿½tapes complï¿½tï¿½es !");
         }
     }
 
-    // CRÉÉ UNE ERREUR À L'ÉTAPE ACTUEL
+    // CRï¿½ï¿½ UNE ERREUR ï¿½ L'ï¿½TAPE ACTUEL
     public void CreateError(string errorName)
     {
         StartCoroutine(Web.StepMistake(errorName, etapes[etapeNames[poseNum][etapeNum]]));
