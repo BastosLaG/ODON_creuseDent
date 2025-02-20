@@ -225,6 +225,98 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1587347023061371872}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 98.5}
+--- !u!1 &5048348772816430517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6742258218657482959}
+  - component: {fileID: 4524483584658786242}
+  - component: {fileID: 8331081621377955993}
+  m_Layer: 0
+  m_Name: Belt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6742258218657482959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048348772816430517}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.25, y: -0.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1587347024808605603}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4524483584658786242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048348772816430517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f335720e711a94a47bf592b393d5af1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
+  boxSize: {x: 0.25, y: 0.5, z: 0.5}
+  hitStringContain: tablet
+  OnBoxEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8331081621377955993}
+        m_TargetAssemblyTypeName: BeltSystem, Assembly-CSharp
+        m_MethodName: SetBeltItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnBoxExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8331081621377955993}
+        m_TargetAssemblyTypeName: BeltSystem, Assembly-CSharp
+        m_MethodName: RemoveBeltItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8331081621377955993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048348772816430517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f288a4bbd895441aa99a79185d6492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localOffset: {x: 0, y: 0, z: 0}
+  localEulerRotation: {x: 0, y: 0, z: 90}
 --- !u!1 &5490196090607302420
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,15 +650,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.52327555
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1279101
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5561775
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalRotation.w
@@ -975,6 +1067,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 657184242161839408, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6742258218657482959}
     - targetCorrespondingSourceObject: {fileID: 657184242118504721, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2170070247398414893}
@@ -1058,6 +1153,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 657184242222895506, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
   m_PrefabInstance: {fileID: 2241009358621579923}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1587347024808605603 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 657184242161839408, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+  m_PrefabInstance: {fileID: 2241009358621579923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7538415816504063067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1132,15 +1232,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3900890618354033870, guid: 19fc558b45ccdc247a9e12d1f583344c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8227244
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3900890618354033870, guid: 19fc558b45ccdc247a9e12d1f583344c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1279101
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3900890618354033870, guid: 19fc558b45ccdc247a9e12d1f583344c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5561775
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3900890618354033870, guid: 19fc558b45ccdc247a9e12d1f583344c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1477,15 +1577,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.52327555
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1279101
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5561775
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_LocalRotation.w
