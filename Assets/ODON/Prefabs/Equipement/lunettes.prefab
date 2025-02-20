@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e42ba59d3644f24d867c2e3af4c8dcf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1746
+      value: -1.1765
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e42ba59d3644f24d867c2e3af4c8dcf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -64,7 +64,7 @@ PrefabInstance:
       addedObject: {fileID: 3214541213356781626}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e42ba59d3644f24d867c2e3af4c8dcf, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2833011655316242281}
+      addedObject: {fileID: 1895235438471813361}
   m_SourcePrefab: {fileID: 100100000, guid: 0e42ba59d3644f24d867c2e3af4c8dcf, type: 3}
 --- !u!1 &2588931579670162197 stripped
 GameObject:
@@ -94,7 +94,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 732d38168eed5844fa625724e9adf923, type: 2}
+  - {fileID: 2100000, guid: 03eccd535f7136748a371896c555887d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,36 +132,41 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &2833011655316242281
-Rigidbody:
+  m_Size: {x: 0.15029716, y: 0.14969535, z: 0.059733007}
+  m_Center: {x: -0.0010392666, y: -0.06371518, z: -0.0035606343}
+--- !u!114 &1895235438471813361
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2588931579670162197}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3f78e6ff5a6cb4ca678a99f9fdf412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactLayers:
+    m_Bits: 2
+  _dynamicAttach: 1
+  _itemSelected: 0
+  _itemKinematic: 0
+  _constrainRBody: 0
+  _multipleGrab: 1
+  doEventOneTime: 0
+  SelectEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  SelectExit:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionExit:
+    m_PersistentCalls:
+      m_Calls: []

@@ -26,23 +26,27 @@ public class TakeAccessory : MonoBehaviour
         if (!isGloves && other.CompareTag("Player"))
         {
             AttachToTarget(target.transform, localisedTarget);
+            DestroyObject(localisedTarget);
         }
         else if (isGloves)
         {
             if (other.name == "RightHand" && rightHandTarget != null)
             {
                 EquipGlove(true, rightHandTarget);
+                DestroyObject(rightglovePrefab);
             }
             else if (other.name == "LeftHand" && leftHandTarget != null)
             {
                 EquipGlove(false, leftHandTarget);
+                DestroyObject(leftglovePrefab);
+
             }
         }
     }
 
     private void AttachToTarget(Transform parent, Transform positionTarget)
     {
-        
+        Debug.Log("l'objet est bien attaché au joueur");
         transform.SetParent(parent);
         transform.localPosition = positionTarget.localPosition;
         transform.localRotation = Quaternion.identity;
@@ -53,7 +57,7 @@ public class TakeAccessory : MonoBehaviour
 
     private void EquipGlove(bool isRightHand, Transform handTarget)
     {
-       
+        Debug.Log("le gant est bien attaché au joueur");
         GameObject glovePrefab = isRightHand ? rightglovePrefab : leftglovePrefab;
         GameObject glove = Instantiate(glovePrefab, handTarget);
         glove.transform.localPosition = Vector3.zero;
