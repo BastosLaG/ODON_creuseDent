@@ -1,9 +1,11 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UITutorial : MonoBehaviour
 {
+    public PrimaryButtonWatcher watcher;
     [SerializeField] private GameObject TutorialPanel;
     [SerializeField] private GameObject[] advices;
     [SerializeField] private Button continueButton;
@@ -11,8 +13,24 @@ public class UITutorial : MonoBehaviour
 
     private void Start()
     {
-        TutorialPanel.SetActive(true);
+        if (SceneManager.GetActiveScene().buildIndex == 2) ActiveTuto();
         continueButton.onClick.AddListener(ShowNextAdvice);
+        watcher.primaryButtonPress.AddListener(OnPrimaryButtonEvent);
+    }
+
+    private void OnPrimaryButtonEvent(bool pressed)
+    {
+        if (pressed)
+        {
+            ActiveTuto();
+        }
+    }
+
+    private void ActiveTuto()
+    {
+        adviceId = 0; 
+        TutorialPanel.SetActive(true);
+        advices[adviceId].SetActive(false);
     }
 
     private void ShowNextAdvice()
