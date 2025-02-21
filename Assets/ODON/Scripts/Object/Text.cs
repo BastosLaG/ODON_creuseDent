@@ -1,17 +1,20 @@
 using UnityEngine;
 using TMPro;
+using System;
 
-public class Text : MonoBehaviour
+public class calpText : MonoBehaviour
 {
     public TMP_Text infoPatient;
-    string info = "Patient 1";
-
-    void Start(){
-        UpdateTextboxes();
-    }
+    string patient1 = "Patient 1";
+    string patient2 = "Patient 2";
 
 
-    void UpdateTextboxes(){
-        infoPatient.text = info;
+    public void UpdateTextboxes(int p){
+        if (p == 0){
+            infoPatient.text = patient1;
+        }else{
+            infoPatient.text = patient2;
+        }
+        
     }
 }
