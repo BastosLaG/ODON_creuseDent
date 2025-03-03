@@ -11,6 +11,7 @@ public class SendStatistics : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI etapeText;
     [SerializeField] private calpText calpText;
+    [SerializeField] private Manager_outline outline;
     [SerializeField] private Transform errorLogParent;
     [SerializeField] private GameObject errorLogPref;
     [SerializeField] private string[][] etapeNames = new string[][] { 
@@ -103,6 +104,7 @@ public class SendStatistics : MonoBehaviour
     private void showEtape()
     {
         etapeText.text = etapeNames[poseNum][etapeNum];
+        outline.UpdateOutline(etapeNum);
     }
 
     // VA � L'�TAPE SUIVANTE
