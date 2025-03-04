@@ -30,7 +30,7 @@ public class UITutorial : MonoBehaviour
     {
         adviceId = 0; 
         TutorialPanel.SetActive(true);
-        advices[adviceId].SetActive(false);
+        advices[adviceId].SetActive(true);
     }
 
     private void ShowNextAdvice()
