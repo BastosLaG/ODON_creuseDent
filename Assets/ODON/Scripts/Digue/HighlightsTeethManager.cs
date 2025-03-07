@@ -1,12 +1,16 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class HighlightsTeethManager : MonoBehaviour
 {
     [SerializeField] private TeethStruct[] teethStructList;
     [SerializeField] private int currentState;
-    [SerializeField] private int maxState;
+    [SerializeField] private int maxState = 3;
+
+    [Header("Digue Settings")] 
+    public Transform digueParent;
+    [SerializeField] private GameObject[] digueList;
+
     public enum stateTheeth
     {
         UPPERRIGHT,
@@ -26,92 +30,109 @@ public class HighlightsTeethManager : MonoBehaviour
     void Start()
     {
         currentState = 0;
-        maxState = 3;
         InitializeTeeth();
+        InitializeDigue();
         CleanTeeth();
+        CleanDigue();
         switchState(0);
     }
 
-
     void InitializeTeeth()
     {
-        Transform[] children = GetComponentsInChildren<Transform>();
+        int childCount = transform.childCount;
+        teethStructList = new TeethStruct[childCount];
 
-        // Initialiser la taille du tableau teethStructList
-        teethStructList = new TeethStruct[children.Length - 1];
-
-        int i = 0;
-        foreach (Transform child in children)
+        for (int i = 0; i < childCount; i++)
         {
-            if (child != transform)
+            Transform child = transform.GetChild(i);
+            TeethStruct toothStruct = new TeethStruct
             {
-                TeethStruct toothStruct = new TeethStruct();
-                toothStruct.tooth = child.gameObject;
-                toothStruct.index = i%8+1;
+                tooth = child.gameObject,
+                index = i % 8 + 1,
+                state = (i <= 7) ? stateTheeth.UPPERRIGHT :
+                        (i <= 15) ? stateTheeth.UPPERLEFT :
+                        (i <= 23) ? stateTheeth.LOWERLEFT :
+                                    stateTheeth.LOWERRIGHT
+            };
 
-                if (i <= 7)
-                {
-                    toothStruct.state = stateTheeth.UPPERRIGHT;
-                }
-                else if (i > 7 && i <= 15)
-                {
-                    toothStruct.state = stateTheeth.UPPERLEFT;
-                }
-                else if (i > 15 && i <= 23)
-                {
-                    toothStruct.state = stateTheeth.LOWERLEFT;
-                }
-                else if (i > 23 && i <= 31)
-                {
-                    toothStruct.state = stateTheeth.LOWERRIGHT;
-                }
+            teethStructList[i] = toothStruct;
+        }
+    }
 
-                teethStructList[i] = toothStruct;
-                i++;
+    void InitializeDigue()
+    {
+        int childCount = digueParent.childCount;
+        digueList = new GameObject[childCount];
+
+        for (int i = 0; i < childCount; i++)
+        {
+            digueList[i] = digueParent.GetChild(i).gameObject;
+        }
+
+        if (digueList.Length != maxState)
+        {
+            Debug.LogError("Digue list length is not equal to maxState. Please check your settings.");
+        }
+        else 
+        {
+            Debug.Log("Digue list initialized correctly.");
+        }
+    }
+
+    void SetTeeth(stateTheeth state, int[] indexList)
+    {
+        foreach (var item in teethStructList)
+        {
+            if (item.state == state && Array.Exists(indexList, index => index == item.index))
+            {
+                item.tooth.SetActive(true);
             }
         }
     }
-    void SetTeeth(stateTheeth state, int[] indexList)
-    {
-        foreach (TeethStruct item in teethStructList)
-        {
-            if (item.state == state)
-            {
-                foreach (int index in indexList)
-                {
-                    if (item.index == index)
-                    {
-                        item.tooth.SetActive(true);
-                    }
-                }
-            }
-        }
-}
 
-    public void switchState(int increment){
-        if (increment < 0 && currentState == 0)
-            currentState = maxState-1;
-        else
-            currentState = (currentState+increment)%maxState;
+    void SetDigue(int index)
+    {
+        if (index >= 0 && index < digueList.Length)
+        {
+            digueList[index].SetActive(true);
+        }
+    }
+
+    public void switchState(int increment)
+    {
+        currentState = (currentState + increment + maxState) % maxState;
+
         CleanTeeth();
-        switch (currentState) {
+        CleanDigue();
+
+        switch (currentState)
+        {
             case 0:
-                SetTeeth(stateTheeth.LOWERRIGHT, new int[] { 7 });
-                break;    
+                SetTeeth(stateTheeth.LOWERRIGHT, new int[] { 1 });
+                break;
             case 1:
                 SetTeeth(stateTheeth.LOWERRIGHT, new int[] { 3 });
                 break;
             case 2:
-                SetTeeth(stateTheeth.LOWERRIGHT, new int[] { 1 });          
+                SetTeeth(stateTheeth.LOWERRIGHT, new int[] { 7 });
                 break;
         }
+        SetDigue(currentState);
     }
 
     void CleanTeeth()
     {
-        foreach (TeethStruct tooth in teethStructList)
+        for (int i = 0; i < teethStructList.Length; i++)
         {
-            tooth.tooth.SetActive(false);
+            teethStructList[i].tooth.SetActive(false);
+        }
+    }
+
+    void CleanDigue()
+    {
+        foreach (GameObject digue in digueList)
+        {
+            digue.SetActive(false);
         }
     }
 }
