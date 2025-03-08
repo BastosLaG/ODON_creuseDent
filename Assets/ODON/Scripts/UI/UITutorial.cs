@@ -26,7 +26,7 @@ public class UITutorial : MonoBehaviour
         }
     }
 
-    private void ActiveTuto()
+    public void ActiveTuto()
     {
         adviceId = 0; 
         TutorialPanel.SetActive(true);
