@@ -7,8 +7,9 @@ public class TakeAccessory : MonoBehaviour
     public GameObject target;
     public Transform localisedTarget;
 
+    public Material material_gloves;
 
-    private bool isEquipped = false;
+    public bool isGloves;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,18 +18,35 @@ public class TakeAccessory : MonoBehaviour
         if (LayerMask.NameToLayer("Object") == other.gameObject.layer)
         {
             Debug.Log("dans la main");
-            AttachToTarget(target.transform, localisedTarget);
+            AttachToTarget(target.transform, localisedTarget, other);
         }
     }
 
-    private void AttachToTarget(Transform parent, Transform positionTarget)
+    private void AttachToTarget(Transform parent, Transform positionTarget, Collider other)
     {
         Debug.Log("l'objet est bien attaché au joueur");
-        transform.SetParent(parent);
-        transform.localPosition = positionTarget.localPosition;
-        transform.localRotation = Quaternion.identity;
+        
+        if (isGloves)
+        {
+            other.GetComponent<Renderer>().material = material_gloves;
+            Renderer handRenderer = parent.GetComponent<Renderer>();
+
+            if (handRenderer != null)
+            {
+                // Change le matériau des mains par celui des gants
+                handRenderer.material = GetComponent<Renderer>().material;
+            }
+
+            // On enlève les gants
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            transform.SetParent(parent);
+            transform.position = parent.position;
+            transform.rotation = parent.rotation;//pour la blouse
+        }
         Destroy(GetComponent<Rigidbody>());
         Destroy(GetComponent<Collider>());
-        isEquipped = true;
     }
 }
