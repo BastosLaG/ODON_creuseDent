@@ -4,10 +4,11 @@ public class TakeAccessory : MonoBehaviour
 {
 
     [Header("Cible par défaut")]
-    public GameObject target;
-    public Transform localisedTarget;
+    [SerializeField] private GameObject target;
+    [SerializeField] private Transform localisedTarget;
+    [SerializeField] private Renderer[] brasRenderers;
 
-    public Material material_gloves;
+    [SerializeField] private Material material_gloves;
 
     public bool isGloves;
 
@@ -28,16 +29,12 @@ public class TakeAccessory : MonoBehaviour
         
         if (isGloves)
         {
-            other.GetComponent<Renderer>().material = material_gloves;
-            Renderer handRenderer = parent.GetComponent<Renderer>();
-
-            if (handRenderer != null)
+            foreach (Renderer r in brasRenderers)
             {
-                // Change le matériau des mains par celui des gants
-                handRenderer.material = GetComponent<Renderer>().material;
+                r.material = material_gloves;
             }
 
-            // On enlève les gants
+            // on dégage les gants
             gameObject.SetActive(false);
         }
         else
