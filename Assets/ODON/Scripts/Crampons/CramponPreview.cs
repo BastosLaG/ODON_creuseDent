@@ -22,13 +22,14 @@ public class CramponPreview : MonoBehaviour
         {
             lowerTeeth[i] = lowerTeethParent.GetChild(i+2);
         }
-        // Tests
+        /* Tests
         // Simulation attribution d'une dent malade
-        SetSickTooth(31);
+        SetSickTooth(41);
         // Simulation prise en main du crampon après 5 secondes
         Invoke(nameof(StartToCompareDistance), 5);
         // Simulation pose du crampon après 30 secondes
         Invoke(nameof(PoseCrampon), 30);
+        */
     }
 
     // Assignation du materiel à la dent malade.
