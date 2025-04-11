@@ -1,9 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ArmatureDigueBehaviour : MonoBehaviour
 {
+    [Header("Joint Settings")]
     public JointSettings jointSettings;
 
+    [Header("Event System")]
+    public UnityEvent eventDropDam;
+
+    [Header("Joints Main")]
     public GameObject jointX;
     public GameObject jointY;
     public GameObject joint_X;
@@ -13,6 +19,7 @@ public class ArmatureDigueBehaviour : MonoBehaviour
     public GameObject joint_XY;
     public GameObject joint_X_Y;
 
+    [Header("Joints Hole")]
     public GameObject jointHoleX;
     public GameObject jointHoleY;
     public GameObject jointHole_X;
@@ -35,6 +42,12 @@ public class ArmatureDigueBehaviour : MonoBehaviour
             jointHoleX, jointHoleY, jointHole_X, jointHole_Y, jointHoleXY, jointHoleX_Y, jointHole_XY, jointHole_X_Y
         };
 
+        MakeEssentialJoints(joints);
+        MakeConnectionLinks(joints);
+    }
+
+    private void MakeEssentialJoints(GameObject[] joints)
+    {
         // Setup Rigidbody for each joint
         foreach (GameObject jointGO in joints)
         {
@@ -44,7 +57,7 @@ public class ArmatureDigueBehaviour : MonoBehaviour
             if (col == null)
             {
                 col = jointGO.AddComponent<BoxCollider>();
-                col.size = Vector3.one * 0.01f; // Petite taille, tu peux ajuster
+                col.size = Vector3.one * 0.01f;
             }
 
             Rigidbody rb = jointGO.GetComponent<Rigidbody>();
@@ -55,17 +68,16 @@ public class ArmatureDigueBehaviour : MonoBehaviour
             rb.linearDamping = 0.05f;
             rb.angularDamping = 0.05f;
             rb.isKinematic = false;
-            rb.freezeRotation = true; // Empêche la rotation du joint
+            rb.freezeRotation = true;
         }
-
-        // Setup ConfigurableJoints and connect everything
+    }
+    private void MakeConnectionLinks(GameObject[] joints)
+    {
         foreach (GameObject jointGO in joints)
         {
             if (jointGO == null) continue;
 
-            // Liste des connexions personnalisées
             GameObject[] connections = GetConnectionsForJoint(jointGO);
-            // Debug.Log("Joint: " + jointGO.name + " Connections: " + connections.Length + " " + connections[0] + " " + connections[1]);
 
             foreach (GameObject target in connections)
             {
