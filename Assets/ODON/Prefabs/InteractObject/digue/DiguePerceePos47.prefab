@@ -709,6 +709,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jointSettings: {fileID: 11400000, guid: 02f7cd5d8fe3fa244848b51abdc23c92, type: 2}
+  eventDropDam:
+    m_PersistentCalls:
+      m_Calls: []
   jointX: {fileID: 303085495593917517}
   jointY: {fileID: 2159080587941260741}
   joint_X: {fileID: 3375874386559203531}
@@ -773,6 +776,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7120206953570253353}
+  - component: {fileID: 567281198343022048}
+  - component: {fileID: 9024197536996861225}
   m_Layer: 0
   m_Name: DiguePerceePos47
   m_TagString: Untagged
@@ -797,3 +802,38 @@ Transform:
   - {fileID: 2732547568297114803}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &567281198343022048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8682773789384059105}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9024197536996861225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8682773789384059105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0c61cf012a97548ac17afd21bf6460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTheGoodDigue: 0
+  isActionPressed: 0

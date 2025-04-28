@@ -226,7 +226,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7545461930979577862}
   - component: {fileID: 5295918409001422658}
-  - component: {fileID: 4143001552449128383}
   m_Layer: 0
   m_Name: HighlightsTeeth
   m_TagString: Untagged
@@ -296,29 +295,87 @@ MonoBehaviour:
   teethStructList: []
   currentState: 0
   maxState: 3
+  goodState: 2
+  m_IsGoodStateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7006769474355375544}
+        m_TargetAssemblyTypeName: "Per\xE7ageDigue, Assembly-CSharp"
+        m_MethodName: SetIsTheGoodDigue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1230981940598869395}
+        m_TargetAssemblyTypeName: "Per\xE7ageDigue, Assembly-CSharp"
+        m_MethodName: SetIsTheGoodDigue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3693681856347713744}
+        m_TargetAssemblyTypeName: "Per\xE7ageDigue, Assembly-CSharp"
+        m_MethodName: SetIsTheGoodDigue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  m_IsNotGoodStateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7006769474355375544}
+        m_TargetAssemblyTypeName: "Per\xE7ageDigue, Assembly-CSharp"
+        m_MethodName: SetIsTheGoodDigue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1230981940598869395}
+        m_TargetAssemblyTypeName: "Per\xE7ageDigue, Assembly-CSharp"
+        m_MethodName: SetIsTheGoodDigue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3693681856347713744}
+        m_TargetAssemblyTypeName: "Per\xE7ageDigue, Assembly-CSharp"
+        m_MethodName: SetIsTheGoodDigue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   digueParent: {fileID: 1631373480258908965}
   digueList: []
---- !u!65 &4143001552449128383
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105920379950029914}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.16452135, y: 0.09083431, z: 0.15780306}
-  m_Center: {x: 0.00092735887, y: 0.007034689, z: -0.006295681}
 --- !u!1 &1242142974245964214
 GameObject:
   m_ObjectHideFlags: 0
@@ -4138,9 +4195,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1631373480258908965}
     m_Modifications:
+    - target: {fileID: 296811205604761539, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
+      propertyPath: m_Name
+      value: Hole_-X-Y
+      objectReference: {fileID: 0}
     - target: {fileID: 701375457544481660, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
       propertyPath: m_Name
       value: DiguePerceePos41
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183307921382640281, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
+      propertyPath: m_Name
+      value: Hole_-Y
       objectReference: {fileID: 0}
     - target: {fileID: 3195866681016952913, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4182,6 +4247,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3671540070790712736, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
+      propertyPath: m_Name
+      value: Hole_X
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984117261742480374, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
+      propertyPath: m_Name
+      value: Hole_XY
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029497686663795010, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
+      propertyPath: m_Name
+      value: Hole_X-Y
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164006398486188507, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
+      propertyPath: m_Name
+      value: Hole_-XY
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537405600297079864, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
+      propertyPath: m_Name
+      value: Hole_Y
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568981986818746151, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
+      propertyPath: m_Name
+      value: Hole_-X
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4192,6 +4281,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3195866681016952913, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
   m_PrefabInstance: {fileID: 4418762620826355228}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7006769474355375544 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6660703484823841700, guid: 6ff97f5ffe210ac40a145b442dbf0f65, type: 3}
+  m_PrefabInstance: {fileID: 4418762620826355228}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0c61cf012a97548ac17afd21bf6460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5656235039630693881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4200,6 +4300,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1631373480258908965}
     m_Modifications:
+    - target: {fileID: 227777487085520310, guid: dd7658281412d2840838a71a80f4685b, type: 3}
+      propertyPath: m_Name
+      value: Hole_X
+      objectReference: {fileID: 0}
+    - target: {fileID: 435839940660024020, guid: dd7658281412d2840838a71a80f4685b, type: 3}
+      propertyPath: m_Name
+      value: Hole_-Y
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140325955748614588, guid: dd7658281412d2840838a71a80f4685b, type: 3}
+      propertyPath: m_Name
+      value: Hole_XY
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622704373734809745, guid: dd7658281412d2840838a71a80f4685b, type: 3}
+      propertyPath: m_Name
+      value: Hole_-X
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676770909224750474, guid: dd7658281412d2840838a71a80f4685b, type: 3}
+      propertyPath: m_Name
+      value: Hole_X-Y
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180771398848191540, guid: dd7658281412d2840838a71a80f4685b, type: 3}
+      propertyPath: m_Name
+      value: Hole_Y
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786893091240068513, guid: dd7658281412d2840838a71a80f4685b, type: 3}
+      propertyPath: m_Name
+      value: Hole_-X-Y
+      objectReference: {fileID: 0}
     - target: {fileID: 7120206953570253353, guid: dd7658281412d2840838a71a80f4685b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4240,9 +4368,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8185127825909623259, guid: dd7658281412d2840838a71a80f4685b, type: 3}
+      propertyPath: m_Name
+      value: Hole_-XY
+      objectReference: {fileID: 0}
     - target: {fileID: 8682773789384059105, guid: dd7658281412d2840838a71a80f4685b, type: 3}
       propertyPath: m_Name
       value: DiguePerceePos47
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682773789384059105, guid: dd7658281412d2840838a71a80f4685b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4254,6 +4390,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7120206953570253353, guid: dd7658281412d2840838a71a80f4685b, type: 3}
   m_PrefabInstance: {fileID: 5656235039630693881}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3693681856347713744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9024197536996861225, guid: dd7658281412d2840838a71a80f4685b, type: 3}
+  m_PrefabInstance: {fileID: 5656235039630693881}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0c61cf012a97548ac17afd21bf6460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8860508221891968261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4302,15 +4449,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 397280332443453844, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
+      propertyPath: m_Name
+      value: Hole_XY
+      objectReference: {fileID: 0}
     - target: {fileID: 1277381633265461452, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
       propertyPath: m_Name
       value: DiguePerceePos44
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277381633265461452, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745413288616934705, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
+      propertyPath: m_Name
+      value: Hole_-X
+      objectReference: {fileID: 0}
+    - target: {fileID: 6571282222393836053, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
+      propertyPath: m_Name
+      value: Hole_-X-Y
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918338467338014275, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
+      propertyPath: m_Name
+      value: Hole_X
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366363327734563260, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
+      propertyPath: m_Name
+      value: Hole_-Y
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851471153785647040, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
+      propertyPath: m_Name
+      value: Hole_-XY
+      objectReference: {fileID: 0}
+    - target: {fileID: 8995142551073318536, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
+      propertyPath: m_Name
+      value: Hole_X-Y
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177594937314117406, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
+      propertyPath: m_Name
+      value: Hole_Y
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
+--- !u!114 &1230981940598869395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7774209964395819158, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}
+  m_PrefabInstance: {fileID: 8860508221891968261}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0c61cf012a97548ac17afd21bf6460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8841474921306703652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 19672258575252001, guid: 27f87436318ceda478724dd4c48d9d04, type: 3}

@@ -1,11 +1,17 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HighlightsTeethManager : MonoBehaviour
 {
     [SerializeField] private TeethStruct[] teethStructList;
     [SerializeField] private int currentState;
     [SerializeField] private int maxState = 3;
+
+    public int goodState = 0;
+    public UnityEvent m_IsGoodStateEvent;
+    public UnityEvent m_IsNotGoodStateEvent;
 
     [Header("Digue Settings")] 
     public Transform digueParent;
@@ -29,6 +35,23 @@ public class HighlightsTeethManager : MonoBehaviour
 
     void Start()
     {
+
+        if (m_IsGoodStateEvent == null)
+            m_IsGoodStateEvent = new UnityEvent();
+        if (m_IsNotGoodStateEvent == null)
+            m_IsNotGoodStateEvent = new UnityEvent();
+        
+        List<PerçageDigue> allDigueInScene = new List<PerçageDigue>(
+            FindObjectsByType<PerçageDigue>(FindObjectsSortMode.None)
+        );
+
+        foreach (PerçageDigue digue in allDigueInScene)
+        {
+            m_IsGoodStateEvent.AddListener(() => digue.SetIsTheGoodDigue(true));
+            m_IsNotGoodStateEvent.AddListener(() => digue.SetIsTheGoodDigue(false));
+        }
+
+
         currentState = 0;
         InitializeTeeth();
         InitializeDigue();
@@ -37,7 +60,7 @@ public class HighlightsTeethManager : MonoBehaviour
         switchState(0);
     }
 
-    void InitializeTeeth()
+    private void InitializeTeeth()
     {
         int childCount = transform.childCount;
         teethStructList = new TeethStruct[childCount];
@@ -59,7 +82,7 @@ public class HighlightsTeethManager : MonoBehaviour
         }
     }
 
-    void InitializeDigue()
+    private void InitializeDigue()
     {
         int childCount = digueParent.childCount;
         digueList = new GameObject[childCount];
@@ -79,7 +102,7 @@ public class HighlightsTeethManager : MonoBehaviour
         }
     }
 
-    void SetTeeth(stateTheeth state, int[] indexList)
+    private void SetTeeth(stateTheeth state, int[] indexList)
     {
         foreach (var item in teethStructList)
         {
@@ -90,7 +113,7 @@ public class HighlightsTeethManager : MonoBehaviour
         }
     }
 
-    void SetDigue(int index)
+    private void SetDigue(int index)
     {
         if (index >= 0 && index < digueList.Length)
         {
@@ -104,6 +127,16 @@ public class HighlightsTeethManager : MonoBehaviour
 
         CleanTeeth();
         CleanDigue();
+
+        // set at true PerçageDigue.isGoodDigue
+        if (currentState == goodState)
+        {
+            m_IsGoodStateEvent?.Invoke();
+        }
+        else
+        {
+            m_IsNotGoodStateEvent?.Invoke();
+        }
 
         switch (currentState)
         {
@@ -120,7 +153,7 @@ public class HighlightsTeethManager : MonoBehaviour
         SetDigue(currentState);
     }
 
-    void CleanTeeth()
+    private void CleanTeeth()
     {
         for (int i = 0; i < teethStructList.Length; i++)
         {
@@ -128,7 +161,7 @@ public class HighlightsTeethManager : MonoBehaviour
         }
     }
 
-    void CleanDigue()
+    private void CleanDigue()
     {
         foreach (GameObject digue in digueList)
         {

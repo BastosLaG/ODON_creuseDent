@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -29,21 +30,31 @@ public class ArmatureDigueBehaviour : MonoBehaviour
     public GameObject jointHole_XY;
     public GameObject jointHole_X_Y;
 
-    void Awake()
-    {
-        InitJoints();
-    }
+    public GameObject[] setFalse;
 
     public void InitJoints()
     {
         GameObject[] joints = new GameObject[]
         {
             jointX, jointY, joint_X, joint_Y, jointXY, jointX_Y, joint_XY, joint_X_Y, 
+        };
+
+        GameObject[] holeJoints = new GameObject[]
+        {
             jointHoleX, jointHoleY, jointHole_X, jointHole_Y, jointHoleXY, jointHoleX_Y, jointHole_XY, jointHole_X_Y
         };
 
         MakeEssentialJoints(joints);
         MakeConnectionLinks(joints);
+        MakeGrabbableJoint(joints);
+
+        MakeEssentialJoints(holeJoints);
+        MakeConnectionLinks(holeJoints);
+
+        foreach (GameObject item in setFalse)
+        {
+            item.SetActive(false);
+        }
     }
 
     private void MakeEssentialJoints(GameObject[] joints)
@@ -57,7 +68,7 @@ public class ArmatureDigueBehaviour : MonoBehaviour
             if (col == null)
             {
                 col = jointGO.AddComponent<BoxCollider>();
-                col.size = Vector3.one * 0.01f;
+                col.size = Vector3.one * 0.05f;
             }
 
             Rigidbody rb = jointGO.GetComponent<Rigidbody>();
@@ -65,10 +76,7 @@ public class ArmatureDigueBehaviour : MonoBehaviour
                 rb = jointGO.AddComponent<Rigidbody>();
 
             rb.mass = 0.1f;
-            rb.linearDamping = 0.05f;
-            rb.angularDamping = 0.05f;
             rb.isKinematic = false;
-            rb.freezeRotation = true;
         }
     }
     private void MakeConnectionLinks(GameObject[] joints)
@@ -109,11 +117,25 @@ public class ArmatureDigueBehaviour : MonoBehaviour
         if (jointGO == jointHoleY) return new GameObject[] { jointHoleXY, jointHole_XY, jointY };
         if (jointGO == jointHole_X) return new GameObject[] { jointHole_X_Y, jointHole_XY, joint_X};
         if (jointGO == jointHole_Y) return new GameObject[] { jointHoleX_Y, jointHole_X_Y, joint_Y };
-        if (jointGO == jointHoleXY) return new GameObject[] { jointHoleY, jointHoleX, jointHoleXY };
+        if (jointGO == jointHoleXY) return new GameObject[] { jointHoleY, jointHoleX, jointXY };
         if (jointGO == jointHoleX_Y) return new GameObject[] { jointHoleX, jointHole_Y, jointX_Y};
         if (jointGO == jointHole_XY) return new GameObject[] { jointHole_X, jointHoleY, joint_XY };
         if (jointGO == jointHole_X_Y) return new GameObject[] { jointHole_X, jointHole_Y, joint_X_Y };
         // Si aucune connexion n'est trouvée, retourne un tableau vide
         return new GameObject[0];
+    }
+
+    private void MakeGrabbableJoint(GameObject[] joints){
+        foreach (GameObject jointGO in joints)
+        {
+            if (jointGO == null) continue;
+
+            SetObjectGrabable sOG = jointGO.GetComponent<SetObjectGrabable>();
+            if (sOG == null)
+            {
+                jointGO.AddComponent<SetObjectGrabable>();
+            }
+
+        }
     }
 }
