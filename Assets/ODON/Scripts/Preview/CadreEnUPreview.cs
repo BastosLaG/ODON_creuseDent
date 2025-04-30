@@ -8,10 +8,10 @@ public class CadreEnUPreview : MonoBehaviour
 
     private Coroutine cadreEnUPreview = null;
 
-    // A appeller quand on attrape le crampon pour afficher la prévisualisation
+    // A appeller quand on attrape l'object pour afficher la prï¿½visualisation
     public void StartToCompareDistance()
     {
-        // ??= -> Change la valeur si elle est nulle, sinon, laisse la valeur par défaut équivaut à "if (cadreEnUPreview == null)...".
+        // ??= -> Change la valeur si elle est nulle, sinon, laisse la valeur par dï¿½faut ï¿½quivaut ï¿½ "if (cadreEnUPreview == null)...".
         cadreEnUPreview ??= StartCoroutine(CompareCadreDistances(0.5f));
     }
 
@@ -24,7 +24,7 @@ public class CadreEnUPreview : MonoBehaviour
         }
     }
 
-    // Regarde qu'elle dent est la plus proche du crampon et lui met la prévisualisation du crampon
+    // Regarde qu'elle preview est la plus proche du object et lui met la prï¿½visualisation de l'object
     private void CompareDistance()
     {
         float minCadreDistance = Vector3.Distance(transform.position, cadreEnUFinalTransform.position);
@@ -34,7 +34,7 @@ public class CadreEnUPreview : MonoBehaviour
         }
     }
 
-    // Active l'objet qui est placé à l'endroit voulu (quand on relache la gachette)
+    // Active l'objet qui est placï¿½ ï¿½ l'endroit voulu (quand on relache la gachette)
     public void PlaceObject()
     {
         float minCadreDistance = Vector3.Distance(transform.position, cadreEnUFinalTransform.position);

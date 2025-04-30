@@ -25,6 +25,11 @@ public class ArmatureDigueBehaviour : MonoBehaviour
     [Header("Item destroy")]
     public GameObject[] setFalse;
 
+    void Awake()
+    {
+        InitJoints();
+    }
+
     public void InitJoints()
     {
         GameObject[] joints = new GameObject[]
@@ -117,9 +122,8 @@ public class ArmatureDigueBehaviour : MonoBehaviour
             SetObjectGrabable sOG = jointGO.GetComponent<SetObjectGrabable>();
             if (sOG == null)
             {
-                jointGO.AddComponent<SetObjectGrabable>();
+                sOG = jointGO.AddComponent<SetObjectGrabable>();
             }
-
         }
     }
 }

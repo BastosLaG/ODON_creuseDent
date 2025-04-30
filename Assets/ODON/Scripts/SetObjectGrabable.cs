@@ -11,7 +11,7 @@ public class SetObjectGrabable : MonoBehaviour
     [SerializeField] private bool _dynamicAttach = true, _itemSelected, _itemKinematic, _constrainRBody, _multipleGrab;
 
     [SerializeField] private bool doEventOneTime = false;
-    [SerializeField] private UnityEvent SelectEnter, SelectExit, ActionEnter, ActionExit;
+    public UnityEvent SelectEnter, SelectExit, ActionEnter, ActionExit;
 
     private Vector3 grabPoint;
     private Transform handTransform;

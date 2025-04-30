@@ -19,7 +19,7 @@ public class Feedback : MonoBehaviour
         for (int i = 0; i < entries.Count; i++)
         {
             datas.Add(i, "");
-            print(i + " " + datas[i]);
+            // print(i + " " + datas[i]);
         }
     }
 

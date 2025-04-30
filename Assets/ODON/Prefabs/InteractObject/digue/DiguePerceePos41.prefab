@@ -130,8 +130,6 @@ MonoBehaviour:
   joint_X_Y: {fileID: 8789218541828398704}
   Hole: {fileID: 292645017018063416}
   setFalse: []
-  sizeCollider: 0.1
-  massRigidbody: 0.1
 --- !u!1 &701375457544481660
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +209,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6123186418898582218}
+  - component: {fileID: 1837886416659689973}
+  - component: {fileID: 7389774459800742074}
   m_Layer: 1
   m_Name: X-Y
   m_TagString: Untagged
@@ -233,6 +233,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 496131629702463798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1837886416659689973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2754369800841639728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a998c411cefa84491c19e8245491a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DigueFinalTransform: {fileID: 0}
+--- !u!114 &7389774459800742074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2754369800841639728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3f78e6ff5a6cb4ca678a99f9fdf412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactLayers:
+    m_Bits: 2
+  _dynamicAttach: 1
+  _itemSelected: 0
+  _itemKinematic: 0
+  _constrainRBody: 0
+  _multipleGrab: 0
+  doEventOneTime: 0
+  SelectEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SelectExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ActionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3183307921382640281
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +412,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3193320435527146587}
+  - component: {fileID: 557555676847269807}
+  - component: {fileID: 5650361830993726672}
   m_Layer: 1
   m_Name: -Y
   m_TagString: Untagged
@@ -365,6 +436,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 496131629702463798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &557555676847269807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4980048864552730570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a998c411cefa84491c19e8245491a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DigueFinalTransform: {fileID: 0}
+--- !u!114 &5650361830993726672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4980048864552730570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3f78e6ff5a6cb4ca678a99f9fdf412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactLayers:
+    m_Bits: 2
+  _dynamicAttach: 1
+  _itemSelected: 0
+  _itemKinematic: 0
+  _constrainRBody: 0
+  _multipleGrab: 0
+  doEventOneTime: 0
+  SelectEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SelectExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ActionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4984090777742202279
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7261184156005963203}
+  - component: {fileID: 7540222326203795779}
   m_Layer: 1
   m_Name: X
   m_TagString: Untagged
@@ -396,6 +537,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 496131629702463798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7540222326203795779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984090777742202279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a998c411cefa84491c19e8245491a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DigueFinalTransform: {fileID: 0}
 --- !u!1 &4984117261742480374
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +652,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2508937281823458323}
+  - component: {fileID: 48594561067300425}
+  - component: {fileID: 6470494339368695077}
   m_Layer: 1
   m_Name: Y
   m_TagString: Untagged
@@ -520,6 +676,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 496131629702463798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &48594561067300425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477608728402000532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a998c411cefa84491c19e8245491a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DigueFinalTransform: {fileID: 0}
+--- !u!114 &6470494339368695077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477608728402000532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3f78e6ff5a6cb4ca678a99f9fdf412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactLayers:
+    m_Bits: 2
+  _dynamicAttach: 1
+  _itemSelected: 0
+  _itemKinematic: 0
+  _constrainRBody: 0
+  _multipleGrab: 0
+  doEventOneTime: 0
+  SelectEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SelectExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ActionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6429396841408405941
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +909,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2087093074195640867}
+  - component: {fileID: 2594712808869724831}
+  - component: {fileID: 48888115022267928}
   m_Layer: 1
   m_Name: -X
   m_TagString: Untagged
@@ -706,6 +933,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 496131629702463798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2594712808869724831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6444233484444092820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a998c411cefa84491c19e8245491a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DigueFinalTransform: {fileID: 0}
+--- !u!114 &48888115022267928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6444233484444092820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3f78e6ff5a6cb4ca678a99f9fdf412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactLayers:
+    m_Bits: 2
+  _dynamicAttach: 1
+  _itemSelected: 0
+  _itemKinematic: 0
+  _constrainRBody: 0
+  _multipleGrab: 0
+  doEventOneTime: 0
+  SelectEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SelectExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ActionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6537405600297079864
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +1073,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3101975106510267949}
+  - component: {fileID: 3090568379144329897}
+  - component: {fileID: 1257966947023745717}
   m_Layer: 1
   m_Name: XY
   m_TagString: Untagged
@@ -799,6 +1097,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 496131629702463798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3090568379144329897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8233548913945267026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a998c411cefa84491c19e8245491a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DigueFinalTransform: {fileID: 0}
+--- !u!114 &1257966947023745717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8233548913945267026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3f78e6ff5a6cb4ca678a99f9fdf412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactLayers:
+    m_Bits: 2
+  _dynamicAttach: 1
+  _itemSelected: 0
+  _itemKinematic: 0
+  _constrainRBody: 0
+  _multipleGrab: 0
+  doEventOneTime: 0
+  SelectEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SelectExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ActionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8268140990021874150
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,6 +1175,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8050625649415656438}
+  - component: {fileID: 8029498474501127044}
+  - component: {fileID: 6229190976189257105}
   m_Layer: 1
   m_Name: -XY
   m_TagString: Untagged
@@ -830,6 +1199,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 496131629702463798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8029498474501127044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8268140990021874150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a998c411cefa84491c19e8245491a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DigueFinalTransform: {fileID: 0}
+--- !u!114 &6229190976189257105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8268140990021874150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3f78e6ff5a6cb4ca678a99f9fdf412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactLayers:
+    m_Bits: 2
+  _dynamicAttach: 1
+  _itemSelected: 0
+  _itemKinematic: 0
+  _constrainRBody: 0
+  _multipleGrab: 0
+  doEventOneTime: 0
+  SelectEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SelectExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ActionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8789218541828398704
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +1277,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7271345106763443597}
+  - component: {fileID: 2009370177976809111}
+  - component: {fileID: 7301646596842320972}
   m_Layer: 1
   m_Name: -X-Y
   m_TagString: Untagged
@@ -861,3 +1301,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 496131629702463798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2009370177976809111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789218541828398704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a998c411cefa84491c19e8245491a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DigueFinalTransform: {fileID: 0}
+--- !u!114 &7301646596842320972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789218541828398704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3f78e6ff5a6cb4ca678a99f9fdf412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactLayers:
+    m_Bits: 2
+  _dynamicAttach: 1
+  _itemSelected: 0
+  _itemKinematic: 0
+  _constrainRBody: 0
+  _multipleGrab: 0
+  doEventOneTime: 0
+  SelectEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SelectExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837886416659689973}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ActionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionExit:
+    m_PersistentCalls:
+      m_Calls: []
