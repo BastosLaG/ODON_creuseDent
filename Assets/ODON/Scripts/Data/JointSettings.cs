@@ -58,6 +58,12 @@ public class JointSettings : ScriptableObject
     public Vector3 anchor;
     public Vector3 connectedAnchor;
 
+    [Header("RigidiBody")]
+    public float rbMass;
+    
+    [Header("Box Collider")]
+    public float BoxColliderSize;
+
     public void ApplyTo(ConfigurableJoint joint)
     {
         joint.xMotion = xMotion;
