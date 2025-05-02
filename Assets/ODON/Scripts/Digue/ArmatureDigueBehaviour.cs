@@ -25,6 +25,12 @@ public class ArmatureDigueBehaviour : MonoBehaviour
     [Header("Item destroy")]
     public GameObject[] setFalse;
 
+    private int handsHolding = 0;
+
+    [Header("Preview")]
+    [SerializeField] private Material finalMatDigue;
+    [SerializeField] private Transform DigueFinalTransform;
+
     void Awake()
     {
         InitJoints();
@@ -119,11 +125,26 @@ public class ArmatureDigueBehaviour : MonoBehaviour
         {
             if (jointGO == null) continue;
 
+            DiguePreview preview = jointGO.GetComponent<DiguePreview>();
+            if (preview == null)
+            {
+                preview = jointGO.AddComponent<DiguePreview>();
+            }
+            preview.SetTransform(DigueFinalTransform);
+            preview.SetMaterial(finalMatDigue);
+
             SetObjectGrabable sOG = jointGO.GetComponent<SetObjectGrabable>();
             if (sOG == null)
             {
                 sOG = jointGO.AddComponent<SetObjectGrabable>();
             }
+
+            sOG.SelectEnter = new UnityEvent();
+            sOG.SelectExit = new UnityEvent();
+
+            sOG.SelectEnter.AddListener(preview.OnSelectEnter);
+            sOG.SelectExit.AddListener(preview.OnSelectExit);
+
         }
     }
 }

@@ -1,45 +1,48 @@
 using UnityEngine;
-using UnityEngine.Events;
 using System.Collections;
-using UnityEditor.SceneManagement;
-using Unity.VisualScripting;
 
 public class DiguePreview : MonoBehaviour
 {
-    [SerializeField] private Transform DigueFinalTransform;
-    private SetObjectGrabable setObjectGrabable;
+    [SerializeField] private Transform DigueFinalTransform {get; set;}
+    [SerializeField] private Material finalMat {get; set;}
+    [SerializeField] private float minDistance = 2.0f;
 
-    private Coroutine cadreEnUPreview = null;
+    private Coroutine DiguePreviewCoroutine = null;
 
-    void Start()
+    private static int handsHolding = 0;
+    private static int activePreviewCoroutines = 0;
+
+    public static int ActivePreviewCount => activePreviewCoroutines;
+
+    public void OnSelectEnter()
     {
-        setObjectGrabable = GetComponent<SetObjectGrabable>();
-        if (setObjectGrabable == null)
+        handsHolding++;
+
+        if (DiguePreviewCoroutine == null)
         {
-            setObjectGrabable = gameObject.AddComponent<SetObjectGrabable>();
+            DiguePreviewCoroutine = StartCoroutine(CompareDistancesCoroutine(0.5f));
+            activePreviewCoroutines++;
         }
-
-        // Vérifie que les events ne sont pas null
-        if (setObjectGrabable.SelectEnter == null)
-            setObjectGrabable.SelectEnter = new UnityEvent();
-
-        if (setObjectGrabable.SelectExit == null)
-            setObjectGrabable.SelectExit = new UnityEvent();
-
-        // Ajoute des listeners si non déjà présents
-        setObjectGrabable.SelectEnter.AddListener(StartToCompareDistance);
-        setObjectGrabable.SelectExit.AddListener(PlaceObject);
     }
 
-
-    // A appeller quand on attrape l'object pour afficher la pr�visualisation
-    public void StartToCompareDistance()
+    public void OnSelectExit()
     {
-        // ??= -> Change la valeur si elle est nulle, sinon, laisse la valeur par d�faut �quivaut � "if (cadreEnUPreview == null)...".
-        cadreEnUPreview ??= StartCoroutine(CompareCadreDistances(0.5f));
+        handsHolding = Mathf.Max(0, handsHolding - 1);
+
+        if (handsHolding == 0)
+        {
+            if (DiguePreviewCoroutine != null)
+            {
+                StopCoroutine(DiguePreviewCoroutine);
+                DiguePreviewCoroutine = null;
+                activePreviewCoroutines--;
+            }
+
+            PlaceObject();
+        }
     }
 
-    private IEnumerator CompareCadreDistances(float compareInterval)
+    private IEnumerator CompareDistancesCoroutine(float compareInterval)
     {
         while (true)
         {
@@ -48,24 +51,36 @@ public class DiguePreview : MonoBehaviour
         }
     }
 
-    // Regarde qu'elle preview est la plus proche du object et lui met la pr�visualisation de l'object
     private void CompareDistance()
     {
-        float minCadreDistance = Vector3.Distance(transform.position, DigueFinalTransform.position);
-        if (minCadreDistance < 0.5f)
+        float distance = Vector3.Distance(transform.position, DigueFinalTransform.position);
+
+        DigueFinalTransform.gameObject.SetActive(distance < minDistance);
+    }
+
+    public void PlaceObject()
+    {
+        float distance = Vector3.Distance(transform.position, DigueFinalTransform.position);
+        if (distance < minDistance)
         {
-            DigueFinalTransform.gameObject.SetActive(true);
+            DigueFinalTransform.GetComponentInChildren<SkinnedMeshRenderer>().material = finalMat;
+
+            Transform root = transform;
+            for (int i = 0; i < 3 && root.parent != null; i++)
+            {
+                root = root.parent;
+            }
+
+            root.gameObject.SetActive(false);
         }
     }
 
-    // Active l'objet qui est plac� � l'endroit voulu (quand on relache la gachette)
-    public void PlaceObject()
+    public void SetMaterial(Material material)
     {
-        float minCadreDistance = Vector3.Distance(transform.position, DigueFinalTransform.position);
-        if (minCadreDistance < 0.5f)
-        {
-            DigueFinalTransform.GetComponent<MeshRenderer>().material = gameObject.transform.parent.parent.GetComponentInChildren<MeshRenderer>().material;
-            Destroy(gameObject.transform.parent);
-        }
+        finalMat = material;
+    }
+    public void SetTransform(Transform transform)
+    {
+        DigueFinalTransform = transform;
     }
 }
