@@ -31,11 +31,6 @@ public class ArmatureDigueBehaviour : MonoBehaviour
     [SerializeField] private Material finalMatDigue;
     [SerializeField] private Transform DigueFinalTransform;
 
-    void Awake()
-    {
-        InitJoints();
-    }
-
     public void InitJoints()
     {
         GameObject[] joints = new GameObject[]
