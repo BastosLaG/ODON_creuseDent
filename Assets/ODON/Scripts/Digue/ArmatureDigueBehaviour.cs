@@ -25,8 +25,6 @@ public class ArmatureDigueBehaviour : MonoBehaviour
     [Header("Item destroy")]
     public GameObject[] setFalse;
 
-    private int handsHolding = 0;
-
     [Header("Preview")]
     [SerializeField] private Material finalMatDigue;
     [SerializeField] private Transform DigueFinalTransform;

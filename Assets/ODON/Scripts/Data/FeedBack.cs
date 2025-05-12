@@ -6,13 +6,11 @@ using UnityEngine.Networking;
 
 public class Feedback : MonoBehaviour
 {
-
-    [SerializeField] private string formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeuA82XVzL6SUEzNIhZAp3_nYok95jLcAybFuUT6QJwBztRdw/formResponse";
+    private string formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeuA82XVzL6SUEzNIhZAp3_nYok95jLcAybFuUT6QJwBztRdw/formResponse";
     [SerializeField] private List<string> entries = new();
     private Dictionary<int, string> datas = new();
 
     private string[] postEntries;
-
 
     private void Start()
     {
