@@ -3,12 +3,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR;
 
-[System.Serializable]
-public class PrimaryButtonEvent : UnityEvent<bool> { }
-
 public class PrimaryButtonWatcher : MonoBehaviour
 {
-    public PrimaryButtonEvent primaryButtonPress;
+    public UnityEvent<bool> primaryButtonPress;
 
     private bool lastButtonState = false;
     private List<InputDevice> devicesWithPrimaryButton;
@@ -17,7 +14,7 @@ public class PrimaryButtonWatcher : MonoBehaviour
     {
         if (primaryButtonPress == null)
         {
-            primaryButtonPress = new PrimaryButtonEvent();
+            primaryButtonPress = new ();
         }
 
         devicesWithPrimaryButton = new List<InputDevice>();
@@ -25,7 +22,7 @@ public class PrimaryButtonWatcher : MonoBehaviour
 
     void OnEnable()
     {
-        List<InputDevice> allDevices = new List<InputDevice>();
+        List<InputDevice> allDevices = new ();
         InputDevices.GetDevices(allDevices);
         foreach (InputDevice device in allDevices)
             InputDevices_deviceConnected(device);
@@ -43,10 +40,9 @@ public class PrimaryButtonWatcher : MonoBehaviour
 
     private void InputDevices_deviceConnected(InputDevice device)
     {
-        bool discardedValue;
-        if (device.TryGetFeatureValue(CommonUsages.primaryButton, out discardedValue))
+        if (device.TryGetFeatureValue(CommonUsages.primaryButton, out bool _))
         {
-            devicesWithPrimaryButton.Add(device); // Add any devices that have a primary button.
+            devicesWithPrimaryButton.Add(device);
         }
     }
 
@@ -61,10 +57,8 @@ public class PrimaryButtonWatcher : MonoBehaviour
         bool tempState = false;
         foreach (var device in devicesWithPrimaryButton)
         {
-            bool primaryButtonState = false;
-            tempState = device.TryGetFeatureValue(CommonUsages.primaryButton, out primaryButtonState) // did get a value
-                        && primaryButtonState // the value we got
-                        || tempState; // cumulative result from other controllers
+            tempState = device.TryGetFeatureValue(CommonUsages.primaryButton, out bool isPressed) // does action exist
+                        && isPressed; // is action performed
         }
 
         if (tempState != lastButtonState) // Button state changed since last frame
