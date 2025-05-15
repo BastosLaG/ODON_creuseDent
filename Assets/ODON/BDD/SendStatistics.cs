@@ -16,22 +16,22 @@ public class SendStatistics : MonoBehaviour
     [SerializeField] private GameObject errorLogPref;
     [SerializeField] private string[][] etapeNames = new string[][] { 
         new string[] {
-            "�tape 1 : Analysez le patient (la dent � soigner + allergie).",
-            "�tape 2 : Equipez vous des �quipements obligatoires (Gants, Masque et Blouse).",
-            "�tape 3 : Dessinez sur la digue.",
-            "�tape 4 : Percez la digue.",
-            "�tape 5 : Posez le crampon sur la dent gr�ce � la pince de Brewer.",
-            "�tape 6 : Posez la digue en faisant attention de bien passer derri�re les ailettes.",
-            "�tape 7 : Corrigez a l�aide du fil dentaire et posez le widget." 
+            "Étape 1 : Analysez le patient (la dent à soigner + allergie).",
+            "Étape 2 : Equipez vous des équipements obligatoires (Gants, Masque et Blouse).",
+            "Étape 3 : Dessinez sur la digue.",
+            "Étape 4 : Percez la digue.",
+            "Étape 5 : Posez le crampon sur la dent grâce à la pince de Brewer.",
+            "Étape 6 : Posez la digue en faisant attention de bien passer derrière les ailettes.",
+            "Étape 7 : Corrigez à l'aide du fil dentaire et posez le widget." 
         },
         new string[] {
-            "�tape 1 : Analysez le patient(la dent � soigner + allergie).",
-            "�tape 2 : Equipez vous des �quipements obligatoires (Gants, Masque et Blouse).",
-            "�tape 3 : Dessinez sur la digue.",
-            "�tape 4 : Percez la digue.",
-            "�tape 5 : Posez le crampon sur la digue.",
-            "�tape 6 : Posez la digue avec le crampon.",
-            "�tape 7 : Corrigez a l�aide du fil dentaire et posez widget."
+            "Étape 1 : Analysez le patient(la dent à soigner + allergie).",
+            "Étape 2 : Equipez vous des équipements obligatoires (Gants, Masque et Blouse).",
+            "Étape 3 : Dessinez sur la digue.",
+            "Étape 4 : Percez la digue.",
+            "Étape 5 : Posez le crampon sur la digue.",
+            "Étape 6 : Posez la digue avec le crampon.",
+            "Étape 7 : Corrigez a l'aide du fil dentaire et posez widget."
         }
     };
 
@@ -44,7 +44,8 @@ public class SendStatistics : MonoBehaviour
     private void Start()
     {
         // ASSIGNE UNE POSE DE DIGUE ALEATOIRE.
-        CreateNewPose(UnityEngine.Random.Range(0,1));
+        CreateNewPose(UnityEngine.Random.Range(0,2));
+        showEtape();
     }
 
     // ON CREE LES DONN�ES D'INSTALATION DE LA DIGUE ET DES �TAPES QUI LA COMPOSE
