@@ -5,8 +5,8 @@ using System;
 public class calpText : MonoBehaviour
 {
     public TMP_Text infoPatient;
-    string patient1 = "Patient 1";
-    string patient2 = "Patient 2";
+    string patient1 = "Nom : Dubois\nPrénom : Michel\nAllergie Latex : Non\n Dent : 41\n";
+    string patient2 = "Nom : Dubois\nPrénom : Michel\nAllergie Latex : Non\n Dent : 41\n";
 
 
     public void UpdateTextboxes(int p){

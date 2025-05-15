@@ -44,7 +44,7 @@ public class SendStatistics : MonoBehaviour
     private void Start()
     {
         // ASSIGNE UNE POSE DE DIGUE ALEATOIRE.
-        CreateNewPose(UnityEngine.Random.Range(0,2));
+        CreateNewPose(UnityEngine.Random.Range(0,1));
     }
 
     // ON CREE LES DONN�ES D'INSTALATION DE LA DIGUE ET DES �TAPES QUI LA COMPOSE
