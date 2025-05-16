@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -9,13 +10,8 @@ namespace ODON
 
         private static Manager_outline instance = null;
         public static Manager_outline Instance => instance;
-        [Header("Outline Settings")]
-        [SerializeField] private HighlitableItem tablet;
-        [SerializeField] private HighlitableItem notebook;
-        [SerializeField] private HighlitableItem pinceBrewer;
-        [SerializeField] private HighlitableItem pinceAinsworth;
-        [SerializeField] private HighlitableItem crampon;
-        [SerializeField] private HighlitableItem damSupport;
+        [SerializeField] private HighlitableItem[] highlitableItems;
+        public HighlitableItem[] HighlitableItems => highlitableItems;
 
         public enum ItemType
         {
@@ -40,12 +36,44 @@ namespace ODON
             }
         }
 
-        void Start()
+        private void OnDestroy()
         {
-            UpdateOutline(tablet);
+            if (instance == this)
+            {
+                instance = null;
+            }
         }
 
-        public void UpdateOutline(HighlitableItem highlitableItem)
+        public void UpdateOutline(ItemType item)
+        {
+            switch (item)
+            {
+                case ItemType.Tablet:
+                    EnableOutline(highlitableItems[0]);
+                    break;
+                case ItemType.Notebook:
+                    EnableOutline(highlitableItems[1]);
+                    break;
+                case ItemType.PinceBrewer:
+                    EnableOutline(highlitableItems[2]);
+                    break;
+                case ItemType.PinceAinsworth:
+                    EnableOutline(highlitableItems[3]);
+                    break;
+                case ItemType.Crampon:
+                    EnableOutline(highlitableItems[4]);
+                    break;
+                case ItemType.DamSupport:
+                    EnableOutline(highlitableItems[5]);
+                    break;
+                default:
+                    Debug.LogError("Invalid item type.");
+                    break;
+            }
+
+        }
+
+        private void EnableOutline(HighlitableItem highlitableItem)
         {
             if (highlitableItem?.gameObject == null)
             {
@@ -79,19 +107,9 @@ namespace ODON
             }
         }
 
-        public GameObject GetItemGameObject(ItemType type)
+        internal void UpdateOutline(int etapeNum)
         {
-            return type switch
-            {
-                ItemType.Tablet => tablet.gameObject,
-                ItemType.Notebook => notebook.gameObject,
-                ItemType.PinceBrewer => pinceBrewer.gameObject,
-                ItemType.PinceAinsworth => pinceAinsworth.gameObject,
-                ItemType.Crampon => crampon.gameObject,
-                ItemType.DamSupport => damSupport.gameObject,
-                _ => null
-            };
+            throw new NotImplementedException();
         }
-
     }
 }
