@@ -104,7 +104,7 @@ public class SendStatistics : MonoBehaviour
     private void showEtape()
     {
         etapeText.text = etapeNames[poseNum][etapeNum];
-        outline.UpdateOutline(etapeNum);
+        // outline.UpdateOutline(etapeNum);
     }
 
     // VA � L'�TAPE SUIVANTE

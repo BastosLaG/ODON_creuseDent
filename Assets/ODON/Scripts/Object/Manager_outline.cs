@@ -3,38 +3,75 @@ using UnityEngine;
 
 public class Manager_outline : MonoBehaviour
 {
-    public void UpdateOutline(int etape)
+    [Header("Outline Settings")]
+    [SerializeField] private HighlitableItem tablet;
+    [SerializeField] private HighlitableItem notebook;
+    [SerializeField] private HighlitableItem pinceBrewer;
+    [SerializeField] private HighlitableItem pinceAinsworth;
+    [SerializeField] private HighlitableItem crampon;
+    [SerializeField] private HighlitableItem damSupport;
+
+    public enum ItemType
     {
-        switch (etape)
+        Tablet,
+        Notebook,
+        PinceBrewer,
+        PinceAinsworth,
+        Crampon,
+        DamSupport
+    }
+
+    void Start()
+    {
+        UpdateOutline(tablet);
+    }
+
+    public void UpdateOutline(HighlitableItem highlitableItem)
+    {
+        if (highlitableItem?.gameObject == null)
         {
-            case 0:
-                print(etape);
-                var outline = GameObject.Find("Porte_doc").AddComponent<Outline>();
-                outline.OutlineMode = Outline.Mode.OutlineAndSilhouette;
-                outline.OutlineColor = Color.yellow;
-                outline.OutlineWidth = 10f;
-                break;
-            case 1:
-                print(etape);
-                break;
-            case 2:
-                print(etape);
-                break;
-            case 3:
-                print(etape);
-                break;
-            case 4:
-                print(etape);
-                break;
-            case 5:
-                print(etape);
-                break;
-            case 6:
-                print(etape);
-                break;
-            default:
-                print(etape);
-                break;
+            Debug.LogError("HighlitableItem or its GameObject is null.");
+            return;
+        }
+        if (!highlitableItem.isHighlitable)
+        {
+            return;
+        }
+        if (!highlitableItem.gameObject.TryGetComponent<Outline>(out var outline))
+        {
+            Debug.LogError("Outline component not found on the object.");
+            return;
+        }
+        else
+        {
+            highlitableItem.isHighlitable = true;
+            outline.enabled = true;
+        }
+        outline.OutlineMode = Outline.Mode.OutlineAndSilhouette;
+        outline.OutlineColor = Color.yellow;
+        outline.OutlineWidth = 5f;
+    }
+
+    public void DisableOutline(HighlitableItem highlitableItem)
+    {
+        if (highlitableItem.gameObject.TryGetComponent<Outline>(out var outline))
+        {
+            outline.enabled = false;
         }
     }
+
+    public GameObject GetItemGameObject(ItemType type)
+    {
+        return type switch
+        {
+            ItemType.Tablet => tablet.gameObject,
+            ItemType.Notebook => notebook.gameObject,
+            ItemType.PinceBrewer => pinceBrewer.gameObject,
+            ItemType.PinceAinsworth => pinceAinsworth.gameObject,
+            ItemType.Crampon => crampon.gameObject,
+            ItemType.DamSupport => damSupport.gameObject,
+            _ => null
+        };
+    }
+
 }
