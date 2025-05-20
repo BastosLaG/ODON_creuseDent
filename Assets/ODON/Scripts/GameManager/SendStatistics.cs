@@ -15,7 +15,8 @@ public class SendStatistics : MonoBehaviour
     [SerializeField] private GameObject errorLogPref;
 
     [Header("Etapes")]
-    [SerializeField] private string[][] etapeNames = new string[][]
+    [SerializeField]
+    private string[][] etapeNames = new string[][]
     {
         new string[]
         {
@@ -98,7 +99,7 @@ public class SendStatistics : MonoBehaviour
     private void ShowEtape()
     {
         etapeText.text = etapeNames[poseNum][etapeNum];
-        ODON.Manager_outline.Instance.UpdateOutline(ODON.Manager_outline.ItemType.Tablet); // Adaptable
+        // ODON.Manager_outline.Instance.UpdateOutline(etapeNum);
     }
 
     private void EtapeEnded()
@@ -106,5 +107,10 @@ public class SendStatistics : MonoBehaviour
         DateTime now = DateTime.Now;
         etapeTimes.Add((float)(now - stepTime).TotalSeconds);
         stepTime = now;
+    }
+    
+    public void CreateError(string errorMessage)
+    {
+        Debug.Log("Erreur du joueur : " + errorMessage);
     }
 }

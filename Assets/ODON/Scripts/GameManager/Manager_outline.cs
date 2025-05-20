@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -10,18 +9,8 @@ namespace ODON
 
         private static Manager_outline instance = null;
         public static Manager_outline Instance => instance;
-        [SerializeField] private HighlitableItem[] highlitableItems;
-        public HighlitableItem[] HighlitableItems => highlitableItems;
-
-        public enum ItemType
-        {
-            Tablet,
-            Notebook,
-            PinceBrewer,
-            PinceAinsworth,
-            Crampon,
-            DamSupport
-        }
+        [SerializeField] private Data.PoseSettings poseSettings;
+        public Data.PoseSettings PoseSettings => poseSettings;
 
         private void Awake()
         {
@@ -34,6 +23,7 @@ namespace ODON
             {
                 instance = this;
             }
+            poseSettings.Reset();
         }
 
         private void OnDestroy()
@@ -44,72 +34,17 @@ namespace ODON
             }
         }
 
-        public void UpdateOutline(ItemType item)
-        {
-            switch (item)
-            {
-                case ItemType.Tablet:
-                    EnableOutline(highlitableItems[0]);
-                    break;
-                case ItemType.Notebook:
-                    EnableOutline(highlitableItems[1]);
-                    break;
-                case ItemType.PinceBrewer:
-                    EnableOutline(highlitableItems[2]);
-                    break;
-                case ItemType.PinceAinsworth:
-                    EnableOutline(highlitableItems[3]);
-                    break;
-                case ItemType.Crampon:
-                    EnableOutline(highlitableItems[4]);
-                    break;
-                case ItemType.DamSupport:
-                    EnableOutline(highlitableItems[5]);
-                    break;
-                default:
-                    Debug.LogError("Invalid item type.");
-                    break;
-            }
+        #region Enabled/Disabled Outline
 
+        public void EnableOutline()
+        {
+            poseSettings.SwitchOutlineIncremente();
         }
 
-        private void EnableOutline(HighlitableItem highlitableItem)
+        public void DisableOutline()
         {
-            if (highlitableItem?.gameObject == null)
-            {
-                Debug.LogError("HighlitableItem or its GameObject is null.");
-                return;
-            }
-            if (!highlitableItem.isHighlitable)
-            {
-                return;
-            }
-            if (!highlitableItem.gameObject.TryGetComponent<Outline>(out var outline))
-            {
-                Debug.LogError("Outline component not found on the object.");
-                return;
-            }
-            else
-            {
-                highlitableItem.isHighlitable = true;
-                outline.enabled = true;
-            }
-            outline.OutlineMode = Outline.Mode.OutlineAndSilhouette;
-            outline.OutlineColor = Color.yellow;
-            outline.OutlineWidth = 5f;
-        }
-
-        public void DisableOutline(HighlitableItem highlitableItem)
-        {
-            if (highlitableItem.gameObject.TryGetComponent<Outline>(out var outline))
-            {
-                outline.enabled = false;
-            }
-        }
-
-        internal void UpdateOutline(int etapeNum)
-        {
-            throw new NotImplementedException();
+            poseSettings.SwitchOutlineDecremente();
         }
     }
+    #endregion
 }
