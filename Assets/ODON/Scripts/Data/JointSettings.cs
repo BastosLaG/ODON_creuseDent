@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "JointSettings", menuName = "ScriptableObjects/JointSettings", order = 1)]

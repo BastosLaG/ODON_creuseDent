@@ -1,14 +1,12 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class VRItemValidator : MonoBehaviour
 {
-    [SerializeField] private ODON.Manager_outline outlineManager;
-
     private void OnEnable()
     {
-        var grab = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
-        if (grab != null)
+        if (TryGetComponent<XRGrabInteractable>(out var grab))
         {
             grab.selectEntered.AddListener(OnGrabbed);
         }
@@ -16,8 +14,7 @@ public class VRItemValidator : MonoBehaviour
 
     private void OnDisable()
     {
-        var grab = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
-        if (grab != null)
+        if (TryGetComponent<XRGrabInteractable>(out var grab))
         {
             grab.selectEntered.RemoveListener(OnGrabbed);
         }
@@ -27,10 +24,10 @@ public class VRItemValidator : MonoBehaviour
     {
         GameObject grabbedObj = args.interactableObject.transform.gameObject;
 
-        bool success = outlineManager.PoseSettings.TryValidateCurrentItem(grabbedObj);
+        bool success = ODON.GameHandler.Instance.TryValidateCurrentItem(grabbedObj);
         if (success)
         {
-            outlineManager.EnableOutline();
+            ODON.GameHandler.Instance.SwitchActiveItem(1);
         }
     }
 }

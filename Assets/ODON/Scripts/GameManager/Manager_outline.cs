@@ -1,50 +1,63 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 
 namespace ODON
 {
-    public class Manager_outline : MonoBehaviour
+    public static class Manager_outline
     {
+        private static Dictionary<GameObject, Outline> objectStates = new();
 
-        private static Manager_outline instance = null;
-        public static Manager_outline Instance => instance;
-        [SerializeField] private Data.PoseSettings poseSettings;
-        public Data.PoseSettings PoseSettings => poseSettings;
-
-        private void Awake()
+        public static void EnableOutline(GameObject obj)
         {
-            if (instance != null && instance != this)
+            if (objectStates.TryGetValue(obj, out var outline))
             {
-                Destroy(this.gameObject);
-                return;
+                outline.enabled = true;
             }
             else
             {
-                instance = this;
+                Debug.LogWarning($"Outline not found for {obj.name}. Please add an outline first.");
             }
-            poseSettings.Reset();
         }
 
-        private void OnDestroy()
+        public static void DisableOutline(GameObject obj)
         {
-            if (instance == this)
+            if (objectStates.TryGetValue(obj, out var outline))
             {
-                instance = null;
+                outline.enabled = false;
+            }
+            else
+            {
+                Debug.LogWarning($"Outline not found for {obj.name}. Please add an outline first.");
             }
         }
 
-        #region Enabled/Disabled Outline
-
-        public void EnableOutline()
+        public static void AddOutline(GameObject obj)
         {
-            poseSettings.SwitchOutlineIncremente();
+            if (!obj.TryGetComponent<Outline>(out var outline))
+            {
+                outline = obj.AddComponent<Outline>();
+            }
+
+            outline.enabled = false;
+
+            if (!objectStates.ContainsKey(obj))
+            {
+                objectStates.Add(obj, outline);
+            }
+            else
+            {
+                Debug.LogWarning($"Outline already exists for {obj.name}. Updating properties.");
+            }
         }
-
-        public void DisableOutline()
+        
+        public static void RemoveOutline(GameObject obj)
         {
-            poseSettings.SwitchOutlineDecremente();
+            if (objectStates.ContainsKey(obj))
+            {
+                objectStates.Remove(obj);
+            }
         }
     }
-    #endregion
 }
