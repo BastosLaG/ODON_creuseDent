@@ -8,7 +8,13 @@ public class VRItemValidator : MonoBehaviour
     {
         if (TryGetComponent<XRGrabInteractable>(out var grab))
         {
-            grab.selectEntered.AddListener(OnGrabbed);
+            grab.selectEntered.AddListener((_) => OnGrabbed());
+        }
+        else
+        {
+            Debug.Log($"XRGrabInteractable component not found. On {this.gameObject.name}.");
+            grab = gameObject.AddComponent<XRGrabInteractable>();
+            grab.selectEntered.AddListener((_) => OnGrabbed());
         }
     }
 
@@ -16,18 +22,17 @@ public class VRItemValidator : MonoBehaviour
     {
         if (TryGetComponent<XRGrabInteractable>(out var grab))
         {
-            grab.selectEntered.RemoveListener(OnGrabbed);
+            grab.selectEntered.AddListener((_) => OnGrabbed());
         }
     }
 
-    private void OnGrabbed(SelectEnterEventArgs args)
+    private void OnGrabbed()
     {
-        GameObject grabbedObj = args.interactableObject.transform.gameObject;
-
-        bool success = ODON.GameHandler.Instance.TryValidateCurrentItem(grabbedObj);
+        bool success = ODON.GameHandler.Instance.TryValidateCurrentItem(this.gameObject);
         if (success)
         {
             ODON.GameHandler.Instance.SwitchActiveItem(1);
         }
     }
+
 }

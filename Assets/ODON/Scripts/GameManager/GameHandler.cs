@@ -50,7 +50,7 @@ namespace ODON
 
         public void SwitchActiveItem(int amount)
         {
-            if (amount < 0 || amount >= highlightableItems.Length)
+            if (currentIndex + amount < 0 || currentIndex + amount >= highlightableItems.Length)
             {
                 Debug.LogError("Index out of range.");
                 return;
