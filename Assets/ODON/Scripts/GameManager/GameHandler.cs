@@ -62,9 +62,6 @@ namespace ODON
 
         public bool TryValidateCurrentItem(GameObject clickedObject)
         {
-            Debug.Log($"Clicked object: {clickedObject}");
-            Debug.Log($"Current item: {highlightableItems[currentIndex]?.gameObject}");
-
             if (highlightableItems[currentIndex].gameObject == clickedObject)
             {
                 Debug.Log("Correct item clicked.");
