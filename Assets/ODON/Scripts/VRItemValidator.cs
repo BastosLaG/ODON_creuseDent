@@ -28,10 +28,10 @@ public class VRItemValidator : MonoBehaviour
 
     private void OnGrabbed()
     {
-        bool success = ODON.GameHandler.Instance.TryValidateCurrentItem(this.gameObject);
+        bool success = ODON.GameManager.HighlightsManager.Instance.TryValidateCurrentItem(this.gameObject);
         if (success)
         {
-            ODON.GameHandler.Instance.SwitchActiveItem(1);
+            ODON.GameManager.HighlightsManager.Instance.SwitchActiveItem(1);
         }
     }
 

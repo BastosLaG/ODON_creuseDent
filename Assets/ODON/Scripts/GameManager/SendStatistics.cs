@@ -10,7 +10,6 @@ public class SendStatistics : MonoBehaviour
     //==========================
     [Header("UI References")]
     [SerializeField] private TextMeshProUGUI etapeText;
-    [SerializeField] private calpText calpText;
     [SerializeField] private Transform errorLogParent;
     [SerializeField] private GameObject errorLogPref;
 
@@ -63,7 +62,6 @@ public class SendStatistics : MonoBehaviour
     public void CreateNewPose(int poseValue)
     {
         poseNum = poseValue;
-        calpText.UpdateTextboxes(poseNum);
 
         string poseName = poseNum == 0 ? "Pose crampon d'abord" : "Pose en parachute";
         damInstallTime = DateTime.Now;

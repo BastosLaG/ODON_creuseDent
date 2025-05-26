@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace ODON
+namespace ODON.GameManager
 {
     public static class Manager_outline
     {
