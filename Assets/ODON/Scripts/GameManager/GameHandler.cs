@@ -107,6 +107,10 @@ namespace ODON.GameManager
             {
                 Destroy(gameObject);
             }
+        }
+
+        void Start()
+        {
             HighlightsManager.Instance.InitHighLight();
             UIManager.Instance.InitClipBoard();
         }
