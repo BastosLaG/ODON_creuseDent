@@ -25,10 +25,17 @@ public class SceneLoader : MonoBehaviour
 
     void Start()
     {
-        m_Toggle.onValueChanged.AddListener(delegate
+        if (m_Toggle != null)
         {
-            ToggleValueChanged(m_Toggle);
-        });
+            m_Toggle.onValueChanged.AddListener(delegate
+            {
+                ToggleValueChanged(m_Toggle);
+            });
+        }
+        else
+        {
+            Debug.LogWarning("Toggle is not assigned in SceneLoader.");
+        }
     }
 
 
