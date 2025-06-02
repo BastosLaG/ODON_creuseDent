@@ -34,11 +34,11 @@ namespace ODON.UI
                 {
                     ToggleValueChanged(m_Toggle);
                 });
+                ToggleValueChanged(m_Toggle);
             }
             else
             {
                 isTutorial = false;
-                Debug.LogWarning("Toggle is not assigned in SceneLoader.");
             }
         }
 
@@ -65,7 +65,6 @@ namespace ODON.UI
             while (!operation.isDone)
             {
                 float progress = Mathf.Clamp01(operation.progress / 0.9f);
-
                 if (progressBar != null)
                     progressBar.fillAmount = progress;
 
@@ -76,7 +75,6 @@ namespace ODON.UI
                     yield return new WaitForSeconds(0.5f);
                     operation.allowSceneActivation = true;
                 }
-
                 yield return null;
             }
         }
@@ -86,5 +84,4 @@ namespace ODON.UI
             isTutorial = change.isOn;
         }
     }
-
 }
