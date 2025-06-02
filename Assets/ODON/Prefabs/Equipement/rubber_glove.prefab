@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1693262999784383869}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -0.018, z: 0.141}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 242978387056176135}
   - component: {fileID: 2806495956910734699}
   - component: {fileID: 8485402138486463074}
+  - component: {fileID: 7037527603027761871}
   m_Layer: 0
   m_Name: rubber_glove
   m_TagString: Untagged
@@ -113,7 +114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063738745121924973}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.5745, y: -1.273, z: -6.7908}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -186,8 +187,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.15039039, y: 0.11106467, z: 0.36781335}
-  m_Center: {x: -0.0077878237, y: 0.1335783, z: 0.010280967}
+  m_Size: {x: 0.18389463, y: 0.103269935, z: 0.29756927}
+  m_Center: {x: -0.024539948, y: 0.12968093, z: 0.080197334}
 --- !u!54 &8485402138486463074
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -215,6 +216,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7037527603027761871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063738745121924973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86858cc69a4a35a4ab4695ec55d1b9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGloves: 1
+  target: {fileID: 0}
+  localisedTarget: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
+  leftglovePrefab: {fileID: 5978760866174320223}
+  rightglovePrefab: {fileID: 1693262999784383869}
+  leftHandTarget: {fileID: 0}
+  rightHandTarget: {fileID: 0}
 --- !u!1 &5978760866174320223
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +264,7 @@ Transform:
   m_GameObject: {fileID: 5978760866174320223}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.034, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
