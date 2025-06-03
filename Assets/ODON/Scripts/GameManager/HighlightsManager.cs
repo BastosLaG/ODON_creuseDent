@@ -51,6 +51,7 @@ namespace ODON.GameManager
                 Debug.LogError("Index out of range. Current index: " + GameHandler.Instance.CurrentHighlightableIndex + ", Length: " + GameHandler.Instance.HighlightableItems.Length);
                 return false;
             }
+            
             if (GameHandler.Instance.HighlightableItems[GameHandler.Instance.CurrentHighlightableIndex].gameObject == clickedObject)
             {
                 Debug.Log("Correct item clicked.");

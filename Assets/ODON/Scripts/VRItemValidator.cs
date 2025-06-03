@@ -4,8 +4,15 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class VRItemValidator : MonoBehaviour
 {
-    private void OnEnable()
+    private void OnDisable()
     {
+        if (TryGetComponent<XRGrabInteractable>(out var grab))
+        {
+            grab.selectEntered.AddListener((_) => OnGrabbed());
+        }
+    }
+
+    private void Start() {
         if (TryGetComponent<XRGrabInteractable>(out var grab))
         {
             grab.selectEntered.AddListener((_) => OnGrabbed());
@@ -14,14 +21,6 @@ public class VRItemValidator : MonoBehaviour
         {
             Debug.Log($"XRGrabInteractable component not found. On {this.gameObject.name}.");
             grab = gameObject.AddComponent<XRGrabInteractable>();
-            grab.selectEntered.AddListener((_) => OnGrabbed());
-        }
-    }
-
-    private void OnDisable()
-    {
-        if (TryGetComponent<XRGrabInteractable>(out var grab))
-        {
             grab.selectEntered.AddListener((_) => OnGrabbed());
         }
     }
