@@ -24,7 +24,7 @@ public class VRItemValidator : MonoBehaviour
             grab.selectEntered.AddListener((_) => OnGrabbed());
         }
     }
-
+    
     private void OnGrabbed()
     {
         bool success = ODON.GameManager.HighlightsManager.Instance.TryValidateCurrentItem(this.gameObject);
@@ -33,5 +33,4 @@ public class VRItemValidator : MonoBehaviour
             ODON.GameManager.HighlightsManager.Instance.SwitchActiveItem(1);
         }
     }
-
 }
