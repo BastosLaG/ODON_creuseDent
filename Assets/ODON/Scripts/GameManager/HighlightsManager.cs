@@ -75,7 +75,7 @@ namespace ODON.GameManager
                     {
                         new() { gameObject = GameHandler.Instance.Tablet, isHighlightable = false },
                         new() { gameObject = GameHandler.Instance.ClipBoard, isHighlightable = false },
-                        new() { gameObject = GameHandler.Instance.PinceBrewer, isHighlightable = false }
+                        new() { gameObject = GameHandler.Instance.PliersBrewer, isHighlightable = false }
                     };
 
                 case 1: // Pose parachute

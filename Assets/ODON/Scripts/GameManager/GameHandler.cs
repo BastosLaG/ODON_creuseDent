@@ -8,13 +8,33 @@ namespace ODON.GameManager
     {
         private static GameHandler instance;
         public static GameHandler Instance => instance;
+        [Header("Security Items")]
+        [Tooltip("List of security items.")]
+        [SerializeField] private bool isBlouseWear;
+        [SerializeField] private bool isGlovesWear;
+        [SerializeField] private bool isGlassesWear;
+        public bool IsBlouseWear
+        {
+            get => isBlouseWear;
+            set => isBlouseWear = value;
+        }
+        public bool IsGlovesWear
+        {
+            get => isGlovesWear;
+            set => isGlovesWear = value;
+        }
+        public bool IsGlassesWear
+        {
+            get => isGlassesWear;
+            set => isGlassesWear = value;
+        }
 
         [Header("Highlightable Items")]
         [Tooltip("List of items to be highlighted.")]
         [SerializeField] private GameObject tablet;
         [SerializeField] private GameObject clipBoard;
-        [SerializeField] private GameObject pinceBrewer;
-        [SerializeField] private GameObject pinceAinsworth;
+        [SerializeField] private GameObject pliersBrewer;
+        [SerializeField] private GameObject pliersAinsworth;
         [SerializeField] private GameObject crampon;
         [SerializeField] private GameObject cadreEnU;
         [SerializeField] private GameObject dents;
@@ -29,15 +49,15 @@ namespace ODON.GameManager
             get => clipBoard;
             private set => clipBoard = value;
         }
-        public GameObject PinceBrewer
+        public GameObject PliersBrewer
         {
-            get => pinceBrewer;
-            private set => pinceBrewer = value;
+            get => pliersBrewer;
+            private set => pliersBrewer = value;
         }
-        public GameObject PinceAinsworth
+        public GameObject PliersAinsworth
         {
-            get => pinceAinsworth;
-            private set => pinceAinsworth = value;
+            get => pliersAinsworth;
+            private set => pliersAinsworth = value;
         }
         public GameObject Crampon
         {
