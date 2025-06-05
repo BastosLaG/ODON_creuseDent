@@ -10,7 +10,7 @@ public class CramponPreview : MonoBehaviour
     [SerializeField] private Vector3[] cramponPreviewRots = new Vector3[16];
 
     private Transform[] lowerTeeth = new Transform[16];
-    private GameObject instantiedCramponPreview = null;
+    private GameObject instantiateCramponPreview = null;
     private Coroutine cramponTeethPreview = null;
     private int toothIndex = -1;
 
@@ -25,14 +25,14 @@ public class CramponPreview : MonoBehaviour
         /* Tests
         // Simulation attribution d'une dent malade
         SetSickTooth(41);
-        // Simulation prise en main du crampon après 5 secondes
+        // Simulation prise en main du crampon aprï¿½s 5 secondes
         Invoke(nameof(StartToCompareDistance), 5);
-        // Simulation pose du crampon après 30 secondes
+        // Simulation pose du crampon aprï¿½s 30 secondes
         Invoke(nameof(PoseCrampon), 30);
         */
     }
 
-    // Assignation du materiel à la dent malade.
+    // Assignation du materiel ï¿½ la dent malade.
     public void SetSickTooth(int toothNum)
     {
         for (int i = 0; i < lowerTeeth.Length; i++)
@@ -45,10 +45,10 @@ public class CramponPreview : MonoBehaviour
         }
     }
 
-    // A appeller quand on attrape le crampon pour afficher la prévisualisation
+    // A appeller quand on attrape le crampon pour afficher la prï¿½visualisation
     public void StartToCompareDistance()
     {
-        // ??= -> Change la valeur si elle est nulle, sinon, laisse la valeur par défaut équivaut à "if (cramponTeethPreview == null)...".
+        // ??= -> Change la valeur si elle est nulle, sinon, laisse la valeur par dï¿½faut ï¿½quivaut ï¿½ "if (cramponTeethPreview == null)...".
         cramponTeethPreview ??= StartCoroutine(CompareTeethDistances(0.5f));
     }
 
@@ -61,7 +61,7 @@ public class CramponPreview : MonoBehaviour
         }
     }
 
-    // Regarde qu'elle dent est la plus proche du crampon et lui met la prévisualisation du crampon
+    // Regarde qu'elle dent est la plus proche du crampon et lui met la prï¿½visualisation du crampon
     private void CompareDistance()
     {
         float minTeethDistance = Vector3.Distance(transform.position, lowerTeethParent.position);
@@ -80,17 +80,17 @@ public class CramponPreview : MonoBehaviour
             if (newToothIndex != toothIndex)
             {
                 toothIndex = newToothIndex;
-                if (instantiedCramponPreview == null) 
+                if (instantiateCramponPreview == null) 
                 { 
-                    instantiedCramponPreview = Instantiate(cramponPreviewPref, Vector3.zero, Quaternion.identity /* TODO : BONNE ROTATION*/, lowerTeeth[toothIndex]);
-                    instantiedCramponPreview.transform.localPosition = Vector3.zero;
-                    instantiedCramponPreview.transform.localRotation = Quaternion.Euler(cramponPreviewRots[toothIndex]);
+                    instantiateCramponPreview = Instantiate(cramponPreviewPref, Vector3.zero, Quaternion.identity /* TODO : BONNE ROTATION*/, lowerTeeth[toothIndex]);
+                    instantiateCramponPreview.transform.localPosition = Vector3.zero;
+                    instantiateCramponPreview.transform.localRotation = Quaternion.Euler(cramponPreviewRots[toothIndex]);
                 }
                 else
                 {
-                    instantiedCramponPreview.transform.SetParent(lowerTeeth[toothIndex]);
-                    instantiedCramponPreview.transform.localPosition = Vector3.zero;
-                    instantiedCramponPreview.transform.localRotation = Quaternion.Euler(cramponPreviewRots[toothIndex]);
+                    instantiateCramponPreview.transform.SetParent(lowerTeeth[toothIndex]);
+                    instantiateCramponPreview.transform.localPosition = Vector3.zero;
+                    instantiateCramponPreview.transform.localRotation = Quaternion.Euler(cramponPreviewRots[toothIndex]);
                 }
             }
         }
@@ -99,13 +99,13 @@ public class CramponPreview : MonoBehaviour
     // Positione le crampon sur la dent (quand on le relache)
     public void PoseCrampon()
     {
-        // Arret de la coroutine de prévisualisation.
+        // Arret de la coroutine de prï¿½visualisation.
         if (cramponTeethPreview != null)
         {
             StopCoroutine(cramponTeethPreview);
             cramponTeethPreview = null;
         }
-        instantiedCramponPreview.SetActive(false);
+        instantiateCramponPreview.SetActive(false);
         // TODO : distance de relachement
         GetComponent<Rigidbody>().isKinematic = true;
         transform.SetParent(lowerTeeth[toothIndex]);
