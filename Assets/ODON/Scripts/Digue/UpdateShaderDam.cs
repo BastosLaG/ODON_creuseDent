@@ -72,6 +72,14 @@ namespace ODON.Scripts.Digue
             else if (teethToManage == 46) HolePosition = new Vector2(0.313f, 0.325f);
             else if (teethToManage == 47) HolePosition = new Vector2(0.295f, 0.40f);
             else if (teethToManage == 48) HolePosition = new Vector2(0.285f, 0.47f);
+            else if (teethToManage == 38) HolePosition = new Vector2(0.705f, 0.475f);
+            else if (teethToManage == 37) HolePosition = new Vector2(0.698f, 0.401f);
+            else if (teethToManage == 36) HolePosition = new Vector2(0.675f, 0.328f);
+            else if (teethToManage == 35) HolePosition = new Vector2(0.652f, 0.265f);
+            else if (teethToManage == 34) HolePosition = new Vector2(0.628f, 0.225f);
+            else if (teethToManage == 33) HolePosition = new Vector2(0.595f, 0.188f);
+            else if (teethToManage == 32) HolePosition = new Vector2(0.548f, 0.153f);
+            else if (teethToManage == 31) HolePosition = new Vector2(0.515f, 0.14f);
             else
             {
                 Debug.LogWarning("HolePosition is not set for this number of teeth");
