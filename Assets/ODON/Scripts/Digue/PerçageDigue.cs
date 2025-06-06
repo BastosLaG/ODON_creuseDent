@@ -38,11 +38,11 @@ public class PerçageDigue : MonoBehaviour
         }
     }
 
-    public void SetActionPress(bool booleen){
-        isActionPressed = booleen;
+    public void SetActionPress(bool boolean){
+        isActionPressed = boolean;
     }
-    public void SetIsTheGoodDigue(bool booleen){
-        isTheGoodDigue = booleen;
+    public void SetIsTheGoodDigue(bool boolean){
+        isTheGoodDigue = boolean;
     }
 
     public bool GetActionPress(){

@@ -1,171 +1,135 @@
 using System;
 using System.Collections.Generic;
+using ODON.Scripts.Digue;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HighlightsTeethManager : MonoBehaviour
-{
-    [SerializeField] private TeethStruct[] teethStructList;
-    [SerializeField] private int currentState;
-    [SerializeField] private int maxState = 3;
-
-    public int goodState = 0;
-    public UnityEvent m_IsGoodStateEvent;
-    public UnityEvent m_IsNotGoodStateEvent;
-
-    [Header("Digue Settings")] 
-    public Transform digueParent;
-    [SerializeField] private GameObject[] digueList;
-
-    public enum stateTheeth
+namespace ODON.GameManager.Digue
+{    
+    public class HighlightsTeethManager : MonoBehaviour
     {
-        UPPERRIGHT,
-        UPPERLEFT,
-        LOWERLEFT,
-        LOWERRIGHT
-    };
+        [SerializeField] private TeethStruct[] teethStructList;
+        [SerializeField] private int currentState;
+        [SerializeField] private int maxState = 3;
 
-    [System.Serializable]
-    public struct TeethStruct
-    {
-        public stateTheeth state;
-        public GameObject tooth;
-        public int index;
-    }
+        public int goodState = 0;
+        public UnityEvent m_IsGoodStateEvent;
+        public UnityEvent m_IsNotGoodStateEvent;
 
-    void Start()
-    {
+        [Header("Digue Settings")]
+        [SerializeField] private GameObject digue;
+        [SerializeField] private UpdateShaderDam shaderDam;
 
-        if (m_IsGoodStateEvent == null)
-            m_IsGoodStateEvent = new UnityEvent();
-        if (m_IsNotGoodStateEvent == null)
-            m_IsNotGoodStateEvent = new UnityEvent();
-        
-        List<PerçageDigue> allDigueInScene = new List<PerçageDigue>(
-            FindObjectsByType<PerçageDigue>(FindObjectsSortMode.None)
-        );
-
-        foreach (PerçageDigue digue in allDigueInScene)
+        [System.Serializable]
+        public struct TeethStruct
         {
-            m_IsGoodStateEvent.AddListener(() => digue.SetIsTheGoodDigue(true));
-            m_IsNotGoodStateEvent.AddListener(() => digue.SetIsTheGoodDigue(false));
+            public Data.StateTeeth state;
+            public GameObject tooth;
+            public int index;
         }
 
-
-        currentState = 0;
-        InitializeTeeth();
-        InitializeDigue();
-        CleanTeeth();
-        CleanDigue();
-        switchState(0);
-    }
-
-    private void InitializeTeeth()
-    {
-        int childCount = transform.childCount;
-        teethStructList = new TeethStruct[childCount];
-
-        for (int i = 0; i < childCount; i++)
+        void Start()
         {
-            Transform child = transform.GetChild(i);
-            TeethStruct toothStruct = new TeethStruct
+            if (m_IsGoodStateEvent == null)
+                m_IsGoodStateEvent = new UnityEvent();
+            if (m_IsNotGoodStateEvent == null)
+                m_IsNotGoodStateEvent = new UnityEvent();
+            currentState = 0;
+            InitializeTeeth();
+            InitializeDigue();
+            CleanTeeth();
+            switchState(0);
+        }
+
+        private void InitializeTeeth()
+        {
+            int childCount = transform.childCount;
+            teethStructList = new TeethStruct[childCount];
+
+            for (int i = 0; i < childCount; i++)
             {
-                tooth = child.gameObject,
-                index = i % 8 + 1,
-                state = (i <= 7) ? stateTheeth.UPPERRIGHT :
-                        (i <= 15) ? stateTheeth.UPPERLEFT :
-                        (i <= 23) ? stateTheeth.LOWERLEFT :
-                                    stateTheeth.LOWERRIGHT
-            };
+                Transform child = transform.GetChild(i);
+                TeethStruct toothStruct = new TeethStruct
+                {
+                    tooth = child.gameObject,
+                    index = i % 8 + 1,
+                    state = (i <= 7) ? Data.StateTeeth.UPPERRIGHT :
+                            (i <= 15) ? Data.StateTeeth.UPPERLEFT :
+                            (i <= 23) ? Data.StateTeeth.LOWERLEFT :
+                                        Data.StateTeeth.LOWERRIGHT
+                };
 
-            teethStructList[i] = toothStruct;
-        }
-    }
-
-    private void InitializeDigue()
-    {
-        int childCount = digueParent.childCount;
-        digueList = new GameObject[childCount];
-
-        for (int i = 0; i < childCount; i++)
-        {
-            digueList[i] = digueParent.GetChild(i).gameObject;
-        }
-
-        if (digueList.Length != maxState)
-        {
-            Debug.LogError("Digue list length is not equal to maxState. Please check your settings.");
-        }
-        else 
-        {
-            Debug.Log("Digue list initialized correctly.");
-        }
-    }
-
-    private void SetTeeth(stateTheeth state, int[] indexList)
-    {
-        foreach (var item in teethStructList)
-        {
-            if (item.state == state && Array.Exists(indexList, index => index == item.index))
-            {
-                item.tooth.SetActive(true);
+                teethStructList[i] = toothStruct;
             }
         }
-    }
 
-    private void SetDigue(int index)
-    {
-        if (index >= 0 && index < digueList.Length)
+        private void InitializeDigue()
         {
-            digueList[index].SetActive(true);
-        }
-    }
-
-    public void switchState(int increment)
-    {
-        currentState = (currentState + increment + maxState) % maxState;
-
-        CleanTeeth();
-        CleanDigue();
-
-        // set at true PerçageDigue.isGoodDigue
-        if (currentState == goodState)
-        {
-            m_IsGoodStateEvent?.Invoke();
-        }
-        else
-        {
-            m_IsNotGoodStateEvent?.Invoke();
+            if (digue == null)
+            {
+                Debug.LogError("Digue is not assigned.");
+                return;
+            }
+            shaderDam = digue.GetComponent<UpdateShaderDam>();
+            if (shaderDam == null)
+            {
+                Debug.LogError("UpdateShaderDam component is not found on the digue.");
+                return;
+            }
         }
 
-        switch (currentState)
+        private void SetTeeth(Data.StateTeeth state, int indexList)
         {
-            case 0:
-                SetTeeth(stateTheeth.LOWERRIGHT, new int[] { 1 });
-                break;
-            case 1:
-                SetTeeth(stateTheeth.LOWERRIGHT, new int[] { 3 });
-                break;
-            case 2:
-                SetTeeth(stateTheeth.LOWERRIGHT, new int[] { 7 });
-                break;
+            foreach (var item in teethStructList)
+            {
+                if (item.state == state && item.index == indexList)
+                {
+                    item.tooth.SetActive(true);
+                    shaderDam.DamMaterial.SetInt("TeethIndex", ((int)state * 10) + item.index);
+                    return;
+                }
+                else
+                {
+                    item.tooth.SetActive(false);
+                }
+            }
         }
-        SetDigue(currentState);
-    }
 
-    private void CleanTeeth()
-    {
-        for (int i = 0; i < teethStructList.Length; i++)
+        public void switchState(int increment)
         {
-            teethStructList[i].tooth.SetActive(false);
+            currentState = (currentState + increment + maxState) % maxState;
+
+            CleanTeeth();
+
+            if (currentState == goodState)
+            {
+                m_IsGoodStateEvent?.Invoke();
+            }
+            else
+            {
+                m_IsNotGoodStateEvent?.Invoke();
+            }
+
+            switch (currentState)
+            {
+                case 0:
+                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 1 );
+                    break;
+                case 1:
+                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 3 );
+                    break;
+                case 2:
+                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 7 );
+                    break;
+            }
         }
-    }
 
-    private void CleanDigue()
-    {
-        foreach (GameObject digue in digueList)
+        private void CleanTeeth()
         {
-            digue.SetActive(false);
+            for (int i = 0; i < teethStructList.Length; i++)
+            {
+                teethStructList[i].tooth.SetActive(false);
+            }
         }
     }
 }
