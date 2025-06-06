@@ -47,6 +47,21 @@ namespace ODON.Scripts.Digue
             DamMaterial.SetInt("_IsHoleActive", isHoleActive ? 1 : 0);
         }
 
+        private void FixedUpdate() {
+            if (DamMaterial == null)
+            {
+                Debug.LogError("DamMaterial is not assigned or found.");
+                return;
+            }
+
+            GetHolePosition();
+
+            DamMaterial.SetVector("_HolePosition", HolePosition);
+            DamMaterial.SetFloat("_HoleRadius", HoleRadius);
+            DamMaterial.SetFloat("_HoleFalloff", HoleFalloff);
+            DamMaterial.SetInt("_IsHoleActive", isHoleActive ? 1 : 0);
+        }
+
         private void GetHolePosition()
         {
             if (teethToManage == 41) HolePosition = new Vector2(0.47f, 0.14f);
