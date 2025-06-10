@@ -19,12 +19,16 @@ public class Patient : MonoBehaviour
     private NavMeshAgent agent;
     private Animator anim;
 
-    private bool isFollowing = false, sitTo = false, sitOnBed = false;
-    private Transform currentTarget;
-    private int actualPointIndex = 0;
+    [SerializeField] private bool isFollowing = false, sitTo = false, sitOnBed = false;
+    [SerializeField] private Transform currentTarget;
+    [SerializeField] private int actualPointIndex = 0;
 
     void Start()
     {
+        patientOnBed.SetActive(false);
+        transform.GetChild(1).gameObject.SetActive(true);
+        transform.GetChild(0).gameObject.SetActive(true);
+
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 
