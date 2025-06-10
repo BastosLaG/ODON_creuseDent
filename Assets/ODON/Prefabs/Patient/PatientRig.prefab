@@ -1089,7 +1089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2570702170189791185}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.5, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1133,11 +1133,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patientOnBed: {fileID: 0}
-  chair: {fileID: 0}
-  bed: {fileID: 0}
-  OnSitOnbed:
-    m_PersistentCalls:
-      m_Calls: []
+  points:
+  - pointTransform: {fileID: 0}
+    sitTo: 1
+    layTo: 0
+    OnPointReached:
+      m_PersistentCalls:
+        m_Calls: []
+  - pointTransform: {fileID: 0}
+    sitTo: 1
+    layTo: 1
+    OnPointReached:
+      m_PersistentCalls:
+        m_Calls: []
+  - pointTransform: {fileID: 0}
+    sitTo: 1
+    layTo: 0
+    OnPointReached:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!195 &1757271224467610997
 NavMeshAgent:
   m_ObjectHideFlags: 0
