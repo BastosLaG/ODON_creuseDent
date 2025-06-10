@@ -70,7 +70,7 @@ namespace ODON.GameManager
         {
             switch (techniqueId)
             {
-                case 0: // Pose classique
+                case 0: // Pose classic
                     return new Data.HighlightableItem[]
                     {
                         new() { gameObject = GameHandler.Instance.Tablet, isHighlightable = false },
@@ -86,7 +86,7 @@ namespace ODON.GameManager
                     };
 
                 default:
-                    Debug.LogWarning("Technique ID inconnue.");
+                    Debug.LogWarning("Technique ID unknown.");
                     return new Data.HighlightableItem[0];
             }
         }

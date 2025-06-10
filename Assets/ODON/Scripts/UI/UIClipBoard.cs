@@ -24,7 +24,7 @@ namespace ODON.UI
         [SerializeField] private TextMeshProUGUI patientAgeText;
         [SerializeField] private TextMeshProUGUI patientTeintedToothText;
 
-        [SerializeField] private GameObject thoothRoot;
+        [SerializeField] private GameObject toothRoot;
         [SerializeField] private GameObject[][] checkToothSection = 
         {
             new GameObject[8],
@@ -119,7 +119,7 @@ namespace ODON.UI
 
         private void InitializeToothSections()
         {
-            if (thoothRoot.transform.childCount != 4)
+            if (toothRoot.transform.childCount != 4)
             {
                 Debug.LogError("Tooth root must have exactly 4 quadrant children.");
                 return;
@@ -127,7 +127,7 @@ namespace ODON.UI
 
             for (int q = 0; q < 4; q++)
             {
-                Transform quadrant = thoothRoot.transform.GetChild(q);
+                Transform quadrant = toothRoot.transform.GetChild(q);
                 if (quadrant.childCount < 8)
                 {
                     Debug.LogWarning($"Quadrant {q + 1} has less than 8 teeth.");
