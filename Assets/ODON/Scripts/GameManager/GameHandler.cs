@@ -105,6 +105,7 @@ namespace ODON.GameManager
         [Header("Patient Data")]
         [SerializeField] private PatientData[] patientData;
         [SerializeField] private int patientDataIndex = 0;
+        [SerializeField] private PatientState patientState = PatientState.InWaitingRoom;
         public PatientData[] PatientData
         {
             get => patientData;
@@ -115,7 +116,11 @@ namespace ODON.GameManager
             get => patientDataIndex;
             private set => patientDataIndex = value;
         }
-
+        public PatientState PatientState
+        {
+            get => patientState;
+            set => patientState = value;
+        }
 
         private void Awake()
         {
