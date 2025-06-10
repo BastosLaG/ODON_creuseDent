@@ -29,25 +29,39 @@ namespace ODON.GameManager
             set => isGlassesWear = value;
         }
 
-        [Header("Highlightable Items")]
+        [Header("Interactive items")]
         [Tooltip("List of items to be highlighted.")]
         [SerializeField] private GameObject tablet;
+        [SerializeField] private GameObject door;
         [SerializeField] private GameObject clipBoard;
+        [SerializeField] private GameObject securityEquipment;
         [SerializeField] private GameObject pliersBrewer;
         [SerializeField] private GameObject pliersAinsworth;
         [SerializeField] private GameObject crampon;
         [SerializeField] private GameObject cadreEnU;
-        [SerializeField] private GameObject dents;
+        [SerializeField] private GameObject lowerDenture;
         [SerializeField] private GameObject supportDigue;
+        [SerializeField] private GameObject digue;
+        [SerializeField] private GameObject dentalFloss;
         public GameObject Tablet
         {
             get => tablet;
             private set => tablet = value;
         }
+        public GameObject Door
+        {
+            get => door;
+            private set => door = value;
+        }
         public GameObject ClipBoard
         {
             get => clipBoard;
             private set => clipBoard = value;
+        }
+        public GameObject SecurityEquipment
+        {
+            get => securityEquipment;
+            private set => securityEquipment = value;
         }
         public GameObject PliersBrewer
         {
@@ -69,17 +83,26 @@ namespace ODON.GameManager
             get => cadreEnU;
             private set => cadreEnU = value;
         }
-        public GameObject Dents
+        public GameObject LowerDenture
         {
-            get => dents;
-            private set => dents = value;
+            get => lowerDenture;
+            private set => lowerDenture = value;
         }
         public GameObject SupportDigue
         {
             get => supportDigue;
             private set => supportDigue = value;
         }
-
+        public GameObject Digue
+        {
+            get => digue;
+            private set => digue = value;
+        }
+        public GameObject DentalFloss
+        {
+            get => dentalFloss;
+            private set => dentalFloss = value;
+        }
 
         [Header("Highlightable Items")]
         [Tooltip("List of items to be highlighted.")]
@@ -139,5 +162,7 @@ namespace ODON.GameManager
             HighlightsManager.Instance.InitHighLight();
             UIManager.Instance.InitClipBoard();
         }
+
+
     }
 }

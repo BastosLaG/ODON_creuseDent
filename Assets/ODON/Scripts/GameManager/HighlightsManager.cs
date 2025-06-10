@@ -26,6 +26,12 @@ namespace ODON.GameManager
 
             foreach (Data.HighlightableItem item in GameHandler.Instance.HighlightableItems)
             {
+                Debug.Log("Adding outline for: " + item.gameObject.name);
+                if (item.gameObject == null)
+                {
+                    Debug.LogError("GameObject is null for item: " + item);
+                    continue;
+                }
                 Manager_outline.AddOutline(item.gameObject);
             }
             GameHandler.Instance.HighlightableItems[GameHandler.Instance.CurrentHighlightableIndex].EnableOutline();
@@ -74,14 +80,24 @@ namespace ODON.GameManager
                     return new Data.HighlightableItem[]
                     {
                         new() { gameObject = GameHandler.Instance.Tablet, isHighlightable = false },
+                        new() { gameObject = GameHandler.Instance.Door, isHighlightable = false },
                         new() { gameObject = GameHandler.Instance.ClipBoard, isHighlightable = false },
-                        new() { gameObject = GameHandler.Instance.PliersBrewer, isHighlightable = false }
+                        new() { gameObject = GameHandler.Instance.SecurityEquipment, isHighlightable = false },
+                        new() { gameObject = GameHandler.Instance.SupportDigue, isHighlightable = false },
+                        new() { gameObject = GameHandler.Instance.PliersAinsworth, isHighlightable = false },
+                        new() { gameObject = GameHandler.Instance.PliersBrewer, isHighlightable = false },
+                        new() { gameObject = GameHandler.Instance.Crampon, isHighlightable = false },
+                        new() { gameObject = GameHandler.Instance.Digue, isHighlightable = false },
+                        new() { gameObject = GameHandler.Instance.LowerDenture, isHighlightable = false },
+                        new() { gameObject = GameHandler.Instance.CadreEnU, isHighlightable = false },
+                        new() { gameObject = GameHandler.Instance.DentalFloss, isHighlightable = false }
                     };
 
                 case 1: // Pose parachute
                     return new Data.HighlightableItem[]
                     {
                         new() { gameObject = GameHandler.Instance.Tablet, isHighlightable = false },
+                        new() { gameObject = GameHandler.Instance.Door, isHighlightable = false },
                         new() { gameObject = GameHandler.Instance.ClipBoard, isHighlightable = false }
                     };
 
