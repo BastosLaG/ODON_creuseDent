@@ -219,22 +219,23 @@ public class Outline : MonoBehaviour {
   }
 
   List<Vector3> SmoothNormals(Mesh mesh) {
+    // Ensure the mesh has the correct number of normals
+    if (mesh.normals == null || mesh.normals.Length != mesh.vertexCount) {
+      mesh.RecalculateNormals();
+    }
 
     // Group vertices by location
-    var groups = mesh.vertices.Select((vertex, index) => new KeyValuePair<Vector3, int>(vertex, index)).GroupBy(pair => pair.Key);
+    var groups = mesh.vertices
+      .Select((vertex, index) => new KeyValuePair<Vector3, int>(vertex, index))
+      .GroupBy(pair => pair.Key);
 
     // Copy normals to a new list
     var smoothNormals = new List<Vector3>(mesh.normals);
 
     // Average normals for grouped vertices
     foreach (var group in groups) {
+      if (group.Count() == 1) continue;
 
-      // Skip single vertices
-      if (group.Count() == 1) {
-        continue;
-      }
-
-      // Calculate the average normal
       var smoothNormal = Vector3.zero;
 
       foreach (var pair in group) {
@@ -243,7 +244,6 @@ public class Outline : MonoBehaviour {
 
       smoothNormal.Normalize();
 
-      // Assign smooth normal to each vertex
       foreach (var pair in group) {
         smoothNormals[pair.Value] = smoothNormal;
       }

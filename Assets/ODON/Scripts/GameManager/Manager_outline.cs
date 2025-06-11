@@ -37,6 +37,7 @@ namespace ODON.GameManager
         {
             if (!obj.TryGetComponent<Outline>(out var outline))
             {
+                Debug.Log($"Adding outline to {obj.name}");
                 outline = obj.AddComponent<Outline>();
             }
 

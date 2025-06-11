@@ -8,6 +8,7 @@ namespace ODON.GameManager
     {
         private static GameHandler instance;
         public static GameHandler Instance => instance;
+
         [Header("Security Items")]
         [Tooltip("List of security items.")]
         [SerializeField] private bool isBlouseWear;
@@ -129,6 +130,8 @@ namespace ODON.GameManager
         [SerializeField] private PatientData[] patientData;
         [SerializeField] private int patientDataIndex = 0;
         [SerializeField] private PatientState patientState = PatientState.InWaitingRoom;
+        [SerializeField] private bool isPatientInRoom = false; 
+        [SerializeField] private bool isPatientInBed = false; 
         public PatientData[] PatientData
         {
             get => patientData;
@@ -163,6 +166,33 @@ namespace ODON.GameManager
             UIManager.Instance.InitClipBoard();
         }
 
+        public void NewPatientEnterOnRoom()
+        {
+            if (!isPatientInRoom)
+            {
+                patientState = PatientState.InCabinet;
+                isPatientInRoom = true;
+            }
+        }
+
+        public void PatientSitOnBed()
+        {
+            if (!isPatientInBed)
+            {
+                isPatientInBed = true;
+                patientState = PatientState.InBed;
+            }
+        }
+        
+        public void PatientExitFromRoom()
+        {
+            patientState = PatientState.InWaitingRoom;
+            // patientDataIndex++;
+            // if (patientDataIndex >= patientData.Length)
+            // {
+            //     patientDataIndex = 0;
+            // }
+        }
 
     }
 }
