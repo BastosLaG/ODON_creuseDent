@@ -9,8 +9,8 @@ public class SetObjectGrabable : MonoBehaviour
 {
     [SerializeField] private InteractionLayerMask interactLayers = 2;
     [SerializeField] private bool _dynamicAttach = true, _itemSelected, _itemKinematic, _constrainRBody, _multipleGrab;
-
     [SerializeField] private bool doEventOneTime = false;
+
     public UnityEvent SelectEnter, SelectExit, ActionEnter, ActionExit;
 
     private Vector3 grabPoint;
@@ -18,17 +18,23 @@ public class SetObjectGrabable : MonoBehaviour
     private BoxCollider boxCollider;
     private XRGrabInteractable grabScript;
 
+    public bool ItemIsSelected
+    {
+        get => _itemSelected;
+        set => _itemSelected = value;
+    }
+
+    public Transform HandTransform
+    {
+        get => handTransform;
+        set => handTransform = value;
+    }
 
     void Start()
     {
-        Rigidbody rb = null;
-        boxCollider = null;
-        if (transform.GetComponent<Rigidbody>() != null)
-            rb = gameObject.GetComponent<Rigidbody>();
-        else
-            rb = gameObject.AddComponent<Rigidbody>();
-        if (transform.GetComponent<BoxCollider>() != null)
-            boxCollider = gameObject.GetComponent<BoxCollider>();
+        Rigidbody rb = GetComponent<Rigidbody>() ?? gameObject.AddComponent<Rigidbody>();
+        boxCollider = GetComponent<BoxCollider>();
+        
         rb.isKinematic = _itemKinematic;
         rb.constraints = _constrainRBody ? RigidbodyConstraints.FreezeAll : RigidbodyConstraints.None;
 
@@ -36,10 +42,12 @@ public class SetObjectGrabable : MonoBehaviour
         grabScript.interactionLayers = interactLayers;
         grabScript.selectMode = _multipleGrab ? InteractableSelectMode.Multiple : InteractableSelectMode.Single;
         grabScript.useDynamicAttach = _dynamicAttach;
+
         grabScript.activated.AddListener(OnActionEnter);
         grabScript.deactivated.AddListener(OnActionExit);
         grabScript.selectEntered.AddListener(OnSelectEnter);
         grabScript.selectExited.AddListener(OnSelectExit);
+
         grabScript.selectEntered.AddListener(delegate { SetSelected(true); });
         grabScript.selectExited.AddListener(delegate { SetSelected(false); });
     }
@@ -48,14 +56,12 @@ public class SetObjectGrabable : MonoBehaviour
     {
         SelectEnter?.Invoke();
         if (doEventOneTime) grabScript.selectEntered.RemoveAllListeners();
-        grabScript.selectEntered.AddListener(delegate { SetSelected(true); });
     }
 
     private void OnSelectExit(SelectExitEventArgs args)
     {
         SelectExit?.Invoke();
         if (doEventOneTime) grabScript.selectExited.RemoveAllListeners();
-        grabScript.selectExited.AddListener(delegate { SetSelected(false); });
     }
 
     private void OnActionEnter(ActivateEventArgs args)
@@ -80,34 +86,22 @@ public class SetObjectGrabable : MonoBehaviour
             grabPoint = handTransform.position;
             ProvideHapticFeedback();
 
-            // Désactiver le BoxCollider
             if (boxCollider != null)
-            {
                 boxCollider.enabled = false;
-            }
         }
         else
         {
             handTransform = null;
 
-            // Réactiver le BoxCollider
             if (boxCollider != null)
-            {
                 boxCollider.enabled = true;
-            }
         }
     }
 
-
     private Transform GetInteractorTransform()
     {
-        if (TryGetComponent(out XRGrabInteractable grabScript))
-        {
-            var interactor = grabScript.firstInteractorSelecting;
-            if (interactor != null)
-                return interactor.transform;
-        }
-        return null;
+        var interactor = grabScript?.firstInteractorSelecting;
+        return interactor?.transform;
     }
 
     private void ApplyForceAtGrabPoint()
@@ -125,14 +119,11 @@ public class SetObjectGrabable : MonoBehaviour
 
     private void ProvideHapticFeedback()
     {
-        if (TryGetComponent(out XRGrabInteractable grabScript))
+        foreach (var interactor in grabScript.interactorsSelecting)
         {
-            foreach (var interactor in grabScript.interactorsSelecting)
+            if (interactor is XRBaseInputInteractor controllerInteractor)
             {
-                if (interactor is XRBaseInputInteractor controllerInteractor)
-                {
-                    controllerInteractor.SendHapticImpulse(0.5f, 0.2f); // Intensité et durée
-                }
+                controllerInteractor.SendHapticImpulse(0.5f, 0.2f);
             }
         }
     }
@@ -141,6 +132,4 @@ public class SetObjectGrabable : MonoBehaviour
     {
         ApplyForceAtGrabPoint();
     }
-
-    internal bool ItemIsSelected() { return _itemSelected; }
 }

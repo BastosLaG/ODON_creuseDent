@@ -25,7 +25,7 @@ public class ToothEvent : MonoBehaviour
             GetComponent<MeshRenderer>().enabled = isShowed;
             
             GameObject coll = _tEvent.GetTriggerColl();
-            if (_tEvent.GetTriggerColl() != null && !_tEvent.GetTriggerColl().GetComponent<SetObjectGrabable>().ItemIsSelected())
+            if (_tEvent.GetTriggerColl() != null && !_tEvent.GetTriggerColl().GetComponent<SetObjectGrabable>().ItemIsSelected)
             {
                 _cramponplaced = true;
                 ChangeTexture(true);

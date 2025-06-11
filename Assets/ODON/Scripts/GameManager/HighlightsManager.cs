@@ -26,7 +26,6 @@ namespace ODON.GameManager
 
             foreach (Data.HighlightableItem item in GameHandler.Instance.HighlightableItems)
             {
-                Debug.Log("Adding outline for: " + item.gameObject.name);
                 if (item.gameObject == null)
                 {
                     Debug.LogError("GameObject is null for item: " + item);
