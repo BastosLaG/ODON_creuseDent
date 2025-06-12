@@ -6,7 +6,8 @@ public interface ISendActiveCheckpointProgress
     bool IsActiveCheckpointProgressEnabled { get; set; }
     bool IsLocked { get; set; }
 
-    void SendActiveCheckpointProgress(float progress) {
+    void SendActiveCheckpointProgress()
+    {
         if (IsLocked) return;
     }
 }

@@ -1,36 +1,59 @@
+using UnityEngine.Events;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public class VRItemValidator : MonoBehaviour
+public class VRItemValidator : MonoBehaviour, ISendActiveCheckpointProgress
 {
-    private void OnDisable()
-    {
-        if (TryGetComponent<XRGrabInteractable>(out var grab))
-        {
-            grab.selectEntered.AddListener((_) => OnGrabbed());
-        }
-    }
+    public bool IsActiveCheckpointProgressEnabled { get; set; }
+    public bool IsLocked { get; set; }
 
-    private void Start() {
-        if (TryGetComponent<XRGrabInteractable>(out var grab))
-        {
-            grab.selectEntered.AddListener((_) => OnGrabbed());
-        }
-        else
-        {
-            Debug.Log($"XRGrabInteractable component not found. On {this.gameObject.name}.");
-            grab = gameObject.AddComponent<XRGrabInteractable>();
-            grab.selectEntered.AddListener((_) => OnGrabbed());
-        }
-    }
-    
-    private void OnGrabbed()
+    private XRGrabInteractable grab;
+    private UnityAction<SelectEnterEventArgs> onSelectEnterAction;
+
+    void ISendActiveCheckpointProgress.SendActiveCheckpointProgress()
     {
+        if (IsLocked) return;
+
         bool success = ODON.GameManager.HighlightsManager.Instance.TryValidateCurrentItem(this.gameObject);
         if (success)
         {
-            ODON.GameManager.HighlightsManager.Instance.SwitchActiveItem(1);
+            IsActiveCheckpointProgressEnabled = true;
+            Debug.Log($"Item {this.gameObject.name} validated successfully.");
         }
+        else
+        {
+            IsActiveCheckpointProgressEnabled = false;
+            Debug.LogWarning($"Item {this.gameObject.name} validation failed.");
+        }
+    }
+
+    private void Awake()
+    {
+        onSelectEnterAction = (args) => OnGrabbed();
+    }
+
+    private void Start()
+    {
+        if (!TryGetComponent<XRGrabInteractable>(out grab))
+        {
+            Debug.Log($"XRGrabInteractable component not found. On {this.gameObject.name}.");
+            grab = gameObject.AddComponent<XRGrabInteractable>();
+        }
+
+        grab.selectEntered.AddListener(onSelectEnterAction);
+    }
+
+    private void OnDisable()
+    {
+        if (grab != null)
+        {
+            grab.selectEntered.RemoveListener(onSelectEnterAction);
+        }
+    }
+
+    private void OnGrabbed()
+    {
+        ((ISendActiveCheckpointProgress)this).SendActiveCheckpointProgress();
     }
 }
