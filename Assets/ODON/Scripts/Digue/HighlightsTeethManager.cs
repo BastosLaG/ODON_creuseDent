@@ -5,11 +5,12 @@ using UnityEngine;
 using UnityEngine.Events;
 
 namespace ODON.GameManager.Digue
-{    
+{
+    [Serializable]
     public class HighlightsTeethManager : MonoBehaviour
     {
         [SerializeField] private TeethStruct[] teethStructList;
-        [SerializeField] private int currentState;
+        public int currentState;
         [SerializeField] private int maxState = 3;
 
         public int goodState = 0;
@@ -76,6 +77,8 @@ namespace ODON.GameManager.Digue
                 Debug.LogError("UpdateShaderDam component is not found on the digue.");
                 return;
             }
+
+            shaderDam.TeethToManage = ((int)Data.StateTeeth.LOWERRIGHT*10) + 1; // Initialize with the good tooth to digue in change this by gamehandler state later
         }
 
         private void SetTeeth(Data.StateTeeth state, int indexList)
@@ -113,13 +116,13 @@ namespace ODON.GameManager.Digue
             switch (currentState)
             {
                 case 0:
-                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 1 );
+                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 1);
                     break;
                 case 1:
-                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 3 );
+                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 3);
                     break;
                 case 2:
-                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 7 );
+                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 7);
                     break;
             }
         }

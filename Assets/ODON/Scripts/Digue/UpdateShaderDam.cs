@@ -1,3 +1,5 @@
+using ODON.GameManager;
+using ODON.GameManager.Digue;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,7 +9,27 @@ namespace ODON.Scripts.Digue
     public class UpdateShaderDam : MonoBehaviour
     {
         [Range(11, 48)]
-        [SerializeField] private int teethToManage = 11;
+        [SerializeField] private int teethToManage;
+        public int TeethToManage
+        {
+            get => teethToManage;
+            set
+            {
+                if (value < 11 || value > 48)
+                {
+                    Debug.LogError("teethToManage must be between 11 and 48.");
+                    return;
+                }
+                else if (value == 19 || value == 20
+                       || value == 29 || value == 30
+                       || value == 39 || value == 40)
+                {
+                    Debug.LogError("teethToManage cannot be 19, 20, 29, 30, 39, or 40.");
+                    return;
+                }
+                teethToManage = value;
+            }
+        }
         [SerializeField] private Material damMaterial;
         public Material DamMaterial
         {
@@ -38,7 +60,9 @@ namespace ODON.Scripts.Digue
         [SerializeField] private bool isHoleActive = false;
 
         [SerializeField] private Transform pliersTransform = null;
-        [SerializeField] private SetObjectGrabable transformDamGrabable;
+        [SerializeField] private SetObjectGrabable transformDamGrabble;
+
+        [SerializeField] private HighlightsTeethManager highlightsTeethManager;
 
         void Start()
         {
@@ -59,7 +83,7 @@ namespace ODON.Scripts.Digue
                 Debug.LogError("Cloth component is not assigned or found.");
                 return;
             }
-            if (transformDamGrabable == null)
+            if (transformDamGrabble == null)
             {
                 Debug.LogError("TransformDam is not assigned.");
                 return;
@@ -76,7 +100,6 @@ namespace ODON.Scripts.Digue
                 Debug.LogError("teethToManage cannot be 19, 20, 29, 30, 39, or 40.");
                 return;
             }
-
 
             GetHolePosition();
 
@@ -140,11 +163,21 @@ namespace ODON.Scripts.Digue
                 Debug.LogWarning("Pliers are too far from the dam to activate the hole. distance = " + distance);
                 return;
             }
-            isHoleActive = isActive;
-            cloth.enabled = isActive;
-            transformDamGrabable.enabled = isActive;
-            GetHolePosition();
-            DamMaterial.SetInt("_IsHoleActive", isHoleActive ? 1 : 0);
+
+            if (highlightsTeethManager?.currentState == highlightsTeethManager?.goodState)
+            {
+                highlightsTeethManager?.m_IsGoodStateEvent?.Invoke();
+                isHoleActive = isActive;
+                cloth.enabled = isActive;
+                transformDamGrabble.enabled = isActive;
+                GetHolePosition();
+                DamMaterial.SetInt("_IsHoleActive", isHoleActive ? 1 : 0);
+                return;
+            }
+            else
+            {
+                highlightsTeethManager?.m_IsNotGoodStateEvent?.Invoke();
+            }
         }
     }
 }
