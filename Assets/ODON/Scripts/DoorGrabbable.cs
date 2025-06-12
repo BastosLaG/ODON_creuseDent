@@ -1,8 +1,17 @@
 using UnityEngine;
 
-public class DoorGrabbable : MonoBehaviour
+public class DoorGrabbable : MonoBehaviour , ISendActiveCheckpointProgress
 {
     public Transform handler;
+
+    public bool IsActiveCheckpointProgressEnabled { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+    public bool IsLocked { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
+    void ISendActiveCheckpointProgress.SendActiveCheckpointProgress()
+    {
+        IsActiveCheckpointProgressEnabled = true;
+        
+    }
 
     public void ApplyForceAtGrabPoint()
     {

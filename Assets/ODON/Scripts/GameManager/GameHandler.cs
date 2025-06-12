@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using System.ComponentModel;
 using ODON.Data;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace ODON.GameManager
 {
@@ -9,11 +11,13 @@ namespace ODON.GameManager
         private static GameHandler instance;
         public static GameHandler Instance => instance;
 
+        #region Security Items
         [Header("Security Items")]
         [Tooltip("List of security items.")]
         [SerializeField] private bool isBlouseWear;
         [SerializeField] private bool isGlovesWear;
         [SerializeField] private bool isGlassesWear;
+        #endregion
         public bool IsBlouseWear
         {
             get => isBlouseWear;
@@ -30,6 +34,7 @@ namespace ODON.GameManager
             set => isGlassesWear = value;
         }
 
+        #region Interactive Items
         [Header("Interactive items")]
         [Tooltip("List of items to be highlighted.")]
         [SerializeField] private GameObject tablet;
@@ -44,6 +49,11 @@ namespace ODON.GameManager
         [SerializeField] private GameObject supportDigue;
         [SerializeField] private GameObject digue;
         [SerializeField] private GameObject dentalFloss;
+
+        [SerializeField] private ISendActiveCheckpointProgress[] interactiveItems;
+
+        #endregion
+        #region Properties Setters/Getters
         public GameObject Tablet
         {
             get => tablet;
@@ -104,12 +114,15 @@ namespace ODON.GameManager
             get => dentalFloss;
             private set => dentalFloss = value;
         }
+        #endregion
 
+        #region Highlightable Items
         [Header("Highlightable Items")]
         [Tooltip("List of items to be highlighted.")]
         [SerializeField] private HighlightableItem[] highlightableItems;
         [SerializeField] private int currentHighlightableIndex = 0;
         [SerializeField] private int techniqueId = 0;
+        #endregion
         public HighlightableItem[] HighlightableItems
         {
             get => highlightableItems;
@@ -130,8 +143,8 @@ namespace ODON.GameManager
         [SerializeField] private PatientData[] patientData;
         [SerializeField] private int patientDataIndex = 0;
         [SerializeField] private PatientState patientState = PatientState.InWaitingRoom;
-        [SerializeField] private bool isPatientInRoom = false; 
-        [SerializeField] private bool isPatientInBed = false; 
+        [SerializeField] private bool isPatientInRoom = false;
+        [SerializeField] private bool isPatientInBed = false;
         public PatientData[] PatientData
         {
             get => patientData;
@@ -148,6 +161,7 @@ namespace ODON.GameManager
             set => patientState = value;
         }
 
+        #region Initialization
         private void Awake()
         {
             if (instance == null)
@@ -162,10 +176,29 @@ namespace ODON.GameManager
 
         void Start()
         {
+            GetSequenceForTechnique(TechniqueId);
             HighlightsManager.Instance.InitHighLight();
             UIManager.Instance.InitClipBoard();
         }
 
+        #endregion
+
+        void Update()
+        {
+            if (interactiveItems[currentHighlightableIndex] != null)
+            {
+                foreach (var item in interactiveItems)
+                {
+                    if (item != null && item.IsActiveCheckpointProgressEnabled && !item.IsLocked)
+                    {
+                        HighlightsManager.Instance.SwitchActiveItem(1);
+                        item.IsLocked = true;
+                    }
+                }
+            }
+        }
+
+        #region Patient Management
         public void NewPatientEnterOnRoom()
         {
             if (!isPatientInRoom)
@@ -183,16 +216,47 @@ namespace ODON.GameManager
                 patientState = PatientState.InBed;
             }
         }
-        
+
         public void PatientExitFromRoom()
         {
             patientState = PatientState.InWaitingRoom;
-            // patientDataIndex++;
-            // if (patientDataIndex >= patientData.Length)
-            // {
-            //     patientDataIndex = 0;
-            // }
         }
+        #endregion
+        #region Interactive Items
+        private ISendActiveCheckpointProgress[] GetSequenceForTechnique(int techniqueId)
+        {
+            switch (techniqueId)
+            {
+                case 0: // Pose classic
+                    return new ISendActiveCheckpointProgress[]
+                    {
+                        Tablet.GetComponent<ISendActiveCheckpointProgress>(),
+                        Door.GetComponent<ISendActiveCheckpointProgress>(),
+                        ClipBoard.GetComponent<ISendActiveCheckpointProgress>(),
+                        SecurityEquipment.GetComponent<ISendActiveCheckpointProgress>(),
+                        SupportDigue.GetComponent<ISendActiveCheckpointProgress>(),
+                        PliersAinsworth.GetComponent<ISendActiveCheckpointProgress>(),
+                        PliersBrewer.GetComponent<ISendActiveCheckpointProgress>(),
+                        Crampon.GetComponent<ISendActiveCheckpointProgress>(),
+                        Digue.GetComponent<ISendActiveCheckpointProgress>(),
+                        LowerDenture.GetComponent<ISendActiveCheckpointProgress>(),
+                        CadreEnU.GetComponent<ISendActiveCheckpointProgress>(),
+                        DentalFloss.GetComponent<ISendActiveCheckpointProgress>()
+                    };
 
+                case 1: // Pose parachute
+                    return new ISendActiveCheckpointProgress[]
+                    {
+                        Tablet.GetComponent<ISendActiveCheckpointProgress>(),
+                        Door.GetComponent<ISendActiveCheckpointProgress>(),
+                        ClipBoard.GetComponent<ISendActiveCheckpointProgress>()
+                    };
+
+                default:
+                    Debug.LogWarning("Technique ID unknown.");
+                    return new ISendActiveCheckpointProgress[0];
+            }
+        }
+        #endregion
     }
 }
