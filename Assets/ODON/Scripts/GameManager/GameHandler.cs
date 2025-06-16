@@ -50,7 +50,7 @@ namespace ODON.GameManager
         [SerializeField] private GameObject digue;
         [SerializeField] private GameObject dentalFloss;
 
-        [SerializeField] private ISendActiveCheckpointProgress[] interactiveItems;
+        // [SerializeField] private ISendActiveCheckpointProgress[] interactiveItems;
 
         #endregion
         #region Properties Setters/Getters
@@ -176,7 +176,7 @@ namespace ODON.GameManager
 
         void Start()
         {
-            GetSequenceForTechnique(TechniqueId);
+            // GetSequenceForTechnique(TechniqueId);
             HighlightsManager.Instance.InitHighLight();
             UIManager.Instance.InitClipBoard();
         }
@@ -185,17 +185,17 @@ namespace ODON.GameManager
 
         void Update()
         {
-            if (interactiveItems[currentHighlightableIndex] != null)
-            {
-                foreach (var item in interactiveItems)
-                {
-                    if (item != null && item.IsActiveCheckpointProgressEnabled && !item.IsLocked)
-                    {
-                        HighlightsManager.Instance.SwitchActiveItem(1);
-                        item.IsLocked = true;
-                    }
-                }
-            }
+            // if (interactiveItems[currentHighlightableIndex] != null)
+            // {
+            //     foreach (var item in interactiveItems)
+            //     {
+            //         if (item != null && item.IsActiveCheckpointProgressEnabled && !item.IsLocked)
+            //         {
+            //             HighlightsManager.Instance.SwitchActiveItem(1);
+            //             item.IsLocked = true;
+            //         }
+            //     }
+            // }
         }
 
         #region Patient Management
@@ -223,40 +223,40 @@ namespace ODON.GameManager
         }
         #endregion
         #region Interactive Items
-        private ISendActiveCheckpointProgress[] GetSequenceForTechnique(int techniqueId)
-        {
-            switch (techniqueId)
-            {
-                case 0: // Pose classic
-                    return new ISendActiveCheckpointProgress[]
-                    {
-                        Tablet.GetComponent<ISendActiveCheckpointProgress>(),
-                        Door.GetComponent<ISendActiveCheckpointProgress>(),
-                        ClipBoard.GetComponent<ISendActiveCheckpointProgress>(),
-                        SecurityEquipment.GetComponent<ISendActiveCheckpointProgress>(),
-                        SupportDigue.GetComponent<ISendActiveCheckpointProgress>(),
-                        PliersAinsworth.GetComponent<ISendActiveCheckpointProgress>(),
-                        PliersBrewer.GetComponent<ISendActiveCheckpointProgress>(),
-                        Crampon.GetComponent<ISendActiveCheckpointProgress>(),
-                        Digue.GetComponent<ISendActiveCheckpointProgress>(),
-                        LowerDenture.GetComponent<ISendActiveCheckpointProgress>(),
-                        CadreEnU.GetComponent<ISendActiveCheckpointProgress>(),
-                        DentalFloss.GetComponent<ISendActiveCheckpointProgress>()
-                    };
+        // private ISendActiveCheckpointProgress[] GetSequenceForTechnique(int techniqueId)
+        // {
+        //     switch (techniqueId)
+        //     {
+        //         case 0: // Pose classic
+        //             return new ISendActiveCheckpointProgress[]
+        //             {
+        //                 Tablet.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 Door.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 ClipBoard.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 SecurityEquipment.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 SupportDigue.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 PliersAinsworth.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 PliersBrewer.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 Crampon.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 Digue.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 LowerDenture.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 CadreEnU.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 DentalFloss.GetComponent<ISendActiveCheckpointProgress>()
+        //             };
 
-                case 1: // Pose parachute
-                    return new ISendActiveCheckpointProgress[]
-                    {
-                        Tablet.GetComponent<ISendActiveCheckpointProgress>(),
-                        Door.GetComponent<ISendActiveCheckpointProgress>(),
-                        ClipBoard.GetComponent<ISendActiveCheckpointProgress>()
-                    };
+        //         case 1: // Pose parachute
+        //             return new ISendActiveCheckpointProgress[]
+        //             {
+        //                 Tablet.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 Door.GetComponent<ISendActiveCheckpointProgress>(),
+        //                 ClipBoard.GetComponent<ISendActiveCheckpointProgress>()
+        //             };
 
-                default:
-                    Debug.LogWarning("Technique ID unknown.");
-                    return new ISendActiveCheckpointProgress[0];
-            }
-        }
+        //         default:
+        //             Debug.LogWarning("Technique ID unknown.");
+        //             return new ISendActiveCheckpointProgress[0];
+        //     }
+        // }
         #endregion
     }
 }

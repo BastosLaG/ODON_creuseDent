@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace ODON.Data
 {
-    [System.Serializable]
     [CreateAssetMenu(fileName = "PatientData", menuName = "ScriptableObjects/PatientData", order = 1)]
     public class PatientData : ScriptableObject
     {
