@@ -44,18 +44,14 @@ namespace ODON.Scripts
 
         void SendActiveCheckpointProgress()
         {
-            bool success = GameManager.HighlightsManager.Instance.TryValidateCurrentItem(this.gameObject);
+            bool success = GameManager.HighlightsManager.Instance.TryValidateCurrentItem(sO_Step);
             if (success)
             {
-                sO_Step.IsCorrect = true;
-                sO_Step.ExecuteStep();
-                sO_Step.IsCorrect = false;
+                GameManager.EventManager.Instance.ActionCorrectlyPassed(sO_Step.Id, true, sO_Step.Description);
             }
             else
             {
-                sO_Step.IsCorrect = false;
-                sO_Step.ExecuteStep();
-                Debug.LogWarning($"Item {this.gameObject.name} validation failed.");
+                GameManager.EventManager.Instance.ActionFailed(sO_Step.Id, false, sO_Step.Description);
             }
         }
 

@@ -23,17 +23,50 @@ namespace ODON.GameManager
             }
         }
 
-        public event Action<int, bool, string> OnActionPassed;
 
-        public void ActionCorrectlyPassed(int id, bool isCorrect = false, string description = "")
+        /// <summary>
+        /// Event triggered when an action is correctly passed.
+        /// /// </summary>
+        /// <remarks>
+        /// This event is used to notify when an action has been successfully completed.
+        /// </remarks>
+        /// <param name="id">The ID of the action that was passed.</param>
+        /// <param name="isCorrect">Indicates whether the action was passed correctly or not.</param>
+        /// <param name="description">A description of the action that was passed for the Log.</param> 
+        public event Action<int, bool, string> OnActionPassed;
+        public void ActionCorrectlyPassed(int id, bool isCorrect = true, string description = "")
         {
-            if (OnActionPassed == null)
-            {
-                Debug.LogWarning("No listeners for OnActionCorrectlyPassed event.");
-                return;
-            }
             OnActionPassed?.Invoke(id, isCorrect, description);
         }
-    }
 
+        /// <summary>
+        /// Event triggered when an action is not correctly passed.
+        /// </summary>
+        /// <remarks>
+        /// This event is used to notify when an action has failed or was not completed correctly.
+        /// </remarks>
+        /// <param name="id">The ID of the action that was not passed.</param>
+        /// <param name="isCorrect">Indicates whether the action was passed correctly or not.</param>
+        /// <param name="description">A description of the action that was not passed for the Log.</param>
+        public event Action<int, bool, string> OnActionNotPassed;
+        public void ActionFailed(int id, bool isCorrect = false, string description = "")
+        {
+            OnActionNotPassed?.Invoke(id, isCorrect, description);
+        }
+
+        /// <summary>
+        /// Event triggered when an action has already been passed.
+        /// </summary>
+        /// <remarks>
+        /// This event is used to notify when an action has already been completed, either correctly or incorrectly.
+        /// </remarks>
+        /// <param name="id">The ID of the action that was already passed.</param>
+        /// <param name="isCorrect">Indicates whether the action was passed correctly or not.</param>
+        /// <param name="description">A description of the action that was already passed for the Log.</param>
+        public event Action<int, bool, string> OnActionAlreadyPassed;
+        public void ActionAlreadyPassed(int id, bool isCorrect = false, string description = "")
+        {
+            OnActionAlreadyPassed?.Invoke(id, isCorrect, description);
+        }
+    }
 }
