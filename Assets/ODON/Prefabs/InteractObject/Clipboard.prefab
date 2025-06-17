@@ -122,6 +122,8 @@ Transform:
   m_Children:
   - {fileID: 4706570796905144}
   - {fileID: 4765887201927728}
+  - {fileID: 3989737222068139215}
+  - {fileID: 4611676014920125914}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 96.691986, y: 17.08699, z: 181.922}
 --- !u!65 &4486257143314643179
@@ -157,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01dc0c9491ec742438b2b607031416f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemId: 0
 --- !u!54 &2598119942156216025
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -268,8 +271,8 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AttachTransform: {fileID: 0}
-  m_SecondaryAttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 3989737222068139215}
+  m_SecondaryAttachTransform: {fileID: 4611676014920125914}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
@@ -317,7 +320,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 0
+  m_FarAttachMode: 1
 --- !u!1 &1954106281014710
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +408,68 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1887536496390152556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3989737222068139215}
+  m_Layer: 0
+  m_Name: AttachPointRightClipBoard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3989737222068139215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887536496390152556}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000004768371}
+  m_LocalPosition: {x: -0.4180003, y: 0, z: 0.2520003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4795266759639050}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &8728296340599283151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4611676014920125914}
+  m_Layer: 0
+  m_Name: AttachPointLeftClipBoard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4611676014920125914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728296340599283151}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.00000011920926}
+  m_LocalPosition: {x: 0.44299987, y: 0, z: 0.25200027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4795266759639050}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1001 &5069620459367363257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -501,7 +566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 721678819755208599, guid: abca521bd7be40e499448b6a7c536bfd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.01
+      value: 0.0003
       objectReference: {fileID: 0}
     - target: {fileID: 721678819755208599, guid: abca521bd7be40e499448b6a7c536bfd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
