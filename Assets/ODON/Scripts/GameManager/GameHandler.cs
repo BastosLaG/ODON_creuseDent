@@ -122,7 +122,6 @@ namespace ODON.GameManager
         [SerializeField] private HighlightableItem[] highlightableItems;
         [SerializeField] private int currentHighlightableIndex = 0;
         [SerializeField] private int techniqueId = 0;
-        #endregion
         public HighlightableItem[] HighlightableItems
         {
             get => highlightableItems;
@@ -138,7 +137,9 @@ namespace ODON.GameManager
             get => techniqueId;
             set => techniqueId = value;
         }
+        #endregion
 
+        #region Patient Data
         [Header("Patient Data")]
         [SerializeField] private PatientData[] patientData;
         [SerializeField] private int patientDataIndex = 0;
@@ -160,6 +161,7 @@ namespace ODON.GameManager
             get => patientState;
             set => patientState = value;
         }
+        #endregion
 
         #region Initialization
         private void Awake()

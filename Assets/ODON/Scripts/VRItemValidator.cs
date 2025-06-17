@@ -2,9 +2,8 @@ using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit;
-using Unity.VisualScripting;
 
-namespace ODON
+namespace ODON.Scripts
 {
     
     public class VRItemValidator : MonoBehaviour
@@ -12,9 +11,7 @@ namespace ODON
         private XRGrabInteractable grab;
         private UnityAction<SelectEnterEventArgs> onSelectEnterAction;
 
-        public int itemId;
-        public bool IsActiveCheckpointProgressEnabled { get; set; }
-        public bool IsLocked { get; set; }
+        [SerializeField] private Data.SO_Step sO_Step; 
 
         private void Awake()
         {
@@ -47,17 +44,17 @@ namespace ODON
 
         void SendActiveCheckpointProgress()
         {
-            if (IsLocked) return;
-
             bool success = GameManager.HighlightsManager.Instance.TryValidateCurrentItem(this.gameObject);
             if (success)
             {
-                IsActiveCheckpointProgressEnabled = true;
-                Debug.Log($"Item {this.gameObject.name} validated successfully.");
+                sO_Step.IsCorrect = true;
+                sO_Step.ExecuteStep();
+                sO_Step.IsCorrect = false;
             }
             else
             {
-                IsActiveCheckpointProgressEnabled = false;
+                sO_Step.IsCorrect = false;
+                sO_Step.ExecuteStep();
                 Debug.LogWarning($"Item {this.gameObject.name} validation failed.");
             }
         }

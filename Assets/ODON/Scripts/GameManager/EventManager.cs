@@ -6,6 +6,10 @@ namespace ODON.GameManager
 {
     public class EventManager : MonoBehaviour
     {
+        [SerializeField] private Data.SO_Scenario scenario;
+        [SerializeField] private int eventManagerId = 0;
+        public int EventManagerId => eventManagerId;
+
         public static EventManager Instance { get; private set; }
         private void Awake()
         {
@@ -19,27 +23,16 @@ namespace ODON.GameManager
             }
         }
 
-        public event Action<int> OnActionCorrectlyPassed;
-        public event Action<int> OnActionWronglyPassed;
+        public event Action<int, bool, string> OnActionPassed;
 
-        public void ActionCorrectlyPassed(int id)
+        public void ActionCorrectlyPassed(int id, bool isCorrect = false, string description = "")
         {
-            if (OnActionCorrectlyPassed == null)
+            if (OnActionPassed == null)
             {
                 Debug.LogWarning("No listeners for OnActionCorrectlyPassed event.");
                 return;
             }
-            OnActionCorrectlyPassed?.Invoke(id);
-        }
-
-        public void ActionWronglyPassed(int actionId)
-        {
-            if (OnActionWronglyPassed == null)
-            {
-                Debug.LogWarning("No listeners for OnActionWronglyPassed event.");
-                return;
-            }
-            OnActionWronglyPassed?.Invoke(actionId); 
+            OnActionPassed?.Invoke(id, isCorrect, description);
         }
     }
 
