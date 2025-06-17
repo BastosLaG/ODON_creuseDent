@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.ComponentModel;
-using ODON.Data;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -8,9 +7,21 @@ namespace ODON.GameManager
 {
     public class GameHandler : MonoBehaviour
     {
+        #region Singleton
+        /// <summary>
+        /// Singleton instance of GameHandler.
+        /// </summary>
+        /// <remarks>
+        /// This class manages the game state, including patient data, interactive items, and security items.
+        /// It ensures that only one instance of GameHandler exists throughout the game.
         private static GameHandler instance;
         public static GameHandler Instance => instance;
-
+        #endregion
+        #region Scenario
+        [Header("Scenario")]
+        [Tooltip("The scenario data for the game.")]
+        [SerializeField] private List<Data.SO_Scenario> scenario;
+        #endregion
         #region Security Items
         [Header("Security Items")]
         [Tooltip("List of security items.")]
@@ -119,10 +130,10 @@ namespace ODON.GameManager
         #region Highlightable Items
         [Header("Highlightable Items")]
         [Tooltip("List of items to be highlighted.")]
-        [SerializeField] private HighlightableItem[] highlightableItems;
+        [SerializeField] private Data.HighlightableItem[] highlightableItems;
         [SerializeField] private int currentHighlightableIndex = 0;
         [SerializeField] private int techniqueId = 0;
-        public HighlightableItem[] HighlightableItems
+        public Data.HighlightableItem[] HighlightableItems
         {
             get => highlightableItems;
             set => highlightableItems = value;
@@ -141,12 +152,12 @@ namespace ODON.GameManager
 
         #region Patient Data
         [Header("Patient Data")]
-        [SerializeField] private PatientData[] patientData;
+        [SerializeField] private Data.PatientData[] patientData;
         [SerializeField] private int patientDataIndex = 0;
-        [SerializeField] private PatientState patientState = PatientState.InWaitingRoom;
+        [SerializeField] private Data.PatientState patientState = Data.PatientState.InWaitingRoom;
         [SerializeField] private bool isPatientInRoom = false;
         [SerializeField] private bool isPatientInBed = false;
-        public PatientData[] PatientData
+        public Data.PatientData[] PatientData
         {
             get => patientData;
             private set => patientData = value;
@@ -156,13 +167,13 @@ namespace ODON.GameManager
             get => patientDataIndex;
             private set => patientDataIndex = value;
         }
-        public PatientState PatientState
+        public Data.PatientState PatientState
         {
             get => patientState;
             set => patientState = value;
         }
-        #endregion
 
+        #endregion
         #region Initialization
         private void Awake()
         {
@@ -205,7 +216,7 @@ namespace ODON.GameManager
         {
             if (!isPatientInRoom)
             {
-                patientState = PatientState.InCabinet;
+                patientState = Data.PatientState.InCabinet;
                 isPatientInRoom = true;
             }
         }
@@ -215,13 +226,13 @@ namespace ODON.GameManager
             if (!isPatientInBed)
             {
                 isPatientInBed = true;
-                patientState = PatientState.InBed;
+                patientState = Data.PatientState.InBed;
             }
         }
 
         public void PatientExitFromRoom()
         {
-            patientState = PatientState.InWaitingRoom;
+            patientState = Data.PatientState.InWaitingRoom;
         }
         #endregion
         #region Interactive Items
