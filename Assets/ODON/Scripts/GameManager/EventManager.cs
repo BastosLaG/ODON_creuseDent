@@ -50,7 +50,7 @@ namespace ODON.GameManager
 
         ///////////////////////////////////////////////////////////////////////////////////
 
-        #region Public Methods
+        #region Private Methods
         private void ActionCorrectlyPassed(Data.E_NameActionInteractable stepId, bool stepIsCorrect, string stepDescription)
         {
             Debug.Log($"Action {stepId} passed: {stepIsCorrect}. Description: {stepDescription}");
@@ -62,9 +62,36 @@ namespace ODON.GameManager
             Debug.LogError($"Action {stepId} failed: {stepIsCorrect}. Description: {stepDescription}");
             // TODO : Handle the action failure logic here, e.g., show a message to the player or log the error.
         }
+
         #endregion
 
         ///////////////////////////////////////////////////////////////////////////////////
 
+        #region Public Methods
+        
+        /// <summary>
+        /// Attempts to validate the current item based on the provided step.
+        /// This method checks if the step is valid and updates the scenario's current value index accordingly.
+        /// </summary>
+        /// <param name="step"></param>
+        public void TryValidateCurrentItem(Data.SO_Step step)
+        {
+            if (step == null)
+            {
+                Debug.LogError("Step is null.");
+                return;
+            }
+
+            if (step.Id == Scenario.Values[Scenario.CurrentValueIndex])
+            {
+                step.ActionPassed();
+
+            }
+            else
+            {
+                step.ActionFailed();
+            }
+        }
+        #endregion
     }
 }

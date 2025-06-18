@@ -8,10 +8,11 @@ namespace ODON.Data
     public class SO_Scenario : ScriptableObject
     {
         [SerializeField] private SO_ListStep key;
-        [SerializeField] private List<E_NameActionInteractable> values = new List<E_NameActionInteractable>();
+        [SerializeField] private List<E_NameActionInteractable> values = new ();
         [SerializeField] private int currentValueIndex = 0;
         public SO_ListStep Key => key;
         public List<E_NameActionInteractable> Values => values;
+        public int CurrentValueIndex => currentValueIndex;
 
         public void ResetScenario()
         {

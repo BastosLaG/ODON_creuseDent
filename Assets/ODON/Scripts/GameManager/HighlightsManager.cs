@@ -1,5 +1,6 @@
-using ODON;
 using UnityEngine;
+using System.Collections.Generic;
+using ODON.Data;
 
 namespace ODON.GameManager
 {
@@ -20,55 +21,45 @@ namespace ODON.GameManager
             }
         }
 
-        public void InitHighLight()
-        {
-            // GetSequenceForTechnique(GameHandler.Instance.TechniqueId);
+        private readonly Dictionary<SO_Step, MonoBehaviour> stepMap = new();
 
-            // foreach (item in )
-            // {
-            //     if (item.gameObject == null)
-            //     {
-            //         Debug.LogError("GameObject is null for item: " + item);
-            //         continue;
-            //     }
-            //     Manager_outline.AddOutline(item.gameObject);
-            // }
-            // GameHandler.Instance.HighlightableItems[GameHandler.Instance.CurrentHighlightableIndex].EnableOutline();
+        /// <summary>
+        /// Registers a step with its corresponding behaviour.
+        /// This method ensures that the step is only registered once and initializes highlighting if necessary.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="step"></param>
+        /// <param name="behaviour"></param>
+        public void RegisterStep<T>(SO_Step step, T behaviour) where T : MonoBehaviour
+        {
+            if (!stepMap.ContainsKey(step))
+            {
+                stepMap.Add(step, behaviour);
+
+                if (!behaviour.gameObject.TryGetComponent<Outline>(out _))
+                {
+                    InitHighLight(behaviour.gameObject);
+                }
+            }
         }
 
-        public void SwitchActiveItem(int amount)
+        public T GetStepBehaviour<T>(SO_Step step) where T : MonoBehaviour
         {
-            // if (GameHandler.Instance.CurrentHighlightableIndex + amount < 0 || GameHandler.Instance.CurrentHighlightableIndex + amount >= GameHandler.Instance.HighlightableItems.Length)
-            // {
-            //     Debug.LogError("Index out of range.");
-            //     return;
-            // }
-            // GameHandler.Instance.HighlightableItems[GameHandler.Instance.CurrentHighlightableIndex].DisableOutline();
-            // GameHandler.Instance.CurrentHighlightableIndex += amount;
-            // GameHandler.Instance.HighlightableItems[GameHandler.Instance.CurrentHighlightableIndex].EnableOutline();
+            if (stepMap.TryGetValue(step, out MonoBehaviour mb))
+            {
+                return mb as T;
+            }
+            return null;
         }
 
-        public bool TryValidateCurrentItem(Data.SO_Step step)
+        /// <summary>
+        /// Initializes the highlight for a given GameObject.
+        /// This method adds an outline component to the GameObject if it does not already have one.
+        /// </summary>
+        /// <param name="obj"></param>
+        public void InitHighLight(GameObject obj)
         {
-            if (step == null)
-            {
-                Debug.LogError("Step is null.");
-                return false;
-            }
-
-            bool isValid = true;
-
-            if (isValid)
-            {
-                EventManager.Instance.Scenario.UpdateCurrentValueIndex(step.Id, true, step.Description);
-                return true;
-            }
-            else
-            {
-                EventManager.Instance.Scenario.UpdateCurrentValueIndex(step.Id, false, step.Description);
-                return false;
-            }
+            Manager_outline.AddOutline(obj);
         }
     }
 }
-

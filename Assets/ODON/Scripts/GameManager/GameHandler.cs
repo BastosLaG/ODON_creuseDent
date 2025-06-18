@@ -82,8 +82,6 @@ namespace ODON.GameManager
 
         void Start()
         {
-            // GetSequenceForTechnique(TechniqueId);
-            HighlightsManager.Instance.InitHighLight();
             UIManager.Instance.InitClipBoard();
         }
 

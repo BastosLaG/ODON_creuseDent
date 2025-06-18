@@ -5,13 +5,17 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 namespace ODON.Scripts
 {
-    
+
     public class VRItemValidator : MonoBehaviour
     {
         private XRGrabInteractable grab;
         private UnityAction<SelectEnterEventArgs> onSelectEnterAction;
 
-        [SerializeField] private Data.SO_Step sO_Step; 
+        [SerializeField] private Data.SO_Step sO_Step;
+
+        /////////////////////////////////////////////////////////////////////////////////
+
+        #region Default Fonctions
 
         private void Awake()
         {
@@ -20,6 +24,8 @@ namespace ODON.Scripts
 
         private void Start()
         {
+            GameManager.HighlightsManager.Instance.RegisterStep(sO_Step, this);
+
             if (!TryGetComponent<XRGrabInteractable>(out grab))
             {
                 Debug.Log($"XRGrabInteractable component not found. On {this.gameObject.name}.");
@@ -41,18 +47,16 @@ namespace ODON.Scripts
         {
             SendActiveCheckpointProgress();
         }
+        #endregion
 
-        void SendActiveCheckpointProgress()
+        /////////////////////////////////////////////////////////////////////////////////
+
+        #region Public Methods
+        public void SendActiveCheckpointProgress()
         {
-            bool success = GameManager.HighlightsManager.Instance.TryValidateCurrentItem(sO_Step);
-            if (success)
-            {
-                GameManager.EventManager.Instance.Scenario.UpdateCurrentValueIndex(sO_Step.Id, true, sO_Step.Description);
-            }
-            else
-            {
-                GameManager.EventManager.Instance.Scenario.UpdateCurrentValueIndex(sO_Step.Id, false, sO_Step.Description);
-            }
+            GameManager.EventManager.Instance.TryValidateCurrentItem(sO_Step);
         }
+        
+        #endregion
     }
 }
