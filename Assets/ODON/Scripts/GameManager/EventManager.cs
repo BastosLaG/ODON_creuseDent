@@ -55,11 +55,14 @@ namespace ODON.GameManager
         {
             Debug.Log($"Action {stepId} passed: {stepIsCorrect}. Description: {stepDescription}");
             // TODO : Handle the action success logic here, e.g., update the scenario or trigger the next step.
+
+            MonoBehaviour mB = HighlightsManager.Instance.GetStepBehaviour<MonoBehaviour>(Scenario.Key.List[Scenario.Values.IndexOf(stepId)]);
+            mB.GetComponent<Outline>().enabled = false;
         }
 
         private void ActionFailed(Data.E_NameActionInteractable stepId, bool stepIsCorrect, string stepDescription)
         {
-            Debug.LogError($"Action {stepId} failed: {stepIsCorrect}. Description: {stepDescription}");
+            Debug.Log($"Action {stepId} failed: {stepIsCorrect}. Description: {stepDescription}");
             // TODO : Handle the action failure logic here, e.g., show a message to the player or log the error.
         }
 
