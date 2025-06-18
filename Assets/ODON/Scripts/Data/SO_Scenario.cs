@@ -7,28 +7,45 @@ namespace ODON.Data
     [CreateAssetMenu(fileName = "NewScenario", menuName = "ODON/Scenario", order = 1)]
     public class SO_Scenario : ScriptableObject
     {
-        [SerializeField] private List<SO_Step> key = new List<SO_Step>();
+        [SerializeField] private SO_ListStep key;
         [SerializeField] private List<E_NameActionInteractable> values = new List<E_NameActionInteractable>();
         [SerializeField] private int currentValueIndex = 0;
-
-        void OnEnable()
-        {
-            // Debug.Log($"Scenario {name} enabled with {key.Count} steps.");
-
-            for (int i = 0; i < values.Count; i++)
-            {
-                // Debug.Log($"Value {i}: {values[i]}");
-            }
-        }
+        public SO_ListStep Key => key;
+        public List<E_NameActionInteractable> Values => values;
 
         public void ResetScenario()
         {
             currentValueIndex = 0;
-            // Debug.Log($"Scenario {name} reset. Current value index set to {currentValueIndex}.");
         }
 
+        public void SetScenario(List<E_NameActionInteractable> setValues)
+        {
+            values = new List<E_NameActionInteractable>(setValues);
+
+            // Réorganiser les clés dans le même ordre que les valeurs
+            List<SO_Step> sortedKey = new List<SO_Step>();
+
+            foreach (var value in values)
+            {
+                SO_Step matchingStep = key.List.Find(step => step.Id == value);
+                if (matchingStep != null)
+                {
+                    sortedKey.Add(matchingStep);
+                }
+                else
+                {
+                    Debug.LogError($"No matching SO_Step found for action '{value}'.");
+                }
+            }
+
+            key.List = sortedKey;
+
+            ResetScenario();
+        }
 
         public event Action<E_NameActionInteractable, bool, string> OnActionPassed;
+        public event Action<E_NameActionInteractable, bool, string> OnActionFailed;
+
         public void UpdateCurrentValueIndex(E_NameActionInteractable stepId, bool stepIsCorrect, string stepDescription)
         {
             if (stepIsCorrect)
@@ -37,6 +54,7 @@ namespace ODON.Data
                 {
                     if (currentValueIndex < values.Count - 1)
                     {
+                        // Handle action passed
                         currentValueIndex++;
                         OnActionPassed?.Invoke(stepId, stepIsCorrect, stepDescription);
                         return;
@@ -49,13 +67,9 @@ namespace ODON.Data
                     }
                 }
             }
-            
-            //TODO handle action not passed
-            Debug.Log($"Error: Action {stepId} not passed because it's not the right time . {values[currentValueIndex]} expected at index {currentValueIndex}."); 
-        }
-     
-        private void NextStep()
-        {
+
+            //Handle action not passed
+            OnActionFailed?.Invoke(stepId, stepIsCorrect, stepDescription);
         }
     }
 }

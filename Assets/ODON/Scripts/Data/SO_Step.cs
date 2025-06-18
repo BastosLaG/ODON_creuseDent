@@ -8,7 +8,6 @@ namespace ODON.Data
     {
         [SerializeField] private E_NameActionInteractable id = E_NameActionInteractable.None;
         [SerializeField] private string description;
-        [SerializeField] private bool isActive = true;
 
         public E_NameActionInteractable Id => id;
         public string Description => description;
@@ -16,6 +15,11 @@ namespace ODON.Data
         public void ActionPassed()
         {
             GameManager.EventManager.Instance.Scenario.UpdateCurrentValueIndex(id, true, description);
+        }
+
+        public void ActionFailed()
+        {
+            GameManager.EventManager.Instance.Scenario.UpdateCurrentValueIndex(id, false, description);
         }
     }
 }

@@ -60,12 +60,12 @@ namespace ODON.GameManager
 
             if (isValid)
             {
-                EventManager.Instance.ActionCorrectlyPassed(step.Id, true, step.Description);
+                EventManager.Instance.Scenario.UpdateCurrentValueIndex(step.Id, true, step.Description);
                 return true;
             }
             else
             {
-                EventManager.Instance.ActionFailed(step.Id, false, step.Description);
+                EventManager.Instance.Scenario.UpdateCurrentValueIndex(step.Id, false, step.Description);
                 return false;
             }
         }

@@ -47,14 +47,12 @@ namespace ODON.Scripts
             bool success = GameManager.HighlightsManager.Instance.TryValidateCurrentItem(sO_Step);
             if (success)
             {
-                GameManager.EventManager.Instance.ActionCorrectlyPassed(sO_Step.Id, true, sO_Step.Description);
+                GameManager.EventManager.Instance.Scenario.UpdateCurrentValueIndex(sO_Step.Id, true, sO_Step.Description);
             }
             else
             {
-                GameManager.EventManager.Instance.ActionFailed(sO_Step.Id, false, sO_Step.Description);
+                GameManager.EventManager.Instance.Scenario.UpdateCurrentValueIndex(sO_Step.Id, false, sO_Step.Description);
             }
         }
-
     }
-
 }
