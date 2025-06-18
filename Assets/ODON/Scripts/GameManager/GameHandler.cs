@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
@@ -20,7 +21,7 @@ namespace ODON.GameManager
 
         //////////////////////////////////////////////////////////////////////////////////////////
         
-        #region Scenario
+        #region Scenario And Erreur Data
         /// <summary>
         /// The scenario data for the game.
         /// </summary>
@@ -30,6 +31,9 @@ namespace ODON.GameManager
         [Header("Scenario")]
         [Tooltip("The scenario data for the game.")]
         [SerializeField] private List<Data.SO_Scenario> scenario;
+
+        [SerializeField] private List<string> errorData = new ();
+        public List<string> ErrorData => errorData;
         #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////////

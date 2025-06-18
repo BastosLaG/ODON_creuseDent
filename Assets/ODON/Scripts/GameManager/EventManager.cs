@@ -64,6 +64,7 @@ namespace ODON.GameManager
         {
             Debug.Log($"Action {stepId} failed: {stepIsCorrect}. Description: {stepDescription}");
             // TODO : Handle the action failure logic here, e.g., show a message to the player or log the error.
+            GameHandler.Instance.ErrorData.Add(stepDescription);
         }
 
         #endregion
