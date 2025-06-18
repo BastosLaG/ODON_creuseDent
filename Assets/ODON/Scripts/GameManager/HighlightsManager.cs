@@ -36,9 +36,14 @@ namespace ODON.GameManager
             {
                 stepMap.Add(step, behaviour);
 
+                Debug.Log($"Registered step {step.Id} with behaviour {behaviour.GetType().Name}");
+
                 if (!behaviour.gameObject.TryGetComponent<Outline>(out _))
                 {
-                    InitHighLight(behaviour.gameObject);
+                    GameObject obj = behaviour.gameObject;
+                    InitHighLight(obj);
+                    
+                    Debug.Log($"Added outline to {obj.name} for step {step.Id}");
                 }
             }
         }
@@ -59,7 +64,10 @@ namespace ODON.GameManager
         /// <param name="obj"></param>
         public void InitHighLight(GameObject obj)
         {
-            Manager_outline.AddOutline(obj);
+            Outline outline = obj.AddComponent<Outline>();
+            outline.OutlineMode = Outline.Mode.OutlineAndSilhouette;
+            outline.OutlineColor = Color.yellow;
+            outline.OutlineWidth = 5f;            
         }
     }
 }
