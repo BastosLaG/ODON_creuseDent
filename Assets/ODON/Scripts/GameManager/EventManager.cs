@@ -33,8 +33,8 @@ namespace ODON.GameManager
         /// <param name="id">The ID of the action that was passed.</param>
         /// <param name="isCorrect">Indicates whether the action was passed correctly or not.</param>
         /// <param name="description">A description of the action that was passed for the Log.</param> 
-        public event Action<int, bool, string> OnActionPassed;
-        public void ActionCorrectlyPassed(int id, bool isCorrect = true, string description = "")
+        public event Action<Data.E_NameActionInteractable, bool, string> OnActionPassed;
+        public void ActionCorrectlyPassed(Data.E_NameActionInteractable id, bool isCorrect = true, string description = "")
         {
             OnActionPassed?.Invoke(id, isCorrect, description);
         }
@@ -48,8 +48,8 @@ namespace ODON.GameManager
         /// <param name="id">The ID of the action that was not passed.</param>
         /// <param name="isCorrect">Indicates whether the action was passed correctly or not.</param>
         /// <param name="description">A description of the action that was not passed for the Log.</param>
-        public event Action<int, bool, string> OnActionNotPassed;
-        public void ActionFailed(int id, bool isCorrect = false, string description = "")
+        public event Action<Data.E_NameActionInteractable, bool, string> OnActionNotPassed;
+        public void ActionFailed(Data.E_NameActionInteractable id, bool isCorrect = false, string description = "")
         {
             OnActionNotPassed?.Invoke(id, isCorrect, description);
         }
@@ -63,8 +63,8 @@ namespace ODON.GameManager
         /// <param name="id">The ID of the action that was already passed.</param>
         /// <param name="isCorrect">Indicates whether the action was passed correctly or not.</param>
         /// <param name="description">A description of the action that was already passed for the Log.</param>
-        public event Action<int, bool, string> OnActionAlreadyPassed;
-        public void ActionAlreadyPassed(int id, bool isCorrect = false, string description = "")
+        public event Action<Data.E_NameActionInteractable, bool, string> OnActionAlreadyPassed;
+        public void ActionAlreadyPassed(Data.E_NameActionInteractable id, bool isCorrect = false, string description = "")
         {
             OnActionAlreadyPassed?.Invoke(id, isCorrect, description);
         }

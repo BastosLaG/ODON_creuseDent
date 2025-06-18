@@ -6,11 +6,11 @@ namespace ODON.Data
     [CreateAssetMenu(fileName = "Step", menuName = "ODON/Step", order = 1)]
     public class SO_Step : ScriptableObject
     {
-        [SerializeField] private int id;
+        [SerializeField] private E_NameActionInteractable id = E_NameActionInteractable.None;
         [SerializeField] private string description;
         [SerializeField] private bool isActive = true;
 
-        public int Id => id;
+        public E_NameActionInteractable Id => id;
         public string Description => description;
         public bool IsActive
         {
@@ -54,9 +54,9 @@ namespace ODON.Data
         /// <param name="stepId">The ID of the step that was passed.</param>
         /// <param name="stepIsCorrect">Indicates whether the step was passed correctly or not.</param>
         /// <param name="stepDescription">A description of the step that was passed for the Log.</param>
-        private void OnActionPassedHandler(int stepId, bool stepIsCorrect, string stepDescription)
+        private void OnActionPassedHandler(E_NameActionInteractable stepId, bool stepIsCorrect, string stepDescription)
         {
-            if (stepId == id && stepDescription == description)
+            if (stepId == id)
             {
                 if (isActive == false)
                 {
@@ -79,7 +79,7 @@ namespace ODON.Data
         /// <param name="stepId">The ID of the step that was not passed.</param>
         /// <param name="stepIsCorrect">Indicates whether the step was passed correctly or not.</param>
         /// <param name="stepDescription">A description of the step that was not passed for the Log.</param>
-        private void OnActionNotPassedHandler(int stepId, bool stepIsCorrect, string stepDescription)
+        private void OnActionNotPassedHandler(E_NameActionInteractable stepId, bool stepIsCorrect, string stepDescription)
         {
             if (stepId == id && stepDescription == description)
             {
@@ -100,7 +100,7 @@ namespace ODON.Data
         /// <remarks>
         /// This method is called when an action has already been passed, either correctly or incorrectly. It checks if the step is active and if the ID and description match.
         /// </remarks>
-        private void OnActionAlreadyPassedHandler(int stepId, bool stepIsCorrect, string stepDescription)
+        private void OnActionAlreadyPassedHandler(E_NameActionInteractable stepId, bool stepIsCorrect, string stepDescription)
         {
             if (stepId == id && stepDescription == description)
             {

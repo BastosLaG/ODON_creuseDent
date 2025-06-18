@@ -1,5 +1,4 @@
 using UnityEngine;
-using System;
 using System.Collections.Generic;
 
 namespace ODON.Data
@@ -8,6 +7,6 @@ namespace ODON.Data
     public class SO_Scenario : ScriptableObject
     {
         [SerializeField] private List<SO_Step> key = new List<SO_Step>();
-        [SerializeField] private List<int> values = new List<int>();
+        [SerializeField] private List<E_NameActionInteractable> values = new List<E_NameActionInteractable>();
     }
 }
