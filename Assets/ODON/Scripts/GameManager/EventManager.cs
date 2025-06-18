@@ -37,11 +37,12 @@ namespace ODON.GameManager
         #endregion
 
         ///////////////////////////////////////////////////////////////////////////////////
-        
+
 
         public void ActionCorrectlyPassed(Data.E_NameActionInteractable stepId, bool stepIsCorrect, string stepDescription)
         {
-            Scenario.UpdateCurrentValueIndex(stepId, stepIsCorrect, stepDescription);
+            Debug.Log($"Action {stepId} passed: {stepIsCorrect}. Description: {stepDescription}");
+            Debug.Log($"We can continue to the next step in the scenario. And the event manager know that");
         }
     }
 }
