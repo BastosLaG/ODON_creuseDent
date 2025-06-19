@@ -7,10 +7,15 @@ namespace ODON.Data
     [CreateAssetMenu(fileName = "NewScenario", menuName = "ODON/Scenario", order = 1)]
     public class SO_Scenario : ScriptableObject
     {
+        public event Action<E_NameActionInteractable, bool, string> OnActionPassed;
+        public event Action<SO_Step> OnSetNewAction;
+        public event Action<E_NameActionInteractable, bool, string> OnActionFailed;
+
         [SerializeField] private SO_ListStep key;
-        [SerializeField] private List<E_NameActionInteractable> values = new ();
+        [SerializeField] private List<E_NameActionInteractable> values = new();
         [SerializeField] private int currentValueIndex = 0;
         public SO_ListStep Key => key;
+
         public List<E_NameActionInteractable> Values => values;
         public int CurrentValueIndex => currentValueIndex;
 
@@ -44,8 +49,6 @@ namespace ODON.Data
             ResetScenario();
         }
 
-        public event Action<E_NameActionInteractable, bool, string> OnActionPassed;
-        public event Action<E_NameActionInteractable, bool, string> OnActionFailed;
 
         public void UpdateCurrentValueIndex(E_NameActionInteractable stepId, bool stepIsCorrect, string stepDescription)
         {
@@ -58,6 +61,7 @@ namespace ODON.Data
                         // Handle action passed
                         currentValueIndex++;
                         OnActionPassed?.Invoke(stepId, stepIsCorrect, stepDescription);
+                        OnSetNewAction?.Invoke(key.List[currentValueIndex]);
                         return;
                     }
                     else
@@ -71,6 +75,11 @@ namespace ODON.Data
 
             //Handle action not passed
             OnActionFailed?.Invoke(stepId, stepIsCorrect, stepDescription);
+        }
+        
+        public void InvokeOnSetNewAction()
+        {
+            OnSetNewAction?.Invoke(key.List[currentValueIndex]);
         }
     }
 }

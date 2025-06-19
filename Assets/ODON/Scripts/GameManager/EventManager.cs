@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,6 +34,8 @@ namespace ODON.GameManager
 
             Scenario.OnActionPassed += ActionCorrectlyPassed;
             Scenario.OnActionFailed += ActionFailed;
+
+            StartCoroutine(InvokeOnSetNewActionAfterFrame());
         }
 
         private void OnDisable()
@@ -97,5 +99,11 @@ namespace ODON.GameManager
             }
         }
         #endregion
+
+        private IEnumerator InvokeOnSetNewActionAfterFrame()
+        {
+            yield return new WaitForEndOfFrame();
+            Scenario.InvokeOnSetNewAction();
+        }
     }
 }
