@@ -39,7 +39,7 @@ namespace ODON.GameManager.Digue
             InitializeTeeth();
             InitializeDigue();
             CleanTeeth();
-            switchState(0);
+            SwitchState(0);
         }
 
         private void InitializeTeeth()
@@ -98,7 +98,7 @@ namespace ODON.GameManager.Digue
             }
         }
 
-        public void switchState(int increment)
+        public void SwitchState(int increment)
         {
             currentState = (currentState + increment + maxState) % maxState;
 
