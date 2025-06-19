@@ -2,6 +2,8 @@ using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit;
+using ODON.Data;
+using System.Collections.Generic;
 
 namespace ODON.Scripts
 {
@@ -43,6 +45,8 @@ namespace ODON.Scripts
 
         private void OnGrabbed()
         {
+            if(!uSATEManager.CheckIfValidatorObjectsAreValid()) return;
+
             if (uSATEManager.CheckIfStepIsActive())
             {
                 SendActiveCheckpointProgress();

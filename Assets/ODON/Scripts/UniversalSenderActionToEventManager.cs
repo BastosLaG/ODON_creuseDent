@@ -8,6 +8,8 @@ namespace ODON
         [SerializeField] private Data.SO_Step step;
         public Data.SO_Step Step => step;
 
+        [SerializeField] private Data.Struct_VRValidatorObject[] validatorObjects;
+
         private void Start()
         {
             GameManager.HighlightsManager.Instance.RegisterStep(step, this);
@@ -34,6 +36,19 @@ namespace ODON
                 Debug.LogWarning("Outline is not enabled on the GameObject. Step is not active.");
                 return false;
             }
+        }
+
+        public bool CheckIfValidatorObjectsAreValid()
+        {
+            if (validatorObjects == null || validatorObjects.Length == 0) return true; 
+            foreach (Data.Struct_VRValidatorObject validatorObject in validatorObjects)
+            {
+                if (!validatorObject.IsValid)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
