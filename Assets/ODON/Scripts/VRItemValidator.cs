@@ -11,7 +11,7 @@ namespace ODON.Scripts
         private XRGrabInteractable grab;
         private UnityAction<SelectEnterEventArgs> onSelectEnterAction;
 
-        [SerializeField] private Data.SO_Step sO_Step;
+        [SerializeField] private UniversalSenderActionToEventManager uSATEManager;
 
         /////////////////////////////////////////////////////////////////////////////////
 
@@ -24,8 +24,6 @@ namespace ODON.Scripts
 
         private void Start()
         {
-            GameManager.HighlightsManager.Instance.RegisterStep(sO_Step, this);
-
             if (!TryGetComponent<XRGrabInteractable>(out grab))
             {
                 Debug.Log($"XRGrabInteractable component not found. On {this.gameObject.name}.");
@@ -45,7 +43,14 @@ namespace ODON.Scripts
 
         private void OnGrabbed()
         {
-            SendActiveCheckpointProgress();
+            if (uSATEManager.CheckIfStepIsActive())
+            {
+                SendActiveCheckpointProgress();
+            }
+            else
+            {
+                uSATEManager.Step.ActionFailed();
+            }
         }
         #endregion
 
@@ -54,9 +59,8 @@ namespace ODON.Scripts
         #region Public Methods
         public void SendActiveCheckpointProgress()
         {
-            GameManager.EventManager.Instance.TryValidateCurrentItem(sO_Step);
+            GameManager.EventManager.Instance.TryValidateCurrentItem(uSATEManager.Step);
         }
-        
         #endregion
     }
 }

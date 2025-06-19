@@ -104,7 +104,6 @@ namespace ODON
             patientOnBed.SetActive(false);
             actualPointIndex = index;
             Point point = points[index];
-            Debug.Log(point.sitTo + " " + point.layTo);
             if (point.sitTo || point.layTo) { SitTo(point.pointTransform, point.layTo); }
             else { Follow(point.pointTransform); }
         }
