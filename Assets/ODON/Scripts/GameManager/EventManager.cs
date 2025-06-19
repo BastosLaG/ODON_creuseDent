@@ -98,6 +98,24 @@ namespace ODON.GameManager
                 step.ActionFailed();
             }
         }
+
+        public void TryValidateCurrentItem(Data.SO_Step step, bool stepIsCorrect)
+        {
+            if (step == null)
+            {
+                Debug.LogError("Step is null.");
+                return;
+            }
+
+            if (step.Id == Scenario.Values[Scenario.CurrentValueIndex] && stepIsCorrect)
+            {
+                step.ActionPassed();
+            }
+            else
+            {
+                step.ActionFailed();
+            }
+        }
         #endregion
 
         private IEnumerator InvokeOnSetNewActionAfterFrame()

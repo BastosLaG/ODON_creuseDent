@@ -2,10 +2,8 @@ using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit;
-using ODON.Data;
-using System.Collections.Generic;
 
-namespace ODON.Scripts
+namespace ODON
 {
 
     public class VRItemValidator : MonoBehaviour
@@ -21,7 +19,11 @@ namespace ODON.Scripts
 
         private void Awake()
         {
-            onSelectEnterAction = (args) => OnGrabbed();
+            onSelectEnterAction = (args) => uSATEManager.TryValdidateCurrentItem();
+            if (uSATEManager == null)
+            {
+                Debug.LogError("UniversalSenderActionToEventManager is not assigned in VRPinceValidator.");
+            }
         }
 
         private void Start()
@@ -41,29 +43,6 @@ namespace ODON.Scripts
             {
                 grab.selectEntered.RemoveListener(onSelectEnterAction);
             }
-        }
-
-        private void OnGrabbed()
-        {
-            if(!uSATEManager.CheckIfValidatorObjectsAreValid()) return;
-
-            if (uSATEManager.CheckIfStepIsActive())
-            {
-                SendActiveCheckpointProgress();
-            }
-            else
-            {
-                uSATEManager.Step.ActionFailed();
-            }
-        }
-        #endregion
-
-        /////////////////////////////////////////////////////////////////////////////////
-
-        #region Public Methods
-        public void SendActiveCheckpointProgress()
-        {
-            GameManager.EventManager.Instance.TryValidateCurrentItem(uSATEManager.Step);
         }
         #endregion
     }

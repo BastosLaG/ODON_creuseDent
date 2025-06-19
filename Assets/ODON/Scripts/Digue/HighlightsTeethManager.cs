@@ -1,40 +1,32 @@
 using System;
-using System.Collections.Generic;
 using ODON.Scripts.Digue;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace ODON.GameManager.Digue
 {
     [Serializable]
     public class HighlightsTeethManager : MonoBehaviour
     {
-        [SerializeField] private TeethStruct[] teethStructList;
+        #region Properties
+        [Header("Teeth Settings")]
+        [SerializeField] private Data.Struct_Teeth[] teethStructList;
         public int currentState;
         [SerializeField] private int maxState = 3;
-
         public int goodState = 0;
-        public UnityEvent m_IsGoodStateEvent;
-        public UnityEvent m_IsNotGoodStateEvent;
 
         [Header("Digue Settings")]
         [SerializeField] private GameObject digue;
         [SerializeField] private UpdateShaderDam shaderDam;
 
-        [System.Serializable]
-        public struct TeethStruct
-        {
-            public Data.StateTeeth state;
-            public GameObject tooth;
-            public int index;
-        }
+        [Header("Pliers Settings")]
+        [SerializeField] private GameObject pliers;
+        #endregion
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        #region Unity Methods
         void Start()
         {
-            if (m_IsGoodStateEvent == null)
-                m_IsGoodStateEvent = new UnityEvent();
-            if (m_IsNotGoodStateEvent == null)
-                m_IsNotGoodStateEvent = new UnityEvent();
             currentState = 0;
             InitializeTeeth();
             InitializeDigue();
@@ -42,15 +34,57 @@ namespace ODON.GameManager.Digue
             SwitchState(0);
         }
 
+        void Update()
+        {
+            foreach (var item in teethStructList)
+            {
+                if (item.tooth.activeSelf)
+                {
+                    goodState = (int)item.state;
+                    break;
+                }
+            }
+        }
+        #endregion
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        #region Public Methods
+
+        public void SwitchState(int increment) // TODO : change this method to select with hand the thooth we want to highlight
+        {
+            currentState = (currentState + increment + maxState) % maxState;
+
+            CleanTeeth();
+
+            switch (currentState)
+            {
+                case 0:
+                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 1);
+                    break;
+                case 1:
+                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 3);
+                    break;
+                case 2:
+                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 7);
+                    break;
+            }
+        }
+
+        #endregion
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        #region Private Methods
         private void InitializeTeeth()
         {
             int childCount = transform.childCount;
-            teethStructList = new TeethStruct[childCount];
+            teethStructList = new Data.Struct_Teeth[childCount];
 
             for (int i = 0; i < childCount; i++)
             {
                 Transform child = transform.GetChild(i);
-                TeethStruct toothStruct = new TeethStruct
+                Data.Struct_Teeth toothStruct = new ()
                 {
                     tooth = child.gameObject,
                     index = i % 8 + 1,
@@ -97,36 +131,7 @@ namespace ODON.GameManager.Digue
                 }
             }
         }
-
-        public void SwitchState(int increment)
-        {
-            currentState = (currentState + increment + maxState) % maxState;
-
-            CleanTeeth();
-
-            if (currentState == goodState)
-            {
-                m_IsGoodStateEvent?.Invoke();
-            }
-            else
-            {
-                m_IsNotGoodStateEvent?.Invoke();
-            }
-
-            switch (currentState)
-            {
-                case 0:
-                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 1);
-                    break;
-                case 1:
-                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 3);
-                    break;
-                case 2:
-                    SetTeeth(Data.StateTeeth.LOWERRIGHT, 7);
-                    break;
-            }
-        }
-
+        
         private void CleanTeeth()
         {
             for (int i = 0; i < teethStructList.Length; i++)
@@ -134,5 +139,7 @@ namespace ODON.GameManager.Digue
                 teethStructList[i].tooth.SetActive(false);
             }
         }
+
+        #endregion
     }
 }

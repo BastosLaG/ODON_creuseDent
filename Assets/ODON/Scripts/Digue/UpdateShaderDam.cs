@@ -8,6 +8,7 @@ namespace ODON.Scripts.Digue
     [RequireComponent(typeof(Cloth))]
     public class UpdateShaderDam : MonoBehaviour
     {
+        #region Properities
         [Range(11, 48)]
         [SerializeField] private int teethToManage;
         public int TeethToManage
@@ -63,7 +64,12 @@ namespace ODON.Scripts.Digue
         [SerializeField] private SetObjectGrabable transformDamGrabble;
 
         [SerializeField] private HighlightsTeethManager highlightsTeethManager;
+        [SerializeField] private UniversalSenderActionToEventManager uSATEManager;
+        #endregion
 
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+        #region Unity Methods
         void Start()
         {
             if (pliersTransform == null)
@@ -109,6 +115,11 @@ namespace ODON.Scripts.Digue
             DamMaterial.SetInt("_IsHoleActive", isHoleActive ? 1 : 0);
         }
 
+        #endregion
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+        #region Private Methods
         private void FixedUpdate()
         {
             if (DamMaterial == null)
@@ -154,9 +165,18 @@ namespace ODON.Scripts.Digue
                 Debug.LogWarning("HolePosition is not set for this number of teeth");
             }
         }
+        #endregion
 
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+        #region Public Methods
         public void SetHoleActive(bool isActive)
         {
+            if (!uSATEManager.CheckIfStepIsActive())
+            {
+                uSATEManager.Step.ActionFailed();
+                return;
+            }
             float distance = Vector3.Distance(transform.position, pliersTransform.position);
             if (distance >= 0.2f)
             {
@@ -164,20 +184,22 @@ namespace ODON.Scripts.Digue
                 return;
             }
 
-            if (highlightsTeethManager?.currentState == highlightsTeethManager?.goodState)
+            if (highlightsTeethManager.currentState == highlightsTeethManager.goodState)
             {
-                highlightsTeethManager?.m_IsGoodStateEvent?.Invoke();
+                highlightsTeethManager.gameObject.SetActive(false);
                 isHoleActive = isActive;
                 cloth.enabled = isActive;
                 transformDamGrabble.enabled = isActive;
                 GetHolePosition();
                 DamMaterial.SetInt("_IsHoleActive", isHoleActive ? 1 : 0);
+                uSATEManager.TryValdidateCurrentItem(isActive);
                 return;
             }
             else
             {
-                highlightsTeethManager?.m_IsNotGoodStateEvent?.Invoke();
+                uSATEManager.TryValdidateCurrentItem(false);
             }
         }
+        #endregion
     }
 }

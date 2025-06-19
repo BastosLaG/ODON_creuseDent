@@ -40,7 +40,7 @@ namespace ODON
 
         public bool CheckIfValidatorObjectsAreValid()
         {
-            if (validatorObjects == null || validatorObjects.Length == 0) return true; 
+            if (validatorObjects == null || validatorObjects.Length == 0) return true;
             foreach (Data.Struct_VRValidatorObject validatorObject in validatorObjects)
             {
                 if (!validatorObject.IsValid)
@@ -49,6 +49,32 @@ namespace ODON
                 }
             }
             return true;
+        }
+
+        public void TryValdidateCurrentItem()
+        {
+            if (!CheckIfValidatorObjectsAreValid()) return;
+            if (CheckIfStepIsActive())
+            {
+                GameManager.EventManager.Instance.TryValidateCurrentItem(Step);
+            }
+            else
+            {
+                Step.ActionFailed();
+            }
+        }
+
+        public void TryValdidateCurrentItem(bool stepIsCorrect)
+        {
+            if (!CheckIfValidatorObjectsAreValid()) return;
+            if (CheckIfStepIsActive())
+            {
+                GameManager.EventManager.Instance.TryValidateCurrentItem(Step, stepIsCorrect);
+            }
+            else
+            {
+                Step.ActionFailed();
+            }
         }
     }
 }

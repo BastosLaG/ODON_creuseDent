@@ -63,12 +63,11 @@ namespace ODON.GameManager
             get => patientState;
             set => patientState = value;
         }
-
         #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////////
 
-        #region Initialization
+        #region Unity Methods
         private void Awake()
         {
             if (instance == null)
@@ -85,7 +84,6 @@ namespace ODON.GameManager
         {
             UIManager.Instance.InitClipBoard();
         }
-
         #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////////

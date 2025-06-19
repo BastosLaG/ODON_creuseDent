@@ -352,6 +352,8 @@ GameObject:
   - component: {fileID: 8916449632123700408}
   - component: {fileID: 173706895931764148}
   - component: {fileID: 8366393298134609119}
+  - component: {fileID: 5273820814743698355}
+  - component: {fileID: 1350982209237735272}
   m_Layer: 0
   m_Name: PinceAinsworth
   m_TagString: PinceDigue
@@ -526,6 +528,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1350982209237735272}
+        m_TargetAssemblyTypeName: ODON.VRPinceValidator, Assembly-CSharp
+        m_MethodName: ValidateAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
@@ -628,6 +642,48 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.06419206, y: 0.01, z: 0.01}
   m_Center: {x: -0.078275084, y: 0, z: 0}
+--- !u!114 &5273820814743698355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147235391726409793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b651b972d67a9884fb636243a4497dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  step: {fileID: 11400000, guid: 07e87dae2c9d4ce49b41540b5a2d56b8, type: 2}
+  validatorObjects: []
+--- !u!114 &1350982209237735272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147235391726409793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccebe1efd2ca138409d096870a00bff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnActionValidated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ODON.Scripts.Digue.UpdateShaderDam, Assembly-CSharp
+        m_MethodName: SetHoleActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  uSATEManager: {fileID: 5273820814743698355}
 --- !u!1 &8978356483535396261
 GameObject:
   m_ObjectHideFlags: 0

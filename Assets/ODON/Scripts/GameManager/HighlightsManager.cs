@@ -46,14 +46,14 @@ namespace ODON.GameManager
             {
                 stepMap.Add(step, behaviour);
 
-                Debug.Log($"Registered step {step.Id} with behaviour {behaviour.GetType().Name}");
+                // Debug.Log($"Registered step {step.Id} with behaviour {behaviour.GetType().Name}");
 
                 if (!behaviour.gameObject.TryGetComponent<Outline>(out _))
                 {
                     GameObject obj = behaviour.gameObject;
                     InitHighLight(obj);
 
-                    Debug.Log($"Added outline to {obj.name} for step {step.Id}");
+                    // Debug.Log($"Added outline to {obj.name} for step {step.Id}");
                 }
             }
         }
@@ -89,7 +89,7 @@ namespace ODON.GameManager
                 if (outline != null)
                 {
                     outline.enabled = true;
-                    Debug.Log($"Enabled outline for step {step.Id}");
+                    // Debug.Log($"Enabled outline for step {step.Id}");
                 }
                 else
                 {
