@@ -1,11 +1,8 @@
 using ODON.GameManager;
-using ODON.GameManager.Digue;
-using UnityEditor;
 using UnityEngine;
 
-namespace ODON.Scripts.Digue
+namespace ODON
 {
-    [RequireComponent(typeof(Cloth))]
     public class UpdateShaderDam : MonoBehaviour
     {
         #region Properities
@@ -29,6 +26,8 @@ namespace ODON.Scripts.Digue
                     return;
                 }
                 teethToManage = value;
+                GetHolePosition();
+                
             }
         }
         [SerializeField] private Material damMaterial;
@@ -43,19 +42,25 @@ namespace ODON.Scripts.Digue
                 return damMaterial;
             }
         }
-        [SerializeField] private Cloth cloth;
-        public Cloth Cloth
-        {
-            get
-            {
-                if (cloth == null)
-                {
-                    cloth = GetComponent<Cloth>();
-                }
-                return cloth;
-            }
-        }
-        [SerializeField] private Vector2 HolePosition = new Vector2(0.5f, 0.5f);
+        private readonly Vector2[] HolesPosition = new Vector2[] {
+            new (0.47f, 0.14f),
+            new (0.435f, 0.15f),
+            new (0.393f, 0.185f),
+            new (0.36f, 0.22f),
+            new (0.339f, 0.26f),
+            new (0.313f, 0.325f),
+            new (0.295f, 0.40f),
+            new (0.285f, 0.47f),
+            new (0.705f, 0.475f),
+            new (0.698f, 0.401f),
+            new (0.675f, 0.328f),
+            new (0.652f, 0.265f),
+            new (0.628f, 0.225f),
+            new (0.595f, 0.188f),
+            new (0.548f, 0.153f),
+            new (0.515f, 0.14f)
+        };
+        [SerializeField] private Vector2 HolePosition = new ();
         [SerializeField] private float HoleRadius = 0.1f;
         [SerializeField] private float HoleFalloff = 0.01f;
         [SerializeField] private bool isHoleActive = false;
@@ -83,12 +88,6 @@ namespace ODON.Scripts.Digue
                 Debug.LogError("DamMaterial is not assigned or found.");
                 return;
             }
-            cloth = Cloth ?? GetComponent<Cloth>();
-            if (cloth == null)
-            {
-                Debug.LogError("Cloth component is not assigned or found.");
-                return;
-            }
             if (transformDamGrabble == null)
             {
                 Debug.LogError("TransformDam is not assigned.");
@@ -108,7 +107,6 @@ namespace ODON.Scripts.Digue
             }
 
             GetHolePosition();
-
             DamMaterial.SetVector("_HolePosition", HolePosition);
             DamMaterial.SetFloat("_HoleRadius", HoleRadius);
             DamMaterial.SetFloat("_HoleFalloff", HoleFalloff);
@@ -120,43 +118,28 @@ namespace ODON.Scripts.Digue
         ///////////////////////////////////////////////////////////////////////////////////////
 
         #region Private Methods
-        private void FixedUpdate()
-        {
-            if (DamMaterial == null)
-            {
-                Debug.LogError("DamMaterial is not assigned or found.");
-                return;
-            }
-
-            GetHolePosition();
-
-            DamMaterial.SetVector("_HolePosition", HolePosition);
-            DamMaterial.SetFloat("_HoleRadius", HoleRadius);
-            DamMaterial.SetFloat("_HoleFalloff", HoleFalloff);
-            DamMaterial.SetInt("_IsHoleActive", isHoleActive ? 1 : 0);
-        }
 
         private void GetHolePosition()
         {
-            if (teethToManage == 41) HolePosition = new Vector2(0.47f, 0.14f);
-            else if (teethToManage == 42) HolePosition = new Vector2(0.435f, 0.15f);
-            else if (teethToManage == 43) HolePosition = new Vector2(0.393f, 0.185f);
-            else if (teethToManage == 44) HolePosition = new Vector2(0.36f, 0.22f);
-            else if (teethToManage == 45) HolePosition = new Vector2(0.339f, 0.26f);
-            else if (teethToManage == 46) HolePosition = new Vector2(0.313f, 0.325f);
-            else if (teethToManage == 47) HolePosition = new Vector2(0.295f, 0.40f);
-            else if (teethToManage == 48) HolePosition = new Vector2(0.285f, 0.47f);
-            else if (teethToManage == 38) HolePosition = new Vector2(0.705f, 0.475f);
-            else if (teethToManage == 37) HolePosition = new Vector2(0.698f, 0.401f);
-            else if (teethToManage == 36) HolePosition = new Vector2(0.675f, 0.328f);
-            else if (teethToManage == 35) HolePosition = new Vector2(0.652f, 0.265f);
-            else if (teethToManage == 34) HolePosition = new Vector2(0.628f, 0.225f);
-            else if (teethToManage == 33) HolePosition = new Vector2(0.595f, 0.188f);
-            else if (teethToManage == 32) HolePosition = new Vector2(0.548f, 0.153f);
-            else if (teethToManage == 31) HolePosition = new Vector2(0.515f, 0.14f);
+            if (teethToManage == 41) HolePosition = HolesPosition[0];
+            else if (teethToManage == 42) HolePosition = HolesPosition[1];
+            else if (teethToManage == 43) HolePosition = HolesPosition[2];
+            else if (teethToManage == 44) HolePosition = HolesPosition[3];
+            else if (teethToManage == 45) HolePosition = HolesPosition[4];
+            else if (teethToManage == 46) HolePosition = HolesPosition[5];
+            else if (teethToManage == 47) HolePosition = HolesPosition[6];
+            else if (teethToManage == 48) HolePosition = HolesPosition[7];
+            else if (teethToManage == 38) HolePosition = HolesPosition[8];
+            else if (teethToManage == 37) HolePosition = HolesPosition[9];
+            else if (teethToManage == 36) HolePosition = HolesPosition[10];
+            else if (teethToManage == 35) HolePosition = HolesPosition[11];
+            else if (teethToManage == 34) HolePosition = HolesPosition[12];
+            else if (teethToManage == 33) HolePosition = HolesPosition[13];
+            else if (teethToManage == 32) HolePosition = HolesPosition[14];
+            else if (teethToManage == 31) HolePosition = HolesPosition[15];
             else if (teethToManage == 19 || teethToManage == 20
-                   || teethToManage == 29 || teethToManage == 30
-                   || teethToManage == 39 || teethToManage == 40)
+                || teethToManage == 29 || teethToManage == 30
+                || teethToManage == 39 || teethToManage == 40)
             {
                 Debug.LogError("teethToManage cannot be 19, 20, 29, 30, 39, or 40.");
             }
@@ -164,41 +147,10 @@ namespace ODON.Scripts.Digue
             {
                 Debug.LogWarning("HolePosition is not set for this number of teeth");
             }
-        }
-        #endregion
-
-        ///////////////////////////////////////////////////////////////////////////////////////
-
-        #region Public Methods
-        public void SetHoleActive(bool isActive)
-        {
-            if (!uSATEManager.CheckIfStepIsActive())
-            {
-                uSATEManager.Step.ActionFailed();
-                return;
-            }
-            float distance = Vector3.Distance(transform.position, pliersTransform.position);
-            if (distance >= 0.2f)
-            {
-                Debug.LogWarning("Pliers are too far from the dam to activate the hole. distance = " + distance);
-                return;
-            }
-
-            if (highlightsTeethManager.currentState == highlightsTeethManager.goodState)
-            {
-                highlightsTeethManager.gameObject.SetActive(false);
-                isHoleActive = isActive;
-                cloth.enabled = isActive;
-                transformDamGrabble.enabled = isActive;
-                GetHolePosition();
-                DamMaterial.SetInt("_IsHoleActive", isHoleActive ? 1 : 0);
-                uSATEManager.TryValdidateCurrentItem(isActive);
-                return;
-            }
-            else
-            {
-                uSATEManager.TryValdidateCurrentItem(false);
-            }
+            
+            DamMaterial.SetVector("_HolePosition", HolePosition);
+            DamMaterial.SetFloat("_HoleRadius", HoleRadius);
+            DamMaterial.SetFloat("_HoleFalloff", HoleFalloff);
         }
         #endregion
     }
