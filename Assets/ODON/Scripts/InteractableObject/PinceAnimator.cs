@@ -1,63 +1,80 @@
 using UnityEngine;
+using System.Collections.Generic;
 
-public class PinceAnimator : MonoBehaviour
+namespace ODON.InteractableObject
 {
-    [SerializeField] private Transform cramponAnchor;
-    private Animator animator;
-    private Transform crampon = null;
-    private void Start()
+    public class PinceAnimator : MonoBehaviour
     {
-        animator = GetComponent<Animator>();
-        PinceClose();
-    }
+        [Header("Crampon Anchor")]
+        [Tooltip("The anchor point for the crampon when attached to the pince.")]
+        [SerializeField] private Transform cramponAnchor;
+        [SerializeField] private Transform crampon = null;
 
-    public void PinceOpen(){
-        animator.SetBool("Close", false);
-        animator.SetBool("Open", true);
-        if (crampon != null) {
-            AttachCrampon();
-        }
-    }
-    public void PinceClose(){
-        animator.SetBool("Close", true);
-        animator.SetBool("Open", false);
-        if (crampon != null)
+        [Header("Animator")]
+        [Tooltip("Animator component for controlling the pince animations.")]
+        private Animator animator;
+
+        private void Start()
         {
-            DetachCrampon();
+            animator = GetComponent<Animator>();
+            if (animator == null)
+            {
+                Debug.LogError("Animator component is missing on the GameObject.");
+            }
+            PinceClose();
         }
-    }
 
-    private void AttachCrampon()
-    {
-        crampon.GetComponent<Rigidbody>().isKinematic = true;
-        crampon.GetComponent<Animator>().SetBool("Open", true);
-        crampon.SetParent(transform);
-        crampon.position = cramponAnchor.position;
-        crampon.rotation = cramponAnchor.rotation;
-        crampon.GetComponent<CramponPreview>().StartToCompareDistance();
-    }
-    private void DetachCrampon()
-    {
-        crampon.SetParent(null);
-        crampon.GetComponent<Animator>().SetBool("Close", true);
-        crampon.GetComponent<Rigidbody>().isKinematic = false;
-        crampon.GetComponent<CramponPreview>().PoseCrampon();
-        crampon = null;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.name.Contains("Crampon"))
+        public void PinceOpen()
         {
-            crampon = other.transform;
+            animator.SetBool("Close", false);
+            animator.SetBool("Open", true);
+            if (crampon != null)
+            {
+                AttachCrampon();
+            }
         }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-
-        if (other.name.Contains("Crampon"))
+        public void PinceClose()
         {
+            animator.SetBool("Close", true);
+            animator.SetBool("Open", false);
+            if (crampon != null)
+            {
+                DetachCrampon();
+            }
+        }
+
+        private void AttachCrampon()
+        {
+            crampon.GetComponent<Rigidbody>().isKinematic = true;
+            crampon.GetComponent<Animator>().SetBool("Open", true);
+            crampon.SetParent(transform);
+            crampon.position = cramponAnchor.position;
+            crampon.rotation = cramponAnchor.rotation;
+            crampon.GetComponent<CramponPreview>().StartToCompareDistance();
+        }
+        private void DetachCrampon()
+        {
+            crampon.SetParent(null);
+            crampon.GetComponent<Animator>().SetBool("Close", true);
+            crampon.GetComponent<Rigidbody>().isKinematic = false;
+            crampon.GetComponent<CramponPreview>().PoseCrampon();
             crampon = null;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.name.Contains("Crampon"))
+            {
+                crampon = other.transform;
+            }
+        }
+        private void OnTriggerExit(Collider other)
+        {
+
+            if (other.name.Contains("Crampon"))
+            {
+                crampon = null;
+            }
         }
     }
 }

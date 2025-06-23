@@ -56,8 +56,8 @@ namespace ODON.UI
             checkResinPartial.SetActive(data.resinPartial);
             checkZirconia.SetActive(data.zirconia);
 
-            HighlightTreatedTooth(data.treatedToothWithSection);
-            patientNumberToothText.text = data.treatedToothWithSection.ToString();
+            HighlightTreatedTooth(data.TreatedToothWithSection);
+            patientNumberToothText.text = data.TreatedToothWithSection.ToString();
         }
 
         private void SetNamePatient(string name)

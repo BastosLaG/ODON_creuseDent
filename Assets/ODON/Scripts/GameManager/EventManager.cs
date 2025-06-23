@@ -9,7 +9,10 @@ namespace ODON.GameManager
     {
         [SerializeField] private List<Data.SO_Scenario> scenario;
         [SerializeField] private int eventManagerId = 0;
-        public Data.SO_Scenario Scenario => scenario[eventManagerId];
+        public Data.SO_Scenario Scenario => (scenario != null && eventManagerId >= 0 && eventManagerId < scenario.Count)
+                                            ? scenario[eventManagerId] 
+                                            : null;
+
         public static EventManager Instance { get; private set; }
 
         ///////////////////////////////////////////////////////////////////////////////////
@@ -57,9 +60,16 @@ namespace ODON.GameManager
         {
             Debug.Log($"Action {stepId} passed: {stepIsCorrect}. Description: {stepDescription}");
             // TODO : Handle the action success logic here, e.g., update the scenario or trigger the next step.
-
-            MonoBehaviour mB = HighlightsManager.Instance.GetStepBehaviour<MonoBehaviour>(Scenario.Key.List[Scenario.Values.IndexOf(stepId)]);
-            mB.GetComponent<Outline>().enabled = false;
+            int index = Scenario.Values.IndexOf(stepId);
+            if (index >= 0 && index < Scenario.Key.List.Count)
+            {
+                MonoBehaviour mB = HighlightsManager.Instance.GetStepBehaviour<MonoBehaviour>(Scenario.Key.List[index]);
+                mB.GetComponent<Outline>().enabled = false;
+            }
+            else
+            {
+                Debug.LogWarning($"Step ID {stepId} not found in Scenario.Values.");
+            }
         }
 
         private void ActionFailed(Data.E_NameActionInteractable stepId, bool stepIsCorrect, string stepDescription)

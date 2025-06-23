@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace ODON.GameManager
@@ -12,7 +14,9 @@ namespace ODON.GameManager
         #region Properties
         [Header("Teeth Settings")]
         [SerializeField] private Data.Struct_Teeth[] teethStructList;
-        [SerializeField] private Data.Struct_Teeth currentTheeth;
+        [SerializeField] private Data.Struct_Teeth goodTeethToDig;
+
+        [SerializeField] private List<InteractableObject.PreviewDigDam> pDDs;
 
         [Header("Digue Settings")]
         [SerializeField] private GameObject digue;
@@ -21,7 +25,8 @@ namespace ODON.GameManager
         [Header("Pliers Settings")]
         [SerializeField] private GameObject pliers;
 
-        public event Action<string> OnTriggerEnterEvent;
+        [Header("Sender")]
+        [SerializeField] private UniversalSenderActionToEventManager uSA;
 
         #endregion
 
@@ -44,31 +49,40 @@ namespace ODON.GameManager
         {
             InitializeTeeth();
 
-            OnTriggerEnterEvent += SetTeeth;
+            foreach (Data.Struct_Teeth teeth in teethStructList)
+            {
+                if (teeth.tooth.name == GameHandler.Instance.PatientData[GameHandler.Instance.PatientDataIndex].TreatedToothWithSection.ToString())
+                {
+                    goodTeethToDig = teeth;
+                }
+                
+            }
+
+            InitializePreview();
         }
 
-        void OnDisable()
-        {
-            OnTriggerEnterEvent -= SetTeeth;
-        }
         #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////
 
         #region Public Methods
 
-        public void SetTeeth(bool isPliers = false)
+        public void SetTeeth()
         {
-            if (isPliers)
+            foreach (InteractableObject.PreviewDigDam pDD in pDDs)
             {
-                shaderDam.DamMaterial.SetInteger("_IsHoleActive", isPliers ? 1 : 0);     
+                if (pDD.MR.enabled == true && pDD.transform.name == goodTeethToDig.tooth.name)
+                {
+                    if (goodTeethToDig.tooth.name == pDD.transform.name)
+                    {
+                        SetTeeth(pDD.transform.name);
+                        shaderDam.DamMaterial.SetInteger("_IsHoleActive", 1);
+                        uSA.SendActiveCheckpointProgress();
+                        return;
+                    }
+                }
             }
-        }
-
-        public string InvokeOnTriggerEnterEvent(string name)
-        {
-            OnTriggerEnterEvent?.Invoke(name);
-            return name;
+            // Todo send error here !!!
         }
 
         #endregion
@@ -76,24 +90,7 @@ namespace ODON.GameManager
         //////////////////////////////////////////////////////////////////////////////////////////////////////
 
         #region Private Methods
-        private void SetTeeth(string name)
-        {
-            if (name == "Null")
-            {
-                SetTeeth(new Data.Struct_Teeth { index = 0, state = Data.StateTeeth.UPPERRIGHT });
-                return;
-            }
 
-            Data.Struct_Teeth teeth = GetStateTeeth(name);
-            if (teeth.index != 0)
-            {
-                SetTeeth(teeth);
-            }
-            else
-            {
-                Debug.LogWarning($"No teeth found for name: {name}");
-            }
-        }
         private void InitializeTeeth()
         {
             int childCount = transform.childCount;
@@ -116,6 +113,29 @@ namespace ODON.GameManager
             }
         }
 
+        private void InitializePreview()
+        {
+            pDDs = new List<InteractableObject.PreviewDigDam>(FindObjectsByType<InteractableObject.PreviewDigDam>(FindObjectsSortMode.None));
+        }
+
+        private void SetTeeth(string name)
+        {
+            if (name == "Null")
+            {
+                SetTeeth(new Data.Struct_Teeth { index = 0, state = Data.StateTeeth.UPPERRIGHT });
+                return;
+            }
+
+            Data.Struct_Teeth teeth = GetStateTeeth(name);
+            if (teeth.index != 0)
+            {
+                SetTeeth(teeth);
+            }
+            else
+            {
+                Debug.LogWarning($"No teeth found for name: {name}");
+            }
+        }
         private void SetTeeth(Data.Struct_Teeth teeth)
         {
             shaderDam.DamMaterial.SetInteger("TeethIndex", ((int)teeth.state * 10) + teeth.index);

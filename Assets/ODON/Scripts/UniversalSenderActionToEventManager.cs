@@ -25,6 +25,14 @@ namespace ODON
             GameManager.EventManager.Instance.TryValidateCurrentItem(step);
         }
 
+        /// <summary>
+        /// Checks if the current step is active by verifying whether the <see cref="Outline"/> component
+        /// on the GameObject is enabled.
+        /// </summary>
+        /// <returns>
+        /// <c>true</c> if the <see cref="Outline"/> component is enabled; otherwise, <c>false</c>.
+        /// Logs a warning if the <see cref="Outline"/> component is not enabled.
+        /// </returns>
         public bool CheckIfStepIsActive()
         {
             if (GetComponent<Outline>()?.enabled == true)
@@ -33,12 +41,12 @@ namespace ODON
             }
             else
             {
-                Debug.LogWarning("Outline is not enabled on the GameObject. Step is not active.");
+                Debug.LogWarning($"Outline is not enabled on {this.transform.name}. Step is not active.");
                 return false;
             }
         }
 
-        public bool CheckIfValidatorObjectsAreValid()
+        private bool CheckIfValidatorObjectsAreValid()
         {
             if (validatorObjects == null || validatorObjects.Length == 0) return true;
             foreach (Data.Struct_VRValidatorObject validatorObject in validatorObjects)

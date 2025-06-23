@@ -26,7 +26,7 @@ namespace ODON.Data
         [Tooltip("Tooth that was operated on.")]
         [Range(1, 8)]
         public int treatedTooth;
-        public int treatedToothWithSection => (toothSection * 10) + treatedTooth;
+        public int TreatedToothWithSection => (toothSection * 10) + treatedTooth;
 
         [Tooltip("Indicates if the patient has a latex allergy.")]
         public bool hasLatexAllergy;
