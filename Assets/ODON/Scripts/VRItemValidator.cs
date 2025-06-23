@@ -1,4 +1,3 @@
-using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -9,8 +8,6 @@ namespace ODON
     public class VRItemValidator : MonoBehaviour
     {
         private XRGrabInteractable grab;
-        private UnityAction<SelectEnterEventArgs> onSelectEnterAction;
-
         [SerializeField] private UniversalSenderActionToEventManager uSATEManager;
 
         /////////////////////////////////////////////////////////////////////////////////
@@ -19,7 +16,6 @@ namespace ODON
 
         private void Awake()
         {
-            onSelectEnterAction = (args) => uSATEManager.TryValdidateCurrentItem();
             if (uSATEManager == null)
             {
                 Debug.LogError("UniversalSenderActionToEventManager is not assigned in VRPinceValidator.");
@@ -34,16 +30,22 @@ namespace ODON
                 grab = gameObject.AddComponent<XRGrabInteractable>();
             }
 
-            grab.selectEntered.AddListener(onSelectEnterAction);
+            grab.selectEntered.AddListener(OnGrabEntered);
         }
 
         private void OnDisable()
         {
             if (grab != null)
             {
-                grab.selectEntered.RemoveListener(onSelectEnterAction);
+                grab.selectEntered.RemoveListener(OnGrabEntered);
             }
         }
+
+        private void OnGrabEntered(SelectEnterEventArgs args)
+        {
+            uSATEManager.TryValdidateCurrentItem();
+        }
+        
         #endregion
     }
 }

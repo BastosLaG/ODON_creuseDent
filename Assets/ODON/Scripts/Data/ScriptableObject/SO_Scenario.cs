@@ -26,10 +26,10 @@ namespace ODON.Data
 
         public void SetScenario(List<E_NameActionInteractable> setValues)
         {
-            values = new List<E_NameActionInteractable>(setValues);
+            values = new (setValues);
 
             // Réorganiser les clés dans le même ordre que les valeurs
-            List<SO_Step> sortedKey = new List<SO_Step>();
+            List<SO_Step> sortedKey = new ();
 
             foreach (var value in values)
             {
@@ -59,6 +59,7 @@ namespace ODON.Data
                     if (currentValueIndex < values.Count - 1)
                     {
                         // Handle action passed
+                        Debug.Log($"Step Id : {stepId} are successfuly. with this settings : {stepIsCorrect} and for description {stepDescription}");
                         currentValueIndex++;
                         OnActionPassed?.Invoke(stepId, stepIsCorrect, stepDescription);
                         OnSetNewAction?.Invoke(key.List[currentValueIndex]);
@@ -74,6 +75,7 @@ namespace ODON.Data
             }
 
             //Handle action not passed
+            Debug.Log($"Step Id : {stepId} is failed. with this settings : {stepIsCorrect} and for description {stepDescription}");
             OnActionFailed?.Invoke(stepId, stepIsCorrect, stepDescription);
         }
         

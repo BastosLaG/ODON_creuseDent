@@ -58,13 +58,13 @@ namespace ODON.GameManager
         #region Private Methods
         private void ActionCorrectlyPassed(Data.E_NameActionInteractable stepId, bool stepIsCorrect, string stepDescription)
         {
-            Debug.Log($"Action {stepId} passed: {stepIsCorrect}. Description: {stepDescription}");
             // TODO : Handle the action success logic here, e.g., update the scenario or trigger the next step.
             int index = Scenario.Values.IndexOf(stepId);
             if (index >= 0 && index < Scenario.Key.List.Count)
             {
                 MonoBehaviour mB = HighlightsManager.Instance.GetStepBehaviour<MonoBehaviour>(Scenario.Key.List[index]);
                 mB.GetComponent<Outline>().enabled = false;
+                mB.enabled = false;
             }
             else
             {
@@ -74,7 +74,6 @@ namespace ODON.GameManager
 
         private void ActionFailed(Data.E_NameActionInteractable stepId, bool stepIsCorrect, string stepDescription)
         {
-            Debug.Log($"Action {stepId} failed: {stepIsCorrect}. Description: {stepDescription}");
             // TODO : Handle the action failure logic here, e.g., show a message to the player or log the error.
             GameHandler.Instance.ErrorData.Add(stepDescription);
         }
@@ -101,7 +100,6 @@ namespace ODON.GameManager
             if (step.Id == Scenario.Values[Scenario.CurrentValueIndex])
             {
                 step.ActionPassed();
-
             }
             else
             {

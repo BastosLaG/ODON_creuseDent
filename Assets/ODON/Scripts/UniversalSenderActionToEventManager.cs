@@ -25,27 +25,6 @@ namespace ODON
             GameManager.EventManager.Instance.TryValidateCurrentItem(step);
         }
 
-        /// <summary>
-        /// Checks if the current step is active by verifying whether the <see cref="Outline"/> component
-        /// on the GameObject is enabled.
-        /// </summary>
-        /// <returns>
-        /// <c>true</c> if the <see cref="Outline"/> component is enabled; otherwise, <c>false</c>.
-        /// Logs a warning if the <see cref="Outline"/> component is not enabled.
-        /// </returns>
-        public bool CheckIfStepIsActive()
-        {
-            if (GetComponent<Outline>()?.enabled == true)
-            {
-                return true;
-            }
-            else
-            {
-                Debug.LogWarning($"Outline is not enabled on {this.transform.name}. Step is not active.");
-                return false;
-            }
-        }
-
         private bool CheckIfValidatorObjectsAreValid()
         {
             if (validatorObjects == null || validatorObjects.Length == 0) return true;
@@ -61,28 +40,16 @@ namespace ODON
 
         public void TryValdidateCurrentItem()
         {
+            if (enabled == false) return;
             if (!CheckIfValidatorObjectsAreValid()) return;
-            if (CheckIfStepIsActive())
-            {
-                GameManager.EventManager.Instance.TryValidateCurrentItem(Step);
-            }
-            else
-            {
-                Step.ActionFailed();
-            }
+            GameManager.EventManager.Instance.TryValidateCurrentItem(Step);
         }
 
         public void TryValdidateCurrentItem(bool stepIsCorrect)
         {
+            if (enabled == false) return;
             if (!CheckIfValidatorObjectsAreValid()) return;
-            if (CheckIfStepIsActive())
-            {
-                GameManager.EventManager.Instance.TryValidateCurrentItem(Step, stepIsCorrect);
-            }
-            else
-            {
-                Step.ActionFailed();
-            }
+            GameManager.EventManager.Instance.TryValidateCurrentItem(Step, stepIsCorrect);
         }
     }
 }
