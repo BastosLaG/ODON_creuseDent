@@ -17,7 +17,6 @@ namespace ODON.InteractableObject
             {
                 Debug.LogError("SphereCollider component is missing on the GameObject.");
             }
-            Debug.Log($"PinCollider location: {pinCollider.transform.position}, Radius: {pinCollider.radius}");
         }
 
         private void OnTriggerEnter(Collider other)

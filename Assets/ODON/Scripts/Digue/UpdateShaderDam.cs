@@ -97,11 +97,6 @@ namespace ODON
             damRenderer.material.SetFloat("_HoleRadius", HoleRadius);
             damRenderer.material.SetFloat("_HoleFalloff", HoleFalloff);
             SwitchActiveHole(false);
-
-            Debug.Log("Hole Pos: " + damRenderer.material.GetVector("_HolePosition"));
-            Debug.Log("Hole Radius: " + damRenderer.material.GetFloat("_HoleRadius"));
-            Debug.Log("Falloff: " + damRenderer.material.GetFloat("_HoleFalloff"));
-            Debug.Log("Active Hole: " + damRenderer.material.GetInt("_ACTIVEHOLE"));
         }
 
         #endregion

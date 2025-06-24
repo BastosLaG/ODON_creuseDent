@@ -150,7 +150,6 @@ namespace ODON.GameManager
         {
             int index = int.Parse(number);
             shaderDam.TeethToManage = index;
-            Debug.Log($"GetStateTeeth called with index: {index}");
             foreach (Data.Struct_Teeth item in teethStructList)
             {
                 if (item.index == index % 8 &&
@@ -159,7 +158,6 @@ namespace ODON.GameManager
                                    index <= 23 ? Data.StateTeeth.LOWERLEFT :
                                                  Data.StateTeeth.LOWERRIGHT))
                 {
-                    Debug.Log($"Teeth selected : {item.tooth.name}");
                     return item;
                 }
             }
