@@ -45,20 +45,25 @@ namespace ODON.InteractableObject
 
         private void AttachCrampon()
         {
-            crampon.GetComponent<Rigidbody>().isKinematic = true;
-            crampon.GetComponent<Animator>().SetBool("Open", true);
-            crampon.SetParent(transform);
-            crampon.position = cramponAnchor.position;
-            crampon.rotation = cramponAnchor.rotation;
-            crampon.GetComponent<CramponPreview>().StartToCompareDistance();
+            if (crampon != null)
+            {
+                crampon.GetComponent<Rigidbody>().isKinematic = true;
+                crampon.GetComponent<Animation>().Stop();
+                crampon.SetParent(transform);
+                crampon.SetPositionAndRotation(cramponAnchor.position, cramponAnchor.rotation);
+                crampon.GetComponent<CramponPreview>().StartToCompareDistance();
+            }
         }
         private void DetachCrampon()
         {
-            crampon.SetParent(null);
-            crampon.GetComponent<Animator>().SetBool("Close", true);
-            crampon.GetComponent<Rigidbody>().isKinematic = false;
-            crampon.GetComponent<CramponPreview>().PoseCrampon();
-            crampon = null;
+            if (crampon != null)
+            {
+                crampon.SetParent(null);
+                crampon.GetComponent<Animation>().Play();
+                crampon.GetComponent<Rigidbody>().isKinematic = false;
+                crampon.GetComponent<CramponPreview>().PoseCrampon();
+                crampon = null;
+            }
         }
 
         private void OnTriggerEnter(Collider other)

@@ -98,7 +98,7 @@ namespace ODON.GameManager
             }
             else
             {
-                Debug.LogWarning($"Step {step.Id} not registered in HighlightsManager.");
+                Debug.LogError($"Step {step.Id} not registered in HighlightsManager.");
             }
         }
     }
