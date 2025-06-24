@@ -38,6 +38,10 @@ namespace ODON
                 {
                     damMaterial = GetComponent<Renderer>().material;
                 }
+                if (damMaterial == null)
+                {
+                    Debug.LogError("Dam material not found.");
+                }
                 return damMaterial;
             }
         }
