@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace ODON.InteractableObject
 {
@@ -12,7 +11,10 @@ namespace ODON.InteractableObject
 
         [Header("Animator")]
         [Tooltip("Animator component for controlling the pince animations.")]
-        private Animator animator;
+        [SerializeField] private Animator animator;
+
+        [SerializeField] private UniversalSenderActionToEventManager uSATEManagerTakeCrampon;
+        [SerializeField] private UniversalSenderActionToEventManager uSATEManagerPutCrampon;
 
         private void Start()
         {
@@ -48,35 +50,40 @@ namespace ODON.InteractableObject
             if (crampon != null)
             {
                 crampon.GetComponent<Rigidbody>().isKinematic = true;
-                crampon.GetComponent<Animation>().Stop();
+                Animation anim = crampon.GetComponent<Animation>();
+                anim.Stop("Close");
+                anim.Play("Open");
+
                 crampon.SetParent(transform);
                 crampon.SetPositionAndRotation(cramponAnchor.position, cramponAnchor.rotation);
                 crampon.GetComponent<CramponPreview>().StartToCompareDistance();
+
+                uSATEManagerTakeCrampon.TryValdidateCurrentItem();
             }
         }
         private void DetachCrampon()
         {
-            if (crampon != null)
-            {
-                crampon.SetParent(null);
-                crampon.GetComponent<Animation>().Play();
-                crampon.GetComponent<Rigidbody>().isKinematic = false;
-                crampon.GetComponent<CramponPreview>().PoseCrampon();
-                crampon = null;
-            }
+            crampon.SetParent(null);
+            Animation anim = crampon.GetComponent<Animation>();
+            anim.Stop("Open");
+            anim.Play("Close");
+
+            crampon.GetComponent<Rigidbody>().isKinematic = false;
+            crampon.GetComponent<CramponPreview>().PoseCrampon();
+            crampon = null;
+            uSATEManagerPutCrampon.TryValdidateCurrentItem();
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.name.Contains("Crampon"))
+            if (other.gameObject.layer == LayerMask.NameToLayer("Crampon"))
             {
                 crampon = other.transform;
             }
         }
         private void OnTriggerExit(Collider other)
         {
-
-            if (other.name.Contains("Crampon"))
+            if (other.gameObject.layer == LayerMask.NameToLayer("Crampon"))
             {
                 crampon = null;
             }
