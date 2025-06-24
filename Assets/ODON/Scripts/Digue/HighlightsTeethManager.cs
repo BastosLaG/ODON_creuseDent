@@ -60,10 +60,13 @@ namespace ODON.GameManager
                 {
                     goodTeethToDig = teeth;
                 }
-                
+
             }
 
             InitializePreview();
+
+
+            Debug.Log($"Good tooth : {goodTeethToDig.tooth.name}");
         }
 
         #endregion
@@ -87,6 +90,7 @@ namespace ODON.GameManager
                 }
             }
             // Todo send error here !!!
+            uSATEManager.TryValdidateCurrentItem(false);
         }
 
         #endregion
@@ -133,7 +137,8 @@ namespace ODON.GameManager
             if (teeth.index != 0)
             {
                 shaderDam.TeethToManage = int.Parse(name);
-                shaderDam.DamMaterial.SetInt("_ActiveHole", 1);
+                shaderDam.SwitchActiveHole(true);
+
             }
             else
             {
@@ -148,13 +153,13 @@ namespace ODON.GameManager
             Debug.Log($"GetStateTeeth called with index: {index}");
             foreach (Data.Struct_Teeth item in teethStructList)
             {
-                if (item.index == index % 8 + 1 &&
+                if (item.index == index % 8 &&
                     item.state == (index <= 7 ? Data.StateTeeth.UPPERRIGHT :
                                    index <= 15 ? Data.StateTeeth.UPPERLEFT :
                                    index <= 23 ? Data.StateTeeth.LOWERLEFT :
                                                  Data.StateTeeth.LOWERRIGHT))
                 {
-                    Debug.Log($"Teeth selected : {item}");
+                    Debug.Log($"Teeth selected : {item.tooth.name}");
                     return item;
                 }
             }

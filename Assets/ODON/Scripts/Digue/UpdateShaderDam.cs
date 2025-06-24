@@ -29,22 +29,8 @@ namespace ODON
                 GetHolePosition();
             }
         }
-        [SerializeField] private Material damMaterial;
-        public Material DamMaterial
-        {
-            get
-            {
-                if (damMaterial == null)
-                {
-                    damMaterial = GetComponent<Renderer>().material;
-                }
-                if (damMaterial == null)
-                {
-                    Debug.LogError("Dam material not found.");
-                }
-                return damMaterial;
-            }
-        }
+        [SerializeField] private Renderer damRenderer;
+        public Renderer DamRenderer => damRenderer;
         private readonly Vector2[] HolesPosition = new Vector2[] {
             new (0.47f, 0.14f),
             new (0.435f, 0.15f),
@@ -66,8 +52,6 @@ namespace ODON
         [SerializeField] private Vector2 HolePosition = new ();
         [SerializeField] private float HoleRadius = 0.1f;
         [SerializeField] private float HoleFalloff = 0.01f;
-        [SerializeField] private bool isHoleActive = false;
-
         [SerializeField] private Transform pliersTransform = null;
         [SerializeField] private SetObjectGrabable transformDamGrabble;
 
@@ -85,11 +69,10 @@ namespace ODON
                 Debug.LogError("Pliers Transform is not assigned.");
                 return;
             }
-            damMaterial = DamMaterial ?? GetComponent<Renderer>().material;
-            if (damMaterial == null)
+            if (damRenderer == null)
             {
-                Debug.LogError("DamMaterial is not assigned or found.");
-                return;
+                damRenderer.GetComponent<Renderer>();
+                Debug.Log("Current Material used at runtime: " + damRenderer.material.name);
             }
             if (transformDamGrabble == null)
             {
@@ -110,10 +93,29 @@ namespace ODON
             }
 
             GetHolePosition();
-            DamMaterial.SetVector("_HolePosition", HolePosition);
-            DamMaterial.SetFloat("_HoleRadius", HoleRadius);
-            DamMaterial.SetFloat("_HoleFalloff", HoleFalloff);
-            DamMaterial.SetInt("_IsHoleActive", isHoleActive ? 1 : 0);
+            damRenderer.material.SetVector("_HolePosition", HolePosition);
+            damRenderer.material.SetFloat("_HoleRadius", HoleRadius);
+            damRenderer.material.SetFloat("_HoleFalloff", HoleFalloff);
+            SwitchActiveHole(false);
+
+            Debug.Log("Hole Pos: " + damRenderer.material.GetVector("_HolePosition"));
+            Debug.Log("Hole Radius: " + damRenderer.material.GetFloat("_HoleRadius"));
+            Debug.Log("Falloff: " + damRenderer.material.GetFloat("_HoleFalloff"));
+            Debug.Log("Active Hole: " + damRenderer.material.GetInt("_ACTIVEHOLE"));
+        }
+
+        #endregion
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+        #region Public Methods
+
+        public void SwitchActiveHole(bool isActive)
+        {
+            if (isActive)
+                damRenderer.material.EnableKeyword("_ACTIVEHOLE");
+            else
+                damRenderer.material.DisableKeyword("_ACTIVEHOLE");
         }
 
         #endregion
@@ -148,12 +150,12 @@ namespace ODON
             }
             else
             {
-                Debug.LogWarning("HolePosition is not set for this number of teeth");
+                Debug.LogWarning($"HolePosition is not set for {teethToManage}");
             }
-            
-            DamMaterial.SetVector("_HolePosition", HolePosition);
-            DamMaterial.SetFloat("_HoleRadius", HoleRadius);
-            DamMaterial.SetFloat("_HoleFalloff", HoleFalloff);
+
+            damRenderer.material.SetVector("_HolePosition", HolePosition);
+            damRenderer.material.SetFloat("_HoleRadius", HoleRadius);
+            damRenderer.material.SetFloat("_HoleFalloff", HoleFalloff);
         }
         #endregion
     }
