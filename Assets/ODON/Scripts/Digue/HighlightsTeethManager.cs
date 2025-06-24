@@ -26,7 +26,7 @@ namespace ODON.GameManager
         [SerializeField] private GameObject pliers;
 
         [Header("Sender")]
-        [SerializeField] private UniversalSenderActionToEventManager uSA;
+        [SerializeField] private UniversalSenderActionToEventManager uSATEManager;
 
         #endregion
 
@@ -43,6 +43,11 @@ namespace ODON.GameManager
             else if (instance != this)
             {
                 Destroy(gameObject);
+            }
+
+            if (uSATEManager == null)
+            {
+                Debug.LogError("UniversalSenderActionToEventManager is not assigned in HighlighteManager.");
             }
         }
         void Start()
@@ -76,8 +81,7 @@ namespace ODON.GameManager
                     if (goodTeethToDig.tooth.name == pDD.transform.name)
                     {
                         SetTeeth(pDD.transform.name);
-                        shaderDam.DamMaterial.SetInteger("_IsHoleActive", 1);
-                        uSA.SendActiveCheckpointProgress();
+                        uSATEManager.TryValdidateCurrentItem();
                         return;
                     }
                 }
@@ -122,23 +126,19 @@ namespace ODON.GameManager
         {
             if (name == "Null")
             {
-                SetTeeth(new Data.Struct_Teeth { index = 0, state = Data.StateTeeth.UPPERRIGHT });
                 return;
             }
 
             Data.Struct_Teeth teeth = GetStateTeeth(name);
             if (teeth.index != 0)
             {
-                SetTeeth(teeth);
+                shaderDam.TeethToManage = int.Parse(name);
+                shaderDam.DamMaterial.SetInt("_ActiveHole", 1);
             }
             else
             {
                 Debug.LogWarning($"No teeth found for name: {name}");
             }
-        }
-        private void SetTeeth(Data.Struct_Teeth teeth)
-        {
-            shaderDam.DamMaterial.SetInteger("TeethIndex", ((int)teeth.state * 10) + teeth.index);
         }
 
         private Data.Struct_Teeth GetStateTeeth(string number)
@@ -154,6 +154,7 @@ namespace ODON.GameManager
                                    index <= 23 ? Data.StateTeeth.LOWERLEFT :
                                                  Data.StateTeeth.LOWERRIGHT))
                 {
+                    Debug.Log($"Teeth selected : {item}");
                     return item;
                 }
             }

@@ -27,7 +27,6 @@ namespace ODON
                 }
                 teethToManage = value;
                 GetHolePosition();
-                
             }
         }
         [SerializeField] private Material damMaterial;
