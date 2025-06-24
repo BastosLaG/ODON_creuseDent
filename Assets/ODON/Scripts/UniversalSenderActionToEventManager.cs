@@ -9,6 +9,7 @@ namespace ODON
         public Data.SO_Step Step => step;
 
         [SerializeField] private Data.Struct_VRValidatorObject[] validatorObjects;
+        public Data.Struct_VRValidatorObject[] ValidatorObjects => validatorObjects;
 
         private void Start()
         {

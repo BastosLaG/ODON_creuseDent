@@ -43,6 +43,13 @@ namespace ODON
 
         private void OnGrabEntered(SelectEnterEventArgs args)
         {
+            foreach (Data.Struct_VRValidatorObject item in uSATEManager.ValidatorObjects)
+            {
+                if (item.ValidateObject == transform.gameObject)
+                {
+                    item.IsValid = true;
+                }
+            }
             uSATEManager.TryValdidateCurrentItem();
         }
         

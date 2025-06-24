@@ -5,9 +5,9 @@ namespace ODON.Data
     [System.Serializable]
     public class Struct_VRValidatorObject
     {
-        [SerializeField] private GameObject valdateObject;
+        [SerializeField] private GameObject validateObject;
         [SerializeField] private bool isValid = false;
-        public GameObject ValdateObject => valdateObject;
+        public GameObject ValidateObject => validateObject;
         public bool IsValid
         {
             get => isValid;
