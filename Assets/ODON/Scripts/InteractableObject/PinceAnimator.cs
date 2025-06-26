@@ -14,7 +14,6 @@ namespace ODON.InteractableObject
         [SerializeField] private Animator animator;
 
         [SerializeField] private UniversalSenderActionToEventManager uSATEManagerTakeCrampon;
-        [SerializeField] private UniversalSenderActionToEventManager uSATEManagerPutCrampon;
 
         private void Start()
         {
@@ -56,7 +55,6 @@ namespace ODON.InteractableObject
 
                 crampon.SetParent(transform);
                 crampon.SetPositionAndRotation(cramponAnchor.position, cramponAnchor.rotation);
-                crampon.GetComponent<CramponPreview>().StartToCompareDistance();
 
                 uSATEManagerTakeCrampon.TryValdidateCurrentItem();
             }
@@ -69,9 +67,7 @@ namespace ODON.InteractableObject
             anim.Play("Close");
 
             crampon.GetComponent<Rigidbody>().isKinematic = false;
-            crampon.GetComponent<CramponPreview>().PoseCrampon();
             crampon = null;
-            uSATEManagerPutCrampon.TryValdidateCurrentItem();
         }
 
         private void OnTriggerEnter(Collider other)

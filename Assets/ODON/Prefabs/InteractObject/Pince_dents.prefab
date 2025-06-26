@@ -269,13 +269,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3420051634359824031}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.9659259, y: -0, z: -0, w: -0.25881898}
-  m_LocalPosition: {x: 0.03, y: 0, z: 2.87}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000032782552}
+  m_LocalPosition: {x: 0.03, y: -0.17, z: 3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 797515007798327386}
-  m_LocalEulerAnglesHint: {x: 210, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &3599153041334674039
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +469,9 @@ GameObject:
   - component: {fileID: 5592574379797007336}
   - component: {fileID: 4686133157739490156}
   - component: {fileID: 5028996819910784797}
+  - component: {fileID: 498960832543421565}
+  - component: {fileID: 8092910946038369025}
+  - component: {fileID: 8836651152653394642}
   m_Layer: 7
   m_Name: Pince_dents
   m_TagString: Crampon
@@ -624,9 +627,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5028996819910784797}
         m_TargetAssemblyTypeName: CramponAttached, Assembly-CSharp
-        m_MethodName: AttachObject
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -652,8 +655,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CramponAttached, Assembly-CSharp
-        m_MethodName: AttachObject
+        m_TargetAssemblyTypeName: ODON.GameManager.MouthManager, Assembly-CSharp
+        m_MethodName: SwapPrefabs
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -750,6 +753,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cramponAnchor: {fileID: 1755424041131554494}
+  crampon: {fileID: 0}
+  animator: {fileID: 0}
+  uSATEManagerTakeCrampon: {fileID: 0}
+--- !u!114 &498960832543421565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5704034361662873498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01dc0c9491ec742438b2b607031416f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uSATEManager: {fileID: 8092910946038369025}
+--- !u!114 &8092910946038369025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5704034361662873498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b651b972d67a9884fb636243a4497dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  step: {fileID: 11400000, guid: c15eb27f07649f942843267c11fb37a9, type: 2}
+  validatorObjects: []
+--- !u!135 &8836651152653394642
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5704034361662873498}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: -0.5, z: -2.2}
 --- !u!1 &6170220962653946285
 GameObject:
   m_ObjectHideFlags: 0

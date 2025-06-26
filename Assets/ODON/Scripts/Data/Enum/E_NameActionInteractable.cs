@@ -12,7 +12,7 @@ namespace ODON.Data
         DigueDam,
         TakePlierBrewer,
         TakeCrampon,
-        PutCromponOnPatient,
+        PutCramponOnPatient,
         TakeDam,
         PutDamOnPatient,
         TakeUShapedFrame,

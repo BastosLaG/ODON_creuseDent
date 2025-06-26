@@ -18,17 +18,8 @@ namespace ODON.GameManager
 
         //////////////////////////////////////////////////////////////////////////////////////////
         
-        #region Scenario And Erreur Data
-        /// <summary>
-        /// The scenario data for the game.
-        /// </summary>
-        /// <remarks>
-        /// This list contains the scenario data that defines the game flow and events.
-        /// </remarks>
-        [Header("Scenario")]
-        [Tooltip("The scenario data for the game.")]
-        [SerializeField] private List<Data.SO_Scenario> scenario;
-
+        #region Erreur Data
+        [Header("Error Data")]
         [SerializeField] private List<string> errorData = new ();
         public List<string> ErrorData => errorData;
         #endregion
