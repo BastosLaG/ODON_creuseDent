@@ -7,12 +7,12 @@ namespace ODON.InteractableObject
     {
         [Header("Preview Dig Dam Components")]
         [Tooltip("List of PreviewDigDam components in the scene.")]
-        [SerializeField] private SphereCollider pinCollider;
+        [SerializeField] private CapsuleCollider pinCollider;
 
 
         void Start()
         {
-            pinCollider = GetComponent<SphereCollider>();
+            pinCollider = GetComponent<CapsuleCollider>();
             if (pinCollider == null)
             {
                 Debug.LogError("SphereCollider component is missing on the GameObject.");

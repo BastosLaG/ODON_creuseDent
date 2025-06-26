@@ -15,17 +15,7 @@ namespace ODON
         {
             GameManager.HighlightsManager.Instance.RegisterStep(step, this);
         }
-
-        public void SendActiveCheckpointProgress()
-        {
-            if (step == null)
-            {
-                Debug.LogError("Step is not assigned in UniversalSenderActionToEventManager.");
-                return;
-            }
-            GameManager.EventManager.Instance.TryValidateCurrentItem(step);
-        }
-
+        
         private bool CheckIfValidatorObjectsAreValid()
         {
             if (validatorObjects == null || validatorObjects.Length == 0) return true;

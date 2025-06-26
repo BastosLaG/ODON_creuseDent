@@ -64,9 +64,6 @@ namespace ODON.GameManager
             }
 
             InitializePreview();
-
-
-            Debug.Log($"Good tooth : {goodTeethToDig.tooth.name}");
         }
 
         #endregion

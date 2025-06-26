@@ -1,86 +1,50 @@
+using UnityEditor.SceneManagement;
 using UnityEngine;
-using System.Collections;
 
-public class DiguePreview : MonoBehaviour
+namespace ODON
 {
-    [SerializeField] private Transform DigueFinalTransform {get; set;}
-    [SerializeField] private Material finalMat {get; set;}
-    [SerializeField] private float minDistance = 2.0f;
-
-    private Coroutine DiguePreviewCoroutine = null;
-
-    private static int handsHolding = 0;
-    private static int activePreviewCoroutines = 0;
-
-    public static int ActivePreviewCount => activePreviewCoroutines;
-
-    public void OnSelectEnter()
+    public class DiguePreview : MonoBehaviour
     {
-        handsHolding++;
+        [SerializeField] private Material baseMaterial;
+        [SerializeField] private Material materialPreview;
+        [SerializeField] private bool isContact = false;
 
-        if (DiguePreviewCoroutine == null)
+        [SerializeField] private Renderer rd;
+
+        void Start()
         {
-            DiguePreviewCoroutine = StartCoroutine(CompareDistancesCoroutine(0.5f));
-            activePreviewCoroutines++;
+            rd = GetComponent<Renderer>();
+            rd.material = materialPreview;
+
+            rd.enabled = false;
         }
-    }
 
-    public void OnSelectExit()
-    {
-        handsHolding = Mathf.Max(0, handsHolding - 1);
-
-        if (handsHolding == 0)
+        void PlaceDigue()
         {
-            if (DiguePreviewCoroutine != null)
+            if (isContact)
             {
-                StopCoroutine(DiguePreviewCoroutine);
-                DiguePreviewCoroutine = null;
-                activePreviewCoroutines--;
+                rd.enabled = true;
+                rd.material = baseMaterial;
+                Destroy(this);
             }
-
-            PlaceObject();
         }
-    }
 
-    private IEnumerator CompareDistancesCoroutine(float compareInterval)
-    {
-        while (true)
+        void OnTriggerEnter(Collider other)
         {
-            CompareDistance();
-            yield return new WaitForSeconds(compareInterval);
-        }
-    }
-
-    private void CompareDistance()
-    {
-        float distance = Vector3.Distance(transform.position, DigueFinalTransform.position);
-
-        DigueFinalTransform.gameObject.SetActive(distance < minDistance);
-    }
-
-    public void PlaceObject()
-    {
-        float distance = Vector3.Distance(transform.position, DigueFinalTransform.position);
-        if (distance < minDistance)
-        {
-            DigueFinalTransform.GetComponentInChildren<SkinnedMeshRenderer>().material = finalMat;
-
-            Transform root = transform;
-            for (int i = 0; i < 3 && root.parent != null; i++)
+            if (other.gameObject.layer == LayerMask.NameToLayer("Dam"))
             {
-                root = root.parent;
+                rd.enabled = true;
+                isContact = true;
             }
-
-            root.gameObject.SetActive(false);
         }
-    }
 
-    public void SetMaterial(Material material)
-    {
-        finalMat = material;
-    }
-    public void SetTransform(Transform transform)
-    {
-        DigueFinalTransform = transform;
+        void OnTriggerExit(Collider other)
+        {
+            if (other.gameObject.layer == LayerMask.NameToLayer("Dam"))
+            {
+                rd.enabled = false;
+                isContact = false;
+            }
+        }
     }
 }

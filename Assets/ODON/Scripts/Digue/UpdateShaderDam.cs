@@ -53,8 +53,6 @@ namespace ODON
         [SerializeField] private float HoleRadius = 0.1f;
         [SerializeField] private float HoleFalloff = 0.01f;
         [SerializeField] private Transform pliersTransform = null;
-        [SerializeField] private SetObjectGrabable transformDamGrabble;
-
         [SerializeField] private HighlightsTeethManager highlightsTeethManager;
         [SerializeField] private UniversalSenderActionToEventManager uSATEManager;
         #endregion
@@ -74,11 +72,6 @@ namespace ODON
                 damRenderer.GetComponent<Renderer>();
                 Debug.Log("Current Material used at runtime: " + damRenderer.material.name);
             }
-            if (transformDamGrabble == null)
-            {
-                Debug.LogError("TransformDam is not assigned.");
-                return;
-            }
             if (teethToManage < 11 || teethToManage > 48)
             {
                 Debug.LogError("teethToManage must be between 11 and 48.");
@@ -96,7 +89,7 @@ namespace ODON
             damRenderer.material.SetVector("_HolePosition", HolePosition);
             damRenderer.material.SetFloat("_HoleRadius", HoleRadius);
             damRenderer.material.SetFloat("_HoleFalloff", HoleFalloff);
-            SwitchActiveHole(false);
+            damRenderer.material.DisableKeyword("_ACTIVEHOLE");
         }
 
         #endregion
@@ -111,6 +104,7 @@ namespace ODON
             {
                 uSATEManager.TryValdidateCurrentItem();
                 damRenderer.material.EnableKeyword("_ACTIVEHOLE");
+                // Active cloth ? 
             }
             else
             {
