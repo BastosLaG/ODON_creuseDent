@@ -108,9 +108,15 @@ namespace ODON
         public void SwitchActiveHole(bool isActive)
         {
             if (isActive)
+            {
+                uSATEManager.TryValdidateCurrentItem();
                 damRenderer.material.EnableKeyword("_ACTIVEHOLE");
+            }
             else
+            {
+                uSATEManager.TryValdidateCurrentItem(false);
                 damRenderer.material.DisableKeyword("_ACTIVEHOLE");
+            }
         }
 
         #endregion

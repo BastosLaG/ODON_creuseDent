@@ -138,7 +138,6 @@ namespace ODON.GameManager
             {
                 shaderDam.TeethToManage = int.Parse(name);
                 shaderDam.SwitchActiveHole(true);
-
             }
             else
             {
