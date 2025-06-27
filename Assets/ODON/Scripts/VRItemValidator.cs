@@ -50,7 +50,7 @@ namespace ODON
                     item.IsValid = true;
                 }
             }
-            uSATEManager.TryValdidateCurrentItem();
+            uSATEManager.TryValidateCurrentItem();
         }
         
         #endregion

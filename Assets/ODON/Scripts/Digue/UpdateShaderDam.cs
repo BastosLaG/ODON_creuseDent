@@ -102,13 +102,13 @@ namespace ODON
         {
             if (isActive)
             {
-                uSATEManager.TryValdidateCurrentItem();
+                uSATEManager.TryValidateCurrentItem();
                 damRenderer.material.EnableKeyword("_ACTIVEHOLE");
                 // Active cloth ? 
             }
             else
             {
-                uSATEManager.TryValdidateCurrentItem(false);
+                uSATEManager.TryValidateCurrentItem(false);
                 damRenderer.material.DisableKeyword("_ACTIVEHOLE");
             }
         }

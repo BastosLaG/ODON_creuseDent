@@ -23,12 +23,12 @@ namespace ODON
 
         private void Start()
         {
-            OnActionValidated.AddListener(uSATEManager.TryValdidateCurrentItem);
+            OnActionValidated.AddListener(uSATEManager.TryValidateCurrentItem);
         }
 
         private void OnDisable()
         {
-            OnActionValidated.RemoveListener(uSATEManager.TryValdidateCurrentItem);
+            OnActionValidated.RemoveListener(uSATEManager.TryValidateCurrentItem);
         }
         #endregion
 

@@ -29,14 +29,14 @@ namespace ODON
             return true;
         }
 
-        public void TryValdidateCurrentItem()
+        public void TryValidateCurrentItem()
         {
             if (enabled == false) return;
             if (!CheckIfValidatorObjectsAreValid()) return;
             GameManager.EventManager.Instance.TryValidateCurrentItem(Step);
         }
 
-        public void TryValdidateCurrentItem(bool stepIsCorrect)
+        public void TryValidateCurrentItem(bool stepIsCorrect)
         {
             if (enabled == false) return;
             if (!CheckIfValidatorObjectsAreValid()) return;

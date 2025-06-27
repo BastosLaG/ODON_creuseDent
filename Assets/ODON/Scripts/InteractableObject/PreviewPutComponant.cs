@@ -2,57 +2,53 @@ using UnityEngine;
 
 namespace ODON
 {
-    public class PreviewPutComponant : MonoBehaviour
+    public class PreviewPutComponent : MonoBehaviour
     {
         [SerializeField] private Material baseMaterial;
-        [SerializeField] private Material materialPreview;
-        [SerializeField] private bool isContact = false;
+        [SerializeField] private Material previewMaterial;
+        [SerializeField] private bool isInContact = false;
         [SerializeField] private GameObject originalObject;
-        [SerializeField] private Renderer rd;
-
-        [SerializeField] private UniversalSenderActionToEventManager USATEManager;
-
-        [SerializeField] private LayerMask layerToFind;
+        [SerializeField] private Renderer rendererComponent;
+        [SerializeField] private UniversalSenderActionToEventManager eventManager;
 
         void Start()
         {
-            rd = GetComponent<Renderer>();
-            rd.material = materialPreview;
-
-            rd.enabled = false;
+            rendererComponent = GetComponent<Renderer>();
+            rendererComponent.material = previewMaterial;
+            rendererComponent.enabled = false;
         }
 
-        public void PlaceDigue()
+        public void PlaceComponent()
         {
-            if (isContact)
+            if (isInContact)
             {
-                rd.enabled = true;
-                rd.material = baseMaterial;
+                rendererComponent.enabled = true;
+                rendererComponent.material = baseMaterial;
                 Destroy(this);
                 Destroy(originalObject);
-                USATEManager.TryValdidateCurrentItem();
+                eventManager.TryValidateCurrentItem();
             }
             else
             {
-                USATEManager.TryValdidateCurrentItem(false);
+                eventManager.TryValidateCurrentItem(false);
             }
         }
 
         void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.layer == layerToFind)
+            if (other.gameObject == originalObject)
             {
-                rd.enabled = true;
-                isContact = true;
+                rendererComponent.enabled = true;
+                isInContact = true;
             }
         }
 
         void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.layer == layerToFind)
+            if (other.gameObject == originalObject)
             {
-                rd.enabled = false;
-                isContact = false;
+                rendererComponent.enabled = false;
+                isInContact = false;
             }
         }
     }

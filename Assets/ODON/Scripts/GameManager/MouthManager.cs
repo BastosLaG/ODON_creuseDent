@@ -74,12 +74,12 @@ namespace ODON.GameManager
                                                         cramponDictionary[key].transform
                                                     );
                         
-                        USATEManagerPutCrampon.TryValdidateCurrentItem();
+                        USATEManagerPutCrampon.TryValidateCurrentItem();
                         return;
                     }
                     else
                     {
-                        USATEManagerPutCrampon.TryValdidateCurrentItem(false);
+                        USATEManagerPutCrampon.TryValidateCurrentItem(false);
                         return;
                     }   
                 }

@@ -56,7 +56,7 @@ namespace ODON.InteractableObject
                 crampon.SetParent(transform);
                 crampon.SetPositionAndRotation(cramponAnchor.position, cramponAnchor.rotation);
 
-                uSATEManagerTakeCrampon.TryValdidateCurrentItem();
+                uSATEManagerTakeCrampon.TryValidateCurrentItem();
             }
         }
         private void DetachCrampon()

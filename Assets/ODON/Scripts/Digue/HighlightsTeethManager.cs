@@ -81,13 +81,13 @@ namespace ODON.GameManager
                     if (goodTeethToDig.tooth.name == pDD.transform.name)
                     {
                         SetTeeth(pDD.transform.name);
-                        uSATEManager.TryValdidateCurrentItem();
+                        uSATEManager.TryValidateCurrentItem();
                         return;
                     }
                 }
             }
             // Todo send error here !!!
-            uSATEManager.TryValdidateCurrentItem(false);
+            uSATEManager.TryValidateCurrentItem(false);
         }
 
         #endregion
