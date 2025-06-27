@@ -24,9 +24,9 @@ namespace ODON
             {
                 rendererComponent.enabled = true;
                 rendererComponent.material = baseMaterial;
-                Destroy(this);
-                Destroy(originalObject);
                 eventManager.TryValidateCurrentItem();
+                Destroy(originalObject);
+                Destroy(this);
             }
             else
             {
@@ -36,7 +36,10 @@ namespace ODON
 
         void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject == originalObject)
+            Debug.Log($"_____________________________________________________________");
+            Debug.Log($"{other.gameObject.layer} try to enter in {gameObject.layer} and the good object is {originalObject.layer}");
+            Debug.Log($"_____________________________________________________________");
+            if (other.gameObject.layer == originalObject.layer)
             {
                 rendererComponent.enabled = true;
                 isInContact = true;
@@ -45,7 +48,7 @@ namespace ODON
 
         void OnTriggerExit(Collider other)
         {
-            if (other.gameObject == originalObject)
+            if (other.gameObject.layer == originalObject.layer)
             {
                 rendererComponent.enabled = false;
                 isInContact = false;
