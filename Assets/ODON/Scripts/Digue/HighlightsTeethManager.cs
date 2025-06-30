@@ -85,9 +85,11 @@ namespace ODON.GameManager
                         return;
                     }
                 }
+                else if (pDD.MR.enabled == true && pDD.transform.name != goodTeethToDig.tooth.name)
+                {
+                    uSATEManager.TryValidateCurrentItem(false);
+                }
             }
-            // Todo send error here !!!
-            uSATEManager.TryValidateCurrentItem(false);
         }
 
         #endregion
