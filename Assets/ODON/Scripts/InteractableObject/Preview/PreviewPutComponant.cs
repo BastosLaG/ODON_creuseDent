@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace ODON
+namespace ODON.InteractableObject
 {
-    public class PreviewPutComponent : MonoBehaviour
+    public class PreviewPutComponent : MonoBehaviour, Interface.IInteractWithHeadInteractor
     {
         [SerializeField] private Material baseMaterial;
         [SerializeField] private Material previewMaterial;
@@ -53,6 +53,12 @@ namespace ODON
                 rendererComponent.enabled = false;
                 isInContact = false;
             }
+        }
+
+        public void OnHeadInteract()
+        {
+            // TODO : Set Preview
+            throw new System.NotImplementedException();
         }
     }
 }

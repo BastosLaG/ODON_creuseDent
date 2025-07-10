@@ -1,14 +1,12 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace ODON.InteractableObject
 {
-    public class PinceAinsworth : MonoBehaviour
+    public class PinceAinsworth : MonoBehaviour, Interface.IInteractWithHeadInteractor
     {
         [Header("Preview Dig Dam Components")]
         [Tooltip("List of PreviewDigDam components in the scene.")]
         [SerializeField] private CapsuleCollider pinCollider;
-
 
         void Start()
         {
@@ -35,5 +33,10 @@ namespace ODON.InteractableObject
             }
         }
 
+        public void OnHeadInteract()
+        {
+            // TODO : set pince action
+            throw new System.NotImplementedException();
+        }
     }
 }

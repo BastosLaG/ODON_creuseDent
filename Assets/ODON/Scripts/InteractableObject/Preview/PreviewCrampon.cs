@@ -1,9 +1,8 @@
 using UnityEngine;
 
-
-namespace ODON
+namespace ODON.InteractableObject
 {
-    public class CramponPreview : MonoBehaviour
+    public class CramponPreview : MonoBehaviour, Interface.IInteractWithHeadInteractor
     {
         [SerializeField] private Renderer rd;
         [SerializeField] private bool isValid = false;
@@ -13,6 +12,12 @@ namespace ODON
         {
             rd = GetComponentInChildren<Renderer>();
             rd.enabled = false;
+        }
+
+        public void OnHeadInteract()
+        {
+            // TODO : Set Crampon on mouth patient
+            throw new System.NotImplementedException();
         }
 
         void OnTriggerEnter(Collider other)

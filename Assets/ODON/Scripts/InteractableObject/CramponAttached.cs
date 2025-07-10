@@ -1,71 +1,82 @@
 using UnityEngine;
 
-public class CramponAttached : MonoBehaviour
+namespace ODON.InteractableObject
 {
-    [Header("This attachment point")]
-    public Transform attachPoint1; 
-    public Transform attachPoint2;
-    [Header("Target attachment point")]
-    public Transform targetAttachPoint1;
-    public Transform targetAttachPoint2;
-    public Transform targetTransform;
-
-    [Header("Booléen")]
-    public bool isCanAttach = false;
-    private bool isAttached = false; 
-
-    private void Update() {
-        if (isAttached) {
-            transform.position = targetAttachPoint1.position;
-            // transform.rotation = targetAttachPoint1.rotation;
-
-            attachPoint2.position = targetAttachPoint2.position;
-            // attachPoint2.rotation = targetAttachPoint2.rotation;
-
-            targetTransform.position = targetTransform.position;
-            // targetTransform.rotation = targetTransform.rotation;
-        }
-    }
-    private void OnTriggerEnter(Collider other)
+    public class CramponAttached : MonoBehaviour, Interface.IInteractWithHeadInteractor
     {
-        if (other.gameObject.CompareTag("Crampon"))
-        {
-            isCanAttach = true;
-            Debug.Log($"L'objet {other.name} peut maintenant être attaché.");
-        }
-    }
+        [Header("This attachment point")]
+        public Transform attachPoint1;
+        public Transform attachPoint2;
+        [Header("Target attachment point")]
+        public Transform targetAttachPoint1;
+        public Transform targetAttachPoint2;
+        public Transform targetTransform;
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Crampon"))
-        {
-            isCanAttach = false;
-            Debug.Log($"L'objet {other.name} ne peut plus être attaché.");
-        }
-    }
+        [Header("Booléen")]
+        public bool isCanAttach = false;
+        private bool isAttached = false;
 
-    public void AttachObject()
-    {
-        if (isAttached)
+        private void Update()
         {
-            isAttached = false;
-            Debug.LogWarning("Détachement du crampon.");
-            return;
+            if (isAttached)
+            {
+                transform.position = targetAttachPoint1.position;
+                // transform.rotation = targetAttachPoint1.rotation;
+
+                attachPoint2.position = targetAttachPoint2.position;
+                // attachPoint2.rotation = targetAttachPoint2.rotation;
+
+                targetTransform.position = targetTransform.position;
+                // targetTransform.rotation = targetTransform.rotation;
+            }
         }
-        if (!isCanAttach)
+        private void OnTriggerEnter(Collider other)
         {
-            Debug.LogWarning("Attachement non autorisé.");
-            return;
+            if (other.gameObject.CompareTag("Crampon"))
+            {
+                isCanAttach = true;
+                Debug.Log($"L'objet {other.name} peut maintenant être attaché.");
+            }
         }
 
-        if (attachPoint1 != null && attachPoint2 != null && targetAttachPoint1 != null && targetAttachPoint2 != null)
+        private void OnTriggerExit(Collider other)
         {
-            isAttached = true;
-            Debug.Log($"Crampon a été attaché.");
+            if (other.gameObject.CompareTag("Crampon"))
+            {
+                isCanAttach = false;
+                Debug.Log($"L'objet {other.name} ne peut plus être attaché.");
+            }
         }
-        else
+
+        public void AttachObject()
         {
-            Debug.LogError("Points d'attache ou objet cible manquants.");
+            if (isAttached)
+            {
+                isAttached = false;
+                Debug.LogWarning("Détachement du crampon.");
+                return;
+            }
+            if (!isCanAttach)
+            {
+                Debug.LogWarning("Attachement non autorisé.");
+                return;
+            }
+
+            if (attachPoint1 != null && attachPoint2 != null && targetAttachPoint1 != null && targetAttachPoint2 != null)
+            {
+                isAttached = true;
+                Debug.Log($"Crampon a été attaché.");
+            }
+            else
+            {
+                Debug.LogError("Points d'attache ou objet cible manquants.");
+            }
+        }
+
+        public void OnHeadInteract()
+        {
+            // TODO : Change Attached crampon
+            throw new System.NotImplementedException();
         }
     }
 }

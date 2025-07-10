@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace ODON.GameManager
@@ -12,7 +11,7 @@ namespace ODON.GameManager
 
         [SerializeField] private Dictionary<int, GameObject> teethDictionary = new();
         [SerializeField] private Dictionary<int, GameObject> cramponDictionary = new();
-        [SerializeField] private List<CramponPreview> CramponList = new();
+        [SerializeField] private List<InteractableObject.CramponPreview> CramponList = new();
         [SerializeField] private GameObject prefabPreviewCrampon;
         [SerializeField] private GameObject prefabCramponInMouth;
 
@@ -44,7 +43,7 @@ namespace ODON.GameManager
                                     child.GetChild(0)
                                     );
 
-                CramponPreview cP = crampon.GetComponent<CramponPreview>();
+                InteractableObject.CramponPreview cP = crampon.GetComponent<InteractableObject.CramponPreview>();
                 cP.Init();
                 CramponList.Add(cP);
                 cramponDictionary.Add(key, crampon);
@@ -57,7 +56,7 @@ namespace ODON.GameManager
         {
             int GoodKey = GameHandler.Instance.PatientData[GameHandler.Instance.PatientDataIndex].TreatedToothWithSection;
 
-            foreach (CramponPreview crampon in CramponList)
+            foreach (InteractableObject.CramponPreview crampon in CramponList)
             {
                 if (crampon.IsValid == true)
                 {
