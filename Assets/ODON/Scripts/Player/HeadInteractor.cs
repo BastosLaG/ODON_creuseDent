@@ -1,3 +1,4 @@
+using ODON.InteractableObject;
 using UnityEngine;
 
 namespace ODON
@@ -48,10 +49,18 @@ namespace ODON
                 {
                     actionComplete = true;
 
-                    // implement all logic 
+                    // implement all logic here
                     if (currentTarget.CompareTag("Teleporter") && player != null)
                     {
                         TeleportTo(currentTarget.position);
+                    }
+                    else if (currentTarget.CompareTag("Grab"))
+                    {
+                        currentTarget.GetComponent<InteractAction>().OnHeadInteract();
+                    }
+                    else
+                    {
+                        Debug.LogError($"No Action set for object : {currentTarget.name}");
                     }
                 }
             }

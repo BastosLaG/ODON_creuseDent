@@ -4,4 +4,5 @@ namespace ODON.InteractableObject.Interface
     {
         void OnHeadInteract();
     }
+
 }

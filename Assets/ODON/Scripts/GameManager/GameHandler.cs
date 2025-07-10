@@ -58,6 +58,16 @@ namespace ODON.GameManager
 
         //////////////////////////////////////////////////////////////////////////////////////////
 
+        [Header("Hand Target")]
+        [SerializeField] private Transform leftHand;
+        [SerializeField] private Transform righHand;
+        [SerializeField] private GameObject[] hands;
+        public Transform LeftHand => leftHand;
+        public Transform RightHand => righHand;
+        public GameObject[] Hands => hands;
+
+        //////////////////////////////////////////////////////////////////////////////////////////
+
         #region Unity Methods
         private void Awake()
         {
@@ -69,6 +79,10 @@ namespace ODON.GameManager
             {
                 Destroy(gameObject);
             }
+            hands = new GameObject[] {
+                leftHand.GetComponentInChildren<Transform>(includeInactive: true).gameObject,
+                righHand.GetComponentInChildren<Transform>(includeInactive: true).gameObject
+                };
         }
 
         void Start()
