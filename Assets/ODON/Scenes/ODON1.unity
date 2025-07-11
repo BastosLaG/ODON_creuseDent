@@ -622,6 +622,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: blouse
       objectReference: {fileID: 0}
+    - target: {fileID: 23254552417846643, guid: 8a50d6d38fee7d64a91c9ebcb04625c7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 23254552417846643, guid: 8a50d6d38fee7d64a91c9ebcb04625c7, type: 3}
+      propertyPath: m_TagString
+      value: Grab
+      objectReference: {fileID: 0}
     - target: {fileID: 1463315540859715927, guid: 8a50d6d38fee7d64a91c9ebcb04625c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.374
@@ -689,7 +697,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 23254552417846643, guid: 8a50d6d38fee7d64a91c9ebcb04625c7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2122814400}
   m_SourcePrefab: {fileID: 100100000, guid: 8a50d6d38fee7d64a91c9ebcb04625c7, type: 3}
 --- !u!1 &209321399 stripped
 GameObject:
@@ -2090,9 +2101,10 @@ GameObject:
   - component: {fileID: 851684412}
   - component: {fileID: 851684411}
   - component: {fileID: 851684413}
-  m_Layer: 0
+  - component: {fileID: 851684414}
+  m_Layer: 6
   m_Name: BoxForGloves
-  m_TagString: Untagged
+  m_TagString: Grab
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2420,6 +2432,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uSATEManager: {fileID: 90036652}
+--- !u!114 &851684414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851684406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4e0d6e3998ef544b226df91c2a8c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gOToInstanciate: {fileID: 0}
+  gORenderer: []
+  gOSavedMaterials: []
+  transparentGrey: {fileID: 2100000, guid: 9263c4e3bcb767d4d93d942eb857d832, type: 2}
+  handNeed: 0
+  offsetPosition: {x: 0, y: 0, z: 0}
+  offsetRotation: {x: 0, y: 0, z: 0}
+  isInteract: 0
+  uSATEManager: {fileID: 90036652}
+  OnHeadInteractEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 851684406}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1363899764}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &855183548 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7041753595304693511, guid: c30ae50af04332546b921194dec92873, type: 3}
@@ -3329,6 +3389,21 @@ PrefabInstance:
 --- !u!4 &1363899762 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5380313243669291546, guid: 76cdddd3ce4ddfe4cbabb11db2819399, type: 3}
+  m_PrefabInstance: {fileID: 1363899761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1363899763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2383656622662068171, guid: 76cdddd3ce4ddfe4cbabb11db2819399, type: 3}
+  m_PrefabInstance: {fileID: 1363899761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1363899764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7355779887868462111, guid: 76cdddd3ce4ddfe4cbabb11db2819399, type: 3}
+  m_PrefabInstance: {fileID: 1363899761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1363899765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8989398768563740612, guid: 76cdddd3ce4ddfe4cbabb11db2819399, type: 3}
   m_PrefabInstance: {fileID: 1363899761}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1373935565
@@ -4411,6 +4486,54 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 23254552417846643, guid: 8a50d6d38fee7d64a91c9ebcb04625c7, type: 3}
   m_PrefabInstance: {fileID: 175367606}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2122814400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122814399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4e0d6e3998ef544b226df91c2a8c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gOToInstanciate: {fileID: 0}
+  gORenderer: []
+  gOSavedMaterials: []
+  transparentGrey: {fileID: 2100000, guid: 9263c4e3bcb767d4d93d942eb857d832, type: 2}
+  handNeed: 0
+  offsetPosition: {x: 0, y: 0, z: 0}
+  offsetRotation: {x: 0, y: 0, z: 0}
+  isInteract: 0
+  uSATEManager: {fileID: 90036652}
+  OnHeadInteractEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2122814399}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1363899765}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &202601758407461693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7257617385201465913, guid: 324298815b154e74ea1fbd5e8058ffb8, type: 3}
@@ -4752,6 +4875,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uSATEManager: {fileID: 90036652}
+--- !u!114 &2899882141658510726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855183548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4e0d6e3998ef544b226df91c2a8c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gOToInstanciate: {fileID: 0}
+  gORenderer: []
+  gOSavedMaterials: []
+  transparentGrey: {fileID: 2100000, guid: 9263c4e3bcb767d4d93d942eb857d832, type: 2}
+  handNeed: 0
+  offsetPosition: {x: 0, y: 0, z: 0}
+  offsetRotation: {x: 0, y: 0, z: 0}
+  isInteract: 0
+  uSATEManager: {fileID: 90036652}
+  OnHeadInteractEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 855183548}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1363899763}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &2999340338532601677
 GameObject:
   m_ObjectHideFlags: 0
@@ -4950,6 +5121,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: glasses
       objectReference: {fileID: 0}
+    - target: {fileID: 7041753595304693511, guid: c30ae50af04332546b921194dec92873, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041753595304693511, guid: c30ae50af04332546b921194dec92873, type: 3}
+      propertyPath: m_TagString
+      value: Grab
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4957,6 +5136,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7041753595304693511, guid: c30ae50af04332546b921194dec92873, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2899882141658510725}
+    - targetCorrespondingSourceObject: {fileID: 7041753595304693511, guid: c30ae50af04332546b921194dec92873, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2899882141658510726}
   m_SourcePrefab: {fileID: 100100000, guid: c30ae50af04332546b921194dec92873, type: 3}
 --- !u!1001 &5674947057512550860
 PrefabInstance:
