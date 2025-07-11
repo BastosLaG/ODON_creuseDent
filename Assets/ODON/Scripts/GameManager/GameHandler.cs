@@ -61,10 +61,10 @@ namespace ODON.GameManager
         [Header("Hand Target")]
         [SerializeField] private Transform leftHand;
         [SerializeField] private Transform righHand;
-        [SerializeField] private GameObject[] hands;
+        // [SerializeField] private GameObject[] hands;
         public Transform LeftHand => leftHand;
         public Transform RightHand => righHand;
-        public GameObject[] Hands => hands;
+        //public GameObject[] Hands => hands;
 
         //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -79,10 +79,11 @@ namespace ODON.GameManager
             {
                 Destroy(gameObject);
             }
-            hands = new GameObject[] {
-                leftHand.GetComponentInChildren<Transform>(includeInactive: true).gameObject,
-                righHand.GetComponentInChildren<Transform>(includeInactive: true).gameObject
-                };
+            //hands = new GameObject[] {
+            //     leftHand.GetChild(0).gameObject,
+            //     righHand.GetChild(0).gameObject
+            // };
+
         }
 
         void Start()
