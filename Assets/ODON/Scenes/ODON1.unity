@@ -875,10 +875,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1015162186}
     m_Modifications:
     - target: {fileID: 1685343955664076, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
-    - target: {fileID: 1685343955664076, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
       propertyPath: m_Name
       value: ClipBoard
       objectReference: {fileID: 0}
@@ -943,11 +939,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4130742356104373069, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130742356104373069, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1325161665}
+    - target: {fileID: 7107620362256890465, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
+      propertyPath: gORenderer
+      value: 
+      objectReference: {fileID: 2107870048}
+    - target: {fileID: 7107620362256890465, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
+      propertyPath: gORenderer.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107620362256890465, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
+      propertyPath: gOSavedMaterials.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107620362256890465, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
+      propertyPath: OnHeadInteractEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1325161665}
     - target: {fileID: 8152253866411159866, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
@@ -1059,6 +1067,33 @@ Transform:
   - {fileID: 35643346}
   m_Father: {fileID: 1769550003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &320931035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5357867522353935235, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+  m_PrefabInstance: {fileID: 1764306616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &320931044
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320931035}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef708148beadd1e458dde5f33cfcdbd8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &372007483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1463315540859715927, guid: 8a50d6d38fee7d64a91c9ebcb04625c7, type: 3}
@@ -1136,6 +1171,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 670196143047120488, guid: f3a16be4d42f5b047a943a11f319d0a2, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365247875621754426, guid: f3a16be4d42f5b047a943a11f319d0a2, type: 3}
+      propertyPath: offSetRotation.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365247875621754426, guid: f3a16be4d42f5b047a943a11f319d0a2, type: 3}
+      propertyPath: offsetRotation.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365247875621754426, guid: f3a16be4d42f5b047a943a11f319d0a2, type: 3}
+      propertyPath: gORenderer.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1535767363762992818, guid: f3a16be4d42f5b047a943a11f319d0a2, type: 3}
@@ -3538,9 +3585,45 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2982645313367153615, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
-      propertyPath: transparentGrey
+      propertyPath: animator
       value: 
-      objectReference: {fileID: 2100000, guid: 9263c4e3bcb767d4d93d942eb857d832, type: 2}
+      objectReference: {fileID: 320931044}
+    - target: {fileID: 2982645313367153615, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+      propertyPath: animationName
+      value: Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982645313367153615, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+      propertyPath: gORenderer.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982645313367153615, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+      propertyPath: OnHeadInteractEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982645313367153615, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+      propertyPath: OnHeadInteractEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982645313367153615, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+      propertyPath: OnHeadInteractEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1325161665}
+    - target: {fileID: 2982645313367153615, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+      propertyPath: OnHeadInteractEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982645313367153615, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+      propertyPath: OnHeadInteractEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NewPatientEnterOnRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982645313367153615, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+      propertyPath: OnHeadInteractEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ODON.GameManager.GameHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982645313367153615, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+      propertyPath: OnHeadInteractEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3330691243880872561, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3669,10 +3752,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 9211039365556814478, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5357867522353935235, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 320931044}
     - targetCorrespondingSourceObject: {fileID: 5558585944788357017, guid: 190aa341317451d4c86c3ca28dea1eca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 636295984}
@@ -3989,12 +4079,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gOToInstanciate: {fileID: 3429297605788411900, guid: f3a16be4d42f5b047a943a11f319d0a2, type: 3}
-  gORenderer: {fileID: 0}
-  transparentGrey: {fileID: 0}
+  gORenderer: []
   gOSavedMaterials: []
+  transparentGrey: {fileID: 0}
   handNeed: 1
+  offsetPosition: {x: 0, y: 0, z: 0}
+  offsetRotation: {x: 0, y: 0, z: 0}
   isInteract: 0
   uSATEManager: {fileID: 0}
+  OnHeadInteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1954334092
 GameObject:
   m_ObjectHideFlags: 0
@@ -4306,6 +4401,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   step: {fileID: 11400000, guid: 98bc121f40f154c4eba20dda82351de3, type: 2}
   validatorObjects: []
+--- !u!23 &2107870048 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23832010425885406, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
+  m_PrefabInstance: {fileID: 248281811}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2122814399 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 23254552417846643, guid: 8a50d6d38fee7d64a91c9ebcb04625c7, type: 3}
