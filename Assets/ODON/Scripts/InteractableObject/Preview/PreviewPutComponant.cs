@@ -55,7 +55,7 @@ namespace ODON.InteractableObject
             }
         }
 
-        public void OnHeadInteract()
+        public void HeadInteract()
         {
             // TODO : Set Preview
             throw new System.NotImplementedException();

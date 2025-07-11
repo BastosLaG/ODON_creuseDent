@@ -85,7 +85,7 @@ namespace ODON.InteractableObject
             }
         }
 
-        public void OnHeadInteract()
+        public void HeadInteract()
         {
             // Todo : Set pince animation en fonction de si on accroche ou non le crampon 
             throw new System.NotImplementedException();

@@ -14,7 +14,7 @@ namespace ODON.InteractableObject
             rd.enabled = false;
         }
 
-        public void OnHeadInteract()
+        public void HeadInteract()
         {
             // TODO : Set Crampon on mouth patient
             throw new System.NotImplementedException();

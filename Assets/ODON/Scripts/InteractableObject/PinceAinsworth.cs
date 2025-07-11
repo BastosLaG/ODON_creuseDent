@@ -33,7 +33,7 @@ namespace ODON.InteractableObject
             }
         }
 
-        public void OnHeadInteract()
+        public void HeadInteract()
         {
             // TODO : set pince action
             throw new System.NotImplementedException();

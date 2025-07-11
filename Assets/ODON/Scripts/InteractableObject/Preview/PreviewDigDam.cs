@@ -28,7 +28,7 @@ namespace ODON.InteractableObject
             }
         }
 
-        public void OnHeadInteract()
+        public void HeadInteract()
         {
             // Todo : Implement Preview
             throw new NotImplementedException();

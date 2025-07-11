@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 namespace ODON.InteractableObject
 {    
@@ -47,7 +48,7 @@ namespace ODON.InteractableObject
             }
         }
 
-        public void OnHeadInteract()
+        public void HeadInteract()
         {
             // Todo : Preview
             throw new System.NotImplementedException();

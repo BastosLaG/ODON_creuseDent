@@ -56,7 +56,7 @@ namespace ODON
                     }
                     else if (currentTarget.CompareTag("Grab"))
                     {
-                        currentTarget.GetComponent<InteractAction>().OnHeadInteract();
+                        currentTarget.GetComponent<InteractAction>().HeadInteract();
                     }
                     else
                     {

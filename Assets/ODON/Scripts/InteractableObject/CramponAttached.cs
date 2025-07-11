@@ -73,7 +73,7 @@ namespace ODON.InteractableObject
             }
         }
 
-        public void OnHeadInteract()
+        public void HeadInteract()
         {
             // TODO : Change Attached crampon
             throw new System.NotImplementedException();
