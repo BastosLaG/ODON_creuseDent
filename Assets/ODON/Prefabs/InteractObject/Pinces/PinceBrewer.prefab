@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 853621801462651848}
   - component: {fileID: 5759186015546271125}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Arm_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6802795482967146727}
   - component: {fileID: 29569178164238302}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Arm_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1978559857578914522}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Right_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1065087445822213484}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 221454199419310220}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Attach_Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4116715227029018121}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Left_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 8412175815931659530}
   - component: {fileID: 8211868440990870255}
   - component: {fileID: 3697470616835578842}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Spring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2457608556215553837}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Attach_Point_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6011311378721919386}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Attach_Point_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,10 +472,11 @@ GameObject:
   - component: {fileID: 498960832543421565}
   - component: {fileID: 8092910946038369025}
   - component: {fileID: 8836651152653394642}
-  m_Layer: 7
-  m_Name: Pince_dents
-  m_TagString: Crampon
-  m_Icon: {fileID: 0}
+  - component: {fileID: 5046569975659743066}
+  m_Layer: 6
+  m_Name: PinceBrewer
+  m_TagString: Grab
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -804,6 +805,30 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: -0.5, z: -2.2}
+--- !u!114 &5046569975659743066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5704034361662873498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4e0d6e3998ef544b226df91c2a8c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gOToInstanciate: {fileID: 5704034361662873498}
+  gORenderer: []
+  gOSavedMaterials: []
+  transparentGrey: {fileID: 2100000, guid: 9263c4e3bcb767d4d93d942eb857d832, type: 2}
+  handNeed: 2
+  offsetPosition: {x: 0, y: 0, z: 0}
+  offsetRotation: {x: 0, y: 0, z: 0}
+  isInteract: 0
+  uSATEManager: {fileID: 8092910946038369025}
+  OnHeadInteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6170220962653946285
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,7 +838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8133882077535554050}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,7 +871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6465801155390819979}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -879,7 +904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1755424041131554494}
   - component: {fileID: 6017669245435885788}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Attach_Point_Crampon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

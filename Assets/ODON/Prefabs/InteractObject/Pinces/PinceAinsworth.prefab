@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7442512593200183886}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7195258032434902337}
   - component: {fileID: 6963139993010700364}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Pince
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4624124447080619752}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8821733872396357196}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Left_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3456750792699942747}
   - component: {fileID: 4430421684810669188}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Pince.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 206756798406612265}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Right_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5678229190712340751}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Attach_Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,10 +356,11 @@ GameObject:
   - component: {fileID: 6656483688453616656}
   - component: {fileID: 359927482053531926}
   - component: {fileID: 5148386628154501144}
-  m_Layer: 7
+  - component: {fileID: 410026845236235868}
+  m_Layer: 6
   m_Name: PinceAinsworth
-  m_TagString: PinceDigue
-  m_Icon: {fileID: 0}
+  m_TagString: Grab
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -717,6 +718,30 @@ CapsuleCollider:
   m_Height: 0.005
   m_Direction: 2
   m_Center: {x: -0.011, y: 0, z: 0.009}
+--- !u!114 &410026845236235868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147235391726409793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4e0d6e3998ef544b226df91c2a8c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gOToInstanciate: {fileID: 8147235391726409793}
+  gORenderer: []
+  gOSavedMaterials: []
+  transparentGrey: {fileID: 2100000, guid: 9263c4e3bcb767d4d93d942eb857d832, type: 2}
+  handNeed: 2
+  offsetPosition: {x: 0, y: 0, z: 0}
+  offsetRotation: {x: 0, y: 0, z: 0}
+  isInteract: 0
+  uSATEManager: {fileID: 5273820814743698355}
+  OnHeadInteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8978356483535396261
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +751,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6785134317805566769}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
