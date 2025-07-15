@@ -19,5 +19,6 @@ namespace ODON.Data
         PutUShapedFrame,
         TakeDentalFloss,
         PutDentalFloss,
+        WashHands,
     }
 }
