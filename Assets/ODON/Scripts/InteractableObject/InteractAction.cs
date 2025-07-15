@@ -12,7 +12,7 @@ namespace ODON.InteractableObject
     {
 
         [Header("GameObjects")]
-        [SerializeField] protected GameObject gOToInstanciate;
+        [SerializeField] protected GameObject gOToInstanciate = null;
         private GameObject instantiateObject;
         [SerializeField] protected List<Renderer> gORenderer = new();
         [SerializeField] protected List<Material> gOSavedMaterials = new();
@@ -134,6 +134,11 @@ namespace ODON.InteractableObject
 
         private void TakeInHand(Transform choosenOne)
         {
+            if (gOToInstanciate == null)
+            {
+                return;
+            }
+
             instantiateObject = Instantiate(gOToInstanciate, choosenOne);
             instantiateObject.transform.SetLocalPositionAndRotation(offsetPosition, Quaternion.Euler(offsetRotation));
 

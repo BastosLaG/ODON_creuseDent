@@ -44,11 +44,7 @@ namespace ODON
             {
                 if (lastHoveredTarget != hit.transform)
                 {
-
-                    if (lastHoveredTarget != null)
-                    {
-                        lastHoveredTarget.GetComponent<InteractAction>()?.HeadHoverEventEnd();
-                    }
+                    Debug.Log($"Hover Begin: {hit.transform.name}");
                     lastHoveredTarget = hit.transform;
                     lastHoveredTarget.GetComponent<InteractAction>()?.HeadHoverEventBegin();
                 }
@@ -78,6 +74,11 @@ namespace ODON
             }
             else
             {
+                if (lastHoveredTarget != null)
+                {
+                    lastHoveredTarget.GetComponent<InteractAction>()?.HeadHoverEventEnd();
+                    lastHoveredTarget = null;
+                }
                 Debug.DrawRay(ray.origin, ray.direction * m_MaxDistance, Color.red);
                 reticle.ActiveProgressReticle(false);
                 actionComplete = false;
