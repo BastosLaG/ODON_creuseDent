@@ -44,11 +44,13 @@ namespace ODON
             {
                 if (lastHoveredTarget != hit.transform)
                 {
+
                     if (lastHoveredTarget != null)
                     {
-                        lastHoveredTarget.GetComponent<InteractAction>()?.HeadHoverEventBegin();
+                        lastHoveredTarget.GetComponent<InteractAction>()?.HeadHoverEventEnd();
                     }
                     lastHoveredTarget = hit.transform;
+                    lastHoveredTarget.GetComponent<InteractAction>()?.HeadHoverEventBegin();
                 }
 
                 Debug.DrawRay(ray.origin, ray.direction * m_MaxDistance, Color.green);
