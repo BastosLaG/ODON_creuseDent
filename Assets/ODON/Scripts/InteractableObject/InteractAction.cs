@@ -10,18 +10,45 @@ namespace ODON.InteractableObject
     /// </summary>
     public abstract class InteractAction : MonoBehaviour, IInteractWithHeadInteractor
     {
-
-        [Header("GameObjects")]
-        [SerializeField] protected GameObject gOToInstanciate = null;
+        [Header("GameObject we want to instantiate in the hand")]
+        /// <summary>
+        /// The GameObject to instantiate when the interaction occurs.
+        /// </summary>
+        /// <remarks>
+        /// This GameObject will be instantiated in the player's hand when the interaction is triggered.
+        /// </remarks>
+        [SerializeField] protected GameObject gOToInstantiate = null;
+        /// <summary>
+        /// The instantiated GameObject in the player's hand.
+        /// </summary>
+        /// <remarks>
+        /// This GameObject is the result of the instantiation of gOToInstantiate in the player's hand.
+        /// </remarks>
         private GameObject instantiateObject;
+        /// <summary>
+        /// The list of renderers associated with the GameObject.
+        /// </summary>
         [SerializeField] protected List<Renderer> gORenderer = new();
+        /// <summary>   
+        /// The list of saved materials for the GameObject.
+        /// </summary>
         [SerializeField] protected List<Material> gOSavedMaterials = new();
+
+        /// <summary>
+        /// The material used to indicate that the object is take by the player.
+        /// </summary>
+        /// <remarks>
+        /// This material is applied to the GameObject when it is instantiated in the player's hand.
+        /// </remarks>
+        [Header("Material")]
         [SerializeField] protected Material transparentGrey;
 
         [Header("Target")]
         [SerializeField] protected Data.E_HandNeed handNeed;
         [SerializeField] protected Vector3 offsetPosition;
         [SerializeField] protected Vector3 offsetRotation;
+
+        [Header("CheckBox to know if the object is in the hand")]
         [SerializeField] protected bool isInteract = false;
         public bool IsInteract => isInteract;
 
@@ -36,23 +63,17 @@ namespace ODON.InteractableObject
         }
         #endregion
 
-        #region Primary Fonction
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="System.NotImplementedException"></exception>
+        #region Primary Function
         public virtual void HeadInteract()
         {
             Debug.LogWarning("Base InteractAction.OnHeadInteract called");
             throw new System.NotImplementedException();
         }
-
         public virtual void HeadHoverEventBegin()
         {
             Debug.LogWarning("Base InteractAction.OnHeadHoverEventBegin called");
             throw new System.NotImplementedException();
         }
-
         public virtual void HeadHoverEventEnd()
         {
             Debug.LogWarning("Base InteractAction.OnHeadHoverEventEnd called");
@@ -60,7 +81,10 @@ namespace ODON.InteractableObject
         }
 
         #endregion
-        #region Secondary Fonction
+
+        //////////////////////////////////////////////////////////////////////////////////////////
+
+        #region Secondary Function
         protected void SwapToHand()
         {
             if (!isInteract)
@@ -76,7 +100,7 @@ namespace ODON.InteractableObject
                         }
                         else
                         {
-                            Debug.LogWarning("Vous essayez de prendre un objet alors que votre main gauche est prise");
+                            Debug.LogWarning($"You try to take : {gOToInstantiate.name} while your Left hand is occupied");
                         }
                         break;
                     case Data.E_HandNeed.Right:
@@ -86,11 +110,10 @@ namespace ODON.InteractableObject
                         }
                         else
                         {
-                            Debug.LogWarning("Vous essayez de prendre un objet alors que votre main droite est prise");
+                            Debug.LogWarning($"You try to take : {gOToInstantiate.name} while your Right hand is occupied");
                         }
                         break;
                     case Data.E_HandNeed.Both:
-                        //TODO check si une main est libre prioriser la main gauche.
                         if (GameManager.GameHandler.Instance.LeftHand.gameObject.activeInHierarchy)
                         {
                             TakeInHand(GameManager.GameHandler.Instance.LeftHand);
@@ -101,8 +124,8 @@ namespace ODON.InteractableObject
                         }
                         else
                         {
-                            //TODO faire une UI pour avertir le joueur dans le cas ou ces 2 mains sont prise
-                            Debug.LogWarning("Vous essayez de prendre un objet alors que vos 2 mains sont prise");
+                            Debug.LogWarning($"You try to take : {gOToInstantiate.name} while your both hands are occupied");
+                            // Todo - Implement UI to inform the player of the situation of this hand
                         }
                         break;
                     default:
@@ -123,7 +146,18 @@ namespace ODON.InteractableObject
                         DropHandObject(GameManager.GameHandler.Instance.RightHand);
                         break;
                     case Data.E_HandNeed.Both:
-                        //TODO check si une main est libre prioriser la main gauche.
+                        if (GameManager.GameHandler.Instance.LeftHand.gameObject.activeInHierarchy == instantiateObject)
+                        {
+                            DropHandObject(GameManager.GameHandler.Instance.LeftHand, instantiateObject);
+                        }
+                        else if (GameManager.GameHandler.Instance.RightHand.gameObject.activeInHierarchy == instantiateObject)
+                        {
+                            DropHandObject(GameManager.GameHandler.Instance.RightHand, instantiateObject);
+                        }
+                        else
+                        {
+                            Debug.LogError($"the object : {instantiateObject.name} is not in the hands");
+                        }
                         break;
                     default:
                         Debug.LogWarning($"SwapToHand / Incorrect value {handNeed}");
@@ -132,18 +166,25 @@ namespace ODON.InteractableObject
             }
         }
 
-        private void TakeInHand(Transform choosenOne)
+        protected virtual void TakeInHand(Transform chosenHand)
         {
-            if (gOToInstanciate == null)
+            if (gOToInstantiate == null)
             {
                 return;
             }
 
-            instantiateObject = Instantiate(gOToInstanciate, choosenOne);
+            foreach (Transform child in chosenHand)
+            {
+                if (child.gameObject.activeInHierarchy)
+                {
+                    child.gameObject.SetActive(false);
+                }
+            }
+
+            instantiateObject = Instantiate(gOToInstantiate, chosenHand);
             instantiateObject.transform.SetLocalPositionAndRotation(offsetPosition, Quaternion.Euler(offsetRotation));
 
-            Rigidbody rb = instantiateObject.GetComponent<Rigidbody>();
-            if (rb != null)
+            if (instantiateObject.TryGetComponent<Rigidbody>(out var rb))
             {
                 rb.useGravity = false;
                 rb.isKinematic = true;
@@ -155,27 +196,35 @@ namespace ODON.InteractableObject
             }
 
             isInteract = true;
-            
-            if (choosenOne.childCount > 0)
-            {
-                choosenOne.GetChild(0).gameObject.SetActive(false);
-            }
         }
 
-        private void DropHandObject(Transform choosenOne)
+        protected virtual void DropHandObject(Transform chosenHand, GameObject instantiateObject = null)
         {
+            // Foreach child in the chosen hand, find the instantiated object
+            int indexInstantiateObject = 0;
+            foreach (Transform child in chosenHand)
+            {
+                if (child.gameObject == instantiateObject)
+                {
+                    break;
+                }
+                indexInstantiateObject++;
+            }
+            
             Destroy(instantiateObject);
             
+            // Restore the original materials
             foreach (Renderer renderer in gORenderer)
             {
                 renderer.materials = gOSavedMaterials.ToArray();
             }
-
+            // Set the interact flags to false
             isInteract = false;
-
-            if (choosenOne.childCount > 0)
+            
+            // Activate the last child in the chosen Hand && Condition the last child are not the hand
+            if (chosenHand.childCount > 0 && indexInstantiateObject > 0)
             {
-                choosenOne.GetChild(0).gameObject.SetActive(true);
+                chosenHand.GetChild(indexInstantiateObject - 1).gameObject.SetActive(true);
             }
         }
 

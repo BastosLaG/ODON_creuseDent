@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ODON.InteractableObject
 {
-    public class GrabWithAnimation : Grab
+    public class InteractionWithAnimation : Interaction
     {
         [SerializeField] private Animator animator;
         [SerializeField] private string animationName = "GrabAnimation"; 

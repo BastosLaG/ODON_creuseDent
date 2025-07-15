@@ -18,7 +18,7 @@ namespace ODON.GameManager
 
         //////////////////////////////////////////////////////////////////////////////////////////
         
-        #region Erreur Data
+        #region Error Data
         [Header("Error Data")]
         [SerializeField] private List<string> errorData = new ();
         public List<string> ErrorData => errorData;
@@ -60,10 +60,10 @@ namespace ODON.GameManager
 
         [Header("Hand Target")]
         [SerializeField] private Transform leftHand;
-        [SerializeField] private Transform righHand;
+        [SerializeField] private Transform rightHand;
         // [SerializeField] private GameObject[] hands;
         public Transform LeftHand => leftHand;
-        public Transform RightHand => righHand;
+        public Transform RightHand => rightHand;
         //public GameObject[] Hands => hands;
 
         //////////////////////////////////////////////////////////////////////////////////////////
@@ -81,7 +81,7 @@ namespace ODON.GameManager
             }
             //hands = new GameObject[] {
             //     leftHand.GetChild(0).gameObject,
-            //     righHand.GetChild(0).gameObject
+            //     rightHand.GetChild(0).gameObject
             // };
 
         }

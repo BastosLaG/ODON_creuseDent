@@ -3,9 +3,12 @@ using UnityEngine.Events;
 
 namespace ODON.InteractableObject
 {
-    public class Grab : InteractAction
+    public class Interaction : InteractAction
     {
+        [Header("Universal Sender Action To Event Manager")]
         [SerializeField] protected UniversalSenderActionToEventManager uSATEManager;
+
+        [Header("Events")]
         public UnityEvent OnHeadInteractEvent;
         public UnityEvent OnHeadHoverEventBegin;
         public UnityEvent OnHeadHoverEventEnd;
