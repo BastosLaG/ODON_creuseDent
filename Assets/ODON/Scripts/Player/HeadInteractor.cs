@@ -17,6 +17,7 @@ namespace ODON
 
         private bool actionComplete = false;
         private Transform currentTarget;
+        private Transform lastHoveredTarget = null;
 
         void Start()
         {
@@ -37,10 +38,19 @@ namespace ODON
         void FixedUpdate()
         {
             Vector3 direction = transform.forward;
-            Ray ray = new Ray(transform.position, direction);
+            Ray ray = new(transform.position, direction);
 
             if (Physics.Raycast(ray, out RaycastHit hit, m_MaxDistance, m_Mask, QueryTriggerInteraction.Ignore))
             {
+                if (lastHoveredTarget != hit.transform)
+                {
+                    if (lastHoveredTarget != null)
+                    {
+                        lastHoveredTarget.GetComponent<InteractAction>()?.HeadHoverEventBegin();
+                    }
+                    lastHoveredTarget = hit.transform;
+                }
+
                 Debug.DrawRay(ray.origin, ray.direction * m_MaxDistance, Color.green);
                 reticle.ActiveProgressReticle(true);
                 currentTarget = hit.transform;

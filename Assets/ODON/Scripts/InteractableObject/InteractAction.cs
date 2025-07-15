@@ -46,6 +46,19 @@ namespace ODON.InteractableObject
             Debug.LogWarning("Base InteractAction.OnHeadInteract called");
             throw new System.NotImplementedException();
         }
+
+        public virtual void HeadHoverEventBegin()
+        {
+            Debug.LogWarning("Base InteractAction.OnHeadHoverEventBegin called");
+            throw new System.NotImplementedException();
+        }
+
+        public virtual void HeadHoverEventEnd()
+        {
+            Debug.LogWarning("Base InteractAction.OnHeadHoverEventEnd called");
+            throw new System.NotImplementedException();
+        }
+
         #endregion
         #region Secondary Fonction
         protected void SwapToHand()

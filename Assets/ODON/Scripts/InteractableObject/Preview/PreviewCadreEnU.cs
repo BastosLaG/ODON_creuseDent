@@ -4,7 +4,7 @@ using System;
 
 namespace ODON.InteractableObject
 {    
-    public class CadreEnUPreview : MonoBehaviour, Interface.IInteractWithHeadInteractor
+    public class CadreEnUPreview : MonoBehaviour
     {
         [SerializeField] private Transform cadreEnUFinalTransform;
         [SerializeField] private Material cadreEnUFinalMat;

@@ -4,7 +4,7 @@ using UnityEngine.Android;
 
 namespace ODON.InteractableObject
 {
-    public class PreviewDigDam : MonoBehaviour, Interface.IInteractWithHeadInteractor
+    public class PreviewDigDam : MonoBehaviour
     {
         [SerializeField] private MeshRenderer meshRenderer;
         public MeshRenderer MR => meshRenderer;
@@ -26,12 +26,6 @@ namespace ODON.InteractableObject
             {
                 meshRenderer.enabled = isActive;
             }
-        }
-
-        public void HeadInteract()
-        {
-            // Todo : Implement Preview
-            throw new NotImplementedException();
         }
     }    
 }

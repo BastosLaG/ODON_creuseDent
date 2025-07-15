@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ODON.InteractableObject
 {
-    public class PinceAnimator : MonoBehaviour, Interface.IInteractWithHeadInteractor
+    public class PinceAnimator : MonoBehaviour
     {
         [Header("Crampon Anchor")]
         [Tooltip("The anchor point for the crampon when attached to the pince.")]
@@ -83,12 +83,6 @@ namespace ODON.InteractableObject
             {
                 crampon = null;
             }
-        }
-
-        public void HeadInteract()
-        {
-            // Todo : Set pince animation en fonction de si on accroche ou non le crampon 
-            throw new System.NotImplementedException();
         }
     }
 }

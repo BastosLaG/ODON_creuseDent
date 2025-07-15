@@ -7,12 +7,18 @@ namespace ODON.InteractableObject
     {
         [SerializeField] protected UniversalSenderActionToEventManager uSATEManager;
         public UnityEvent OnHeadInteractEvent;
+        public UnityEvent OnHandHoverEvent;
 
         public override void HeadInteract()
         {
             OnHeadInteractEvent?.Invoke();
             SimpleGrabValidateCurrentItem();
             SwapToHand();
+        }
+
+        public override void HeadHoverEventBegin()
+        {
+            OnHandHoverEvent?.Invoke();
         }
 
         protected void SimpleGrabValidateCurrentItem()

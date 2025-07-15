@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ODON.InteractableObject
 {
-    public class PinceAinsworth : MonoBehaviour, Interface.IInteractWithHeadInteractor
+    public class PinceAinsworth : MonoBehaviour
     {
         [Header("Preview Dig Dam Components")]
         [Tooltip("List of PreviewDigDam components in the scene.")]
@@ -31,12 +31,6 @@ namespace ODON.InteractableObject
             {
                 other.GetComponent<PreviewDigDam>().SetPreview(false);
             }
-        }
-
-        public void HeadInteract()
-        {
-            // TODO : set pince action
-            throw new System.NotImplementedException();
         }
     }
 }

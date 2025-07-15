@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ODON.InteractableObject
 {
-    public class CramponAttached : MonoBehaviour, Interface.IInteractWithHeadInteractor
+    public class CramponAttached : MonoBehaviour
     {
         [Header("This attachment point")]
         public Transform attachPoint1;
