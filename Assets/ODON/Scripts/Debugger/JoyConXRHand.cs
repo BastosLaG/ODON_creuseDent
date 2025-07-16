@@ -8,6 +8,8 @@ using UnityEngine.InputSystem.Controls;
 // Todo - Trouver un moyen d'émuler un clic OpenXR 
 // Todo - émuler Une manette XR avec les joycons
 
+// * https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputDevice.html
+
 public class JoyConXRHand : MonoBehaviour
 {
     public bool isLeftHand = true;
