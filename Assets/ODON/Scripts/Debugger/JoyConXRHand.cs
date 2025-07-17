@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Switch;
+using UnityEngine.InputSystem.Controls;
 
 // Todo - Detecter les Joy-Con gauche et droit          V
-// Todo - Lire les controls des Joy con                 X
+// Todo - Lire les controls des Joy con                 V
 // Todo - Find a method to generate a click OpenXR      X
 // Todo - Create an interface XR between the Joy-cons   X
 
@@ -51,6 +52,24 @@ public class JoyConXRHand : MonoBehaviour
 
     void Update()
     {
+        InputDevice device = isLeftHand ? joyConLeft : joyConRight;
+        if (device == null) return;
 
+        foreach (var control in device.allControls)
+        {
+            Debug.Log($" - {control.name} (usages: {string.Join(", ", control.usages)})");
+            if (control is ButtonControl button)
+            {
+                Debug.Log($"[Button] {control.name} = {button.isPressed}");
+            }
+            else if (control is AxisControl axis)
+            {
+                Debug.Log($"[Axis] {control.name} = {axis.ReadValue()}");
+            }
+            else if (control is Vector2Control vec2)
+            {
+                Debug.Log($"[Vector2] {control.name} = {vec2.ReadValue()}");
+            }
+        }
     }
 }
