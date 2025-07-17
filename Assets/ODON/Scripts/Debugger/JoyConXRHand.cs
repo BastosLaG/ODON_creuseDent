@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Switch;
-using UnityEngine.InputSystem.Controls;
 
-// Todo - Détecter les Joy-Con gauche et droit
-// Todo - Lire les controles des Joy con 
-// Todo - Trouver un moyen d'émuler un clic OpenXR 
-// Todo - émuler Une manette XR avec les joycons
+// Todo - Detecter les Joy-Con gauche et droit          V
+// Todo - Lire les controls des Joy con                 X
+// Todo - Find a method to generate a click OpenXR      X
+// Todo - Create an interface XR between the Joy-cons   X
 
 // * https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputDevice.html
 
@@ -27,14 +26,14 @@ public class JoyConXRHand : MonoBehaviour
             if (isLeftHand && device is SwitchJoyConLHID left)
             {
                 joyConLeft = left;
-                Debug.Log("Joy-Con gauche détecté !");
+                Debug.Log("Joy-Con left detect !");
                 LogControls(left);
                 break;
             }
             else if (!isLeftHand && device is SwitchJoyConRHID right)
             {
                 joyConRight = right;
-                Debug.Log("Joy-Con droit détecté !");
+                Debug.Log("Joy-Con right detect !");
                 LogControls(right);
                 break;
             }
