@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,14 +15,25 @@ public class PlayerMovement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
-    public void OnKeyboardXTranslate(InputAction.CallbackContext context)
+    public void OnAxis2D(InputAction.CallbackContext context)
     {
-        inputX = context.ReadValue<float>();
+        Debug.Log("OnAxis2D called");
+        if (!context.performed)
+        {
+            Debug.Log("Context not performed, returning.");
+            return;
+        }
+        Debug.Log("Context performed, processing input.");
+        Vector2 input = context.ReadValue<Vector2>();
+        inputX = input.x;
+        inputZ = input.y;
+        Debug.Log($"X Input translated: {inputX} \nZ Input translated: {inputZ}");
     }
 
     public void OnGamepadZTranslate(InputAction.CallbackContext context)
     {
         inputZ = context.ReadValue<float>();
+        Debug.Log($"Gamepad Z Input: {inputZ}");
     }
 
     private void Update()
