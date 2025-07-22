@@ -5,7 +5,7 @@ using UnityEngine.InputSystem.LowLevel;
 
 // Todo - Detecter les Joy-Con gauche et droit          V
 // Todo - Lire les controls des Joy con                 V
-// Todo - Find a method to generate a click OpenXR      X
+// Todo - Find a method to generate a click OpenXR      V
 // Todo - Create an interface XR between the Joy-cons   X
 
 // * https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputDevice.html
@@ -27,12 +27,14 @@ public class JoyConXRHand : MonoBehaviour
             if (device is SwitchJoyConLHID left)
             {
                 left.SetLEDs(LEDStatusEnum.On);
+                left.SetIMUEnabled(true);
                 joyConLeft = left;
                 Debug.Log("Joy-Con left detect !");
             }
             else if (device is SwitchJoyConRHID right)
             {
                 right.SetLEDs(LEDStatusEnum.On);
+                right.SetIMUEnabled(true);
                 joyConRight = right;
                 Debug.Log("Joy-Con right detect !");
             }
