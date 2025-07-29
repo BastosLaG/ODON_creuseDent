@@ -292,7 +292,7 @@ namespace UnityEngine.InputSystem.Switch
 
         public void ReadControllerInfo()
         {
-            Debug.Log("Requesting device info...");
+            // Debug.Log("Requesting device info...");
             var c = SwitchControllerCommand.Create(subcommand: new SwitchControllerRequestInfoSubcommand());
             long returned = ExecuteCommand(ref c);
             if (returned < 0)
@@ -335,14 +335,20 @@ namespace UnityEngine.InputSystem.Switch
                 Debug.LogError($"Set report mode to {mode} failed");
         }
 
-        public void SetIMUEnabled(bool active)
+        public bool SetIMUEnabled(bool active)
         {
-            var s = new SwitchControllerSetImuEnabledSubcommand();
-            s.Enabled = active;
+            SwitchControllerSetImuEnabledSubcommand s = new()
+            {
+                Enabled = active
+            };
 
             var c = SwitchControllerCommand.Create(subcommand: s);
             if (ExecuteCommand(ref c) < 0)
+            {
                 Debug.LogError($"Set IMU active to {active} failed");
+                return false;
+            }
+            return true;
         }
 
         public void SetVibrationEnabled(bool active)
@@ -365,14 +371,14 @@ namespace UnityEngine.InputSystem.Switch
 
             if (ExecuteCommand(ref c) < 0)
                 Debug.LogError("Set LEDs failed");
-            else 
-                Debug.Log("LEDs set with success for " + name);
+            // else 
+            //     Debug.Log("LEDs set with success for " + name);
         }
 
         public void ReadIMUCalibrationData()
         {
             var readSubcommand = new SwitchControllerReadSPIFlashSubcommand(atAddress: (uint)SPIFlashReadAddressEnum.FactoryIMUCalibration, withLength: 0x18);
-            Debug.Log($"Requesting IMU calibration info...");
+            // Debug.Log($"Requesting IMU calibration info...");
             var c = SwitchControllerCommand.Create(subcommand: readSubcommand);
             if (ExecuteCommand(ref c) < 0)
                 Debug.LogError("Read IMU calibration info failed");
@@ -381,7 +387,7 @@ namespace UnityEngine.InputSystem.Switch
         public void ReadColors()
         {
             var readSubcommand = new SwitchControllerReadSPIFlashSubcommand(atAddress: (uint)SPIFlashReadAddressEnum.ColorData, withLength: 0x0B);
-            Debug.Log($"Requesting color info...");
+            // Debug.Log($"Requesting color info...");
             var c = SwitchControllerCommand.Create(subcommand: readSubcommand);
             if (ExecuteCommand(ref c) < 0)
                 Debug.LogError("Read color info failed");
@@ -390,7 +396,7 @@ namespace UnityEngine.InputSystem.Switch
         public void ReadStickCalibrationData()
         {
             var readSubcommand = new SwitchControllerReadSPIFlashSubcommand(atAddress: (uint)SPIFlashReadAddressEnum.FactoryStickCalibration, withLength: 0x12);
-            Debug.Log($"Requesting factory stick calibration info...");
+            // Debug.Log($"Requesting factory stick calibration info...");
             var c = SwitchControllerCommand.Create(subcommand: readSubcommand);
             if (ExecuteCommand(ref c) < 0)
                 Debug.LogError("Read factory stick calibration info failed");
@@ -399,7 +405,7 @@ namespace UnityEngine.InputSystem.Switch
         public void ReadSerialNumber() 
         {
             var readSubcommand = new SwitchControllerReadSPIFlashSubcommand(atAddress: (uint)SPIFlashReadAddressEnum.SerialNumber, withLength: 0x10);
-            Debug.Log($"Requesting device serial number...");
+            // Debug.Log($"Requesting device serial number...");
             var c = SwitchControllerCommand.Create(subcommand: readSubcommand);
             if (ExecuteCommand(ref c) < 0)
                 Debug.LogError("Read device serial number failed");
@@ -455,7 +461,7 @@ namespace UnityEngine.InputSystem.Switch
             // Simple report mode!
             if (genericReport->reportId == (byte)InputModeEnum.Simple)
             {
-                Debug.Log("PreProcessEvent: Simple report mode");
+                // Debug.Log("PreProcessEvent: Simple report mode");
                 SetInputReportMode(InputModeEnum.Standard);
                 return false;
             }
@@ -463,7 +469,7 @@ namespace UnityEngine.InputSystem.Switch
             // Subcommand reply!
             else if (genericReport->reportId == (byte)InputModeEnum.ReadSubcommands)
             {
-                Debug.Log("PreProcessEvent: Subcommand report mode");
+                // Debug.Log("PreProcessEvent: Subcommand report mode");
                 var data = ((SwitchControllerSubcommandResponseInputReport*)stateEvent->state);
                 HandleSubcommand(*data);
 
@@ -488,12 +494,12 @@ namespace UnityEngine.InputSystem.Switch
 
             else if (genericReport->reportId == (byte)InputModeEnum.NFCOrIR)
             {
-                Debug.Log("NFC or infra-red report");
+                // Debug.Log("NFC or infra-red report");
                 return false;
             }
             else 
             {
-                Debug.Log($"Unknown report ID: {genericReport->reportId:X2}");
+                // Debug.Log($"Unknown report ID: {genericReport->reportId:X2}");
             }
             return false;
         }
@@ -520,7 +526,7 @@ namespace UnityEngine.InputSystem.Switch
             SubcommandIDEnum subcommandReplyId = (SubcommandIDEnum)response.subcommandId;
             var subcommandWasAcknowledged = (response.ack & 0x80) != 0;
 
-            Debug.Log($"Subcommand response for {subcommandReplyId}: {response.ack:X2}");
+            // Debug.Log($"Subcommand response for {subcommandReplyId}: {response.ack:X2}");
 
             if (subcommandWasAcknowledged)
             {
@@ -604,53 +610,53 @@ namespace UnityEngine.InputSystem.Switch
             // Shipment data, unsure
             if (address == 0x5000 && length == 0x01)
             {
-                Debug.Log("Read shipment data... (not implemented)");
+                // Debug.Log("Read shipment data... (not implemented)");
             }
 
             // Serial number in NON-extended ASCII
             else if (address == (uint)SPIFlashReadAddressEnum.SerialNumber && length == 0x10)
             {
-                Debug.Log("Read serial number...");
+                // Debug.Log("Read serial number...");
                 DecodeSerialNumberData(response);
             } 
 
             // IMU factory calibration
             else if (address == (uint)SPIFlashReadAddressEnum.FactoryIMUCalibration && length == 0x18)
             {
-                Debug.Log($"Read factory IMU calibration data...");
+                // Debug.Log($"Read factory IMU calibration data...");
                 DecodeIMUCalibrationData((ushort*)response);
             }
 
             // Factory analog stick calibration
             else if (address == (uint)SPIFlashReadAddressEnum.FactoryStickCalibration && length == 0x12)
             {
-                Debug.Log("Read factory analog stick calibration data...");
+                // Debug.Log("Read factory analog stick calibration data...");
                 DecodeStickCalibrationData(response);
             }
 
             // Colors
             else if (address == (uint)SPIFlashReadAddressEnum.ColorData && length == 0x0B)
             {
-                Debug.Log("Read controller color data...");
+                // Debug.Log("Read controller color data...");
                 DecodeColorData(response);
             }
 
             // Stick device parameters 1
             else if (address == 0x6086 && length == 0x12)
             {
-                Debug.Log("Read stick device params 1 data... (not implemented)");
+                // Debug.Log("Read stick device params 1 data... (not implemented)");
             }
 
             // Stick device parameters 2
             else if (address == 0x6098 && length == 0x12)
             {
-                Debug.Log("Read stick device params 2 data... (not implemented)");
+                // Debug.Log("Read stick device params 2 data... (not implemented)");
             }
                 
             // User analog stick calibration
             else if (address == (uint)SPIFlashReadAddressEnum.UserStickCalibration && length == 0x16)
             {
-                Debug.Log("Read user analog stick calibration data... (not implemented)");
+                // Debug.Log("Read user analog stick calibration data... (not implemented)");
             }
 
             // IMU user calibration
@@ -662,7 +668,7 @@ namespace UnityEngine.InputSystem.Switch
 
             else
             {
-                Debug.Log($"Unrecognized range: 0x{address:X4}-0x{address+length:X2} (length is {length:X2})");
+                // Debug.Log($"Unrecognized range: 0x{address:X4}-0x{address+length:X2} (length is {length:X2})");
             }
                 
         }
@@ -753,7 +759,7 @@ namespace UnityEngine.InputSystem.Switch
 
             public override string ToString()
             {
-                return $"accelBase = {accelBase}\naccelSen = {accelSensitivity}\ngyroBase = {gyroBase}\ngyroSen = {gyroSensitivity}";
+                return $"\naccelBase = {accelBase}\naccelSen = {accelSensitivity}\ngyroBase = {gyroBase}\ngyroSen = {gyroSensitivity}";
             }
 
             private static ushort SafeSensitivity(ushort baseVal, ushort sensVal, string axisName)
@@ -772,7 +778,7 @@ namespace UnityEngine.InputSystem.Switch
         {
             StringBuilder snStringBuilder = new StringBuilder(15);
 
-            Debug.Log($"First byte is {(*response):X2}");
+            // Debug.Log($"First byte is {(*response):X2}");
             if ((*response)>=0X80)
             {
                 Debug.LogWarning("No valid serial number retrieved");
@@ -803,7 +809,7 @@ namespace UnityEngine.InputSystem.Switch
             DecodeLeftStickData(response);
             DecodeRightStickData(response + 9);  
 
-            Debug.Log($"Calibration data for stick loaded");   
+            // Debug.Log($"Calibration data for stick loaded");   
             m_stickConfigDataLoaded = true;  
         }
 
@@ -816,7 +822,7 @@ namespace UnityEngine.InputSystem.Switch
             RightGripColor = colors.rightGripColor.ToUnityColor();
             m_colorsLoaded = true;
 
-            Debug.Log($"Colors loaded: {BodyColor}, {ButtonColor}");
+            // Debug.Log($"Colors loaded: {BodyColor}, {ButtonColor}");
         }
 
         /// <summary>

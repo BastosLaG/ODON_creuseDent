@@ -90,8 +90,8 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                 rightStick = rightStickVec,
                 // TODO: Calibrate these bad boys
                 acceleration = (imuData0ms.UncalibratedAcceleration + imuData5ms.UncalibratedAcceleration + imuData10ms.UncalibratedAcceleration) / 3f,
-                orientation = (imuData0ms.CalibratedGyro(ref calibData.imuCalibData) + imuData5ms.CalibratedGyro(ref calibData.imuCalibData) + imuData10ms.CalibratedGyro(ref calibData.imuCalibData)) / 3f,
-                // orientation = (imuData0ms.UncalibratedGyro + imuData5ms.UncalibratedGyro + imuData10ms.UncalibratedGyro) / 3f,
+                // orientation = (imuData0ms.CalibratedGyro(ref calibData.imuCalibData) + imuData5ms.CalibratedGyro(ref calibData.imuCalibData) + imuData10ms.CalibratedGyro(ref calibData.imuCalibData)) / 3f,
+                orientation = currentOrientation + (imuData0ms.UncalibratedGyro + imuData5ms.UncalibratedGyro + imuData10ms.UncalibratedGyro) / 3f,
                 angularVelocity = (imuData0ms.UncalibratedGyro + imuData5ms.UncalibratedGyro + imuData10ms.UncalibratedGyro) / 3f,
             };
 
