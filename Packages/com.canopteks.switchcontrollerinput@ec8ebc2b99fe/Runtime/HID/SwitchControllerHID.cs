@@ -61,7 +61,8 @@ namespace UnityEngine.InputSystem.Switch
             public IMUCalibrationData imuCalibData;
         }
 
-        public CalibrationData calibrationData = new CalibrationData() {
+        public CalibrationData calibrationData = new CalibrationData()
+        {
             lStickCalibData = new StickCalibrationData()
             {
                 xMin = 720,
@@ -717,6 +718,10 @@ namespace UnityEngine.InputSystem.Switch
 
             public unsafe static IMUCalibrationData FromResponse(ushort* response)
             {
+                ushort sensX = SafeSensitivity(response[6], response[9], "X");
+                ushort sensY = SafeSensitivity(response[7], response[10], "Y");
+                ushort sensZ = SafeSensitivity(response[8], response[11], "Z");
+
                 return new IMUCalibrationData()
                 {
                     accelBase = new Vector3UInt16()
@@ -725,34 +730,42 @@ namespace UnityEngine.InputSystem.Switch
                         y = response[1],
                         z = response[2]
                     },
-
                     accelSensitivity = new Vector3UInt16()
                     {
                         x = response[3],
                         y = response[4],
                         z = response[5]
                     },
-
                     gyroBase = new Vector3UInt16()
                     {
                         x = response[6],
                         y = response[7],
                         z = response[8]
                     },
-
                     gyroSensitivity = new Vector3UInt16()
                     {
-                        x = response[9],
-                        y = response[10],
-                        z = response[11]
+                        x = sensX,
+                        y = sensY,
+                        z = sensZ
                     }
                 };
             }
-        
+
             public override string ToString()
             {
                 return $"accelBase = {accelBase}\naccelSen = {accelSensitivity}\ngyroBase = {gyroBase}\ngyroSen = {gyroSensitivity}";
             }
+
+            private static ushort SafeSensitivity(ushort baseVal, ushort sensVal, string axisName)
+            {
+                if (sensVal == baseVal)
+                {
+                    Debug.LogWarning($"Gyro {axisName} sens = base → division by 0 !");
+                    return (ushort)(baseVal + 1);
+                }
+                return sensVal;
+            }
+
         }
 
         private unsafe void DecodeSerialNumberData(byte* response)
@@ -790,7 +803,7 @@ namespace UnityEngine.InputSystem.Switch
             DecodeLeftStickData(response);
             DecodeRightStickData(response + 9);  
 
-            Debug.Log($"Calibration data loaded");   
+            Debug.Log($"Calibration data for stick loaded");   
             m_stickConfigDataLoaded = true;  
         }
 

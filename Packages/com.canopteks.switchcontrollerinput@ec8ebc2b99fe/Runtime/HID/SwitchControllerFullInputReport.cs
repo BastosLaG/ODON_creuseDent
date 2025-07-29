@@ -89,9 +89,10 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                 leftStick = leftStickVec,
                 rightStick = rightStickVec,
                 // TODO: Calibrate these bad boys
-                acceleration = imuData0ms.UncalibratedAcceleration,
-                orientation = currentOrientation + imuData0ms.UncalibratedGyro,
-                angularVelocity = imuData0ms.UncalibratedGyro
+                acceleration = (imuData0ms.UncalibratedAcceleration + imuData5ms.UncalibratedAcceleration + imuData10ms.UncalibratedAcceleration) / 3f,
+                orientation = (imuData0ms.CalibratedGyro(ref calibData.imuCalibData) + imuData5ms.CalibratedGyro(ref calibData.imuCalibData) + imuData10ms.CalibratedGyro(ref calibData.imuCalibData)) / 3f,
+                // orientation = (imuData0ms.UncalibratedGyro + imuData5ms.UncalibratedGyro + imuData10ms.UncalibratedGyro) / 3f,
+                angularVelocity = (imuData0ms.UncalibratedGyro + imuData5ms.UncalibratedGyro + imuData10ms.UncalibratedGyro) / 3f,
             };
 
             state.Set(SwitchControllerVirtualInputState.Button.Y, (rightButtons & 0x01) != 0);
@@ -133,7 +134,7 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
 
         public Vector3 CalibratedAcceleration(ref SwitchControllerHID.IMUCalibrationData calib)
         {
-            // var coeffs = new Vector3()
+            // var coeff = new Vector3()
             // {
             //     x = (float)(1.0f / (float)(0x4000 - uint16_to_int16(cal_acc_origin))) * 4.0f
             // };
@@ -162,6 +163,8 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
             // gyro Z
             var gyro_cal_coeff_z = (float)(816.0f / (float)(coeff.z - offset.z));
             gyro_z = (gyro3 - offset.z) * gyro_cal_coeff_z;
+
+            calib.ToString();
 
             return new Vector3(gyro_x, gyro_y, gyro_z);
         }

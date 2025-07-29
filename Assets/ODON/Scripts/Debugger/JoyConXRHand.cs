@@ -140,11 +140,11 @@ public class JoyConXRHand : MonoBehaviour
             return;
         }
 
-        if (device is not SwitchJoyConLHID && device is not SwitchJoyConRHID)
-        {
-            Debug.Log($"Device {device.displayName} is not a Joy-Con, returning.");
-            return;
-        }
+        // if (device is not SwitchJoyConLHID && device is not SwitchJoyConRHID)
+        // {
+        //     Debug.Log($"Device {device.displayName} is not a Joy-Con, returning.");
+        //     return;
+        // }
 
         // Lecture IMU
         InputDevice imuDevice = device;
