@@ -3,11 +3,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Switch;
 using UnityEngine.InputSystem.LowLevel;
 
-// Todo - Detecter les Joy-Con gauche et droit          V
-// Todo - Lire les controls des Joy con                 V
-// Todo - Find a method to generate a click OpenXR      V
-// Todo - Create an interface XR between the Joy-cons   X
-
 // * https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputDevice.html
 
 public class JoyConXRHand : MonoBehaviour
@@ -20,6 +15,11 @@ public class JoyConXRHand : MonoBehaviour
 
     [Range(0, 360)]
     [SerializeField] private float rotationValue = 90f;
+
+    public float alpha = 0.70f; // 1 = 100% gyro, 0 = 100% accel
+    private Quaternion orientation = Quaternion.identity;
+    private Quaternion accelRotation = Quaternion.identity;
+    private bool firstFrame = true;
 
     void Start()
     {
@@ -146,97 +146,45 @@ public class JoyConXRHand : MonoBehaviour
             return;
         }
 
-        if (isLeftHand && device is SwitchJoyConLHID joyconLeft)
+        // Lecture IMU
+        InputDevice imuDevice = device;
+        Vector3 gyro = Vector3.zero;
+        Vector3 accel = Vector3.zero;
+
+        if (isLeftHand && imuDevice is SwitchJoyConLHID left)
         {
-            float smooth = 5.0f;
-
-            // Debug.Log("Joy-Con Left detected");
-            // Lire les valeurs
-            Vector3 angularVelocity = joyconLeft.angularVelocity.ReadValueFromEvent(eventPtr);
-            Vector3 orientation = joyconLeft.orientation.ReadValueFromEvent(eventPtr);
-            Vector3 acceleration = joyconLeft.acceleration.ReadValueFromEvent(eventPtr);
-
-            // Rotate the cube by converting the angles into a quaternion.
-            Quaternion target = Quaternion.Euler(
-                acceleration.x * rotationValue,
-                0,
-                acceleration.z * rotationValue
-            );
-            targetTransform.rotation = Quaternion.Slerp(transform.rotation, target,  Time.deltaTime * smooth);
-            // Debug.Log($"Angular Velocity: {angularVelocity}, Orientation: {orientation}, Acceleration: {acceleration}");
-
-            // Vector2 leftStick = joyconLeft.leftStick.ReadValueFromEvent(eventPtr);
-            // Vector2 rightStick = joyconLeft.rightStick.ReadValueFromEvent(eventPtr);
-            // float leftTrigger = joyconLeft.leftTrigger.ReadValueFromEvent(eventPtr);
-            // float rightTrigger = joyconLeft.rightTrigger.ReadValueFromEvent(eventPtr);
-
-            // bool buttonSouth = joyconLeft.buttonSouth.ReadValueFromEvent(eventPtr) > 0;
-            // bool buttonNorth = joyconLeft.buttonNorth.ReadValueFromEvent(eventPtr) > 0;
-            // bool buttonWest = joyconLeft.buttonWest.ReadValueFromEvent(eventPtr) > 0;
-            // bool buttonEast = joyconLeft.buttonEast.ReadValueFromEvent(eventPtr) > 0;
-
-            // bool dpadUp = joyconLeft.dpad.up.ReadValueFromEvent(eventPtr) > 0;
-            // bool dpadDown = joyconLeft.dpad.down.ReadValueFromEvent(eventPtr) > 0;
-            // bool dpadLeft = joyconLeft.dpad.left.ReadValueFromEvent(eventPtr) > 0;
-            // bool dpadRight = joyconLeft.dpad.right.ReadValueFromEvent(eventPtr) > 0;
-
-            // bool leftShoulder = joyconLeft.leftShoulder.ReadValueFromEvent(eventPtr) > 0;
-            // bool leftShoulderMini = joyconLeft.leftShoulderMini.ReadValueFromEvent(eventPtr) > 0;
-            // bool rightShoulder = joyconLeft.rightShoulder.ReadValueFromEvent(eventPtr) > 0;
-            // bool rightShoulderMini = joyconLeft.rightShoulderMini.ReadValueFromEvent(eventPtr) > 0;
-
-            // // Debug (à utiliser avec précaution pour ne pas surcharger la console)
-            // Debug.Log($"Left Stick: {leftStick}, Right Stick: {rightStick}, Triggers: {leftTrigger}, {rightTrigger}");
-            // Debug.Log($"Buttons: A={buttonSouth}, B={buttonEast}, X={buttonWest}, Y={buttonNorth}");
-            // Debug.Log($"Dpad: Up={dpadUp}, Down={dpadDown}, Left={dpadLeft}, Right={dpadRight}");
-            // Debug.Log($"Left Shoulder: {leftShoulder}, Left Shoulder Mini: {leftShoulderMini}, Right Shoulder: {rightShoulder}, Right Shoulder Mini: {rightShoulderMini}");
+            gyro = left.angularVelocity.ReadValueFromEvent(eventPtr);
+            accel = left.acceleration.ReadValueFromEvent(eventPtr);
         }
-        else if (!isLeftHand && device is SwitchJoyConRHID joyconRight)
+        else if (!isLeftHand && imuDevice is SwitchJoyConRHID right)
         {
-            float smooth = 5.0f;
-
-            // Debug.Log("Joy-Con Left detected");
-            // Lire les valeurs
-            Vector3 angularVelocity = joyconRight.angularVelocity.ReadValueFromEvent(eventPtr);
-            Vector3 orientation = joyconRight.orientation.ReadValueFromEvent(eventPtr);
-            Vector3 acceleration = joyconRight.acceleration.ReadValueFromEvent(eventPtr);
-
-            // Rotate the cube by converting the angles into a quaternion.
-            Quaternion target = Quaternion.Euler(
-                acceleration.x * rotationValue,
-                0,
-                acceleration.z * rotationValue
-            );
-
-            targetTransform.rotation = Quaternion.Slerp(transform.rotation, target,  Time.deltaTime * smooth);
-            // Debug.Log($"Angular Velocity: {angularVelocity}, Orientation: {orientation}, Acceleration: {acceleration}");
-
-            // Vector2 leftStick = joyconRight.leftStick.ReadValueFromEvent(eventPtr);
-            // Vector2 rightStick = joyconRight.rightStick.ReadValueFromEvent(eventPtr);
-            // float leftTrigger = joyconRight.leftTrigger.ReadValueFromEvent(eventPtr);
-            // float rightTrigger = joyconRight.rightTrigger.ReadValueFromEvent(eventPtr);
-
-            // bool buttonSouth = joyconRight.buttonSouth.ReadValueFromEvent(eventPtr) > 0;
-            // bool buttonNorth = joyconRight.buttonNorth.ReadValueFromEvent(eventPtr) > 0;
-            // bool buttonWest = joyconRight.buttonWest.ReadValueFromEvent(eventPtr) > 0;
-            // bool buttonEast = joyconRight.buttonEast.ReadValueFromEvent(eventPtr) > 0;
-
-            // bool dpadUp = joyconRight.dpad.up.ReadValueFromEvent(eventPtr) > 0;
-            // bool dpadDown = joyconRight.dpad.down.ReadValueFromEvent(eventPtr) > 0;
-            // bool dpadLeft = joyconRight.dpad.left.ReadValueFromEvent(eventPtr) > 0;
-            // bool dpadRight = joyconRight.dpad.right.ReadValueFromEvent(eventPtr) > 0;
-
-            // bool leftShoulder = joyconRight.leftShoulder.ReadValueFromEvent(eventPtr) > 0;
-            // bool leftShoulderMini = joyconRight.leftShoulderMini.ReadValueFromEvent(eventPtr) > 0;
-            // bool rightShoulder = joyconRight.rightShoulder.ReadValueFromEvent(eventPtr) > 0;
-            // bool rightShoulderMini = joyconRight.rightShoulderMini.ReadValueFromEvent(eventPtr) > 0;
-
-            // // Debug (à utiliser avec précaution pour ne pas surcharger la console)
-            // Debug.Log($"Left Stick: {leftStick}, Right Stick: {rightStick}, Triggers: {leftTrigger}, {rightTrigger}");
-            // Debug.Log($"Buttons: A={buttonSouth}, B={buttonEast}, X={buttonWest}, Y={buttonNorth}");
-            // Debug.Log($"Dpad: Up={dpadUp}, Down={dpadDown}, Left={dpadLeft}, Right={dpadRight}");
-            // Debug.Log($"Left Shoulder: {leftShoulder}, Left Shoulder Mini: {leftShoulderMini}, Right Shoulder: {rightShoulder}, Right Shoulder Mini: {rightShoulderMini}");
+            gyro = right.angularVelocity.ReadValueFromEvent(eventPtr);
+            accel = right.acceleration.ReadValueFromEvent(eventPtr);
         }
+
+        if (accel.sqrMagnitude < 0.001f)
+            return;
+
+        Vector3 gravity = accel.normalized;
+
+        float pitch = Mathf.Atan2(gravity.x, Mathf.Sqrt(gravity.y * gravity.y + gravity.z * gravity.z)) * Mathf.Rad2Deg;
+        float roll = Mathf.Atan2(-gravity.y, -gravity.z) * Mathf.Rad2Deg;
+
+        accelRotation = Quaternion.Euler(pitch, 0f, roll);
+
+        Quaternion deltaRotation = Quaternion.Euler(gyro * Time.deltaTime);
+        orientation = deltaRotation * orientation;
+
+        if (!firstFrame)
+        {
+            orientation = Quaternion.Slerp(orientation, accelRotation, 1f - alpha);
+        }
+        else
+        {
+            orientation = accelRotation;
+            firstFrame = false;
+        }
+
+        targetTransform.rotation = orientation;
     }
-
 }
