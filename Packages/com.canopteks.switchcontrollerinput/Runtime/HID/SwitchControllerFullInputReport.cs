@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -41,12 +43,11 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
         // For 0x31 (NFC/IR?)
         // [FieldOffset(49)] public fixed byte nfcIRDataInputReport[313];
 
-        // Moving average buffer for gyro magnitude
-        private static MovingAverage gyroMagnitudeAvg = new MovingAverage(10); // 10-frame window
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public SwitchControllerVirtualInputState ToHIDInputReport(ref SwitchControllerHID.CalibrationData calibData, SpecificControllerTypeEnum controllerType, Vector3 currentOrientation)
+        public SwitchControllerVirtualInputState ToHIDInputReport(ref SwitchControllerHID.CalibrationData calibData, SpecificControllerTypeEnum controllerType, Vector3 currentOrientation, IMUThresholdProcessor calibrationTool)
         {
+
             var leftStickVec = Vector2.zero;
             var rightStickVec = Vector2.zero;
             if (controllerType == SpecificControllerTypeEnum.LeftJoyCon ||
@@ -85,16 +86,31 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                 // Debug.Log($"Right stick data: Raw: ({rawRightStickHoriz:X3};{rawRightStickVert:X3}) Calibration data: Center=({rStickCalibData.xCenter:X3},{rStickCalibData.yCenter:X3}); X=[{rStickCalibData.xMin:X3} - {rStickCalibData.xMax:X3}]; Y=[{rStickCalibData.yMin:X3} - {rStickCalibData.yMax:X3}]   Final data: {rightStickVec}");
             }
 
+            Vector3 tempGyro = (
+                                calibrationTool.UncalibratedThresholdGyro(imuData0ms) +
+                                calibrationTool.UncalibratedThresholdGyro(imuData5ms) +
+                                calibrationTool.UncalibratedThresholdGyro(imuData10ms)
+                                ) / 3f;
+
+            calibrationTool.FeedGyroSample(tempGyro);
+
+            Vector3 tempAccel = (
+                                calibrationTool.UncalibratedThresholdAcceleration(imuData0ms) +
+                                calibrationTool.UncalibratedThresholdAcceleration(imuData5ms) +
+                                calibrationTool.UncalibratedThresholdAcceleration(imuData10ms)
+                                ) / 3f;
+
+            SwitchControllerVirtualInputState state;
+
             // Debug.Log($"Creating input stuff: right stick is {rightStickVec}");
-            var state = new SwitchControllerVirtualInputState
+            state = new SwitchControllerVirtualInputState
             {
                 leftStick = leftStickVec,
                 rightStick = rightStickVec,
                 // TODO: Calibrate these bad boys
-                acceleration = (imuData0ms.UncalibratedAcceleration + imuData5ms.UncalibratedAcceleration + imuData10ms.UncalibratedAcceleration) / 3f,
-                orientation = currentOrientation + (imuData0ms.UncalibratedGyro + imuData5ms.UncalibratedGyro + imuData10ms.UncalibratedGyro) / 3f,
-                // orientation = currentOrientation + (imuData0ms.CalibratedGyro + imuData5ms.CalibratedGyro + imuData10ms.CalibratedGyro) / 3f,
-                angularVelocity = (imuData0ms.UncalibratedGyro + imuData5ms.UncalibratedGyro + imuData10ms.UncalibratedGyro) / 3f,
+                acceleration = tempAccel,
+                orientation = currentOrientation + tempGyro,
+                angularVelocity = tempGyro,
             };
 
             state.Set(SwitchControllerVirtualInputState.Button.Y, (rightButtons & 0x01) != 0);
@@ -116,12 +132,17 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
             state.Set(SwitchControllerVirtualInputState.Button.L, (leftButtons & 0x40) != 0);
             state.Set(SwitchControllerVirtualInputState.Button.ZL, (leftButtons & 0x80) != 0);
 
+            if ((rightButtons & 0x04) != 0 || (leftButtons & 0x01) != 0)
+            {
+                calibrationTool.Calibrate();
+            }
+
             return state;
         }
     }
 
-    [StructLayout(LayoutKind.Explicit, Size = 20)]
-    struct IMUData
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
+    public struct IMUData
     {
         [FieldOffset(0)] public short accelX;
         [FieldOffset(2)] public short accelY;
@@ -130,73 +151,5 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
         [FieldOffset(6)] public short gyro1;
         [FieldOffset(8)] public short gyro2;
         [FieldOffset(10)] public short gyro3;
-
-        [FieldOffset(12)] public float prevX;
-        [FieldOffset(16)] public float prevY;
-        [FieldOffset(20)] public float prevZ;
-
-        [FieldOffset(24)] public byte firstRun;
-
-        private const float kGyroSensitivity = 0.070f;
-        private const float kAccelSensitivity = 0.000244f;
-
-        public Vector3 UncalibratedAcceleration => new Vector3(accelX, accelY, accelZ) * kAccelSensitivity;
-        public Vector3 UncalibratedGyro => new Vector3(gyro1, gyro2, gyro3) * kGyroSensitivity;
-
-        public Vector3 CalibratedAcceleration => ApplyLowPassFilter(UncalibratedAcceleration, 0.7f);
-        public Vector3 CalibratedGyro => ApplyLowPassFilter(UncalibratedGyro, 0.7f);
-
-        public void Reset()
-        {
-            firstRun = 0;
-        }
-
-        public Vector3 ApplyLowPassFilter(Vector3 input, float alpha)
-        {
-            return new Vector3(
-                Filter(ref prevX, input.x, alpha),
-                Filter(ref prevY, input.y, alpha),
-                Filter(ref prevZ, input.z, alpha));
-        }
-
-        private float Filter(ref float prev, float current, float alpha)
-        {
-            if (firstRun == 0)
-            {
-                prev = current;
-                firstRun = 1;
-            }
-
-            float filtered = alpha * prev + (1 - alpha) * current;
-            prev = filtered;
-            return filtered;
-        }
-    }
-
-    class MovingAverage
-    {
-        private readonly float[] buffer;
-        private int index;
-        private int count;
-        private float sum;
-
-        public MovingAverage(int size)
-        {
-            buffer = new float[size];
-        }
-
-        public float Add(float value)
-        {
-            sum -= buffer[index];
-            sum += value;
-            buffer[index] = value;
-
-            index = (index + 1) % buffer.Length;
-            if (count < buffer.Length) count++;
-
-            return sum / count;
-        }
-
-        public float Average => count == 0 ? 0f : sum / count;
     }
 }

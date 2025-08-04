@@ -103,6 +103,7 @@ namespace UnityEngine.InputSystem.Switch
 
         // Register the time of last request to retry to fetch them in case of timeout
         private double m_stickCalibrationTimeOfLastRequest;
+        private IMUThresholdProcessor m_calibrationTool = new();
         private double m_infoTimeOfLastRequest;
         private double m_colorsTimeOfLastRequest;
         private double m_serialNumberTimeOfLastRequest;
@@ -305,16 +306,22 @@ namespace UnityEngine.InputSystem.Switch
         {
             // step 1
             // TODO: This step should send the bluetooth address of the host as the second argument
-            var s1 = new SwitchControllerBluetoothManualPairingSubcommand();
-            s1.ValueByte = 0x01;
+            var s1 = new SwitchControllerBluetoothManualPairingSubcommand
+            {
+                ValueByte = 0x01
+            };
             var c1 = SwitchControllerCommand.Create(subcommand: s1);
 
-            var s2 = new SwitchControllerBluetoothManualPairingSubcommand();
-            s2.ValueByte = 0x02;
+            var s2 = new SwitchControllerBluetoothManualPairingSubcommand
+            {
+                ValueByte = 0x02
+            };
             var c2 = SwitchControllerCommand.Create(subcommand: s2);
 
-            var s3 = new SwitchControllerBluetoothManualPairingSubcommand();
-            s3.ValueByte = 0x03;
+            var s3 = new SwitchControllerBluetoothManualPairingSubcommand
+            {
+                ValueByte = 0x03
+            };
             var c3 = SwitchControllerCommand.Create(subcommand: s3);
 
             if (ExecuteCommand(ref c1) < 0)
@@ -506,12 +513,20 @@ namespace UnityEngine.InputSystem.Switch
 
         private unsafe void HandleFullReport(StateEvent* stateEvent)
         {
-                SwitchControllerFullInputReport* fullInputReport = ((SwitchControllerFullInputReport*)stateEvent->state);
-                var data = fullInputReport->ToHIDInputReport(ref calibrationData, SpecificControllerType, m_currentOrientation);
-                *((SwitchControllerVirtualInputState*)stateEvent->state) = data;
-                stateEvent->stateFormat = SwitchControllerVirtualInputState.Format;
-                m_currentOrientation += data.angularVelocity;
+            SwitchControllerFullInputReport* fullInputReport = (SwitchControllerFullInputReport*)stateEvent->state;
+
+            var data = fullInputReport->ToHIDInputReport(
+                ref calibrationData,
+                SpecificControllerType,
+                m_currentOrientation,
+                m_calibrationTool
+            );
+
+            *(SwitchControllerVirtualInputState*)stateEvent->state = data;
+            stateEvent->stateFormat = SwitchControllerVirtualInputState.Format;
+            m_currentOrientation += data.angularVelocity;
         }
+
 
         private unsafe void HandleSubcommand(SwitchControllerSubcommandResponseInputReport response)
         {

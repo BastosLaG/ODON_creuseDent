@@ -123,18 +123,20 @@ namespace UnscentedKalmanFilter
 
         public void Update(double[] measurements)
         {
-            if (m == 0)
+            if (measurements == null || measurements.Length == 0)
+                throw new ArgumentException("Measurements cannot be null or empty.");
+
+            if (m == 0 || measurements.Length != m)
             {
-                var mNum = measurements.Length;
-                if (mNum > 0)
-                {
-                    m = mNum;
-                    if (L == 0) L = mNum;
-                    Init();
-                }
+                m = measurements.Length;
+                if (L == 0) L = m;
+                Init(); // re-init with new dimensions
             }
 
             var z = Matrix.Build.Dense(m, 1, 0);
+            if (measurements.Length != m)
+                throw new ArgumentException($"Measurement length mismatch: expected {m}, got {measurements.Length}");
+
             z.SetColumn(0, measurements);
 
             //sigma points around x
@@ -157,7 +159,7 @@ namespace UnscentedKalmanFilter
             Matrix<double> Z2 = ut_h_matrices[3];
 
             //transformed cross-covariance
-            Matrix<double> P12 = (X2.Multiply(Matrix.Build.Diagonal(Wc.Row(0).ToArray()))).Multiply(Z2.Transpose());
+            Matrix<double> P12 = X2.Multiply(Matrix.Build.Diagonal(Wc.Row(0).ToArray())).Multiply(Z2.Transpose());
 
             Matrix<double> K = P12.Multiply(P2.Inverse());
 
@@ -190,24 +192,25 @@ namespace UnscentedKalmanFilter
         private Matrix<double>[] UnscentedTransform(Matrix<double> X, Matrix<double> Wm, Matrix<double> Wc, int n, Matrix<double> R)
         {
             int L = X.ColumnCount;
+            int dim = X.RowCount;
+
+            if (n != dim)
+                throw new ArgumentException($"Mismatch: n ({n}) must match number of rows in X ({dim})");
+
             Matrix<double> y = Matrix.Build.Dense(n, 1, 0);
             Matrix<double> Y = Matrix.Build.Dense(n, L, 0);
 
-            Matrix<double> row_in_X;
             for (int k = 0; k < L; k++)
             {
-                row_in_X = X.SubMatrix(0, X.RowCount, k, 1);
-                Y.SetSubMatrix(0, Y.RowCount, k, 1, row_in_X);
-                y = y.Add(Y.SubMatrix(0, Y.RowCount, k, 1).Multiply(Wm[0,k]));
+                Matrix<double> col = X.Column(k).ToColumnMatrix();
+                Y.SetSubMatrix(0, n, k, 1, col);
+                y = y.Add(col.Multiply(Wm[0, k]));
             }
 
-            Matrix<double> Y1 = Y.Subtract(y.Multiply(Matrix.Build.Dense(1,L,1)));
-            Matrix<double> P = Y1.Multiply(Matrix.Build.Diagonal(Wc.Row(0).ToArray()));
-            P = P.Multiply(Y1.Transpose());
-            P = P.Add(R);
+            Matrix<double> Y1 = Y - y * DenseMatrix.Create(1, L, 1.0);
+            Matrix<double> P = Y1 * DenseMatrix.OfDiagonalArray(Wc.Row(0).ToArray()) * Y1.Transpose() + R;
 
-            Matrix<double>[] output = { y, Y, P, Y1 };
-            return output;
+            return new Matrix<double>[] { y, Y, P, Y1 };
         }
 
         /// <summary>
