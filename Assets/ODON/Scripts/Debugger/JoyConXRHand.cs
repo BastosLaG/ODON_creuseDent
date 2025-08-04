@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Switch;
 using UnityEngine.InputSystem.LowLevel;
 using System.Collections;
+using System.Collections.Generic;
+using System;
 
 // * https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputDevice.html
 
@@ -12,15 +14,28 @@ public class JoyConXRHand : MonoBehaviour
     private InputDevice joyConLeft;
     private InputDevice joyConRight;
 
+    /// <summary>
+    /// Unscented Kalman Filter Instance
+    /// </summary>
+    private UnscentedKalmanFilter.UKF ukfJoyconLeft;
+    private UnscentedKalmanFilter.UKF ukfJoyconRight;
+
     [SerializeField] Transform targetTransform;
 
     [Range(0, 360)]
-    [SerializeField] private float rotationValue = 90f;
+    [SerializeField] private double rotationValue = 90.0;
 
-    public float alpha = 0.70f; // 1 = 100% gyro, 0 = 100% accel
-    private Quaternion orientation = Quaternion.identity;
-    private Quaternion accelRotation = Quaternion.identity;
-    private bool firstFrame = true;
+    private Queue<double> gyroBuffer = new ();
+    private Queue<Vector3> gyroThresholdBuffer = new ();
+    private Vector3 gyroMaxSizeThreshold;
+    private Vector3 gyroMinSizeThreshold;
+    private bool isRecording = false;
+    private const int bufferThresholdSize = 10;
+    private Queue<double> accelBuffer = new();
+
+
+    private const int bufferSize = 10;
+
 
     private void Start()
     {
@@ -38,6 +53,9 @@ public class JoyConXRHand : MonoBehaviour
 
         joyConLeft = null;
         joyConRight = null;
+
+        ukfJoyconLeft = new UnscentedKalmanFilter.UKF(); 
+        ukfJoyconRight = new UnscentedKalmanFilter.UKF(); 
 
         foreach (var device in InputSystem.devices)
         {
@@ -99,51 +117,120 @@ public class JoyConXRHand : MonoBehaviour
 
     private void OnInputEventReadJoycon(InputEventPtr eventPtr, InputDevice device)
     {
+        if (device is not SwitchJoyConLHID or SwitchJoyConRHID)
+        {
+            return;
+        }
         if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>())
         {
             Debug.Log("Event is not a StateEvent or DeltaStateEvent, returning.");
             return;
         }
 
-        // Lecture IMU
-        InputDevice imuDevice = device;
         Vector3 gyro = Vector3.zero;
         Vector3 accel = Vector3.zero;
-
-        if (isLeftHand && imuDevice is SwitchJoyConLHID left)
+        if (device is SwitchJoyConLHID left)
         {
-            gyro = left.angularVelocity.ReadValueFromEvent(eventPtr);
+            Vector3 tempGyro = left.angularVelocity.ReadValueFromEvent(eventPtr);
+            if (gyroThresholdBuffer.Count >= bufferSize)
+            {
+                gyroMaxSizeThreshold = new Vector3(float.MinValue, float.MinValue, float.MinValue);
+                gyroMinSizeThreshold = new Vector3(float.MaxValue, float.MaxValue, float.MaxValue);
+
+                foreach (var item in gyroThresholdBuffer)
+                {
+                    gyroMaxSizeThreshold = Vector3.Max(gyroMaxSizeThreshold, item);
+                    gyroMinSizeThreshold = Vector3.Min(gyroMinSizeThreshold, item);
+                }
+            }
+            if (isRecording)
+            {
+                gyroThresholdBuffer.Enqueue(tempGyro);
+                return;
+            }
+            if (left.buttonSouth.ReadValueFromEvent(eventPtr) == 1) // Check if the South button is pressed
+            {
+                Debug.Log("Button South pressed on left Joy-Con. Starting calibration.");
+                isRecording = true;
+                gyroThresholdBuffer.Clear();
+                gyroMaxSizeThreshold = Vector3.zero;
+                gyroMinSizeThreshold = Vector3.zero;
+            }
+
+            // Read gyro and accel data from the left Joy-Con
+            if (tempGyro.x < gyroMinSizeThreshold.x || tempGyro.x > gyroMaxSizeThreshold.x)
+                gyro.x = tempGyro.x;
+            if (tempGyro.y < gyroMinSizeThreshold.y || tempGyro.y > gyroMaxSizeThreshold.y)
+                gyro.y = tempGyro.y;   
+            if (tempGyro.z < gyroMinSizeThreshold.z || tempGyro.z > gyroMaxSizeThreshold.z)
+                gyro.z = tempGyro.z;
+            
             accel = left.acceleration.ReadValueFromEvent(eventPtr);
         }
-        else if (!isLeftHand && imuDevice is SwitchJoyConRHID right)
+        else if (device is SwitchJoyConRHID right)
         {
-            gyro = right.angularVelocity.ReadValueFromEvent(eventPtr);
+            Vector3 tempGyro = right.angularVelocity.ReadValueFromEvent(eventPtr);
+            if (gyroThresholdBuffer.Count >= bufferSize)
+            {
+                gyroMaxSizeThreshold = new Vector3(float.MinValue, float.MinValue, float.MinValue);
+                gyroMinSizeThreshold = new Vector3(float.MaxValue, float.MaxValue, float.MaxValue);
+
+                foreach (var item in gyroThresholdBuffer)
+                {
+                    gyroMaxSizeThreshold = Vector3.Max(gyroMaxSizeThreshold, item);
+                    gyroMinSizeThreshold = Vector3.Min(gyroMinSizeThreshold, item);
+                }
+            }
+            if (isRecording)
+            {
+                gyroThresholdBuffer.Enqueue(tempGyro);
+                return;
+            }
+            if (right.buttonSouth.ReadValueFromEvent(eventPtr) == 1) // Check if the South button is pressed
+            {
+                Debug.Log("Button South pressed on left Joy-Con. Starting calibration.");
+                isRecording = true;
+                gyroThresholdBuffer.Clear();
+                gyroMaxSizeThreshold = Vector3.zero;
+                gyroMinSizeThreshold = Vector3.zero;
+            }
+
+            // Read gyro and accel data from the left Joy-Con
+            if (tempGyro.x < gyroMinSizeThreshold.x || tempGyro.x > gyroMaxSizeThreshold.x)
+                gyro.x = tempGyro.x;
+            if (tempGyro.y < gyroMinSizeThreshold.y || tempGyro.y > gyroMaxSizeThreshold.y)
+                gyro.y = tempGyro.y;   
+            if (tempGyro.z < gyroMinSizeThreshold.z || tempGyro.z > gyroMaxSizeThreshold.z)
+                gyro.z = tempGyro.z;
+            
             accel = right.acceleration.ReadValueFromEvent(eventPtr);
         }
 
-        if (accel.sqrMagnitude < 0.001f)
-            return;
+        //Create a buffer to store the last 10 values of gyro and accel
+        // and use them to calculate the average for smoothing
+        // Add to gyro buffer
+        gyroBuffer.Enqueue(gyro.magnitude);
+        if (gyroBuffer.Count > bufferSize)
+            gyroBuffer.Dequeue();
 
-        Vector3 gravity = accel.normalized;
+        // Add to accel buffer
+        accelBuffer.Enqueue(accel.magnitude);
+        if (accelBuffer.Count > bufferSize)
+            accelBuffer.Dequeue();
 
-        float pitch = Mathf.Atan2(gravity.x, Mathf.Sqrt(gravity.y * gravity.y + gravity.z * gravity.z)) * Mathf.Rad2Deg;
-        float roll = Mathf.Atan2(-gravity.y, -gravity.z) * Mathf.Rad2Deg;
-
-        accelRotation = Quaternion.Euler(pitch, 0f, roll);
-
-        Quaternion deltaRotation = Quaternion.Euler(gyro * Time.deltaTime);
-        orientation = deltaRotation * orientation;
-
-        if (!firstFrame)
+        if (isLeftHand && gyro != null)
         {
-            orientation = Quaternion.Slerp(orientation, accelRotation, 1f - alpha);
+            ukfJoyconLeft.Update(gyroBuffer.ToArray());
+            targetTransform.rotation = Quaternion.Euler((float)(ukfJoyconLeft.GetState()[0] * rotationValue),
+                                                        (float)(ukfJoyconLeft.GetState()[1] * rotationValue),
+                                                        (float)(ukfJoyconLeft.GetState()[2] * rotationValue));
         }
-        else
+        else if (!isLeftHand && gyro != null)
         {
-            orientation = accelRotation;
-            firstFrame = false;
+            ukfJoyconRight.Update(gyroBuffer.ToArray());
+            targetTransform.rotation = Quaternion.Euler((float)(ukfJoyconRight.GetState()[0] * rotationValue),
+                                                        (float)(ukfJoyconRight.GetState()[1] * rotationValue),
+                                                        (float)(ukfJoyconRight.GetState()[2] * rotationValue));
         }
-
-        targetTransform.rotation = orientation;
     }
 }

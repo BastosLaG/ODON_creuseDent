@@ -92,9 +92,9 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                 rightStick = rightStickVec,
                 // TODO: Calibrate these bad boys
                 acceleration = (imuData0ms.UncalibratedAcceleration + imuData5ms.UncalibratedAcceleration + imuData10ms.UncalibratedAcceleration) / 3f,
-                // orientation = (imuData0ms.CalibratedGyro(ref calibData.imuCalibData) + imuData5ms.CalibratedGyro(ref calibData.imuCalibData) + imuData10ms.CalibratedGyro(ref calibData.imuCalibData)) / 3f,
-                orientation = currentOrientation + (imuData0ms.CalibratedGyro + imuData5ms.CalibratedGyro + imuData10ms.CalibratedGyro) / 3f,
-                angularVelocity = (imuData0ms.CalibratedGyro + imuData5ms.CalibratedGyro + imuData10ms.CalibratedGyro) / 3f,
+                orientation = currentOrientation + (imuData0ms.UncalibratedGyro + imuData5ms.UncalibratedGyro + imuData10ms.UncalibratedGyro) / 3f,
+                // orientation = currentOrientation + (imuData0ms.CalibratedGyro + imuData5ms.CalibratedGyro + imuData10ms.CalibratedGyro) / 3f,
+                angularVelocity = (imuData0ms.UncalibratedGyro + imuData5ms.UncalibratedGyro + imuData10ms.UncalibratedGyro) / 3f,
             };
 
             state.Set(SwitchControllerVirtualInputState.Button.Y, (rightButtons & 0x01) != 0);
@@ -115,24 +115,6 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
             state.Set(SwitchControllerVirtualInputState.Button.Left, (leftButtons & 0x08) != 0);
             state.Set(SwitchControllerVirtualInputState.Button.L, (leftButtons & 0x40) != 0);
             state.Set(SwitchControllerVirtualInputState.Button.ZL, (leftButtons & 0x80) != 0);
-
-            var rawGyro = (imuData0ms.UncalibratedGyro + imuData5ms.UncalibratedGyro + imuData10ms.UncalibratedGyro) / 3f;
-            float gyroMagnitude = rawGyro.magnitude;
-            float smoothedGyroAltitude = gyroMagnitudeAvg.Add(gyroMagnitude);
-
-            Debug.Log($"Gyro altitude (smoothed magnitude): {smoothedGyroAltitude}");
-
-            float prevMag = 0f;
-            float magAlpha = 0.7f;
-            
-            float rawMag = rawGyro.magnitude;
-            float filteredMag = magAlpha * prevMag + (1 - magAlpha) * rawMag;
-            prevMag = filteredMag;
-
-            smoothedGyroAltitude = gyroMagnitudeAvg.Add(filteredMag);
-
-
-            Debug.Log($"Gyro low pass altitude (smoothed magnitude): {smoothedGyroAltitude}");
 
             return state;
         }
