@@ -1,0 +1,28 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller =
+[
+    [ "OnDisable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a0a45a00ec6378702eb65807ccccd283e", null ],
+    [ "OnEnable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#ae0fced7290533c70e780cba1e7e4ca8f", null ],
+    [ "Start", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#aa5c301b6d1d4c0ec5ef6cd18b2e52a5b", null ],
+    [ "UpdateInput", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a37536ce2e6b1556cf6a9e4e9b1123f53", null ],
+    [ "UpdateTrackingInput", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a3f8ca1ef0ae3f1753f9f88ca76fe27fa", null ],
+    [ "blockInteractionsWithScreenSpaceUI", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a87f0c8ffcf2319bb85f567cf4ca99718", null ],
+    [ "controllerCamera", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#aa6709ab278bbd683497144b4d397240f", null ],
+    [ "dragCurrentPositionAction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a7f691f262d5b79b3589cdced9721793e", null ],
+    [ "dragDeltaAction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a6cc904d9169bd93df69ab2d396560169", null ],
+    [ "enableTouchscreenGestureInputController", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a410902ad64bc807e15285c8064779910", null ],
+    [ "pinchGapAction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#ae2d93d684fa80aee8b93819933f1013a", null ],
+    [ "pinchGapDelta", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#aa035d925f1fa1216846f9ec4f77a550d", null ],
+    [ "pinchGapDeltaAction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#afe92cfe280273c07045f070121b20024", null ],
+    [ "pinchStartPosition", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#ae12710d4adcfb1ea9765cd68cd853b75", null ],
+    [ "pinchStartPositionAction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#af801ce0452d6945a48c9cf3bc916e327", null ],
+    [ "rotationThreshold", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#ac872ccb0f34b9dfdaa500209df9d70b3", null ],
+    [ "scaleDelta", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a874e0c9f8ceaa2044a49c738b8eed7d2", null ],
+    [ "screenTouchCount", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a521d7327317f23023af37dd74a6a766c", null ],
+    [ "screenTouchCountAction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a9ab39399a9da26ba226dc07345e712a7", null ],
+    [ "tapStartPositionAction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a11d1630995506ce89ec676d038fe28c3", null ],
+    [ "twistDeltaRotationAction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a8aade9fb1c68d968b0831bf9f0f2fede", null ],
+    [ "twistRotationDeltaAction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a5c813fc441b5c84f396c006150bae1f5", null ],
+    [ "twistStartPosition", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a56ac9a3d86200d951c5414ba56e2025e", null ],
+    [ "twistStartPositionAction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a7eb038a98587c3c49c9523fb3146c344", null ],
+    [ "useRotationThreshold", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_screen_space_controller.html#a46c115ef570441454f4ee118db456992", null ]
+];

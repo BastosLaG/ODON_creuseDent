@@ -1,0 +1,5 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_visuals_1_1_i_x_r_interactable_custom_reticle =
+[
+    [ "OnReticleAttached", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_visuals_1_1_i_x_r_interactable_custom_reticle.html#a55e836337b778cad476c986e596c6cc6", null ],
+    [ "OnReticleDetaching", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_visuals_1_1_i_x_r_interactable_custom_reticle.html#a4f1343fb477751dd6108fef729910607", null ]
+];

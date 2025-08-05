@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Object Node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_object-_node.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Object Node </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4046"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4047"></a>
+Description</h1>
+<p>Provides access to various parameters of the currently rendering <b>Object</b>.</p>
+<p>Note: The behaviour of the Position <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_port.html">Port</a> can be defined per Render Pipeline. Different Render Pipelines may produce different results. If you're building a shader in one Render Pipeline that you want to use in both, try checking it in both pipelines before production.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4048"></a>
+Unity Render Pipelines Support</h3>
+<ul>
+<li>Universal Render Pipeline</li>
+<li>High Definition Render Pipeline</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4049"></a>
+Ports</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Direction  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Binding  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Position  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 3  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Object position in world space  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Scale  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 3  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Object scale in world space  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">World Bounds Min  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 3  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Minimum value of the renderer bounds in world space  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">World Bounds Max  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 3  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Maximum value of the renderer bounds in world space  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Bounds Size  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 3  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Size of the renderer bounds  </td></tr>
+</table>
+<p>Note: the bounds values are the equivalent of <a href="https://docs.unity3d.com/ScriptReference/Renderer-bounds.html">the bounds in the renderer component</a>. This means that vertex deformation done in ShaderGraph doesn't affect these values.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4050"></a>
+Generated Code Example</h1>
+<p>The following example code represents one possible outcome of this node.</p>
+<div class="fragment"><div class="line">float3 _Object_Position = SHADERGRAPH_OBJECT_POSITION;</div>
+<div class="line">float3 _Object_Scale = float3(length(float3(UNITY_MATRIX_M[0].x, UNITY_MATRIX_M[1].x, UNITY_MATRIX_M[2].x)),</div>
+<div class="line">                             length(float3(UNITY_MATRIX_M[0].y, UNITY_MATRIX_M[1].y, UNITY_MATRIX_M[2].y)),</div>
+<div class="line">                             length(float3(UNITY_MATRIX_M[0].z, UNITY_MATRIX_M[1].z, UNITY_MATRIX_M[2].z)));</div>
+<div class="line">float3 _Object_WorldBoundsMin = SHADERGRAPH_RENDERER_BOUNDS_MIN;</div>
+<div class="line">float3 _Object_WorldBoundsMax = SHADERGRAPH_RENDERER_BOUNDS_MAX;</div>
+<div class="line">float3 _Object_BoundsSize = (SHADERGRAPH_RENDERER_BOUNDS_MAX - SHADERGRAPH_RENDERER_BOUNDS_MIN);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

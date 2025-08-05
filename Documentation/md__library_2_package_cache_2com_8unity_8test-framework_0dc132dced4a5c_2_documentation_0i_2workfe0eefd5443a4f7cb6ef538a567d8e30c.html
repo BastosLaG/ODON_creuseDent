@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Workflow: Running Play Mode tests in a player</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2workfe0eefd5443a4f7cb6ef538a567d8e30c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Workflow: Running Play Mode tests in a player </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5612"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5613"></a>
+Build and run Tests in a player</h1>
+<p>If you run a <b>Play Mode</b> test in the same way as an <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2workflow-run-test.html">Editor test</a>, it runs inside the <a class="el" href="namespace_unity.html">Unity</a> Editor. You can also run Play Mode tests on specific platforms. Select <b>Player</b> tab to build and run your tests on the currently active target platform.</p>
+<p><img src="./images/run-playmode-standalone.png" alt="Run PlayMode test in player" class="inline"/></p>
+<blockquote class="doxtable">
+<p><b>Note</b>: Your current platform shows at the top of the Test Runner window. For example, in the image above, the bar above the search bar reads <b>Running in StandaloneOSX</b>, because the current platform is MacOS. The target platform is always the current Platform selected in <a href="https://docs.unity3d.com/Manual/BuildSettings.html">Build Settings</a> (menu: <b>File</b> &gt; <b>Build Settings</b>). </p>
+</blockquote>
+<p>The test result displays in the build once the test completes:</p>
+<p><img src="./images/playmode-results-standalone.png" alt="Results of PlayMode in player test run" class="inline"/></p>
+<p>The application running on the platform reports back the test results to the Editor UI then displays the executed tests and shuts down. To make sure you receive the test results from the Player on your target platform back into the Editor that’s running the test, both should be on the same network.</p>
+<blockquote class="doxtable">
+<p><b>Note:</b> Some platforms do not support shutting down the application with <span class="tt">Application.Quit</span>, so it will continue running after reporting the test results. </p>
+</blockquote>
+<p>If <a class="el" href="namespace_unity.html">Unity</a> cannot instantiate the connection, you can see the tests succeed in the running application. Running tests on platforms with arguments, in this state, does not provide XML test results.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5614"></a>
+Build a player with tests</h1>
+<p>You can use the dropdown selector next to the <b>Run All</b> button to build a player with all the tests, or a selected subset of tests, without running it.</p>
+<p><img src="./images/playmode-standalone-build-tests.png" alt="Build Player with Tests in Test Runner" class="inline"/></p>
+<blockquote class="doxtable">
+<p><b>Note</b>: In some cases the available selections are different: </p>
+</blockquote>
+<ul>
+<li>If the selected platform is Android or iOS and <b>Export project</b> is enabled in <b>Build Settings</b>, the selections are <b>Export All <a class="el" href="class_tests.html">Tests</a></b> and <b>Export Selected <a class="el" href="class_tests.html">Tests</a></b>.</li>
+</ul>
+<p><img src="./images/playmode-standalone-build-tests-android-ios.png" alt="Export Project with Tests in Test Runner" class="inline"/></p>
+<p>For more information, see <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2edit-mode-vs-play-mode-tests.html">Edit Mode vs Play Mode tests</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

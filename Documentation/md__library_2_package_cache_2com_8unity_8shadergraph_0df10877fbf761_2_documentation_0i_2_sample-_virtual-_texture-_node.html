@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Sample Virtual Texture Node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_sample-_virtual-_texture-_node.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Sample Virtual Texture Node </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4265"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4266"></a>
+Description</h1>
+<p><a class="el" href="class_samples.html">Samples</a> a <a href="Property-Types.md#virtual-texture">Virtual Texture</a> and returns up to four Vector 4 color values for use in the shader. You can use the UV input to override the UV coordinate. The <a class="el" href="class_sample.html">Sample</a> Virtual Texture node takes one UV coordinate as the input, and uses that UV coordinate to sample all of the textures in the Virtual Texture.</p>
+<p>If you want to use the <a class="el" href="class_sample.html">Sample</a> Virtual Texture node to sample normal maps, navigate to each layer that you want to sample as a normal map, open the <b>Layer Type</b> drop-down menu, and select <b>Normal</b>.</p>
+<p>By default, you can only use this node in the fragment shader stage. For more information about how to use this node, or how to configure it for use in the vertex shader stage, see <a href="https://docs.unity3d.com/2020.1/Documentation/Manual/svt-use-in-shader-graph.html">Using Streaming Virtual Texturing in Shader Graph</a>.</p>
+<p>If you disable Virtual Texturing in your project, this node works the same way as the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_sample-_texture-2_d-_node.html">Sample 2D Texture Node</a>, and performs standard 2D sampling on each texture.</p>
+<p>You must connect a <a class="el" href="class_sample.html">Sample</a> Virtual Texture node to a Virtual Texture property for the Shader Graph Asset to compile. If you don't connect the node to a property, an error appears, indicating that the node requires a connection.</p>
+<p>For information about Streaming Virtual Texturing, see <a href="https://docs.unity3d.com/2020.1/Documentation/Manual/svt-streaming-virtual-texturing.html">Streaming Virtual Texturing</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4267"></a>
+Ports</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Direction  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Binding  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">UV  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Vector 2  </td><td class="markdownTableBodyLeft">UV  </td><td class="markdownTableBodyLeft">The UV coordinate.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">VT  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Virtual Texture  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The Virtual Texture to sample. Must be connected to a Virtual Texture property.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Out  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 4  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The output value of layer 1 as RGBA.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Out2  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 4  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The output of layer 2 as RGBA.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Out3  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 4  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The output of layer 3 as RGBA.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Out4  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 4  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The output of layer 4 as RGBA.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4268"></a>
+Settings</h1>
+<p>The <a class="el" href="class_sample.html">Sample</a> Virtual Texture node has several settings available for you to specify its behavior. These settings work in combination with any scripts you might have set up in your project. To view the settings, select the node with the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_internal-_inspector.html">Graph Inspector</a> open. For more information, see <a href="https://docs.unity3d.com/2020.1/Documentation/Manual/svt-streaming-virtual-texturing.html">Streaming Virtual Texturing</a>.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Options  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Lod Mode  </td><td class="markdownTableBodyLeft">Dropdown  </td><td class="markdownTableBodyLeft">Automatic, Lod Level, Lod Bias, Derivatives  </td><td class="markdownTableBodyLeft">Sets the specific Lod mode to use when sampling the textures.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Quality  </td><td class="markdownTableBodyLeft">Dropdown  </td><td class="markdownTableBodyLeft">Low, High  </td><td class="markdownTableBodyLeft">Sets the quality mode to use when sampling the textures.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Automatic Streaming  </td><td class="markdownTableBodyLeft">Toggle  </td><td class="markdownTableBodyLeft">Enabled/Disabled  </td><td class="markdownTableBodyLeft">Determines whether the node uses automatic streaming or manual streaming.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Enable Global Mip Bias  </td><td class="markdownTableBodyLeft">Toggle  </td><td class="markdownTableBodyLeft">Enabled/Disabled  </td><td class="markdownTableBodyLeft">Enables the global mipmap bias that <a class="el" href="namespace_unity.html">Unity</a> automatically imposes at runtime. <a class="el" href="namespace_unity.html">Unity</a> sets this bias during certain dynamic resolution scaling algorithms to improve detail reconstruction.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Layer 1 Type  </td><td class="markdownTableBodyLeft">Dropdown  </td><td class="markdownTableBodyLeft">Default, Normal  </td><td class="markdownTableBodyLeft">The texture type of layer 1.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Layer 2 Type  </td><td class="markdownTableBodyLeft">Dropdown  </td><td class="markdownTableBodyLeft">Default, Normal  </td><td class="markdownTableBodyLeft">The texture type of layer 2.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Layer 3 Type  </td><td class="markdownTableBodyLeft">Dropdown  </td><td class="markdownTableBodyLeft">Default, Normal  </td><td class="markdownTableBodyLeft">The texture type of layer 3. This option only appears if the Virtual Texture has at least 3 layers.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Layer 4 Type  </td><td class="markdownTableBodyLeft">Dropdown  </td><td class="markdownTableBodyLeft">Default, Normal  </td><td class="markdownTableBodyLeft">The texture type of layer 4. This option only appears if the Virtual Texture has at least 4 layers.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4269"></a>
+Generated Code Example</h1>
+<p>The following example code represents one possible outcome of this node.</p>
+<div class="fragment"><div class="line">float4 SampleVirtualTexture(float2 uv, VTPropertyWithTextureType vtProperty, out float4 Layer0)</div>
+<div class="line">{</div>
+<div class="line">    VtInputParameters vtParams;</div>
+<div class="line">    vtParams.uv = uv;</div>
+<div class="line">    vtParams.lodOrOffset = 0.0f;</div>
+<div class="line">    vtParams.dx = 0.0f;</div>
+<div class="line">    vtParams.dy = 0.0f;</div>
+<div class="line">    vtParams.addressMode = VtAddressMode_Wrap;</div>
+<div class="line">    vtParams.filterMode = VtFilter_Anisotropic;</div>
+<div class="line">    vtParams.levelMode = VtLevel_Automatic;</div>
+<div class="line">    vtParams.uvMode = VtUvSpace_Regular;</div>
+<div class="line">    vtParams.sampleQuality = VtSampleQuality_High;</div>
+<div class="line">    #if defined(SHADER_STAGE_RAY_TRACING)</div>
+<div class="line">    if (vtParams.levelMode == VtLevel_Automatic || vtParams.levelMode == VtLevel_Bias)</div>
+<div class="line">    {</div>
+<div class="line">        vtParams.levelMode = VtLevel_Lod;</div>
+<div class="line">        vtParams.lodOrOffset = 0.0f;</div>
+<div class="line">    }</div>
+<div class="line">    #endif</div>
+<div class="line">    StackInfo info = PrepareVT(vtProperty.vtProperty, vtParams);</div>
+<div class="line">    Layer0 = SampleVTLayerWithTextureType(vtProperty, vtParams, info, 0);</div>
+<div class="line">    return GetResolveOutput(info);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Frame Control pane</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2frame-range-selection.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Frame Control pane </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2560"></a></p>
+<p>You can use the <b>Frame Control</b> pane in both the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2single-view.html">Single</a> and <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2compare-view.html">Compare</a> views to select a range of frames to reduce the working set. The Frame Control pane is laid out as follows:</p>
+<p><img src="images/profile-analyzer-frame-control-pane.png" alt="Frame Control pane" class="inline"/><br  />
+<em>The Frame Control in the Single view (top), and in the Compare view (bottom)</em></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Control</b>  </th><th class="markdownTableHeadNone"><b>Function</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>A:</b> Pull Data / Load / Save  </td><td class="markdownTableBodyNone">Click the <b>Pull Data</b> button to pull any data that is loaded in the <a href="https://docs.unity3d.com/Manual/Profiler.html">Profiler</a> window.<br  />
+Click the <b>Save</b> button to save the data as a .pdata file.<br  />
+Click the <b>Load</b> button to load a .pdata file. <b>Note:</b> You can only load a .pdata file. If you have data from the Profiler in the .data file format, open it in the Profiler first, and then select the <b>Pull Data</b> button in the Profile Analyzer.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>B:</b> Frame control scale  </td><td class="markdownTableBodyNone">You can adjust the scale of the y-axis of the Frame Control graph by selecting this dropdown. By default, it scales to the maximum value of the data set. You can also choose from traditional frame boundaries. 16.67ms is equivalent to 60Hz/FPS, 33.33ms is equivalent to 30Hz/FPS, and 66.67ms is equivalent to 15Hz/FPS.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>C:</b> Selected thread  </td><td class="markdownTableBodyNone">This displays the name of the marker which is selected in the <b>Marker Details</b> pane. When you select a thread from this list, the Profile Analyzer highlights its corresponding timings on the Frame Control graph in a green-blue color.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>D:</b> Pair Graph Selection<br  />
+<em>(Compare view only)</em>  </td><td class="markdownTableBodyNone">When you enable this checkbox, the Profile Analyzer reflects any changes you make in the range selection of a data set in both data sets. This is important to ensure you compare the exact same number of frames in both data sets and get an accurate comparison.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2561"></a>
+Selecting a frame range</h1>
+<p>The Profile Analyzer uses all the frames in the data sets unless you select a sub-range. When you select a sub-range, it limits the analysis to just those frames which lets you focus on a specific frame or set of frames. To select a range of frames, click and drag on the Frame Control graph. To clear the selection, right click on the Frame Control graph and select <b>Clear Selection</b>.</p>
+<p>To help visualize which frames are in the current selection, the start and end frame number, plus the frame count in square brackets appears on the x-axis of the graph.</p>
+<p><img src="images/profile-analyzer-frame-control-selection.png" alt="Frame Control pane with selected item" class="inline"/><br  />
+<em>The Frame Control in the Single view (top), with 187 frames selected, starting on frame 37 and ending on frame 224. The Compare view (bottom) has Pair Graph Selection enabled, with the same 237 frames selected on both graphs, starting on frame 135 and ending on frame 371.</em></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2562"></a>
+Frame range controls</h1>
+<p>You can control the selection of data in both the <b>Single</b> and <b>Compare</b> views by using the following shortcuts, or by right-clicking and selecting an option from the context menu.</p>
+<p>&gt;[!NOTE] &gt;In <b>Compare</b> view, make sure you enable the <b>Pair Graph Selection</b> checkbox to carry out the following commands on both graphs at the same time.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2563"></a>
+Shortcuts</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Shortcut</b>  </th><th class="markdownTableHeadNone"><b>Function</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Shift+click</b>  </td><td class="markdownTableBodyNone">Hold down the Shift key while clicking on the selection on the Frame Control graph to move the selection around freely.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Left/Right arrow</b>  </td><td class="markdownTableBodyNone">Move the selection forward or backwards by one frame.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Ctrl + click</b><br  />
+(<b>Command + click</b> on macOS)  </td><td class="markdownTableBodyNone">Selects multiple parts of the data set. Hold down the Ctrl key (Command key on macOS) while making a selection and then click, and optionally drag, on different sections of the chart to select multiple parts of the data set.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Equals (=)</b>  </td><td class="markdownTableBodyNone">Extend the selection by one frame on each end of the selection.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Alt+Equals</b><br  />
+(<b>&amp;#8997; + Equals</b> on macOS)  </td><td class="markdownTableBodyNone">Reduce the selection by one frame on each end of the selection.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Shift+Equals</b>  </td><td class="markdownTableBodyNone">Extend the selection by 10 frames on each end of the selection.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Hyphen (-)</b>  </td><td class="markdownTableBodyNone">Reduce the selection by one frame on each end of the selection.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Alt+Hyphen</b><br  />
+(<b>&amp;#8997; + Hyphen</b> on macOS)  </td><td class="markdownTableBodyNone">Extend the selection by one frame on each end of the selection.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Shift+Hyphen</b>  </td><td class="markdownTableBodyNone">Reduce the selection by 10 frames on each end of the selection.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Comma (,)</b>  </td><td class="markdownTableBodyNone">Extend the start of the selection by one frame.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Alt+Comma</b><br  />
+(<b>&amp;#8997; + Comma</b>) on macOS  </td><td class="markdownTableBodyNone">Reduce the start of the selection by one frame.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Shift+Comma</b>  </td><td class="markdownTableBodyNone">Extend the start of the selection by 10 frames.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Period (.)</b>  </td><td class="markdownTableBodyNone">Extend the end of the selection by one frame.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Alt+Period</b><br  />
+<b>(&amp;#8997; + Period on macOS)</b>  </td><td class="markdownTableBodyNone">Reduce the end of the selection by one frame.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Shift+Period</b>  </td><td class="markdownTableBodyNone">Extend the end of the selection by 10 frames.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>1</b><br  />
+<b>2</b><br  />
+<em>Compare view only</em>  </td><td class="markdownTableBodyNone">In <b>Compare</b> view, with <b>Pair Graph Selection</b> disabled, use the 1 or 2 key on your keyboard to switch between frames. 1 selects the top data, and 2 selects the bottom data.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2564"></a>
+Context menu commands</h2>
+<p>Right click on the Frame Control graph to bring up the context menu.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Menu item</b>  </th><th class="markdownTableHeadNone"><b>Function</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Clear Selection</b>  </td><td class="markdownTableBodyNone">Clears the selected range. The Profile Analyzer then performs the analysis on the whole data set.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Invert Selection</b>  </td><td class="markdownTableBodyNone">Inverts the selected range.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Select Shortest Frame</b>  </td><td class="markdownTableBodyNone">Selects the frame with the shortest time.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Select Longest Frame</b>  </td><td class="markdownTableBodyNone">Selects the frame with the longest time.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Select Median Frame</b>  </td><td class="markdownTableBodyNone">Selects the frame with the Median time.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Move selection left / right</b>  </td><td class="markdownTableBodyNone">Move the whole selection one frame backwards, or one frame forwards.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Grow selection</b>  </td><td class="markdownTableBodyNone">Extend the selection by one frame on each end of the selection. Select the <b>(fast)</b> operation to extend the selection by 10 frames at each end.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Shrink selection</b>  </td><td class="markdownTableBodyNone">Reduce the selection by one frame on each end of the selection. Select the <b>(fast)</b> operation to reduce the selection by 10 frames at each end.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Grow selection left / right</b>  </td><td class="markdownTableBodyNone">Extend the start or the end of the selection by one frame. Select the <b>(fast)</b> operation to extend the start or the end of the selection by 10 frames.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Shrink selection left /right</b>  </td><td class="markdownTableBodyNone">Reduce the selection by one frame at the beginning or the end of the selection. Select the <b>(fast)</b> operation to reduce the start or the end of the selection by 10 frames.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Zoom Selection</b>  </td><td class="markdownTableBodyNone">Zoom the Frame Control graph to display the selected range only.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Zoom All</b>  </td><td class="markdownTableBodyNone">Zoom out to show all frames. The current selection range is highlighted.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Show Selected Marker</b>  </td><td class="markdownTableBodyNone">Enable this setting to highlight the selected marker's time on the Frame Control graph. By default, this setting is enabled and the Profile Analyzer highlights the marker's timings in green on the graph.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Show Filtered Threads</b>  </td><td class="markdownTableBodyNone">Enable this setting to highlight the current filtered thread times on the Frame Control graph. The Profile Analyzer highlights the timings in purple. This setting is disabled by default.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Show Frame Lines</b>  </td><td class="markdownTableBodyNone">Enable this setting to display the common frame boundaries as a horizontal line on the Frame Control graph. This setting is enabled by default.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Order By Frame Duration</b>  </td><td class="markdownTableBodyNone">Enable this setting to display the order of the frames by their duration from smallest to largest on the Frame Control graph, rather than by frame index. By default, this setting is disabled. This setting is particularly useful to group similar performant frames together.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

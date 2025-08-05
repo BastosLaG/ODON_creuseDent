@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Code Editor Package for Visual Studio</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ide_8visualstudio_0d198cdf337d13_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Code Editor Package for Visual Studio </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1608"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1609"></a>
+[2.0.23] - 2025-02-03</h1>
+<p>Integration:</p>
+<ul>
+<li>Monitor <span class="tt">additionalfile</span> extension by default.</li>
+<li>Try opening a Visual Studio Code workspace if there's one (<span class="tt">.code-workspace</span> file in the <a class="el" href="namespace_unity.html">Unity</a> project).</li>
+</ul>
+<p>Project generation:</p>
+<ul>
+<li>Identify <span class="tt">asset</span>, <span class="tt">meta</span>, <span class="tt">prefab</span> and <span class="tt">unity</span> files as <span class="tt">yaml</span> (Visual Studio Code).</li>
+<li>Add <span class="tt">sln</span>/<span class="tt">csproj</span> file nesting (Visual Studio Code).</li>
+<li>Improve SDK style project generation.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1610"></a>
+[2.0.22] - 2023-10-03</h1>
+<p>Integration:</p>
+<ul>
+<li>Add support for <span class="tt">XDG_DATA_DIRS</span> and <span class="tt">.desktop</span> files on Linux for <span class="tt">VS Code</span> discovery.</li>
+<li>Use compile-time platform-specifics instead of using runtime conditions.</li>
+</ul>
+<p>Project generation:</p>
+<ul>
+<li>Suppress <span class="tt">USG0001</span> warnings.</li>
+<li>Mark referenced assemblies as private (to not copy extra files to output directory when building).</li>
+<li>Add <a class="el" href="namespace_unity.html">Unity</a> capability to SDK-Style projects.</li>
+<li>Prevent circular dependency errors with SDK-Style projects.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1611"></a>
+[2.0.21] - 2023-09-05</h1>
+<p>Integration:</p>
+<ul>
+<li>Only disable the legacy <span class="tt">com.unity.ide.vscode</span> package going forward.</li>
+<li>Fix json parsing issues with specific non-UTF code pages.</li>
+</ul>
+<p>Project generation:</p>
+<ul>
+<li>Target <span class="tt">netstandard2.1</span> instead of <span class="tt">netstandard2.0</span>.</li>
+<li>Set <span class="tt">defaultSolution</span> in <span class="tt">settings.json</span>.</li>
+<li>Remove <span class="tt">files.exclude</span> entries for root <span class="tt">csproj</span> and <span class="tt">sln</span> files in <span class="tt">settings.json</span> when needed.</li>
+<li>Add <span class="tt">vstuc</span> launch configuration to <span class="tt">launch.json</span> when needed.</li>
+<li>Add <span class="tt">visualstudiotoolsforunity.vstuc</span> entry to <span class="tt">extensions.json</span> when needed.</li>
+<li>You can prevent the package from patching those configuration files by creating a <span class="tt">.vscode/.vstupatchdisable</span> file.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1612"></a>
+[2.0.20] - 2023-06-27</h1>
+<p>Integration:</p>
+<ul>
+<li>Internal API refactoring.</li>
+<li>Add support for Visual Studio Code.</li>
+</ul>
+<p>Project generation:</p>
+<ul>
+<li>Add support for Sdk Style project generation.</li>
+<li>Fix an issue related to missing properties with 2021.3.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1613"></a>
+[2.0.18] - 2023-03-17</h1>
+<p>Integration:</p>
+<ul>
+<li>Performance improvements with <span class="tt">EditorApplication.update</span> callbacks.</li>
+</ul>
+<p>Project generation:</p>
+<ul>
+<li>Add extra compiler options for analyzers and source generators.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1614"></a>
+[2.0.17] - 2022-12-06</h1>
+<p>Integration:</p>
+<ul>
+<li>Fix rare deadlocks while discovering or launching Visual Studio on Windows.</li>
+<li>Improve launching Visual Studio on macOs.</li>
+</ul>
+<p>Project generation:</p>
+<ul>
+<li>Include analyzers from response files.</li>
+<li>Update supported C# versions.</li>
+<li>Performance improvements.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1615"></a>
+[2.0.16] - 2022-06-08</h1>
+<p>Integration:</p>
+<ul>
+<li>Prevent ADB Refresh while being in safe-mode with a URP project</li>
+<li>Fixed an issue keeping the progress bar visible even after opening a script with Visual Studio.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1616"></a>
+[2.0.15] - 2022-03-21</h1>
+<p>Integration:</p>
+<ul>
+<li>Improved project generation performance.</li>
+<li>Added support for keeping file/folder structure when working with external packages.</li>
+<li>Fixed project generation not being refreshed when selecting Visual Studio as the preferred external editor.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1617"></a>
+[2.0.14] - 2022-01-14</h1>
+<p>Integration:</p>
+<ul>
+<li>Remove package version checking.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1618"></a>
+[2.0.13] - 2022-01-12</h1>
+<p>Integration:</p>
+<ul>
+<li>Fixed wrong path to analyzers in generated projects when using external packages.</li>
+<li>Fixed selective project generation not creating Analyzer/LangVersion nodes.</li>
+<li>Fixed asmdef references with Player projects.</li>
+</ul>
+<p><a class="el" href="namespace_documentation.html">Documentation</a>:</p>
+<ul>
+<li>Added new documentation including ToC, overview, how to use and images.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1619"></a>
+[2.0.12] - 2021-10-20</h1>
+<p>Integration:</p>
+<ul>
+<li>Do not block asset opening when only a VS instance without a loaded solution is found.</li>
+<li>Only check package version once per <a class="el" href="namespace_unity.html">Unity</a> session.</li>
+<li>Improved support for Visual Studio For Mac 2022.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1620"></a>
+[2.0.11] - 2021-07-01</h1>
+<p>Integration:</p>
+<ul>
+<li>Added support for Visual Studio and Visual Studio For Mac 2022.</li>
+<li>Fixed an issue when the package was enabled for background processes.</li>
+</ul>
+<p>Project generation:</p>
+<ul>
+<li>Use absolute paths for Analyzers and rulesets.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1621"></a>
+[2.0.10] - 2021-06-10</h1>
+<p>Project generation:</p>
+<ul>
+<li>Improved project generation performance when a file is moved, deleted or modified.</li>
+</ul>
+<p>Integration:</p>
+<ul>
+<li>Improved Inner-loop performance by avoiding to call the package manager when looking up <span class="tt">vswhere</span> utility.</li>
+<li>Fixed a network issue preventing the communication between Visual Studio and <a class="el" href="namespace_unity.html">Unity</a> on Windows.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1622"></a>
+[2.0.9] - 2021-05-04</h1>
+<p>Project generation:</p>
+<ul>
+<li>Added support for CLI.</li>
+</ul>
+<p>Integration:</p>
+<ul>
+<li>Improved performance when discovering Visual Studio installations.</li>
+<li>Warn when legacy assemblies are present in the project.</li>
+<li>Warn when the package version is not up-to-date.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1623"></a>
+[2.0.8] - 2021-04-09</h1>
+<p>Project generation:</p>
+<ul>
+<li>Improved generation performance (especially with DOTS enabled projects).</li>
+<li>Improved stability.</li>
+<li>Updated Analyzers lookup strategy.</li>
+<li>Fixed .vsconfig file not generated when using "regenerate all".</li>
+</ul>
+<p>Integration:</p>
+<ul>
+<li>Improved automation plugins.</li>
+</ul>
+<p><a class="el" href="namespace_documentation.html">Documentation</a>:</p>
+<ul>
+<li>Open sourced automation plugins.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1624"></a>
+[2.0.7] - 2021-02-02</h1>
+<p>Integration:</p>
+<ul>
+<li>Remove <span class="tt">com.unity.nuget.newtonsoft-json</span> dependency in favor of the built-in JsonUtility for the VS Test Runner.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1625"></a>
+[2.0.6] - 2021-01-20</h1>
+<p>Project generation:</p>
+<ul>
+<li>Improved language version detection.</li>
+</ul>
+<p>Integration:</p>
+<ul>
+<li>Added support for the VS Test Runner.</li>
+<li>Added initial support for displaying asset usage.</li>
+<li>Fixed remaining issues with special characters in file/path.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1626"></a>
+[2.0.5] - 2020-10-30</h1>
+<p>Integration:</p>
+<ul>
+<li>Disable legacy pdb symbol checking for <a class="el" href="namespace_unity.html">Unity</a> packages.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1627"></a>
+[2.0.4] - 2020-10-15</h1>
+<p>Project generation:</p>
+<ul>
+<li>Added support for embedded Roslyn analyzer DLLs and ruleset files.</li>
+<li>Warn the user when the opened script is not part of the generation scope.</li>
+<li>Warn the user when the selected Visual Studio installation is not found.</li>
+<li>Generate a .vsconfig file to ensure Visual Studio installation is compatible.</li>
+</ul>
+<p>Integration:</p>
+<ul>
+<li>Fix automation issues on MacOS, where a new Visual Studio instance is opened every time.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1628"></a>
+[2.0.3] - 2020-09-09</h1>
+<p>Project generation:</p>
+<ul>
+<li>Added C#8 language support.</li>
+<li>Added <span class="tt">UnityProjectGeneratorVersion</span> property.</li>
+<li>Local and Embedded packages are now selected by default for generation.</li>
+<li>Added support for asmdef root namespace.</li>
+</ul>
+<p>Integration:</p>
+<ul>
+<li>When the user disabled auto-refresh in <a class="el" href="namespace_unity.html">Unity</a>, do not try to force refresh the Asset database.</li>
+<li>Fix Visual Studio detection issues with languages using special characters.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1629"></a>
+[2.0.2] - 2020-05-27</h1>
+<ul>
+<li>Added support for solution folders.</li>
+<li>Only bind the messenger when the VS editor is selected.</li>
+<li>Warn when unable to create the messenger.</li>
+<li>Fixed an initialization issue triggering legacy code generation.</li>
+<li>Allow package source in assembly to be generated when referenced from asmref.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1630"></a>
+[2.0.1] - 2020-03-19</h1>
+<ul>
+<li>When Visual Studio installation is compatible with C# 8.0, setup the language version to not prompt the user with unsupported constructs. (So far <a class="el" href="namespace_unity.html">Unity</a> only supports C# 7.3).</li>
+<li>Use <a class="el" href="namespace_unity.html">Unity</a>'s <span class="tt">TypeCache</span> to improve project generation speed.</li>
+<li>Properly check for a managed assembly before displaying a warning regarding legacy PDB usage.</li>
+<li>Add support for selective project generation (embedded, local, registry, git, builtin, player).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1631"></a>
+[2.0.0] - 2019-11-06</h1>
+<ul>
+<li>Improved Visual Studio and Visual Studio for Mac automatic discovery.</li>
+<li>Added support for the VSTU messaging system (start/stop features from Visual Studio).</li>
+<li>Added support for solution roundtrip (preserves references to external projects and solution properties).</li>
+<li>Added support for VSTU Analyzers (requires Visual Studio 2019 16.3, Visual Studio for Mac 8.3).</li>
+<li>Added a warning when using legacy pdb symbol files.</li>
+<li>Fixed issues while Opening Visual Studio on Windows.</li>
+<li>Fixed issues while Opening Visual Studio on Mac.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1632"></a>
+[1.1.1] - 2019-05-29</h1>
+<ul>
+<li>Fix Bridge assembly loading with non VS2017 editors.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1633"></a>
+[1.1.0] - 2019-05-27</h1>
+<ul>
+<li>Move internal extension handling to package.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1634"></a>
+[1.0.11] - 2019-05-21</h1>
+<ul>
+<li>Fix detection of visual studio for mac installation.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1635"></a>
+[1.0.10] - 2019-05-04</h1>
+<ul>
+<li>Fix ignored comintegration executable.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1636"></a>
+[1.0.9] - 2019-03-05</h1>
+<ul>
+<li>Updated MonoDevelop support, to pass correct arguments, and not import VSTU plugin.</li>
+<li>Use release build of COMIntegration for Visual Studio.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1637"></a>
+[1.0.7] - 2019-04-30</h1>
+<ul>
+<li>Ensure asset database is refreshed when generating csproj and solution files.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1638"></a>
+[1.0.6] - 2019-04-27</h1>
+<ul>
+<li>Add support for generating all csproj files.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1639"></a>
+[1.0.5] - 2019-04-18</h1>
+<ul>
+<li>Fix relative package paths.</li>
+<li>Fix opening editor on mac.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1640"></a>
+[1.0.4] - 2019-04-12</h1>
+<ul>
+<li>Fixing null reference issue for callbacks to <span class="tt">AssetPostProcessor</span>.</li>
+<li>Ensure <span class="tt">Path.GetFullPath</span> does not get an empty string.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1641"></a>
+[1.0.3] - 2019-01-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1642"></a>
+This is the first release of <em>Unity Package visualstudio_editor</em>.</h2>
+<ul>
+<li>Using the newly created api to integrate Visual Studio with <a class="el" href="namespace_unity.html">Unity</a>. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

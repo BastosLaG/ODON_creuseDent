@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Controls</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_controls.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Controls </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md1986"></a>
+autotoc_md1986</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1987"></a>
+uid: input-system-controls</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1988"></a>
+Controls</h1>
+<ul>
+<li>Hierarchies</li>
+<li>Types</li>
+<li>Usages</li>
+<li>Paths</li>
+<li>State</li>
+<li>Actuation</li>
+<li>Noisy Controls</li>
+<li>Synthetic Controls</li>
+<li>Performance Optimization</li>
+</ul>
+<p>An Input Control represents a source of values. These values can be of any structured or primitive type. The only requirement is that the type is <a href="https://docs.microsoft.com/en-us/dotnet/framework/interop/blittable-and-non-blittable-types">blittable</a>.</p>
+<p>&gt;<b>Note</b>: Controls are for input only. Output and configuration items on Input Devices are not represented as Controls.</p>
+<p>Each Control is identified by a name (<a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_name"><span class="tt">InputControl.name</span></a>) and can optionally have a display name (<a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_displayName"><span class="tt">InputControl.displayName</span></a>) that differs from the Control name. For example, the right-hand face button closest to the touchpad on a PlayStation DualShock 4 controller has the control name "buttonWest" and the display name "Square".</p>
+<p>Additionally, a Control might have one or more aliases which provide alternative names for the Control. You can access the aliases for a specific Control through its <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_aliases"><span class="tt">InputControl.aliases</span></a> property.</p>
+<p>Finally, a Control might also have a short display name which can be accessed through the <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_shortDisplayName"><span class="tt">InputControl.shortDisplayName</span></a> property. For example, the short display name for the left mouse button is "LMB".</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1989"></a>
+Control hierarchies</h2>
+<p>Controls can form hierarchies. The root of a Control hierarchy is always a <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_devices.html">Device</a>.</p>
+<p>The setup of hierarchies is exclusively controlled through <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_layouts.html">layouts</a>.</p>
+<p>You can access the parent of a Control using <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_parent"><span class="tt">InputControl.parent</span></a>, and its children using <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_children"><span class="tt">InputControl.children</span></a>. To access the flattened hierarchy of all Controls on a Device, use <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_allControls"><span class="tt">InputDevice.allControls</span></a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1990"></a>
+Control types</h2>
+<p>All controls are based on the <a href="../api/UnityEngine.InputSystem.InputControl.html"><span class="tt">InputControl</span></a> base class. Most concrete implementations are based on <a href="../api/UnityEngine.InputSystem.InputControl-1.html"><span class="tt">InputControl&lt;TValue&gt;</span></a>.</p>
+<p>The Input System provides the following types of controls out of the box:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Control Type  </th><th class="markdownTableHeadNone">Description  </th><th class="markdownTableHeadNone">Example  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a>  </td><td class="markdownTableBodyNone">A 1D floating-point axis.  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.Vector2Control.html#UnityEngine_InputSystem_Controls_Vector2Control_x"><span class="tt">Gamepad.leftStick.x</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">A button expressed as a floating-point value. Whether the button can have a value other than 0 or 1 depends on the underlying representation. For example, gamepad trigger buttons can have values other than 0 and 1, but gamepad face buttons generally can't.  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Mouse.html#UnityEngine_InputSystem_Mouse_leftButton"><span class="tt">Mouse.leftButton</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.KeyControl.html"><span class="tt">KeyControl</span></a>  </td><td class="markdownTableBodyNone">A specialized button that represents a key on a <a href="../api/UnityEngine.InputSystem.Keyboard.html"><span class="tt">Keyboard</span></a>. Keys have an associated <a href="../api/UnityEngine.InputSystem.Controls.KeyControl.html#UnityEngine_InputSystem_Controls_KeyControl_keyCode"><span class="tt">keyCode</span></a> and, unlike other types of Controls, change their display name in accordance to the currently active system-wide keyboard layout. See the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_keyboard.html">Keyboard</a> documentation for details.  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Keyboard.html#UnityEngine_InputSystem_Keyboard_aKey"><span class="tt">Keyboard.aKey</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.Vector2Control.html"><span class="tt">Vector2Control</span></a>  </td><td class="markdownTableBodyNone">A 2D floating-point vector.  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Pointer.html#UnityEngine_InputSystem_Pointer_position"><span class="tt">Pointer.position</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.Vector3Control.html"><span class="tt">Vector3Control</span></a>  </td><td class="markdownTableBodyNone">A 3D floating-point vector.  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Accelerometer.html#UnityEngine_InputSystem_Accelerometer_acceleration"><span class="tt">Accelerometer.acceleration</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.QuaternionControl.html"><span class="tt">QuaternionControl</span></a>  </td><td class="markdownTableBodyNone">A 3D rotation.  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.AttitudeSensor.html#UnityEngine_InputSystem_AttitudeSensor_attitude"><span class="tt">AttitudeSensor.attitude</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.IntegerControl.html"><span class="tt">IntegerControl</span></a>  </td><td class="markdownTableBodyNone">An integer value.  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.TouchControl.html#UnityEngine_InputSystem_Controls_TouchControl_touchId"><span class="tt">Touchscreen.primaryTouch.touchId</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.StickControl.html"><span class="tt">StickControl</span></a>  </td><td class="markdownTableBodyNone">A 2D stick control like the thumbsticks on gamepads or the stick control of a joystick.  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_rightStick"><span class="tt">Gamepad.rightStick</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.DpadControl.html"><span class="tt">DpadControl</span></a>  </td><td class="markdownTableBodyNone">A 4-way button control like the D-pad on gamepads or hatswitches on joysticks.  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_dpad"><span class="tt">Gamepad.dpad</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.TouchControl.html"><span class="tt">TouchControl</span></a>  </td><td class="markdownTableBodyNone">A control that represents all the properties of a touch on a <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_touch.html">touch screen</a>.  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Touchscreen.html#UnityEngine_InputSystem_Touchscreen_primaryTouch"><span class="tt">Touchscreen.primaryTouch</span></a>  </td></tr>
+</table>
+<p>You can browse the set of all registered control layouts in the <a href="Debugging.md#debugging-layouts">input debugger</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1991"></a>
+Control usages</h2>
+<p>A Control can have one or more associated usages. A usage is a string that denotes the Control's intended use. An example of a Control usage is <span class="tt">Submit</span>, which labels a Control that is commonly used to confirm a selection in the UI. On a gamepad, this usage is commonly found on the <span class="tt">buttonSouth</span> Control.</p>
+<p>You can access a Control's usages using the <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_usages"><span class="tt">InputControl.usages</span></a> property.</p>
+<p>Usages can be arbitrary strings. However, a certain set of usages is very commonly used and comes predefined in the API in the form of the <a href="../api/UnityEngine.InputSystem.CommonUsages.html"><span class="tt">CommonUsages</span></a> static class. Check out the <a href="../api/UnityEngine.InputSystem.CommonUsages.html"><span class="tt">CommonUsages</span> scripting API page</a> for an overview.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1992"></a>
+Control paths</h2>
+<p>&gt;Example: <span class="tt">&lt;Gamepad&gt;/leftStick/x</span> means "X Control on left stick of gamepad".</p>
+<p>The Input System can look up Controls using textual paths. <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_bindings.html">Bindings</a> on Input Actions rely on this feature to identify the Control(s) they read input from. However, you can also use them for lookup directly on Controls and Devices, or to let the Input System search for Controls among all devices using <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_FindControls_System_String_"><span class="tt">InputSystem.FindControls</span></a>.</p>
+<div class="fragment"><div class="line">var gamepad = Gamepad.all[0];</div>
+<div class="line">var leftStickX = gamepad[<span class="stringliteral">&quot;leftStick/x&quot;</span>];</div>
+<div class="line">var submitButton = gamepad[<span class="stringliteral">&quot;{Submit}&quot;</span>];</div>
+<div class="line">var allSubmitButtons = InputSystem.FindControls(<span class="stringliteral">&quot;*/{Submit}&quot;</span>);</div>
+</div><!-- fragment --><p>Control paths resemble file system paths. Each path consists of one or more components separated by a forward slash: </p><pre class="fragment">component/component...
+</pre><p>Each component uses a similar syntax made up of multiple fields. Each field is optional, but at least one field must be present. All fields are case-insensitive. </p><pre class="fragment">&lt;layoutName&gt;{usageName}controlName#(displayName)
+</pre><p>The following table explains the use of each field:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Field  </th><th class="markdownTableHeadNone">Description  </th><th class="markdownTableHeadNone">Example  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">&lt;layoutName&gt;</span>  </td><td class="markdownTableBodyNone">Requires the Control at the current level to be based on the given layout. The actual layout of the Control may be the same or a layout <em>based</em> on the given layout.  </td><td class="markdownTableBodyNone"><span class="tt">&lt;Gamepad&gt;/buttonSouth</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">{usageName}</span>  </td><td class="markdownTableBodyNone">Works differently for Controls and Devices.<br  />
+<br  />
+When used on a Device (the first component of a path), it requires the device to have the given usage. See <a href="Devices.md#device-usages">Device usages</a> for more details.<br  />
+<br  />
+For looking up a Control, the usage field is currently restricted to the path component immediately following the Device (the second component in the path). It finds the Control on the Device that has the given usage. The Control can be anywhere in the Control hierarchy of the Device.  </td><td class="markdownTableBodyNone">Device:<br  />
+<br  />
+<span class="tt">&lt;XRController&gt;{LeftHand}/trigger</span><br  />
+<br  />
+Control:<br  />
+<br  />
+<span class="tt">&lt;Gamepad&gt;/{Submit}</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">controlName</span>  </td><td class="markdownTableBodyNone">Requires the Control at the current level to have the given name. Takes both "proper" names (<a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_name"><span class="tt">InputControl.name</span></a>) and aliases (<a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_aliases"><span class="tt">InputControl.aliases</span></a>) into account.<br  />
+<br  />
+This field can also be a wildcard (<span class="tt">*</span>) to match any name.  </td><td class="markdownTableBodyNone"><span class="tt">MyGamepad/buttonSouth</span><br  />
+<br  />
+<span class="tt">*/{PrimaryAction}</span> (match <span class="tt">PrimaryAction</span> usage on Devices with any name)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">#(displayName)</span>  </td><td class="markdownTableBodyNone">Requires the Control at the current level to have the given display name (i.e. <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_displayName"><span class="tt">InputControl.displayName</span></a>). The display name may contain whitespace and symbols.  </td><td class="markdownTableBodyNone"><span class="tt">&lt;Keyboard&gt;/#(a)</span> (matches the key that generates the "a" character, if any, according to the current keyboard layout).<br  />
+<br  />
+<span class="tt">&lt;Gamepad&gt;/#(Cross)</span>  </td></tr>
+</table>
+<p>You can access the literal path of a given control via its <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_path"><span class="tt">InputControl.path</span></a> property.</p>
+<p>If needed, you can manually parse a control path into its components using the <a href="../api/UnityEngine.InputSystem.InputControlPath.html#UnityEngine_InputSystem_InputControlPath_Parse_System_String_"><span class="tt">InputControlPath.Parse(path)</span></a> API.</p>
+<div class="fragment"><div class="line">var parsed = InputControlPath.Parse(<span class="stringliteral">&quot;&lt;XRController&gt;{LeftHand}/trigger&quot;</span>).ToArray();</div>
+<div class="line"> </div>
+<div class="line">Debug.Log(parsed.Length); <span class="comment">// Prints 2.</span></div>
+<div class="line">Debug.Log(parsed[0].layout); <span class="comment">// Prints &quot;XRController&quot;.</span></div>
+<div class="line">Debug.Log(parsed[0].name); <span class="comment">// Prints an empty string.</span></div>
+<div class="line">Debug.Log(parsed[0].usages.First()); <span class="comment">// Prints &quot;LeftHand&quot;.</span></div>
+<div class="line">Debug.Log(parsed[1].layout); <span class="comment">// Prints null.</span></div>
+<div class="line">Debug.Log(parsed[1].name); <span class="comment">// Prints &quot;trigger&quot;.</span></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md1993"></a>
+Control state</h2>
+<p>Each Control is connected to a block of memory that is considered the Control's "state". You can query the size, format, and location of this block of memory from a Control through the <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_stateBlock"><span class="tt">InputControl.stateBlock</span></a> property.</p>
+<p>The state of Controls is stored in unmanaged memory that the Input System handles internally. All Devices added to the system share one block of unmanaged memory that contains the state of all the Controls on the Devices.</p>
+<p>A Control's state might not be stored in the natural format for that Control. For example, the system often represents buttons as bitfields, and axis controls as 8-bit or 16-bit integer values. This format is determined by the combination of platform, hardware, and drivers. Each Control knows the format of its storage and how to translate the values as needed. The Input System uses <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_layouts.html">layouts</a> to understand this representation.</p>
+<p>You can access the current state of a Control through its <a href="../api/UnityEngine.InputSystem.InputControl-1.html#UnityEngine_InputSystem_InputControl_1_ReadValue"><span class="tt">ReadValue</span></a> method.</p>
+<div class="fragment"><div class="line">Gamepad.current.leftStick.x.ReadValue();</div>
+</div><!-- fragment --><p>Each type of Control has a specific type of values that it returns, regardless of how many different types of formats it supports for its state. You can access this value type through the <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_valueType"><span class="tt">InputControl.valueType</span></a> property.</p>
+<p>Reading a value from a Control might apply one or more value Processors. See documentation on <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_processors.html">Processors</a> for more information.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md1994"></a>
+Recording state history</h4>
+<p>You might want to access the history of value changes on a Control (for example, in order to compute exit velocity on a touch release).</p>
+<p>To record state changes over time, you can use <a href="../api/UnityEngine.InputSystem.LowLevel.InputStateHistory.html"><span class="tt">InputStateHistory</span></a> or <a href="../api/UnityEngine.InputSystem.LowLevel.InputStateHistory-1.html"><span class="tt">InputStateHistory&lt;TValue&gt;</span></a>. The latter restricts Controls to those of a specific value type, which in turn simplifies some of the API.</p>
+<div class="fragment"><div class="line"><span class="comment">// Create history that records Vector2 control value changes.</span></div>
+<div class="line"><span class="comment">// NOTE: You can also pass controls directly or use paths that match multiple</span></div>
+<div class="line"><span class="comment">//       controls (e.g. &quot;&lt;Gamepad&gt;/&lt;Button&gt;&quot;).</span></div>
+<div class="line"><span class="comment">// NOTE: The unconstrained InputStateHistory class can record changes on controls</span></div>
+<div class="line"><span class="comment">//        of different value types.</span></div>
+<div class="line">var history = <span class="keyword">new</span> InputStateHistory&lt;Vector2&gt;(<span class="stringliteral">&quot;&lt;Touchscreen&gt;/primaryTouch/position&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// To start recording state changes of the controls to which the history</span></div>
+<div class="line"><span class="comment">// is attached, call StartRecording.</span></div>
+<div class="line">history.StartRecording();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// To stop recording state changes, call StopRecording.</span></div>
+<div class="line">history.StopRecording();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Recorded history can be accessed like an array.</span></div>
+<div class="line"><span class="keywordflow">for</span> (var i = 0; i &lt; history.Count; ++i)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Each recorded value provides information about which control changed</span></div>
+<div class="line">    <span class="comment">// value (in cases state from multiple controls is recorded concurrently</span></div>
+<div class="line">    <span class="comment">// by the same InputStateHistory) and when it did so.</span></div>
+<div class="line"> </div>
+<div class="line">    var time = history[i].time;</div>
+<div class="line">    var control = history[i].control;</div>
+<div class="line">    var value = history[i].ReadValue();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Recorded history can also be iterated over.</span></div>
+<div class="line"><span class="keywordflow">foreach</span> (var record <span class="keywordflow">in</span> history)</div>
+<div class="line">    Debug.Log(record.ReadValue());</div>
+<div class="line">Debug.Log(<span class="keywordtype">string</span>.Join(<span class="stringliteral">&quot;,\n&quot;</span>, history));</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// You can also record state changes manually, which allows</span></div>
+<div class="line"><span class="comment">// storing arbitrary histories in InputStateHistory.</span></div>
+<div class="line"><span class="comment">// NOTE: This records a value change that didn&#39;t actually happen on the control.</span></div>
+<div class="line">history.RecordStateChange(Touchscreen.current.primaryTouch.position,</div>
+<div class="line">    <span class="keyword">new</span> Vector2(0.123f, 0.234f));</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// State histories allocate unmanaged memory and need to be disposed.</span></div>
+<div class="line">history.Dispose();</div>
+</div><!-- fragment --><p>For example, if you want to have the last 100 samples of the left stick on the gamepad available, you can use this code:</p>
+<div class="fragment"><div class="line">var history = <span class="keyword">new</span> InputStateHistory&lt;Vector2&gt;(Gamepad.current.leftStick);</div>
+<div class="line">history.historyDepth = 100;</div>
+<div class="line">history.StartRecording();</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md1995"></a>
+Control actuation</h2>
+<p>A Control is considered actuated when it has moved away from its default state in such a way that it affects the actual value of the Control. You can query whether a Control is currently actuated using <a href="../api/UnityEngine.InputSystem.InputControlExtensions.html#UnityEngine_InputSystem_InputControlExtensions_IsActuated_UnityEngine_InputSystem_InputControl_System_Single_"><span class="tt">IsActuated</span></a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// Check if leftStick is currently actuated.</span></div>
+<div class="line"><span class="keywordflow">if</span> (Gamepad.current.leftStick.IsActuated())</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;Left Stick is actuated&quot;</span>);</div>
+</div><!-- fragment --><p>It can be useful to determine not just whether a Control is actuated at all, but also the amount by which it is actuated (that is, its magnitude). For example, for a <a href="../api/UnityEngine.InputSystem.Controls.Vector2Control.html"><span class="tt">Vector2Control</span></a> this would be the length of the vector, whereas for a button it is the raw, absolute floating-point value.</p>
+<p>In general, the current magnitude of a Control is always &gt;= 0. However, a Control might not have a meaningful magnitude, in which case it returns -1. Any negative value should be considered an invalid magnitude.</p>
+<p>You can query the current amount of actuation using <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_EvaluateMagnitude"><span class="tt">EvaluateMagnitude</span></a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// Check if left stick is actuated more than a quarter of its motion range.</span></div>
+<div class="line"><span class="keywordflow">if</span> (Gamepad.current.leftStick.EvaluateMagnitude() &gt; 0.25f)</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;Left Stick actuated past 25%&quot;</span>);</div>
+</div><!-- fragment --><p>There are two mechanisms that most notably make use of Control actuation:</p>
+<ul>
+<li><a href="ActionBindings.md#interactive-rebinding">Interactive rebinding</a> (<span class="tt">InputActionRebindingExceptions.RebindOperation</span>) uses it to select between multiple suitable Controls to find the one that is actuated the most.</li>
+<li><a href="ActionBindings.md#conflicting-inputs">Conflict resolution</a> between multiple Controls that are bound to the same action uses it to decide which Control gets to drive the action.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1996"></a>
+Noisy Controls</h2>
+<p>The Input System can label a Control as "noisy". You can query this using the <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_noisy"><span class="tt">InputControl.noisy</span></a> property.</p>
+<p>Noisy Controls are those that can change value without any actual or intentional user interaction required. A good example of this is a gravity sensor in a cellphone. Even if the cellphone is perfectly still, there are usually fluctuations in gravity readings. Another example are orientation readings from an HMD.</p>
+<p>If a Control is marked as noisy, it means that:</p>
+<ol type="1">
+<li>The Control is not considered for <a href="ActionBindings.md#interactive-rebinding">interactive rebinding</a>. <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html"><span class="tt">InputActionRebindingExceptions.RebindingOperation</span></a> ignores the Control by default (you can bypass this using <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithoutIgnoringNoisyControls"><span class="tt">WithoutIgnoringNoisyControls</span></a>).</li>
+<li>If enabled in the Project Settings, the system performs additional event filtering, then calls <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_MakeCurrent"><span class="tt">InputDevice.MakeCurrent</span></a>. If an input event for a Device contains no state change on a Control that is not marked noisy, then the Device will not be made current based on the event. This avoids, for example, a plugged in PS4 controller constantly making itself the current gamepad (<a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_current"><span class="tt">Gamepad.current</span></a>) due to its sensors constantly feeding data into the system.</li>
+<li>When the application loses focus and Devices are <a href="Devices.md#device-resets">reset</a> as a result, the state of noisy Controls will be preserved as is. This ensures that sensor readinds will remain at their last value rather than being reset to default values.</li>
+</ol>
+<p>&gt;<b>Note</b>: If any Control on a Device is noisy, the Device itself is flagged as noisy.</p>
+<p>Parallel to the <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_currentStatePtr"><span class="tt">input state</span></a> and the <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_defaultStatePtr"><span class="tt">default state</span></a> that the Input System keeps for all Devices currently present, it also maintains a <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_noiseMaskPtr"><span class="tt">noise mask</span></a> in which only bits for state that is <b>not</b> noise are set. This can be used to very efficiently mask out noise in input.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1997"></a>
+Synthetic Controls</h2>
+<p>A synthetic Control is a Control that doesn't correspond to an actual physical control on a device (for example the <span class="tt">left</span>, <span class="tt">right</span>, <span class="tt">up</span>, and <span class="tt">down</span> child Controls on a <a href="../api/UnityEngine.InputSystem.Controls.StickControl.html"><span class="tt">StickControl</span></a>). These Controls synthesize input from other, actual physical Controls and present it in a different way (in this example, they allow you to treat the individual directions of a stick as buttons).</p>
+<p>Whether a given Control is synthetic is indicated by its <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_synthetic"><span class="tt">InputControl.synthetic</span></a> property.</p>
+<p>The system considers synthetic Controls for <a href="ActionBindings.md#interactive-rebinding">interactive rebinding</a> but always favors non-synthetic Controls. If both a synthetic and a non-synthetic Control that are a potential match exist, the non-synthetic Control wins by default. This makes it possible to interactively bind to <span class="tt">&lt;Gamepad&gt;/leftStick/left</span>, for example, but also makes it possible to bind to <span class="tt">&lt;Gamepad&gt;/leftStickPress</span> without getting interference from the synthetic buttons on the stick.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1998"></a>
+Performance Optimization</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1999"></a>
+Avoiding defensive copies</h3>
+<p>Use <a href="../api/UnityEngine.InputSystem.InputControl-1.html#UnityEngine_InputSystem_InputControl_1_value"><span class="tt">InputControl&lt;T&gt;.value</span></a> instead of <a href="../api/UnityEngine.InputSystem.InputControl-1.html#UnityEngine_InputSystem_InputControl_1_ReadValue"><span class="tt">InputControl&lt;T&gt;.ReadValue</span></a> to avoid creating a copy of the control state on every call, as the former returns the value as <span class="tt">ref readonly</span> while the latter always makes a copy. Note that this optimization only applies if the call site assigns the return value to a variable that has been declared 'ref readonly'. Otherwise a copy will be made as before. Additionally, be aware of defensive copies that can be allocated by the compiler when it is unable to determine that it can safely use the readonly reference i.e. if it can't determine that the reference won't be changed, it will create a defensive copy for you. For more details, see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/write-safe-efficient-code#use-ref-readonly-return-statements">https://learn.microsoft.com/en-us/dotnet/csharp/write-safe-efficient-code#use-ref-readonly-return-statements</a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2000"></a>
+Control Value Caching</h3>
+<p>When the &lsquo;'USE_READ_VALUE_CACHING&rsquo;&lsquo; internal feature flag is set, the Input System will switch to an optimized path for reading control values. This path efficiently marks controls as 'stale&rsquo; when they have been actuated. Subsequent calls to <a href="../api/UnityEngine.InputSystem.InputControl-1.html#UnityEngine_InputSystem_InputControl_1_ReadValue"><span class="tt">InputControl&lt;T&gt;.ReadValue</span></a> will only apply control processing when there have been changes to that control or in case of control processing. Control processing in this case can mean any hard-coded processing that might exist on the control, such as with <a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a> which has built-in inversion, normalisation, scaling etc, or any processors that have been applied to the controls' <a href="Processors.md#processors-on-controls">processor stack</a>. </p><blockquote class="doxtable">
+<p>Note: Performance improvements <b>are currently not guaranteed</b> for all use cases. Even though this performance path marks controls as "stale" in an efficient way, it still has an overhead which can degrade performance in some cases. </p>
+</blockquote>
+<p>A positive performance impact has been seen when:</p><ul>
+<li>Reading from controls that do not change frequently.</li>
+<li>In case the controls change every frame, are being read and have actions bound to them as well, e.g. on a Gamepad, reading <span class="tt">leftStick</span>, <span class="tt">leftStick.x</span> and <span class="tt">leftStick.left</span> for example when there's a action with composite bindings setup.</li>
+</ul>
+<p>On the other hand, it is likely to have a negative performance impact when:</p><ul>
+<li>No control reads are performed for a control, and there are a lot of changes for that particular control.</li>
+<li>Reading from controls that change frequently that have no actions bound to those controls.</li>
+</ul>
+<p>Moreover, this feature is not enabled by default as it can result in the following minor behavioural changes:</p><ul>
+<li>Some control processors use global state. Without cached value optimizations, it is possible to read the control value, change the global state, read the control value again, and get a new value due to the fact that the control processor runs on every call. With cached value optimizations, reading the control value will only ever return a new value if the physical control has been actuated. Changing the global state of a control processor will have no effect otherwise.</li>
+<li>Writing to device state using low-level APIs like <a href="../api/UnityEngine.InputSystem.InputControl-1.html#UnityEngine_InputSystem_InputControl_1_WriteValueIntoState__0_System_Void__"><span class="tt">InputControl&lt;T&gt;.WriteValueIntoState</span></a> does not set the stale flag and subsequent calls to <a href="../api/UnityEngine.InputSystem.InputControl-1.html#UnityEngine_InputSystem_InputControl_1_value"><span class="tt">InputControl&lt;T&gt;.value</span></a> will not reflect those changes.</li>
+<li>After changing properties on <a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a> the <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_ApplyParameterChanges"><span class="tt">ApplyParameterChanges</span></a> has to be called to invalidate cached value.</li>
+</ul>
+<p>Processors that need to run on every read can set their respective caching policy to EvaluateOnEveryRead. That will disable caching on controls that are using such processor.</p>
+<p>If there are any non-obvious inconsistencies, 'PARANOID_READ_VALUE_CACHING_CHECKS' internal feature flag can be enabled to compare cached and uncached value on every read and log an error if they don't match.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2001"></a>
+Optimized control read value</h3>
+<p>When the &lsquo;'USE_OPTIMIZED_CONTROLS&rsquo;` internal feature flag is set, the Input System will use faster way to use state memory for some controls instances. This is very specific optimization and should be used with caution.</p>
+<blockquote class="doxtable">
+<p><b>Please note</b>: This optimization has a performance impact on <span class="tt">PlayMode</span> as we do extra checks to ensure that the controls have the correct memory representation during development. Don't be alarmed if you see a performance drop in <span class="tt">PlayMode</span> when using this optimization as it's expected at this stage. </p>
+</blockquote>
+<p>Most controls are flexible with regards to memory representation, like <a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a> can be one bit, multiple bits, a float, etc, or in <a href="../api/UnityEngine.InputSystem.Controls.Vector2Control.html"><span class="tt">Vector2Control</span></a> where x and y can have different memory representation. Yet for most controls there are common memory representation patterns, for example <a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a> are floats or single bytes. Or some <a href="../api/UnityEngine.InputSystem.Controls.Vector2Control.html"><span class="tt">Vector2Control</span></a> are two consequitive floats in memory. If a control matches a common representation we can bypass reading its children control and cast the memory directly to the common representation. For example if <a href="../api/UnityEngine.InputSystem.Controls.Vector2Control.html"><span class="tt">Vector2Control</span></a> is two consecutive floats in memory we can bypass reading <span class="tt">x</span> and <span class="tt">y</span> separately and just cast the state memory to <span class="tt">Vector2</span>.</p>
+<blockquote class="doxtable">
+<p><b>Please note</b>: This optimization only works if the controls don't need any processing applied to them, such as <span class="tt">invert</span>, <span class="tt">clamp</span>, <span class="tt">normalize</span>, <span class="tt">scale</span> or any other processor. If any of these are applied to the control, <b>there won't be any optimization applied</b> and the control will be read as usual. </p>
+</blockquote>
+<p>Also, <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_ApplyParameterChanges"><span class="tt">InputControl.ApplyParameterChanges()</span></a> <b>must be explicitly called</b> in specific changes to ensure <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_optimizedControlDataType"><span class="tt">InputControl.optimizedControlDataType</span></a> is updated to the correct memory representation. Make sure to call it when:</p><ul>
+<li>Configuration changes after <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_FinishSetup_"><span class="tt">InputControl.FinishSetup()</span></a> is called.</li>
+<li>Changing parameters such <a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html#UnityEngine_InputSystem_Controls_AxisControl_invert"><span class="tt">AxisControl.invert</span></a>, <a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html#UnityEngine_InputSystem_Controls_AxisControl_clamp"><span class="tt">AxisControl.clamp</span></a>, <a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html#UnityEngine_InputSystem_Controls_AxisControl_normalize"><span class="tt">AxisControl.normalize</span></a>, <a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html#UnityEngine_InputSystem_Controls_AxisControl_scale"><span class="tt">AxisControl.scale</span></a> or changing processors. The memory representation needs to be recalculated after these changes so that we know that the control is not optimized anymore. Otherwise, the control will be read with wrong values.</li>
+</ul>
+<p>The optimized controls work as follows:</p><ul>
+<li>A potential memory representation is set using <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_CalculateOptimizedControlDataType"><span class="tt">InputControl.CalculateOptimizedControlDataType()</span></a></li>
+<li>Its memory representation is stored in <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_optimizedControlDataType"><span class="tt">InputControl.optimizedControlDataType</span></a></li>
+<li>Finally, <a href="../api/UnityEngine.InputSystem.InputControl-1.html#UnityEngine_InputSystem_InputControl_1_ReadUnprocessedValueFromState_"><span class="tt">ReadUnprocessedValueFromState</span></a> uses the optimized memory representation to decide if it should cast to memory directly instead of reading every children control on it's own to reconstruct the controls state. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

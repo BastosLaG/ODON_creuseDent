@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: EndUser</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8management_0d20be87dea580_2_documentation_0i_2_end_user.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">EndUser </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8971"></a>
+autotoc_md8971</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8972"></a>
+uid: xr-plug-in-management-end-user</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8973"></a>
+Advanced configuration for plug-in management</h1>
+<p>To use the XR Plug-in Manager to manage XR plug-ins and settings, refer to the following documentation in the <a class="el" href="namespace_unity.html">Unity</a> Manual:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Topic  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">[Choose XR provider plug-ins](xref:xr-configure-providers)  </td><td class="markdownTableBodyLeft">How to configure your project to use specific XR provider plug-ins, such as OpenXR.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">[XR Plug-in Management settings](xref:xr-plugin-management)  </td><td class="markdownTableBodyLeft">Reference information describing the XR Plug-in Management settings.  </td></tr>
+</table>
+<p>The topics on this page describe more advanced uses of the XR Plug-in Manager and its API. Refer to this information when:</p>
+<ul>
+<li>You want to control when XR provider plug-ins are loaded and initialized</li>
+<li>You want to decide at runtime which XR provider plug-in to use</li>
+<li>You want to set the order in which the XR provider plug-in manager attempts to load plug-ins</li>
+<li>You want to assign values to XR provider plug-in settings at build or runtime using a script</li>
+</ul>
+<p><a class="anchor" id="automatic-xr-loading"></a> <a class="anchor" id="load-xr-plug-ins"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8974"></a>
+Load XR plug-ins</h2>
+<p>By default, XR Plug-in Management initializes automatically and starts your XR environment when the application loads. At runtime, this happens immediately before the first Scene loads. In Play mode, this happens immediately after the first Scene loads, but before <span class="tt">Start</span> is called on your GameObjects. In both scenarios, XR should be set up before calling the MonoBehaviour <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html">Start</a> method, so you should be able to query the state of XR in the <span class="tt">Start</span> method of your GameObjects.</p>
+<p>Alternately, you can wait until after the <span class="tt">Start</span> event completes and manually initialize XR.</p>
+<dl class="section important"><dt>Important</dt><dd>Do not start manual initialization of XR until after the <a class="el" href="namespace_unity.html">Unity</a> <span class="tt">Start</span> event completes. The <a class="el" href="namespace_unity.html">Unity</a> graphics system must be completely initialized before you can manually initialize XR, which isn't guaranteed until after <span class="tt">Start</span> is finished. (Automatic XR initialization take places before graphics initialization, but there's no way to invoke manual XR initalization early enough.)</dd></dl>
+<p>If you want to start XR on a per-Scene basis (for example, to start in 2D and transition into VR), follow these steps:</p>
+<ol type="1">
+<li>Access the <b>Project Settings</b> window (menu: <b>Edit</b> &gt; <b>Project Settings</b>).</li>
+<li>Select the <b>XR Plug-in Management</b> tab on the left.</li>
+<li>Disable the <b>Initialize on start</b> option for each platform you support.</li>
+<li>At runtime, call the following methods on <span class="tt">XRGeneralSettings.Instance.Manager</span> to add/create, remove, and reorder the Loaders from your scripts:</li>
+</ol>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">InitializeLoader(Async)</span>  </td><td class="markdownTableBodyNone">Sets up the XR environment to run manually. Should be called on or after <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html">Start</a> has finished to avoid conflicts with graphics initialization sequence.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">StartSubsystems</span>  </td><td class="markdownTableBodyNone">Starts XR and puts your application into XR mode.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">StopSubsystems</span>  </td><td class="markdownTableBodyNone">Stops XR and takes your application out of XR mode. You can call <span class="tt">StartSubsystems</span> again to go back into XR mode.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">DeinitializeLoader</span>  </td><td class="markdownTableBodyNone">Shuts down XR and removes it entirely. You must call <span class="tt">InitializeLoader(Async)</span> before you can run XR again.  </td></tr>
+</table>
+<p>To handle pause state changes in the Editor, subscribe to the <a href="https://docs.unity3d.com/ScriptReference/EditorApplication-pauseStateChanged.html"><span class="tt">EditorApplication.pauseStateChanged</span></a> API, then stop and start the subsystems according to the new pause state that the <span class="tt">pauseStateChange</span> delegate method returns.</p>
+<p>The following code shows an example of how to manually control XR using XR Plug-in Management:</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span>System.Collections;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_management.html">UnityEngine.XR.Management</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>ManualXRControl</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> IEnumerator StartXRCoroutine()</div>
+<div class="line">    {</div>
+<div class="line">        Debug.Log(<span class="stringliteral">&quot;Initializing XR...&quot;</span>);</div>
+<div class="line">        yield <span class="keywordflow">return</span> <a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html">XRGeneralSettings</a>.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html#a69680058846b2109f4e5600b371e8004">Instance</a>.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html#a45f2c98613fe009d50bd09544b059878">Manager</a>.<a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings.html#a0790610f50f9bda32b67b0e869a7af3a">InitializeLoader</a>();</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html">XRGeneralSettings</a>.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html#a69680058846b2109f4e5600b371e8004">Instance</a>.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html#a45f2c98613fe009d50bd09544b059878">Manager</a>.activeLoader == <span class="keyword">null</span>)</div>
+<div class="line">        {</div>
+<div class="line">            Debug.LogError(<span class="stringliteral">&quot;Initializing XR Failed. Check Editor or Player log for details.&quot;</span>);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">            Debug.Log(<span class="stringliteral">&quot;Starting XR...&quot;</span>);</div>
+<div class="line">            <a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html">XRGeneralSettings</a>.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html#a69680058846b2109f4e5600b371e8004">Instance</a>.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html#a45f2c98613fe009d50bd09544b059878">Manager</a>.<a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings.html#a1fe490ab20d68c574ec64d6397dd34ab">StartSubsystems</a>();</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> StopXR()</div>
+<div class="line">    {</div>
+<div class="line">        Debug.Log(<span class="stringliteral">&quot;Stopping XR...&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        XRGeneralSettings.Instance.Manager.StopSubsystems();</div>
+<div class="line">        XRGeneralSettings.Instance.Manager.DeinitializeLoader();</div>
+<div class="line">        Debug.Log(<span class="stringliteral">&quot;XR stopped completely.&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings_html"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html">UnityEngine.XR.Management.XRGeneralSettings</a></div><div class="ttdoc">General settings container used to house the instance of the active settings as well as the manager i...</div><div class="ttdef"><b>Definition</b> XRGeneralSettings.cs:16</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings_html_a45f2c98613fe009d50bd09544b059878"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html#a45f2c98613fe009d50bd09544b059878">UnityEngine.XR.Management.XRGeneralSettings.Manager</a></div><div class="ttdeci">XRManagerSettings Manager</div><div class="ttdoc">The current active manager used to manage XR lifetime.</div><div class="ttdef"><b>Definition</b> XRGeneralSettings.cs:30</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings_html_a69680058846b2109f4e5600b371e8004"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html#a69680058846b2109f4e5600b371e8004">UnityEngine.XR.Management.XRGeneralSettings.Instance</a></div><div class="ttdeci">static XRGeneralSettings Instance</div><div class="ttdoc">The current settings instance.</div><div class="ttdef"><b>Definition</b> XRGeneralSettings.cs:44</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings_html_a0790610f50f9bda32b67b0e869a7af3a"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings.html#a0790610f50f9bda32b67b0e869a7af3a">UnityEngine.XR.Management.XRManagerSettings.InitializeLoader</a></div><div class="ttdeci">IEnumerator InitializeLoader()</div><div class="ttdoc">Iterate over the configured list of loaders and attempt to initialize each one. The first one that su...</div><div class="ttdef"><b>Definition</b> XRManagerSettings.cs:220</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings_html_a1fe490ab20d68c574ec64d6397dd34ab"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings.html#a1fe490ab20d68c574ec64d6397dd34ab">UnityEngine.XR.Management.XRManagerSettings.StartSubsystems</a></div><div class="ttdeci">void StartSubsystems()</div><div class="ttdoc">If there is an active loader, this will request the loader to start all the subsystems that it is man...</div><div class="ttdef"><b>Definition</b> XRManagerSettings.cs:401</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_x_r_1_1_management_html"><div class="ttname"><a href="namespace_unity_engine_1_1_x_r_1_1_management.html">UnityEngine.XR.Management</a></div><div class="ttdef"><b>Definition</b> XRConfigurationData.cs:9</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><p><a class="anchor" id="managing-xr-loader-lifecycles-manually"></a> <a class="anchor" id="manage-xr-loader-lifecycles"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8975"></a>
+Manage XR loader lifecycles</h2>
+<p>The previous section showed how to manage the entire XR system lifecycle. If you require more granular control, you can manage an individual loader's lifecycle instead.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8976"></a>
+API</h3>
+<p>You can use the following methods in your script to control the lifecycle of XR manually:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Method</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">XRLoader.Initialize</span>  </td><td class="markdownTableBodyNone">Sets up the XR environment to run manually and initializes all subsystems for the XR loader.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">XRLoader.Start</span>  </td><td class="markdownTableBodyNone">Starts XR and requests the XR loader to start all initialized subsystems.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">XRLoader.Stop</span>  </td><td class="markdownTableBodyNone">Stops XR and requests the XR loader to stop all initialized subsystems. You can call <span class="tt">StartSubsystems</span> again to go back into XR mode.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">XRLoader.Deinitialize</span>  </td><td class="markdownTableBodyNone">Shuts down the XR loader and de-initializes all initialized subsystems. You must call <span class="tt">XRLoader.Initialize</span> before you can use the loader again.  </td></tr>
+</table>
+<p>The following code example demonstrates how to manage individual loaders at runtime.</p>
+<dl class="section important"><dt>Important</dt><dd>The following example circumvents XR Management Lifecycle control. When you take this route, you must manually manage the lifecycle of all the loaders initialized in this manner. APIs that expect to use XR Plug-In Management to acquire subsystems from a loader will not function properly when manually handling loader lifecycles. <br  />
+<br  />
+ If you need a specific loader initialized but want that loader to still be managed by XR Plug-In Management, look into the '<a class="el" href="#example-modifying-the-loader-list">Modifying the Loader List</a>' section on how to do that.</dd></dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8977"></a>
+Example</h3>
+<div class="fragment"><div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span>System.Collections;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_management.html">UnityEngine.XR.Management</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>RuntimeXRLoaderManager : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a> m_SelectedXRLoader;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> StartXR(<span class="keywordtype">int</span> loaderIndex)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Once a loader has been selected, prevent the RuntimeXRLoaderManager from</span></div>
+<div class="line">        <span class="comment">// losing access to the selected loader</span></div>
+<div class="line">        <span class="keywordflow">if</span> (m_SelectedXRLoader == <span class="keyword">null</span>)</div>
+<div class="line">        {</div>
+<div class="line">            m_SelectedXRLoader = <a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html">XRGeneralSettings</a>.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html#a69680058846b2109f4e5600b371e8004">Instance</a>.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html#a45f2c98613fe009d50bd09544b059878">Manager</a>.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings.html#a8a47d80ff512bf691e2a1963c0cb30aa">activeLoaders</a>[loaderIndex];</div>
+<div class="line">        }</div>
+<div class="line">        StartCoroutine(StartXRCoroutine());</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    IEnumerator StartXRCoroutine()</div>
+<div class="line">    {</div>
+<div class="line">        Debug.Log(<span class="stringliteral">&quot;Init XR loader&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        var initSuccess = m_SelectedXRLoader.<a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html#a6357eec7193661179c70e156cd1e0e54">Initialize</a>();</div>
+<div class="line">        <span class="keywordflow">if</span> (!initSuccess)</div>
+<div class="line">        {</div>
+<div class="line">            Debug.LogError(<span class="stringliteral">&quot;Error initializing selected loader.&quot;</span>);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">            yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line">            Debug.Log(<span class="stringliteral">&quot;Start XR loader&quot;</span>);</div>
+<div class="line">            var startSuccess = m_SelectedXRLoader.<a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html#a105a2a8d4fc2e26953c58f039af0d212">Start</a>();</div>
+<div class="line">            <span class="keywordflow">if</span> (!startSuccess)</div>
+<div class="line">            {</div>
+<div class="line">                yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line">                Debug.LogError(<span class="stringliteral">&quot;Error starting selected loader.&quot;</span>);</div>
+<div class="line">                m_SelectedXRLoader.<a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html#a453233ff749d06034c2cff5dbb62db66">Deinitialize</a>();</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> StopXR()</div>
+<div class="line">    {</div>
+<div class="line">        Debug.Log(<span class="stringliteral">&quot;Stopping XR Loader...&quot;</span>);</div>
+<div class="line">        m_SelectedXRLoader.<a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html#ae44c5f7511f9fffef8f79e8fef45d683">Stop</a>();</div>
+<div class="line">        m_SelectedXRLoader.<a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html#a453233ff749d06034c2cff5dbb62db66">Deinitialize</a>();</div>
+<div class="line">        m_SelectedXRLoader = <span class="keyword">null</span>;</div>
+<div class="line">        Debug.Log(<span class="stringliteral">&quot;XR Loader stopped completely.&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader_html"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">UnityEngine.XR.Management.XRLoader</a></div><div class="ttdoc">XR Loader abstract class used as a base class for specific provider implementations....</div><div class="ttdef"><b>Definition</b> XRLoader.cs:13</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader_html_a105a2a8d4fc2e26953c58f039af0d212"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html#a105a2a8d4fc2e26953c58f039af0d212">UnityEngine.XR.Management.XRLoader.Start</a></div><div class="ttdeci">virtual bool Start()</div><div class="ttdoc">Ask loader to start all initialized subsystems.</div><div class="ttdef"><b>Definition</b> XRLoader.cs:34</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader_html_a453233ff749d06034c2cff5dbb62db66"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html#a453233ff749d06034c2cff5dbb62db66">UnityEngine.XR.Management.XRLoader.Deinitialize</a></div><div class="ttdeci">virtual bool Deinitialize()</div><div class="ttdoc">Ask loader to deinitialize all initialized subsystems.</div><div class="ttdef"><b>Definition</b> XRLoader.cs:48</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader_html_a6357eec7193661179c70e156cd1e0e54"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html#a6357eec7193661179c70e156cd1e0e54">UnityEngine.XR.Management.XRLoader.Initialize</a></div><div class="ttdeci">virtual bool Initialize()</div><div class="ttdoc">Initialize the loader. This should initialize all subsystems to support the desired runtime setup thi...</div><div class="ttdef"><b>Definition</b> XRLoader.cs:27</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader_html_ae44c5f7511f9fffef8f79e8fef45d683"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html#ae44c5f7511f9fffef8f79e8fef45d683">UnityEngine.XR.Management.XRLoader.Stop</a></div><div class="ttdeci">virtual bool Stop()</div><div class="ttdoc">Ask loader to stop all initialized subsystems.</div><div class="ttdef"><b>Definition</b> XRLoader.cs:41</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings_html_a8a47d80ff512bf691e2a1963c0cb30aa"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings.html#a8a47d80ff512bf691e2a1963c0cb30aa">UnityEngine.XR.Management.XRManagerSettings.activeLoaders</a></div><div class="ttdeci">IReadOnlyList&lt; XRLoader &gt; activeLoaders</div><div class="ttdoc">A shallow copy of the list of loaders currently managed by this XR Manager instance.</div><div class="ttdef"><b>Definition</b> XRManagerSettings.cs:129</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md8978"></a>
+Use XR Plug-In Management to initialize a specific loader</h2>
+<p>Sometimes, you may want to include multiple loaders in a build and have them fall through in a specific order. By default, XR Plug-In Management will attempt to initialize the loader in alphabetical order based on the loaders' name. If this isn't adequate you can modify the loader list in Edit Mode, Play Mode, and in a built player with some caveats.</p>
+<p>1) In Edit Mode, you may modify the loaders list without restriction.</p>
+<p>2) You may reorder or remove loaders from the loader list at runtime. A new loader that wasn't known at startup can't be added to the loader list at runtime. Any attempt to add an unknown loader to the list at runtime will fail. </p><pre class="fragment">This means that you are able to do the following during runtime:
+
+- Remove loaders from the list of loaders.
+- Re-add loaders that were previously removed.
+- Reorder the list of loaders.
+</pre><p>3) Any operation on the XR Plug-in Manager UI will reset the ordering to the original alphabetical ordering.</p>
+<p><a class="anchor" id="example-modifying-the-loader-list"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8979"></a>
+Example: Modify the active loader list at runtime</h3>
+<p>If you wish to reorder the set of loaders so XR Plug-In Management attempts to initialize a specific loader first you could do the following at runtime:</p>
+<div class="fragment"><div class="line">    var generalSettings = XRGeneralSettingsPerBuildTarget.XRGeneralSettingsForBuildTarget(BuildTarget.Standalone);</div>
+<div class="line">    var settingsManager = generalSettings.Manager;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Get a readonly reference to the current set of loaders.</span></div>
+<div class="line">    var readonlyCurrentLoaders = settingsManager.activeLoaders;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Modifying the loader list order</span></div>
+<div class="line">    var reorderedLoadersList = <span class="keyword">new</span> List&lt;XRLoader&gt;();</div>
+<div class="line">    <span class="keywordflow">foreach</span> (var loader <span class="keywordflow">in</span> readonlyCurrentLoaders)</div>
+<div class="line">    {</div>
+<div class="line"><span class="preprocessor">#if UNITY_ANDROID</span></div>
+<div class="line">        <span class="keywordflow">if</span> (loader is XRFooLoader)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Insert &#39;Foo&#39; Loaders at head of list</span></div>
+<div class="line">            reorderedLoaderList.Insert(loader, 0);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (loader is XRBarLoader)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Insert &#39;Bar&#39; Loaders at back of list</span></div>
+<div class="line">            reorderedLoaderList.Insert(loader, reorderedLoaderList.Count);</div>
+<div class="line">        }</div>
+<div class="line"><span class="preprocessor">#else </span><span class="comment">// !UNITY_ANDROID</span></div>
+<div class="line">        <span class="keywordflow">if</span> (loader is XRBarLoader)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Insert &#39;Bar&#39; Loaders at head of list</span></div>
+<div class="line">            reorderedLoaderList.Insert(loader, 0);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (loader is XRFooLoader)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Insert &#39;Foo&#39; Loaders at back of list</span></div>
+<div class="line">            reorderedLoaderList.Insert(loader, reorderedLoaderList.Count);</div>
+<div class="line">        }</div>
+<div class="line"><span class="preprocessor">#endif </span><span class="comment">// end UNITY_ANDROID</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Would only fail if the new list contains a loader that was</span></div>
+<div class="line">    <span class="comment">// not in the original list.</span></div>
+<div class="line">    <span class="keywordflow">if</span> (!settingsManager.TrySetLoaders(reorderedLoadersList))</div>
+<div class="line">        Debug.Log(<span class="stringliteral">&quot;Failed to set the reordered loader list! Refer to the documentation for additional information!&quot;</span>);</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md8980"></a>
+Example: general modifications of the loader list</h3>
+<p>You can also modify the loader list in other more general ways. The following example shows how to use <span class="tt">TryAdd</span>, <span class="tt">TryRemove</span>, and <span class="tt">TrySet</span> in a variety of ways.</p>
+<div class="fragment"><div class="line">var generalSettings = XRGeneralSettingsPerBuildTarget.XRGeneralSettingsForBuildTarget(BuildTarget.Standalone);</div>
+<div class="line">var settingsManager = generalSettings.Manager;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Get example loaders as XRLoaders</span></div>
+<div class="line">var fooLoader = <span class="keyword">new</span> FooLoader() as <a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a>;</div>
+<div class="line">var barLoader = new BarLoader() as <a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Adding new loaders</span></div>
+<div class="line"><span class="comment">// Append the new FooLoader</span></div>
+<div class="line">if (!settingsManager.TryAddLoader(fooLoader))</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;Adding new Foo Loader failed! Refer to the documentation for additional information!&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Insert the new BarLoader at the start of the list</span></div>
+<div class="line">if (!settingsManager.TryAddLoader(barLoader, 0))</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;Adding new Bar Loader failed! Refer to the documentation for additional information!&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Removing loaders</span></div>
+<div class="line">if (!settingsManager.TryRemoveLoader(fooLoader))</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;Failed to remove the fooLoader! Refer to the documentation for additional information!&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Modifying the loader list order</span></div>
+<div class="line">var readonlyCurrentLoaders = settingsManager.activeLoaders;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Copy the returned read only list</span></div>
+<div class="line">var currentLoaders = new List&lt;<a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a>&gt;(readonlyCurrentLoaders);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Reverse the list</span></div>
+<div class="line">currentLoaders.Reverse();</div>
+<div class="line"> </div>
+<div class="line">if (!settingsManager.TrySetLoaders(currentLoaders))</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;Failed to set the reordered loader list! Refer to the documentation for additional information!&quot;</span>);</div>
+</div><!-- fragment --><p>You would most likely place this script in a custom pre-process build script, but that isn't required. Regardless of the script's location, you should do this as a setup step before you start a build as XR Plug-in Manager will serialize this list as part of the build execution.</p>
+<p><a class="anchor" id="customizing build and runtime settings"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8981"></a>
+Customize build and runtime settings</h2>
+<p>Any package that needs build or runtime settings should provide a settings data type for use. This data type appears in the <b>Project Settings</b> window, underneath a top level <b>XR</b> node.</p>
+<p>You can use scripts to configure the settings for a specific plug-in, or change the active and inactive plug-ins per build target.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8982"></a>
+Example: Access custom settings</h3>
+<dl class="section note"><dt>Note</dt><dd>The code in this example doesn't install any plug-ins for you. Make sure your plug-ins are installed and available before you try this script.</dd></dl>
+<div class="fragment"><div class="line">var metadata = XRPackageMetadataStore.GetMetadataForPackage(my_pacakge_id);</div>
+<div class="line">assets = AssetDatabase.FindAssets($<span class="stringliteral">&quot;t:{metadata.settingsType}&quot;</span>);</div>
+<div class="line">var assetPath = AssetDatabase.GUIDToAssetPath(assets[0]);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Settings access is type specific. You will need information from your plug-in documentation</span></div>
+<div class="line"><span class="comment">// to know how to get at specific instances and properties.</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// You must know the type of the settings you are accessing.</span></div>
+<div class="line">var directInstance  = AssetDatabase.LoadAssetAtPath(assetPath, typeof(full.typename.for.pluginsettings));</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// You must know the access method for getting build target specific settings data.</span></div>
+<div class="line">var buildTargetSettings = directInstance.GetSettingsForBuildTargetGroup(BuildTargetGroup.Android);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Do something with settings...</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Mark instance dirty and save any changes.</span></div>
+<div class="line">EditorUtility.SetDirty(directInstance);</div>
+<div class="line">AssetDatabase.SaveAssets();</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md8983"></a>
+Example: Configure plug-ins per build target</h3>
+<dl class="section note"><dt>Note</dt><dd>The code in this example doesn't install any plug-ins for you. Make sure your plug-ins are installed and available before you try this script.</dd></dl>
+<p>To add a plug-in to the set of assigned plug-ins for a build target:</p>
+<div class="fragment"><div class="line">var buildTargetSettings = XRGeneralSettingsPerBuildTarget.SettingsForBuildTarget(BuildTarget.Standalone);</div>
+<div class="line">var pluginsSettings = buildTargetSettings.AssignedSettings;</div>
+<div class="line">var didAssign = XRPackageMetadataStore.AssignLoader(pluginsSettings, <span class="stringliteral">&quot;full.typename.for.pluginloader&quot;</span>, BuildTargetGroup.Standalone);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (!didAssign)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Report error or do something here.</span></div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>To remove a plug-in from the set of assigned plug-ins for a build target:</p>
+<div class="fragment"><div class="line">var buildTargetSettings = XRGeneralSettingsPerBuildTarget.SettingsForBuildTarget(BuildTarget.Standalone);</div>
+<div class="line">var pluginsSettings = buildTargetSettings.AssignedSettings;</div>
+<div class="line">var didRemove = XRPackageMetadataStore.RemoveLoader(pluginsSettings, <span class="stringliteral">&quot;full.typename.for.pluginloader&quot;</span>, BuildTargetGroup.Standalone);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (!didRemove)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Report error or do something here.</span></div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

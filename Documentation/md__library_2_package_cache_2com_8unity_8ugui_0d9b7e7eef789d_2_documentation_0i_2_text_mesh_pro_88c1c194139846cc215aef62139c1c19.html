@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Distance Field (Surface) Shader</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_88c1c194139846cc215aef62139c1c19.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Distance Field (Surface) Shader </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6708"></a></p>
+<p>The Distance Field (Surface) surface shader is similar to the Distance Field shader, but rather than simulating local directional lighting, it interacts with Scene lighting. It is not a physically based shader.</p>
+<p>This shader uses <a class="el" href="namespace_unity.html">Unity</a>'s surface shader framework, which makes it quite flexible, but also more demanding on the GPU.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6709"></a>
+Properties</h1>
+<p><img src="../images/TMP_Shader_DFS_Inspector.png" alt="Example image" class="inline"/></p>
+<p><img src="../images/Letter_A_half.png" alt="Example image" class="inline"/> <b><a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_8fcf9b395c6803adb9319dd7fda7eaf0.html#Face">Face</a>:</b> Controls the appearance of the text face.</p>
+<p><img src="../images/Letter_B_half.png" alt="Example image" class="inline"/> <b><a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_8fcf9b395c6803adb9319dd7fda7eaf0.html#Outline">Outline</a>:</b> Controls the appearance of the text outline.</p>
+<p><img src="../images/Letter_C_half.png" alt="Example image" class="inline"/> <b><a class="el" href="#Bevel">Bevel</a>:</b> Adds a second rendering of the text underneath the original rendering, for example to add a drop shadow.</p>
+<p><img src="../images/Letter_D_half.png" alt="Example image" class="inline"/> <b><a class="el" href="#SurfaceLighting">SurfaceLighting</a>:</b> Controls the appearance of locally simulated lighting on the text.</p>
+<p><img src="../images/Letter_E_half.png" alt="Example image" class="inline"/> <b><a class="el" href="#BumpMap">Bump Map</a>:</b> Adds bumpiness to the text face and/or outline using a normal map texture.</p>
+<p><img src="../images/Letter_F_half.png" alt="Example image" class="inline"/> <b><a class="el" href="#EnvironmentMap">Environment Map</a>:</b> Adds a reflection effect to the text face and/or outline using a normal map texture</p>
+<p><img src="../images/Letter_G_half.png" alt="Example image" class="inline"/> <b><a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_8fcf9b395c6803adb9319dd7fda7eaf0.html#Glow">Glow</a>:</b> Adds a smooth outline to the text in order to simulate glow.</p>
+<p><img src="../images/Letter_H_half.png" alt="Example image" class="inline"/> <b><a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_8fcf9b395c6803adb9319dd7fda7eaf0.html#DebugSettings">Debug Settings</a>:</b> Exposes internal shader properties that are sometimes useful for troubleshooting.</p>
+<p><a class="anchor" id="Face"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6710"></a>
+Face</h2>
+<p>You edit Distance Field Surface shader properties in the TextMesh Pro object Inspector. Properties are divided into several sections, some of which you must enable in order to activate the property group.</p>
+<p><img src="../images/TMP_Shader_DFS_Face.png" alt="Example image" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone" colspan="2">Property:  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="2"><b>Color</b>  </td><td class="markdownTableBodyNone">Adjust the face color of the text.<br  />
+<br  />
+The value you set here is multiplied with the vertex <b>Colors</b> you set in the TextMeshPro component.<br  />
+<br  />
+Set this to white to use the original vertex colors.<br  />
+<br  />
+Set this to black to cancel out the vertex colors.<br  />
+<br  />
+Similarly, setting the Alpha to <b>1</b> uses the original vertex-color alpha, while setting it to <b>0</b> removes any alpha set in the original vertex colors.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="2"><b>Texture</b>  </td><td class="markdownTableBodyNone">Apply a texture to the text face.<br  />
+<br  />
+The texture is multiplied with the face <b>Color</b> and the vertex colors in the TextMesh Pro component to produce the final face color.<br  />
+<br  />
+The <b>Horizontal Mapping</b> and <b>Vertical Mapping</b> properties in the TextMesh Pro component determine how TextMesh Pro fits the texture to the text face.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="2"><b>Tiling</b>  </td><td class="markdownTableBodyNone">Increase these values to repeat the texture across the text surface, in accordance with the TextMesh Pro object's Horizontal Mapping and Vertical Mapping properties.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="2"><b>Offset</b>  </td><td class="markdownTableBodyNone">Adjust these values to change the texture's relative position, horizontally or vertically, on the text surface.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="2"><b>Speed</b>  </td><td class="markdownTableBodyNone">Animate the face texture by setting a value greater than <b>0</b>.<br  />
+<br  />
+The resulting animation is a scrolling effect as the texture’s UV coordinates change over time.<br  />
+<br  />
+<b>Note:</b> To see this effect in the Scene view, you must enable <b>Animated Materials</b> from the Effects menu in the <a href="https://docs.unity3d.com/Manual/ViewModes.html">Scene view control bar</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="2"><b>Softness</b>  </td><td class="markdownTableBodyNone">Adjust the softness of the text edges.<br  />
+<br  />
+A value of <b>0</b> produces crisp, anti-aliased edges.<br  />
+<br  />
+Values greater than <b>0</b> produce increasingly soft/blurry edges.<br  />
+<br  />
+This setting applies to both the text face and the outline.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="2"><b>Dilate</b>  </td><td class="markdownTableBodyNone">Adjust the position of the text contour in the font <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_2_font_assets_s_d_f.html">distance field</a>.<br  />
+<br  />
+A value of <b>0</b> places the contour halfway, which corresponds to the contour of the original font.<br  />
+<br  />
+Negative values thin the characters, while positive values thicken them.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="2"><b>Gloss</b>  </td><td class="markdownTableBodyNone">Adjust the glossiness of the text face. <br  />
+<br  />
+ Glossiness determines the appearance of specular highlights when light hits the text. Higher values produce smaller specular highlights.  </td></tr>
+</table>
+<p><a class="anchor" id="Outline"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6711"></a>
+Outline</h2>
+<p>Description</p>
+<p><img src="../images/TMP_Shader_DFS_Outline.png" alt="Example image" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property:  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Color</b>  </td><td class="markdownTableBodyNone">Adjust the color for the text outline.<br  />
+<br  />
+Tthe outline is not visible unless you set a <b>Thickness</b> value greater than <b>0</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Texture</b>  </td><td class="markdownTableBodyNone">Apply a texture to the text outline.<br  />
+<br  />
+The texture is multiplied with the outline <b>Color</b> to produce the final outline color.<br  />
+<br  />
+The <b>Horizontal Mapping</b> and <b>Vertical Mapping</b> properties in the TextMesh Pro component determine how TextMesh Pro fits the texture to the text outline.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Tiling</b>  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Offset</b>  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Speed</b>  </td><td class="markdownTableBodyNone">Animate the outline texture by setting a value greater than 0.<br  />
+<br  />
+The resulting animation is a scrolling effect as the texture’s UV coordinates change over time.<br  />
+<br  />
+<b>Note:</b> To see this effect in the Scene view, you must enable <b>Animated Materials</b> from the Effects menu in the <a href="https://docs.unity3d.com/Manual/ViewModes.html">Scene view control bar</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Thickness</b>  </td><td class="markdownTableBodyNone">Adjust the thickness of the outline. The higher the value, the thicker the line.<br  />
+<br  />
+The outline is drawn on the text contour, with half its thickness inside the contour and half of it outside the contour.<br  />
+<br  />
+You can pull it farther in or push it farther out by adjusting the <b>Face &gt; Dilate</b> property.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Gloss</b>  </td><td class="markdownTableBodyNone">Adjust the glossiness of the text outline. <br  />
+<br  />
+ Glossiness determines the appearance of specular highlights when light hits the text. Higher values produce smaller specualr highlights.  </td></tr>
+</table>
+<p><a class="anchor" id="Bevel"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6712"></a>
+Bevel</h2>
+<p>A bevel adds the illusion of depth to your text. It works like a normal map, except that the shader calculates the bevel sing the font’s signed distance field.</p>
+<p>Bevels are prone to showing artifacts, especially when they are too pronounced. These artifacts are more or less obvious, depending on the material you use. Sometimes, artifacts that are more obvious on a simple material are hardly noticeable on a more complex material.</p>
+<p>Although bevels work best with text that has an outline, you can apply them to text without an outline as well.</p>
+<p><img src="../images/TMP_Shader_DFS_Bevel.png" alt="Example image" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property:  </th><th class="markdownTableHeadNone"></th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Type</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Choose the type of bevel to apply  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Outer Bevel  </td><td class="markdownTableBodyNone">Produces raised lettering with sloped sides.<br  />
+<br  />
+The bevel starts at the outside of the outline and increases in height until it reaches the inside of the outline.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Inner Bevel  </td><td class="markdownTableBodyNone">Produces text with a raised outline.<br  />
+<br  />
+The bevel starts at the outside of the outline, increases in height until it reaches the middle of the outline, and decreases in height until it reaches the inside of the outline.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Amount</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Adjust the steepness of the bevel.<br  />
+<br  />
+This setting defines the apparent difference in height between low and high regions of the bevel.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Offset</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Offset the bevel from its usual position so it no longer matches the outline.<br  />
+<br  />
+Different offsets produce very different bevels.<br  />
+<br  />
+This is especially useful when you apply a bevel to text with no outline.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Width</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Adjust the bevel size.<br  />
+<br  />
+Set a value of <b>0</b> to make the bevel fill the full thickness of the outline.<br  />
+<br  />
+Set a positive value to make the bevel extend beyond both sides of the outline.<br  />
+<br  />
+Set a negative value to shrink the bevel toward the middle of the outline.<br  />
+<br  />
+If you are setting a bevel for text with no outline, you must set a positive <b>Width</b>. You should also set a negative <b>Offset</b> to ensure that the whole bevel is visible.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Roundness</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Increase this value to smooth out more angular regions of the bevel. The effect is often quite subtle.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Clamp</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Set this value to limit the maximum height of the bevel.<br  />
+<br  />
+Higher values mean the bevel reaches its maximum height sooner.<br  />
+<br  />
+Clamped outer bevels end before reaching the inside edge of the outline.<br  />
+<br  />
+Clamped inner bevels have a larger flat region in the middle of the outline.  </td></tr>
+</table>
+<p><a class="anchor" id="SurfaceLighting"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6713"></a>
+Surface Lighting</h2>
+<p>These settings control simulated local directional lighting. They work in combination with the Bevel, Bump Map, and Environment Map settings.</p>
+<p><img src="../images/TMP_Shader_DFS_SurfaceLighting.png" alt="Example image" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property:  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Specular Color</b>  </td><td class="markdownTableBodyNone">Set the tint for specular highlights.<br  />
+<br  />
+These are the highlights you see when the text directly reflects the simulated local light source.  </td></tr>
+</table>
+<p><a class="anchor" id="BumpMap"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6714"></a>
+Bump Map</h2>
+<p>You can use a normal map as a bump map to add bumpiness to the text. The bump map affects both the text face and outline, but you can control how strongly it affects each one individually. If your text has both a bevel and a bump map, the two mix together.</p>
+<p><img src="../images/TMP_Shader_DFS_Bump.png" alt="Example image" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property:  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Texture</b>  </td><td class="markdownTableBodyNone">Select a normal map texture to use as a bump map.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Face</b>  </td><td class="markdownTableBodyNone">Control how much the bump map affects the text face.<br  />
+<br  />
+A value of <b>0</b> shows no effect while a value of <b>1</b> shows the full effect of the bump map.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><a class="el" href="class_outline.html">Outline</a></b>  </td><td class="markdownTableBodyNone">Control how much the bump map affects the text outline.<br  />
+<br  />
+A value of <b>0</b> shows nothing while a value of <b>1</b> shows the full effect of the bump map.  </td></tr>
+</table>
+<p><a class="anchor" id="EnvironmentMap"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6715"></a>
+Environment Map</h2>
+<p>An environment map can be used to add a reflection effect to your text face or outline. You can either use it for reflections of a static Scene or for special image effects. The mobile shaders do not support this.The environment texture is a cubemap. You can either provide a static cubemap or create one at run time via a script.</p>
+<p><img src="../images/TMP_Shader_DFS_EnvMap.png" alt="Example image" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property:  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Face Color</b>  </td><td class="markdownTableBodyNone">Choose a color to use to tint reflections on the text face.<br  />
+<br  />
+This color is multiplied with the environment map before the reflectivity effect is applied to the text face.<br  />
+<br  />
+When this color is set to black, the environment map has no effect on the text face.<br  />
+<br  />
+When this color is set to white, the environment map is at full strength on the text face.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><a class="el" href="class_outline.html">Outline</a> Color</b>  </td><td class="markdownTableBodyNone">Choose a color to use to tint reflections on the text outline.<br  />
+<br  />
+This color is multiplied with the environment map before the reflectivity effect is applied to the text outline.<br  />
+<br  />
+When this color is set to black, the environment map has no effect on the text outline.<br  />
+<br  />
+When this color is set to white, the environment map is at full strength on the text outline.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Texture</b>  </td><td class="markdownTableBodyNone">Choose a cubemap texture to use as an environment map.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Rotation</b>  </td><td class="markdownTableBodyNone"><a class="el" href="class_rotate.html">Rotate</a> the environment map to control which parts of the texture are visible in the reflection. You can animate the rotation to create a sense of movement.  </td></tr>
+</table>
+<p><a class="anchor" id="Glow"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6716"></a>
+Glow</h2>
+<p>The <b>Glow</b> effect adds a smooth outline on top of other text effects, which is typically used to suggest a glow. The effect is additive, so it is more noticeable on dark backgrounds.</p>
+<p>When the glow extends beyond the text boundary, the surface shader shades it as if it were part of the solid text, meaning that it gets simulated lighting effects such as specular highlights.</p>
+<p><img src="../images/TMP_Shader_DFS_Glow.png" alt="Example image" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property:  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Color</b>  </td><td class="markdownTableBodyNone">Set the tint and strength of the glow effect by adjusting the <b>Color</b> and <b>Alpha</b> values respectively.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Offset</b>  </td><td class="markdownTableBodyNone">Adjust the center of the glow effect.<br  />
+<br  />
+A value of <b>0</b> places the center of the glow effect right on the text contour.<br  />
+<br  />
+Positive values move the center out from the contour. Negative values move it in toward the center of the text.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Inner</b>  </td><td class="markdownTableBodyNone">Control how far the glow effect extends inward from the its start point (text contour + <b>Offset</b>).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Outer</b>  </td><td class="markdownTableBodyNone">Control how far the glow effect extends outward from the text contour (text contour + Offset).  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Power</b>  </td><td class="markdownTableBodyNone">Control how the glow effect falls off from its center to its edges.<br  />
+<br  />
+A value of <b>1</b> produces a strong, bright glow effect with a sharp linear falloff.<br  />
+<br  />
+Lower values produce a glow effect with a quick drop in intensity followed by a more gradual falloff.  </td></tr>
+</table>
+<p><a class="anchor" id="DebugSettings"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6717"></a>
+Debug Settings</h2>
+<p>The debug section exposes some of the shader’s internal properties. They can be helpful for troubleshooting problems you encounter with the shader.</p>
+<p><img src="../images/TMP_Shader_DFS_Debug.png" alt="Example image" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property:  </th><th class="markdownTableHeadNone"></th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Font Atlas</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Points to the atlas texture used by the font Asset.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Gradient Scale</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Represents the spread / range of the font’s <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_2_font_assets_s_d_f.html">signed distance field</a>.<br  />
+<br  />
+This determines the effective range of material properties such as <b><a class="el" href="class_outline.html">Outline</a> &gt; Width</b> and <b>Underlay &gt; Offset X/Y</b>.<br  />
+<br  />
+This value is equal to Padding +1, with Padding being the <b>Padding</b> value set when the font Asset was created.<br  />
+<br  />
+<b>Note:</b> This value is displayed for debugging purposes. You should not edit it manually.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Texture Width/Texture Height</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Displays the texture atlas width and height specified in the <b>Atlas Resolution</b> settings when the font Asset was created.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Scale X/Scale X</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Set multipliers for the SDF scale.<br  />
+<br  />
+When set to <b>0</b>, characters are rendered as blocks.<br  />
+<br  />
+Negative values soften the characters, while positive values make them appear sharper.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Perspective Filter</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">When using a perspective camera, adjust this setting to make text look softer when viewed at sharp angles.<br  />
+<br  />
+The default setting of <b>0.875</b> is adequate in most cases.<br  />
+<br  />
+When using orthographic cameras, set this to <b>0</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Offset X/Offset Y</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Offset the vertex positions of each character in X and Y.<br  />
+<br  />
+You can change these values using a script to create simulated crawl or scrolling FX.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

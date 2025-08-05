@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: NavMesh Modifier component reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_mesh_modifier.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">NavMesh Modifier component reference </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md344"></a></p>
+<p>Use the NavMesh Modifier component to adjust the behavior of a <a href="./Glossary.md#gameobject" title="The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more.">GameObject</a> when the <a href="./Glossary.md#navmesh" title="A mesh that Unity generates to approximate the walkable areas and obstacles in your environment for path finding and AI-controlled navigation.">NavMesh</a> is baked at runtime. The NavMesh Modifier component affects the NavMesh during the generation process only. This means the NavMesh is updated to reflect any changes to NavMesh Modifier components when you bake the NavMesh. Use the available properties to specify changes in behavior and any limits to those changes.</p>
+<p>To use the NavMesh Modifier component, add it to a GameObject as follows:</p><ol type="1">
+<li>Select the GameObject whose effect on the NavMesh you want to modify.</li>
+<li>In the Inspector, select <b>Add Component</b>, then select <b>Navigation</b> &gt; <b>NavMesh Modifier</b>. <br  />
+ The NavMesh Modifier component is displayed in the Inspector window.</li>
+</ol>
+<p>The NavMesh Modifier can also affect the NavMesh generation process hierarchically. This means that the GameObject the component is attached to, as well as all its children, are affected. In addition, you can place another NavMesh Modifier further down the hierarchy to override the NavMesh Modifier that is further up the hierarchy.</p>
+<p>To apply the NavMesh Modifier hierarchically, select the <b>Apply To Children</b> property.</p>
+<dl class="section note"><dt>Note</dt><dd>The NavMesh Modifier component replaces the legacy Navigation Static setting which you could enable from the Objects tab of the Navigation window and the Static flags dropdown on the GameObject. The NavMesh Modifier component is available for baking at runtime, whereas the Navigation Static flags were available in the Editor only.</dd></dl>
+<p>The following table describes the properties available in the NavMesh Modifier component.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Mode</b>  </td><td class="markdownTableBodyNone">Specify whether to consider or ignore the affected GameObject(s).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Mode</b> &gt; <b>Add or Modify Object</b>  </td><td class="markdownTableBodyNone">Consider the affected GameObject(s) when building the NavMesh.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Mode</b> &gt; <b>Remove Object</b>  </td><td class="markdownTableBodyNone">Ignore the affected object(s) when building the NavMesh for the specified agent type.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Affected Agents</b>  </td><td class="markdownTableBodyNone">Specify which agents the NavMesh Modifier affects. For example, you can choose to have certain obstacles be ignored by specific agents.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Affected Agents</b> &gt; <b>All</b>  </td><td class="markdownTableBodyNone">Modify the behavior of all agents.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Affected Agents</b> &gt; <b>None</b>  </td><td class="markdownTableBodyNone">Exclude all agents from the modified behavior.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Apply to Children</b>  </td><td class="markdownTableBodyNone">Apply the configuration to the child hierarchy of the GameObject. To override this component's influence further down the hierarchy, add another NavMesh Modifier component.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Override Area</b>  </td><td class="markdownTableBodyNone">Change the [area type](AreasAndCosts) for the affected GameObject(s). If you want to change the area type, select the checkbox then select the new area type in the Area Type dropdown. If you do not want to change the area type, clear the checkbox.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Override Area</b> &gt; <b>Area Type</b>  </td><td class="markdownTableBodyNone">Select the new area type you want to apply from the dropdown.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Override Generate Links</b>  </td><td class="markdownTableBodyNone">Force the NavMesh bake process to either include or ignore the affected GameObject(s) when you generate links.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Override Generate Links</b> &gt; <b>Generate Links</b>  </td><td class="markdownTableBodyNone">Specify whether or not to include the affected GameObject(s) when you generate links. To include the GameObject(s) when you generate links in the NavMesh bake process, select this checkbox. To ignore the GameObject(s) when you generate links in the NavMesh bake process, clear this checkbox.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md345"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_create_nav_mesh.html">Create a NavMesh</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_areas_and_costs.html">Navigation Areas and Costs</a></li>
+<li><a href="./NavigationWindow.md#agents-tab">Navigation Agent Types</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

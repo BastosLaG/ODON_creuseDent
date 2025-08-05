@@ -1,0 +1,2173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Changelog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Changelog </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md454"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md455"></a>
+[1.8.21] - 2025-03-19</h1>
+<ul>
+<li>update EmbeddedLinux argument syntax to support newer clang versions</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md456"></a>
+Added</h2>
+<ul>
+<li>Added LLVM 19 Support</li>
+<li>Added stack protector AOT settings options.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md457"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md458"></a>
+Fixed</h2>
+<ul>
+<li>Fixed hashing error that could occur when an assembly contained a type reference with a "module" resolution scope</li>
+<li>Fixed internal compiler error when using a <span class="tt">FixedStringNBytes</span> value in an interpolated string</li>
+<li>Fixed a crash caused by assigning <span class="tt">null</span> to a <span class="tt">Span</span></li>
+<li>Fixed "Unable to resolve the method" error that occurred when two or more methods had the same name, one of the methods contained a generic parameter, and the generic parameter type had two or more generic arguments</li>
+<li>Fixed handling of <span class="tt">stackalloc</span>ed arrays with initial values for newer versions of Visual Studio</li>
+<li>When building for Android with the <a class="el" href="namespace_mono.html">Mono</a> scripting backend, arm64-v8a symbols could be incorrectly included in the output, even though <a class="el" href="namespace_mono.html">Mono</a> for Android only supports armv7. This is now fixed.</li>
+<li>Fixed compiler crash that could happen when using an interface method that had a default implementation defined in another interface</li>
+<li>Fixed cropping of tooltips in the inspector.</li>
+<li>Fixed rare "Unhandled exception. System.InvalidCastException: Unable to cast object of type 'System.IO.MemoryStream' to type 'System.Text.StringBuilder'" error that could occur during <a class="el" href="namespace_burst.html">Burst</a> compilation</li>
+<li>Fixed a <span class="tt">BC1054</span> error that could occur if a struct with a pointer-to-generic-parameter-typed field was used as a generic argument to an interface type</li>
+<li>Fixed compiler crash when trying to use the <span class="tt">Span&lt;T&gt;(T[])</span> or <span class="tt">Span&lt;T&gt;(T[],int,int)</span> constructors</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md459"></a>
+Changed</h2>
+<ul>
+<li>EmbeddedLinux SSE4 default</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md460"></a>
+Known Issues</h2>
+<ul>
+<li>With LLVM 19, <a class="el" href="namespace_burst.html">Burst</a>'s alias analysis is more conservative than it needs to be which may result in performance reductions in <a class="el" href="namespace_burst.html">Burst</a> compiled code. This is will be addressed in the next <a class="el" href="namespace_burst.html">Burst</a> release. Note that at this time, <a class="el" href="namespace_burst.html">Burst</a> by default uses LLVM 18.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md461"></a>
+[1.8.19] - 2025-01-17</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md462"></a>
+Changed</h2>
+<ul>
+<li>Source file checksums are now included in pdb debugging files, so that Visual Studio can warn when source files differ from when the pdb was built</li>
+<li>Added support for <span class="tt">HashCode.Combine</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md463"></a>
+Fixed</h2>
+<ul>
+<li>Fixed hash generation error for derived default interface methods</li>
+<li>Fixed resolution of local variable types in generic default interface methods</li>
+<li>Fixed crash that could occur when a target method of <span class="tt">BurstCompiler.CompileFunctionPointer</span> was already decorated with <span class="tt">[MonoPInvokeCallback]</span>. If this existing attribute existed in a namespace other than <span class="tt">AOT</span>, <a class="el" href="namespace_burst.html">Burst</a>'s IL postprocessor would add a second <span class="tt">[MonoPInvokeCallback]</span>, resulting in a runtime crash on IL2CPP.</li>
+<li>Fix crash when trying to <a class="el" href="namespace_burst.html">Burst</a> compile a project without any Bursted code with debug info enabled, when it has already been compiled without debug info before.</li>
+<li>Fixed <span class="tt">BC1055: Unable to resolve the definition of the method ...</span> errors when compiling code using <span class="tt">in</span> method parameters for multiple CPU targets</li>
+<li>Fixed an issue preventing debugging of managed methods that use direct call, regardless of whether <a class="el" href="namespace_burst.html">Burst</a> compilation is manually disabled</li>
+<li>Fixed a rare concurrency issue in the entry point finder.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md464"></a>
+Added</h2>
+<ul>
+<li>[Android] Support for 16Kb page sizes</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md465"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md466"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md467"></a>
+[1.8.18] - 2024-09-04</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md468"></a>
+Added</h2>
+<ul>
+<li>Added the <span class="tt">UNITY_BURST_DISABLE_COMPILATION</span> environment variable as an alternative to the <span class="tt">--burst-disable-compilation</span> command-line argument</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md469"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md470"></a>
+Changed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md471"></a>
+Fixed</h2>
+<ul>
+<li>Static fields used in static constructors were sometimes incorrectly set to read only, despite being written.</li>
+<li>Fixed a case of the editor getting stuck loading during a domain reload if <a class="el" href="namespace_burst.html">Burst</a> was set to synchronous compilation</li>
+<li>Fixed hashing bug that could occur when method signatures differed only by generic parameter count</li>
+<li>Branches within if (cpufeaturesupported) blocks could cause the transform pass to miss identify which blocks are supporting which features, leading to errors at compile time about intrinsics not being in matching blocks.</li>
+<li>Fixed 'cannot open input file ucrt.lib' error when building for Universal Windows Platform and targeting SDK 10.0.26100.0</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md472"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md473"></a>
+[1.8.17] - 2024-07-22</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md474"></a>
+Added</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md475"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md476"></a>
+Changed</h2>
+<ul>
+<li>Improved performance of Burst-compiled code in the Windows x64 Editor by only emitting context-saving code when the code being compiled contains a <span class="tt">throw</span></li>
+<li>Improved error message for pointer-like types in non-<span class="tt">readonly</span> <span class="tt">static</span> fields</li>
+<li>ARM 32-bit is no longer built for Universal Windows Platform when targeting SDK 10.0.26100.0 or newer</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md477"></a>
+Fixed</h2>
+<ul>
+<li>Fixed another compiler crash caused by faulty alias analysis</li>
+<li>BurstAotSettings files are no longer written to disk unless default settings are changed</li>
+<li>Fixed the <span class="tt">BurstDebugInformation_DoNotShip</span> folder not being saved outside the player build folder for Embedded Linux and QNX platforms</li>
+<li>Fixed direct negation of enums was not correctly promoting the underlying type, causing wrong results.</li>
+<li>Fixed that <span class="tt">Mathf.Approximately</span> would return the wrong result approximately all of the time</li>
+<li>Fixed an issue with default interface methods which would result in compiler errors due to IL corruption.</li>
+<li>Creating a project with a space in the path would cause burst to fail on windows arm64.</li>
+<li>Fixed 'Failed to find Windows SDK' error when targeting the latest installed Windows SDK version for Universal Windows Platform builds</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md478"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md479"></a>
+[1.8.16] - 2024-05-29</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md480"></a>
+Fixed</h2>
+<ul>
+<li>Fixed compiler crash caused by faulty alias analysis </li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md481"></a>
+[1.8.15] - 2024-05-10</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md482"></a>
+Added</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md483"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md484"></a>
+Changed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md485"></a>
+Fixed</h2>
+<ul>
+<li>An issue with auto promotion from bool to float that can occur with newer Roslyn.</li>
+<li>Fixed compilation error when trying to use <span class="tt">MemoryMarshal.GetReference</span> on <span class="tt">Span</span>s</li>
+<li>Fixed crash caused by faulty no-alias analysis</li>
+<li>Fix build error when Product Name contains illegal path characters.</li>
+<li>Improved the compilation time for projects with many assemblies/assembly-define symbols</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md486"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md487"></a>
+[1.8.14] - 2024-04-04</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md488"></a>
+Fixed</h2>
+<ul>
+<li>Fixed burst sometimes throwing <span class="tt">FileNotFoundException</span></li>
+<li>Fixed incorrect handling of <span class="tt">[Conditional]</span> attributes in some circumstances</li>
+<li>Fixed that some or all scripting symbol defines wouldn't be known by <a class="el" href="namespace_burst.html">Burst</a> in player builds</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md489"></a>
+Added</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md490"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md491"></a>
+Changed</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md492"></a>
+[1.8.13] - 2024-02-29</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md493"></a>
+Added</h2>
+<ul>
+<li>Added clearer diagnostic error for certain bad usages of IsSupportedXXX intrinsics.</li>
+<li>Added support for <a class="el" href="namespace_burst.html">Burst</a> with the visionOS Simulator SDK.</li>
+<li>Added support for Windows Arm64.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md494"></a>
+Fixed</h2>
+<ul>
+<li>Fixed InvalidCompilerException when usage of IsSupportedXXX intrinsic results in no branches being generated.</li>
+<li>Fixed information in documentation regarding scheduling generic jobs through generic methods.</li>
+<li>Fixed a crash caused by arithmetic or bitwise negation on native integers followed by a cast to a pointer.</li>
+<li>Fixed that the burst debug information folder would sometimes be saved in project root folder.</li>
+<li>Fixed <span class="tt">System.ArgumentNullException</span> exception in ILPostProcessing when encountering a library using <span class="tt">mscorlib</span></li>
+<li>Fixed an issue where if two modules were referencing the same external method (dllImport) an internal compiler error could occur - "Burst internal compiler error: Burst.Compiler.IL.CompilerException: Error while verifying module: DISubprogram attached to more than one function"</li>
+<li>Fixed "Failed to find entry-points: ... An item with the same key has already been added" error that could occur in the presence of precompiled (usually obfuscated) assemblies that contained methods overloaded only by return type</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md495"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md496"></a>
+Changed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md497"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md498"></a>
+[1.8.12] - 2024-01-02</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md499"></a>
+Fixed</h2>
+<ul>
+<li>Fixed the managed fallback for bursts intrinsic functions <span class="tt">cvt_ss2si</span>, <span class="tt">cvtss_si32</span>, and <span class="tt">cvtss_si64</span> to follow midpoint rounding standard of nearest even.</li>
+<li>Fixed an issue where use of certain intrinsics could cause a compile error even if properly guarded by the appropriate <span class="tt">IsXXXSupported</span> property.</li>
+<li>If an exception is thrown from burst compiled code in the Editor on Windows there was potential for certain callee saved registers to be corrupted. In order to fix this ( editor only - player builds are unaffected), we now save some additional context on each entry point.</li>
+<li>Fixed burst not differentiating between overloaded generic functions such as T foo(int val) and T foo(T val) when the function calls are foo(1); foo&lt;int&gt;(1). <a class="el" href="namespace_burst.html">Burst</a> would previously only compile the T foo(T val) function.</li>
+<li>Fixed android builds throwing a NullReferenceException.</li>
+<li>Fixed arithmetic and bitwise negation on native integers.</li>
+<li>Fixed an issue where underflows of nint and nuint at compile time would lead to incorrect code.</li>
+<li><a class="el" href="namespace_burst.html">Burst</a> recompiles assemblies due to hashes mismatching because of the way assembly defines are combined into the hash.</li>
+<li>Fixed constant SHUFFLE function not seen as a constant when called indirectly through a <span class="tt">FunctionPointer</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md500"></a>
+Added</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md501"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md502"></a>
+Changed</h2>
+<ul>
+<li>Update default LLVM to version 16</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md503"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md504"></a>
+[1.8.11] - 2023-11-16</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md505"></a>
+Added</h2>
+<ul>
+<li><a class="el" href="namespace_burst.html">Burst</a> support for Apple visionOS</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md506"></a>
+[1.8.10] - 2023-11-02</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md507"></a>
+Fixed</h2>
+<ul>
+<li>Fixed the <a class="el" href="namespace_burst.html">Burst</a> Inspector not displaying target methods if namespace/class contained the method name.</li>
+<li>Linking libstdc++/libc++ statically on HMI platforms</li>
+<li>Fixed an issue that caused an empty variable to be returned if it is between a zero initializer</li>
+<li>Native debug information would fail to reflect the contents of parameters to functions.</li>
+<li>For native debug information, type symbols can now be referenced using :: separator between namespaces (C++ style) - E.g. Example.Type becomes Example::Type.</li>
+<li>Fixed that changing certain player build platform settings (like SDK version) would not trigger <a class="el" href="namespace_burst.html">Burst</a> to recompile</li>
+<li>Fixed invalid burst string formats leading to internal compiler error.</li>
+<li>Fixed QNX player builds on 32-bit ARM</li>
+<li>Fixed an error thrown by the <a class="el" href="namespace_burst.html">Burst</a> Inspector when opening a non-static job with special characters in its name</li>
+<li>Fixed an issue that caused alignments for global values to be wrong, which could lead to a rare AVX2 specific crash.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md508"></a>
+Added</h2>
+<ul>
+<li>Added support for System.Math functions Acosh, Asinh, Atanh, Cbrt, CopySign, Log2, SinCos, FusedMultiplyAdd, and ILogB</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md509"></a>
+Removed</h2>
+<ul>
+<li>Remove all code specific to DOTS Runtime</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md510"></a>
+Changed</h2>
+<ul>
+<li>Use mimalloc as our native allocator on Windows to speed up concurrently executing LLVM work</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md511"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md512"></a>
+[1.8.9] - 2023-09-22</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md513"></a>
+Changed</h2>
+<ul>
+<li>Minor behind-the-scenes changes that should not affect users.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md514"></a>
+[1.8.8] - 2023-07-24</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md515"></a>
+Fixed</h2>
+<ul>
+<li>Fixed error when trying to use direct call to a nested protected class</li>
+<li>Fixed that converting a negated unsigned type to a float would produce a mismatching value in <a class="el" href="namespace_burst.html">Burst</a> versus .Net/Mono</li>
+<li>Fixed that the <a class="el" href="namespace_burst.html">Burst</a> Inspector handled negation of unsigned types differently than .Net for static readonly fields or static constructors</li>
+<li>Fixed <a class="el" href="namespace_burst.html">Burst</a> sometimes returning wrong value for static readonly fields or static constructors.</li>
+<li>Fixed a possible source of invalid alignment, avx2 storing to stack was given a slot with the wrong alignment.</li>
+<li>Fixed <span class="tt">System.NotImplementedException: Unimplemented Instruction Extension Tail_</span> error when the code contained tail-calls</li>
+<li>Fixed wrong alignment for v128 when doing an indirect access.</li>
+<li>Fix compiler crash when compiling different assemblies that define methods or types with the exact same name and namespace</li>
+<li>Fixed using Armv9 target in the <a class="el" href="namespace_burst.html">Burst</a> Inspector not formatting the assembly.</li>
+<li>Fixed that jobs wouldn't be <a class="el" href="namespace_burst.html">Burst</a> compiled for player builds with high stripping</li>
+<li>Fixed burst not being able to find external function leading to crashing the Editor</li>
+<li>Prevented <a class="el" href="namespace_burst.html">Burst</a> emitting errors even when <a class="el" href="namespace_burst.html">Burst</a> was disabled via the <span class="tt">--burst-disable-compilation</span> command line option</li>
+<li>Under some conditions (if the error in compilation occurred in a location that didn't have valid debug information), building a player might not generate any files, and not display any errors.</li>
+<li>Fixed <span class="tt">uint</span> to <span class="tt">float</span> conversion edge-case</li>
+<li>Fixed syntax highlight missing for some ARM instructions.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md516"></a>
+Added</h2>
+<ul>
+<li>Added support for default interface methods</li>
+<li>Added ability to support hashing against different target frameworks.</li>
+<li>Added support for string interpolation in exception messages</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md517"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md518"></a>
+Changed</h2>
+<ul>
+<li>Fixed a compile-time performance regression in 1.8.7 that could result in slower <a class="el" href="namespace_burst.html">Burst</a> compilation and increased memory usage during compilation</li>
+<li>Direct call is now correctly disabled for methods that are decorated with both <span class="tt">[BurstCompile]</span> and <span class="tt">[UnmanagedCallersOnly]</span> attributes (such methods shouldn't be called directly from managed code)</li>
+<li>Add support for <span class="tt">Math.Clamp</span> (this API is available when Api Compatibility Level is set to .NET Standard 2.1)</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md519"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md520"></a>
+[1.8.7] - 2023-06-07</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md521"></a>
+Added</h2>
+<ul>
+<li>Add proper license attribution for MUSL and SLEEF libraries.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md522"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md523"></a>
+Changed</h2>
+<ul>
+<li>Changed focus for initial <a class="el" href="namespace_burst.html">Burst</a> Inspector focus to actually get the search hit in focus.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md524"></a>
+Fixed</h2>
+<ul>
+<li>Fix QNX builds using the qnxInstallationPath editor build setting</li>
+<li>Fixed an issue causing source file handles to be left open (preventing saving in an ide, if in debug scripting mode and the file is used in the burst path).</li>
+<li>Fixed an issue when targeting multiple cpu architectures (e.g. SSE2 &amp; AVX2) that under some circumstances would lead to code attempting to execute paths not designed for that cpu.</li>
+<li>Fixed an issue that caused builds to fail due to the System.Diagnostics.Tracing assembly not being found</li>
+<li>Fixed a warning that occurred when opening <a class="el" href="namespace_burst.html">Burst</a> AOT Settings while in Play Mode</li>
+<li>Fixed a hashing error that could occur when an operator overload method is used as a <a class="el" href="namespace_burst.html">Burst</a> entry point</li>
+<li>Fixed crash on linux if debug logging was enabled.</li>
+<li>Fixed "The specified path is not of a legal form (empty)" error</li>
+<li>Calls to methods with multiple <span class="tt">[Conditional]</span> attributes are now kept if any one of the conditions are met</li>
+<li>Fixed <a class="el" href="namespace_burst.html">Burst</a> implementation of <span class="tt">IntPtr.GetHashCode()</span> being different than .Net</li>
+<li>Fixed an issue that caused the digits and MidpointRounding parameters of Math.Round be ignored</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md525"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md526"></a>
+[1.8.4] - 2023-03-20</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md527"></a>
+Fixed</h2>
+<ul>
+<li>Fixed possible deadlock when compiling after domain reload</li>
+<li>Fixed incorrect codegen when having multiple <span class="tt">try</span>-<span class="tt">finally</span> blocks inside another <span class="tt">try</span>-<span class="tt">finally</span> block (for example from <span class="tt">foreach</span> loops)</li>
+<li>Domain completed stall when switching between debug/release scripting modes when burst compilation is needed for items in the new domain.</li>
+<li>Fixed "An item with the same key has already been added" compiler error that could occur when duplicate field names were present in obfuscated assemblies</li>
+<li>Fixed "Failed to find entry-points: Mono.Cecil.AssemblyResolutionException: Failed to resolve assembly" error that was displayed when <a class="el" href="namespace_burst.html">Burst</a> tried to compile an assembly that had C# compilation errors</li>
+<li>Fixed code-gen issue where side-effects before a conditional throw would be ignored</li>
+<li><a class="el" href="namespace_burst.html">Burst</a> managed breakpoints might fail to work, after a domain reload.</li>
+<li>Fixed that some changes made to versioned assemblies wouldn't get picked up and compiled by <a class="el" href="namespace_burst.html">Burst</a></li>
+<li>Fixed line highlight and register highlight not clearing when <a class="el" href="namespace_burst.html">Burst</a> Inspector settings change.</li>
+<li>Fixed <a class="el" href="namespace_burst.html">Burst</a> compilation error relating to <span class="tt">UnityEngine.Assertions.Assert.Fail</span> when doing player builds with high stripping settings</li>
+<li>Fixed a <span class="tt">BadImageFormatException</span> error that could occur in some player builds</li>
+<li>Neon intrinsics: fixed default target CPU for Arm Mac Standalone builds</li>
+<li>Fixed <span class="tt">MethodDecoderException</span> when trying to call <span class="tt">CompileFunctionPointer</span> on a nested static method</li>
+<li>Fixed incorrect pdb path for AoT dll libraries</li>
+<li>Fixed inaccurate stacktraces when throwing an exception from <a class="el" href="namespace_burst.html">Burst</a> in specific cases</li>
+<li>Fixed "An item with the same key has already been added" hashing error that could occur if obfuscators changed nested type names to have the same name and different namespaces</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md528"></a>
+Added</h2>
+<ul>
+<li>Add support for ChromeOS in <a class="el" href="namespace_unity.html">Unity</a> versions 2020.3 and 2019.4.</li>
+<li>Windows/ARM64 targeting support</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md529"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md530"></a>
+Changed</h2>
+<ul>
+<li>Changed <a class="el" href="namespace_burst.html">Burst</a> Inspector input handling so that arrow-keys can be used to select in search boxes.</li>
+<li>Made <a class="el" href="namespace_burst.html">Burst</a> Inspector's target job load asynchronous.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md531"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md532"></a>
+[1.8.3] - 2023-01-30</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md533"></a>
+Added</h2>
+<ul>
+<li>Added selection of line and highlight of selected line and selected lines register usage.</li>
+<li>FunctionPointer&lt;delegate&gt;()::Invoke usage is now checked and patched to ensure the calling convention is compatible with burst.</li>
+<li>Added SIMD smell test to the <a class="el" href="namespace_burst.html">Burst</a> Inspector, highlighting ARM or x86-64 SIMD instruction differently depending on whether they work for packed or scalar inputs.</li>
+<li>Added a toggle for filtering out ".Generated" jobs from the <a class="el" href="namespace_burst.html">Burst</a> Inspector target job list.</li>
+<li>Added a <a class="el" href="namespace_burst.html">Burst</a> AOT setting for the kind of debug information generated for player builds</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md534"></a>
+Fixed</h2>
+<ul>
+<li>Fixed AoT linking error on Windows Link based linkers when file paths (typically user names/home folders) contain non-ASCII characters.</li>
+<li>Fixed ARM vector registers not being highlighted.</li>
+<li>Fixed <a class="el" href="namespace_burst.html">Burst</a> Inspector sometimes throwing ArugmentOutOfRangeException when copying without color-tags from assembly that is colored.</li>
+<li>Fixes error when calling direct call method from background thread without having previously called a <span class="tt">BurstCompiler</span> API from the main thread</li>
+<li>Fixes "Plain Without Debug Information" outputting assembly with debug information.</li>
+<li>Fixed a hashing error that could occur when a struct implements a generic interface multiple times with different generic parameters</li>
+<li>An issue that could cause function pointers to point to the wrong burst function, if a domain reload occurs and a compilation started before the reload, completes soon after.</li>
+<li>Fixed bug in a small set of managed fallback versions of intrinsics, where the bitwise representation of float values would not be maintained</li>
+<li>Fixed player build error that could occur if the project contains an assembly whose name doesn't match the assembly filename</li>
+<li>Crashes on 32bit cpus when an entry point with byvalue paramaters was called, when using dispatch (multiple supported cpu targets).</li>
+<li>Fixed module verification errors when using overloaded functions as function pointers</li>
+<li>Fixed an issue the definition order of overloaded methods with function pointer parameters would decide which overload was actually being used</li>
+<li>Fixed compiler AccessViolationException that could occur when compiling two or more types with the same name but different source assemblies</li>
+<li><a class="el" href="namespace_burst.html">Burst</a> now updates its list of assembly paths if they change, for instance - adding packages that contain precompiled assemblies.</li>
+<li>Fixed a stall that could occur at Editor shutdown</li>
+<li>Fixed BC1361 error when trying to compile large static readonly arrays.</li>
+<li>Fixed compilation error when using <span class="tt">CompileFunctionPointer</span> from <a class="el" href="namespace_burst.html">Burst</a> in code compiled with Roslyn on .NET 7+</li>
+<li>Fixed a <span class="tt">BadImageFormatException</span> error that could occur in DOTS Runtime builds</li>
+<li>Fixed the inspector job tree view splitting jobs, with '.' in their parameters.</li>
+<li>Fixed internal compiler error when implcitly converting an array to a <span class="tt">Span</span></li>
+<li>Fixed managed fallback implementation of <span class="tt">Sse4_2.cmpestrs</span></li>
+<li>"LLVM IR Optimisation Diagnostics" tab in <a class="el" href="namespace_burst.html">Burst</a> Inspector was blank if "Native Debug Mode Compilation" was enabled; this is now fixed</li>
+<li>Fixed burst tree view items leading to wrong job if some jobs where hidden from view by filter or similar.</li>
+<li>Fixed "Callee/caller attribute ABI did not match!" error that could occur in certain player builds when calling an entry point that had at least one struct-by-value parameter</li>
+<li>Fixed namespace collision that could occur between Unity.Burst.Cecil.dll and the com.unity.nuget.mono-cecil package</li>
+<li>Enum values cast to integers in a format string previously output the enum type name; now the integer value is correctly output</li>
+<li>Fix <a class="el" href="namespace_burst.html">Burst</a> compilation on QNX Arm</li>
+<li>Fixed visual artifact in <a class="el" href="namespace_burst.html">Burst</a> Inspector, where block of enhanced code was cut at the bottom.</li>
+<li>Fixed compiler crash when invoking <span class="tt">FunctionPointer</span>s based on a generic delegate in DOTS Runtime</li>
+<li>Fixed internal compiler error that occurred when creating debug metadata from certain obfuscated dlls</li>
+<li>Fixed "Assertion failed on expression: "exception == SCRIPTING_NULL" errors and editor crash when the project path contained multi-byte Unicode characters
+
+@subsection autotoc_md535 Changed
+- Changed burst inspector source location comments from "===" to either ";" or "#" depending on the given assembly kind.
+- Changed horizontal code focus in the Burst Inspector to only scroll when branches fill more than half the space
+- Changes so target job list in the Burst Inspector is a fold-able/expandable tree view, instead of a simple list.
+- Improved how optimisation remarks are displayed in the "LLVM IR Optimisation Diagnostics" tab in Burst Inspector to make them more useful
+- Burst now only generates full debug information when "Native Debug Mode Compilation" and script debug information is enabled
+
+@subsection autotoc_md536 Removed
+
+@subsection autotoc_md537 Known Issues
+
+@section autotoc_md538 [1.8.2] - 2022-11-18
+
+
+@subsection autotoc_md539 Added
+
+@subsection autotoc_md540 Changed
+
+@subsection autotoc_md541 Fixed
+- Fixed an issue where sometimes the wrong body of an overloaded entrypoint would be used
+- Failing to link if ; in path
+- Fixed Burst being disabled in the Editor after changing script optimization mode (i.e. from Release to Debug or vica-versa)
+- C# Debug information was incorrectly ignored for methods that had multiple source files. This caused native debug information to be dropped for code generated methods, and prevented the disabling of burst for such methods when a managed break point was set in Unity 2022.2 or greater (see https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/debugging-profiling-tools.html).
+- Pointer addition of byte would incorrectly sign extend the byte, instead of zero extend.
+- lib_burst_generated.txt was not being output.
+- Player stripping levels higher than minimal would fail to build with burst if they used String.Formatters, String Copy, or BurstDiscard.
+- Fixed error when building player caused by calling an entrypoint method from within other Burst-compiled code
+- iOS/tvOS burst libraries are now using explicit min os version, as configured in player settings.
+- Fixed Burst AOT setting "Enable Optimizations" not being applied in player builds
+- Fixed player builds not being recompiled when changing only Burst AOT settings (and changing nothing else) in Unity 2022.2+
+- Error caused by the MonoDebuggerHandling.dll requiring VCRuntime to be installed.
+
+@subsection autotoc_md542 Removed
+
+@subsection autotoc_md543 Known Issues
+
+@section autotoc_md544 [1.8.1] - 2022-10-12
+
+
+@subsection autotoc_md545 Added
+- Added a custom &lt;tt&gt;lld&lt;/tt&gt; wrapper, to save package space in transit and on disk.
+- Added hover box information for assembly instructions.
+
+@subsection autotoc_md546 Changed
+- Upgraded Burst to use LLVM Version 14.0.6 by default, bringing the latest optimization improvements from the LLVM project.
+- Ensured our executables and libraries on macOS and Linux are stripped to reduce package size.
+- Changed how we handle domain reloads within Burst to avoid paying a 250ms cost on each domain reload when using Burst.
+- With the relaxation in Unity 2022.2 or newer that we can call &lt;tt&gt;CompileFunctionPointer&lt;/tt&gt; from a background thread, we now use this mechanism in Burst to handle Direct Call methods, resulting in a cost saving during Domain Reload.
+- Added a categorized index of Neon intrinsics supported in Burst to the Manual
+- Changed the documentation so that it is super clear that exceptions in player builds cause the application to abort.
+
+@subsection autotoc_md547 Fixed
+- Fixed a compiler crash that could occur with code that followed the pattern &lt;tt&gt;Debug.Log(\$"{variable}")&lt;/tt&gt;
+- Compiling with line only debug information could cause a compiler crash on certain platforms
+- PDB path associated with windows player dll had the wrong filename, resulting in broken symbols.
+- Fixed documentation issues with Neon intrinsics where the comparison operation would not match the actual one
+- Fixed bug that could occur when swapping large structs by value
+- Fixed "Unable to resolve type T. Reason: Unknown." error when accessing a field of a struct referenced via a pointer behind a reference.
+- Fixed some arm64 instructions not being labelled as instructions.
+- If burst is disabled, and an assembly is changed, burst won't recompile that assembly once burst is re-enabled.
+
+@subsection autotoc_md548 Removed
+
+@subsection autotoc_md549 Known Issues
+
+@section autotoc_md550 [1.8.0] - 2022-09-13
+
+@subsection autotoc_md551 Added
+- Added experimental atomic and/or operations to Burst.
+
+@subsection autotoc_md552 Changed
+- &lt;tt&gt;math.fmod&lt;/tt&gt; in combination with a Burst job compiled with &lt;tt&gt;FloatPrecision.Low&lt;/tt&gt; will now generate a more optimized low-precision version of the function.
+- Burst now respects the checkbox "Enable Armv9 Security Features for Arm64" in the Player settings, making Android builds generate PAC/BTI instructions if enabled.
+- In Burst AOT Settings, only the relevant CPU Architectures dropdowns for the current build target and architecture are now displayed
+- The callstack of the invalid external call is now included when reporting BC1091
+- Changed so code is focused when branch arrows are present.
+- Changed so Burst reported errors are not collapsible.
+
+@subsection autotoc_md553 Removed
+
+@subsection autotoc_md554 Fixed
+- An Internal Compiler Error that could occur if a function that requires a struct ret (due to ABI) has been discarded by other logic.
+- Fixed a bug with locally declared array variables in functions where storing &lt;tt&gt;null&lt;/tt&gt; into them could cause invalid codegen.
+- Fixed a bug in Burst player builds where sufficiently complicated Bursted code could cause a deadlock deep within LLVM.
+- Fixed that UWP builds wouldn't respect the specified "Target SDK Version" and "Visual Studio Version" settings
+- Fixed Burst inspector sometimes freezing when selecting between blocks.
+- Fixed the Burst Inspector sometimes becoming unresponsive when selecting text.
+- Fixed a race condition with the Burst log timings such that previously reported results could be included in subsequently reported timings.
+- Fixed the managed fallbacks for &lt;tt&gt;bzhi&lt;/tt&gt; and &lt;tt&gt;bextr&lt;/tt&gt; to match what the native hardware instructions do.
+- Fixed a bug in the static readonly constant expression evaluation (what we call the IL interpreter) whereby it would not truncate unsigned integers correctly.
+- Fixed that compilation would have full debug info forced on
+- Fixed incorrect code-gen when a function is both used normally and as a function-pointer
+
+@subsection autotoc_md555 Known Issues
+- The PDB path associated with the Windows Player dll is incorrect, resulting in broken symbols.
+
+@section autotoc_md556 [1.8.0-pre.2] - 2022-08-03
+
+
+@subsection autotoc_md557 Fixed
+- Fixed hashing bug that could occur when a function pointer type is used in a method parameter
+- Fix selection and copying of folded blocks
+- Fixed hashing error that could occur in the presence of multiple synthesized explicit interface implementations with the same name and signature
+- Fixed a compiler crash if users used &lt;tt&gt;__refvalue&lt;/tt&gt; or &lt;tt&gt;__arglist&lt;/tt&gt; in Burst. Neither of these are supported, but now we will nicely tell you via a compiler error that they aren't supported.
+- Fixed a compiler error when trying to acquire the function pointer of a generic function from Bursted code.
+- Fix some ARM branch instructions not being processed as such.
+- Using a function only through a C# function pointer could cause a crash
+- Whitespace changes in ILPP'd assemblies would not be detected.
+- Issue where a warning could be generated about the debug information version mismatching &lt;tt&gt;warning: ignoring debug info with an invalid version (0)&lt;/tt&gt; during link.
+- Interface methods where not being hashed correctly for constrained types, which would result in burst failing to recompile code that had changed in an implementation class.
+- Fixed a safety check bug with &lt;tt&gt;Span&lt;/tt&gt;/&lt;tt&gt;ReadOnlySpan&lt;/tt&gt; and &lt;tt&gt;Slice(start, length)&lt;/tt&gt; where if &lt;tt&gt;start&lt;/tt&gt; + &lt;tt&gt;length&lt;/tt&gt; was equal to the &lt;tt&gt;Length&lt;/tt&gt; of the original span, the safety check would incorrectly report an out-of-bounds access.
+- Linking issue when exports differ only by module.
+- Disabling Burst from the command line via &lt;tt&gt;--burst-disable-compilation&lt;/tt&gt; no longer results in Burst errors when building a player for Android
+- Corrupted binary could be produced on M1 if there was not enough space for UUID+codesign injection.
+- ;'s in paths would cause burst to fail. Note - Also requires a fix in the Editor, so if your project has ;'s in its path, the workaround is to remove the ; from the folder name for now.
+- Fixed error when compiling assemblies with spaces in their names
+- Fixed access violation race condition bug
+- Fixed a bug where static fields in generic types could in some situations be initialized with the incorrect value
+- Fixed last line in Burst Inspector not being select-able using the mouse cursor.
+- Fix error that occurs with a specific formulation of IL, using xx with an early out escape and unbalanced calculation stack. (Object reference not set to an instance of ... in CollectBlock.ToVisitOrder)
+
+@subsection autotoc_md558 Changed
+- Changed burst inspector toggles to popup menus.
+- Removed label from burst inspector popup menu into the menu itself.
+- Used explicit namespace for UnityEditor.PackageManager.Events to avoid conflicts.
+- Improved "hashing" performance. This is the part of Burst that determines whether anything significant has changed in .NET assemblies, and therefore whether that assembly to be compiled.
+- Entry point function names weren't always included in crash callstacks; now they are
+- Search pattern from previous job is not carried over to the new.
+- Changed so block of 1 line cannot be folded in the Burst Inspector
+
+@subsection autotoc_md559 Added
+- Setting a breakpoint in an attached managed debugger (Rider/VS Unity Debugger...) on a method that is burst compiled, will switch off the burst code path for that method, allowing it to be debugged as normal.
+- Added toggle to filter Unity tests on and off.
+- Assembly is now searchable either through &lt;tt&gt;CTRL + f&lt;/tt&gt; or the contex menu associated with the inspector view. Search options include case sensitivity, whole word match, and regex.
+- Intrinsic support for UnsafeUtility.IsNativeContainerType&lt;T&gt;
+- Added an actual definition for &lt;tt&gt;HPC\#&lt;/tt&gt; in the package docs.
+- Check that calling convention is correctly set to Cdecl for functions whose addresses are taken via &lt;tt&gt;ldftn&lt;/tt&gt;.
+- Added focus on current job in the burst inspector.
+- Added copy to burst inspector, which ignores underlying color tags.
+
+@subsection autotoc_md560 Removed
+
+@subsection autotoc_md561 Known Issues
+
+@section autotoc_md562 [1.8.0-pre.1] - 2022-05-06
+
+
+@subsection autotoc_md563 Changed
+- Always preserve frame pointers in Burst. This results in a neglible performance hit (less than 0.5% in benchmarks), but ensures that stack recovery for stack traces is always possible.
+- Class libraries are now built with netstandard 2.0
+- The minimum Xcode version to build for iOS, iPadOS, and tvOS with Burst is now 12.0.0.
+- Upgraded Burst to use LLVM Version 13.0.1 by default, bringing the latest optimization improvements from the LLVM project.
+- Fixed "error while hashing" message that could appear during compilation
+- Made Burst explicitly check for any compilation requests that came from &lt;tt&gt;AssemblyBuilder&lt;/tt&gt;, and do not compile these with Burst. These exist outside the normal compilation pipeline, and Burst could not support them (but we now explicitly check for that case).
+- Made Burst's ILPP 22% faster by caching dependent assemblies that the being-processed assembly uses.
+- Changed how we process static readonly fields in static constructors such that we'll allow more computational budget per static field. This fixes the case where having too many static readonly variables in a single static constructor could fail to compile, while they would work if each was in their own static constructors.
+- Collapsed block of code in burst inspector now shows the blocks first line of code.
+- Upgraded Burst to use LLVM Version 14.0.0 by default, bringing the latest optimization improvements from the LLVM project.
+- Changed the default alignment for &lt;tt&gt;SharedStatic&lt;/tt&gt;'s from 4 to 16.
+
+@subsection autotoc_md564 Added
+- Branches now highlights when you hover them.
+- Branches are clickable; directing the view to the other end of the branch when clicked.
+- Added support for the &lt;tt&gt;System.Runtime.CompilerServices.IsExternalInit&lt;/tt&gt; workaround documented &lt;a href="<a href="https://docs.unity3d.com/2022.1/Documentation/Manual/CSharpCompiler.html">https://docs.unity3d.com/2022.1/Documentation/Manual/CSharpCompiler.html</a>" &gt;here&lt;/a&gt; into Burst when used in 2022.1+.
+- Enabled keyboard navigation in the right pane of the burst inspector.
+- Added version number to debug metadata for llvm
+- Experimental support for Armv9 SVE2 CPU target for Android
+- Added a Target Arm64 CPU setting in Burst AOT Settings for Android
+
+@subsection autotoc_md565 Removed
+- Removed the requirement that &lt;tt&gt;BurstLoader&lt;/tt&gt; has to initialize &lt;tt&gt;BurstReflection&lt;/tt&gt; during a domain reload, making &lt;tt&gt;BurstLoader&lt;/tt&gt; setup 2x faster during domain reloads.
+
+@subsection autotoc_md566 Fixed
+- Error if install in build folder is used without ever using a regular build.
+- Fixed a performance regression with &lt;tt&gt;IJobParallelFor&lt;/tt&gt; where vectorization didn't happen for cases where it previously would have.
+- Fixed a compiler miscompile if you loaded a &lt;tt&gt;static readonly v128&lt;/tt&gt; and passed it straight to a function as an argument.
+- Removed implicit dependencies to pre-compile binaries in CodeGen which would otherwise cause assembly resolution conflicts.
+- Fixed a Unity 2021.2 and newer bug that manifested with UWP builds - we were using the wrong &lt;tt&gt;unityaot&lt;/tt&gt; folder in the Unity editor distribution with Burst.
+- Fixed a really subtle caching bug in the compiler where if you had a job that compiled successfully at least once, then it failed (you used managed state for instance), then you closed the editor and restarted, if the compiler threads started in precisely a strange combination then Burst might accidentally never recompile the job which failed previously.
+- Fixed potential hang in Editor when compiling a Burst entry point method that is defined in a generic class
+- Fix for the &lt;tt&gt;X.pdb: The process cannot access the file because it is being used by another process&lt;/tt&gt; issue our users were seeing. We were taking a &lt;tt&gt;FileShare.Read&lt;/tt&gt; lock, when we needed to take &lt;tt&gt;FileShare.ReadWrite&lt;/tt&gt;.
+- Fixed a bug where the compiler would reject a &lt;tt&gt;try&lt;/tt&gt;/&lt;tt&gt;finally&lt;/tt&gt; statement if it was the first thing in a method
+- Fixed a performance regression affecting some vectorization in Burst 1.7+ (LLVM 12+).
+- Inspector performance regression.
+- Improved UWP linker error message to clarify which VS components need to be installed for UWP
+- Fixed a bug that meant Burst was accidentally enabled in secondary Unity processes, including the asset import worker and out-of-process profiler (see changelog entry for 1.6.0-pre.1 for more context around this)
+- Keybindings for copy and selection did not depend on OS.
+- Right pane vertical scrollbar not always showing correctly.
+- Inspector font style changing when entering and exiting play mode.
+- Fixed access violation error that could occur when reading from a static readonly variable
+- Made &lt;tt&gt;--burst-force-sync-compilation&lt;/tt&gt; command-line option actually work
+- Fixed a bug that was exposed by a Script Updater running against the Entities tests, whereby if some sort of pre-domain-reload code (some sort of teardown like thing) called into Burst, the script updater could have caused Burst to purge valid function pointers, resulting in us trying to execute a DLL location that we had already unloaded.
+- Fixed a super rare bug whereby if you kicked off two compilations very close together (most likely when running Unity in some sort of headless build-a-player mode), Burst could throw an exception on a burst hash cache file being locked by the process.
+- Fix a bug where if you had a long running compilation and a new compilation came in, some threads in the thread pool could (if unlucky) block trying to dirty the assembly in our Burst caching infrastructure while waiting for the compilation to complete.
+- Fix a bug where codegen differences could occur when using a local vector variable that was being captured by reference and passed to a called function, versus when it wasn't.
+- Fixed an exception that could occur if you had the Burst AOT Settings menu docked in the Editor, and then did a player build. Trying to change any of the Burst AOT Settings would throw an exception (unless you closed and reopened the Burst AOT Settings).
+- Fixed a bug where we could leave background tasks around forever when we had actually completed them (could only happen if two re-compilation requests arrived close together, meaning we'd cancel the first but never report to the background tasks that we had cancelled them!).
+- Fix the Burst &lt;tt&gt;link.xml&lt;/tt&gt; output to preserve C# methods we rely on, alongside the static constructors that we preserved previously.
+- Fixed errors when working with paths containing special characters
+- Fixed a bug where if you used &lt;tt&gt;FloatMode.Fast&lt;/tt&gt; with &lt;tt&gt;math.pow&lt;/tt&gt;, where the &lt;tt&gt;y&lt;/tt&gt; argument to &lt;tt&gt;math.pow&lt;/tt&gt; was actually sourced from an integer, illegal codegen would be generated (LLVM would try and call out to &lt;tt&gt;powf&lt;/tt&gt; from the cstdlib).
+- Worked around an ordering issue with post-processing in 2020.3 and earlier by deferring the early compilation of script assemblies in the editor until the entire pipeline has completed.
+- Fixed a bug in 2022.1+ where calling &lt;tt&gt;Debug.Log&lt;/tt&gt; in a static constructor would result in a Burst failure.
+- Fixed another rare case of the file-is-locked bug where the Burst IL Post Processor could incorrectly hold a file lock on a pdb.
+- Fixed a bug when calling profiling &lt;tt&gt;CreateMarker&lt;/tt&gt; on iOS, Burst could fail at runtime saying it was unable to find &lt;tt&gt;CreateMarker__Unmanaged&lt;/tt&gt;.
+- Fixed that the &lt;tt&gt;crc32_u64&lt;/tt&gt; second parameter should have been a &lt;tt&gt;ulong&lt;/tt&gt;. Added a new &lt;tt&gt;ulong&lt;/tt&gt; variant and marked the old &lt;tt&gt;long&lt;/tt&gt; variant as &lt;tt&gt;[Obsolete]&lt;/tt&gt;.
+- Fixed a bug where using &lt;tt&gt;ReinterpretStore(someIndex, (ushort)someValue)&lt;/tt&gt; could cause an internal compiler error in Burst.
+- Fixed a potential deadlock whereby if Burst was compiling in the background (the background tasks window showed Burst in it) and a user switched from release to debug in the editor, Burst could cause a deadlock.
+- A potential issue with the debug info mover pass, that meant it only affected the first entry point in a module
+- Fixed hashing error that could occur with unbound generic type
+- Fixed a bug where if you had synchronous compilation on a job, disabled Burst compilation and entered playmode, then exited playmode, and finally re-enabled Burst compilation, a hang could occur.
+- Fixed a bug where toggling Burst enable &lt;-&gt; disable during a playmode execution using Burst, and then attaching the managed debugger, could cause an editor crash.
+- Fixed a memory leak where during hashing we'd pin a GC object and never unpin and free it.
+- Fix burst inspector sometimes stalling during loading for script reloads.
+- Fixed a super rare bug where Burst could hit an internal error with &lt;tt&gt;System.InvalidOperationException: Nullable object must have a value&lt;/tt&gt;.
+- Fixed a regression where out parameters of C# 9.0 function pointers weren't working in Burst.
+- Fixed internal compiler error when encountering a &lt;tt&gt;calli&lt;/tt&gt; with closed generics
+- Fixed bug in static constructor ordering in the presence of indirect dependencies between static constructors (i.e. static constructor -&gt; static method -&gt; static constructor) that could result in a runtime crash
+- Added workaround for "cannot dlopen until fork() handlers have completed" issue seen in macOS 12.3
+- Fixed compiler crash when trying to dynamically call &lt;tt&gt;BurstCompiler.CompileFunctionPointer&lt;/tt&gt;  in Burst-compiled code
+- Fix compiler crash when the only usage of a static field was in a formatted exception string
+- Fixed burst inspector sometimes not rendering text or rendering text on top of other text.
+- Fixed selection rendering off-by-one error at last line of each block.
+- Fixed a bug with &lt;tt&gt;Span&lt;/tt&gt; and &lt;tt&gt;ReadOnlySpan&lt;/tt&gt; types where if the indices used were not already 32-bit signed integers, an internal compiler error would occur if running with safety checks enabled.
+- Fixed a really convoluted bug that could manifest in Burst returning out of date cached libraries, which would manifest as random exceptions in Burst jobs/function-pointers (users deleting the BurstCache would workaround the bug).
+
+@subsection autotoc_md567 Known Issues
+
+@section autotoc_md568 [1.7.0-pre.2] - 2021-12-06
+
+
+@subsection autotoc_md569 Changed
+- Improved the compiler performance when doing large struct copies by detecting more cases where a load/store can be safely converted to a move-memory operation.
+- Used &lt;tt&gt;BuildReport::summary::subtarget&lt;/tt&gt; to detect headless (server) player builds on 2022.1+.
+- Don't move pdbs out of build folder for UWP builds.
+- Changed how we display the timings when a user has the &lt;strong&gt;Show Timings&lt;/strong&gt; option enabled in the Burst menu, by cleaning up and presenting the information in a (hopefully!) clearer way.
+
+@subsection autotoc_md570 Fixed
+- Fixed constant folding when using &lt;tt&gt;Hint.Likely&lt;/tt&gt; or &lt;tt&gt;Hint.Unlikely&lt;/tt&gt; intrinsics - the compiler is now able to fold these calls away entirely if the input value is constant.
+- Fixed an internal compiler error when casting a void* to a pointer-to-vector and then access the element.
+- One Definition Rule optimisation would break if multiple modules shared static constructors due to an issue with sharing code but not data.
+- Fixed type initialization error, and invalid log messages about needing to add &lt;tt&gt;[MonoPInvokeCallback]&lt;/tt&gt; to be compatible with IL2CPP, that could occur in a player build with Burst disabled
+- ILPP issue for dots runtime whereby a calli patch could generate bad IL if the first instruction replaced was the target of a branch.
+- Fixed a bug where &lt;tt&gt;fixed&lt;/tt&gt; used in conjunction with &lt;tt&gt;Span&lt;/tt&gt; or &lt;tt&gt;ReadOnlySpan&lt;/tt&gt; would cause a compiler error.
+- Fixed a codegen issue with Unity 2021.2 and &lt;tt&gt;System.Buffer.MemoryCopy&lt;/tt&gt;.
+- Fixed compiler crash when trying to load a generic static field
+- Fixed "UnityException: CompileAsyncDelegateMethod can only be called from the main thread." error that was logged in standalone players when the first invocation of a direct-call method was from a background thread
+- Fix the very rare bug whereby the Burst Hash Cache files (*.bhc) will sometimes cause an exception in the editor log.
+- Fixed the documentation to note that the &lt;tt&gt;System.Runtime.CompilerServices&lt;/tt&gt; attributes &lt;tt&gt;[CallerLineNumber]&lt;/tt&gt;, &lt;tt&gt;[CallerMemberName]&lt;/tt&gt;, and &lt;tt&gt;[CallerFilePath]&lt;/tt&gt; work with Burst, with the restriction that you cannot format the &lt;tt&gt;[CallerMemberName]&lt;/tt&gt;, and &lt;tt&gt;[CallerFilePath]&lt;/tt&gt; strings yet.
+- Fixed an issue where with optimizations disabled, using half conversions on platforms that did not natively support half could cause linker errors.
+- Fix error when trying to Direct Call a method belonging to a private nested type
+- Fixed some memory leaks between the C# and C++ parts of the Burst compiler, and added some CI tooling to ensure this doesn't happen again.
+- Fixed a bug where our &lt;tt&gt;[BurstCompile]&lt;/tt&gt; job finding code would not find methods in generic base classes in places where we knew the concrete-generic type (for instance &lt;tt&gt;struct Foo\&lt;T\&gt; { [BurstCompile] struct MyJob : IJob { void Execute() {} } }&lt;/tt&gt;, &lt;tt&gt;struct Bar\&lt;T\&gt; : Foo\&lt;T\&gt; {}&lt;/tt&gt;, and &lt;tt&gt;struct Haz : Bar\&lt;int\&gt; {}&lt;/tt&gt; - we wouldn't find the concrete &lt;tt&gt;Foo\&lt;int\&gt;\::MyJob&lt;/tt&gt; in Burst).
+- Fixed editor crash when trying to debug a DirectCalled method
+- Fixed a bug whereby complicated &lt;tt&gt;try&lt;/tt&gt;/&lt;tt&gt;finally&lt;/tt&gt; nesting could trip up the compiler.
+- Fixed a bug in the fixed string processing whereby we'd miscompile a fixed string that was within a struct inside a &lt;tt&gt;SharedStatic&lt;/tt&gt; (depending on how it was used).
+- Fixed a bug in the entry-point finding code whereby we wouldn't correctly resolve a nested generic struct's job if it was within a concrete generic class that was outwith the root assembly set.
+
+@subsection autotoc_md571 Added
+- Ability to partially select and copy text in the burst inspector.
+- Right clicking the inspector view reveals a context menu, allowing selecting all text and copying selection.
+
+@subsection autotoc_md572 Removed
+- The button "Copy to Clipboard".
+- Removed Newtonsoft.Json as a dependency
+
+@subsection autotoc_md573 Known Issues
+
+@section autotoc_md574 [1.7.0-pre.1] - 2021-10-21
+
+
+@subsection autotoc_md575 Fixed
+- Fixed an issue where dsym folders would be not be copied across to the DoNotShip folder when building a multi architecture build for mac os.
+- Fixed bug that could lead to "Failed to resolve method with name hash X and signature hash Y" compiler error
+- Fixed compiler error that occurred when calling &lt;tt&gt;BurstCompiler.CompileFunctionPointer&lt;/tt&gt; with a delegate type that was decorated with a custom attribute
+- Linking would fail on non-Windows platforms if the project folder contained a single-quote
+- Fixed the "could not find path tempburstlibs" error message popping up when building for Android and Burst is disabled
+- Fixed bug that could lead to incorrect compiler errors for calls to &lt;tt&gt;GetHashCode&lt;/tt&gt; from a generic type
+- Incorrect conversions between signed and unsigned vector types
+- Detects if the simulator is the target of a player build for iOS/tvOS and disables burst, as at present this configuration is not supported by burst.
+- &lt;tt&gt;[SkipLocalsInit]&lt;/tt&gt; now correctly doesn't zero-initialize variables in a function (previously it only avoided zero-initialization of &lt;tt&gt;stackalloc&lt;/tt&gt; created variables).
+- Fixed a bug whereby sometimes some LLVM intrinsics could be incorrectly marked as unused causing invalid codegen with calls to &lt;tt&gt;math.acos&lt;/tt&gt;.
+- The cache for pdbs was becoming stale. This caused issues with wrong source information being shown in the inspector, and potentially wrong debug information being generated for bursted code in editor sessions.
+- Missing output messages from some tools when a failure occurred.
+- Fixed a bug with &lt;tt&gt;sqrt_ps&lt;/tt&gt; for 128-bit types where it would crash the compiler.
+- &lt;tt&gt;ArgumentOutOfRangeException&lt;/tt&gt; due to &lt;tt&gt;_renderBlockStart&lt;/tt&gt; and &lt;tt&gt;_renderBlockEnd&lt;/tt&gt; not being probably initialized when all blocks were above the scroll position.
+- Arrows were rendered even though they were not within the current view.
+- Made it save the actual line numbers for code blocks in &lt;tt&gt;_blockLine&lt;/tt&gt; even when the block is below the view.
+- Removed the starting newline character when copying, and when rendering plain assembly kind.
+- Fixed a bug where a player build that had multiple assemblies that had structs declared with the same name and same contents but different &lt;tt&gt;[BurstCompile]&lt;/tt&gt; methods in them, would wrongly only pick a single struct to Burst-compile.
+- Crash in burst module initialization if multiple modules are compiled and then linked in a different order.
+- Fixed our platform documentation to accurately reflect the current supported platforms with Burst.
+- Inspector menu buttons were seen as available, even though they were not supported, when viewing i.e. .NET IL code.
+- Burst will now handle projects special characters in their project-name
+- Static constructor sorting didn't account for dependencies within calls' IL
+- Static constructor cyclic checks also included method calls when this is not necessary and fails on burst runtime logging code
+- Fixed the &lt;a href="<a href="https://forum.unity.com/threads/burst-error-bc0102-unexpected-internal-compiler-error.1173977/">https://forum.unity.com/threads/burst-error-bc0102-unexpected-internal-compiler-error.1173977/</a>" &gt;bug @tertle found&lt;/a&gt; when loading a vector from a struct pointer that is marked as &lt;tt&gt;in&lt;/tt&gt;.
+- Fixed that implicitly casting a scalar half to a vector type would cause the compiler to crash
+- Fixed a crash that could occur when loading legacy Burst AOT settings and then entering play mode
+- Stack overflow caused by placement of alloca under certain function transforms.
+- linker errors on macOS due to long command lines, swapped to using filelists for inputs.
+- Fixed issue that could cause bcl.exe to fail with an exit code of 1 but not output any compilation errors
+
+@subsection autotoc_md576 Added
+- Added support for DOTS Runtime running / loading .Net Core assemblies.
+- Added support for &lt;tt&gt;System.Span\&lt;T\&gt;&lt;/tt&gt; and &lt;tt&gt;System.ReadOnlySpan\&lt;T\&gt;&lt;/tt&gt; within Bursted code. These types are not allowed as entry-point arguments.
+- Folding/collapsing code in inspector
+- Branch arrows (can be switched off)
+- Automatically collapses less important blocks of disasssembly (focuses on code).
+- Burst now generates a link.xml automatically to avoid issues with stripping causing missing symbols at runtime from static constructor usage.
+
+@subsection autotoc_md577 Removed
+- Removed the &lt;tt&gt;Use Platform SDK Linker&lt;/tt&gt; option from Burst AOT Settings for desktop platforms.
+- Removed the player build &lt;tt&gt;BC1370&lt;/tt&gt; exception warnings as users only found them annoying.
+
+@subsection autotoc_md578 Changed
+- Made the cost of initializing Direct Call methods for execution 33x faster during domain reload.
+- Upgraded Burst to use LLVM Version 12.0.0 by default, bringing the latest optimization improvements from the LLVM project.
+- Change the optimization pipeline to run the loop unroller &lt;em&gt;exclusively&lt;/em&gt; after the loop vectorizer. This improves codegen in a lot of cases (mostly because the SLP vectorizer is unable to vectorize all the code that the loop unroller could have).
+- Intrinsics: Neon vst1 APIs are now fully supported
+- Made &lt;tt&gt;fmod&lt;/tt&gt; and floating-point modulus use a faster algorithm to improve performance.
+- Made the &lt;tt&gt;SharedStatic&lt;/tt&gt; initialization cost during static constructor initialization time 13.3x faster.
+- Improved iteration time by triggering Burst compilation immediately after .NET assemblies have been compiled
+- Upgraded the minimum supported PS4 SDK to 8.00.
+- Updated the minimum Xcode required for Burst to compile for the Apple iOS/tvOS plaforms to 12.0.
+- Burst now waits for all threads to complete on shutdown, rather than performing a thread abort, as that could lead to a race condition with Dispose.
+
+@subsection autotoc_md579 Known Issues
+- Burst does not work correctly when a project has a semi-colon in its name
+
+@section autotoc_md580 [1.6.0-pre.3] - 2021-07-27
+
+
+@subsection autotoc_md581 Fixed
+- Fixed a bug where methods with the same name and namespace, but in different assemblies, could resolve to the wrong method.
+- Burst no longer logs a warning when opening the standalone Profiler
+- Fixed an &lt;tt&gt;UnauthorizedAccessException&lt;/tt&gt; that could occur when using Burst in players built for the macOS App Sandbox
+- Fixed a bug that could cause an incorrect compilation error when using a primitive type as a generic argument in a static method entry point
+- Crash due to member function debug information on tvOS.
+- Fix documentation to make clear that &lt;tt&gt;ref&lt;/tt&gt; / &lt;tt&gt;out&lt;/tt&gt; parameters are supported on &lt;tt&gt;[BurstDiscard]&lt;/tt&gt; methods.
+- Fixed a &lt;tt&gt;NullReferenceException&lt;/tt&gt; in the Burst compiler when multi-dimensional arrays were used. The compiler now produces a correct error message telling users that multi-dimensional arrays are not supported by Burst.
+- Fixed DOTS Runtime Job Marshalling behaviour to properly handle marshalling generic Job types when not all closed forms of the generic type require marshalling.
+- Fixed a Burst package warning in our editor compiler integration with respect to &lt;tt&gt;BuildOptions.EnableHeadlessMode&lt;/tt&gt;.
+- Fixed small race which could cause an unexpected exception when finishing a standalone compilation task.
+- Building for Apple Silicon architecture on macOS would produce a universal binary, now it behaves correctly.
+- tvOS/iOS and other statically linked platforms would fail to burst compile if the burst compiled code contained references to functions that were &lt;tt&gt;[DllImport("__Internal")]&lt;/tt&gt;, due to a mismatch in calling convention.
+- Fixed a bug whereby if you had &lt;tt&gt;\$"{too} {many} {fixed} {string} {formatted} {arguments}"&lt;/tt&gt; in a string formatter, Burst wouldn't be able to correctly understand how to transform this for the purposes of logging or fixed-string construction.
+- Fixed where &lt;tt&gt;Unity.Burst.CompilerServices.Constant.IsConstantExpression&lt;/tt&gt; is evaluated to be later in the compilation pipeline, to let it catch more constant expressions (for instance post-inlining).
+- Rare non zero return code from bcl after successfully building..
+- Only check assembly cache when the main-thread is requesting some Burst code - meaning that kicking off eager compilation is 1.6x faster than before.
+- &lt;tt&gt;stackalloc byte[]&lt;/tt&gt; with an array initializer was previously only supported when the &lt;tt&gt;stackalloc&lt;/tt&gt; size was 8 or less. Sizes greater than 8 are now supported.
+- Fixed an error that could occur with the form "System.InvalidOperationException: Could not find `burst.initialize` function in library 'SomeLibrary'"
+- Fixed incorrect runtime behavior that could occur when casting a pointer to a generic type
+- Fixed a bug where stackalloc's could be wrongly hoisted out of loops.
+- Added [Preserve] attribute to prevent stripping a compiler service call
+- Fixed incorrect compiler error that could occur when casting a pointer to a generic type and then calling a method with generic parameters
+- Fixed incorrect compiler error that could occur with explicit-layout structs when setting a &lt;tt&gt;Size&lt;/tt&gt; smaller than the natural struct size
+
+@subsection autotoc_md582 Added
+- Universal (Apple Silicon + X64) versions of extra build tools
+- Add Android x86_64 and re-enable x86 support
+- Added support for having &lt;tt&gt;[MarshalAs(UnmanagedType.U1)]&lt;/tt&gt; or &lt;tt&gt;[MarshalAs(UnmanagedType.I1)]&lt;/tt&gt; on a &lt;tt&gt;bool&lt;/tt&gt; external function parameter.
+- Neon intrinsics: Added vst1* experimental APIs
+- Added a global player build setting to let users specify the default optimization choice for Burst.
+- Native support for Apple Silicon.
+- Added support for &lt;tt&gt;StructLayoutAttribute.Pack&lt;/tt&gt;
+- Additional notes about &lt;tt&gt;BurstCompiler.CompileFunctionPointer\&lt;T\&gt;&lt;/tt&gt; regarding; avoid wrapping in another open generic method, and interoperability with IL2CPP.
+
+@subsection autotoc_md583 Removed
+- Removed the &lt;tt&gt;Enable Safety Checks&lt;/tt&gt; option for player builds, since it didn't actually enable safety checks in containers, which are editor only in Unity.
+
+@subsection autotoc_md584 Changed
+- Changed how we link object files for iOS and tvOS platforms such that Burst will now create the object file and hand it off to XCode for linking only.
+- Assembly-level attributes (such as &lt;tt&gt;[assembly: RegisterGenericJobType]&lt;/tt&gt;) are now scanned for generic job types to compile
+- Fixed a regression that caused eager-compilation at Editor startup to be slower than it should have been
+- &lt;tt&gt;math.f16tof32&lt;/tt&gt; now uses hardware intrinsics where available (AVX2 / NEON).
+- &lt;tt&gt;half&lt;/tt&gt; to &lt;tt&gt;float&lt;/tt&gt; or &lt;tt&gt;double&lt;/tt&gt; vector conversions now produce more optimal codegen.
+- Burst Inspector now remembers scroll position between domain reloads
+- Changed how we schedule Burst eager compilation threads. Previously we'd spawn at most 8 of the threads, and only allow 2 to make progress while in the Editor (to ensure the editor UX/UI was as responsive as possible). Instead we now spawn &lt;tt&gt;number_of_cores - 1&lt;/tt&gt; threads at a lower thread priority, ensuring that any computing power slack can be consumed to speed up Burst compilation. On a 24 core machine this resulted in 2.5x reduction in time taken for Burst to fully compile a large project.
+- Fixed a potential error related to duplicate symbols when calling &lt;tt&gt;BurstCompiler.CompileFunctionPointer&lt;/tt&gt; from inside Burst code
+- Improved performance of checking the cache to see if methods have already been compiled
+- For player builds : lib_burst_generated.txt, pdbs (in non development mode) and dysm folders are now placed into a xxx_BurstDebugInformation_DoNotShip folder alongside the data folder, this is to ensure it is easy to remove the files that you should not ship with your player.
+
+@subsection autotoc_md585 Known Issues
+- Code that previously mixed managed or non-&lt;tt&gt;readonly&lt;/tt&gt; static fields with Burst compiled code will now fail to compile.
+
+@section autotoc_md586 [1.6.0-pre.2] - 2021-04-15
+
+
+@subsection autotoc_md587 Fixed
+- Fixed obsolete API in package code.
+
+
+@section autotoc_md588 [1.6.0-pre.1] - 2021-04-14
+
+
+@subsection autotoc_md589 Changed
+- Start 1.6 release cycle
+- Changed how we resolve function references in the compiler to improve resolving an existing function reference by 3x.
+- Improve how we handle generic resolution in Cecil to cache the strictly resolved generic types and save a bunch of time in the compiler.
+- Exception strings no longer contain the entry-point name of the job/function-pointer that caused the throw. This change was required because the Burst compiler has to produce deterministic results from any given compile, which is fundamentally opposed to per-entry-point function derivations.
+- Changed how SLEEF global variables for trig functions are pulled into Burst to reduce duplications.
+- Changed how exceptions throw types and messages are stored in our Burst binaries to reduce binary size.
+- Constant array data is now named after the static field it belongs to in assembly
+- Upgraded Burst to use LLVM Version 11.0.1 by default, bringing the latest optimization improvements from the LLVM project.
+- The &lt;tt&gt;Unity.Burst.Intrinsics.Common.Pause&lt;/tt&gt; intrinsic is no longer experimental.
+- DOTS Runtime shares the logging code path with the general case
+- Armv8.2 Neon intrinsics are now fully supported
+- Disable threading within the &lt;tt&gt;lld&lt;/tt&gt; linker instances we use for in-editor and desktop cross compilation, because we're already threading seperate process instances of &lt;tt&gt;lld&lt;/tt&gt; and it results in lot of OS context switching.
+- Tweaked how the IL Post Processed 'direct call' Burst function pointers are compiled so that the compilation is deferred until they are needed (previously we'd enqueue them all for compilation on a domain reload).
+- Changed Burst minimum editor version to 2019.4
+- Use rpmalloc as our native allocator on Windows to speed up concurrently executing LLVM work.
+- When Burst has previously compiled a method, and neither the assembly containing that method nor any of that assembly's dependencies have changed, it was possible after a domain reload for the Mono version of the method to be used for a short time before being replaced by the Burst version. This has now been improved such that the Burst version will be used immediately.
+- Improved iteration speed by reducing the time it takes for Burst to check if any Burst-compilable code has changed
+- Change our link step to not use response files if the command line was smaller enough, saving the cost of the round-trip to the disk.
+- Made half &lt;-&gt; float / double conversions use native hardware where possible (Arm or AVX2 targets).
+- In order to prevent conflicts with the main Unity process, Burst is now inactive in secondary Unity processes, including the asset import worker and out-of-process profiler. This means that in those secondary processes, code that would normally be Burst-compiled will now run under Mono. In a future release of Burst, we hope to lift this restriction and allow Burst-compiled code to run in secondary Unity processes.
+
+@subsection autotoc_md590 Fixed
+- Fixed a bug in LLVM that it would incorrectly convert some memset -&gt; memcpy if both pointers derived from the same memory address, and where one indexed into the 0th element of the pointer.
+- Fixed namespace issue triggering a warning in the editor.
+- Made &lt;tt&gt;math.shuffle&lt;/tt&gt; compile correctly when non-constant &lt;tt&gt;ShuffleComponent&lt;/tt&gt;'s are used.
+- Fixed alignment issues associated with xxHash3 on ArmV7 (case 1288992)
+- Fixed managed implementation of sub_ss intrinsic
+- Fixed a bug that occurred when an explicitly laid out struct was used by a &lt;tt&gt;dup&lt;/tt&gt; instruction, which caused an internal compiler error.
+- Fixes DOTS Runtime JobProducer Bursting code to support JobProducers with multiple generic arguments, complex job wrapper and generic jobs.
+- Fixed a bug where if a user had defined multiple implicit or explicit casts, the compiler could resolve to the wrong cast.
+- Fixed a bug where explicitly casting from an int to &lt;tt&gt;IntPtr&lt;/tt&gt; would not sign extend the value.
+- String interpolation issues when using Dots / Tiny runtime.
+- Fixed managed implementations of blend_epi32 and mm256_blend_epi32 intrinsics on Mono
+- Fixed a bug where loading from a vector within a struct, that was got from a &lt;tt&gt;NativeArray&lt;/tt&gt; using an indexer, would cause the compiler to crash.
+- Fixed an issue where Burst would erroneously error on &lt;tt&gt;BurstCompile.CompileFunctionPointer &lt;/tt&gt; calls when building for the DOTS Runtime.
+- clang segmentation fault on iOS when member function debug information was emitted, it is disabled for this platform now.
+- Intrinsics: Neon - fixed vget_low and vget_high producing suboptimal code
+- Private &lt;tt&gt;[BurstCompile]&lt;/tt&gt; methods no longer throw &lt;tt&gt;MethodAccessException&lt;/tt&gt;
+- Fixed a bug where the Burst post-processing for direct call would cause duplicate function pointers to be compiled, wasting compile time in the editor and caused an Editor launch stall.
+- Corrected 'Enable safety checks tooltip&lt;tt&gt;.
+- Fixed a minor debug information bug where built-in types with methods (like &lt;/tt&gt;System.Int32&lt;tt&gt;) would generate incorrect debug information.
+- Fixed a very obscure bug where if you had a function-pointer that was called from another function-pointer of job, and that function-pointer happened to be compiled in a player build in the same bucket as the caller, and the no-alias cloning analysis identified that it could clone the original function-pointer to enable more aliasing optimizations, it could create a duplicate symbol error.
+- Revert to internal linkage for Android X86 (32bit) to ensure ABI compliance.
+- Fixed compilation errors when targeting Arm CPUs and using some of the Intel intrinsics
+- Added PreserveAttribute to prevent the internal log from being stripped in il2cpp builds.
+- IL Function Pointer Invoke Transformation updated to handle transforms that affect instructions that are the destination of a branch.
+- IL Function Pointer Invoke Transformation now uses correct runtime library for dots runtime.
+- Fixed compilation errors when targeting Intel CPUs and using some of the Arm Neon intrinsics
+- Fixed a bug where eager-compilation could pick up out-of-date global Burst menu options for compiling.
+- Fixed a bug where the progress bar would report double the amount of pending compile jobs if a user changed the Burst options while background compilation was going on.
+- Fixed some intrinsics not checking target CPU against required CPU, so it was possible to use some intrinsics without an IsXXXSupported check
+- Fixed a bug where having any &lt;/tt&gt;[DllImport]&lt;tt&gt; in a class that used the Direct Call mechanism could result in an illegal &lt;/tt&gt;CompileFunctionPointer&lt;tt&gt; call being produced by our post processor.
+- Fixed an issue where if a user used a math function (like &lt;/tt&gt;cos&lt;tt&gt;, &lt;/tt&gt;sin&lt;tt&gt;, etc) then LLVM would preserve both the scalar and vector implementations even if they were trivially dead, causing us to inject otherwise dead functions into the resulting binary.
+- PDB debug information for instance methods that also used struct return were incorrect.
+- When generating Line Table only debug information, an unreachable could occur due to a missing check.
+- Fixed the 1.5 restriction that Direct Call methods can only be called from the main thread, now they work when called from any thread.
+- Internal Compiler Error if a call was discarded (via BurstDiscard for example), but the callsites required an ABI transform e.g. struct return.
+- Fixed a bug with using multiple &lt;/tt&gt;IsXXXSupported&lt;tt&gt; intrinsics in the same boolean condition would fail.
+- Broken link restored for known issues with debugging and profiling.
+- The Direct Call injected delegate now has a unique suffix to avoid type-name clashes.
+- Dots runtime function pointer transform has been simplified, making it less brittle and fixing some bad IL generation.
+- Fixed crashes on 32 bit windows when calling function pointers from managed code and using IL2CPP.
+- Fixed a possible DivideByZeroException due to race condition in TermInfoDriver initialization code.
+- Fixed a bug where the multi-CPU dispatcher (used for player builds targetting multiple CPU architectures) could end up generating invalid instructions.
+- Gracefully handle failing to find a particular assembly in the ILPP to prevent an ICE.
+- function calls using in modifiers on blittable structs where being treated as non blittable.
+- crash when extracting sequence point information for error reporting/debug information generation.
+- Direct Call extension methods that only differ on argument types are now supported (previously Burst's &lt;/tt&gt;AssemblyLoader` would complain about multiple matches).
+- Fixed a regression where managed static fields, in static constructors that would also be compiled with Burst, could cause a compile time failure for mixing managed and unmanaged state.
+
+@subsection autotoc_md591 Added
+- Added links to blog posts from the burst team to the Burst documentation.
+- Intrinsics: Neon - Added support for basic vld1 APIs
+- Can now call BurstCompiler.CompileFunctionPointer() in Burst code
+- Add support for the C# 8.0 construct &lt;tt&gt;default(T) is null&lt;/tt&gt; to Burst by transforming the generated &lt;tt&gt;Box&lt;/tt&gt; + 'is the box non-null?' at compile time.
+- Make it possible to get a pointer to UTF-8 encoded string literal data in HPC# code via StringLiteral.UTF8()
+- Add an &lt;tt&gt;OptimizeFor&lt;/tt&gt; option to &lt;tt&gt;[BurstCompile]&lt;/tt&gt;, allowing users to say they want fast code, small code, or fastly compiled code.
+- Known issue with Windows Native Debuggers and Dll numbers + workarounds.
+- Assemblies are now allowed to have an &lt;tt&gt;[assembly: BurstCompile()]&lt;/tt&gt; attribute to let users specify compile options that should apply assembly wide (for instance &lt;tt&gt;[assembly: BurstCompile(OptimizeFor = OptimizeFor.FastCompilation)]&lt;/tt&gt;).
+- Automatically add [UnmanagedFunctionPointer(CallingConvention.Cdecl)] to any delegates that are used for BurstCompiler.CompileFunctionPointer&lt;&gt;() or error if the delegate has the attribute and it is not Cdecl.
+- Source location metadata into hash cache.
+- Added support for having &lt;tt&gt;[return: MarshalAs(UnmanagedType.U1)]&lt;/tt&gt; or &lt;tt&gt;[return: MarshalAs(UnmanagedType.I1)]&lt;/tt&gt; on a &lt;tt&gt;bool&lt;/tt&gt; return external function.
+- An additional warning about delegates being used by &lt;tt&gt;BurstCompiler.CompileFunctionPointer&lt;/tt&gt; that are not decorated as expected. In most cases, Burst will automatically add the C-declaration attribute in IL Post Processing, but if the usage of CompileFunctionPointer is abstracted away behind an open generic implementation, then Burst will not be able to automatically correct the delegate declaration, and thus this warning will fire.
+- new &lt;tt&gt;burst_TargetPlatform_EmbeddedLinux&lt;/tt&gt;
+- new &lt;tt&gt;AotNativeLinkEmbeddedLinux&lt;/tt&gt; for EmbeddedLinux
+- Added a new &lt;tt&gt;OptimizeFor&lt;/tt&gt; mode &lt;tt&gt;Balanced&lt;/tt&gt;. This becomes the default optimization mode, and trades off slightly lower maximum performance for much faster compile times.
+- Added experimental half precision floating point type f16
+- Added experimental support for half precision floating point Arm Neon intrinsics
+
+@subsection autotoc_md592 Removed
+
+@subsection autotoc_md593 Known Issues
+- Direct Call methods only execute using Burst after an initial execution of them on the main-thread.
+
+@subsection autotoc_md594 Notes
+- BurstAotCompiler integration done using reflection and raw values, since the platform will only be officially available for 2021.2+ and we special customer versions (shadow branches) for 2019.4 &amp; 2020.3.
+- AotNativeLinkEmbeddedLinux implementation gets the toolchain from environment vars.
+
+@section autotoc_md595 [1.5.0-pre.2] - 2020-12-01
+
+@subsection autotoc_md596 Added
+
+@subsection autotoc_md597 Removed
+
+@subsection autotoc_md598 Changed
+
+@subsection autotoc_md599 Fixed
+- Fixed a failure on linux builds where libdl.so cannot be found.
+
+@subsection autotoc_md600 Known Issues
+
+
+@section autotoc_md601 [1.5.0-pre.1] - 2020-11-26
+
+
+@subsection autotoc_md602 Added
+- New intrinsics &lt;tt&gt;Hint.Likely&lt;/tt&gt;, &lt;tt&gt;Hint.Unlikely&lt;/tt&gt;, and &lt;tt&gt;Hint.Assume&lt;/tt&gt; to let our users tell the compiler some additional information which could aid optimization.
+- New &lt;tt&gt;Bmi1&lt;/tt&gt; and &lt;tt&gt;Bmi2&lt;/tt&gt; x86 intrinsics. These are gated on &lt;tt&gt;AVX2&lt;/tt&gt; being supported to keep the feature sets that Burst has to support small.
+- You can now select explicit x86/x64 architecture SIMD target for Universal Windows Platform.
+- Added Apple silicon and macOS universal binaries support to Burst.
+- An extra alloca hoisting step to ensure that allocas that occur deep within functions are correctly allocated in the function entry block (which LLVM requires for optimization purposes).
+- Added the missing &lt;tt&gt;clflush&lt;/tt&gt; intrinsic to the SSE2 intrinsics.
+- An optimize-for-size option to bcl to let select users focus the optimization passes to create smaller executables.
+- Added a &lt;tt&gt;Unity.Burst.CompilerServices.SkipLocalsInitAttribute&lt;/tt&gt; attribute that lets developers tell the compiler that stack-allocations do not need to be zero initialized for a given function.
+- Added a new attribute &lt;tt&gt;[IgnoreWarnings]&lt;/tt&gt; that can be specified per method, for users that really want the compiler to be quiet.
+- Support for RDMA, crypto, dotprod Armv8.2-A Neon intrinsics
+- An error message if attempting to BurstCompiler.CompileFunctionPointer() on a multicast delegate, since this is not supported in Burst.
+- Burst detects removal of the burst package in 2020.2 editors and beyond, and displays a dialog asking the user to restart the editor.
+- Added a pass that will classify and remove dead loops for improved code generation.
+- Add support for using &lt;tt&gt;ValueTuple&lt;/tt&gt; types like &lt;tt&gt;(int, float)&lt;/tt&gt; from within Burst code, as long as the types do not enter or escape the Burst function boundaries.
+- Added a new intrinsic &lt;tt&gt;Unity.Burst.CompilerServices.Constant.IsConstantExpression&lt;/tt&gt; that will return true if an expression is known to be a compile-time constant in Bursted code.
+- Added support for PlayMode / Desktop Standalone Players to load additional burst compiled libraries for use in Modding.
+- Add support for calling Burst code directly from C# without using function pointers.
+- In Unity 2020.2 and above, you can now call &lt;tt&gt;new ProfilerMarker("MarkerName")&lt;/tt&gt; from Burst code
+- Add a compiler error if a &lt;tt&gt;ldobj&lt;/tt&gt; tries to source its address to load from a non-pointer/non-reference. C# frontends should never generate this pattern, but we did see it with code generation.
+
+@subsection autotoc_md603 Fixed
+- Fixed an issue where a function with a &lt;tt&gt;[return: AssumeRange(13, 42)]&lt;/tt&gt; could lose this information during inlining.
+- Storing into &lt;tt&gt;Lo64&lt;/tt&gt; or &lt;tt&gt;Hi64&lt;/tt&gt; would cause a compiler exception.
+- Hitting a &lt;tt&gt;ldobj&lt;/tt&gt; of a pointer-to-vector would incorrectly load the vector rather than the pointer.Burst only generates unaligned stores.
+- Fix that the parameter to mm256_set1_epi8 should be a byte instead of a char.
+- Fix sqrt_ss would fail because LLVM version later than 6 changed the encoding.
+- Fixed the comi*_ss intrinsics which would generate invalid code.
+- Pdb location for player builds is now linked relative to the final lib_burst_generated.dll, this allows the crashdump utility to access the symbols and provide better callstacks.
+- Support negative intrinsics features checks to enable usage like &lt;tt&gt;if (!IsSse41Supported) return;&lt;/tt&gt;.
+- Clean up linker temp response files on successful build
+- Wasm ABI issue with pointers
+- Pause intrinsic in wasm (ignored)
+- fmod expansion to sleef for wasm
+- The AOT option for disabling optimizations now actually disables optimizations in player builds.
+- Fix a bug where a &lt;tt&gt;static readonly&lt;/tt&gt; variable that was a &lt;tt&gt;System.Guid&lt;/tt&gt; would result in an internal compiler error.
+- bitmask intrinsic was broken on non intel platforms
+- When "Enable Compilation" was unchecked in the Burst menu, Burst was incorrectly enabled after an Editor restart. This is now fixed.
+- Fixed a bug where a cloned function (say through no-aliasing propagation cloning) would re-create any global variables used rather than use the original variable.
+- If the only reference to an external function was discarded, don't attempt to add it to the burst initialisation block (which caused on ICE on prior versions).
+- Fixed a case where extracting a &lt;tt&gt;FixedString4096&lt;/tt&gt; from a parent struct could cause very slow compile times.
+- Fixed a poor error message when a generic unsupported type (like a class or an auto-layout struct) combined with an unsupported managed array (like &lt;tt&gt;(int, float)[]&lt;/tt&gt;) wouldn't give the user any context on where the code went wrong.
+- Fixed a bug where if you used an enum argument to a function to index into a fixed array, a codegen error would occur.
+- If targeting multiple iOS architectures, produce a combined burst library containing all architectures, this fixes "New Build System" on xcode version 12.
+- Static method parameters are now validated correctly during eager-compilation
+- Fixed permissions error when running lipo tool to combine libraries.
+- Fixed compiler error that could occur when calling a &lt;tt&gt;[BurstDiscard]&lt;/tt&gt; method with an argument that is also used elsewhere in the method
+- Fixed an issue that could prevent the Editor from shutting down
+- Fixed an internal compiler error when nested managed static readonly arrays were used (produces a proper Burst error instead now).
+- Fixed a bug whereby for platforms that require us to write intermediate LLVM bitcode files, UTF paths would be incorrectly handled.
+- Correctly marked Neon intrinsics vmovn_high_* as ArmV7 and not ArmV8
+- On windows, the pdb location for burst cached dll's now points to the correct path. Native debuggers attached to the Editor should now locate the symbols without requiring adding the Library/Burst/JitCache folder to the symbol search.
+- Re-enabled &lt;tt&gt;BC1370&lt;/tt&gt; exception warnings but only for player builds.
+- Fixed a bug whereby if you had an assembly that was guarded by &lt;tt&gt;UNITY_SERVER&lt;/tt&gt;, Burst would be unable to find the assembly when &lt;tt&gt;Server Build&lt;/tt&gt; was ticked.
+- When "Enable Compilation" was unchecked in the Burst menu, Burst was incorrectly enabled after an Editor restart. This is now &lt;em&gt;actually&lt;/em&gt; fixed.
+- &lt;tt&gt;static readonly&lt;/tt&gt; array with enum elements would cause the compiler to crash.
+- Fixed managed (reference) implementation of mm256_cvttps_epi32 (case 1288563)
+- Debug information for instance methods is now correctly scoped. This means instance variables can now be inspected correctly.
+
+@subsection autotoc_md604 Removed
+- Removed support for XCode SDKs less than version 11.0.0.
+- Removed support for platform SDKs that used the older LLVM 6 and 7 in the codebase to significantly simply our code and reduce the package size.
+
+@subsection autotoc_md605 Changed
+- Minimum SDK version for iOS/tvOS increased to 13. See https://developer.apple.com/news/?id=03042020b for details.
+- When using "Executable Only" build type on Universal Windows Platform, Burst will now only generate code for a single CPU architecture that you're building for.
+- The inliner heuristics have been modified to inline less functions, but improve compile times and reduce executable size.
+- The minimum XCode SDK required to compile for iOS/iPadOS/tvOS is now 11.0.0.
+- We now copy the lib_burst_generated.pdb into the root of the player build (in addition to being alongside the lib_burst_generated.dll), this allows the unity crash handler to resolve the callstacks from burst code.
+- Made Arm Neon intrinsics fully supported (removed the guarding define)
+- Improved eager-compilation performance
+- Improved Burst Inspector loading time
+- Improved Burst initialization time
+- If an argument to a BurstDiscard method is discarded, and that argument is a method call, then a warning is now generated to indicate the function call no longer happens.
+- Changed how struct-return and indirect arguments use stack allocations to significantly reduce stack usage and improve performance in these cases.
+- Improved the compilers ability to deduce dead memory operations (memcpy, memset, etc) to improve performance.
+- Improved error message seen when scheduling Burst compilation during domain reload
+- Open-generic static methods are not supported by Burst, but they were previously visible in Burst Inspector - they are now hidden
+- In Burst Inspector, the "Safety Checks" checkbox now defaults to unchecked
+- Burst Inspector no longer loses the search filter and "Safety Checks" option after domain reload
+- Changed exception throws to allow more vectorization chances surrounding them.
+- Upgraded Burst to use LLVM Version 11.0.0 by default, bringing the latest optimization improvements from the LLVM project.
+- Eager-compilation is now cancelled when script compilation starts, to prevent spurious errors related to recompiled assemblies
+- Strings can now be passed between methods within Burst code. Previously, string literals used for e.g. &lt;tt&gt;Debug.Log&lt;/tt&gt; calls could only appear in the same method where they were used; now the string literal can be in one method, and passed to another method via a &lt;tt&gt;string&lt;/tt&gt; parameter.
+- Transitioning from burst disabled to burst enabled in editor, will perform a re-initialise of some internal state in use by Direct Call methods.
+- Improved the performance of in-compiler hashing by 1.2x.
+- Improved our hashing performance some more by re-using fixed-sized buffers in the compiler to improve eager-compilation / warm-cache costs by 1.25x.
+- Improved compile time by ~37% on big projects by reworking some core compiler infrastructure.
+
+@subsection autotoc_md606 Known Issues
+- In player builds, exceptions can report the wrong job that they were thrown from.
+
+@section autotoc_md607 [1.4.0-preview.4] - 2020-08-17
+
+
+@subsection autotoc_md608 Fixed
+- Fixed a bug introduced in 1.4.0-preview.3 that prevented some &lt;tt&gt;UnityEngine.Debug&lt;/tt&gt; methods (such as &lt;tt&gt;DrawLine&lt;/tt&gt;) from being called
+- Fixed compiler error when explicit-layout struct contains a field which is itself an empty struct
+- Fixed a bug that if you used more than four arguments in a function &lt;em&gt;declared within another function&lt;/em&gt;, and then implicitly captured a few variables, Burst would map the variables wrongly.
+
+@subsection autotoc_md609 Changed
+- Bump com.unity.mathematics to 1.2.1 version
+
+@section autotoc_md610 [1.4.0-preview.3] - 2020-08-06
+
+
+@subsection autotoc_md611 Added
+- VS 2017 support for platform that needs it.
+- Added first batch of Arm Neon intrinsics. Currently, only ArmV8 (AArch64) targets are supported. The supported intrinsics include all ArmV7 and ArmV8 ones.
+
+@subsection autotoc_md612 Removed
+
+@subsection autotoc_md613 Changed
+- In versions of Unity older than 2019.3, changing the following options in the Burst menu now requires the Editor to be restarted: Enable Compilation, Safety Checks, and Native Debug Mode Compilation. In versions of Unity older than 2019.3, previously-compiled methods will not be recompiled after changing those options, which could lead to undefined behavior where methods may or may not be compiled with the correct options. This change removes that possibility.
+- Improved performance of "eager-compilation" (scheduling compilation immediately after assemblies are changed) by cancelling queued eager-compilation when entering play mode with Synchronous Compilation unchecked
+- Improved performance of eager-compilation by not eager-compiling test assemblies
+- Asserts that are currently discarded no longer discard arguments with potential side effects.
+
+@subsection autotoc_md614 Fixed
+- We no longer attempt to replace the debug metadata multiple times for a given export.
+- Fixed a subtle codegen bug that could occur when the target is an Arm or AArch64 CPU with vectors of 3 elements.
+- Inspector slow down when scrolling/moving the window on large listings.
+- Fixed a bug where a &lt;tt&gt;stfld&lt;/tt&gt; into an element of a vector could deduce the wrong type for the underlying vector.
+- Fixed a potential error when running the linker with a failure on lld command.
+- If path to the package contained spaces, then native command execution could fail. This would manifiest as weird errors with 'lld' or 'vswhere' or other native tools.
+- Fixed Debug.Log by re-enabling it when used in function pointers or jobs.
+- Fixed errors when opening Inspector with a non-public Execute method on a job producer type
+
+@subsection autotoc_md615 Known Issues
+
+@section autotoc_md616 [1.4.0-preview.2] - 2020-07-01
+
+
+@subsection autotoc_md617 Added
+
+@subsection autotoc_md618 Removed
+
+@subsection autotoc_md619 Changed
+- The Burst Inspector no longer uses JIT compilation. The code it shows is now compiled the same way as for editor / player usage.
+- Warnings are hidden in the inspector view
+
+@subsection autotoc_md620 Fixed
+- Fixed potential error that could occur when unloading cached libraries
+
+@subsection autotoc_md621 Known Issues
+
+@section autotoc_md622 [1.4.0-preview.1] - 2020-06-26
+
+
+@subsection autotoc_md623 Added
+- Experimental support for tvOS
+- Add intrinsics support for &lt;tt&gt;AtomicSafetyHandle.NewStaticSafetyId\&lt;T\&gt;&lt;/tt&gt;
+- A new option &lt;tt&gt;[BurstCompile(DisableSafetyChecks = true)]&lt;/tt&gt; that allows per job or function-pointer disabling of safety checks. This allows users to have blessed code run fast always.
+- Improve Editor experience by scheduling compilation immediately after assemblies are changed, instead of waiting until Play Mode is entered.
+- Improved our aliasing detection to allow &lt;tt&gt;DynamicBuffer&lt;/tt&gt; structs to be easily vectorizable.
+- Added a compiler warning for any use of throwing an exception from a method &lt;strong&gt;not guarded by&lt;/strong&gt; &lt;tt&gt;[Conditional("ENABLE_UNITY_COLLECTIONS_CHECKS")]&lt;/tt&gt;. Since exceptions in Burst are only supported in the editor, this provides a useful warning to users who may be relying on try/catch behaviors for control-flow which is not supported in final game builds.
+- Burst compilation status is now displayed in the Background Tasks window in Unity 2020.1 and above (click the spinner in the bottom-right of the Editor to open this window).
+- Upgraded Burst to use LLVM Version 10.0.0 by default, bringing the latest optimization improvements from the LLVM project.
+- Add support for try/finally and using/foreach for IDisposable patterns.
+- Add &lt;tt&gt;BurstCompiler.IsEnabled&lt;/tt&gt; API.
+- Add syntax colouring for LLVM IR and Optimized IR panels in the inspector
+
+@subsection autotoc_md624 Removed
+
+@subsection autotoc_md625 Changed
+- Made the compiler better at constant-folding complex static readonly constructors.
+- Bursted DOTS Runtime Jobs are now decorated with &lt;tt&gt;[NativePInvokeCallback]&lt;/tt&gt; instead of &lt;tt&gt;[MonoPInvokeCallback]&lt;/tt&gt; which could generate callback wrappers which could cause native code to inadvertently interop with the managed VM.
+- The Burst menu-item &lt;tt&gt;Safety Checks&lt;/tt&gt; has been changed to a modal choice of &lt;tt&gt;Off&lt;/tt&gt;, &lt;tt&gt;On&lt;/tt&gt;, and &lt;tt&gt;Force On&lt;/tt&gt;. &lt;tt&gt;Force On&lt;/tt&gt; will overwrite any user job or function-pointer with &lt;tt&gt;DisableSafetyChecks = true&lt;/tt&gt;. To avoid users falling into the consistent trap of having &lt;tt&gt;Safety Checks&lt;/tt&gt; set to &lt;tt&gt;Off&lt;/tt&gt;, any reload of the Editor will issue a warning telling the user that &lt;tt&gt;Safety Checks&lt;/tt&gt; have been reset to &lt;tt&gt;On&lt;/tt&gt;.
+- Use platform provided memory intrinsics for iOS, tvOS, WASM, and console platforms.
+- Updated Cross Compilation Tooling To LLVM 10
+- The command line option &lt;tt&gt;--burst-disable-compilation&lt;/tt&gt; is now disabling entirely Burst, including the AppDomain.
+
+@subsection autotoc_md626 Fixed
+- Fixed incorrect struct layout for certain configurations of explicit-layout structs with overlapping fields
+- Fixes a caching issue where stale cached libraries may have been used if a project was copied to a different folder, or Unity was upgraded to a newer version
+- Burst will now error if a &lt;tt&gt;cpblk&lt;/tt&gt; was used to copy into a &lt;tt&gt;[ReadOnly]&lt;/tt&gt; parameter or field.
+- Fixed a bug where the mm256_cvtepi32_ps intrinsic would crash the compiler.
+- Fixed a bug with constant expressions that could cause a compile-time hang.
+- Debug symbols are now output when using the native toolchain on mac.
+- Sleef fallback to scalar float for WASM.
+- ABI struct ret/by val for trivial aggregates for WASM is now respected.
+- Fixed a bug with float/double vector constructors of &lt;tt&gt;Unity.Mathematics&lt;/tt&gt; that take half or half vector parameters.
+- Debug information for anonymous structs could be created partially multiple times for the same type.
+- Filter symbol warnings to prevent them reaching logs.
+- Fixed an issue where UNITY_DOTSPLAYER builds not building for NET_DOTS would be unable to compile do to references to UnityEngine.
+- Fixed handling of conversion from signed integer to pointer which caused issues as discovered by Zuntatos on the forums.
+- Allow to call &lt;tt&gt;[BurstCompile]&lt;/tt&gt; functions from other &lt;tt&gt;[BurstCompile]&lt;/tt&gt; functions
+- IntPtr.Size now correctly returns int32 size (rather than UInt64) - fixes an assert.
+- Burst package has been upgraded popup could fire erroneously under shutdown conditions.
+- Fixed an issue preventing player builds to succeed when burst compilation is disabled.
+- Debug symbols for function names on some platforms are no longer hashes.
+- Job Entry point symbols should now reflect the job name and type rather than a hash in callstacks/native profilers
+- Job entry points without symbols now use the Execute location rather than pointing to unknown/unknown
+- Dwarf symbols from multiple modules (e.g. multithreaded AOT compilation) now have correct compilation unit information.
+
+@subsection autotoc_md627 Known Issues
+- Output of &lt;tt&gt;Debug.Log&lt;/tt&gt; is temporarily disabled in Burst Function Pointers/Jobs to avoid a deadlock on a domain reload. A fix for the Unity editor is being developed.
+
+@section autotoc_md628 [1.3.0-preview.12] - 2020-05-05
+
+
+@subsection autotoc_md629 Fixed
+- Fix an issue when changing the base type of an enum that would not trigger a new compilation and would keep code previously compiled, leading to potential memory corruptions or crashes.
+- Fixed a subtle AArch64 ABI bug with struct-return's (structs that are returned via a pointer argument) that was found by our partners at Arm.
+- Fix an issue that was preventing Debug.Log to be used from a Job in Unity 2020.1
+
+@subsection autotoc_md630 Changed
+- JIT cache is now cleared when changing Burst version
+
+@section autotoc_md631 [1.3.0-preview.11] - 2020-04-30
+
+
+@subsection autotoc_md632 Fixed
+- Fix potentially different hashes returned from &lt;tt&gt;BurstRuntime.GetHashCode32/64&lt;/tt&gt; if called from different assemblies.
+- Fixed an issue where Burst was misidentifying F16C supporting CPUs as AVX2.
+- SDK level bumped for MacOS to ensure notarization requests are compatable.
+- Fixed a typo &lt;tt&gt;m256_cvtsi256_si32&lt;/tt&gt; -&gt; &lt;tt&gt;mm256_cvtsi256_si32&lt;/tt&gt; and &lt;tt&gt;m256_cvtsi256_si64&lt;/tt&gt; -&gt; &lt;tt&gt;mm256_cvtsi256_si64&lt;/tt&gt;.
+- The compiler is now generating a proper compiler error if a managed type used directly or indirectly with SharedStatic&lt;T&gt;.
+- Fixed a bug where implicitly stack allocated variables (&lt;tt&gt;var foo = new Foo();&lt;/tt&gt;) in Burst were not being zero initialized, so any field of the variable that was not initialized during construction would have undefined values.
+- Fix potential race condition when accessing on-disk library cache
+- Fixed a bug where Burst was sometimes producing invalid code for iOS 11.0.3+.
+
+@subsection autotoc_md633 Added
+- Added support for &lt;tt&gt;System.Threading.Volatile&lt;/tt&gt; methods &lt;tt&gt;Read&lt;/tt&gt; and &lt;tt&gt;Write&lt;/tt&gt;, and for the &lt;tt&gt;System.Threading.Thread.MemoryBarrier&lt;/tt&gt; method.
+- New FMA X86 intrinsics. These are gated on AVX2 support, as our AVX2 detection requires the AVX2, FMA, and F16C features.
+- &lt;tt&gt;UnsafeUtility.MemCmp&lt;/tt&gt; now maps to a Burst optimal memory comparison path that uses vectorization.
+
+@subsection autotoc_md634 Removed
+
+@subsection autotoc_md635 Changed
+
+@subsection autotoc_md636 Known Issues
+
+@section autotoc_md637 [1.3.0-preview.10] - 2020-04-21
+
+
+@subsection autotoc_md638 Fixed
+- Fix negation of integer types smaller than 32 bits.
+- Fixed a bug where optimizer generated calls to &lt;tt&gt;ldexp&lt;/tt&gt; would be incorrectly deduced when deterministic floating-point was enabled.
+- Swapped private linkage for internal linkage on functions, this fixes duplicate symbol issues on some targets.
+- variable scopes should now encompass the whole scope.
+- variables in parent scopes should now be present in locals windows.
+- Native plugin location for windows has changed in 2019.3.9f1. If you are on an older version of 2019.3 you will need to upgrade for burst to work in windows standalone players.
+- Added an error if &lt;tt&gt;Assert.AreEqual&lt;/tt&gt; or &lt;tt&gt;Assert.AreNotEqual&lt;/tt&gt; were called with different typed arguments.
+- Fixed a bug where doing an explicit cast to a &lt;tt&gt;Unity.Mathematics&lt;/tt&gt; vector type where the source was a scalar would fail to compile.
+- Fix issue when converting large unsigned integer values to double or float.
+- Fix an invalid value returned from a conditional where one type is an int32 and the other type would be a byte extended to an int32.
+- Button layout of disassembly toolbar tweaked.
+- Copy to clipboard now copies exactly what is shown in the inspector window (including enhancements and colours if shown)
+- AVX2 now generates the correct AVX2 256-bit wide SLEEF functions instead of the FMA-optimized 128-bit variants.
+
+@subsection autotoc_md639 Added
+- Anonymous types are now named in debug information.
+- XCode/LLDB debugging of burst compiled code is now possible on macOS.
+- Added some extra documentation about how to enable &lt;tt&gt;AVX&lt;/tt&gt;/&lt;tt&gt;AVX2&lt;/tt&gt; in AOT builds, and how we gate some functionality on multiple instruction sets to reduce the combinations exposed underneath.
+- Optimized external functions (like &lt;tt&gt;UnsafeUtility.Malloc&lt;/tt&gt;) such that if they are called multiple times the function-pointer address is cached.
+- Add support for string interpolation (e.g &lt;tt&gt;\$"This is a string with an {arg1} and {arg2}"&lt;/tt&gt;).
+- Add support for Debug.Log(object) (e.g &lt;tt&gt;Debug.Log("Hello Log!");&lt;/tt&gt;).
+- Add support for string assignment to Unity.Collections.FixedString (e.g &lt;tt&gt;"FixedString128 test = "Hello FixedString!"</li>
+</ul>
+<p>).</p><ul>
+<li>If burst detects a package update, it now prompts a restart of <a class="el" href="namespace_unity.html">Unity</a> (via dialog). The restart was always required, but could be missed/forgotten.</li>
+<li>Better error message for unsupported static readonly arrays.</li>
+<li>Link to native debugging video to Presentations section of docs.</li>
+<li>Fixes a bug where <span class="tt">in</span> parameters of interfaces could sometimes confuse the <a class="el" href="namespace_burst.html">Burst</a> inspector.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md640"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md641"></a>
+Changed</h2>
+<ul>
+<li>iOS builds for latest xcode versions will now use LLVM version 9.</li>
+<li><a class="el" href="namespace_burst.html">Burst</a> AOT Settings now lets you specify the exact targets you want to compile for - so you could create a player with SSE2, AVX, and AVX2 (EG. <em>without</em> SSE4 support if you choose to).</li>
+<li>Improve speed of opening <a class="el" href="namespace_burst.html">Burst</a> Inspector by up to 2x.</li>
+<li>Provided a better error message when structs with static readonly fields were a mix of managed/unmanaged which <a class="el" href="namespace_burst.html">Burst</a> doesn't support.</li>
+<li>Tidied up the known issues section in the docs a little.</li>
+<li>Enhanced disassembly option has been expanded to allow better control of what is shown, and allow a reduction in the amount of debug metadata shown.</li>
+<li>Load <a class="el" href="namespace_burst.html">Burst</a> Inspector asynchronously to avoid locking-up Editor.</li>
+<li>Documented restrictions on argument and return types for DllImport, internal calls, and function pointers.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md642"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md643"></a>
+[1.3.0-preview.9] - 2020-04-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md644"></a>
+Changed</h2>
+<ul>
+<li>Improved the compile time performance when doing <span class="tt">UnsafeUtility.ReadArrayElement</span> or <span class="tt">UnsafeUtility.WriteArrayElement</span> with large structs.</li>
+<li>Made some compile-time improvements when indirect arguments (those whose types are too big that they have to be passed by reference) that reduced our compile time by 3.61% on average.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md645"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a bug where storing a <span class="tt">default</span> to a pointer that was generic would cause an LLVM verifier error.</li>
+<li>Fixed an obscure bug in how struct layouts that had dependencies on each other were resolved.</li>
+<li>Fixed a bug as found by <a href="https://forum.unity.com/members/iamarugin.737579/">@iamarugin</a> where LLVM would introduce ldexp/ldexpf during optimizations that LLD would not be able to resolve.</li>
+<li>Fixed a bug where the compiler would not promote sub-integer types to integers when doing scalar-by-vector math (like multiplies).</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md646"></a>
+Added</h2>
+<ul>
+<li>Variable scopes are now constructed for debug information.</li>
+<li>A new setting to <a class="el" href="namespace_burst.html">Burst</a> AOT Settings that allows debug symbols to be generated even in a non development standalone build.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md647"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md648"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md649"></a>
+[1.3.0-preview.8] - 2020-03-24</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md650"></a>
+Added</h2>
+<ul>
+<li>Double math builtins in <span class="tt"><a class="el" href="namespace_unity_1_1_mathematics.html">Unity.Mathematics</a></span> now use double vector implementations from SLEEF.</li>
+<li>Fixed a bug with <span class="tt">lzcnt</span>, <span class="tt">tzcnt</span>, and <span class="tt">countbits</span> which when called with <span class="tt">long</span> types could produce invalid codegen.</li>
+<li>New F16C X86 intrinsics. These are gated on AVX2 support, as our AVX2 detection requires the AVX2, FMA, and F16C features.</li>
+<li>Add user documentation about generic jobs and restrictions.</li>
+<li>Add new experimental compiler intrinsics <span class="tt">Loop.ExpectVectorized()</span> and <span class="tt">Loop.ExpectNotVectorized()</span> that let users express assumptions about loop vectorization, and have those assumptions validated at compile-time.Enabled with <span class="tt">UNITY_BURST_EXPERIMENTAL_LOOP_INTRINSICS</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md651"></a>
+Changed</h2>
+<ul>
+<li>Changed how <span class="tt"><a class="el" href="namespace_unity_1_1_mathematics.html">Unity.Mathematics</a></span> functions behave during loop vectorization and constant folding to substantially improve code generation.</li>
+<li>Our SSE4.2 support was implicitly dependent on the POPCNT extended instruction set, but this was not reflected in our CPU identification code. This is now fixed so that SSE4.2 is gated on SSE4.2 and POPCNT support.</li>
+<li>The popcnt intrinsics now live in their own static class <span class="tt">Unity.Burst.Intrinsics.Popcnt</span> to match the new F16C intrinsics.</li>
+<li>Deferred when we load the SLEEF builtins to where they are actually used, decreasing compile time with <a class="el" href="namespace_burst.html">Burst</a> by 4.29% on average.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md652"></a>
+Fixed</h2>
+<ul>
+<li>Fix an issue where a generic job instance (e.g <span class="tt">MyGenericJob&lt;int&gt;</span>) when used through a generic argument of a method or type would not be detected by the <a class="el" href="namespace_burst.html">Burst</a> compiler when building a standalone player.</li>
+<li><span class="tt">[DlIimport("__Internal")]</span> for iOS now handled correctly. Fixes crashes when using native plugins on iOS.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md653"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md654"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md655"></a>
+[1.3.0-preview.7] - 2020-03-16</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md656"></a>
+Added</h2>
+<ul>
+<li>Added additional diagnostic for tracking Visual Studio location failures.</li>
+<li>Added an override to bypass link.exe discovery under certain conditions.</li>
+<li>Added a ldloc -&gt; stloc optimization which improves compile times.</li>
+<li>More documentation on function pointers, specifically some performance considerations to be aware of when using them.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md657"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md658"></a>
+Changed</h2>
+<ul>
+<li>Updated tools used for determining Visual Studio locations.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md659"></a>
+Fixed</h2>
+<ul>
+<li>Embedded Portable PDB handling improved.</li>
+<li>Fixed a case where our load/store optimizer would inadvertently combine a load/store into a cpblk where there were intermediate memory operations that should have been considered.</li>
+<li>Fixed a bug where the no-alias analysis would, through chains of complicated pointer math, deduce that a no-alias return (like from <span class="tt">UnsafeUtility.Malloc</span>) would not alias with itself.</li>
+<li>No longer log missing MonoPInvokeCallbackAttribute when running tests.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md660"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md661"></a>
+[1.3.0-preview.6] - 2020-03-12</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md662"></a>
+Added</h2>
+<ul>
+<li>Experimental support for <span class="tt">Prefetch</span>, allowing users to request from the memory subsystem pointer addresses they intend to hit next. This functionality is guarded by the <span class="tt">UNITY_BURST_EXPERIMENTAL_PREFETCH_INTRINSIC</span> preprocessor define.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md663"></a>
+Fixed</h2>
+<ul>
+<li>Fix SSE <span class="tt">maxps</span> intrinsic would emit <span class="tt">maxss</span></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md664"></a>
+[1.3.0-preview.5] - 2020-03-11</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md665"></a>
+Fixed</h2>
+<ul>
+<li><span class="tt">MemCpy</span> and <span class="tt">MemSet</span> performance regression in <a class="el" href="namespace_burst.html">Burst</a> 1.3.0.preview.4 (as was spotted by <a href="https://forum.unity.com/members/33474/">@tertle</a>) has been fixed.</li>
+<li>Fix a crash when loading assembly with PublicKeyToken starting with a digit.</li>
+<li>Better handling of MonoPInvokeCallbackAttribute: no check for the namespace, don't print message on <a class="el" href="namespace_mono.html">Mono</a> builds.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md666"></a>
+Changed</h2>
+<ul>
+<li>Improved error message for typeof usage.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md667"></a>
+[1.3.0-preview.4] - 2020-03-02</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md668"></a>
+Added</h2>
+<ul>
+<li>Debug information for types.</li>
+<li>Debug information for local variables.</li>
+<li>Debug information for function parameters.</li>
+<li>Support for <span class="tt">fixed</span> statements. These are useful when interacting with <span class="tt">fixed</span> buffers in structs, to get at the pointer data underneath.</li>
+<li>A fast-math optimization for comparisons that benefits the <a href="https://github.com/nxrighthere/BurstBenchmarks">BurstBenchmarks</a> that <a href="https://forum.unity.com/members/nxrighthere.568489/">nxrightthere</a> has put together.</li>
+<li>DOTS Runtime Jobs will now generate both <span class="tt">MarshalToBurst</span> and <span class="tt">MarshalFromBurst</span> functions when job structs in .Net builds are not blittable.</li>
+<li>DOTS Runtime Job Marshalling generation is now controllable via the commandline switch <span class="tt">--generate-job-marshalling-methods</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md669"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md670"></a>
+Changed</h2>
+<ul>
+<li>Made it clear that the <a class="el" href="namespace_burst.html">Burst</a> aliasing intrinsics are tied to optimizations being enabled for a compilation.</li>
+<li>Restore unwind information for all builds.</li>
+<li>Print a info message if compiling a function pointer with missing MonoPInvokeCallback attribute (this can lead to runtime issues on IL2CPP with <a class="el" href="namespace_burst.html">Burst</a> disabled). The message will be converted to a warning in future releases.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md671"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an issue where DOTS Runtime generated job marshalling functiosn may throw a <span class="tt">FieldAccessException</span> when scheduling private and internal job structs.</li>
+<li>Fix a bug that prevented entry point method names (and their declaring type names) from having a leading underscore.</li>
+<li>vector/array/pointer debug data now utilizes the correct size information.</li>
+<li>DOTS Runtime will now only generate job marshaling functions on Windows, as all other platforms rely on <a class="el" href="namespace_mono.html">Mono</a> which does not require job marshalling.</li>
+<li><span class="tt">ldobj</span> / <span class="tt">stobj</span> of large structs being copied to stack-allocated variables could cause compile-time explosions that appeared to the user like the compiler had hung. Worked around these by turning them into memcpy's underneath in LLVM.</li>
+<li>Don't always use latest tool chain on certain platforms.</li>
+<li>Fix a crash when compiling job or function pointer that was previously cached, then unloaded, then reloaded.</li>
+<li>Fixed compiler error in array element access when index type is not <span class="tt">Int32</span>.</li>
+<li>Fix <span class="tt">set1_xxx</span> style x86 intrinsics generated compile time errors.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md672"></a>
+Known Issues</h2>
+<ul>
+<li>Native debugger feature is only available on windows host platform at the moment.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md673"></a>
+[1.3.0-preview.3] - 2020-02-12</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md674"></a>
+Changed</h2>
+<ul>
+<li>Changed how the inliner chooses to inline functions to give the compiler much more say over inlining decisions based on heuristics.</li>
+<li>Updated AOT requirements to be clearer about cross platform support.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md675"></a>
+Added</h2>
+<ul>
+<li>1.3.0-preview.1 added support for desktop cross compilation, but the changelog forgot to mention it.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md676"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md677"></a>
+Fixed</h2>
+<ul>
+<li><a class="el" href="namespace_documentation.html">Documentation</a> for the command line options to unity contained extra -</li>
+<li><a class="el" href="namespace_burst.html">Burst</a> now exclusively uses the <span class="tt">&lt;project&gt;/Temp/Burst</span> folder for any temporary files it requires during compilation.</li>
+<li>Fix a regression that could break usage of native plugins.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md678"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md679"></a>
+[1.3.0-preview.2] - 2020-02-10</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md680"></a>
+Fixed</h2>
+<ul>
+<li>Fix the error <span class="tt"><a class="el" href="namespace_burst.html">Burst</a> failed to compile the function pointer Int32 DoGetCSRTrampoline()</span> that could happen when loading a project using <a class="el" href="namespace_burst.html">Burst</a> with <a class="el" href="namespace_burst.html">Burst</a> disabled.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md681"></a>
+[1.3.0-preview.1] - 2020-02-04</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md682"></a>
+Added</h2>
+<ul>
+<li>Enabled lower precision variants for <span class="tt">pow</span>, <span class="tt">sin</span>, <span class="tt">cos</span>, <span class="tt">log</span>, <span class="tt">log2</span>, <span class="tt">log10</span>, <span class="tt">exp</span>, <span class="tt">exp2</span>, and <span class="tt">exp10</span> when <span class="tt">BurstPrecision.Low</span> is specified.</li>
+<li>Add CPU minimum and maximum target for desktop platforms Standalone Player builds.</li>
+<li>Append a newline between IRPassDiagnostic messages, fixes pass diagnostics readability in the inspector.</li>
+<li>Add a new attribute <span class="tt">[AssumeRange]</span> that lets users tag function parameters and returns of an integer type with a constrained range that the value is allowed to inhabit. <span class="tt">NativeArray.Length</span> and <span class="tt">NativeSlice.Length</span> have automatic detection that the property is always positive. This assumption feeds into the optimizer and can produce better codegen.</li>
+<li>Enabled support for DOTS Runtime SharedStatics. Due to the nature of DOTS Runtime, only the generic versions of <span class="tt">SharedStatic.GetOrCreate&lt;TContext&gt;</span> are supported.</li>
+<li>Add a new intrinsic <span class="tt">Unity.Burst.Intrinsics.Common.Pause()</span> which causes a thread pause to occur for the current thread. This is useful for spin-locks to stop over contention on the lock.</li>
+<li>Add some new <a class="el" href="namespace_burst.html">Burst</a> aliasing deductions to substantially improve the aliasing detection in the compiler, resulting in better codegen.</li>
+<li>Add syntax colouring to WASM.</li>
+<li>Add <span class="tt">IsCreated</span> to the <span class="tt">FunctionPointer</span> class to allow checks on whether a given function pointer has a valid (non null) pointer within it.</li>
+<li>Add AVX2 intrinsics</li>
+<li>Add some missing intrinsics from SSE, SSE2 and AVX</li>
+<li>Added explicit X86 intrinsics from SSE-AVX2.</li>
+<li>AVX and AVX2 CPU targets are now available for x64 AOT builds.</li>
+<li>Allow handle structs (structs with a single pointer/integer in them) to be inside another struct as long as they are the single member, as these require no ABI pain.</li>
+<li>Added support for <span class="tt">Interlocked.Read</span>.</li>
+<li>Added a new intrinsic <span class="tt">Common.umul128</span> which lets you get the low and high components of a 64-bit multiplication. This is especially useful for things like large hash creation.</li>
+<li>Menu option to allow all burst jobs to be more easily debugged in a native debugger.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md683"></a>
+Removed</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md684"></a>
+Changed</h2>
+<ul>
+<li>Upgraded <a class="el" href="namespace_burst.html">Burst</a> to use LLVM Version 9.0.1 by default, bringing the latest optimization improvements from the LLVM project.</li>
+<li>Upgraded <a class="el" href="namespace_burst.html">Burst</a> to use SLEEF 3.4.1, bringing the latest performance improvements to mathematics functions as used in <a class="el" href="namespace_burst.html">Burst</a>.</li>
+<li>Improved <a class="el" href="namespace_burst.html">Burst</a> performance in the Editor by caching compiled libraries on-disk, meaning that in subsequent runs of the Editor, assemblies that haven't changed won't be recompiled.</li>
+<li>Update the documentation of <span class="tt">CompileSynchronously</span> to advise against any general use of setting <span class="tt">CompileSynchronously = true</span>.</li>
+<li>Take the <span class="tt">Unity.Burst.CompilerServices.Aliasing</span> intrinsics out of experimental. These intrinsics form part of our strategy to give users more insight into how the compiler understands their code, by producing compiler errors when user expectations are not met. Questions like <em>'Does A alias with B?'</em> can now be definitively answered for developers. See the <b>Aliasing Checks</b> section of the <a class="el" href="namespace_burst.html">Burst</a> documentation for information.</li>
+<li>Align disassembly instruction output in Inspector (x86/x64 only).</li>
+<li>Renamed <span class="tt">m128</span> to <span class="tt">v128</span>.</li>
+<li>Renamed <span class="tt">m256</span> to <span class="tt">v256</span>.</li>
+<li>BurstCompile(Debug=true), now modifies the burst code generator (reducing some optimisations) in order to allow a better experience in debugging in a native debugger.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md685"></a>
+Fixed</h2>
+<ul>
+<li>Fix a bug where floating-point != comparisons were using a stricter NaN-aware comparison than was required.</li>
+<li>Fix inspector for ARMV7_NEON target.</li>
+<li>Fix some issues with <a class="el" href="namespace_burst.html">Burst</a> AOT Settings, including changing the settings to be Enable rather than Disable.</li>
+<li>Fix an issue where WASM was being incorrectly shown in the disassembly view.</li>
+<li>Fixed an issue where if the <span class="tt">Unity.Entities.StaticTypeRegistry</span> assembly wasn't present in a build, <a class="el" href="namespace_burst.html">Burst</a> would throw a <span class="tt">NullReferenceException</span>.</li>
+<li>Fix issue with type conversion in m128/m256 table initializers.</li>
+<li>Fix inspector source line information (and source debug information) from being lost depending on inlining.</li>
+<li>Fix occasional poor code generation for on stack AVX2 variables.</li>
+<li>Fix <span class="tt">xor_ps</span> was incorrectly downcoded.</li>
+<li>Fix reference version of AVX2 64-bit variable shifts intrinsics.</li>
+<li>Fix reference version of SSE4.2 <span class="tt">cmpestrz</span>.</li>
+<li>Fix bitwise correctness issue with SSE4.2/AVX explicit rounding in CEIL mode for negative numbers that round to zero (was not correctly computing negative zero like the h/w).</li>
+<li>Fix calls to <span class="tt">SHUFFLE</span>, <span class="tt">SHUFFLE_PS</span> and similar macro-like functions would not work in non-entrypoint functions.</li>
+<li>Source location information was offset by one on occasions.</li>
+<li>Debug metadata is now tracked on branch/switch instructions.</li>
+<li>Fix poor error reporting when intrinsic immediates were not specified as literals.</li>
+<li>Fix basic loads and stores (using explicit calls) were not unaligned and sometimes non-temporal when they shouldn't be.</li>
+<li>Removed the <span class="tt">&lt;&gt;c__DisplayClass_</span> infix that was inserted into every <span class="tt">Entities.ForEach</span> in the <a class="el" href="namespace_burst.html">Burst</a> inspector to clean up the user experience when searching for Entities.ForEach jobs.</li>
+<li>Fix background compile errors accessing X86 <span class="tt">MXCSR</span> from job threads.</li>
+<li>Fix possible <span class="tt">ExecutionEngineException</span> when resolving external functions.</li>
+<li>Fix linker output not being propagated through to the Editor console.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md686"></a>
+Known Issues</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md687"></a>
+[1.2.0-preview.9] - 2019-11-06</h1>
+<ul>
+<li>Fix compilation requests being lost when using asynchronous compilation.</li>
+<li>Prevent <a class="el" href="namespace_burst.html">Burst</a> compilation being toggled on while in play mode, either via "Enable Compilation" menu item or programmatically - was previously technically possible but produced unpredictable results.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md688"></a>
+[1.2.0-preview.8] - 2019-11-01</h1>
+<ul>
+<li>Fix a <span class="tt">NullReferenceException</span> happening in a call stack involving <span class="tt">CecilExtensions.IsDelegate(...)</span>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md689"></a>
+[1.2.0-preview.7] - 2019-10-30</h1>
+<ul>
+<li>Many improvements to the Inspector:<ul>
+<li>New assembly syntax colorization!</li>
+<li>Fix issue with menu settings being modified when opening the Inspector.</li>
+<li>Make compile targets left pane resizable.</li>
+<li>Fix vertical scrollbar size.</li>
+<li>Add automatic refresh when selecting a target to compile.</li>
+</ul>
+</li>
+<li>Fix an issue where <span class="tt">ref readonly</span> of a struct type, returned from a function, would cause a compiler crash.</li>
+<li>Add support for <span class="tt">Interlocked.Exchange</span> and <span class="tt">Interlocked.CompareExchange</span> for float and double arguments.</li>
+<li>Fix bug preventing iOS builds from working, if burst is disabled in AOT Settings.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md690"></a>
+[1.2.0-preview.6] - 2019-10-16</h1>
+<ul>
+<li>New multi-threaded compilation support when building a standalone player.</li>
+<li>Improve <span class="tt">BurstCompiler.CompileFunctionPointer</span> to compile asynchronously function pointers in the Editor.</li>
+<li>Improve of error codes and messages infrastructure.</li>
+<li>Upgraded <a class="el" href="namespace_burst.html">Burst</a> to use LLVM Version 8.0.1 by default, bringing the latest optimization improvements from the LLVM project.</li>
+<li>Fix issue with libtinfo5 missing on Linux.</li>
+<li>Fix possible NullReferenceException when an entry point function is calling another empty function.</li>
+<li>Fix an exception occurring while calculating the size of a struct with indirect dependencies to itself.</li>
+<li>Fix potential failure when loading MDB debugging file.</li>
+<li>Fix linker issue with folder containing spaces.</li>
+<li>Fix issue with package validation by removing ifdef around namespaces.</li>
+<li>Fix issue with an internal compiler exception related to an empty stack.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md691"></a>
+[1.2.0-preview.5] - 2019-09-23</h1>
+<ul>
+<li>Fix crashing issue during the shutdown of the editor.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md692"></a>
+[1.2.0-preview.4] - 2019-09-20</h1>
+<ul>
+<li>Fix a logging issue on shutdown.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md693"></a>
+[1.2.0-preview.3] - 2019-09-20</h1>
+<ul>
+<li>Fix potential logging of an error while shutting down the editor.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md694"></a>
+[1.2.0-preview.2] - 2019-09-20</h1>
+<ul>
+<li>New multi-threaded compilation of jobs/function pointers in the editor.</li>
+<li>Improve caching of compiled jobs/function pointers.</li>
+<li>Fix a caching issue where some jobs/function pointers would not be updated in the editor when updating their code.</li>
+<li>Fix an issue where type initializers with interdependencies were not executed in the correct order.</li>
+<li>Fix an issue with <span class="tt">Failed to resolve assembly Windows, Version=255.255.255.255...</span> when building for Xbox One.</li>
+<li>Fix compilation error on ARM32 when calling an external function.</li>
+<li>Fix an issue with function pointers that would generate invalid code if a non-blittable type is used in a struct passed by ref.</li>
+<li>Fix an issue with function pointers that would generate invalid code in case containers/pointers passed to the function are memory aliased.</li>
+<li>Report a compiler error if a function pointer is trying to be compiled without having the <span class="tt">[BurstCompile]</span> attribute on the method and owning type.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md695"></a>
+[1.2.0-preview.1] - 2019-09-09</h1>
+<ul>
+<li>Fix assembly caching issue, cache usage now conservative (Deals with methods that require resolving multiple assemblies prior to starting the compilation - generics).</li>
+<li>Fix Mac OS compatibility of <a class="el" href="namespace_burst.html">Burst</a> (10.10 and up) - fixes undefined symbol <em>futimens</em>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md696"></a>
+[1.1.3-preview.3] - 2019-09-02</h1>
+<ul>
+<li>Query android API target level from player settings when building android standalone players.</li>
+<li>Add calli opcode support to support bindings to native code.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md697"></a>
+[1.1.3-preview.2] - 2019-08-29</h1>
+<ul>
+<li>Fix to allow calling [BurstDiscard] functions from static constructors.</li>
+<li>Correctly error if a DLLImport function uses a struct passed by value, but allow handle structs (structs with a single pointer/integer in them) as these require no ABI pain.</li>
+<li>Upgraded <a class="el" href="namespace_burst.html">Burst</a> to use LLVM Version 8 by default, bringing the latest optimisation improvements from the LLVM project.</li>
+<li>Added support for multiple LLVM versions, this does increase the package size, however it allows us to retain compatability with platforms that still require older versions of LLVM.</li>
+<li>Fix bug in assembly caching, subsequent runs should now correctly use cached jit code as appropriate.</li>
+<li>Add support for Lumin platform</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md698"></a>
+[1.1.3-preview.1] - 2019-08-26</h1>
+<ul>
+<li>Add support for use of the MethodImpl(MethodImplOptions.NoOptimization) on functions.</li>
+<li>Fix an issue whereby static readonly vector variables could not be constructed unless using the constructor whose number of elements matched the width of the vector.</li>
+<li>Fix an issue whereby static readonly vector variables could not be struct initialized.</li>
+<li>Improve codegen for structs with explicit layout and overlapping fields.</li>
+<li>Fix a bug causing SSE4 instructions to be run on unsupported processors.</li>
+<li>Fix an issue where storing a pointer would fail as our type normalizer would cast the pointer to an i8.</li>
+<li>Begin to add Burst-specific aliasing information by instructing LLVM on our stack-allocation and global variables rules.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md699"></a>
+[1.1.2] - 2019-07-26</h1>
+<ul>
+<li>Fix an issue where non-readonly static variable would not fail in <a class="el" href="namespace_burst.html">Burst</a> while they are not supported.</li>
+<li>Fix issue with char comparison against an integer. Add partial support for C# char type.</li>
+<li>Improve codegen for struct layout with simple explicit layout.</li>
+<li>Fix NullReferenceException when using a static variable with a generic declaring type.</li>
+<li>Fix issue with <span class="tt">stackalloc</span> not clearing the allocated stack memory as it is done in .NET CLR.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md700"></a>
+[1.1.1] - 2019-07-11</h1>
+<ul>
+<li>Fix a compiler error when using a vector type as a generic argument of a NativeHashMap container.</li>
+<li>Disable temporarily SharedStatic/Execution mode for current 2019.3 alpha8 and before.</li>
+<li>Fix detection of Android NDK for <a class="el" href="namespace_unity.html">Unity</a> 2019.3.</li>
+<li>Update documentation for known issues.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md701"></a>
+[1.1.0] - 2019-07-09</h1>
+<ul>
+<li>Fix detection of Android NDK for <a class="el" href="namespace_unity.html">Unity</a> 2019.3.</li>
+<li>Update documentation for known issues.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md702"></a>
+[1.1.0-preview.4] - 2019-07-05</h1>
+<ul>
+<li><a class="el" href="namespace_burst.html">Burst</a> will now report a compilation error when writing to a <span class="tt">[ReadOnly]</span> container/variable.</li>
+<li>Fix regression with nested generics resolution for interface calls.</li>
+<li>Fix issue for UWP with <a class="el" href="namespace_burst.html">Burst</a> generating non appcert compliant binaries.</li>
+<li>Fix issue when reading/writing vector types to a field of an explicit layout.</li>
+<li>Fix build issue on iOS, use only hash names for platforms with clang toolchain to mitigate issues with long names in LLVM IR.</li>
+<li>Allow calls to intrinsic functions (e.g <span class="tt">System.Math.Log</span>) inside static constructors.</li>
+<li>Improve performance when detecting if a method needs to be recompiled at JIT time.</li>
+<li>Fix an issue with explicit struct layout and vector types.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md703"></a>
+[1.1.0-preview.3] - 2019-06-28</h1>
+<ul>
+<li>Fix issue with generic resolution that could fail.</li>
+<li>Add support for readonly static data through generic instances.</li>
+<li>Add internal support for <span class="tt">SharedStatic&lt;T&gt;</span> for TypeManager.</li>
+<li>Add intrinsic support for <span class="tt">math.bitmask</span>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md704"></a>
+[1.1.0-preview.2] - 2019-06-20</h1>
+<ul>
+<li>Fix issue where uninitialized values would be loaded instead for native containers containing big structs.</li>
+<li>Fix issue where noalias analysis would fail for native containers containing big structs.</li>
+<li>Fix issue when calling "internal" methods that take bool parameters.</li>
+<li>Add support for <span class="tt">MethodImplOptions.AggressiveInlining</span> to force inlining.</li>
+<li>Fix issue in ABITransform that would cause compilation errors with certain explicit struct layouts.</li>
+<li>Disable debug information generation for PS4 due to IR compatability issue with latest SDK.</li>
+<li>Implemented an assembly level cache for JIT compilation to improve iteration times in the Editor.</li>
+<li>Implement a hard cap on the length of symbols to avoid problems for platforms that ingest IR for AOT.</li>
+<li>Add support for <span class="tt">FunctionPointer&lt;T&gt;</span> usable from <a class="el" href="namespace_burst.html">Burst</a> Jobs via <span class="tt">BurstCompiler.CompileFunctionPointer&lt;T&gt;</span>.</li>
+<li>Add <span class="tt">BurstCompiler.Options</span> to allow to control/enable/disable <a class="el" href="namespace_burst.html">Burst</a> jobs compilation/run at runtime.</li>
+<li>Add <span class="tt">BurstRuntime.GetHashCode32&lt;T&gt;</span> and <span class="tt">GetHashCode64&lt;T&gt;</span> to allow to generate a hash code for a specified time from a <a class="el" href="namespace_burst.html">Burst</a> job.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md705"></a>
+[1.0.0] - 2019-04-16</h1>
+<ul>
+<li>Release stable version.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md706"></a>
+[1.0.0-preview.14] - 2019-04-15</h1>
+<ul>
+<li>Bump to mathematics 1.0.1</li>
+<li>Fix android ndk check on windows when using the builtin toolchain.</li>
+<li>Fix crash when accessing a field of a struct with an explicit layout through an embedded struct.</li>
+<li>Fix null pointer exception on building for android if editor version is less than 2019.1.</li>
+<li>Workaround IR compatibility issue with AOT builds on IOS.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md707"></a>
+[1.0.0-preview.13] - 2019-04-12</h1>
+<ul>
+<li>Fix linker error on symbol <span class="tt">$___check_bounds already defined</span>.</li>
+<li>Fix StructLayout Explicit size calculation and backing storage.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md708"></a>
+[1.0.0-preview.12] - 2019-04-09</h1>
+<ul>
+<li>Fix crash when accessing a NativeArray and performing in-place operations (e.g <span class="tt">nativeArray[i] += 121;</span>).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md709"></a>
+[1.0.0-preview.11] - 2019-04-08</h1>
+<ul>
+<li>Improve error logging for builder player with <a class="el" href="namespace_burst.html">Burst</a>.</li>
+<li>Fix NullReferenceException when storing to a field which is a generic type.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md710"></a>
+[1.0.0-preview.10] - 2019-04-05</h1>
+<ul>
+<li>Update known issues in the user manual.</li>
+<li>Improve user manual documentation about debugging, <span class="tt">[BurstDiscard]</span> attribute, CPU architectures supported...</li>
+<li>Fix an issue where <a class="el" href="namespace_burst.html">Burst</a> callbacks could be sent to the editor during shutdowns, causing an editor crash.</li>
+<li>Improve error messages for external tool chains when building for AOT.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md711"></a>
+[1.0.0-preview.9] - 2019-04-03</h1>
+<ul>
+<li>Fix an auto-vectorizer issue not correctly detecting the safe usage of NativeArray access when performing in-place operations (e.g <span class="tt">nativeArray[i] += 121;</span>).</li>
+<li>Add support for dynamic dispatch of functions based on CPU features available at runtime.<ul>
+<li>Fix issue when running SSE4 instructions on a pre-SSE4 CPU.</li>
+</ul>
+</li>
+<li>Fix write access to <span class="tt">NativeArray&lt;bool&gt;</span>.</li>
+<li>Remove dependencies to C runtime for Windows/Linux build players (for lib_burst_generated.so/.dll).</li>
+<li>Updated API documentation.</li>
+<li>Update User manual.</li>
+<li>Static link some libraries into the <a class="el" href="namespace_burst.html">Burst</a> llvm wrapper to allow better support for some linux distros.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md712"></a>
+[1.0.0-preview.8] - 2019-03-28</h1>
+<ul>
+<li>Fix for iOS symbol names growing too long, reduced footprint of function names via pretty printer and a hash.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md713"></a>
+[1.0.0-preview.7] - 2019-03-28</h1>
+<ul>
+<li><a class="el" href="namespace_burst.html">Burst</a> will now only generate debug information for AOT when targeting a Development Build.</li>
+<li>Added support for locating the build tools (standalone) for generating AOT builds on windows, without having to install Visual Studio complete.</li>
+<li>Fix Log Timings was incorrectly being passed along to AOT builds, causing them to fail.</li>
+<li>Fix editor crash if <a class="el" href="namespace_burst.html">Burst</a> aborted compilation half way through (because editor was being closed).</li>
+<li>Fix issue with job compilation that could be disabled when using the <a class="el" href="namespace_burst.html">Burst</a> inspector.</li>
+<li>Fix issue with spaces in certain paths (e.g. ANDROID_NDK_ROOT) when building for AOT.</li>
+<li>Restore behavior of compiling ios projects from windows with <a class="el" href="namespace_burst.html">Burst</a>, (<a class="el" href="namespace_burst.html">Burst</a> does not support cross compiling for ios) - we still generate a valid output project, but with no <a class="el" href="namespace_burst.html">Burst</a> code.</li>
+<li>Add support for Android embedded NDK.</li>
+<li>Fix issue where certain control flow involving object construction would crash the compiler in release mode.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md714"></a>
+[1.0.0-preview.6] - 2019-03-17</h1>
+<ul>
+<li>Fix invalid codegen with deep nested conditionals.</li>
+<li>Fix issue with <a class="el" href="namespace_burst.html">Burst</a> menu "Enable Compilation" to also disable cache jobs.</li>
+<li>Improve handling of PS4 toolchain detection.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md715"></a>
+[1.0.0-preview.5] - 2019-03-16</h1>
+<ul>
+<li>Fix regression with JIT caching that was not properly recompiling changed methods.</li>
+<li>Remove NativeDumpFlags from public API.</li>
+<li>Remove usage of PropertyChangingEventHandler to avoid conflicts with custom Newtonsoft.Json.</li>
+<li>Fix issue when a job could implement multiple job interfaces (IJob, IJobParallelFor...) but only the first one would be compiled.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md716"></a>
+[1.0.0-preview.4] - 2019-03-15</h1>
+<ul>
+<li>Fix "Error while verifying module: Invalid bitcast" that could happen with return value in the context of deep nested conditionals.</li>
+<li>Fix support for AOT compilation with float precision/mode.</li>
+<li>Fix fast math for iOS/PS4.</li>
+<li>Fix issue with double not using optimized intrinsics for scalars.</li>
+<li>Fix issue when loading a MDB file was failing when building a standalone player.</li>
+<li>Fix no-alias analysis that would be disabled in a standalone player if only one of the method was failing.</li>
+<li>Fix bug with explicit layout struct returned as a pointer by a property but creating an invalid store.</li>
+<li>Change <span class="tt">FloatPrecision.Standard</span> defaulting from <span class="tt">FloatPrecision.High</span> (ULP1) to <span class="tt">FloatPrecision.Medium</span> (ULP3.5).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md717"></a>
+[1.0.0-preview.3] - 2019-03-14</h1>
+<ul>
+<li>Fix compilation issue with uTiny builds.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md718"></a>
+[1.0.0-preview.2] - 2019-03-13</h1>
+<ul>
+<li>Fix no-alias warning spamming when building a standalone player.</li>
+<li>Improve the layout of the options/buttons for the inspector so that they at least attempt to layout better when the width is too small for all the buttons.</li>
+<li>Fix formatting of error messages so the <a class="el" href="namespace_unity.html">Unity</a> Console can correctly parse the location as a clickable item (Note however it does not appear to allow double clicking on absolute paths).</li>
+<li>Change <a class="el" href="namespace_burst.html">Burst</a> menu to Jobs/Burst. Improve order of menu items.</li>
+<li>Fix for AOTSettings bug related to StandaloneWindows vs StandaloneWindows64.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md719"></a>
+[1.0.0-preview.1] - 2019-03-11</h1>
+<ul>
+<li>Fix regression when resolving the type of generic used in a field.</li>
+<li>Fix linker for XboxOne, UWP.</li>
+<li>Fix performance codegen when using large structs.</li>
+<li>Fix codegen when a recursive function is involved with platform dependent ABI transformations.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md720"></a>
+[0.2.4-preview.50] - 2019-02-27</h1>
+<ul>
+<li>Fix meta file conflict.</li>
+<li>Fix changelog format.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md721"></a>
+[0.2.4-preview.49] - 2019-02-27</h1>
+<ul>
+<li>Move back com.unity.burst.experimental for function pointers support, but use internal modifier for this API.</li>
+<li>Restructure package for validation.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md722"></a>
+[0.2.4-preview.48] - 2019-02-26</h1>
+<ul>
+<li>Move back com.unity.burst.experimental for function pointers support, but use internal modifier for this API.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md723"></a>
+[0.2.4-preview.47] - 2019-02-26</h1>
+<ul>
+<li>Fix an issue during publish stage which was preventing to release the binaries.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md724"></a>
+[0.2.4-preview.46] - 2019-02-26</h1>
+<ul>
+<li>iOS player builds now use static linkage (to support TestFlight) - Minimum supported <a class="el" href="namespace_unity.html">Unity</a> versions are 2018.3.6f1 or 2019.1.0b4.</li>
+<li>Fix a warning in <a class="el" href="namespace_burst.html">Burst</a> AOT settings.</li>
+<li>Enable forcing synchronous job compilation from menu.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md725"></a>
+[0.2.4-preview.45] - 2019-02-07</h1>
+<ul>
+<li>Disable <a class="el" href="namespace_burst.html">Burst</a> AOT settings support for unity versions before 2019.1.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md726"></a>
+[0.2.4-preview.44] - 2019-02-06</h1>
+<ul>
+<li>Fix incorrect conversions when performing subtraction with enums and floats.</li>
+<li>Fix compatability issue with future unity versions.</li>
+<li>Fix bug with ldfld bitcast on structs with explicit layouts.</li>
+<li>Guard against an issue resolving debug locations if the scope is global.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md727"></a>
+[0.2.4-preview.43] - 2019-02-01</h1>
+<ul>
+<li>Add preliminary support for <a class="el" href="namespace_burst.html">Burst</a> AOT settings in the player settings.</li>
+<li>Move BurstCompile (delegate/function pointers support) from com.unity.burst package to com.unity.burst.experimental package.</li>
+<li>Fix issue with stackalloc allocating a pointer size for the element type resulting in possible StackOverflowException.</li>
+<li>Add support for disabling <a class="el" href="namespace_burst.html">Burst</a> compilation from <a class="el" href="namespace_unity.html">Unity</a> editor with the command line argument <span class="tt">--burst-disable-compilation</span> .</li>
+<li>Add support for forcing synchronous compilation from <a class="el" href="namespace_unity.html">Unity</a> editor with the command line argument <span class="tt">--burst-force-sync-compilation</span>.</li>
+<li>Fix a compiler crash when generating debugging information.</li>
+<li>Fix invalid codegen involving ternary operator</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md728"></a>
+[0.2.4-preview.42] - 2019-01-22</h1>
+<ul>
+<li>Fix a compilation error when implicit/explicit operators are used returning different type for the same input type.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md729"></a>
+[0.2.4-preview.41] - 2019-01-17</h1>
+<ul>
+<li>Fix codegen issue with Interlocked.Decrement that was instead performing an increment.</li>
+<li>Fix codegen issue for an invalid layout of struct with nested recursive pointer references.</li>
+<li>Fix for Fogbugz case : <a href="https://fogbugz.unity3d.com/f/cases/1109514/">https://fogbugz.unity3d.com/f/cases/1109514/</a>.</li>
+<li>Fix codegen issue with ref bool on a method argument creating a compiler exception.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md730"></a>
+[0.2.4-preview.40] - 2018-12-19</h1>
+<ul>
+<li>Fix bug when a write to a pointer type of an argument of a generic function.</li>
+<li>Breaking change of API: <span class="tt">Accuracy</span> -&gt; <span class="tt">FloatPrecision</span>, and <span class="tt">Support</span> =&gt; <span class="tt">FloatMode</span>.</li>
+<li>Add <span class="tt">FloatMode.Deterministic</span> mode with early preview of deterministic mathematical functions.</li>
+<li>Fix bug with fonts in inspector being incorrectly reloaded.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md731"></a>
+[0.2.4-preview.39] - 2018-12-06</h1>
+<ul>
+<li>Add preview support for readonly static arrays typically used for LUT.</li>
+<li>Fix an issue with generics incorrectly being resolved in certain situations.</li>
+<li>Fix ARM32/ARM64 compilation issues for some instructions.</li>
+<li>Fix ARM compilation issues on UWP.</li>
+<li>Fix issue with math.compress.</li>
+<li>Add support for <span class="tt">ldnull</span> for storing a managed null reference to a ref field (e.g for DisposeSentinel).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md732"></a>
+[0.2.4-preview.38] - 2018-11-17</h1>
+<ul>
+<li>Fix issue when converting an unsigned integer constant to a larger unsigned integer (e.g (ulong)uint.MaxValue).</li>
+<li>Fix crash in editor when IRAnalysis can return an empty string .</li>
+<li>Fix potential crash of Cecil when reading symbols from assembly definition.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md733"></a>
+[0.2.4-preview.37] - 2018-11-08</h1>
+<ul>
+<li>Fix a crash on Linux and MacOS in the editor with dlopen crashing when trying to load burst-llvm (linux).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md734"></a>
+[0.2.4-preview.36] - 2018-11-08</h1>
+<ul>
+<li>Fix a crash on Linux and MacOS in the editor with dlopen crashing when trying to load burst-llvm (mac).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md735"></a>
+[0.2.4-preview.35] - 2018-10-31</h1>
+<ul>
+<li>Try to fix a crash on macosx in the editor when a job is being compiled by <a class="el" href="namespace_burst.html">Burst</a> at startup time.</li>
+<li>Fix <a class="el" href="namespace_burst.html">Burst</a> accidentally resolving reference assemblies.</li>
+<li>Add support for <a class="el" href="namespace_burst.html">Burst</a> for ARM64 when building UWP player.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md736"></a>
+[0.2.4-preview.34] - 2018-10-12</h1>
+<ul>
+<li>Fix compiler exception with an invalid cast that could occur when using pinned variables (e.g <span class="tt">int32&amp;</span> resolved to <span class="tt">int32**</span> instead of <span class="tt">int32*</span>).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md737"></a>
+[0.2.4-preview.33] - 2018-10-10</h1>
+<ul>
+<li>Fix a compiler crash with methods incorrectly being marked as external and throwing an exception related to ABI.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md738"></a>
+[0.2.4-preview.32] - 2018-10-04</h1>
+<ul>
+<li>Fix codegen and linking errors for ARM when using mathematical functions on plain floats.</li>
+<li>Add support for vector types GetHashCode.</li>
+<li>Add support for DllImport (only compatible with <a class="el" href="namespace_unity.html">Unity</a> <span class="tt">2018.2.12f1</span>+ and <span class="tt"> 2018.3.0b5</span>+).</li>
+<li>Fix codegen when converting uint to int when used in a binary operation.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md739"></a>
+[0.2.4-preview.31] - 2018-09-24</h1>
+<ul>
+<li>Fix codegen for fmodf to use inline functions instead.</li>
+<li>Add extended disassembly output to the <a class="el" href="namespace_burst.html">Burst</a> inspector.</li>
+<li>Fix generic resolution through de-virtualize methods.</li>
+<li>Fix bug when accessing float3.zero. Prevents static constructors being considered intrinsics.</li>
+<li>Fix NoAlias attribute checking when generics are used.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md740"></a>
+[0.2.4-preview.30] - 2018-09-11</h1>
+<ul>
+<li>Fix IsValueType throwing a NullReferenceException in case of using generics.</li>
+<li>Fix discovery for <a class="el" href="namespace_burst.html">Burst</a> inspector/AOT methods inheriting from IJobProcessComponentData or interfaces with generics.</li>
+<li>Add <span class="tt">[NoAlias]</span> attribute.</li>
+<li>Improved codegen for csum.</li>
+<li>Improved codegen for abs(int).</li>
+<li>Improved codegen for abs on floatN/doubleN.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md741"></a>
+[0.2.4-preview.29] - 2018-09-07</h1>
+<ul>
+<li>Fix issue when calling an explicit interface method not being matched through a generic constraint.</li>
+<li>Fix issue with or/and binary operation on a bool returned by a function.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md742"></a>
+[0.2.4-preview.28] - 2018-09-05</h1>
+<ul>
+<li>Fix a compilation issue when storing a bool returned from a function to a component of a bool vector.</li>
+<li>Fix AOT compilation issue with a duplicated dictionary key.</li>
+<li>Fix settings of ANDROID_NDK_ROOT if it is not setup in <a class="el" href="namespace_unity.html">Unity</a> Editor.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md743"></a>
+[0.2.4-preview.27] - 2018-09-03</h1>
+<ul>
+<li>Improve detection of jobs within nested generics for AOT/Burst inspector.</li>
+<li>Fix compiler bug of comparison of a pointer to null pointer.</li>
+<li>Fix crash compilation of sincos on ARM (neon/AARCH64).</li>
+<li>Fix issue when using a pointer to a VectorType resulting in an incorrect access of a vector type.</li>
+<li>Add support for doubles (preview).</li>
+<li>Improve AOT compiler error message/details if the compiler is failing before the linker.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md744"></a>
+[0.2.4-preview.26] - 2018-08-21</h1>
+<ul>
+<li>Added support for cosh, sinh and tanh.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md745"></a>
+[0.2.4-preview.25] - 2018-08-16</h1>
+<ul>
+<li>Fix warning in unity editor.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md746"></a>
+[0.2.4-preview.24] - 2018-08-15</h1>
+<ul>
+<li>Improve codegen of math.compress.</li>
+<li>Improve codegen of math.asfloat/asint/asuint.</li>
+<li>Improve codegen of math.csum for int4.</li>
+<li>Improve codegen of math.count_bits.</li>
+<li>Support for lzcnt and tzcnt intrinsics.</li>
+<li>Fix AOT compilation errors for PS4 and XboxOne.</li>
+<li>Fix an issue that could cause wrong code generation for some unsafe ptr operations.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md747"></a>
+[0.2.4-preview.23] - 2018-07-31</h1>
+<ul>
+<li>Fix bug with switch case to support not only int32.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md748"></a>
+[0.2.4-preview.22] - 2018-07-31</h1>
+<ul>
+<li>Fix issue with pointers comparison not supported.</li>
+<li>Fix a StackOverflow exception when calling an interface method through a generic constraint on a nested type where the declaring type is a generic.</li>
+<li>Fix an issue with EntityCommandBuffer.CreateEntity/AddComponent that could lead to ArgumentException/IndexOutOfRangeException.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md749"></a>
+[0.2.4-preview.21] - 2018-07-25</h1>
+<ul>
+<li>Correct issue with Android AOT compilation being unable to find the NDK.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md750"></a>
+[0.2.4-preview.20] - 2018-07-05</h1>
+<ul>
+<li>Prepare the user documentation for a public release.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md751"></a>
+[0.2.4-preview.19] - 2018-07-02</h1>
+<ul>
+<li>Fix compilation error with generics when types are coming from different assemblies.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md752"></a>
+[0.2.4-preview.18] - 2018-06-26</h1>
+<ul>
+<li>Add support for subtracting pointers.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md753"></a>
+[0.2.4-preview.17] - 2018-06-25</h1>
+<ul>
+<li>Bump only to force a new version pushed.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md754"></a>
+[0.2.4-preview.16] - 2018-06-25</h1>
+<ul>
+<li>Fix AOT compilation errors.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md755"></a>
+[0.2.4-preview.15] - 2018-06-25</h1>
+<ul>
+<li>Fix crash for certain access to readonly static variable.</li>
+<li>Fix StackOverflowException when using a generic parameter type into an interface method.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md756"></a>
+[0.2.4-preview.14] - 2018-06-23</h1>
+<ul>
+<li>Fix an issue with package structure that was preventing <a class="el" href="namespace_burst.html">Burst</a> to work in <a class="el" href="namespace_unity.html">Unity</a>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md757"></a>
+[0.2.4-preview.13] - 2018-06-22</h1>
+<ul>
+<li>Add support for <a class="el" href="namespace_burst.html">Burst</a> timings menu.</li>
+<li>Improve codegen for sin/cos.</li>
+<li>Improve codegen when using swizzles on vector types.</li>
+<li>Add support for sincos intrinsic.</li>
+<li>Fix AOT deployment.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md758"></a>
+[0.2.4-preview.12] - 2018-06-13</h1>
+<ul>
+<li>Fix a bug in codegen that was collapsing methods overload of System.Threading.Interlocked to the same method.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md759"></a>
+[0.2.4-preview.11] - 2018-06-05</h1>
+<ul>
+<li>Fix exception in codegen when accessing readonly static fields from different control flow paths.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md760"></a>
+[0.2.4-preview.10] - 2018-06-04</h1>
+<ul>
+<li>Fix a potential stack overflow issue when a generic parameter constraint on a type is also referencing another generic parameter through a generic interface constraint</li>
+<li>Update to latest <a class="el" href="namespace_unity_1_1_mathematics.html">Unity.Mathematics</a>:<ul>
+<li>Fix order of parameters and codegen for step functions.</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md761"></a>
+[0.2.4-preview.9] - 2018-05-29</h1>
+<ul>
+<li>Fix bug when casting an IntPtr to an enum pointer that was causing an invalid codegen exception.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md762"></a>
+[0.2.4-preview.8] - 2018-05-24</h1>
+<ul>
+<li>Breaking change: Move Unity.Jobs.Accuracy/Support to <a class="el" href="namespace_unity_1_1_burst.html">Unity.Burst</a>.</li>
+<li>Deprecate ComputeJobOptimizationAttribute in favor of BurstCompileAttribute.</li>
+<li>Fix bug when using enum with a different type than int.</li>
+<li>Fix bug with IL stind that could lead to a memory corruption.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md763"></a>
+[0.2.4-preview.7] - 2018-05-22</h1>
+<ul>
+<li>Add support for nested structs in SOA native arrays.</li>
+<li>Add support for arbitrary sized elements in full SOA native arrays.</li>
+<li>Fix bug with conversion from signed/unsigned integers to signed numbers (integers &amp; floats).</li>
+<li>Add support for substracting pointers at IL level.</li>
+<li>Improve codegen with pointers arithmetic to avoid checking for overflows.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md764"></a>
+[0.2.4-preview.6] - 2018-05-11</h1>
+<ul>
+<li>Remove <span class="tt">bool1</span> from mathematics and add proper support in <a class="el" href="namespace_burst.html">Burst</a>.</li>
+<li>Add support for ARM platforms in the <a class="el" href="namespace_burst.html">Burst</a> inspector UI.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md765"></a>
+[0.2.4-preview.5] - 2018-05-09</h1>
+<ul>
+<li>Add support for readonly static fields.</li>
+<li>Add support for stackalloc.</li>
+<li>Fix potential crash on MacOSX when using memset is used indirectly.</li>
+<li>Fix crash when trying to write to a bool1*.</li>
+<li>Fix bug with EnableBurstCompilation checkbox not working in <a class="el" href="namespace_unity.html">Unity</a> Editor.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md766"></a>
+[0.2.4-preview.4] - 2018-05-03</h1>
+<ul>
+<li>Fix an issue on Windows with <span class="tt">DllNotFoundException</span> occurring when trying to load <span class="tt">burst-llvm.dll</span> from a user profile containing unicode characters in the folder path.</li>
+<li>Fix an internal compiler error occurring with IL dup instruction.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md767"></a>
+[0.2.4-preview.3] - 2018-05-03</h1>
+<ul>
+<li>Add support for struct with an explicit layout.</li>
+<li>Fix noalias regression (that was preventing the auto-vectorizer to work correctly on basic loops).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md768"></a>
+[0.2.3] - 2018-03-21</h1>
+<ul>
+<li>Improve error messages for static field access.</li>
+<li>Improve collecting of compilable job by trying to collect concrete job type instances (issue #23).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md769"></a>
+[0.2.2] - 2018-03-19</h1>
+<ul>
+<li>Improve error messages in case using <span class="tt">is</span> or <span class="tt">as</span> cast in C#.</li>
+<li>Improve error messages if a static delegate instance is used.</li>
+<li>Fix codegen error when converting a byte/ushort to a float. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

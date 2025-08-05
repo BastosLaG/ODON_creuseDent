@@ -1,0 +1,22 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7 =
+[
+    [ "FinishSetup", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a3862b7e803a6b2d464ee71272d751cc8", null ],
+    [ "devicePose", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a5c108bc9874489785612bb3b2fa28214", null ],
+    [ "devicePosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a912f8efa2aa0fc80e4cae8d2196bf0d9", null ],
+    [ "deviceRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a7120e3607fb558024f90a5b315b4fbd6", null ],
+    [ "grip", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a7294bc8ca5e4b8f33e3d61646cde3f71", null ],
+    [ "gripPressed", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a63666fcb0fd18267198e27732db453a0", null ],
+    [ "haptic", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a61b0eef41094963581612bc066e60f48", null ],
+    [ "isTracked", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a43f74c868ff15b9638685bcb6f7d527b", null ],
+    [ "menu", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#ab1e8dd18c5e36752b12e7419889f3a5f", null ],
+    [ "pointer", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a9914279fc6d43887ffd459af301b2e3b", null ],
+    [ "pointerPosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a23ccbc3dcae594c13b143d0e630e481b", null ],
+    [ "pointerRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a91f2af600c285d5c970e759c52e4bb92", null ],
+    [ "primaryButton", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a6f90a3f128e0824160b0cb69bf4b2a4d", null ],
+    [ "secondaryButton", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#ac4d87fc839e683780550abc17fdbcfbc", null ],
+    [ "thumbstick", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#ae26e72723704e924336a849a75473635", null ],
+    [ "thumbstickClicked", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a38f8e8a4318ba3bbf002823d338eda4a", null ],
+    [ "trackingState", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a63e5c3cc9f478e8bd4ef55dfa279b2c7", null ],
+    [ "trigger", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#ae6f93275d3d76c6692e44325e2a81762", null ],
+    [ "triggerPressed", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html#a7ac3eec5e61b1a7477164ab10b1745ea", null ]
+];

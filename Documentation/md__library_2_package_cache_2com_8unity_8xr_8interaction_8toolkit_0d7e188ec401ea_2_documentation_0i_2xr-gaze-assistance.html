@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: xr-gaze-assistance</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-gaze-assistance.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">xr-gaze-assistance </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8640"></a>
+autotoc_md8640</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8641"></a>
+uid: xri-xr-gaze-assistance</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8642"></a>
+XR Gaze Assistance</h1>
+<p>Allow specified ray interactors to fallback to eye-gaze when they are off screen or pointing off screen. This component enables split interaction functionality to allow the user to aim with eye gaze and select with a controller.</p>
+<p>The component also enables aim assistance to help thrown objects move toward the interactable object at which the user is looking. On being thrown, a GrabInteractable object receives a velocity boost aiming it toward the target. (If the user is not looking at the target, the object is directed at the endpoint of the gaze ray.)</p>
+<p>To use gaze assistance, add an <b>XR Gaze Assitance</b> component to a GameObject in the scene. (The component is already present on the root GameObject of the <b>XR Origin (XR Rig)</b> prefab included in the [Starter assets](xref:xri-samples-starter-assets).) You must set the <b>Gaze Interactor</b> property or the component deactivates itself at runtime.</p>
+<p>Add any ray interactors that you want to assist with eye gaze, to the <b>Ray Interactors</b> list in the component.</p>
+<p>The <b>Aim Assist</b> properties are used by any [XR Grab Interactable](xref:xri-xr-grab-interactable) that has its <b>Throw On Detach</b> option enabled. The current endpoint of the gaze interactor ray is used as the target when computing the velocity boost.</p>
+<p><img src="images/xr-gaze-assistance.png" alt="XRGazeAssistance component" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Gaze Interactor</b>  </td><td class="markdownTableBodyNone">Eye data source - used as fallback data and to determine if fallback is necessary.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Fallback Divergence</b>  </td><td class="markdownTableBodyNone">The angle at which fallback data will be used instead of the original interactor ray.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Hide Cursor With No Active Rays</b>  </td><td class="markdownTableBodyNone">If the eye reticle should be hidden when all interactors are using their original data.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Ray Interactors</b>  </td><td class="markdownTableBodyNone">Interactors that can fall back to gaze data.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;<b>Interactor</b>  </td><td class="markdownTableBodyNone">Instance of a Ray Interactor that can fallback to gaze data.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;<b>Teleport Ray</b>  </td><td class="markdownTableBodyNone">Set to true if the Ray Interactor is used for teleportation.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Aim Assist Required Angle</b>  </td><td class="markdownTableBodyNone">How far thrown objects can aim outside of eye gaze and still be considered for aim assist.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Aim Assist Required Speed</b>  </td><td class="markdownTableBodyNone">The minimum speed in meters per second at which a thrown object must be moving to be considered for aim assist.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Aim Assist Percent</b>  </td><td class="markdownTableBodyNone">How much of the corrected aim velocity to use, as a value between 0 and 1. A value of 0 provides no assistance, a value of 0.5 mixes the original and boost velocities equally, and a value of 1.0 uses only the aim assitance boost (which auto-hits the target, if possible).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Aim Assist Max Speed Percent</b>  </td><td class="markdownTableBodyNone">The maximum boost a projectile can receive from aim assistance, as a multiple of the original speed. A value of 0.25 would mean that the added boost would be no more than one-quarter of the object's original speed. A value of 10 would mean that the boost could be up to ten times the original speed.  </td></tr>
+</table>
+<dl class="section remark"><dt>Remarques</dt><dd>To provide your own aim assist algorithm, create a component that implements the <a href="xref:UnityEngine.XR.Interaction.Toolkit.Gaze.IXRAimAssist">IXRAimAssist</a> interface. Place this component on the same GameObject as the interactor object that throws the object. (A grab interactable finds the closest <span class="tt">IXRAimAssist</span> object on or above the interactor's parent GameObject.) </dd></dl>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

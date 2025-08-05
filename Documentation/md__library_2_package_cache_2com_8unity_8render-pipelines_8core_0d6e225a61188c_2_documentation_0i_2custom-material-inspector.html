@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Custom Material Inspector</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2custom-material-inspector.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Custom Material Inspector </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2782"></a></p>
+<p>Custom Material Inspectors enable you to define how <a class="el" href="namespace_unity.html">Unity</a> displays properties in the Material Inspector for a particular shader. This is useful if a shader includes a lot of properties and you want to organize them in the Inspector. The Universal Render Pipeline (URP) and High Definition Render Pipeline (HDRP) both support custom Material Inspectors, but the method to create them is slightly different.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2783"></a>
+Creating a custom Material Inspector</h1>
+<p>The implementation for custom Material Inspectors differs between URP and HDRP. For example, for compatibility purposes, every custom Material Inspector in HDRP must inherit from <span class="tt">HDShaderGUI</span> which does not exist in URP. For information on how to create custom Material Inspectors for the respective render pipelines, see:</p>
+<ul>
+<li><b>HDRP</b>: <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest?subfolder=/manual/custom-material-inspectors.html">HDRP custom Material Inspectors</a>.</li>
+<li><b>URP</b>: <a href="https://docs.unity3d.com/Manual/SL-CustomShaderGUI.html">Unity Custom Shader GUI</a>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2784"></a>
+Assigning a custom Material Inspector</h1>
+<p>When you create a shader, either hand-written or using Shader Graph, both URP and HDRP provide a default editor for it to use. To override this default and provide your own custom Material Inspector, the method differs depending on whether you hand-wrote the shader or used Shader Graph.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2785"></a>
+Using hand-written shaders</h2>
+<p>To set a custom Material Inspector for a hand-written shader:</p>
+<ol type="1">
+<li>Open the shader source file.</li>
+<li>Assign a string that contains the class name of the custom Material Inspector to the <b>CustomEditor</b> shader instruction.</li>
+</ol>
+<p>This is the same method as for the Built-in Renderer's <a href="https://docs.unity3d.com/Manual/SL-CustomShaderGUI.html">custom shader GUI</a>.</p>
+<p>For an example of how to do this, see the following shader code sample. In this example, the name of the custom Material Inspector class is <b>ExampleCustomMaterialInspector</b>:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">Shader <span class="stringliteral">&quot;Custom/Example&quot;</span></div>
+<div class="line">{</div>
+<div class="line">    Properties</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Shader properties</span></div>
+<div class="line">    }</div>
+<div class="line">    SubShader</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Shader code</span></div>
+<div class="line">    }</div>
+<div class="line">    CustomEditor <span class="stringliteral">&quot;ExampleCustomMaterialInspector&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md2786"></a>
+Using Shader Graph</h2>
+<p>To set a custom Material Inspector for a Shader Graph shader:</p>
+<ol type="1">
+<li>Open the Shader Graph.</li>
+<li>In the <a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@latest?subfolder=/manual/Internal-Inspector.html">Graph Inspector</a>, open the Graph Settings tab.</li>
+<li>If <b>Active Targets</b> does not include the render pipeline your project uses, click the <b>plus</b> button then, in the drop-down, click the render pipeline.</li>
+<li>In the render pipeline section (<b>HDRP</b> or <b>URP</b> depending on the render pipeline your project uses) find the <b>Custom Editor GUI</b> property and provide it the name of the custom Material Inspector. </li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

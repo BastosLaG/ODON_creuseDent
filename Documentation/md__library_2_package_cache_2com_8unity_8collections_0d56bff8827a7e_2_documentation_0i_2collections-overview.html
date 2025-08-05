@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Collections overview</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2collections-overview.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Collections overview </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1411"></a></p>
+<p>The Collections package extends the concepts and collections in the core <a class="el" href="namespace_unity.html">Unity</a> engine, including adding more [native container objects](xref:JobSystemNativeContainer) and <a href="https://docs.unity3d.com/Manual/job-system-jobs.html">job types</a>. The collections in this package fall into the following categories:</p>
+<ul>
+<li>Collection types which have safety checks that make sure that <a class="el" href="namespace_unity.html">Unity</a> properly disposes of the type, and you use them in a thread-safe way. These types are in the <a href="xref:Unity.Collections"><span class="tt">Unity.Collections</span></a> namespace and their names start with <span class="tt">Native</span>.</li>
+<li>Collection types which don't have safety checks. These types are in the <a href="xref:Unity.Collections.LowLevel.Unsafe"><span class="tt">Unity.Collections.LowLevel.Unsafe</span></a> namespace and their names start with <span class="tt">Unsafe</span>.</li>
+</ul>
+<p>The remaining collection types which don't fit into these categories aren't allocated and don't contain any pointers. These types only contain small amounts of data, and their disposal and thread safety aren't a concern.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1412"></a>
+Native and unsafe comparison</h1>
+<p><span class="tt">Native</span> collection types perform safety checks to make sure that indices passed to their methods are in bounds, but the other types don't have these kind of checks.</p>
+<p>Several <span class="tt">Native</span> types have <span class="tt">Unsafe</span> equivalents, for example, <a href="xref:Unity.Collections.INativeList`1"><span class="tt">NativeList</span></a> has <a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeList`1"><span class="tt">UnsafeList</span></a>, and <a href="xref:Unity.Collections.NativeHashMap`2"><span class="tt">NativeHashMap</span></a> has <a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2"><span class="tt">UnsafeHashMap</span></a>.</p>
+<p>It's best practice to use <span class="tt">Native</span> collections over the <span class="tt">Unsafe</span> equivalents. However, it's sometimes necessary to use the <span class="tt">Unsafe</span> equivalents because <span class="tt">Native</span> collection types can't contain other <span class="tt">Native</span> collections. This is because of how <a class="el" href="namespace_unity.html">Unity</a> implements the <span class="tt">Native</span> safety checks. For example, if you want to get a list of lists, you can use either <span class="tt">NativeList&lt;UnsafeList&lt;T&gt;&gt;</span> or <span class="tt">UnsafeList&lt;UnsafeList&lt;T&gt;&gt;</span>, but you can't use <span class="tt">NativeList&lt;NativeList&lt;T&gt;&gt;</span>.</p>
+<p>If you've disabled safety checks, then there isn't a significant performance difference between a <span class="tt">Native</span> type and its <span class="tt">Unsafe</span> equivalent. In fact, most <span class="tt">Native</span> collections are implemented as wrappers of their <span class="tt">Unsafe</span> counterparts. For example, <span class="tt">NativeList</span> is made up of an <span class="tt">UnsafeList</span> plus some handles that the safety checks use.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1413"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2collection-types.html">Collection types overview</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2parallel-readers.html">Parallel readers and writers</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

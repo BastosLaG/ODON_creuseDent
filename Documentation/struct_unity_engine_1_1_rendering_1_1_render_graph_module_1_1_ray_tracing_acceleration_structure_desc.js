@@ -1,0 +1,4 @@
+var struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_ray_tracing_acceleration_structure_desc =
+[
+    [ "name", "struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_ray_tracing_acceleration_structure_desc.html#a7c12cd9b1cb9e7bc6f0b7dcfc15a9a2f", null ]
+];

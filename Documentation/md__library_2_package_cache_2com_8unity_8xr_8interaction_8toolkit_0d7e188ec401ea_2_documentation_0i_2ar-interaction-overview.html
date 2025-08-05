@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: ar-interaction-overview</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2ar-interaction-overview.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">ar-interaction-overview </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8060"></a>
+autotoc_md8060</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8061"></a>
+uid: xri-ar-interaction</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8062"></a>
+AR Interaction Overview</h1>
+<p>This page provides a brief explanation for setting up a scene for mobile touchscreen AR and the related components.</p>
+<dl class="section note"><dt>Note</dt><dd>AR interaction components are only available in a project that also includes the <a href="https://docs.unity3d.com/Manual/com.unity.xr.arfoundation.html">AR Foundation</a> package. You can install the AR Foundation package via the <a href="https://docs.unity3d.com/Manual/upm-ui-install.html">Package Manager</a>.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8063"></a>
+Setting up for Touchscreen AR</h2>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-ar-starter-assets.html">AR Starter Assets</a> sample contains an already configured input action map which can be used in place of creating one from scratch.</dd></dl>
+<p>To set up a scene for Touchscreen AR you will want to create an Input Action Map with action bindings to the <span class="tt">TouchscreenGestureInputController</span> gesture data. (An action map asset can be created by right-clicking on the Assets folder and going to <b>Create</b> &gt; <b>Input Actions</b>.)</p>
+<p><img src="images/gesture-action-map.png" alt="Gesture Input Action Map" class="inline"/></p>
+<dl class="section note"><dt>Note</dt><dd>The AR Starter Assets sample contains a <span class="tt">Screen Space Ray Interactor</span> prefab, but if creating the GameObject from scratch, follow the instructions below.</dd></dl>
+<p>Add a <b>Touchscreen Gesture Input Loader</b> to the scene. This will ensure that a <span class="tt">TouchscreenGestureInputController</span> device gets added automatically to the Input System so the bindings can resolve to the gestures.</p>
+<p><img src="images/touchscreen-gesture-input-loader.png" alt="Touchscreen Gesture Input Loader component" class="inline"/></p>
+<p>Add an <b>XR Ray Interactor</b> component and enable <b>Enable AR Raycasting</b> to allow it to ray cast against the AR environment trackables, and also set <b>Scale Mode</b> to <b>Distance Delta</b>. Add a <b>Touchscreen Hover Filter</b> component and assign a reference to it on the XR Ray Interactor in its <b>Starting Hover Filters</b> property. This will make that interactor only hover interactables while the user is touching the screen and doing a selecting gesture.</p>
+<p><img src="images/touchscreen-hover-filter.png" alt="Touchscreen Hover Filter component" class="inline"/></p>
+<p>Then add a <b>Screen Space Ray Pose Driver</b> component to the GameObject to allow the Transform component to be automatically updated based on the touch gestures on the screen.</p>
+<p><img src="images/screen-space-ray-pose-driver.png" alt="Screen Space Ray Pose Driver component" class="inline"/></p>
+<p>To allow the XR Ray Interactor to respond to gesture inputs as expected, you will need to assign the inputs for <b><a class="el" href="class_rotate.html">Rotate</a> Input</b>, <b>Scale Distance Delta Input</b>, and <b>Select Input</b>. Click the More menu (<span class="tt">⋮</span>) button on each of the three input properties and set to <b>Object Reference</b>. Then add a <b>Screen Space Select Input</b> component, a <b>Screen Space <a class="el" href="class_rotate.html">Rotate</a> Input</b> component, and a <b>Screen Space Pinch Scale Input</b> component and assign references to each.</p>
+<p><img src="images/screen-space-select-input.png" alt="Screen Space Select Input component" class="inline"/></p>
+<p><img src="images/screen-space-rotate-input.png" alt="Screen Space Rotate Input component" class="inline"/></p>
+<p><img src="images/screen-space-pinch-scale-input.png" alt="Screen Space Pinch Scale Input component" class="inline"/></p>
+<p>Now that the XR Ray Interactor configuration is complete, connect the gesture input actions to the appropriate properties on the other added components. The application should now be ready to receive touchscreen input.</p>
+<p><img src="images/ar-interaction-ray-interactor.png" alt="XR Ray Interactor component" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8064"></a>
+AR Transformer</h2>
+<p>In order to have interactables like XR Grab Interactable adhere to the AR environment, adding an AR Transformer component is necessary. The AR Transformer allows objects to be moved and rotated only within the limits of the AR environment. Currently, only AR planes are supported.</p>
+<p><img src="images/ar-transformer.png" alt="AR Transformer component" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8065"></a>
+AR Starter Assets</h2>
+<p>A configured scene for touchscreen AR is available in the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-ar-starter-assets.html">AR Starter Assets</a> sample which is installable through the <a class="el" href="class_samples.html">Samples</a> tab under the XR Interaction Toolkit package in the Package Manager window.</p>
+<p>This scene includes key mappings to simulate gestures in-editor. The following are keys to note:</p>
+<ul>
+<li>'E' and 'R' rotate the object around the up axis.</li>
+<li>'Z', 'X' and the scroll wheel scale the object up and down. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

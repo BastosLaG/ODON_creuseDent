@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: 3\. Moving character</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2coursd81a50f552acb8372b647bbc1439b973.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">3. Moving character </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5305"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5306"></a>
+Learning objectives</h1>
+<p>How to use the <a class="el" href="namespace_unity.html">Unity</a> InputSystem package to have a generic way of moving your character programmatically in tests.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5307"></a>
+Exercise</h1>
+<p>Please make sure <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/QuickStartGuide.html">InputSystem</a> is installed in your <a class="el" href="namespace_unity.html">Unity</a> project. You can verify that by checking the Package Manager.</p>
+<ol type="1">
+<li>Create a new class called <span class="tt">MovementTest.cs</span> under <span class="tt">Assets/Tests/PlayModeTests</span>.</li>
+<li>Attach the reference to <span class="tt">Unity.InputSystem</span> and <span class="tt">Unity.InputSystem.TestFramework</span> in your <span class="tt">PlayModeTests</span> assembly definition.</li>
+<li>Create a new <span class="tt">InputControl</span> directory under <a class="el" href="class_tests.html">Tests</a>: <span class="tt">Assets/Tests/InputControl</span>.</li>
+<li>Inside <span class="tt">InputControl</span> directory, create a new assembly definition: <span class="tt">TestInputControl.asmdef</span>.</li>
+<li>Create a new class <span class="tt">TestInputControl.cs</span> where you implement following properties: <div class="fragment"><div class="line">public static bool MoveLeft { get; set; }</div>
+<div class="line">public static bool MoveRight { get; set; }</div>
+<div class="line">public static bool Jump { get; set; }</div>
+</div><!-- fragment --></li>
+<li>Go back to your assembly definition <span class="tt">PlayModeTests</span> and attach the reference to newly created: <span class="tt">TestInputControl</span>.</li>
+<li>Finally, we need to use our <span class="tt">TestInputControl</span> in actual LostCrypt code. Currently <a class="el" href="namespace_unity.html">Unity</a>'s <span class="tt">InputSystem</span> does not support an easier way of programmatically doing mocks, please see this git diff to know what to change inside <span class="tt">CharacterController2D</span>:</li>
+</ol>
+<div class="fragment"><div class="line">diff --git a/Assets/Scripts/CharacterController2D.cs b/Assets/Scripts/CharacterController2D.cs</div>
+<div class="line">index f8a10cf2..e0a62878 100644</div>
+<div class="line">--- a/Assets/Scripts/CharacterController2D.cs</div>
+<div class="line">+++ b/Assets/Scripts/CharacterController2D.cs</div>
+<div class="line">@@ -81,15 +81,15 @@ public class CharacterController2D : MonoBehaviour</div>
+<div class="line">         // Horizontal movement</div>
+<div class="line">         float moveHorizontal = 0.0f;</div>
+<div class="line"> </div>
+<div class="line">-        if (keyboard.leftArrowKey.isPressed || keyboard.aKey.isPressed)</div>
+<div class="line">+        if (keyboard.leftArrowKey.isPressed || keyboard.aKey.isPressed || TestInputControl.MoveLeft)</div>
+<div class="line">             moveHorizontal = -1.0f;</div>
+<div class="line">-        else if (keyboard.rightArrowKey.isPressed || keyboard.dKey.isPressed)</div>
+<div class="line">+        else if (keyboard.rightArrowKey.isPressed || keyboard.dKey.isPressed || TestInputControl.MoveRight)</div>
+<div class="line">             moveHorizontal = 1.0f;</div>
+<div class="line"> </div>
+<div class="line">         movementInput = new Vector2(moveHorizontal, 0);</div>
+<div class="line"> </div>
+<div class="line">         // Jumping input</div>
+<div class="line">-        if (!isJumping &amp;&amp; keyboard.spaceKey.wasPressedThisFrame)</div>
+<div class="line">+        if (!isJumping &amp;&amp; (keyboard.spaceKey.wasPressedThisFrame || TestInputControl.Jump))</div>
+<div class="line">             jumpInput = true;</div>
+<div class="line">     } </div>
+</div><!-- fragment --><p>Now you are ready! Go back to <span class="tt">MovementTest.cs</span> and write a test that does not do any assertions (just yet), but only moves the Sara character and makes it occasionally jump. <br  />
+</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5308"></a>
+Hints</h1>
+<ul>
+<li>You might want to use <span class="tt">WaitForSeconds</span> in your test, to deliberately make it run longer and see actual animation happening on your screen.</li>
+<li>In case of compilation issues, please make sure you follow the right folder structure:</li>
+</ul>
+<div class="fragment"><div class="line">Tests</div>
+<div class="line">    InputControl</div>
+<div class="line">        TestInputControl.asmdef</div>
+<div class="line">        TestInputControl.cs</div>
+<div class="line">    PlayModeTests</div>
+<div class="line">        MovementTest.cs</div>
+<div class="line">        PlayModeTest.asmdef</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md5309"></a>
+Solution</h1>
+<p>PlayModeTests.asmdef <br  />
+ </p><div class="fragment"><div class="line">{</div>
+<div class="line">    &quot;name&quot;: &quot;PlayModeTests&quot;,</div>
+<div class="line">    &quot;references&quot;: [</div>
+<div class="line">      &quot;Unity.InputSystem&quot;,</div>
+<div class="line">      &quot;Unity.InputSystem.TestFramework&quot;,</div>
+<div class="line">      &quot;TestInputControl&quot;</div>
+<div class="line">    ],</div>
+<div class="line">    &quot;optionalUnityReferences&quot;: [</div>
+<div class="line">      &quot;TestAssemblies&quot;</div>
+<div class="line">    ]</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> MovementTest.cs <br  />
+ </p><div class="fragment"><div class="line">using System.Collections;</div>
+<div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.TestTools;</div>
+<div class="line">using UnityEngine.SceneManagement;</div>
+<div class="line"> </div>
+<div class="line">public class MovementTest</div>
+<div class="line">{</div>
+<div class="line">    [UnityTest]</div>
+<div class="line">    public IEnumerator MainScene_CharacterIsAbleToJump()</div>
+<div class="line">    {</div>
+<div class="line">      SceneManager.LoadScene(&quot;Assets/Scenes/Main.unity&quot;, LoadSceneMode.Single);</div>
+<div class="line">      yield return waitForSceneLoad();</div>
+<div class="line">      yield return GoRight();</div>
+<div class="line">      yield return new WaitForSeconds(2);</div>
+<div class="line">      yield return Jump();</div>
+<div class="line">      yield return new WaitForSeconds(3);</div>
+<div class="line">      yield return GoLeft();</div>
+<div class="line">      yield return Jump();</div>
+<div class="line">      yield return new WaitForSeconds(2);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private IEnumerator Jump()</div>
+<div class="line">    {</div>
+<div class="line">      TestInputControl.Jump = true;</div>
+<div class="line">      yield return null;</div>
+<div class="line">      TestInputControl.Jump = false;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private IEnumerator GoRight()</div>
+<div class="line">    {</div>
+<div class="line">      TestInputControl.MoveLeft = false;</div>
+<div class="line">      yield return null;</div>
+<div class="line">      TestInputControl.MoveRight = true;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private IEnumerator GoLeft()</div>
+<div class="line">    {</div>
+<div class="line">      TestInputControl.MoveRight = false;</div>
+<div class="line">      yield return null;</div>
+<div class="line">      TestInputControl.MoveLeft = true;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private IEnumerator waitForSceneLoad()</div>
+<div class="line">    {</div>
+<div class="line">        while (SceneManager.GetActiveScene().buildIndex &gt; 0)</div>
+<div class="line">        {</div>
+<div class="line">            yield return null;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

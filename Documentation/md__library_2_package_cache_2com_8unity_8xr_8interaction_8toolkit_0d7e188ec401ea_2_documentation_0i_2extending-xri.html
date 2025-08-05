@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: extending-xri</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2extending-xri.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">extending-xri </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8183"></a>
+autotoc_md8183</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8184"></a>
+uid: xri-extending-xri</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8185"></a>
+Extending the XR Interaction Toolkit</h1>
+<p>You can extend the XR Interaction Toolkit system through either <a href="https://unity3d.com/learn/tutorials/topics/scripting/inheritance">inheritance</a> or composition. Both Interactors and Interactables derive from an abstract base class that you can derive from and use to hook into the XR Interaction Manager to provide your own functionality. Additionally, you can use event callbacks to add functionality to the existing components.</p>
+<p>Below are diagrams showing how existing Interactor and Interactable classes inherit their base classes along with key interaction interfaces they implement. Note that this is not an exhaustive representation of the interfaces implemented by each class or a full list of all classes</p>
+<p>Interactor class diagram shown below. <img src="images/class-hierarchy-interactor.svg" alt="class-hierarchy-interactor" style="pointer-events: none;" class="inline"/></p>
+<p>Interactable class diagram shown below. <img src="images/class-hierarchy-interactable.svg" alt="class-hierarchy-interactable" style="pointer-events: none;" class="inline"/></p>
+<p>The rest of this documentation details the ways to extend the XR Interaction Toolkit.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8186"></a>
+Interactor and Interactable event callbacks</h2>
+<p>Interactors and Interactables both have various event callbacks that can be used to drive reactions to interaction state changes. You can use these events to define your own behavior to hover, to select, and to activate state changes with no additional coding.</p>
+<p><img src="images/interactable-events-callback-example.png" alt="interactable-events-callback-example" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8187"></a>
+Extending Interactors</h2>
+<p>You can derive from the <span class="tt">XRBaseInteractor</span> and/or <span class="tt">XRBaseInputInteractor</span> abstract base classes to define your own way of interacting with the world. <a class="el" href="namespace_unity.html">Unity</a> currently provides different interactors for poke, near, and far interaction, but you can decide how you want the user to choose objects in the world and what they can do with them (though typically you do the latter by deriving from the <span class="tt">XRBaseInteractable</span> class).</p>
+<p>In addition to standard <a class="el" href="namespace_unity.html">Unity</a> callbacks, you can override the following methods and properties:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method/Property  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">GetValidTargets</span></b>  </td><td class="markdownTableBodyNone">Retrieves the list of interactables that this interactor can interact with this frame.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">isHoverActive</span></b>  </td><td class="markdownTableBodyNone">Returns true if this Interactor is in a state where it could hover, false otherwise.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">isSelectActive</span></b>  </td><td class="markdownTableBodyNone">Gets whether this interactor is in a state where it could select.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">CanHover</span></b>  </td><td class="markdownTableBodyNone">Returns true if this Interactor is in a state where it could select, false otherwise.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">CanSelect</span></b>  </td><td class="markdownTableBodyNone">Returns true if the Interactable is valid for selection this frame, false otherwise.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">selectedInteractableMovementTypeOverride</span></b>  </td><td class="markdownTableBodyNone">Gets the movement type to use when overriding the selected Interactable's movement.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">OnRegistered</span> and <span class="tt">OnUnregistered</span></b>  </td><td class="markdownTableBodyNone">The Interaction Manager calls these methods when the Interactor is registered and unregistered from it.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">OnHoverEntering</span> and <span class="tt">OnHoverEntered</span></b>  </td><td class="markdownTableBodyNone">The Interaction Manager calls these methods when the Interactor first initiates hovering over an Interactable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">OnHoverExiting</span> and <span class="tt">OnHoverExited</span></b>  </td><td class="markdownTableBodyNone">The Interaction Manager calls these methods when the Interactor ends hovering over an Interactable. The event arguments will describe whether the hover was canceled, such as from either being unregistered due to being disabled or destroyed.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">OnSelectEntering</span> and <span class="tt">OnSelectEntered</span></b>  </td><td class="markdownTableBodyNone">The Interaction Manager calls these methods when the Interactor first initiates selection of an Interactable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">OnSelectExiting</span> and <span class="tt">OnSelectExited</span></b>  </td><td class="markdownTableBodyNone">The Interaction Manager calls these methods when the Interactor ends selection of an Interactable. The event arguments will describe whether the selection was canceled, such as from either being unregistered due to being disabled or destroyed.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8188"></a>
+Extending Interactables</h2>
+<p>You can derive from the <span class="tt">XRBaseInteractable</span> abstract base class to define your own way of interacting with the world. Currently, <a class="el" href="namespace_unity.html">Unity</a> only provides the Grab Interactable, but you can either create your own Interactables from the base class or derive from Grab Interactable if you want to adopt grabbing behavior.</p>
+<p>In addition to standard <a class="el" href="namespace_unity.html">Unity</a> callbacks, you can override the following methods:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">IsHoverableBy</span></b>  </td><td class="markdownTableBodyNone">Determines if this Interactable can be hovered by a given Interactor.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">IsSelectableBy</span></b>  </td><td class="markdownTableBodyNone">Determines if this Interactable can be selected by a given Interactor.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">OnRegistered</span> and <span class="tt">OnUnregistered</span></b>  </td><td class="markdownTableBodyNone">The Interaction Manager calls these methods when the Interactable is registered and unregistered from it.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">OnHoverEntering</span> and <span class="tt">OnHoverEntered</span></b>  </td><td class="markdownTableBodyNone">The Interaction Manager calls these methods when an Interactor first initiates hovering over the Interactable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">OnHoverExiting</span> and <span class="tt">OnHoverExited</span></b>  </td><td class="markdownTableBodyNone">The Interaction Manager calls these methods when an Interactor ends hovering over the Interactable. The event arguments will describe whether the hover was canceled, such as from either being unregistered due to being disabled or destroyed.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">OnSelectEntering</span> and <span class="tt">OnSelectEntered</span></b>  </td><td class="markdownTableBodyNone">The Interaction Manager calls these methods when an Interactor first initiates selection of the Interactable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">OnSelectExiting</span> and <span class="tt">OnSelectExited</span></b>  </td><td class="markdownTableBodyNone">The Interaction Manager calls these methods when an Interactor ends selection of the Interactable. The event arguments will describe whether the selection was canceled, such as from either being unregistered due to being disabled or destroyed.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">OnActivated</span> and <span class="tt">OnDeactivated</span></b>  </td><td class="markdownTableBodyNone">The Controller Interactor calls these methods when the Interactor begins an activation event on the selected Interactable, or ends the activation.  </td></tr>
+</table>
+<p>An Interactable can be hovered by multiple Interactors at the same time. The <span class="tt">firstHoverEntered</span> and <span class="tt">lastHoverExited</span> events can be used to control highlight states of objects as they will fire when just the first hover is started, and once all hovers are stopped. Similarly, the <span class="tt">firstSelectEntered</span> and <span class="tt">lastSelectExited</span> events can be used on Interactables that support multiple selections.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8189"></a>
+Interactable select modes</h3>
+<p>The <span class="tt">selectMode</span> of an Interactable is used to set the selection policy. The value is only read by the Interaction Manager when a selection attempt is made, so changing this value from <b>Multiple</b> to <b>Single</b> will not cause selections to be exited.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Select Mode  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Single</b>  </td><td class="markdownTableBodyNone">Can only be selected by a single Interactor at a time and allows other Interactors to take selection by automatically deselecting.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Multiple</b>  </td><td class="markdownTableBodyNone">Can be selected by multiple Interactors at a time.  </td></tr>
+</table>
+<p>The Multiple option can be disabled in the Inspector window by using the <span class="tt">CanSelectMultiple</span> attribute on your component script.</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit.html">UnityEngine.XR.Interaction.Toolkit</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables.html">UnityEngine.XR.Interaction.Toolkit.Interactables</a>;</div>
+<div class="line"> </div>
+<div class="line">[CanSelectMultiple(<span class="keyword">false</span>)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>ExampleInteractable : XRBaseInteractable</div>
+<div class="line">{</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_html"><div class="ttname"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables.html">UnityEngine.XR.Interaction.Toolkit.Interactables</a></div><div class="ttdef"><b>Definition</b> DistanceInfo.cs:5</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_html"><div class="ttname"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit.html">UnityEngine.XR.Interaction.Toolkit</a></div><div class="ttdef"><b>Definition</b> ObjectResetPlane.cs:5</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md8190"></a>
+Extending target filters</h2>
+<p>You can derive from <span class="tt">XRBaseTargetFilter</span> (a <span class="tt">MonoBehaviour</span>) or implement <span class="tt">IXRTargetFilter</span> to create a custom Target Filter. At runtime, you can link an instance of your custom Target Filter by assigning it to the <span class="tt">targetFilter</span> property of an Interactor.</p>
+<p>An instance of an <span class="tt">XRBaseTargetFilter</span> can also be assigned in the Inspector to the <b>Starting Target Filter</b> property of an Interactor. During the Interactor runtime initialization, it'll link itself with the filter in this property.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8191"></a>
+Extending evaluators</h3>
+<p>You can derive from <span class="tt">XRTargetEvaluator</span> to create a custom Evaluator. An <span class="tt">XRTargetEvaluator</span> has virtual lifecycle callbacks similar to a <span class="tt">MonoBehaviour</span> and an additional method (<span class="tt">CalculateNormalizedScore</span>) for its score calculation. All these callbacks are invoked by its <span class="tt">XRTargetFilter</span>. The <span class="tt">CalculateNormalizedScore</span> method can be invoked several times in a single frame, as it can be called one time for each target Interactable in the linked Interactors.</p>
+<p>An <span class="tt">XRTargetEvaluator</span> can optionally implement the interface <span class="tt">IXRTargetEvaluatorLinkable</span> to receive callbacks whenever an Interactor links to or unlinks from its filter.</p>
+<p>For Evaluators that do binary tests, it's recommended that its <span class="tt">CalculateNormalizedScore</span> method returns <span class="tt">1</span> when the condition is met, and <span class="tt">0</span> otherwise.</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering.html">UnityEngine.XR.Interaction.Toolkit.Filtering</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables.html">UnityEngine.XR.Interaction.Toolkit.Interactables</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors.html">UnityEngine.XR.Interaction.Toolkit.Interactors</a>;</div>
+<div class="line"> </div>
+<div class="line">[Serializable]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>ExcludeByTagEvaluator : <a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_target_evaluator.html">XRTargetEvaluator</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">string</span> tagToExclude;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">float</span> CalculateNormalizedScore(<a class="code hl_interface" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html">IXRInteractor</a> interactor, <a class="code hl_interface" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_i_x_r_interactable.html">IXRInteractable</a> target)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> target.<a class="code hl_property" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_i_x_r_interactable.html#a083ab24b522220119c1f066676f495d3">transform</a>.CompareTag(tagToExclude) ? 0f : 1f;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_target_evaluator_html"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_target_evaluator.html">UnityEngine.XR.Interaction.Toolkit.Filtering.XRTargetEvaluator</a></div><div class="ttdoc">Abstract base class from which all Target Evaluators derive. This class evaluates the intention to in...</div><div class="ttdef"><b>Definition</b> XRTargetEvaluator.cs:26</div></div>
+<div class="ttc" id="ainterface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_i_x_r_interactable_html"><div class="ttname"><a href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_i_x_r_interactable.html">UnityEngine.XR.Interaction.Toolkit.Interactables.IXRInteractable</a></div><div class="ttdoc">An interface that represents an Interactable component that controls how a GameObject interacts with ...</div><div class="ttdef"><b>Definition</b> IXRInteractable.cs:24</div></div>
+<div class="ttc" id="ainterface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_i_x_r_interactable_html_a083ab24b522220119c1f066676f495d3"><div class="ttname"><a href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_i_x_r_interactable.html#a083ab24b522220119c1f066676f495d3">UnityEngine.XR.Interaction.Toolkit.Interactables.IXRInteractable.transform</a></div><div class="ttdeci">Transform transform</div><div class="ttdoc">(Read Only) The Transform associated with the Interactable.</div><div class="ttdef"><b>Definition</b> IXRInteractable.cs:62</div></div>
+<div class="ttc" id="ainterface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor_html"><div class="ttname"><a href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractor</a></div><div class="ttdoc">An interface that represents an Interactor component that controls how a GameObject interacts with an...</div><div class="ttdef"><b>Definition</b> IXRInteractor.cs:25</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_html"><div class="ttname"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering.html">UnityEngine.XR.Interaction.Toolkit.Filtering</a></div><div class="ttdef"><b>Definition</b> XRTargetEvaluatorEnabledAttribute.cs:2</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_html"><div class="ttname"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors.html">UnityEngine.XR.Interaction.Toolkit.Interactors</a></div><div class="ttdef"><b>Definition</b> CurveInteractionCaster.cs:10</div></div>
+</div><!-- fragment --><h4 class="doxsection"><a class="anchor" id="autotoc_md8192"></a>
+Troubleshooting missing evaluator types</h4>
+<p>Evaluators are <a href="https://docs.unity3d.com/ScriptReference/SerializeReference.html">serialized as reference</a> in the <span class="tt">XRTargetFilter</span>, and <a class="el" href="namespace_unity.html">Unity</a> does not keep track of the script (or its GUID) that the Evaluator objects originated from. If an Evaluator type becomes missing, <a class="el" href="namespace_unity.html">Unity</a> will log an error in the Console window. Follow the instructions below to fix this issue:</p><ul>
+<li>If you are changing the Evaluator type (by renaming its class, namespace, etc) or moving it to another assembly, then you should decorate the Evaluator class with the <a href="https://github.com/Unity-Technologies/UnityCsReference/blob/master/Runtime/Export/Scripting/APIUpdating/UpdatedFromAttribute.cs">MovedFromAttribute</a> passing the information of the old type.</li>
+<li>Before deleting an Evaluator script, make sure that no other <span class="tt">XRTargetFilter</span> in your project is using it. If you are using <a class="el" href="namespace_unity.html">Unity</a> version 2021.2 or above, you can select the missing types from the filter Inspector and delete them. Otherwise, to delete these objects, you'll need to create a new Evaluator script, and decorate it with a <span class="tt">MovedFromAttribute</span> containing the deleted type information.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8193"></a>
+Inspectors</h2>
+<p>Custom <a href="https://docs.unity3d.com/ScriptReference/Editor.html">Editor</a> classes are used to change the appearance and order of properties that appear in the Inspector, particularly for Interactors and Interactables. Derived behaviors that add additional serialized fields (those that are <span class="tt">public</span> or have the <span class="tt">SerializeField</span> attribute) will automatically have those appear in the Inspector. The Editor classes can be extended to further customize the Inspector, at which point any declared <span class="tt">SerializedProperty</span> fields that are assigned will no longer be automatically drawn during <span class="tt">DrawDerivedProperties</span>. Within those derived Editor classes, you will typically only need to override methods such as <span class="tt">DrawProperties</span> in <span class="tt">XRBaseInteractorEditor</span> or <span class="tt">XRBaseInteractableEditor</span> rather than the entire <span class="tt">OnInspectorGUI</span>.</p>
+<div class="fragment"><div class="line"><span class="comment">// ExampleInteractable.cs in Assets.</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables.html">UnityEngine.XR.Interaction.Toolkit.Interactables</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>ExampleInteractable : XRBaseInteractable</div>
+<div class="line">{</div>
+<div class="line">    [SerializeField]</div>
+<div class="line">    <span class="keywordtype">bool</span> m_AdditionalField;</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="comment">// ExampleInteractableEditor.cs in an Editor folder in Assets</span></div>
+<div class="line"><span class="comment">// which explicitly defines a SerializedProperty to choose</span></div>
+<div class="line"><span class="comment">// where to display it in the Inspector rather than using</span></div>
+<div class="line"><span class="comment">// the default location.</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables.html">UnityEditor.XR.Interaction.Toolkit.Interactables</a>;</div>
+<div class="line"> </div>
+<div class="line">[CustomEditor(typeof(ExampleInteractable), <span class="keyword">true</span>), CanEditMultipleObjects]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>ExampleInteractableEditor : <a class="code hl_class" href="class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_x_r_base_interactable_editor.html">XRBaseInteractableEditor</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">protected</span> SerializedProperty m_AdditionalField;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnEnable()</div>
+<div class="line">    {</div>
+<div class="line">        base.<a class="code hl_function" href="class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_x_r_base_interactable_editor.html#a61d4331624c82986e1d2222c9730a9a2">OnEnable</a>();</div>
+<div class="line">        m_AdditionalField = serializedObject.FindProperty(<span class="stringliteral">&quot;m_AdditionalField&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> DrawProperties()</div>
+<div class="line">    {</div>
+<div class="line">        base.DrawProperties();</div>
+<div class="line">        EditorGUILayout.PropertyField(m_AdditionalField);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_x_r_base_interactable_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_x_r_base_interactable_editor.html">UnityEditor.XR.Interaction.Toolkit.Interactables.XRBaseInteractableEditor</a></div><div class="ttdoc">Custom editor for an XRBaseInteractable.</div><div class="ttdef"><b>Definition</b> XRBaseInteractableEditor.cs:18</div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_x_r_base_interactable_editor_html_a61d4331624c82986e1d2222c9730a9a2"><div class="ttname"><a href="class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_x_r_base_interactable_editor.html#a61d4331624c82986e1d2222c9730a9a2">UnityEditor.XR.Interaction.Toolkit.Interactables.XRBaseInteractableEditor.OnEnable</a></div><div class="ttdeci">virtual void OnEnable()</div><div class="ttdoc">This function is called when the object becomes enabled and active.</div><div class="ttdef"><b>Definition</b> XRBaseInteractableEditor.cs:185</div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_html"><div class="ttname"><a href="namespace_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables.html">UnityEditor.XR.Interaction.Toolkit.Interactables</a></div><div class="ttdef"><b>Definition</b> XRBaseInteractableEditor.cs:11</div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition</b> HandsSampleProjectValidation.cs:12</div></div>
+</div><!-- fragment --><p> The <a href="https://docs.unity3d.com/ScriptReference/Editor.DrawDefaultInspector.html"><span class="tt">Editor.DrawDefaultInspector</span></a> method can be used to draw the built-in Inspector instead. The <a href="https://docs.unity3d.com/ScriptReference/PropertyDrawer.html"><span class="tt">PropertyDrawer</span></a> class can also be utilized rather than creating custom <span class="tt">Editor</span> classes. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

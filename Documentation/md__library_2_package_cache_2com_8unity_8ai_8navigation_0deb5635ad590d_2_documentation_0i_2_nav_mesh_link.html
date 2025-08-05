@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: NavMesh Link component reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_mesh_link.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">NavMesh Link component reference </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md342"></a></p>
+<p>Use the NavMesh Link component to connect different NavMeshes built for the same <a href="./NavigationWindow.md#agents-tab">agent type</a>. The link can be a line from one point to another (no width), or a span (with width). If the link is a span (with width), the Agent uses the nearest location along the entry edge to cross the link. For example, you can use the <b>NavMesh Link</b> component to connect a NavMesh that represents a building’s interior to a NavMesh that represents the building’s exterior. You can't overlap separate NavMeshes to create a link between them.</p>
+<p>To use the NavMesh Link you can either add it to your scene as a GameObject or add it to an existing GameObject as a component.</p>
+<p>To add a NavMesh Link to your scene as a GameObject, do the following:</p><ul>
+<li>From the main menu go to <b>GameObject</b> &gt; <b>AI</b> &gt; <b>NavMesh Link</b>.<br  />
+ The <b>NavMesh Link</b> component is displayed in the <b>Inspector</b> window.</li>
+</ul>
+<p>To add the NavMesh Link component to an existing GameObject, do the following:</p><ol type="1">
+<li>Select the GameObject you want to add the component to.</li>
+<li>In the Inspector select <b>Add Component</b>, then select <b>Navigation</b> &gt; <b>NavMesh Link</b>. <br  />
+ The <b>NavMesh Link</b> component is displayed in the <b>Inspector</b> window.</li>
+</ol>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Agent Type</b>  </td><td class="markdownTableBodyNone">Specify which Agent type can use the link.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Start Transform</b>  </td><td class="markdownTableBodyNone">Select the GameObject that represents the start location of the link. This object is tracked by the middle of the link's start edge.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Start Point</b>  </td><td class="markdownTableBodyNone">Specify the start point of the link, relative to the GameObject's world-space position and orientation. The three values define the point's X, Y, and Z coordinates. Neither transform scale nor shear affect this point. <br  />
+The link uses this start position only when <b>Start Transform</b> does not reference any object.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>End Transform</b>  </td><td class="markdownTableBodyNone">Select the GameObject that represents the end location of the link. This GameObject is tracked by the middle of the link's end edge.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>End Point</b>  </td><td class="markdownTableBodyNone">Specify the end point of the link, relative to the GameObject's world-space position and orientation. The three values define the point's X, Y, and Z coordinates. Neither transform scale nor shear affect this point. <br  />
+The link uses this end position only when <b>End Transform</b> does not reference any object.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Swap</b>  </td><td class="markdownTableBodyNone">Swap the start and end points and swap the start and end transforms.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Re-Center Origin</b>  </td><td class="markdownTableBodyNone">Move the GameObject to the center point of the link and align the transform’s forward axis with the end point.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Width</b>  </td><td class="markdownTableBodyNone">Specify the width of the link. You can also drag the handles at the side of the link to adjust the width. <br  />
+<b>Note</b>: The GameObject's scale does not affect the width of the link.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Cost Override</b>  </td><td class="markdownTableBodyNone">Choose how to assign the cost to move across the link. <br  />
+ Select <b>Cost Override</b> to set the cost value directly in the adjacent number field.<br  />
+ Deselect <b>Cost Override</b> for the cost of the Area type to become the cost of moving over the NavMesh link. In this case the adjacent number field is disabled and not used. <br  />
+ Path finding uses the cost in conjunction with the distance between the start and end positions in world space. For more information, refer to <a href="./AreasAndCosts.html#pathfinding-cost">Areas and costs</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Auto Update Positions</b>  </td><td class="markdownTableBodyNone">Update the positions of the link's ends automatically when any of the GameObject transform, the start transform or the end transform change position.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Bidirectional</b>  </td><td class="markdownTableBodyNone">Control the direction NavMesh Agents move across the link. When you select this checkbox, NavMesh Agents can move across the link in both directions (from the start point to the end point, and from the end point to the start point).<br  />
+When you clear this checkbox, NavMesh Agents can only move across the link in one direction (from the start point to the end point).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Area Type</b>  </td><td class="markdownTableBodyNone">The area type of the NavMesh Link. The area type allows you to apply a common traversal cost to similar area types and prevent certain characters from accessing the NavMesh Link based on the agent’s Area Mask. For more information about area types and traversal costs, refer to <a href="./AreasAndCosts.html">Areas and costs</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Area Type</b> &gt; <b>Walkable</b>  </td><td class="markdownTableBodyNone">Make the link walkable for the affected agent types. This is the default option.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Area Type</b> &gt; <b>Not Walkable</b>  </td><td class="markdownTableBodyNone">Prevent the affected agent types from crossing the link. Links with a <b>Not Walkable</b> area type do not connect to any NavMesh.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Area Type</b> &gt; <b>Jump</b>  </td><td class="markdownTableBodyNone">Change the area type of the link to <b>Jump</b>. This is the type that is assigned to all auto-generated NavMesh links.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Area Type</b> &gt; <b>Open Area Settings</b>  </td><td class="markdownTableBodyNone">Open the <a href="./NavigationWindow.html#areas-tab">Areas tab</a> of the Navigation window to define new area types or modify existing ones.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Activated</b>  </td><td class="markdownTableBodyNone">Allow agents and queries to use the link in pathfinding. <br  />
+Select <b>Activated</b> to display the link's gizmo in the Scene view with black lines. <br  />
+Deselect <b>Activated</b> to display the link's gizmo in the Scene view with red lines.  </td></tr>
+</table>
+<p>To adjust the ends of the link directly from the scene view you can drag the yellow handler gizmos at each end. A yellow cube represents the <b>Point</b> position for that end. In the opposite arrangement where the link references an object, a yellow sphere represents the <b>Transform</b> position of the referenced object. If you move the yellow sphere, the referenced object moves along to the same position. To adjust the width of the link you can drag the orange dot handler gizmos placed on the sides of the link, at one third of the distance from the start to the end. To display the handles, enable the NavMesh Link gizmo and select the GameObject. For more information on gizmos, refer to <a href="https://docs.unity3d.com/6000.0/Documentation/Manual/GizmosMenu.html">Gizmos menu</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md343"></a>
+Additional resources</h1>
+<ul>
+<li><a href="./NavigationWindow.md#agents-tab">About Agents</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_areas_and_costs.html">Areas and costs</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_off_mesh_link.html">OffMesh Link component (deprecated) reference</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

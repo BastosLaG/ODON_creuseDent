@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controller_profile =
+[
+    [ "ReverbG2Controller", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7.html", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controll693bce3e89343b5c20e5ea22aebf56e7" ],
+    [ "GetDeviceLayoutName", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controller_profile.html#ab4cfc647db3831195fba0f686f8654ba", null ],
+    [ "RegisterActionMapsWithRuntime", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controller_profile.html#aafec7917553a3903667b49d24fd77f46", null ],
+    [ "RegisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controller_profile.html#a718133d794a1193f59b9c20bfae8e68e", null ],
+    [ "UnregisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_p_reverb_g2_controller_profile.html#a9c26cc1f4e2e188624885fadc7f8e7a3", null ]
+];

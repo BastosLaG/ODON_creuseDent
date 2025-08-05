@@ -1,0 +1,27 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848 =
+[
+    [ "FinishSetup", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#acdaa01e925eac503d84960356f9a875c", null ],
+    [ "devicePose", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a1e6acc9f61852e948585f7eb7f0fcd3e", null ],
+    [ "devicePosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#ad69c753c61d4fadcb3b5fe0d13a289aa", null ],
+    [ "deviceRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a3d7f36870e733f0931ef7e223dbb9c3d", null ],
+    [ "grip", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#af610e8d0a7000a1e04d70673debda7b1", null ],
+    [ "gripPressed", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#ab83b554076e59844648d9e681f078f13", null ],
+    [ "haptic", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#ad59b8b8445e73247b6b8580e75cd117e", null ],
+    [ "isTracked", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a57ee14df8e20b0d06f30d1effcaad946", null ],
+    [ "menu", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#aea4276f47090cb0bff38ceccd40da399", null ],
+    [ "pointer", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#aabc89b53241b5535a7cbbfd04e568d99", null ],
+    [ "pointerPosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a678cd9c77d8d105d52dfc0be6007c292", null ],
+    [ "pointerRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#abc798f5ad1a3f7bfd77c861efe45985b", null ],
+    [ "primaryButton", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a69065505f9caa659f7515749900f9f1a", null ],
+    [ "primaryTouched", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a852d9fa284ea45a6a8a4f9df166f8234", null ],
+    [ "secondaryButton", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#aec1f57f017b43dde7d3872e9cb4e6ac0", null ],
+    [ "secondaryTouched", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a895f75ac110bcd110ed925434d3df7f6", null ],
+    [ "thumbrestTouched", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a4133878c707a837ae23d64242133b414", null ],
+    [ "thumbstick", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a2b45778d72b0414c5c410ffcbdc4ff3b", null ],
+    [ "thumbstickClicked", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#ac5c7164b6c6f66034e179b88114bda75", null ],
+    [ "thumbstickTouched", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a5792e148571861d9737d39c8b654dd2d", null ],
+    [ "trackingState", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a36ec84a67eb7d733ece8f296d005b490", null ],
+    [ "trigger", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#af78b592aacad349c89be979b3d22f43e", null ],
+    [ "triggerPressed", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#af577d581be0e556b0342e6511458af4e", null ],
+    [ "triggerTouched", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html#a9debfbbaf0feec20c5fbc095f4c17377", null ]
+];

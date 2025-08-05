@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Create a Sub-Timeline instance</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-subtimeline.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Create a Sub-Timeline instance </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6101"></a></p>
+<p>This workflow demonstrates how to create a single cut-scene by nesting a <a class="el" href="namespace_timeline.html">Timeline</a> instance within another <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+<p>This workflow uses the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2samp-gameplay-demo.html">Gameplay Sequence sample</a>. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2samp-overview.html">Timeline Samples</a> for information on the samples available from the <a class="el" href="namespace_timeline.html">Timeline</a> package and how to import these samples into your projects.</p>
+<p>To demonstrate how to combine two <a class="el" href="namespace_timeline.html">Timeline</a> instances, this workflow is divided into the following main tasks:</p><ol type="1">
+<li><a class="el" href="#setupinstance">Set up the main Timeline instance</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#subtimeline">Add a Control track and create a Sub-Timeline instance</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#adjclip">Adjust the Control clip</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#playresult">Play the result</a>.</li>
+</ol>
+<p><a class="anchor" id="setupinstance"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6102"></a>
+Set up the main Timeline instance</h1>
+<p>This workflow demonstrates how to combine two <a class="el" href="namespace_timeline.html">Timeline</a> instances to create a single cut-scene. By default, in the Gameplay Sequence Demo scene, the <span class="tt">CanSubTimeline</span> Sub-Timeline instance is already combined with the <span class="tt">GameplaySequence</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+<p>Before demonstrating how to combine two <a class="el" href="namespace_timeline.html">Timeline</a> instances, remove the Sub-Timeline instance. To do this, follow these steps:</p>
+<ol type="1">
+<li><p class="startli">Load the <span class="tt">GameplaySequence</span> scene and open the <span class="tt">GameplaySequence</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance in the <a class="el" href="namespace_timeline.html">Timeline</a> window.</p>
+<p class="startli">Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2samp-gameplay-demo.html">Gameplay Sequence Demo</a> for the steps on how to load the <span class="tt">GameplaySequence</span> scene and display the <span class="tt">GameplaySequence</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">In the <a class="el" href="namespace_timeline.html">Timeline</a> window, expand the Props Track group.</p>
+<p class="startli">The Props Track group contains tracks that activate and animate the <span class="tt">Table</span> and <span class="tt">Can</span> GameObjects. The Props Track group also contains the <span class="tt">Can Sub-Timeline</span> Control track that nests the <span class="tt">CanSubTimeline</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance. This <a class="el" href="namespace_timeline.html">Timeline</a> instance animates the <span class="tt">Can</span> GameObject as it bounces and falls off the table.</p>
+<p class="startli"><img src="images/tl-props-expanded.png" alt="" class="inline"/> <em>The Props Track group expanded in the <a class="el" href="namespace_timeline.html">Timeline</a> window with the Can Sub-Timeline track selected</em></p>
+<p class="startli">Since this workflow demonstrates how to combine two <a class="el" href="namespace_timeline.html">Timeline</a> instances, you should remove the nested <span class="tt">CanSubTimeline</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">To remove the nested <span class="tt">CanSubTimeline</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance, delete the <span class="tt">Can Sub-Timeline</span> Control track.</p>
+<p class="startli">To delete the <span class="tt">Can Sub-Timeline</span> Control track, select the More (⋮) menu from its Track Header and choose <b>Delete</b>. This is one way to delete a track from a <a class="el" href="namespace_timeline.html">Timeline</a> instance. The <a class="el" href="namespace_timeline.html">Timeline</a> window includes other ways <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2trk-delete.html">to delete a track</a>.</p>
+</li>
+</ol>
+<p><a class="anchor" id="subtimeline"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6103"></a>
+Add a Control track and create a Sub-Timeline instance</h1>
+<p>To nest the <span class="tt">CanSubTimeline</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance within the <span class="tt">GameplaySequence</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance, do the following:</p>
+<ol type="1">
+<li><p class="startli">In the scene, select the GameObject associated with the <a class="el" href="namespace_timeline.html">Timeline</a> instance that will be the main <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+<p class="startli">In this workflow, the <span class="tt">GameplaySequence</span> is the main <a class="el" href="namespace_timeline.html">Timeline</a> instance. It is associated with the <span class="tt"><a class="el" href="namespace_timeline.html">Timeline</a></span> GameObject.</p>
+<p class="startli"><img src="images/hier-timeline-go.png" alt="" class="inline"/></p>
+<p class="startli"><em>Select the <span class="tt"><a class="el" href="namespace_timeline.html">Timeline</a></span> GameObject to display the <span class="tt">GameplaySequence</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance in the <a class="el" href="namespace_timeline.html">Timeline</a> window</em></p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">When the <a class="el" href="namespace_timeline.html">Timeline</a> window displays the <span class="tt">GameplaySequence</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance, enable the Lock icon.</p>
+<p class="startli">When locked, the <a class="el" href="namespace_timeline.html">Timeline</a> window does not change when you select GameObjects. This makes it easier to set up or modify a <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Add a Control track to the Props Track group.</p>
+<p class="startli">To do this, click the <b>Add</b> (<b>+</b>) button beside the Prop Track group name, and choose <b>Control Track</b>.</p>
+<p class="startli"><img src="images/tl-props-add-menu.png" alt="" class="inline"/></p>
+<p class="startli"><em>The Add button (A) beside the Prop Track group name.</em></p>
+<p class="startli">A new Control Track is added at the end of the Prop Track. You may have to scroll the <a class="el" href="namespace_timeline.html">Timeline</a> window to view the new Control track.</p>
+<p class="startli">A Control track is a special track for adding a Particle System, a Prefab instance, a ITimeControl Script, or a nested <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">In the Scene Hierarchy, find the GameObject that is associated with the <a class="el" href="namespace_timeline.html">Timeline</a> instance to be nested.</p>
+<p class="startli">In this workflow, you want to nest the <span class="tt">CanSubTimeline</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance which is associated with the <span class="tt">CanSubTimeline</span> GameObject. This GameObject is within the <span class="tt">Table</span> hierarchy.</p>
+<p class="startli"><img src="images/hier-cansubtimeline-go.png" alt="" class="inline"/></p>
+<p class="startli"><em>The CanSubTimeline is associated with CanSubTimeline GameObject</em></p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Select and drag the <span class="tt">CanSubTimeline</span> GameObject into the Control track that you added to the Props Track group.</p>
+<p class="startli">The <a class="el" href="namespace_timeline.html">Timeline</a> window places a Control clip where you release the <span class="tt">CanSubTimeline</span> GameObject. The Control clip is set to the same size as the <span class="tt">CanSubTimeline</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+<p class="startli">When a <a class="el" href="namespace_timeline.html">Timeline</a> instance is nested within another <a class="el" href="namespace_timeline.html">Timeline</a> instance, the nested instance is referred to as a Sub-Timeline instance.</p>
+<p class="startli"><img src="images/tl-props-control-clip.png" alt="" class="inline"/></p>
+<p class="startli"><b>(A)</b> Control track with a Control clip.<br  />
+ <b>(B)</b> Downward arrow in the Control clip indicates that the Control clip contains a Sub-Timeline instance.<br  />
+</p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">To view and Sub-Timeline instance, double-click its Control clip.</p>
+<p class="startli">The <b>Local</b> or <b>Global</b> button indicates whether the <a class="el" href="namespace_timeline.html">Timeline</a> ruler displays the time local to the Sub-Timeline instance or the time global to the main <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+<p class="startli">When you edit a Sub-Timeline instance, the <a class="el" href="namespace_timeline.html">Timeline</a> title displays a breadcrumb list of <a class="el" href="namespace_timeline.html">Timeline</a> and Sub-Timeline instances. There can be many nested Sub-Timeline instances.</p>
+<p class="startli"><img src="images/anno-tl-sub-timeline.png" alt="" class="inline"/></p>
+<p class="startli"><b>(A)</b> Local or Global button.<br  />
+ <b>(B)</b> Sub-Timeline instance with breadcrumb list or nested Sub-Timeline instances.<br  />
+</p>
+<p class="startli">You cannot change the duration of the Sub-Timeline instance. You must return to the main <a class="el" href="namespace_timeline.html">Timeline</a> instance and change the duration of the Control clip to change the duration of the Sub-Timeline instance.</p>
+</li>
+</ol>
+<ol type="1">
+<li>Click the name of the main <a class="el" href="namespace_timeline.html">Timeline</a> instance, in the breadcrumb list beside the <a class="el" href="namespace_timeline.html">Timeline</a> selector, to return to the main <a class="el" href="namespace_timeline.html">Timeline</a> instance.</li>
+</ol>
+<p><a class="anchor" id="adjclip"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6104"></a>
+Adjust the Control clip</h1>
+<p>After you create a Sub-Timeline instance, you may have to reposition its Control clip to ensure a smooth transition between the animation in the main <a class="el" href="namespace_timeline.html">Timeline</a> instance and the Sub-Timeline instance.</p>
+<p>For example, in this workflow, when the character bumps into the table, the <span class="tt">TableBase</span> Animation track animates the table before the Sub-Timeline takes control and animates the can.</p>
+<p>To ensure a smooth transition between these two animations, the Control clip must be repositioned to when the table begins to move. To do this, follow these steps:</p>
+<ol type="1">
+<li><p class="startli">In the <a class="el" href="namespace_timeline.html">Timeline</a> instance, select the Control clip for the Can Sub-Timeline.</p>
+<p class="startli"><img src="images/insp-can-subtimeline.png" alt="" class="inline"/></p>
+<p class="startli"><em>The properties for the CanSubTimeline Control clip display in the Inspector window</em></p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Set the <b>Start</b> for the Control clip to frame 833.</p>
+<p class="startli">This is the last frame when the <span class="tt">StaticCan</span> Activation clip is active. This is also the frame when the <span class="tt">TableBase</span> keyframe animation begins.</p>
+</li>
+</ol>
+<p><a class="anchor" id="playresult"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6105"></a>
+Play the result</h1>
+<p>To properly preview the entire cut-scene, including the <span class="tt">Player</span> character with the looping jog animation, click <a href="https://docs.unity3d.com/Manual/GameView.html">Play in the Game View</a>.</p>
+<p>If you attempt to preview this animation in the <a class="el" href="namespace_timeline.html">Timeline</a> window, the <span class="tt">Player</span> character is shown in a T-Stance for most of the cut-scene because the <span class="tt">jog</span> Animator state is only available during runtime. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

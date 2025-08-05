@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Pen</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_pen.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Pen </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2185"></a>
+autotoc_md2185</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2186"></a>
+uid: input-system-pen</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2187"></a>
+Pen, tablet, and stylus support</h1>
+<p>Pen support comprises both tablets on desktops (such as the various tablets produced by Wacom), and styluses on mobile devices (such as the stylus on the Samsung Note, the Apple Pencil on iOS, or the Surface Pen on the <a class="el" href="namespace_microsoft.html">Microsoft</a> Surface line of notebooks).</p>
+<p>Pens generally offer pressure sensitivity, in-range detection (being able to control the cursor while not yet touching the tablet/screen surface), and often the ability to flip the pen for eraser-like behavior.</p>
+<p>Pens are represented by the <a href="../api/UnityEngine.InputSystem.Pen.html"><span class="tt">Pen</span></a> Device layout implemented by the <a href="../api/UnityEngine.InputSystem.Pen.html"><span class="tt">Pen</span></a> class. Pens are based on the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_pointers.html"><span class="tt">Pointer</span></a> layout.</p>
+<p>You can query the last used or last added pen with <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_current"><span class="tt">Pen.current</span></a>.</p>
+<p>&gt;<b>Note</b>: &gt;* Pen/tablet support is currently implemented on Windows, UWP, iOS, and Android. macOS is supported in <a class="el" href="namespace_unity.html">Unity</a> 2020.1+. &gt;* Some devices support tracking multiple pens independently. <a class="el" href="namespace_unity.html">Unity</a>'s Input System doesn't support this currently. &gt;* iOS: The double-tap interaction on the side of the Apple Pencil is not surfaced as input at the moment. Also, no in-range detection is supported and <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_inRange"><span class="tt">inRange</span></a> will remain at its default value.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2188"></a>
+Controls</h2>
+<p>In addition to the <a href="Pointers.md#controls">Controls inherited from <span class="tt">Pointer</span></a>, pen Devices implement the following Controls:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Control  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_tip"><span class="tt">tip</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">Whether the tip of the pen touches the surface. Same as the inherited <a href="../api/UnityEngine.InputSystem.Pointer.html#UnityEngine_InputSystem_Pointer_press"><span class="tt">Pointer.press</span></a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_eraser"><span class="tt">eraser</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">Whether the eraser/back end of the pen touches the surface.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_firstBarrelButton"><span class="tt">firstBarrelButton</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">Whether the first button on the barrel of the pen is pressed.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_secondBarrelButton"><span class="tt">secondBarrelButton</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">Whether the second button on the barrel of the pen is pressed.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_thirdBarrelButton"><span class="tt">thirdBarrelButton</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">Whether the third button on the barrel of the pen is pressed.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_fourthBarrelButton"><span class="tt">fourthBarrelButton</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">Whether the forth button on the barrel of the pen is pressed.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_inRange"><span class="tt">inRange</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">Whether the pen is currently in detection range of the tablet. If unsupported, this control will remain at a value of 1.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_tilt"><span class="tt">tilt</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.Vector2Control.html"><span class="tt">Vector2Control</span></a>  </td><td class="markdownTableBodyNone">Tilt of the pen relative to the surface.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_twist"><span class="tt">twist</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a>  </td><td class="markdownTableBodyNone">Rotation of the pen around its own axis. Only supported on a limited number of pens, such as the Wacom Art Pen.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2189"></a>
+Pressure, tilt, and twist</h2>
+<p><b>Pressure:</b> You can access the pen's current pressure via <a href="../api/UnityEngine.InputSystem.Pointer.html#UnityEngine_InputSystem_Pointer_pressure"><span class="tt">Pen.pressure</span></a>, where 0 means no pressure, and 1 means maximum pressure. However, pressure can go over 1 if the system applies a custom pressure curve where a pressure value of 1 doesn't require pressing the pen down all the way to the maximum force the hardware supports. If a pen doesn't support different pressure levels, the <a href="../api/UnityEngine.InputSystem.Pointer.html#UnityEngine_InputSystem_Pointer_pressure"><span class="tt">pressure</span></a> Control always returns 1.</p>
+<p><b>Tilt:</b> If supported, the <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_tilt"><span class="tt">Pen.tilt</span></a> Control represents the angle at which the pen tilts towards the tablet or screen surface. The X and Y axes correspond to the respective screen axes. A value of 1 on either axis means that the pen is fully parallel to the tablet or screen surface on that axis. A value of 0 means that the pen is perpendicular to the tablet or screen surface on that axis. If a pen doesn't support tilt angles, <span class="tt">Pen.tilt</span> is always <span class="tt">(0,0)</span>.</p>
+<p><b>Twist:</b> Some pens also support twist detection (the pen rotating around its own axis). If supported, <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_twist"><span class="tt">Pen.twist</span></a> represents the current rotation, where 0 means that the pen is facing up towards the Y axis, and values close to 1 mean that the pen is fully rotated clockwise around its own axis.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2190"></a>
+In-range detection</h2>
+<p>A pen might not need to touch the tablet or screen surface in order to be able to control the cursor. You can use the <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_inRange"><span class="tt">inRange</span></a> button Control to determine whether the pen is currently in detection range. If <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_inRange"><span class="tt">inRange</span></a> reports as pressed, the pen registers with the tablet or screen. For Devices that don't support this feature, <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_inRange"><span class="tt">inRange</span></a> always reports as pressed.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2191"></a>
+Barrel buttons</h2>
+<p>Pen Devices often have one or multiple buttons on the side of the pen. These are represented by the <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_firstBarrelButton"><span class="tt">firstBarrelButton</span></a>, <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_secondBarrelButton"><span class="tt">secondBarrelButton</span></a>, <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_thirdBarrelButton"><span class="tt">thirdBarrelButton</span></a>, and <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_fourthBarrelButton"><span class="tt">fourthBarrelButton</span></a> where applicable. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

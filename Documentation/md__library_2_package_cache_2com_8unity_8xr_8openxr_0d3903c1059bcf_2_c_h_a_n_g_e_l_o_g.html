@@ -1,0 +1,764 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Changelog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Changelog </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md9219"></a></p>
+<p>All notable changes to this package will be documented in this file.</p>
+<p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a> and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9220"></a>
+[1.14.3] - 2025-04-20</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9221"></a>
+Fixed</h2>
+<ul>
+<li>Fixed Multiview Render Regions feature regression.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9222"></a>
+[1.14.2] - 2025-03-20</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9223"></a>
+Added</h2>
+<ul>
+<li>Added a validation rule about the minimum Android API level is 24.</li>
+<li>Added support for visible triangle mesh to be available for use in post processing.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9224"></a>
+Changed</h2>
+<ul>
+<li>Modified the Meta Quest Support feature to use the updated Khronos OpenXR loader library.</li>
+<li>Changed OpenXR loader version to 1.1.45.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9225"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an issue that enabled interaction profiles setting not being saved after reopened the project.</li>
+<li>Fixed a bug that depth submission mode corrupting the spacewarp depth texture.</li>
+<li>Fixed a bug that wrong view configuration type being selected as primary view and causing rendering issues.</li>
+<li>Fixed an issue on Android platforms where <span class="tt">xrCreateSwapchainAndroidSurfaceKHR</span> was attempted to be used even when the XR Composition Layers package wasn't installed.</li>
+<li>Fixed an issue that Meta XR simulator can't launch properly on Mac.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9226"></a>
+[1.14.1] - 2025-02-14</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9227"></a>
+Added</h2>
+<ul>
+<li>Added a validation rule to the Meta Quest Support feature to ensure that your app's default interface orientation uses a supported value.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9228"></a>
+Fixed</h2>
+<ul>
+<li>Fixed the OpenXRFeatureBuildHooks class so it now grabs the OpenXRSettings object from the given build target during build processing.</li>
+<li>Fixed duplicate OpenXR feature assets being added to the OpenXRSettings asset when upgrading to a newer OpenXR package.</li>
+<li>Fixed rendering problems with Mixed Reality Capture.</li>
+<li>Fixed a debug log spamming issue regarding ignored event types. This message could be logged multiple times per frame and was not helpful.</li>
+<li>Fixed Meta-specific eye-tracking manifest permissions to be added only to apps targeting Meta Quest Pro devices.</li>
+<li>Fixed an issue where spacewarp may assign motion vector textures to wrong render passes when using secondary views.</li>
+<li>Fixed a bug when allocating array swapchain failed, the index was incremented incorrectly.</li>
+<li>Fixed an issue when OpenXR feature didn't have all the attribute entries setup.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9229"></a>
+[1.14.0] - 2024-12-13</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9230"></a>
+Added</h2>
+<ul>
+<li>Added support for the RG16f texture format and a selection mode for the texture format of the Space Warp motion vector texture for the Meta Quest feature. You can select the format for the Space Warp motion vector texture in Editor &gt; Project Settings &gt; XR Plug-in Management &gt; OpenXR &gt; Android tab &gt; Meta Quest Support feature settings.</li>
+<li>Added the following extension methods for <span class="tt">XrResult</span>: <span class="tt">IsSuccess()</span>, <span class="tt">IsUnqualifiedSuccess()</span>, and <span class="tt">IsError()</span>, which you can use to more conveniently reason about <span class="tt">XrResult</span> values.</li>
+<li>Added new values to the <span class="tt">XrResult</span> enum to match the values present in the native <span class="tt">XrResult</span> type in OpenXR 1.1.36.</li>
+<li>Added support for locating the OpenXR loader for the Meta XR Simulator on OSX.</li>
+<li>Added new Optimize Multiview Render Regions settings option for Meta Quest devices. In the context of XR rendering, Multiview Render Regions enables the drivers to skip shader invocations (and rendering work) for screen areas outside of the user's view (such as the nasal regions that the user can't see within the headset). You can toggle on support for Multiview Render Regions in Editor &gt; Project Settings &gt; XR Plug-in Management &gt; OpenXR &gt; Android tab &gt; Meta Quest Support feature settings. Note that Multiview Render Regions requires Symmetric Projection settings toggle turned on, and Render Mode set to Single Pass Instanced \ Multi-view. Multiview Render Regions is only supported in the Vulkan <a class="el" href="namespace_graphics.html">Graphics</a> API, and it is activated at application start up.</li>
+<li>Added project validation warning to prevent user from using URP upscaling with XR.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9231"></a>
+Deprecated</h2>
+<ul>
+<li>Deprecated <span class="tt">XrResult.TimeoutExpored</span> and <span class="tt">XrResult.AndroidThreadSettingsdFailureKHR</span> and replaced them with correctly spelled enum values.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9232"></a>
+Fixed</h2>
+<ul>
+<li>Occlusion Mask vertices projected based on FOV.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9233"></a>
+[1.13.2] - 2024-11-15</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9234"></a>
+Added</h2>
+<ul>
+<li>Added UWP platform as one of the supported build targets for OpenXR Composition Layer feature.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9235"></a>
+Fixed</h2>
+<ul>
+<li>Fixed compiler errors when using experimental versions of the XR Composition Layers package (versions older than 1.0.0). You are required to use XR Composition Layers 1.0.0 or newer for OpenXR support.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9236"></a>
+[1.13.1] - 2024-10-31</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9237"></a>
+Fixed</h2>
+<ul>
+<li>Conformance Automation Feature: Removed assert for optional entry point xrSetInputDeviceVelocityUNITY.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9238"></a>
+[1.13.0] - 2024-09-16</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9239"></a>
+Added</h2>
+<ul>
+<li>Added Meta XR Simulator as runtime option for OpenXR. One can search for the <span class="tt">com.meta.xr.simulator</span> package to add the Open XR runtime to the dropdown list of available runtimes during Play Mode.</li>
+<li>Added a <span class="tt">Quest 3S</span> option to <span class="tt">Target Devices</span> in the Meta Quest Support settings. This specifies the application's support for Quest 3S devices within the Android manifest.</li>
+<li>Added <span class="tt">IUnityXRDisplay::CreateTexture</span> API to C# script so providers can access them for functionality.</li>
+<li>Added APIs to provide an alternative to the Input System: <span class="tt">OpenXRFeature.GetAction</span>, <span class="tt">OpenXRInput.GetActionHandle</span>, <span class="tt">OpenXRInput.SendHapticImpulse</span>, <span class="tt">OpenXRInput.StopHapticImpulse</span>, <span class="tt">OpenXRInput.TrySetControllerLateLatchAction</span>, and <span class="tt">OpenXRInput.GetActionIsActive</span>.</li>
+<li>Added a "Controller XRInput" sample to demonstrate how to access input data without the Input System.</li>
+<li>Added experimental support for XR Composition Layers support. Install the <a class="el" href="namespace_unity.html">Unity</a> <a href="https://docs.unity3d.com/Packages/com.unity.xr.compositionlayers@latest?subfolder=/changelog/CHANGELOG.html">Composition Layer (com.unity.xr.compositionlayers)</a> package to use composition layers in an OpenXR project.</li>
+<li>Added support for the <span class="tt">XR_KHR_maintenance1</span> extension. This low-level extension provides support for new capabilities promoted in the OpenXR 1.1 standard, which may be needed for backwards compatibility for using new extensions in OpenXR loaders using the version 1.0 of the standard. You need to request this extension if your project will make use of OpenXR 1.1 extenstions that need this extension and are backwards compatible with loaders based on the 1.0 version of the OpenXR standard. If your project targets only the OpenXR 1.1 version, you don't need to request this extension. To use the <span class="tt">XR_KHR_maintenance1</span> extension, you must request it as part of your own [OpenXR feature definition](xref:openxr-features). Refer to <a href="https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html#XR_KHR_maintenance1">XR_KHR_maintenance1</a> for more information on the extension.</li>
+<li>Added OpenXR 1.1 Runtime support.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9240"></a>
+Changed</h2>
+<ul>
+<li>Added <a href="xref:openxr-manual#known-issues">Known Issue</a> to documentation covering how OpenXR doesn't provide Acceleration or Angular Acceleration values for input devices, and these will always return 0.</li>
+<li>Added a validation rule requiring Multi-view to be enabled in order to enable Symmetric Projection.</li>
+<li>Implements the construction and maintenance of native composition layers in C# via our LayerProvider classes inheriting from OpenXRCustomLayerHandler.</li>
+<li>Changed OpenXR loader version to 1.1.36.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9241"></a>
+Fixed</h2>
+<ul>
+<li>Symmetric Projection was being gated behind foveation extensions being enabled. This wasn't necessary and that dependency has been removed.</li>
+<li>Fixed a bug that causes a user to need a validation rule to make OpenXR loader active.</li>
+<li>Fixed <span class="tt">m_BlendMode</span> from being overwritten whenever the <span class="tt">DisplaySubsystem</span> restarts.</li>
+<li>Fixed Metal API initialization.</li>
+<li>Fixed Custom Composition Layer Feature not showing up in the OpenXR feature setting UI after importing into project.</li>
+<li>Fixed a crash with composition layers in scene due to race condition.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9242"></a>
+[1.12.1] - 2024-09-05</h1>
+<ul>
+<li>Fixed rendering bug when rendering viewport scale &lt; 1.</li>
+<li>Fixed issue where the Editor would hang when renaming and then viewing OpenXR Settings.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9243"></a>
+[1.12.0] - 2024-08-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9244"></a>
+Added</h2>
+<ul>
+<li>Add class <span class="tt">MetaQuestTouchPlusControllerProfile.QuestTouchPlusController</span> interaction profile to support Meta Quest Touch Plus Controllers.</li>
+<li>Added a validation rule to warn you that soft shadows can negatively affect performance for <a class="el" href="namespace_microsoft.html">Microsoft</a> HoloLens.</li>
+<li>Added a validation rule to infrom you to make the OpenXR Loader an active loader in XR Plugin Management if there are active OpenXR features in the OpenXR settings.</li>
+<li>Added <span class="tt">OpenXRSettings.autoColorSubmissionMode</span> boolean property to specify OpenXR to use a platform-supported color format in the display swapchain, or for you to manually set which format should OpenXR to use.</li>
+<li>Added <span class="tt">OpenXRSettings.colorSubmissionModes</span> array property to control the color format used by the OpenXR display swapchain. The available options can be chosen from the <span class="tt">OpenXRSettings.ColorSubmissionModeGroup</span> enum. OpenXR will use supported color formats by the platform, starting from the first option in the list. In case none of the color formats supplied is supported by the platform, an error will be thrown. If no color formats are assigned, the format used will be RGBA32.</li>
+<li>Added <span class="tt">Automatic Color Submission Mode</span> toggle and <span class="tt">Color Submission Modes</span> list to the OpenXR project settings tab, allowing you to manually specify the preferred color format to be used by the display swapchain. OpenXR will use supported color formats by the platform, starting from the first option in the list. In case none of the color formats supplied is supported by the platform, an error will be thrown. If no color formats are assigned, the format used will be RGBA32.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9245"></a>
+Fixed</h2>
+<ul>
+<li>Fixed sort order of OpenXR features listed based first on priority, then by name, preventing spurious changes in Settings files.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9246"></a>
+[1.11.0] - 2024-05-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9247"></a>
+Added</h2>
+<ul>
+<li>Added the <span class="tt">XrPerformanceSettings.SetPerformanceLevelHint</span> static method, which lets you send performance level suggestions to the runtime. These hints help an OpenXR runtime to optimize the use of hardware resources according to the application needs. Refer to <a href="xref:openxr-performance-settings#performance-settings-level-hints">XR performance settings</a> for more information. This requires the <a href="https://registry.khronos.org/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_performance_settings">XR_EXT_performance_settings</a> extension is enabled in the OpenXR runtime.</li>
+<li>Added the <span class="tt">XrPerformanceSettings.OnXrPerformanceChangeNotification</span> event, which provides notifications from the OpenXR runtime when a device's thermal, rendering, or compositor performance state changes. The performance states include: <span class="tt">Normal</span>, <span class="tt">Warning</span>, and <span class="tt">Impaired</span>. Refer to <a href="xref:openxr-performance-settings#performance-settings-notifications">XR performance settings</a> for more information. This requires the <a href="https://registry.khronos.org/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_performance_settings">XR_EXT_performance_settings</a> extension is enabled in the OpenXR runtime.</li>
+<li>Added a<span class="tt">Quest 3</span> option to the <span class="tt">Target Devices</span> set in the Meta Quest Support settings. This specifies the application's support for Quest 3 devices within the Android manifest.</li>
+<li>Added missing ButtonControl actions <span class="tt">pinch_ext</span>, <span class="tt">aim_activate_ext</span> and <span class="tt">grasp_ext</span> for Hand Interaction Profile.</li>
+<li>Added API <span class="tt">OpenXRUtility.ComputePoseToWorldSpace</span> to recalculate object position and rotation from tracking-space to world-space. Applicable for use cases such as teleporting.</li>
+<li>Added support for using Local Floor Reference Space in the OpenXR runtime. Useful in applications that require the user to be seated or in a standing fixed position.</li>
+<li>Added PreInit flags to allow users to disable the main frame buffer and use offscreen swapchain when using Vulkan on Android in the OpenXR settings.</li>
+<li>Added functional DX12 mock runtime support to the OpenXR package.</li>
+<li>Added <span class="tt">RegisterStatsDescriptor</span> method to the <span class="tt">OpenXRFeature</span> abstract class, which lets your OpenXR feature to register a new statistic that can be feed into and queried at runtime. This method is not thread safe.</li>
+<li>Added <span class="tt">SetStatAsFloat</span> method to the <span class="tt">OpenXRFeature</span> abstract class, which lets your OpenXR feature to feed a float value into a specific statistic that was previously registered using the <span class="tt">RegisterStatsDescriptor</span>. This method is thread safe.</li>
+<li>Added <span class="tt">SetStatAsUInt</span> method to the <span class="tt">OpenXRFeature</span> abstract class, which lets your OpenXR feature to feed an unsigned integer value into a specific statistic that was previously registered using the <span class="tt">RegisterStatsDescriptor</span>. This method is thread safe.</li>
+<li>Added the <span class="tt">OpenXRSettings.RefreshRecenterSpace</span> static method, which lets you regenerate the internal XR space used for recentering, without the need to wait until a recenter event is received by the OpenXR SDK. Note that this method does not perform a recenter event in any way, as this can only be done by the device runtime.</li>
+<li>Added Pre-pass Foveated Rendering for both d3d12 and Vulkan. This feature utilizes Fragment Density Mapping on Quest Devices and Fragment Shading Rate on PC to optimize rendering performance. Refer to [Foveated Rendering](xref:openxr-foveated-rendering) for more information.</li>
+<li>Added <span class="tt">OpenXRUtility.IsSessionFocused</span> to return if the current session is in the focused state.</li>
+<li>Added <span class="tt">OpenXRUtility.IsUserPresent</span> to return the change of user presence, such as when the user has taken off or put on an XR headset. If the system does not support user presence sensing, runtime assumes that the user is always present and IsUserPresent always returns True. If the system supports the sensing of user presence, returns true when detected the presence of a user and returns false when detected the absence of a user.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9248"></a>
+Changed</h2>
+<ul>
+<li>Changed tracking origin to use Local Floor in place of Floor by default.</li>
+<li>Changed delta time calculation to utilize OpenXR for frame estimation. Previously internal <a class="el" href="namespace_unity.html">Unity</a> mechanisms were used. This feature is currently disabled but will be available in the future.</li>
+<li>When retrieving input feature from <a href="https://docs.unity3d.com/ScriptReference/XR.CommonUsages-userPresence.html">CommonUsages.userPresence</a>, if XR_EXT_user_presence is supported by the current system, retrieved value will be the same as <span class="tt">OpenXRUtility.IsUserPresent</span>. If <span class="tt">XR_EXT_user_presence</span> is not supported, retrieved value will be based on <span class="tt">OpenXRUtility.IsSessionFocused</span>, which is the default return value before 1.11.0.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9249"></a>
+Fixed</h2>
+<ul>
+<li>Fixed Marshal to correctly read the number of bytes for booleans in C++.</li>
+<li>Fixed crash that occurs while cleaning up destroyed swapchains in OpenXR.</li>
+<li>Fixed Depth Texture flag disparity between the OpenXR and Oculus providers.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9250"></a>
+[1.10.0] - 2024-01-26</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9251"></a>
+Added</h2>
+<ul>
+<li>Added <span class="tt">OpenXRSettings.VulkanAdditionalGraphicsQueue</span> property to request at startup an additional Vulkan graphics queue in devices that require it. The setting can be enabled through the Project settings UI and build code.</li>
+<li>Added <span class="tt">Optimize Buffer Discards (Vulkan)</span> feature setting option within MetaQuestFeature.</li>
+<li>Added a new optional validation rule to switch to use InputSystem.Controls.StickControl instead of Vector2Control for thumbsticks. StickControl allows more input options for thumbstick-based control, such as acting as both a combined 2D vector, two independent axes or a four-way Dpad with 4 independent buttons.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9252"></a>
+Changed</h2>
+<ul>
+<li>Updated project validation rule for Meta Quest Feature - "Select Oculus Touch Interaction Profile or Meta Quest Pro Touch Interaction Profile to pair with." from error to warning to allow other interaction profiles to be enabled as well, like eye gaze or palm pose.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9253"></a>
+Fixed</h2>
+<ul>
+<li>Fixed Meta XR <span class="tt">Space Warp</span> feature crashing issue when trying to access the depth swapchain.</li>
+<li>Fixed Meta XR <span class="tt">Space Warp</span> depth subimage imageArrayIndex setup wrong issue for multiview render mode.</li>
+<li>Fixed a bug where Palm Pose won't work if the Eye Gaze Interaction Profile is added to the project.</li>
+<li>Fixed "The type 'AnalyticsResult' is defined in an assembly that is not referenced" error thrown.</li>
+<li>Fixed UnitySwapchain destructor to completely destroy swapchains to avoid memory leak.</li>
+<li>Fixed OpenXR Settings UI to not render settings on platforms that aren't supported.</li>
+<li>Fixed Android manifest entries were added when the feature was not enabled.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9254"></a>
+[1.9.1] - 2023-10-19</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9255"></a>
+Added</h2>
+<ul>
+<li>Implemented <span class="tt">InputSystem.customBindingPathValidators</span> interface to show UI warnings in the <span class="tt">InputAsset</span> Editor when added bindings to a disabled interaction profile and when none of the controller type interaction profiles are enabled, but added bindings using generic XRController.</li>
+<li>Added APIs <span class="tt">GetInteractionProfileType</span> and <span class="tt">GetDeviceLayoutName</span> to support binding path validator feature.</li>
+<li>Added API <span class="tt">TrySetControllerLateLatchAction</span> to support controller late latching. Also added MarkLateLatchNode.cs in Controller <a class="el" href="class_sample.html">Sample</a> for usages example.</li>
+<li>Added support for Meta XR feature <span class="tt">Symmetric Projection</span>, <span class="tt">Space Warp</span>, and <span class="tt">Eye Tracked Foveation</span>.</li>
+<li>Added the option to enable <span class="tt">Subsampled Layout</span> when creating a Vulkan swapchain.</li>
+<li>Added support for recentering Floor tracking origin using new API, <span class="tt">OpenXRSettings.SetAllowRecentering</span>. This static method allows the app to recenter the tracking origin space when requested by the runtime. Note that calling the method won't trigger a recenter event.</li>
+<li>Added support for Meta XR feature <span class="tt">System Splash Screen</span>.</li>
+<li>Added public API for MetaQuestFeature.forceRemoveInternetPermission</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9256"></a>
+Changed</h2>
+<ul>
+<li>Updated Input System package dependency to 1.6.3.</li>
+<li>Updated XR management dependency to 4.4.0.</li>
+<li>Updated OpenXR loader to 1.0.29.</li>
+<li>Changed <a class="el" href="class_mock_runtime.html">MockRuntime</a> and its FeatureSet to public.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9257"></a>
+Fixed</h2>
+<ul>
+<li>Fixed incorrect XR Validation rules after regenerating the OpenXR package settings asset.</li>
+<li>Fixed analytics code being called when disabled.</li>
+<li>Fixed latency issue with controller poses.</li>
+<li>Fixed an XR_ERROR_SESSION_NOT_RUNNING error if xrRequestExitSession is called when the session is not running.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9258"></a>
+[1.8.2] - 2023-07-18</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9259"></a>
+Added</h2>
+<ul>
+<li>Added a new optional validation rule to recommend disabling Screen Space Ambient Occlusion render feature in UniversalRenderer assets to avoid significant performance overhead.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9260"></a>
+Changed</h2>
+<ul>
+<li>Removed <span class="tt">Windows Mixed Reality feature group</span> from Windows build target.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9261"></a>
+Fixed</h2>
+<ul>
+<li>Fixed issue that UWP player tries to initialize XR when "Initialize XR on Startup" is unchecked.</li>
+<li>Fixed <span class="tt">SetOutput Failed.</span> and <span class="tt">SetInput Failed.</span> log spamming issue when audio sources is not available.</li>
+<li>Fixed performance drop after headset becomes inactive.</li>
+<li>Fixed Hand Common Poses Interaction Profile and Palm Pose feature documentation links broken.</li>
+<li>Fixed Mock Runtime option toggles on accidentally after entering Play Mode.</li>
+<li>Fixed hand tracking position and rotation not being tracked with XR Hand device.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9262"></a>
+[1.8.1] - 2023-06-09</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9263"></a>
+Added</h2>
+<ul>
+<li>Added functionality in <span class="tt">OpenXRFeatureBuildHooks</span> exposing the BootConfig for reading/writing.</li>
+<li>Added <span class="tt">Force Remove Internet Permission</span> setting to the Meta Quest Feature settings, allowing to remove Internet permissions added automatically to the application manifest.</li>
+<li>Added class HPReverbG2ControllerProfile.ReverbG2Controller and a new interaction profile to support the HP Reverb G2 controllers.</li>
+<li>Added Hand Interaction Profile and added PalmPose and dpad EXT implementations.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9264"></a>
+Changed</h2>
+<ul>
+<li>Modified <span class="tt">ModifyAndroidManifestMeta</span> class to provide required Android manifest entries using a new internal XR system, instead of manually modifying the manifest file.</li>
+<li>Updated the IsTracked and TrackingState Input Features names with a Usage prefix to prevent name collisions.</li>
+<li>Updated OpenXR loader to 1.0.27.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9265"></a>
+Fixed</h2>
+<ul>
+<li>Fixed type <span class="tt">XrCompositionLayerPassthroughFB</span> not appearing in the runtime debugger.</li>
+<li>Fixed crash when deploying to Android on <a class="el" href="namespace_unity.html">Unity</a> 2023 due to using type <span class="tt">Activity</span> over <span class="tt">GameActivity</span>.</li>
+<li>Fixed issue on Android where screen captures only capture the view on one eye.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9266"></a>
+[1.7.0] - 2023-02-21</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9267"></a>
+Added</h2>
+<ul>
+<li>Added API <span class="tt">OpenXRRuntime.retryInitializationOnFormFactorErrors</span> to retry xrGetSystem during initialization if xrGetSystem returns a form factor error.</li>
+<li>Enable XR_META_performance_metrics. This enables performance stats for Meta Quest devices on OpenXR.</li>
+<li>Add class MetaQuestTouchProControllerProfile.QuestProTouchController new interaction profile to support Meta Quest pro controllers.</li>
+<li>Added ability for OpenXRFeature derived classes to add Awake() functions.</li>
+<li>Added API <span class="tt">OpenXRInput.GetActionIsActive</span> to check whether an InputAction has any bindings which are currently active.</li>
+<li>Added API <span class="tt">OpenXRInput.GetActionHandle</span> to get the action handle of an InputAction and returns 0 if not found.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9268"></a>
+Changed</h2>
+<ul>
+<li>Updated documentation for the Meta Quest feature.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9269"></a>
+Fixed</h2>
+<ul>
+<li>Fixed - Meta builds now don't include Bluetooth permissions in Android manifest by default when using Microphone class in script code.</li>
+<li>Fixed crash in OpenXR runtime debugger when cache size is set to 0.</li>
+<li>Fixed OpenXR project validation to check for correct versions of OpenGLES in <a class="el" href="namespace_unity.html">Unity</a> 2023 and up.</li>
+<li>Fixed crash when runtime reports an invalid view configuration from xrWaitFrame.</li>
+<li>Fixed - OpenXR plugin will only look up functions from supported and enabled extensions.</li>
+<li>Fixed GPU selection in multi-GPU scenarios.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9270"></a>
+[1.6.0] - 2022-11-29</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9271"></a>
+Added</h2>
+<ul>
+<li>Added <span class="tt">Meta Quest Feature</span> support for Android and deprecated previous <span class="tt">Oculus Quest Feature</span>. Also added a new validation rule to support new Meta Quest Feature migration.</li>
+<li>Added API <span class="tt">MetaQuestFeature.AddTargetDevice</span> to add additional target devices to the devices list in the MetaQuestFeatureEditor.</li>
+<li>Added Thumbrest Touch support in Oculus Touch Controller Interaction Profile.</li>
+<li>Added a new optional validation rule to switch to use InputSystem.XR.PoseControl instead of OpenXR.Input.PoseControl, which fixed PoseControl conflicts in InputSystem.XR and OpenXR.Input. Note: If opt in to use InputSystem.XR.PoseControl, <span class="tt">USE_INPUT_SYSTEM_POSE_CONTROL</span> will be added in Scripting Define Symbols under Player settings.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9272"></a>
+Changed</h2>
+<ul>
+<li>Updated Input System dependency to 1.4.4.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9273"></a>
+Fixed</h2>
+<ul>
+<li>Fixed issue where game window would show as black in URP.</li>
+<li>Fixed <span class="tt">InputDevice.TryGetHapticCapabilities</span> always returning True with OpenXR.</li>
+<li>Fixed repeated "Failed to restart OpenXR" warnings when no HMD is attached.</li>
+<li>Fixed invalid pose values getting populated when tracked flags are invalid.</li>
+<li>Fixed XR_SPACE_BOUNDS_UNAVAILABLE return code marked as Error in the log.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9274"></a>
+[1.5.2] - 2022-09-08</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9275"></a>
+Added</h2>
+<ul>
+<li>Added support for Android cross-vendor loader.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9276"></a>
+Changed</h2>
+<ul>
+<li>Updated Input System dependency to 1.4.2.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9277"></a>
+Fixed</h2>
+<ul>
+<li>Fixed <span class="tt">XRInputSubsystem.TryGetBoundaryPoints</span> returning inaccurate values. If you have guardian/boundary setup in the headset, <span class="tt">TryGetBoundaryPoints</span> will return a List&lt;Vector3&gt; of size 4 representing the four vertices of the Play Area rectangle, which is centered at the origin and edges corresponding to the X and Z axes of the provided space. Not all systems or spaces may support boundaries.</li>
+<li>Fixed an issue that controllers position not getting updated and stuck to the floor level when Oculus Integration Asset installed in the project.</li>
+<li>Fixed an issue that OpenXR libraries were included in build when OpenXR SDK is not enabled.</li>
+<li>Improved domain reload performance by removing unnecessary checks when entering Playmode.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9278"></a>
+[1.5.1] - 2022-08-11</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9279"></a>
+Added</h2>
+<ul>
+<li>Added generic Project Validation status in the <b>Project Settings</b> window under <b>XR Plug-in Management</b> if you have <a href="https://docs.unity3d.com/Packages/com.unity.xr.core-utils@latest">XR Core Utilities</a> 2.1.0 or later installed. These results include the checks for all XR plug-ins that provide validation rules.</li>
+<li>Added API <span class="tt">OpenXRFeature.SetEnvironmentBlendMode</span> to set the current XR Environment Blend Mode if it is supported by the active runtime. If not supported, fall back to the runtime preference.</li>
+<li>Added API <span class="tt">OpenXRFeature.GetEnvironmentBlendMode</span> to return the current XR Environment Blend Mode.</li>
+<li>Added support for <span class="tt">XR_MSFT_holographic_windown_attachment</span> extension on UWP so that installing <a class="el" href="namespace_microsoft.html">Microsoft</a> Mixed Reality OpenXR Plug-in is no longer required if targeting HoloLens V2 devices. And removed corresponding project validator.</li>
+<li>Added support for <span class="tt">XR_FB_foveation</span>, <span class="tt">XR_FB_foveation_configuration</span>, <span class="tt">XR_FB_swapchain_update_state</span>, <span class="tt">XR_FB_foveation_vulkan</span> and <span class="tt">XR_FB_space_warp</span> extensions.</li>
+<li>Added ability to recover the application after Oculus Link was aborted and re-established. Attempt to restart every 5 seconds after Link disconnected.</li>
+<li>Added validation rule for duplicate settings in OpenXRPackageSettings.asset.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9280"></a>
+Changed</h2>
+<ul>
+<li>Updated Oculus Android manifest with focusAware, supportedDevices and headTracking tags added. Also added a new validation rule to check if Oculus target devices are selected.</li>
+<li>Updated OpenXR Loader to 1.0.23.</li>
+<li>Updated Input System dependency to 1.4.1.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9281"></a>
+Fixed</h2>
+<ul>
+<li>Fixed compilation errors on Game <a class="el" href="namespace_core.html">Core</a> platforms where <span class="tt">ENABLE_VR</span> is not currently defined. Requires Input System 1.4.0 or newer.</li>
+<li>Fixed an issue that was causing Oculus Android Vulkan builds rendering broken after sleep / awake HMD.</li>
+<li>Fixed Oculus controllers tracking issues when both OpenXR package and Oculus package are installed in the project.</li>
+<li>Fixed an issue in Play Mode OpenXR Runtime selection that <span class="tt">Other</span> option would be reverted to <span class="tt">System Default</span> after entering and exiting playmode.</li>
+<li>Fixed a bug in <span class="tt">XR_VARJO_quad_views</span> support.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9282"></a>
+[1.4.2] - 2022-05-12</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9283"></a>
+Fixed</h2>
+<ul>
+<li>Fixed unnecessary destroying session on pause and resume.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9284"></a>
+[1.4.1] - 2022-04-13</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9285"></a>
+Added</h2>
+<ul>
+<li>Added runtime failures handling to completely shut down OpenXR when runtime error occurred.</li>
+<li>Added support to dynamically discover runtimes by registry key.</li>
+<li>Added logging for no MainCamera tag detected when depthSubmission mode enabled.</li>
+<li>Added console error logging if entering playmode on unsupported platforms.</li>
+<li>Added support to automatically open OpenXR project validator if any issues detected after package update.</li>
+<li>Added API <span class="tt">OpenXRFeature.GetViewConfigurationTypeForRenderPass</span>, which returns viewConfigurationType for the given renderPass index.</li>
+<li>Added pre-init support for UWP / WSA platform. Note: OpenXR got unchecked by upgrading to this version (only on UWP), but options chosen under <span class="tt">Features</span> remained as they were.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9286"></a>
+Changed</h2>
+<ul>
+<li>Updated OpenXR Loader to 1.0.20.</li>
+<li>Updated Render Mode naming to Single Pass Instanced / Multiview for Android platform.</li>
+<li>Updated Input System dependency to 1.3.0.</li>
+<li>Updated XR mirror view to be based on the occlusion mesh line loop data obtained from <span class="tt">xrGetVisibilityMaskKHR</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9287"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an issue that would cause failure to load OpenXR loader when non-ascii characters in project path.</li>
+<li>Fixed an editor crash issue when updating OpenXR package version and then enter Playmode.</li>
+<li>Fixed <span class="tt">EyeGaze</span> functionality not working in the <span class="tt">Controller</span> sample.</li>
+<li>Fixed Oculus <span class="tt">MenuButton</span> not being recognized in script.</li>
+<li>Fixed an issue that some OpenXR Editor settings not being serialized properly.</li>
+<li>Fixed <span class="tt">Failed to suggest bindings for interaction profile</span> console error spamming when a runtime doesn't support a certain interaction profile.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9288"></a>
+[1.3.1] - 2021-11-17</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9289"></a>
+Changed</h2>
+<ul>
+<li>Updated documentation link to 1.3.</li>
+<li>Updated Oculus Android manifest with intent-filter.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9290"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an issue in <span class="tt">OpenXRRestarter</span> that would prevent a subsequent restart.</li>
+<li>Fixed an issue in <span class="tt">OpenXRRestarter</span> that would cause a restart to fail depending on where it was initiated in the stack.</li>
+<li>Fixed an issue in UWP that would prevent the main window from being rendered to when using remoting.</li>
+<li>Fixed incorrect negative values on controller linear velocities.</li>
+<li>Fixed a bug in HMD trackingState that would cause tracking state to flip back and forth between two states every frame.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9291"></a>
+[1.3.0] - 2021-10-20</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9292"></a>
+Added</h2>
+<ul>
+<li>Added API <span class="tt">OpenXRInput.SendHapticImpulse</span></li>
+<li>Added API <span class="tt">OpenXRInput.StopHaptics</span></li>
+<li>Added API <span class="tt">OpenXRInput.TryGetInputSourceName</span></li>
+<li>Added event <span class="tt">OpenXRRuntime.wantsToRestart</span></li>
+<li>Added event <span class="tt">OpenXRRuntime.wantsToQuit</span></li>
+<li>Added support for <span class="tt">XR_OCULUS_audio_device_guid</span> extension.</li>
+<li>Added <span class="tt">Haptic</span> control to OpenXR Controller Profile layouts that can be bound to an action and used to trigger haptics using the new <span class="tt">OpenXRInput.SendHapticImpulse</span> API.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9293"></a>
+Changed</h2>
+<ul>
+<li>Improved <span class="tt">OpenXRFeatureSetManager.SetFeaturesFromEnabledFeatureSets</span> so that no internal methods are required after calling this.</li>
+<li>Updated <span class="tt">Controller</span> sample to improve the visuals and use the new APIs</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9294"></a>
+Fixed</h2>
+<ul>
+<li>Fixed ARM32 crash when OpenXR API layers were present<ul>
+<li><a href="https://issuetracker.unity3d.com/issues/xr-uwp-any-openxr-layer-will-crash-unityopenxr-dot-dll-on-hololens2-when-compiling-with-arm32">ISSUE-1355859</a></li>
+</ul>
+</li>
+<li>Fixed issue that would cause console errors if <span class="tt">OpenXRFeature.enable</span> was changed while the OpenXR Projects Settings windows was open.</li>
+<li>Fixed potential Android crash when shutting down.</li>
+<li>Fixed potential crash with <span class="tt">XR_MSFT_SECONDARY_VIEW_CONFIGURATION_EXTENSION_NAME</span></li>
+<li>Fixed issue with alpha channel on Projection layer causing visual artifacts.<ul>
+<li><a href="https://issuetracker.unity3d.com/issues/xr-openxr-a-black-background-is-rendered-in-hmd-when-using-solid-color-camera-clear-flags">ISSUE-1338699</a></li>
+<li><a href="https://issuetracker.unity3d.com/issues/xr-sdk-openxr-post-processing-postexposure-effect-has-visual-artifacts">ISSUE-1349271</a></li>
+<li><a href="https://issuetracker.unity3d.com/issues/xr-sdk-openxr-right-eye-contains-artifacts-when-taa-anti-aliasing-is-used-with-multi-pass-rendering-mode">ISSUE-1346455</a></li>
+<li><a href="https://issuetracker.unity3d.com/issues/xr-openxr-oculus-post-processing-view-in-hmd-is-darker-and-sometimes-flickers-when-changing-depth-of-field-focus-distance">ISSUE-1336968</a></li>
+<li><a href="https://issuetracker.unity3d.com/issues/xr-sdk-openxr-black-edges-are-rendered-on-the-game-objects-when-fxaa-anti-aliasing-is-used">ISSUE-1338696</a></li>
+</ul>
+</li>
+<li>Fixed bug that caused Vulkan support on Oculus to stop working.</li>
+<li>Fixed missing usages on <span class="tt">HoloLensHand</span> layout.</li>
+<li>Fixed vulkan shared depth buffer on versions <span class="tt">2021.2.0b15</span> and <span class="tt">2022.1.0a8</span> or higher.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9295"></a>
+[1.2.8] - 2021-07-29</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9296"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an issue that was causing Oculus Android OpenGL builds to stop working after v31 of the oculus software was installed.</li>
+<li>Fixed a bug that would cause Asset Bundles to fail building in some circumstances when OpenXR was included in the project.</li>
+<li>Fixed a crash that would occur if XR was shut down from within a Feature callback.</li>
+<li>Fixed a bug that was causing duplicate entries in the OpenXR Package Settings file.</li>
+<li>Fixed a bug causing angular velocities on both the HMD and controllers to have the wrong sign when compared to the other <a class="el" href="namespace_unity.html">Unity</a> XR plugins</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9297"></a>
+[1.2.3] - 2021-06-17</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9298"></a>
+Added</h2>
+<ul>
+<li>Ensured a deterministic order of features within the OpenXR Settings</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9299"></a>
+Changed</h2>
+<ul>
+<li>Updated OpenXR Loader to 1.0.17</li>
+<li>Changed <span class="tt">feature set</span> text to <span class="tt">feature group</span> in the top level XR-Management list</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9300"></a>
+Fixed</h2>
+<ul>
+<li>Fixed missing haptic output on HTC Vive controller profile</li>
+<li>Fixed bug that caused <span class="tt">ThumbstickTouched</span> binding on the <span class="tt">ValveIndex</span> controller profile to not work.</li>
+<li>Fixed issue that would cause the app to not exit when closed by the runtime</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9301"></a>
+[1.2.2] - 2021-06-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9302"></a>
+Added</h2>
+<ul>
+<li>Editor runtime override will no longer change the runtime for standalone builds executed using <span class="tt">Build and Run</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9303"></a>
+Changed</h2>
+<ul>
+<li>Renamed <span class="tt">Feature Sets</span> to <span class="tt">Feature Groups</span> in the UI.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9304"></a>
+Removed</h2>
+<ul>
+<li>Removed unnecessary build hook for <span class="tt">EyeGaze</span> that was causing incorrect capabilities to be set on <span class="tt">HoloLens2</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9305"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a bug when using SteamVR runtime that would cause the view to stop rendering and input to stop tracking if the main thread stalled for too long.</li>
+<li>Fixed bug with feature sets that could cause the XR Management check box to be out of sync with the checkbox on the OpenXR Settings page.</li>
+<li>Fixed bug with HTC Vive controller profile that caused the <span class="tt">aim</span> and <span class="tt">grip</span> poses to be identical.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9306"></a>
+[1.2.0] - 2021-05-06</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9307"></a>
+Added</h2>
+<ul>
+<li>Enabled Android build target for Oculus Quest via the <span class="tt">Oculus Quest Support</span> feature.</li>
+<li>OpenXR Settings UI reworked to make managing features and interaction profiles easier.</li>
+<li>Added menu item to open Project Validation window (<span class="tt">Window &gt; XR &gt; OpenXR &gt; Project Validation</span>).</li>
+<li>Project validation window now supports manual fixes for an issue.</li>
+<li>Project validation window now supports optional help links for an issue.</li>
+<li>Added <span class="tt">OpenXRFeature.OnEnableChanged</span> method to give features a chance to handle their enabled state changing.</li>
+<li>Added <span class="tt">IPackageSettings.GetFeatures</span> method that returns all features of a given type from all build targets.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9308"></a>
+Removed</h2>
+<ul>
+<li>Removed <span class="tt">experimental</span> text from OpenXR plugin help icon.</li>
+<li>Removed <span class="tt">Linear</span> color space restriction for all build targets and graphics apis except OpenGLES.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9309"></a>
+Fixed</h2>
+<ul>
+<li>Fixed bug with haptics that caused <span class="tt">XRControllerWithRumble.SendImpulse</span> to not work with <span class="tt">OpenXR</span>.</li>
+<li>Fixed bug that could cause some interaction profile device layouts to not be registered on startup.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9310"></a>
+[1.1.1] - 2021-04-06</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9311"></a>
+Added</h2>
+<ul>
+<li>Oculus controller profile now exposes both grip and aim poses.</li>
+<li>Added support for <span class="tt">XR_VARJO_QUAD_VIEWS</span> extension</li>
+<li>Added <span class="tt">XR_COMPOSITION_LAYER_UNPREMULTIPLIED_ALPHA_BIT</span> and <span class="tt">XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT</span> bits to the composition layer flags</li>
+<li>Added <span class="tt">XrSecondaryViewConfigurationSwapchainCreateInfoMSFT</span> to to <span class="tt">XrSwapchainCreateInfo</span> when using a secondary view</li>
+<li><a class="el" href="class_mock_runtime.html">MockRuntime</a> First Person Observer View support</li>
+<li><a class="el" href="class_mock_runtime.html">MockRuntime</a> input support</li>
+<li><a class="el" href="class_mock_runtime.html">MockRuntime</a> vulkan_enable2 support</li>
+<li><a class="el" href="class_mock_runtime.html">MockRuntime</a> d3d11_enable support</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9312"></a>
+Changed</h2>
+<ul>
+<li><span class="tt">OpenXRSettings.renderMode</span> and <span class="tt">OpenXrSettings.depthSubmissionMode</span> can now be changed via script outside of play mode.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9313"></a>
+Fixed</h2>
+<ul>
+<li>Fixed issue where OpenXR layouts were not visible in the InputSystem bindings dialog.</li>
+<li>Fix for managed stripping levels of Medium and High</li>
+<li>Fixed bugs in <span class="tt">XR_KHR_VULKAN_ENABLE2</span> extension support</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9314"></a>
+[1.0.2] - 2021-02-04</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9315"></a>
+Fixed</h2>
+<ul>
+<li>Resolve further release verification issues.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9316"></a>
+[1.0.1] - 2021-02-03</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9317"></a>
+Fixed</h2>
+<ul>
+<li>Resolve release verification issues.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9318"></a>
+[1.0.0] - 2021-01-27</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9319"></a>
+Added</h2>
+<ul>
+<li>Runtime Debugger to allow for the inspection of OpenXR calls that occur while OpenXR is actively running.</li>
+<li>XR Plug-In Management dependency update to 4.0.1</li>
+<li>Input System dependency updated to 1.0.2</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9320"></a>
+[0.1.2-preview.3] - 2021-01-19</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9321"></a>
+Added</h2>
+<ul>
+<li>Implemented <span class="tt">XR_KHR_loader_init</span> and <span class="tt">XR_KHR_loader_init_android</span>.</li>
+<li>Added support for <span class="tt">XR_KHR_vulkan_enable2</span> alongside <span class="tt">XR_KHR_vulkan_enable</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9322"></a>
+Changed</h2>
+<ul>
+<li>Updated dependency of <span class="tt">com.unity.xr.management</span> from <span class="tt">4.0.0-pre.2</span> to <span class="tt">4.0.0-pre.3</span>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9323"></a>
+[0.1.2-preview.2] - 2021-01-05</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9324"></a>
+Fixed</h2>
+<ul>
+<li>Fix publishing pipeline.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9325"></a>
+[0.1.2-preview.1] - 2020-12-18</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9326"></a>
+Changed</h2>
+<ul>
+<li>Minor documentation getting started tweaks.</li>
+<li>Minor diagnostic logging tweaks.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9327"></a>
+Fixed</h2>
+<ul>
+<li>Fixed package errors when Analytics package is absent (case 1300418).</li>
+<li>Fixed tracking origin issue which was causing wrong camera height (case 1300457).</li>
+<li>Fixed issue where large portions of the world were incorrectly culled at certain camera orientations.</li>
+<li>Fixed potential error message when clicking <span class="tt">Fix All</span> in OpenXR Project Validation window.</li>
+<li>Fixed an issue with sample importing.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9328"></a>
+[0.1.1-preview.1] - 2020-12-16</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9329"></a>
+This is the first release of <em>OpenXR Plugin &lt;com.unity.xr.openxr&gt;</em>.</h2>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

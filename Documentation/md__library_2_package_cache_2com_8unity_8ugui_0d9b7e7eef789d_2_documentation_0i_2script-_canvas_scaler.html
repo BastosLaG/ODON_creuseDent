@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Canvas Scaler</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_canvas_scaler.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Canvas Scaler </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6194"></a></p>
+<p>The Canvas Scaler component is used for controlling the overall scale and pixel density of UI elements in the Canvas. This scaling affects everything under the Canvas, including font sizes and image borders.</p>
+<p><img src="images/UI_CanvasScalerInspector.png" alt="" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6195"></a>
+Properties</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Function:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>UI Scale Mode</b>  </td><td class="markdownTableBodyLeft">Determines how UI elements in the Canvas are scaled.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Constant Pixel Size</b>  </td><td class="markdownTableBodyLeft">Makes UI elements retain the same size in pixels regardless of screen size.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Scale With Screen Size</b>  </td><td class="markdownTableBodyLeft">Makes UI elements bigger the bigger the screen is.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Constant Physical Size</b>  </td><td class="markdownTableBodyLeft">Makes UI elements retain the same physical size regardless of screen size and resolution.  </td></tr>
+</table>
+<p>Settings for Constant Pixel Size:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Function:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Scale Factor</b>  </td><td class="markdownTableBodyLeft">Scales all UI elements in the Canvas by this factor.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Reference Pixels Per Unit</b>  </td><td class="markdownTableBodyLeft">If a sprite has this 'Pixels Per Unit' setting, then one pixel in the sprite will cover one unit in the UI.  </td></tr>
+</table>
+<p>Settings for Scale With Screen Size:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Function:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Reference Resolution</b>  </td><td class="markdownTableBodyLeft">The resolution the UI layout is designed for. If the screen resolution is larger, the UI will be scaled up, and if it's smaller, the UI will be scaled down.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Screen Match Mode</b>  </td><td class="markdownTableBodyLeft">A mode used to scale the canvas area if the aspect ratio of the current resolution doesn't fit the reference resolution.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Match Width or Height</b>  </td><td class="markdownTableBodyLeft">Scale the canvas area with the width as reference, the height as reference, or something in between.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Expand</b>  </td><td class="markdownTableBodyLeft">Expand the canvas area either horizontally or vertically, so the size of the canvas will never be smaller than the reference.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Shrink</b>  </td><td class="markdownTableBodyLeft">Crop the canvas area either horizontally or vertically, so the size of the canvas will never be larger than the reference.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Match</b>  </td><td class="markdownTableBodyLeft">Determines if the scaling is using the width or height as reference, or a mix in between.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Reference Pixels Per Unit</b>  </td><td class="markdownTableBodyLeft">If a sprite has this 'Pixels Per Unit' setting, then one pixel in the sprite will cover one unit in the UI.  </td></tr>
+</table>
+<p>Settings for Constant Physical Size:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Function:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Physical Unit</b>  </td><td class="markdownTableBodyLeft">The physical unit to specify positions and sizes in.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Fallback Screen DPI</b>  </td><td class="markdownTableBodyLeft">The DPI to assume if the screen DPI is not known.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Default Sprite DPI</b>  </td><td class="markdownTableBodyLeft">The pixels per inch to use for sprites that have a 'Pixels Per Unit' setting that matches the 'Reference Pixels Per Unit' setting.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Reference Pixels Per Unit</b>  </td><td class="markdownTableBodyLeft">If a sprite has this 'Pixels Per Unit' setting, then its DPI will match the 'Default Sprite DPI' setting.  </td></tr>
+</table>
+<p>Settings for World Space Canvas (shown when Canvas component is set to World Space):</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Function:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Dynamic Pixels Per Unit</b>  </td><td class="markdownTableBodyLeft">The amount of pixels per unit to use for dynamically created bitmaps in the UI, such as Text.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Reference Pixels Per Unit</b>  </td><td class="markdownTableBodyLeft">If a sprite has this 'Pixels Per Unit' setting, then one pixel in the sprite will cover one unit in the world. If the 'Reference Pixels Per Unit' is set to 1, then the 'Pixels Per Unit' setting in the sprite will be used as-is.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6196"></a>
+Details</h1>
+<p>For a Canvas set to 'Screen Space - Overlay' or 'Screen Space - Camera', the Canvas Scaler UI Scale Mode can be set to Constant Pixel Size, Scale With Screen Size, or Constant Physical Size.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6197"></a>
+Constant Pixel Size</h2>
+<p>Using the Constant Pixel Size mode, positions and sizes of UI elements are specified in pixels on the screen. This is also the default functionality of the Canvas when no Canvas Scaler is attached. However, With the Scale Factor setting in the Canvas Scaler, a constant scaling can be applied to all UI elements in the Canvas.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6198"></a>
+Scale With Screen Size</h2>
+<p>Using the Scale With Screen Size mode, positions and sizes can be specified according to the pixels of a specified reference resolution. If the current screen resolution is larger than the reference resolution, the Canvas will keep having only the resolution of the reference resolution, but will scale up in order to fit the screen. If the current screen resolution is smaller than the reference resolution, the Canvas will similarly be scaled down to fit.</p>
+<p>If the current screen resolution has a different aspect ratio than the reference resolution, scaling each axis individually to fit the screen would result in non-uniform scaling, which is generally undesirable. Instead of this, the ReferenceResolution component will make the Canvas resolution deviate from the reference resolution in order to respect the aspect ratio of the screen. It is possible to control how this deviation should behave using the Screen Match Mode setting.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6199"></a>
+Constant Physical Size</h2>
+<p>Using the Constant Physical Size mode, positions and sizes of UI elements are specified in physical units, such as millimeters, points, or picas. This mode relies on the device reporting its screen DPI correctly. You can specify a fallback DPI to use for devices that do not report a DPI.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6200"></a>
+World Space</h2>
+<p>For a Canvas set to 'World Space' the Canvas Scaler can be used to control the pixel density of UI elements in the Canvas.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6201"></a>
+Hints</h1>
+<ul>
+<li>See the page <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_h_o_w_t_o-_u_i_multi_resolution.html">Designing UI for Multiple Resolutions</a> for a step by step explanation of how Rect Transform anchoring and Canvas Scaler can be used in conjunction to make UI layouts that adapt to different resolutions and aspect ratios. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

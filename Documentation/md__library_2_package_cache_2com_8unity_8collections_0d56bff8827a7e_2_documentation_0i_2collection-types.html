@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Collection types</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2collection-types.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Collection types </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1404"></a></p>
+<p>The collection types in this package extend and compliment the collections available in the <a class="el" href="namespace_unity.html">Unity</a> engine. This section outlines some key collection types you might want to use in your jobs and <a class="el" href="namespace_burst.html">Burst</a> compiled code.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1405"></a>
+Array-like types</h1>
+<p>The array-like types in this package extend the key array types in the <a href="https://docs.unity3d.com/ScriptReference/UnityEngine.CoreModule"><span class="tt">UnityEngine.CoreModule</span></a> namespace, which include <a href="xref:Unity.Collections.NativeArray`1"><span class="tt">Unity.Collections.NativeArray&lt;T&gt;</span></a> and <a href="xref:Unity.Collections.NativeSlice`1"><span class="tt">Unity.Collections.NativeSlice&lt;T&gt;</span></a>. This package has the following array-like types:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Data structure</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeList`1"><span class="tt">NativeList&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A resizable list. Has thread and disposal safety checks.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeList`1"><span class="tt">UnsafeList&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A resizable list.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafePtrList`1"><span class="tt">UnsafePtrList&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A resizable list of pointers.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeStream"><span class="tt">NativeStream</span></a>  </td><td class="markdownTableBodyNone">A set of append-only, untyped buffers. Has thread and disposal safety checks.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeStream"><span class="tt">UnsafeStream</span></a>  </td><td class="markdownTableBodyNone">A set of append-only, untyped buffers.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeAppendBuffer"><span class="tt">UnsafeAppendBuffer</span></a>  </td><td class="markdownTableBodyNone">An append-only untyped buffer.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeQueue`1"><span class="tt">NativeQueue&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A resizable queue. Has thread and disposal safety checks.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeRingQueue`1"><span class="tt">NativeRingQueue&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A fixed-size circular buffer. Has disposal safety checks.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeRingQueue`1"><span class="tt">UnsafeRingQueue&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A fixed-size circular buffer.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.FixedList32Bytes`1"><span class="tt">FixedList32Bytes&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A 32-byte list, which includes 2 bytes of overhead, so 30 bytes are available for storage. Max capacity depends upon <span class="tt">T</span>. <span class="tt">FixedList32Bytes&lt;T&gt;</span> has variants of larger sizes:<br  />
+- <span class="tt">FixedList64Bytes&lt;T&gt;</span><br  />
+- <span class="tt">FixedList128Bytes&lt;T&gt;</span><br  />
+- <span class="tt">FixedList512Bytes&lt;T&gt;</span><br  />
+- <span class="tt">FixedList4096Bytes&lt;T&gt;</span>  </td></tr>
+</table>
+<p>There aren't any multi-dimensional array types, but you can pack all the data into a single dimension. For example, for an <span class="tt">int[4][5]</span> array, use an <span class="tt">int[20]</span> array instead (because <span class="tt">4 * 5</span> is <span class="tt">20</span>).</p>
+<p>Additionally, there are various extension methods in <a href="xref:Unity.Collections.NativeArrayExtensions"><span class="tt">NativeArrayExtensions</span></a>, <a href="xref:Unity.Collections.ListExtensions"><span class="tt">ListExtensions</span></a>, and <a href="xref:Unity.Collections.NativeSortExtension"><span class="tt">NativeSortExtension</span></a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1406"></a>
+Map and set types</h1>
+<p>Use these collection types in single threads when there is a low memory overhead:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Data structure</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeHashMap`2"><span class="tt">NativeHashMap&lt;TKey, TValue&gt;</span></a>  </td><td class="markdownTableBodyNone">An unordered associative array of key-value pairs. Has thread and disposal safety checks.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeHashMap`2"><span class="tt">UnsafeHashMap&lt;TKey, TValue&gt;</span></a>  </td><td class="markdownTableBodyNone">An unordered associative array of key-value pairs.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeHashSet`1"><span class="tt">NativeHashSet&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A set of unique values. Has thread and disposal safety checks.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeHashSet`1"><span class="tt">UnsafeHashSet&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A set of unique values.  </td></tr>
+</table>
+<p>Use these collection types in multithreaded situations, when there is a high memory overhead.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Data structure</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeParallelHashMap`2"><span class="tt">NativeParallelHashMap&lt;TKey, TValue&gt;</span></a>  </td><td class="markdownTableBodyNone">An unordered associative array of key-value pairs. Has thread and disposal safety checks.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeParallelHashMap`2"><span class="tt">UnsafeParallelHashMap&lt;TKey, TValue&gt;</span></a>  </td><td class="markdownTableBodyNone">An unordered associative array of key value pairs.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeParallelHashSet`1"><span class="tt">NativeParallelHashSet&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A set of unique values. Has thread and disposal safety checks.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeParallelHashSet`1"><span class="tt">UnsafeParallelHashSet&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A set of unique values.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeParallelMultiHashMap`2"><span class="tt">NativeParallelMultiHashMap&lt;TKey, TValue&gt;</span></a>  </td><td class="markdownTableBodyNone">An unordered associative array of key value pairs. The keys don't have to be unique. For example, two pairs can have equal keys. Has thread and disposal safety checks.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeParallelMultiHashMap`2"><span class="tt">UnsafeParallelMultiHashMap&lt;TKey, TValue&gt;</span></a>  </td><td class="markdownTableBodyNone">An unordered associative array of key value pairs. The keys don't have to be unique. For example, two pairs can have equal keys.  </td></tr>
+</table>
+<p>Additionally, there are various extension methods in <a href="xref:Unity.Collections.NotBurstCompatible.Extensions"><span class="tt">NotBurstCompatible.Extensions</span></a> and <a href="xref:Unity.Collections.LowLevel.Unsafe.NotBurstCompatible.Extensions"><span class="tt">Unsafe.NotBurstCompatible.Extensions</span></a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1407"></a>
+Bit arrays and bit fields</h1>
+<p>The following are arrays of bits:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Data structure</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.BitField32"><span class="tt">BitField32</span></a>  </td><td class="markdownTableBodyNone">A fixed-size array of 32 bits.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.BitField64"><span class="tt">BitField64</span></a>  </td><td class="markdownTableBodyNone">A fixed-size array of 64 bits.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeBitArray"><span class="tt">NativeBitArray</span></a>  </td><td class="markdownTableBodyNone">An arbitrary sized array of bits. Has thread and disposal safety checks.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeBitArray"><span class="tt">UnsafeBitArray</span></a>  </td><td class="markdownTableBodyNone">An arbitrary-sized array of bits.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1408"></a>
+String types</h1>
+<p>The following are string types:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Data structure</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeText"><span class="tt">NativeText</span></a>  </td><td class="markdownTableBodyNone">A UTF-8 encoded string. Mutable and resizable. Has thread and disposal safety checks.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeText"><span class="tt">UnsafeText</span></a>  </td><td class="markdownTableBodyNone">A UTF-8 encoded string. Mutable and resizable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.FixedString32Bytes"><span class="tt">FixedString32Bytes</span></a>  </td><td class="markdownTableBodyNone">A 32-byte UTF-8 encoded string, including 3 bytes of overhead, so 29 bytes available for storage.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.FixedString64Bytes"><span class="tt">FixedString64Bytes</span></a>  </td><td class="markdownTableBodyNone">A 64-byte UTF-8 encoded string, including 3 bytes of overhead, so 61 bytes available for storage.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.FixedString128Bytes"><span class="tt">FixedString128Bytes</span></a>  </td><td class="markdownTableBodyNone">A 128-byte UTF-8 encoded string, including 3 bytes of overhead, so 125 bytes available for storage.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.FixedString512Bytes"><span class="tt">FixedString512Bytes</span></a>  </td><td class="markdownTableBodyNone">A 512-byte UTF-8 encoded string, including 3 bytes of overhead, so 509 bytes available for storage.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.FixedString4096Bytes"><span class="tt">FixedString4096Bytes</span></a>  </td><td class="markdownTableBodyNone">A 4096-byte UTF-8 encoded string, including 3 bytes of overhead, so 4093 bytes available for storage.  </td></tr>
+</table>
+<p>There are further extension methods in <a href="xref:Unity.Collections.FixedStringMethods"><span class="tt">FixedStringMethods</span></a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1409"></a>
+Other types</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Data structure</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.NativeReference`1"><span class="tt">NativeReference&lt;T&gt;</span></a>  </td><td class="markdownTableBodyNone">A reference to a single value. Functionally equivalent to an array of length 1. Has thread and disposal safety checks.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeAtomicCounter32"><span class="tt">UnsafeAtomicCounter32</span></a>  </td><td class="markdownTableBodyNone">A 32-bit atomic counter.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="xref:Unity.Collections.LowLevel.Unsafe.UnsafeAtomicCounter64"><span class="tt">UnsafeAtomicCounter64</span></a>  </td><td class="markdownTableBodyNone">A 64-bit atomic counter.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1410"></a>
+Enumerators</h1>
+<p>Most of the collections have a <span class="tt">GetEnumerator</span> method, which returns an implementation of <span class="tt">IEnumerator&lt;T&gt;</span>. The enumerator's <span class="tt">MoveNext</span> method advances its <span class="tt">Current</span> property to the next element:</p>
+<p>[!code-cs<a href="../DocCodeSamples.Tests/CollectionsExamples.cs#enumerator">enumerator</a>] </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

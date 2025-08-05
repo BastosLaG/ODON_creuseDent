@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Memory aliasing</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2aliasing.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Memory aliasing </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md778"></a></p>
+<p>Memory aliasing is a way to tell <a class="el" href="namespace_burst.html">Burst</a> how your code uses data. This can improve and optimize the performance of your application.</p>
+<p>Memory aliasing happens when locations in the memory overlap each other.</p>
+<p>The following example shows a job that copies data from an input array to an output array:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keyword">private</span> <span class="keyword">struct </span>CopyJob : IJob</div>
+<div class="line">{</div>
+<div class="line">    [ReadOnly]</div>
+<div class="line">    <span class="keyword">public</span> NativeArray&lt;float&gt; Input;</div>
+<div class="line"> </div>
+<div class="line">    [WriteOnly]</div>
+<div class="line">    <span class="keyword">public</span> NativeArray&lt;float&gt; Output;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> Execute()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Input.Length; i++)</div>
+<div class="line">        {</div>
+<div class="line">            Output[i] = Input[i];</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h1 class="doxsection"><a class="anchor" id="autotoc_md779"></a>
+No memory aliasing</h1>
+<p>If the arrays <span class="tt">Input</span> and <span class="tt">Output</span> don't overlap, which means that their respective memory location doesn't overlap, the code returns the following result after running this job on a sample input/output:</p>
+<p><img src="images/burst-noalias.png" alt="" class="inline"/><em>Memory with no aliasing</em></p>
+<p>If <a class="el" href="namespace_burst.html">Burst</a> is <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2aliasing-noalias.html">noalias</a> aware, it can work at the scalar level to optimize the previous scalar loop. It does this through a process called vectorizing, where it rewrites the loop to process elements in a small batch. For example, <a class="el" href="namespace_burst.html">Burst</a> could work at vector level in 4 by 4 elements:</p>
+<p><img src="images/burst-noalias-vectorized.png" alt="" class="inline"/><br  />
+<em>Memory with no aliasing vectorized</em></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md780"></a>
+Memory aliasing</h1>
+<p>If the <span class="tt">Output</span> array overlaps the <span class="tt">Input</span> array by one element (for example <span class="tt">Output[0]</span> points to <span class="tt">Input[1]</span>), then this means that the memory is aliasing. This gives the following result when you run <span class="tt">CopyJob</span> without the auto vectorizer:</p>
+<p><img src="images/burst-alias.png" alt="Memory with aliasing" class="inline"/><br  />
+<em>Memory with aliasing</em></p>
+<p>If <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2aliasing-noalias.html">Burst isn't aware of the memory aliasing</a>, it tries to auto vectorize the loop, which results in the following:</p>
+<p><img src="images/burst-alias-vectorized.png" alt="" class="inline"/><br  />
+<em>Memory with aliasing and invalid vectorized code</em></p>
+<p>The result of this code is invalid and might lead to bugs if <a class="el" href="namespace_burst.html">Burst</a> can't identify them.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md781"></a>
+Generated code</h1>
+<p>In the <span class="tt">CopyJob</span> example, there is an <span class="tt">x64</span> assembly targeted at <span class="tt">AVX2</span> in its loop. The instruction <span class="tt">vmovups</span> moves 8 floats, so a single auto vectorized loop moves 4 × 8 floats, which equals 32 floats copied per loop iteration, instead of just one:</p>
+<div class="fragment"><div class="line">.LBB0_4:</div>
+<div class="line">    vmovups ymm0, ymmword ptr [rcx - 96]</div>
+<div class="line">    vmovups ymm1, ymmword ptr [rcx - 64]</div>
+<div class="line">    vmovups ymm2, ymmword ptr [rcx - 32]</div>
+<div class="line">    vmovups ymm3, ymmword ptr [rcx]</div>
+<div class="line">    vmovups ymmword ptr [rdx - 96], ymm0</div>
+<div class="line">    vmovups ymmword ptr [rdx - 64], ymm1</div>
+<div class="line">    vmovups ymmword ptr [rdx - 32], ymm2</div>
+<div class="line">    vmovups ymmword ptr [rdx], ymm3</div>
+<div class="line">    sub     rdx, -128</div>
+<div class="line">    sub     rcx, -128</div>
+<div class="line">    add     rsi, -32</div>
+<div class="line">    jne     .LBB0_4</div>
+<div class="line">    test    r10d, r10d</div>
+<div class="line">    je      .LBB0_8</div>
+</div><!-- fragment --><p>The following example shows the same <a class="el" href="namespace_burst.html">Burst</a> compiled loop, but <a class="el" href="namespace_burst.html">Burst</a>'s aliasing is artificially disabled:</p>
+<div class="fragment"><div class="line">.LBB0_2:</div>
+<div class="line">    mov     r8, qword ptr [rcx]</div>
+<div class="line">    mov     rdx, qword ptr [rcx + 16]</div>
+<div class="line">    cdqe</div>
+<div class="line">    mov     edx, dword ptr [rdx + 4*rax]</div>
+<div class="line">    mov     dword ptr [r8 + 4*rax], edx</div>
+<div class="line">    inc     eax</div>
+<div class="line">    cmp     eax, dword ptr [rcx + 8]</div>
+<div class="line">    jl      .LBB0_2</div>
+</div><!-- fragment --><p>The result is entirely scalar and runs approximately 32 times slower than the highly optimized, vectorized variant that the original alias analysis produces.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md782"></a>
+Function cloning</h1>
+<p>For function calls where <a class="el" href="namespace_burst.html">Burst</a> knows about the aliasing between parameters to the function, <a class="el" href="namespace_burst.html">Burst</a> can infer the aliasing. It can then propagate this onto the called function to improve optimization:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[MethodImpl(MethodImplOptions.NoInlining)]</div>
+<div class="line"><span class="keywordtype">int</span> Bar(ref <span class="keywordtype">int</span> a, ref <span class="keywordtype">int</span> b)</div>
+<div class="line">{</div>
+<div class="line">    a = 42;</div>
+<div class="line">    b = 13;</div>
+<div class="line">    <span class="keywordflow">return</span> a;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> Foo()</div>
+<div class="line">{</div>
+<div class="line">    var a = 53;</div>
+<div class="line">    var b = -2;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> Bar(ref a, ref b);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The assembly for <span class="tt">Bar</span> would be:</p>
+<div class="fragment"><div class="line">mov     dword ptr [rcx], 42</div>
+<div class="line">mov     dword ptr [rdx], 13</div>
+<div class="line">mov     eax, dword ptr [rcx]</div>
+<div class="line">ret</div>
+</div><!-- fragment --><p>This is because <a class="el" href="namespace_burst.html">Burst</a> doesn't know the aliasing of <span class="tt">a</span> and <span class="tt">b</span> within the <span class="tt">Bar</span> function. This is in line with what other compiler technologies do with this code snippet.</p>
+<p><a class="el" href="namespace_burst.html">Burst</a> is smarter than this though. Through a process of function cloning, <a class="el" href="namespace_burst.html">Burst</a> creates a copy of <span class="tt">Bar</span> where it knows that the aliasing properties of <span class="tt">a</span> and <span class="tt">b</span> don't alias. It then replaces the original call to <span class="tt">Bar</span> with a call to the copy. This results in the following assembly:</p>
+<div class="fragment"><div class="line">mov     dword ptr [rcx], 42</div>
+<div class="line">mov     dword ptr [rdx], 13</div>
+<div class="line">mov     eax, 42</div>
+<div class="line">ret</div>
+</div><!-- fragment --><p>In this scenario, <a class="el" href="namespace_burst.html">Burst</a> doesn't perform the second load from <span class="tt">a</span>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md783"></a>
+Aliasing checks</h1>
+<p>Because aliasing is key to <a class="el" href="namespace_burst.html">Burst</a>'s ability to optimize for performance, there are some aliasing intrinsics:</p>
+<ul>
+<li><a href="xref:Unity.Burst.CompilerServices.Aliasing.ExpectAliased*"><span class="tt">Unity.Burst.CompilerServices.Aliasing.ExpectAliased</span></a> expects that the two pointers do alias, and generates a compiler error if not.</li>
+<li><a href="xref:Unity.Burst.CompilerServices.Aliasing.ExpectNotAliased*"><span class="tt">Unity.Burst.CompilerServices.Aliasing.ExpectNotAliased</span></a> expects that the two pointers don't alias, and generates a compiler error if not.</li>
+</ul>
+<p>An example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_compiler_services.html">CompilerServices</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_compiler_services_1_1_aliasing.html">Aliasing</a>;</div>
+<div class="line"> </div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keyword">private</span> <span class="keyword">struct </span>CopyJob : IJob</div>
+<div class="line">{</div>
+<div class="line">    [ReadOnly]</div>
+<div class="line">    <span class="keyword">public</span> NativeArray&lt;float&gt; Input;</div>
+<div class="line"> </div>
+<div class="line">    [WriteOnly]</div>
+<div class="line">    <span class="keyword">public</span> NativeArray&lt;float&gt; Output;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> unsafe <span class="keywordtype">void</span> Execute()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// NativeContainer attributed structs (like NativeArray) cannot alias with each other in a job struct!</span></div>
+<div class="line">        ExpectNotAliased(Input.getUnsafePtr(), Output.getUnsafePtr());</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// NativeContainer structs cannot appear in other NativeContainer structs.</span></div>
+<div class="line">        ExpectNotAliased(in Input, in Output);</div>
+<div class="line">        ExpectNotAliased(in Input, Input.getUnsafePtr());</div>
+<div class="line">        ExpectNotAliased(in Input, Output.getUnsafePtr());</div>
+<div class="line">        ExpectNotAliased(in Output, Input.getUnsafePtr());</div>
+<div class="line">        ExpectNotAliased(in Output, Output.getUnsafePtr());</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// But things definitely alias with themselves!</span></div>
+<div class="line">        ExpectAliased(in Input, in Input);</div>
+<div class="line">        ExpectAliased(Input.getUnsafePtr(), Input.getUnsafePtr());</div>
+<div class="line">        ExpectAliased(in Output, in Output);</div>
+<div class="line">        ExpectAliased(Output.getUnsafePtr(), Output.getUnsafePtr());</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_compiler_services_1_1_aliasing_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_compiler_services_1_1_aliasing.html">Unity.Burst.CompilerServices.Aliasing</a></div><div class="ttdef"><b>Definition</b> Aliasing.cs:7</div></div>
+<div class="ttc" id="anamespace_unity_1_1_burst_1_1_compiler_services_html"><div class="ttname"><a href="namespace_unity_1_1_burst_1_1_compiler_services.html">Unity.Burst.CompilerServices</a></div><div class="ttdef"><b>Definition</b> Aliasing.cs:2</div></div>
+<div class="ttc" id="anamespace_unity_1_1_burst_html"><div class="ttname"><a href="namespace_unity_1_1_burst.html">Unity.Burst</a></div><div class="ttdef"><b>Definition</b> BurstDisassembler.Core.ARM64.info.cs:5</div></div>
+<div class="ttc" id="anamespace_unity_html"><div class="ttname"><a href="namespace_unity.html">Unity</a></div><div class="ttdef"><b>Definition</b> ConverterItemDescriptor.cs:4</div></div>
+</div><!-- fragment --><p>These checks only run when optimizations are enabled, because proper aliasing deduction is intrinsically linked to the optimizer's ability to see through functions via inlining.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md784"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2aliasing-noalias.html">NoAlias attribute</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2aliasing-job-system.html">Aliasing and the job system</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

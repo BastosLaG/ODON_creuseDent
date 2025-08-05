@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Test settings file</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-test-settings-file.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Test settings file </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5564"></a></p>
+<p>You can define options for a test run in a <span class="tt">TestSettings.json</span> file. You can specify the location of this file using the <a href="./reference-command-line.md#testsettingsfile">testSettingsFile</a> command line argument.</p>
+<p>Here's an example of a <span class="tt">TestSettings.json</span> file:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;scriptingBackend&quot;:&quot;WinRTDotNET&quot;,</div>
+<div class="line">  &quot;Architecture&quot;:null,</div>
+<div class="line">  &quot;apiProfile&quot;:0,</div>
+<div class="line">  &quot;featureFlags&quot;: { &quot;requiresSplashScreen&quot;: true }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md5565"></a>
+Supported options</h1>
+<p>You can define the following options in a test settings file:</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5566"></a>
+apiProfile</h2>
+<p>The .Net compatibility level, refer to <a href="https://docs.unity3d.com/ScriptReference/ApiCompatibilityLevel.html">ApiCompatabilityLevel</a>. Set to one of the following values: <br  />
+</p>
+<ul>
+<li>1 - .Net 2.0</li>
+<li>2 - .Net 2.0 Subset</li>
+<li>3 - .Net 4.6</li>
+<li>5 - .Net micro profile (used by <a class="el" href="namespace_mono.html">Mono</a> scripting backend if <b>Stripping Level</b> is set to <b>Use micro mscorlib</b>)</li>
+<li>6 - .Net Standard 2.0</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5567"></a>
+appleEnableAutomaticSigning</h2>
+<p>Sets option for automatic signing of Apple devices, refer to <a href="https://docs.unity3d.com/ScriptReference/PlayerSettings.iOS-appleEnableAutomaticSigning.html">PlayerSettings.iOS.appleEnableAutomaticSigning</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5568"></a>
+appleDeveloperTeamID</h2>
+<p>Sets the team ID for the apple developer account, refer to <a href="https://docs.unity3d.com/ScriptReference/PlayerSettings.iOS-appleDeveloperTeamID.html">PlayerSettings.iOS.appleDeveloperTeamID</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5569"></a>
+architecture</h2>
+<p>Target architecture for Android, refer to <a href="https://docs.unity3d.com/ScriptReference/AndroidArchitecture.html">AndroidArchitecture</a>. Set to one of the following values:</p>
+<ul>
+<li>None = 0</li>
+<li>ARMv7 = 1</li>
+<li>ARM64 = 2</li>
+<li>X86 = 4</li>
+<li>All = 4294967295</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5570"></a>
+iOSManualProvisioningProfileType</h2>
+<p>Refer to <a href="https://docs.unity3d.com/ScriptReference/PlayerSettings.iOS-iOSManualProvisioningProfileType.html">PlayerSettings.iOS.iOSManualProvisioningProfileType</a>. Set to one of the following values:</p>
+<ul>
+<li>0 - Automatic</li>
+<li>1 - Development</li>
+<li>2 - Distribution <a href="https://docs.unity3d.com/ScriptReference/PlayerSettings.iOS-iOSManualProvisioningProfileID.html">iOSManualProvisioningProfileID</a></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5571"></a>
+iOSTargetSDK</h2>
+<p>Target SDK for iOS. Set to one of the following values, which should be given as a string literal enclosed in quotes:</p>
+<ul>
+<li>DeviceSDK</li>
+<li>SimulatorSDK</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5572"></a>
+tvOSManualProvisioningProfileType</h2>
+<p>Refer to <a href="https://docs.unity3d.com/ScriptReference/PlayerSettings.iOS-tvOSManualProvisioningProfileType.html">PlayerSettings.iOS.tvOSManualProvisioningProfileType</a>. Set to one of the following values:</p>
+<ul>
+<li>0 - Automatic</li>
+<li>1 - Development</li>
+<li>2 - Distribution <a href="https://docs.unity3d.com/ScriptReference/PlayerSettings.iOS-tvOSManualProvisioningProfileID.html">tvOSManualProvisioningProfileID</a></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5573"></a>
+tvOSTargetSDK</h2>
+<p>Target SDK for tvOS. Set to one of the following values, which should be given as a string literal enclosed in quotes:</p>
+<ul>
+<li>DeviceSDK</li>
+<li>SimulatorSDK</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5574"></a>
+scriptingBackend</h2>
+<p>Set to one of the following values, which should be given as a string literal enclosed in quotes:</p>
+<ul>
+<li>Mono2x</li>
+<li>IL2CPP</li>
+<li>WinRTDotNET</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5575"></a>
+playerGraphicsAPI</h2>
+<p>Set graphics API that will be used during test execution in the player. Value can be any <a href="https://docs.unity3d.com/ScriptReference/Rendering.GraphicsDeviceType.html">GraphicsDeviceType</a> as a string literal enclosed in quotes. Value will only be set if it is supported on the target platform.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5576"></a>
+webGLClientBrowserType</h2>
+<p>A browser to be used when running test using WebGL platform. Accepted browser types:</p>
+<ul>
+<li>Safari</li>
+<li>Firefox</li>
+<li>Chrome</li>
+<li>Chromium</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5577"></a>
+webGLClientBrowserPath</h2>
+<p>An absolute path to the browser's location on your device. If not defined, path from UNITY_AUTOMATION_DEFAULT_BROWSER_PATH enviromental variable will be used.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5578"></a>
+androidBuildAppBundle</h2>
+<p>A boolean setting that allows to build an Android App Bundle (AAB) instead of APK for tests.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5579"></a>
+featureFlags</h2>
+<p>Map of strings and boolean values which can switch <a class="el" href="namespace_unity.html">Unity</a> Test Framework features on or off. The currently supported features are:</p>
+<ul>
+<li>fileCleanUpCheck Throws an error message (instead of warning) if tests generate files which are not cleaned up. False (off) by default.</li>
+<li>requiresSplashScreen By default UTR disables the Made with <a class="el" href="namespace_unity.html">Unity</a> splash screen to speed up building the player and running tests. Set this flag to <span class="tt">true</span> to override the default and always require a splash screen to be built. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Rich Text</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_styled_text.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Rich Text </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6300"></a></p>
+<p>The text for UI elements and text meshes can incorporate multiple font styles and sizes. Rich text is supported both for the UI System and the legacy GUI system. The Text, GUIStyle, GUIText and TextMesh classes have a <b>Rich Text</b> setting which instructs <a class="el" href="namespace_unity.html">Unity</a> to look for markup tags within the text. The <a href="ScriptRef:Debug.Log.html">Debug.Log</a> function can also use these markup tags to enhance error reports from code. The tags are not displayed but indicate style changes to be applied to the text.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6301"></a>
+Markup format</h1>
+<p>The markup system is inspired by HTML but isn't intended to be strictly compatible with standard HTML. The basic idea is that a section of text can be enclosed inside a pair of matching tags:-</p>
+<p><span class="tt">We are &lt;b&gt;not&lt;/b&gt; amused.</span></p>
+<p>As the example shows, the tags are just pieces of text inside the "angle bracket" characters, <span class="tt">&lt;</span> and <span class="tt">&gt;</span>.</p>
+<p>You place the <em>opening</em> tag at the beginning of the section. The text inside the tag denotes its name (which in this case is just <b>b</b>).</p>
+<p>You place another tag at the end of the section. This is the <em>closing</em> tag. It has the same name as the opening tag, but the name is prefixed with a slash <span class="tt">/</span> character. Every opening tag must have a corresponding closing tag. If you don't <em>close</em> an opening tag, it is rendered as regular text.</p>
+<p>The tags are not displayed to the user directly but are interpreted as instructions for styling the text they enclose. The <span class="tt">b</span> tag used in the example above applies boldface to the word "not", so the text appears ons creen as:-</p>
+<p>We are <b>not</b> amused</p>
+<p><img src="images/StyleTextBold.png" alt="" class="inline"/></p>
+<p>A marked up section of text (including the tags that enclose it) is referred to as an <b>element</b>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6302"></a>
+Nested elements</h2>
+<p>It is possible to apply more than one style to a section of text by "nesting" one element inside another</p>
+<p><span class="tt">We are &lt;b&gt;&lt;i&gt;definitely not&lt;/i&gt;&lt;/b&gt; amused</span></p>
+<p>The <span class="tt">&lt;i&gt;</span> tag applies italic style, so this would be presented onscreen as</p>
+<p>We are <b><em>definitely not</em></b> amused</p>
+<p><img src="images/StyleTextBoldItalic1.png" alt="" class="inline"/></p>
+<p>Note the ordering of the closing tags, which is in reverse to that of the opening tags. The reason for this is perhaps clearer when you consider that the inner tags need not span the whole text of the outermost element</p>
+<p><span class="tt">We are &lt;b&gt;absolutely &lt;i&gt;definitely&lt;/i&gt; not&lt;/b&gt; amused</span></p>
+<p>which gives</p>
+<p>We are <b>absolutely <em>definitely</em> not</b> amused</p>
+<p><img src="images/StyleTextBoldItalic2.png" alt="" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6303"></a>
+Tag parameters</h2>
+<p>Some tags have a simple all-or-nothing effect on the text but others might allow for variations. For example, the <b>color</b> tag needs to know which color to apply. Information like this is added to tags by the use of <b>parameters</b>:-</p>
+<p><span class="tt">We are &lt;color=green&gt;green&lt;/color&gt; with envy</span></p>
+<p>Which produces this result:</p>
+<p><img src="images/StyleTextColorGreen.png" alt="" class="inline"/></p>
+<p>Note that the ending tag doesn't include the parameter value. Optionally, the value can be surrounded by quotation marks but this isn't required.</p>
+<p>Tag parameters cannot include blank spaces. For example:</p>
+<p><span class="tt">We are &lt;color = green&gt;green&lt;/color&gt; with envy</span></p>
+<p>does not work because of the spaces to either side of the <span class="tt">=</span> character.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6304"></a>
+Supported tags</h1>
+<p>The following list describes all the styling tags supported by <a class="el" href="namespace_unity.html">Unity</a>.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b><em>Tag</em></b>  </th><th class="markdownTableHeadLeft"><b><em>Description</em></b>  </th><th class="markdownTableHeadLeft"><b><em>Example</em></b>  </th><th class="markdownTableHeadLeft"><b><em>Notes</em></b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>b</b>  </td><td class="markdownTableBodyLeft">Renders the text in boldface.  </td><td class="markdownTableBodyLeft"><span class="tt">We are &lt;b&gt;not&lt;/b&gt; amused.</span>  </td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>i</b>  </td><td class="markdownTableBodyLeft">Renders the text in italics.  </td><td class="markdownTableBodyLeft"><span class="tt">We are &lt;i&gt;usually&lt;/i&gt; not amused.</span>  </td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>size</b>  </td><td class="markdownTableBodyLeft">Sets the size of the text according to the parameter value, given in pixels.  </td><td class="markdownTableBodyLeft"><span class="tt">We are &lt;size=50&gt;largely&lt;/size&gt; unaffected.</span>  </td><td class="markdownTableBodyLeft">Although this tag is available for Debug.Log, you will find that the line spacing in the window bar and Console looks strange if the size is set too large.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><a class="anchor" id="ColorTag"></a><b>color</b>  </td><td class="markdownTableBodyLeft">Sets the color of the text according to the parameter value. The color can be specified in the traditional HTML format. <span class="tt">#rrggbbaa</span> ...where the letters correspond to pairs of hexadecimal digits denoting the red, green, blue and alpha (transparency) values for the color. For example, cyan at full opacity would be specified by <span class="tt">color=#00ffffff</span>...<br  />
+<br  />
+You can specify hexadecimal values in uppercase or lowercase; <span class="tt">#FF0000</span> is equivalent to <span class="tt">#ff0000</span>.  </td><td class="markdownTableBodyLeft"><span class="tt">We are &lt;color=#ff0000ff&gt;colorfully&lt;/color&gt; amused</span>  </td><td class="markdownTableBodyLeft">Another option is to use the name of the color. This is easier to understand but naturally, the range of colors is limited and full opacity is always assumed. <span class="tt">&lt;color=cyan&gt;some text&lt;/color&gt;</span> The available color names are given in the <a class="el" href="#ColorNames">table below</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>material</b>  </td><td class="markdownTableBodyLeft">This is only useful for text meshes and renders a section of text with a material specified by the parameter. The value is an index into the text mesh's array of materials as shown by the inspector.  </td><td class="markdownTableBodyLeft"><span class="tt">We are &lt;material=2&gt;texturally&lt;/material&gt; amused</span>  </td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>quad</b>  </td><td class="markdownTableBodyLeft">This is only useful for text meshes and renders an image inline with the text. It takes parameters that specify the material to use for the image, the image height in pixels, and a further four that denote a rectangular area of the image to display. Unlike the other tags, quad does not surround a piece of text and so there is no ending tag - the slash character is placed at the end of the initial tag to indicate that it is "self-closing".  </td><td class="markdownTableBodyLeft"><span class="tt">&lt;quad material=1 size=20 x=0.1 y=0.1 width=0.5 height=0.5&gt;</span>  </td><td class="markdownTableBodyLeft">This selects the material at position in the renderer's material array and sets the height of the image to 20 pixels. The rectangular area of image starts at given by the x, y, width and height values, which are all given as a fraction of the unscaled width and height of the texture.  </td></tr>
+</table>
+<p><a class="anchor" id="ColorNames"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6305"></a>
+Supported colors</h2>
+<p>The following table lists colors for which you can use a name instead of a hexadecimal tag in the <a class="el" href="#ColorTag">`&lt;color&gt;`</a> rich text tag.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b><em>Color name</em></b>  </th><th class="markdownTableHeadLeft"><b><em>Hex value</em></b>  </th><th class="markdownTableHeadLeft"><b><em>Swatch</em></b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">aqua (same as cyan)  </td><td class="markdownTableBodyLeft"><span class="tt">#00ffffff</span>  </td><td class="markdownTableBodyLeft"><img src="images/CyanSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">black  </td><td class="markdownTableBodyLeft"><span class="tt">#000000ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/BlackSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">blue  </td><td class="markdownTableBodyLeft"><span class="tt">#0000ffff</span>  </td><td class="markdownTableBodyLeft"><img src="images/BlueSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">brown  </td><td class="markdownTableBodyLeft"><span class="tt">#a52a2aff</span>  </td><td class="markdownTableBodyLeft"><img src="images/BrownSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">cyan (same as aqua)  </td><td class="markdownTableBodyLeft"><span class="tt">#00ffffff</span>  </td><td class="markdownTableBodyLeft"><img src="images/CyanSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">darkblue  </td><td class="markdownTableBodyLeft"><span class="tt">#0000a0ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/DarkblueSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">fuchsia (same as magenta)  </td><td class="markdownTableBodyLeft"><span class="tt">#ff00ffff</span>  </td><td class="markdownTableBodyLeft"><img src="images/MagentaSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">green  </td><td class="markdownTableBodyLeft"><span class="tt">#008000ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/GreenSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">grey  </td><td class="markdownTableBodyLeft"><span class="tt">#808080ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/GreySwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">lightblue  </td><td class="markdownTableBodyLeft"><span class="tt">#add8e6ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/LightblueSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">lime  </td><td class="markdownTableBodyLeft"><span class="tt">#00ff00ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/LimeSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">magenta (same as fuchsia)  </td><td class="markdownTableBodyLeft"><span class="tt">#ff00ffff</span>  </td><td class="markdownTableBodyLeft"><img src="images/MagentaSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">maroon  </td><td class="markdownTableBodyLeft"><span class="tt">#800000ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/MaroonSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">navy  </td><td class="markdownTableBodyLeft"><span class="tt">#000080ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/NavySwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">olive  </td><td class="markdownTableBodyLeft"><span class="tt">#808000ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/OliveSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">orange  </td><td class="markdownTableBodyLeft"><span class="tt">#ffa500ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/OrangeSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">purple  </td><td class="markdownTableBodyLeft"><span class="tt">#800080ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/PurpleSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">red  </td><td class="markdownTableBodyLeft"><span class="tt">#ff0000ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/RedSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">silver  </td><td class="markdownTableBodyLeft"><span class="tt">#c0c0c0ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/SilverSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">teal  </td><td class="markdownTableBodyLeft"><span class="tt">#008080ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/TealSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">white  </td><td class="markdownTableBodyLeft"><span class="tt">#ffffffff</span>  </td><td class="markdownTableBodyLeft"><img src="images/WhiteSwatch.png" alt="" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">yellow  </td><td class="markdownTableBodyLeft"><span class="tt">#ffff00ff</span>  </td><td class="markdownTableBodyLeft"><img src="images/YellowSwatch.png" alt="" class="inline"/>  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6306"></a>
+Editor GUI</h1>
+<p>Rich text is disabled by default in the editor GUI system but it can be enabled explicitly using a custom <a href="ScriptRef:GUIStyle.html">GUIStyle</a>. The <span class="tt">richText</span> property should be set to true and the style passed to the GUI function in question:</p>
+<div class="fragment"><div class="line">GUIStyle style = new GUIStyle ();</div>
+<div class="line">style.richText = true;</div>
+<div class="line">GUILayout.Label(&quot;&lt;size=30&gt;Some &lt;color=yellow&gt;RICH&lt;/color&gt; text&lt;/size&gt;&quot;,style);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

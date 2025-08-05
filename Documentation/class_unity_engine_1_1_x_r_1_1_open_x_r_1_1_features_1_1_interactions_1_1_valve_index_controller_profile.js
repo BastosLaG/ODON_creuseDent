@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_valve_index_controller_profile =
+[
+    [ "ValveIndexController", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_valve_index_controllerf56019da1bcf867624e5f91e871b105a.html", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_valve_index_controllerf56019da1bcf867624e5f91e871b105a" ],
+    [ "GetDeviceLayoutName", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_valve_index_controller_profile.html#a8851e61478a6939570659cfeeaae8e41", null ],
+    [ "RegisterActionMapsWithRuntime", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_valve_index_controller_profile.html#a192a2563da80cf228a205baa19a54ff6", null ],
+    [ "RegisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_valve_index_controller_profile.html#a49ed983a555a022c385959c27327dffd", null ],
+    [ "UnregisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_valve_index_controller_profile.html#a6c25cce756b30bf489ca16cdad8b3a96", null ]
+];

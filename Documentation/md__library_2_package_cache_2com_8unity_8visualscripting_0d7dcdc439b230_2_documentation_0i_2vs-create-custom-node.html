@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Custom C# nodes</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Custom C# nodes </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7064"></a></p>
+<p>You can create your own Custom C# node with a C# script. Use your node in Script Graphs to run your own custom logic, and provide the script file to other users to let them use it in their own Visual Scripting projects.</p>
+<p>You can create nodes that change the flow of logic in your graph, nodes that manipulate data, or both. You can also create <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-custom-events.html">nodes for custom events</a>.</p>
+<p>To create a Custom C# node, you must:</p>
+<ol type="1">
+<li>Create a C# script.</li>
+<li>Add ports.</li>
+<li>Add logic.</li>
+<li>Add relations.</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7065"></a>
+Create the initial C# script</h1>
+<p>All custom nodes start with a C# file.</p>
+<p>After you create a C# file, you must regenerate your Node Library through your <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-configuration.html">project settings</a>. This allows Visual Scripting to recognize your Custom C# node and add it to <a href="vs-interface-overview.md#the-fuzzy-finder">the fuzzy finder</a> for use in your project's graphs.</p>
+<p>After you regenerate your Node Library the first time, you only need to regenerate your Node Library again if you change the location of a node in the fuzzy finder. You can change the location through the <a href="vs-create-custom-node-attributes-reference.md#unitcategory">[UnitCategory] attribute</a>.</p>
+<p>For more information on how to create your initial C# script, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node-empty.html">Create a new simple Custom C# node</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7066"></a>
+Add ports</h1>
+<p>Add ports to a node to specify what triggers Visual Scripting to run logic in a node, and decide what data it sends or receives. For more information on ports and nodes, see <a href="vs-nodes.md#connections-and-ports">Nodes</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7067"></a>
+Port types</h2>
+<p>Visual Scripting has four different port types that you can add to a node:</p>
+<ul>
+<li><span class="tt">ControlInput</span>: Provides a connection to a previous node, which tells Visual Scripting when to start the logic in a node.</li>
+<li><span class="tt">ControlOutput</span>: Provides a connection to another node, which tells Visual Scripting when to run the logic for the next connected node in a Script Graph. <br  />
+</li>
+<li><span class="tt">ValueInput</span>: Provides a connection that allows you to pass data into a node for use in its logic.</li>
+<li><span class="tt">ValueOutput</span>: Provides a connection that allows you to pass data out of a node for use in other nodes.</li>
+</ul>
+<p>You can add any number of ports to a node. You can also choose what data type the <span class="tt">ValueInput</span> or <span class="tt">ValueOutput</span> ports send and receive:</p>
+<ul>
+<li><b>Generic</b>: The port can receive or output any data type. Corresponds to <a class="el" href="namespace_unity.html">Unity</a>'s <b>Object</b> type. <br  />
+</li>
+<li><b>Type Value</b>: The port can only receive or output a specific data type. For example, <span class="tt">string</span>, <span class="tt">float</span>, or <span class="tt">integer</span>.</li>
+</ul>
+<p>For more information on types in Visual Scripting, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-types.html">Object types</a>. For more information on how to add ports to your node, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node-add-ports.html">Add ports to your Custom C# node</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7068"></a>
+Add logic</h1>
+<p>Add logic to a node to specify what it does when it runs in a Script Graph. If there isn't any internal logic written for a node, the node can't trigger another node, or modify any of the data it receives from other nodes in a Script Graph.</p>
+<p>For more information on how to add logic to a node, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node-add-logic.html">Add logic to a Custom C# node</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7069"></a>
+Add relations</h1>
+<p>Relations help define how a node and its Play mode animations appear in Visual Scripting. Without relations, Visual Scripting doesn't know how to animate or display a node in the <a href="vs-interface-overview.md#the-graph-editor">Graph Editor</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7070"></a>
+Relation types</h2>
+<p>You can add three types of relations to a node to help correctly display its internal flow of logic:</p>
+<ul>
+<li><b>Assignment</b>: Assignment relations are usually between a control input port and a data output port. Set an Assignment relation to tell Visual Scripting that a specific port needs to run before the node sends data to a data output port.</li>
+<li><b>Succession</b>: Succession relations are usually between a control input port and a control output port. Set a Succession relation to tell Visual Scripting that a control input port exits at a control output port.</li>
+<li><b>Requirement</b>: Requirement relations are usually between a control input port and a data port or ports. Set a Requirement relation to let Visual Scripting know that a specific data port or ports must have a value before the node can run any logic.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>If you don't set any Succession relations in a node, and <b>Dim</b> is enabled in <a href="vs-interface-overview.md#the-graph-toolbar">the Graph toolbar</a>, Visual Scripting dims your Custom C# node and any of its connected nodes in the Graph Editor during Play mode.</dd></dl>
+<p>For more information on how to add relations to a node, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node-add-relations.html">Add relations to a node</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7071"></a>
+Optional steps and customization</h1>
+<p>After you've added relations, you can choose to <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node-add-docs.html">add documentation for a node</a>. Visual Scripting displays documentation in the <a href="vs-interface-overview.md#the-graph-inspector">Graph Inspector</a> when a user selects a node in a Script Graph. Add documentation to help other users understand the purpose of each part of a node.</p>
+<p>You can also choose to <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-ce42125dc9dbdfb238818dd01748884e0.html">customize a node with node attributes</a>. You can add specific <a href="vs-create-custom-node-attributes-reference.md#node-class-attributes">node class attributes</a> to customize the entire node, or add <a href="vs-create-custom-node-attributes-reference.md#port-attributes">port attributes</a> to only customize specific ports. The attribute type determines the location where you must place the attribute in the node's C# file. Node class attributes must be placed above a node class definition, while port attributes must be placed above the variable definition for each port. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

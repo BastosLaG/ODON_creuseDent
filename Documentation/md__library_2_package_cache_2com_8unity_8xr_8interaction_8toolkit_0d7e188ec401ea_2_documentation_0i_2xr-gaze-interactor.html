@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: xr-gaze-interactor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-gaze-interactor.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">xr-gaze-interactor </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8643"></a>
+autotoc_md8643</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8644"></a>
+uid: xri-xr-gaze-interactor</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8645"></a>
+XR Gaze Interactor</h1>
+<p>Interactor used for interacting with Interactables via gaze. This is handled via ray casts that update the current set of valid targets for this interactor. This interactor will only interact with <span class="tt">XRBaseInteractable</span> (XRI implementations <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-simple-interactable.html">XR Simple Interactable</a> and <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-grab-interactable.html">XR Grab Interactable</a>) that have enabled <b>Allow Gaze Interaction</b>. This interactor also supports a <b>Gaze Assistance</b> feature that can be enabled on an interactable. Interactables have additional properties that allow you to specify how gaze functionality effects each Interactable on an individual level.</p>
+<p><img src="images/xr-gaze-interactor.png" alt="XRGazeInteractor component" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Gaze Assistance Snap Volume</b>  </td><td class="markdownTableBodyNone">(Optional) The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentationeb0e6caa21cd3ef79a8561aa3a617dba.html">XRInteractableSnapVolume</a> that this interactor will position on a valid target for gaze assistance. If this is left empty, one will be created.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Gaze Assistance Calculation</b>  </td><td class="markdownTableBodyNone">Defines how this interactor will size and scale the **Gaze Assistance Snap  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;Fixed Size  </td><td class="markdownTableBodyNone">Uses a fixed size for the <b>Gaze Assistance Snap Volume</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Collider Size  </td><td class="markdownTableBodyNone">Uses the size of the interactable collider it hits for the <b>Gaze Assistance Snap Volume</b>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Gaze Assistance Fixed Size</b>  </td><td class="markdownTableBodyNone">Fixed size used for the <b>Gaze Assistance Snap Volume</b> when <b>Gaze Assistance Calculation</b> is <b>Fixed Size</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Gaze Assistance Collider Scale</b>  </td><td class="markdownTableBodyNone">Scale used for <b>Gaze Assistance Snap Volume</b>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Gaze Assistance Distance Scaling</b>  </td><td class="markdownTableBodyNone">Enables the gaze assistance collider to scale based on the distance between the interactor and the targeted interactable.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Clamp Distance Scaling</b>  </td><td class="markdownTableBodyNone">Clamps the scale of the gaze assistance collider to the distance scaling clamp value.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Distance Scaling Clamp Value</b>  </td><td class="markdownTableBodyNone">The scale the gaze assistance will be clamped to.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8646"></a>
+Fallback</h2>
+<p>If a valid eye tracking device is not found, gaze can fallback to head tracking to support the desired gaze features. For an example of fall back support for gaze interaction, import the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-starter-assets.html">Starter Assets</a> sample and see the <a href="samples-starter-assets.md#scripts"><span class="tt">GazeInputManager</span></a> script. Add the <span class="tt">GazeInputManager</span> to a <span class="tt">XRGazeInteractor</span> GameObject to support gaze fallback.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8647"></a>
+Eye tracking permission</h2>
+<p>Devices like the Quest Pro and HoloLens 2 require applications that access eye tracking data to have the necessary permissions. For HoloLens 2, see the <a class="el" href="namespace_microsoft.html">Microsoft</a> documentation on <a href="https://learn.microsoft.com/en-us/windows/apps/design/input/gaze-interactions#privacy">Gaze Privacy</a>. For Quest Pro, use <a href="https://docs.unity3d.com/ScriptReference/Android.Permission.RequestUserPermission.html"><span class="tt">Permission.RequestUserPermission</span></a>. Those links provide a starting point to request those permissions and <a class="el" href="namespace_unity.html">Unity</a> will provide sample code in an upcoming release to help demonstrate permission requesting.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8648"></a>
+Quest Pro support</h2>
+<p>The <a href="https://docs.unity3d.com/Manual/com.unity.xr.oculus.html">Oculus XR Plugin</a> version <span class="tt">3.2.1</span> or newer is required for Quest Pro support.</p>
+<p>Currently, an additional provider is necessary to support the <span class="tt">XRGazeInteractor</span> for the Quest Pro. The additional provider needs to update the <span class="tt">XRGazeInteractor</span> <a href="https://docs.unity3d.com/ScriptReference/Pose.html"><span class="tt">Pose</span></a>. The gaze <span class="tt">Pose</span> data can be accessed through the OVRPlugin in the <a href="https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022">Oculus Integration</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8649"></a>
+OpenXR eye tracking bindings</h2>
+<p>The <span class="tt">XRGazeInteractor</span> is set up to use the the <a href="https://docs.unity3d.com/Packages/com.unity.xr.openxr@latest/index.html?subfolder=/manual/features/eyegazeinteraction.html">OpenXR bindings</a> for eye gaze position, rotation, and tracking. If a device that supports eye tracking does not support these bindings, you will need to retrieve the gaze <span class="tt">Pose</span> data from the device and update the <span class="tt">XRGazeInteractor</span> Transform with an additional provider. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

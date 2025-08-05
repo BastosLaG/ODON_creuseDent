@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Blend clips</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-blend.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Blend clips </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5899"></a></p>
+<p>Blend two clips on the same track to create a smooth transition between two Animation clips, two Audio clips, or two Playable clips. To blend two clips, select the Mix Edit mode and position or trim one clip until it overlaps an adjacent clip.</p>
+<p><img src="images/tl-clip-blend-area.png" alt="" class="inline"/></p>
+<p><b>(A)</b> The Mix Edit mode.<br  />
+ <b>(B)</b> The blend area displays the transition between the outgoing clip and incoming clip.<br  />
+</p>
+<p>In a blend, the first clip is referred to as the <b>outgoing clip</b> and the second clip is referred to as the <b>incoming clip</b>. The area where the outgoing clip transitions to the incoming clip is referred to as the <b>blend area</b>. The blend area sets the duration of the transition.</p>
+<p>Although the Content view represents a blend area as a single linear curve, the transition between clips is actually comprised of two blend curves. The blend curve for the outgoing clip is referred to as the <b>Blend Out</b> curve. The blend curve for the incoming clip is referred to as the <b>Blend In</b> curve. By default, each blend curve is automatically set to an ease-in and ease-out curve.</p>
+<p>In the Inspector window, the label for the <b>Ease In Duration</b> or <b>Ease Out Duration</b> property changes to <b>Blend In Duration</b> or <b>Blend Out Duration</b> if either affects a blend. The blend duration properties cannot be edited when labelled <b>Blend In Duration</b> or <b>Blend Out Duration</b> because the duration of the blend area is only editable in the Content view.</p>
+<p><img src="images/insp-blend-curves.png" alt="" class="inline"/></p>
+<p><b>(A)</b> The <b>Ease Out Duration</b> property changes to <b>Blend Out Duration</b> because there is a blend between this clip and the next clip.<br  />
+ <b>(B)</b> Use Blend Curves to customize the transition between clips.<br  />
+</p>
+<p>Use the <b>Blend Curves</b> in the Inspector window to change the shape for either the Blend In curve, labelled <b>In</b>, or Blend Out curve, labelled <b>Out</b>. The Inspector window only lets you edit the properties of one clip at a time. You cannot simultaneously customize both blend curves used in the same blend area.</p>
+<p>To customize either the Blend Out curve or Blend In curve, use the drop-down menu to switch from <b>Auto</b> to <b>Manual</b>. With <b>Manual</b> selected, the Inspector window displays a preview of the blend curve. Click the Curve Preview to open the Curve Editor in the Inspector window.</p>
+<p><img src="images/insp-blend-curve-editor.png" alt="" class="inline"/></p>
+<p><b>(A)</b> Curve Preview.<br  />
+ <b>(B)</b> Click the Curve Editor header to expand or minimize the Curve Editor.<br  />
+ <b>(C)</b> Use the Curve Editor menu to minimize, maximize, or open the Curve Editor in its own Preview window.<br  />
+</p>
+<p>Use the Curve Editor to customize the shape of the blend curve. By default, the blend curve includes a keyframe at the beginning of the curve and a keyframe at the end of the curve. The Curve Editor provides the following different methods of modifying the blend curve:</p>
+<ul>
+<li>Select a shape template from the bottom of the Curve Editor. The available shape templates differ depending on whether you are modifying the Blend In curve or the Blend Out curve.</li>
+<li>Double-click a location on the blend curve to add a new keyframe.</li>
+<li>Select a keyframe and use its tangent handles to adjust the interpolation between keyframes. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

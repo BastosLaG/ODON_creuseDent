@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Référence de la structure Unity.Collections.PerformanceTests.BenchmarkAllocatorUtil</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_unity_1_1_collections_1_1_performance_tests_1_1_benchmark_allocator_util.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la structure Unity.Collections.PerformanceTests.BenchmarkAllocatorUtil</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A useful set of functionality commonly found in allocator performance and benchmark tests for most allocator types. Typically wrapped in a separate utility class for a set of tests to a specific allocator type.  
+ <a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:ae9a5d85ea2510b0a707ff81b2bffaddb" id="r_ae9a5d85ea2510b0a707ff81b2bffaddb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9a5d85ea2510b0a707ff81b2bffaddb">Setup</a> (int workers, int baseSize, int growthRate, int allocations)</td></tr>
+<tr class="memdesc:ae9a5d85ea2510b0a707ff81b2bffaddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be called prior to each measurement. Sets up the allocation and size storage used for freeing allocations, whether this happens during teardown following each measurement, or freeing is the functionality being measured itself.  <br /></td></tr>
+<tr class="memitem:af0b81649f8eb07aabaaa03a064c8dd27" id="r_af0b81649f8eb07aabaaa03a064c8dd27"><td class="memItemLeft" align="right" valign="top">unsafe void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0b81649f8eb07aabaaa03a064c8dd27">Teardown</a> (AllocatorManager.AllocatorHandle allocator)</td></tr>
+<tr class="memdesc:af0b81649f8eb07aabaaa03a064c8dd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be called following each measurement. Frees the memory allocated in the <a class="el" href="#ae9a5d85ea2510b0a707ff81b2bffaddb" title="To be called prior to each measurement. Sets up the allocation and size storage used for freeing allo...">Setup(int, int, int, int)</a> method. This also frees the memory allocated by the given allocator using the stored information in this class.  <br /></td></tr>
+<tr class="memitem:ac0a7c7de85e2f3db26626226632c5fc1" id="r_ac0a7c7de85e2f3db26626226632c5fc1"><td class="memItemLeft" align="right" valign="top"><a id="ac0a7c7de85e2f3db26626226632c5fc1" name="ac0a7c7de85e2f3db26626226632c5fc1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Teardown</b> ()</td></tr>
+<tr class="memdesc:ac0a7c7de85e2f3db26626226632c5fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be called following each measurement. Frees the memory allocated in the <a class="el" href="#ae9a5d85ea2510b0a707ff81b2bffaddb" title="To be called prior to each measurement. Sets up the allocation and size storage used for freeing allo...">Setup(int, int, int, int)</a> method. This does not free the memory allocated by a given allocator type used in measurement tests. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Propriétés</h2></td></tr>
+<tr class="memitem:a549437f07fc087e2501e1c7d22e623f4" id="r_a549437f07fc087e2501e1c7d22e623f4"><td class="memItemLeft" align="right" valign="top">NativeArray&lt; NativeArray&lt; IntPtr &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a549437f07fc087e2501e1c7d22e623f4">AllocPtr</a><code> [get]</code></td></tr>
+<tr class="memdesc:a549437f07fc087e2501e1c7d22e623f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">[worker][sequential allocation]  <br /></td></tr>
+<tr class="memitem:aa6fb94552befbeb6c7701e1df35d5fb2" id="r_aa6fb94552befbeb6c7701e1df35d5fb2"><td class="memItemLeft" align="right" valign="top">NativeArray&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6fb94552befbeb6c7701e1df35d5fb2">AllocSize</a><code> [get]</code></td></tr>
+<tr class="memdesc:aa6fb94552befbeb6c7701e1df35d5fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">[sequential allocation]  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>A useful set of functionality commonly found in allocator performance and benchmark tests for most allocator types. Typically wrapped in a separate utility class for a set of tests to a specific allocator type. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="ae9a5d85ea2510b0a707ff81b2bffaddb" name="ae9a5d85ea2510b0a707ff81b2bffaddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a5d85ea2510b0a707ff81b2bffaddb">&#9670;&#160;</a></span>Setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Unity.Collections.PerformanceTests.BenchmarkAllocatorUtil.Setup </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>workers</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>baseSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>growthRate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>allocations</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To be called prior to each measurement. Sets up the allocation and size storage used for freeing allocations, whether this happens during teardown following each measurement, or freeing is the functionality being measured itself. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">workers</td><td>The number of job workers to run performance tests on. These are duplicated across workers rather than split across workers.</td></tr>
+    <tr><td class="paramname">baseSize</td><td>The size to base allocations off of, whether fixed for all allocations, increasing in size, or anything else.</td></tr>
+    <tr><td class="paramname">growthRate</td><td><ul>
+<li>If &lt; 0, a performance measurement's allocations start at the largest size and decrease linearly to the <span class="tt">baseSize</span>.</li>
+<li>If &gt; 0, a performance measurement's allocations start at the <span class="tt">baseSize</span> and increase linearly</li>
+<li>If 0, the allocation size is equivalent to the <span class="tt">baseSize</span> for all of a performance measurement's allocations </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">allocations</td><td>The number of allocations in a single measurement.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af0b81649f8eb07aabaaa03a064c8dd27" name="af0b81649f8eb07aabaaa03a064c8dd27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b81649f8eb07aabaaa03a064c8dd27">&#9670;&#160;</a></span>Teardown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsafe void Unity.Collections.PerformanceTests.BenchmarkAllocatorUtil.Teardown </td>
+          <td>(</td>
+          <td class="paramtype">AllocatorManager.AllocatorHandle</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To be called following each measurement. Frees the memory allocated in the <a class="el" href="#ae9a5d85ea2510b0a707ff81b2bffaddb" title="To be called prior to each measurement. Sets up the allocation and size storage used for freeing allo...">Setup(int, int, int, int)</a> method. This also frees the memory allocated by the given allocator using the stored information in this class. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocator</td><td>A handle to the allocator being measured.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Documentation des propriétés</h2>
+<a id="a549437f07fc087e2501e1c7d22e623f4" name="a549437f07fc087e2501e1c7d22e623f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a549437f07fc087e2501e1c7d22e623f4">&#9670;&#160;</a></span>AllocPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NativeArray&lt;NativeArray&lt;IntPtr&gt; &gt; Unity.Collections.PerformanceTests.BenchmarkAllocatorUtil.AllocPtr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>[worker][sequential allocation] </p>
+<p>Used to store the pointer from allocations so it may be freed later. </p>
+
+</div>
+</div>
+<a id="aa6fb94552befbeb6c7701e1df35d5fb2" name="aa6fb94552befbeb6c7701e1df35d5fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6fb94552befbeb6c7701e1df35d5fb2">&#9670;&#160;</a></span>AllocSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NativeArray&lt;int&gt; Unity.Collections.PerformanceTests.BenchmarkAllocatorUtil.AllocSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>[sequential allocation] </p>
+<p>Used to store the size of allocations so it may be freed later, as some allocators require the size to be explicitly given when freed. Separate arrays for each worker are not provided because workers duplicate the same work rather than splitting it in some manner. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_unity.html">Unity</a></li><li class="navelem"><a href="namespace_unity_1_1_collections.html">Collections</a></li><li class="navelem"><a href="namespace_unity_1_1_collections_1_1_performance_tests.html">PerformanceTests</a></li><li class="navelem"><a href="struct_unity_1_1_collections_1_1_performance_tests_1_1_benchmark_allocator_util.html">BenchmarkAllocatorUtil</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

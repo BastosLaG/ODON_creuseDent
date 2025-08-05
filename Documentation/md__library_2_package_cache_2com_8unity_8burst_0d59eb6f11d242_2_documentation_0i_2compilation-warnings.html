@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Compilation warnings reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2compilation-warnings.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Compilation warnings reference </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md811"></a></p>
+<p>This page describes common compilation warnings and how to fix them.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md812"></a>
+IgnoreWarning attribute</h1>
+<p>The <a href="xref:Unity.Burst.CompilerServices.IgnoreWarningAttribute"><span class="tt">Unity.Burst.CompilerServices.IgnoreWarningAttribute</span></a> attribute suppresses warnings for a specific Burst-compiled function. The warnings <a class="el" href="namespace_burst.html">Burst</a> generates are important to pay attention to, so this attribute should be used sparingly and only when necessary. The sections below describe the specific situations in which you might want to suppress warnings.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md813"></a>
+BC1370</h1>
+<p>Warning BC1370 produces the message:</p>
+<blockquote class="doxtable">
+<p>An exception was thrown from a function without the correct <span class="tt">[Conditional("ENABLE_UNITY_COLLECTIONS_CHECKS")]</span> guard... </p>
+</blockquote>
+<p>This warning happens if <a class="el" href="namespace_unity.html">Unity</a> encounters a throw in code that <span class="tt">[Conditional("ENABLE_UNITY_COLLECTIONS_CHECKS")]</span> doesn't guard. In the Editor, thrown exceptions are caught and logged to the Console, but in a Player build a <span class="tt">throw</span> becomes an abort, which crashes your application. <a class="el" href="namespace_burst.html">Burst</a> warns you about these exceptions, and advises you to place them in functions guarded with <span class="tt">[Conditional("ENABLE_UNITY_COLLECTIONS_CHECKS")]</span> because such functions are not included in Player builds. However, if you want to purposely throw an exception to crash your application, use the <span class="tt">IgnoreWarningAttribute</span> to suppress the warnings that <a class="el" href="namespace_burst.html">Burst</a> provides on the <span class="tt">throw</span>:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[IgnoreWarning(1370)]</div>
+<div class="line"><span class="keywordtype">int</span> DoSomethingMaybe(<span class="keywordtype">int</span> x)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (x &lt; 0) <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Dang - sorry I crashed your game!&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> x * x;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This warning is only produced for exceptions that persist into Player builds. Editor-only or debug-only exception throws that aren't compiled into Player builds don't trigger this warning.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md814"></a>
+BC1371</h1>
+<p>Warning BC1371 produces the message:</p>
+<blockquote class="doxtable">
+<p>A call to the method 'xxx' has been discarded, due to its use as an argument to a discarded method... </p>
+</blockquote>
+<p>To understand this warning, consider the following example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[BurstDiscard]</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> DoSomeManagedStuff(<span class="keywordtype">int</span> x)</div>
+<div class="line">{</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// A function that computes some result which we need to pass to managed code</span></div>
+<div class="line"><span class="keywordtype">int</span> BurstCompiledCode(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> y+2*x;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keywordtype">void</span> BurstedMethod()</div>
+<div class="line">{</div>
+<div class="line">    var myValue = BurstCompiledCode(1,3);</div>
+<div class="line">    DoSomeManagedStuff(myValue);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>When <a class="el" href="namespace_unity.html">Unity</a> compiles your C# code in release mode, it optimizes and removes the local variable <span class="tt">myValue</span>. This means that <a class="el" href="namespace_burst.html">Burst</a> receives something like the following code:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keywordtype">void</span> BurstedMethod()</div>
+<div class="line">{</div>
+<div class="line">    DoSomeManagedStuff(BurstCompiledCode(1,3));</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This makes <a class="el" href="namespace_burst.html">Burst</a> generate the warning, because <a class="el" href="namespace_burst.html">Burst</a> discards <span class="tt">DoSomeManagedStuff</span>, along with the <span class="tt">BurstCompiledCode</span> argument. This means that the <span class="tt">BurstCompiledCode</span> function is no longer executed, which generates the warning.</p>
+<p>If this isn't what you intended then ensure the variable has multiple uses. For example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> IsUsed(ref <span class="keywordtype">int</span> x)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Dummy function to prevent removal</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keywordtype">void</span> BurstedMethod()</div>
+<div class="line">{</div>
+<div class="line">    var myValue = BurstCompiledCode(1,3);</div>
+<div class="line">    DoSomeManagedStuff(myValue);</div>
+<div class="line">    IsUsed(ref myValue);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Alternatively, if you're happy that the code is being discarded correctly, ignore the warning on the <span class="tt">BurstedMethod</span> like so:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[IgnoreWarning(1371)]</div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keywordtype">void</span> BurstedMethod()</div>
+<div class="line">{</div>
+<div class="line">    var myValue = BurstCompiledCode(1,3);</div>
+<div class="line">    DoSomeManagedStuff(myValue);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md815"></a>
+Additional resources</h1>
+<ul>
+<li><a href="xref:Unity.Burst.CompilerServices.IgnoreWarningAttribute"><span class="tt">Unity.Burst.CompilerServices.IgnoreWarningAttribute</span> API reference</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2compilation-burstcompile.html">Marking code for Burst compilation</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

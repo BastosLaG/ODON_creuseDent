@@ -1,0 +1,25 @@
+var struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer =
+[
+    [ "Reader", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer_1_1_reader.html", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer_1_1_reader" ],
+    [ "UnsafeAppendBuffer", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a2ccd22d7265754a026e3e2a4b82971b0", null ],
+    [ "UnsafeAppendBuffer", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a0cc587b88d1f32b698eef721b5072d09", null ],
+    [ "Add", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#aef93f87f7ab560e2d7417b643a720918", null ],
+    [ "Add< T >", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#ae51b3dc6eb51ea320123223c700f2063", null ],
+    [ "Add< T >", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a6f62ee07484427b5f6c090096ef310d0", null ],
+    [ "AddArray< T >", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a7f26d8c8691bce5a84c6032abeaef07b", null ],
+    [ "AsReader", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a0eafaaec68128c9dd4251068699fa3fc", null ],
+    [ "Dispose", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#aac037a8537fa44fd6f365d785e5ee1a7", null ],
+    [ "Dispose", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#ae42c634ee02526a1f7dde77c816cce13", null ],
+    [ "Pop", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a088a3971482b890e55096b92948de233", null ],
+    [ "Pop< T >", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a9989fc662179177678a4627a34576f9f", null ],
+    [ "Reset", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#ab248c8764acce1ac3583226b187ca2fb", null ],
+    [ "ResizeUninitialized", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a31dc8ffe15bbd2d7a3e5b99658e860e1", null ],
+    [ "SetCapacity", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a858ef5a38cddf6009613c37ea90f9e22", null ],
+    [ "Alignment", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a4ef19bf1a862893c51492b625f435d4e", null ],
+    [ "Allocator", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a525d9475b869fa4f9c9d72c7796c83c0", null ],
+    [ "Capacity", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a262d904e21d04c92632dc673cffe9197", null ],
+    [ "Length", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#acd5d8e17315908728b5a84417659fc66", null ],
+    [ "Ptr", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a53103adf6cebabdc3a19a5122adf5574", null ],
+    [ "IsCreated", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a0a44b8f4866b14879815abd18c09b120", null ],
+    [ "IsEmpty", "struct_unity_1_1_collections_1_1_low_level_1_1_unsafe_1_1_unsafe_append_buffer.html#a7d68d69c60215f219322a7675a8cd661", null ]
+];

@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Debugging</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_debugging.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Debugging </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2002"></a>
+autotoc_md2002</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2003"></a>
+uid: input-system-debugging</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2004"></a>
+Debugging</h1>
+<ul>
+<li>Debugging<ul>
+<li>Input Debugger<ul>
+<li>Debugging Devices</li>
+<li>Debugging Actions</li>
+<li>Debugging users and PlayerInput</li>
+<li>Debugging layouts</li>
+<li>Debugging remotely</li>
+</ul>
+</li>
+<li>Input visualizers<ul>
+<li>`InputControlVisualizer`</li>
+<li>`InputActionVisualizer`</li>
+</ul>
+</li>
+<li>Device Simulator</li>
+<li>Unity Remote (iOS, Android)</li>
+<li>Other tips:</li>
+</ul>
+</li>
+</ul>
+<p>When something isn't working as expected, the quickest way to troubleshoot what's wrong is the Input Debugger in the <a class="el" href="namespace_unity.html">Unity</a> Editor. The Input Debugger provides access to the activity of the Input System in both the Editor and the connected Players.</p>
+<p>To open the Input Debugger, go to <b>Window &gt; Analysis &gt; Input Debugger</b> from <a class="el" href="namespace_unity.html">Unity</a>'s main menu.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2005"></a>
+Input Debugger</h2>
+<p><img src="Images/InputDebugger.png" alt="Input Debugger" class="inline"/></p>
+<p>The Input Debugger displays a tree breakdown of the state of the Input System.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Item  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Devices  </td><td class="markdownTableBodyNone">A list of all <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_devices.html">Input Devices</a> that are currently in the system, and a list of unsupported/unrecognized Devices.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Layouts  </td><td class="markdownTableBodyNone">A list of all registered Control and Device layouts. This is the database of supported hardware, and information on how to represent a given piece of input hardware.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Actions  </td><td class="markdownTableBodyNone">Only visible in Play mode, and only if at least one <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Action</a> is enabled.<br  />
+<br  />
+A list of all currently enabled Actions, and the Controls they are bound to.<br  />
+<br  />
+See Debugging Actions.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Users  </td><td class="markdownTableBodyNone">Only visible when one or more <span class="tt">InputUser</span> instances exist. See documentation on <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_user_management.html">user management</a>.<br  />
+<br  />
+A list of all currently active users, along with their active Control Schemes and Devices, all their associated Actions, and the Controls these Actions are bound to.<br  />
+<br  />
+Note that <span class="tt">PlayerInput</span> uses <span class="tt">InputUser</span> to run. When using <span class="tt">PlayerInput</span> components, each player has an entry in this list.<br  />
+<br  />
+See Debugging users and PlayerInput.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Settings  </td><td class="markdownTableBodyNone">The currently active Input System <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_settings.html">settings</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Metrics  </td><td class="markdownTableBodyNone">Statistics about Input System resource usage.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2006"></a>
+Debugging Devices</h3>
+<p>In the Input Debugger window, navigate to the <b>Devices</b> list and double-click any <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_devices.html">Input Device</a>. This opens a window that displays information about the Device, including real-time state information for its Controls.</p>
+<p><img src="Images/DeviceInDebugger.png" alt="Device in Input Debugger" class="inline"/></p>
+<p>The top of the Device window displays general information about the specific Device, such as name, manufacturer, associated layout, device flags, device ID and serial number. In addition, this section also display the current <b>sample frequency</b> and <b>processing delay</b> of the deivce.</p>
+<p><b><a class="el" href="class_sample.html">Sample</a> frequency</b> indicates the frequency in Hertz (Hz) at which the Input System is currently processing samples or events. For devices receiving events this reflects the current flow of events received by the system. For devices receiving periodic readings this reflects the achievable sample rate of the system. The latter may be compared to the globally configured target sampling frequency, while achievable event frequency is uncorrelated to the sample polling frequency setting.</p>
+<p><b>Processing delay</b> indicates the average, minimum and maximum latency contribution from creating an input event or reading until the Input System has processed the same input event. Note that this excludes any additional input delay caused by OS, drivers or device communication. Also note that this excludes any additional output latency that may be caused by additional processing, rendering, GPU swap-chains or display refresh rate.</p>
+<p>The <b>Controls</b> section lists the Device's Controls and their individual states. This is useful when debugging input issues, because you can verify whether the data that the Input System receives from the Input Device is what you expect it to be. There are two buttons at the top of this panel:</p>
+<ul>
+<li><b>HID Descriptor</b>: Only displayed for devices that use the HID protocol to connect. This opens a window that displays the detailed <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_h_i_d.html">HID</a> specifications for the Device and each of it's logical controls.</li>
+<li><b>State</b>: Display the current state of the Device in a new window. This is identical to the information displayed in this view, but doesn't update in real time, so you can take a snapshot of input state data and take the time to inspect it as needed.</li>
+</ul>
+<p>The <b>Events</b> section lists all <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_events.html">input events</a> generated by the Device. You can double-click any event in the list to inspect the full Device state at the time the event occurred. To get a side-by-side difference between the state of the Device at different points in time, select multiple events, right-click them, and click <b>Compare</b> from the context menu.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2007"></a>
+Debugging Actions</h3>
+<p>The Input Debugger window lists all enabled <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Actions</a> in the <b>Actions</b> list. This list only appears if at least one Action is active and the Editor is in Play mode. If an Action has actively bound Controls, you can click the arrow next to the Action to see a list of the Controls. This is useful to debug whether your Bindings correctly map to the Controls you want them to bind to. See documentation on <a href="ActionBindings.md#binding-resolution">Binding resolution</a> for more information about how <a class="el" href="namespace_unity.html">Unity</a> maps Bindings to Controls.</p>
+<p>&gt;<b>Note</b>: Actions that belong to <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_user_management.html"><span class="tt">InputUsers</span></a> don't appear here. They appear in the __Users__ list instead.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2008"></a>
+Debugging users and PlayerInput</h3>
+<p>When there are <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_user_management.html"><span class="tt">InputUser</span></a> instances (if you use <span class="tt">PlayerInput</span>, each <span class="tt">PlayerInput</span> instance implicitly creates one), the Input Debugger's <b>Users</b> list displays each instance along with its paired Devices and active Actions. The listed Devices and Actions work the same way as those displayed in the __Devices__ and __Actions__ lists in the debugging window.</p>
+<p><img src="Images/UsersInputDebugger.png" alt="Users in Input Debugger" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2009"></a>
+Debugging layouts</h3>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_layouts.html"><b>Layouts</b></a> list in the Input Debugger window displays a breakdown of all registered <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_layouts.html">Control and Device layouts</a>. This is the database of supported hardware and the knowledge of how to represent a given piece of input hardware. It's useful when you want to <a href="HID.md#creating-a-custom-device-layout">create a new Device mapping</a> and see how the Input System represents it.</p>
+<p><img src="Images/LayoutsInDebugger.png" alt="Layouts in Input Debugger" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2010"></a>
+Debugging remotely</h3>
+<p>You can connect the Input Debugger to a Player that runs on a remote computer or device. This makes it possible to observe input activity from the Player in the Editor. This connection uses the <span class="tt">PlayerConnection</span> mechanism, which is the same one the <a class="el" href="namespace_unity.html">Unity</a> profiler uses to connect to a Player.</p>
+<p>&gt;<b>Note</b>: At the moment, debugging input in Players is restricted to seeing Devices and events from connected Players. There is no support for seeing other input-related data such as Actions and input users from Players.</p>
+<p>To see remote Devices from built Players, open the Input Debugger window's <b>Remote Devices</b> drop-down list. This list displays the remote Player instance you can connect to (if there are any). The same list appears in the Profiler and Console windows, and any connections are shared between those windows. If any Player(s) are connected, you can enable <b>Show remote devices</b> in the same drop-down list. If Players are connected, and <b>Show remote devices</b> is enabled, the __Devices__ list in the Input Debugger window splits into a <b>Local</b> section and a <b>Remote</b> section. The <b>Remote</b> section displays any Input Device from any connected Player, and lets you inspect Device state and events in real time, as if it were a local Device.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2011"></a>
+Input visualizers</h2>
+<p>The Input System package comes with a <b>Visualizers</b> sample, which provides various components which let you monitor the state of various Input System elements in real time using on-screen visualizers.</p>
+<p>To install the sample, navigate to the Input System package in the Package Manager window (see <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_installation.html">Installation</a>), and next to the <b>Visualizers</b> sample, click <b>Import in project</b>.</p>
+<p>The sample provides two visualizer components:</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2012"></a>
+<span class="tt">InputControlVisualizer</span></h3>
+<p>Visualizes the current state of a single Control in real time. You can have multiple Control visualizers to visualize the state of multiple Controls. Check the <span class="tt">GamepadVisualizer</span>, <span class="tt">MouseVisualizer</span>, or <span class="tt">PenVisualizer</span> Scenes in the sample for examples.</p>
+<p><img src="Images/InputControlVisualizer.png" alt="InputControlVisualizer" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2013"></a>
+<span class="tt">InputActionVisualizer</span></h3>
+<p>Visualizes the current state of a single Action in real time. You can have multiple Action visualizers to visualize the state of multiple Actions. This can also display the current value of the Action and the Control currently driving the Action, and track the state of <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_interactions.html">Interactions</a> over time. Check the <span class="tt">SimpleControlsVisualizer</span> Scene in the sample for examples.</p>
+<p><img src="Images/InputActionVisualizer.png" alt="InputActionVisualizer" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2014"></a>
+Device Simulator</h2>
+<p>When Device Simulator window is in use, mouse and pen inputs on the simulated device screen are turned into touchscreen inputs. Device Simulator uses its own touchscreen device, which it creates and destroys together with the Device Simulator window.</p>
+<p>To prevent conflicts between simulated touchscreen inputs and native mouse and pen inputs, Device Simulator disables all native mouse and pen devices.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2015"></a>
+Unity Remote</h2>
+<p>The <a class="el" href="namespace_unity.html">Unity</a> Remote is an app available for iOS and Android which allows using a mobile device for input while running in the <a class="el" href="namespace_unity.html">Unity</a> Editor. You can find details about the app and how to install it in the <a href="https://docs.unity3d.com/Manual/UnityRemote5.html">Unity manual</a>.</p>
+<p>If you would like to try out the <a class="el" href="namespace_unity.html">Unity</a> Remote app, you can <a href="Installation.md#installing-samples">install</a> the "Unity Remote" sample that is provided with the Input System package.</p>
+<p>&gt;<b>Note</b>: Joysticks/gamepads are not yet supported over the <a class="el" href="namespace_unity.html">Unity</a> Remote. No joystick/gamepad input from the mobile device will come through in the editor.</p>
+<p>&gt;<b>Note</b>: This requires <a class="el" href="namespace_unity.html">Unity</a> 2021.2.18 or later.</p>
+<p>When in play mode in the Editor and connected to the <a class="el" href="namespace_unity.html">Unity</a> Remote app, you will see a number of Devices have been added with the <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_remote"><span class="tt">InputDevice.remote</span></a> flag set to true:</p>
+<ul>
+<li><a href="../api/UnityEngine.InputSystem.Touchscreen.html"><span class="tt">Touchscreen</span></a></li>
+<li><a href="../api/UnityEngine.InputSystem.Accelerometer.html"><span class="tt">Accelerometer</span></a></li>
+</ul>
+<p>If a gyro is present on the mobile device:</p>
+<ul>
+<li><a href="../api/UnityEngine.InputSystem.Gyroscope.html"><span class="tt">Gyroscope</span></a></li>
+<li><a href="../api/UnityEngine.InputSystem.AttitudeSensor.html"><span class="tt">AttitudeSensor</span></a></li>
+<li><a href="../api/UnityEngine.InputSystem.LinearAccelerationSensor.html"><span class="tt">LinearAccelerationSensor</span></a></li>
+<li><a href="../api/UnityEngine.InputSystem.GravitySensor.html"><span class="tt">GravitySensor</span></a></li>
+</ul>
+<p>These Devices can be used just like local Devices. They will receive input from the connected mobile device which in turn will receive the rendered output of the game running in the editor.</p>
+<p>The <a href="../api/UnityEngine.InputSystem.Accelerometer.html"><span class="tt">Accelerometer</span></a> device will automatically be enabled and will not need you to call <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_EnableDevice_UnityEngine_InputSystem_InputDevice_"><span class="tt">InputSystem.EnableDevice</span></a> explicitly. Setting the sampling frequency on the accelerometer from the <a class="el" href="namespace_unity.html">Unity</a> Remote using <a href="../api/UnityEngine.InputSystem.Sensor.html#UnityEngine_InputSystem_Sensor_samplingFrequency"><span class="tt">Sensor.samplingFrequency</span></a> has no effect.</p>
+<p>The remaining sensors listed above will need to be explicitly enabled via <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_EnableDevice_UnityEngine_InputSystem_InputDevice_"><span class="tt">InputSystem.EnableDevice</span></a> just like local sensors. Setting the sampling frequency on these sensors from the <a class="el" href="namespace_unity.html">Unity</a> Remote using <a href="../api/UnityEngine.InputSystem.Sensor.html#UnityEngine_InputSystem_Sensor_samplingFrequency"><span class="tt">Sensor.samplingFrequency</span></a> will be relayed to the device but note that setting the frequency on one of them will set it for all of them.</p>
+<p>Touch coordinates from the device will be translated to the screen coordinates of the Game View inside the Editor.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2016"></a>
+Other tips:</h2>
+<p>To record events flowing through the system, use this code:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// You can also provide a device ID to only</span></div>
+<div class="line">   <span class="comment">// trace events for a specific device.</span></div>
+<div class="line">   var trace = <span class="keyword">new</span> InputEventTrace();</div>
+<div class="line"> </div>
+<div class="line">   trace.Enable();</div>
+<div class="line"> </div>
+<div class="line">   var current = <span class="keyword">new</span> InputEventPtr();</div>
+<div class="line">   <span class="keywordflow">while</span> (trace.GetNextEvent(ref current))</div>
+<div class="line">   {</div>
+<div class="line">       Debug.Log(<span class="stringliteral">&quot;Got some event: &quot;</span> + current);</div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Also supports IEnumerable.</span></div>
+<div class="line">   <span class="keywordflow">foreach</span> (var eventPtr <span class="keywordflow">in</span> trace)</div>
+<div class="line">       Debug.Log(<span class="stringliteral">&quot;Got some event: &quot;</span> + eventPtr);</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Trace consumes unmanaged resources. Make sure you dispose it correctly to avoid memory leaks.</span></div>
+<div class="line">   trace.Dispose();</div>
+</div><!-- fragment --><p>To see events as they're processed, use this code:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line"> </div>
+<div class="line">   InputSystem.onEvent +=</div>
+<div class="line">       (eventPtr, device) =&gt;</div>
+<div class="line">       {</div>
+<div class="line">           <span class="comment">// Can handle events yourself, for example, and then stop them</span></div>
+<div class="line">           <span class="comment">// from further processing by marking them as handled.</span></div>
+<div class="line">           eventPtr.handled = <span class="keyword">true</span>;</div>
+<div class="line">       };</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

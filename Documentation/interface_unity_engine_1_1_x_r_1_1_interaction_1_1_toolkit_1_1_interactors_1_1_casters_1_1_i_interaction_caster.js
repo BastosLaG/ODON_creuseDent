@@ -1,0 +1,7 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_casters_1_1_i_interaction_caster =
+[
+    [ "TryGetColliderTargets", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_casters_1_1_i_interaction_caster.html#af2a031ac6f667758420bc2220141a0d7", null ],
+    [ "castOrigin", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_casters_1_1_i_interaction_caster.html#a62dc816ffe2b90a112935d151531f74d", null ],
+    [ "effectiveCastOrigin", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_casters_1_1_i_interaction_caster.html#acdea97cd52efb3bd9c22a7c43e305374", null ],
+    [ "isInitialized", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_casters_1_1_i_interaction_caster.html#a0c311d3875a58a192d11b1a559216b7c", null ]
+];

@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Add a settings group</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2add-custom-graphics-settings.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Add a settings group </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2735"></a></p>
+<p>To add a custom graphics settings group to a Scriptable Render Pipeline, implement the <span class="tt">IRenderPipelineGraphicsSettings</span> interface.</p>
+<p>Follow these steps:</p>
+<ol type="1">
+<li>Create a class that implements the <span class="tt">IRenderPipelineGraphicsSettings</span> interface, then add a <span class="tt">[Serializable]</span> attribute.</li>
+<li><p class="startli">To set which render pipeline the setting applies to, add a <span class="tt">[SupportedOnRenderPipeline]</span> attribute and pass in a <span class="tt">RenderPipelineAsset</span> type.</p>
+<p class="startli"><b>Note:</b> If you don't add a <span class="tt">[SupportedOnRenderPipeline]</span> attribute, the setting applies to any Scriptable Render Pipeline. However each Scriptable Render Pipeline stores its own value for the setting.</p>
+</li>
+<li>Implement the <span class="tt">version</span> property. <a class="el" href="namespace_unity.html">Unity</a> doesn't currently use the <span class="tt">version</span> property, but you must implement it.</li>
+</ol>
+<p><a class="el" href="namespace_unity.html">Unity</a> adds the new settings group to the <b>Edit</b> &gt; <b>Project Settings</b> &gt; <b><a class="el" href="namespace_graphics.html">Graphics</a></b> window.</p>
+<p>For example, the following script adds a settings group called <b>My Settings</b> in the <b><a class="el" href="namespace_graphics.html">Graphics</a></b> settings window of the Universal Render Pipeline (URP).</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.Rendering;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.Rendering.Universal;</div>
+<div class="line"> </div>
+<div class="line">[Serializable]</div>
+<div class="line">[SupportedOnRenderPipeline(typeof(<a class="code hl_class" href="class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset.html">UniversalRenderPipelineAsset</a>))] </div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create a new settings group by implementing the IRenderPipelineGraphicsSettings interface</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MySettings : IRenderPipelineGraphicsSettings</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// Add a private field for the version property</span></div>
+<div class="line">  <span class="keywordtype">int</span> internalVersion = 1;</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Implement the public version property</span></div>
+<div class="line">  <span class="keyword">public</span> <span class="keywordtype">int</span> version =&gt; internalVersion;</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset.html">UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset</a></div><div class="ttdoc">The asset that contains the URP setting. You can use this asset as a graphics quality level.</div><div class="ttdef"><b>Definition</b> UniversalRenderPipelineAsset.cs:444</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><p><img src="Images/customsettings-settingsgroup.png" alt="Screenshot of the Project Settings window. The Graphics section contains the new custom settings group from the example script." class="inline"/><br  />
+ The <b>Edit</b> &gt; <b>Project Settings</b> &gt; <b><a class="el" href="namespace_graphics.html">Graphics</a></b> window with the new custom settings group from the example script.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2736"></a>
+Change the display order of settings groups</h1>
+<p>To change where a settings group appears, use the <span class="tt">[UnityEngine.Categorization.CategoryInfo]</span> attribute. For example, the following code gives the settings group the name <b>My Settings</b> and moves the group to the top of the graphics settings window.</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[<a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>.Categorization.CategoryInfo(Name = <span class="stringliteral">&quot;My Settings&quot;</span>, Order = 0)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MySettings : IRenderPipelineGraphicsSettings</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md2737"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2add-custom-graphics-setting.html">Add a setting</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

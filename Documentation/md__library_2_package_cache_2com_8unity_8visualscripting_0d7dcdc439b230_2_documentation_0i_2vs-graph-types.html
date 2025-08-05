@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Graphs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-graph-types.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Graphs </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7183"></a></p>
+<p>A graph is a Visual Scripting asset that contains a visual representation of logic in an application.</p>
+<p>Visual Scripting has two different types of graphs: Script Graphs and State Graphs. You can use either graph type in specific situations to define and change how GameObjects in an application behave. Script Graphs and State Graphs must be attached to a Script Machine or State Machine to be used in a project. For more information on Script Machines and State Machines, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-graph-machine-types.html">Script Machines and State Machines</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7184"></a>
+Script Graphs</h1>
+<p>Script Graphs control and connect specific actions and values. The actions in a Script Graph happen in a specific order. Actions can happen every frame, or when a specific event occurs.</p>
+<p><img src="images/vs-understanding-nodes-example.png" alt="An example of a Script Graph opened in the Graph window. The output trigger port from an On Update Event node connects to the input trigger port on a Set Variable node, set to Flow. A Float Literal node with a value of 2.5 connects its output port to the data input port on the Set Variable node, which sets the value of the variable Count. The output trigger port on the Set Variable node connects to the input trigger port on a Debug Log node. The data output port on the Set Variable node connects to the A input port on a generic Add Inputs node. An Integer Literal node with a value of 1 connects its output port to the B input port on the Add Inputs node. The data output port on the Add Inputs node connects to the Message input port on the Debug Log node." class="inline"/></p>
+<p>Visual Scripting represents the actions in a Script Graph through <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-nodes.html">nodes</a>. Connect nodes together with edges to tell your application what to do, and in what order.</p>
+<p>Script Graphs can access a large collection of nodes, which correspond to different features and functionality in the <a class="el" href="namespace_unity.html">Unity</a> Editor. Access these nodes through <a href="vs-interface-overview.md#the-fuzzy-finder">the fuzzy finder</a>.</p>
+<p>Script Graphs define the specifics of what a GameObject does while your application runs.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7185"></a>
+State Graphs</h1>
+<p>A State Graph has states and gives the logic for when your application moves between states, through connections called transitions. Use State Graphs to design AI behavior or define scene and level structures.</p>
+<p>A state is any set of behaviors that you want a GameObject to perform, represented as a Script Graph. Visual Scripting represents states in State Graphs through State nodes. A State node can link to a Script Graph with logic for your application to follow, or give another State Graph with additional transitions and State nodes.</p>
+<p><img src="images/vs-state-graph-example.png" alt="An example of a State Graph opened in the Graph window" class="inline"/></p>
+<p>States and transitions in a State Graph tell your application when to change its behavior, based on an event or after it fulfills a condition.</p>
+<p>For example, you might have an enemy character with Patrol and Chase states. The enemy character's actions can change from the actions in the Script Graph for the Patrol state to the actions for the Chase state after it detects the player character. The detection event for the enemy character triggers the transition between the two states.</p>
+<p>State Graphs don't use the fuzzy finder. They use a specific set of State nodes, which are in the Visual Scripting context menu:</p>
+<ul>
+<li>Script States contain a Script Graph. When an application triggers a Script State, Visual Scripting runs the logic in a Script State's attached Script Graph. Script States use On Enter State Event, On Update Event, and On Exit State Event nodes to control logic based on the current state.</li>
+<li>Super States contain another, nested State Graph. A Super State can help you better organize a State Graph, and reuse states and transitions across multiple graphs.</li>
+<li>Any States serve as a placeholder for any other state in a State Graph. You can use an Any State node and create a single transition to a new state, rather than create multiple transitions from other states.</li>
+<li>Transitions connect Script States, Any States, and Super States. Transitions contain Script Graphs that tell your application when to switch from one state to the next. For more information, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-transitions.html">Transitions</a>.</li>
+</ul>
+<p>You can set any Script State node or Super State node as a Start State. Any state marked as a Start State is automatically active when Visual Scripting runs a State Graph. You can also have multiple Start States in a single graph. The Super State, Start, and Script State nodes in the following example are all Start States.</p>
+<p><img src="images/vs-states-multi-start-states.png" alt="An image of a State Graph opened in the Graph window with multiple Start States, highlighted with red boxes." class="inline"/> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

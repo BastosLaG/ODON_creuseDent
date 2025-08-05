@@ -1,0 +1,6 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_runtime_debugger_1_1_runtime_debugger_open_x_r_feature =
+[
+    [ "HookGetInstanceProcAddr", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_runtime_debugger_1_1_runtime_debugger_open_x_r_feature.html#ac76c9338b4de7da46fdfd7de04367869", null ],
+    [ "cacheSize", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_runtime_debugger_1_1_runtime_debugger_open_x_r_feature.html#ace6abe28f514eb424a69ed976c2e2a99", null ],
+    [ "perThreadCacheSize", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_runtime_debugger_1_1_runtime_debugger_open_x_r_feature.html#a0126184f8345fc1fb4304ca1c2e972c4", null ]
+];

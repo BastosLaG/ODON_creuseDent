@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Optimize for dynamic update (non-physics) scenarios</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2timing-optimize-dynamic-update.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Optimize for dynamic update (non-physics) scenarios </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2322"></a></p>
+<p>If you're not working with the physics system or using <span class="tt">FixedUpdate</span>, always set the input system to process input in sync with the frame rate and <span class="tt">Update()</span> calls. This is the default setting, but to check or set this, go to <b>Project Settings</b> &gt; <b>Input System Package</b> &gt; <b>Input Settings</b>, and set <b>Update Mode</b> to <b>Process Events in Dynamic Update</b>.</p>
+<p>You can use either a Polling or Event-driven approach to read and process input each frame. You can find out more about Polling or Event-driven approaches in <a href="RespondingToActions.html">Responding To Actions</a>. Whether you choose polling or event-driven, as long as you have your Update Mode set to <b>Process Events in Dynamic Update</b>, you receive the latest events and values at the start of each frame.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2323"></a>
+Polling technique</h1>
+<p>Poll input in <span class="tt">Update</span> and use those values to control your game in <span class="tt">Update</span>. If there were multiple events after the last frame completed (for example, multiple changing position values of a continuously moving gamepad stick), polling gives you the most recently processed value which is often fine for most scenarios. This approach is often called <b>sample-and-hold</b> and is a form of down-sampling, because individual subframe information is discarded. For example, in the scenario shown in the diagram below, polling the input on frame 3 gives the value for event (<b>g</b>), while the values for events (<b>d</b>) (<b>e</b>) and (<b>f</b>) are discarded.</p>
+<p><img src="./Images/TimingInputsPerFrame.png" alt="image alt text" class="inline"/></p>
+<p>Also use <span class="tt">Update</span> to poll for discrete on/off state changes using API such as <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_WasPressedThisFrame_"><span class="tt">WasPressedThisFrame</span></a> and <b>WasReleasedThisFrame</b>.</p>
+<dl class="section note"><dt>Note</dt><dd>The input system doesn't detect multiple discrete on/off events that happen in a single frame when you use the poll driven approach. Multiple discrete on/off events might happen if your game is running at a low frame rate and a user repeatedly presses a button very rapidly, or if the user is using a type of game controller with a rapid "auto fire" mode. The polling technique also can't detect the order of multiple buttons were pressed on the same frame. Use event-driven input if you require this information.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2324"></a>
+Event-driven technique</h2>
+<p>All events that occurred since the last frame are immediately processed before the current frame's <span class="tt">Update</span>, in the order that they were received. For continuously changing values (for example, multiple changing position values of a continuously moving gamepad stick), you might receive multiple events per frame with backdated timestamps indicating when they occurred between the last frame and the start of the current frame.</p>
+<p>You can read and store input values from the input events in your event handler methods, and use those values to control your game in <span class="tt">Update</span>.</p>
+<p>For example, in the scenario shown in the previous diagram, at the start of frame 3, you receive events for (<b>d</b>), (<b>e</b>), (<b>f</b>), and (<b>g</b>) and can process all of them in your game code. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

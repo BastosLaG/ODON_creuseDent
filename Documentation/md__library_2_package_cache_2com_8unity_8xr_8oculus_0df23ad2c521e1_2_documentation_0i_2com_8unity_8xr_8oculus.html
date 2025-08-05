@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: About the Oculus XR Plugin</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8oculus_0df23ad2c521e1_2_documentation_0i_2com_8unity_8xr_8oculus.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">About the Oculus XR Plugin </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md9206"></a></p>
+<p>The Oculus XR Plugin enables you to build applications for a variety of Oculus devices including the Rift, Rift S, Quest 2, Quest Pro, Quest 3, and Quest 3S.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9207"></a>
+Supported XR plugin subsystems</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9208"></a>
+Display</h2>
+<p>The display subsystem provides stereo rendering support for the XR Plugin. It supports the following graphics APIs:</p>
+<ul>
+<li>Windows<ul>
+<li>Direct3D 11</li>
+</ul>
+</li>
+<li>Android<ul>
+<li>OpenGL ES 3.0</li>
+<li>Vulkan</li>
+</ul>
+</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9209"></a>
+Input</h2>
+<p>The input subsystem provides controller support, haptics, and tracking for the controllers and head-mounted display (HMD).</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9210"></a>
+XR Management support</h1>
+<p>Integration with XR Management isn't required to use the Oculus XR Plugin, but it provides for a simpler and easier way of using this and other Providers within <a class="el" href="namespace_unity.html">Unity</a>. The Oculus XR Plugin package ships with built-in XR Management support. For more information, refer to <a href="https://docs.unity3d.com/Packages/com.unity.xr.management@latest">XR Management Documention</a></p>
+<p>The Oculus XR Plugin integration with XR Management provides the following functionality:</p>
+<ul>
+<li><b>Runtime Settings</b> - Configure runtime settings such as rendering modes, depth buffer sharing, Dash support, etc.</li>
+<li><b>Lifecycle Management</b> - The Oculus XR Plugin ships with a default XR Plugin loader implementation that handles subsystem lifecycle such as application initialization, shutdown, pausing, and resuming.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9211"></a>
+Windows standalone settings</h2>
+<ul>
+<li><b>Stereo Rendering Mode</b> - You can select <em>Multi Pass</em> or <em>Single Pass Instanced</em> stereo rendering mode.<ul>
+<li><em>Multi Pass</em> - <a class="el" href="namespace_unity.html">Unity</a> renders each eye independently by making two passes across the scene graph. Each pass has its own eye matrices and render target. <a class="el" href="namespace_unity.html">Unity</a> draws everything twice, which includes setting the graphics state for each pass. This is a slow and simple rendering method which doesn't require any special modification to shaders.</li>
+<li><em>Single Pass Instanced</em> - <a class="el" href="namespace_unity.html">Unity</a> uses a texture array with two slices, and uses instanced draw calls (converting non-instanced draw calls to instanced versions when necessary) to direct rendering to the appropriate texture slice. Modify custom shaders for rendering in this mode. Use <a class="el" href="namespace_unity.html">Unity</a>'s [XR shader macros](xref:SinglePassInstancing) to simplify authoring custom shaders.</li>
+</ul>
+</li>
+<li><b>Shared Depth Buffer</b> - Enable or disable support for using a shared depth buffer. This allows <a class="el" href="namespace_unity.html">Unity</a> and Oculus to use a common depth buffer, which enables Oculus to composite the Oculus Dash and other utilities over the <a class="el" href="namespace_unity.html">Unity</a> application.</li>
+<li><b>Dash Support</b> - Enable or disable Dash support. This initializes the Oculus Plugin with Dash support, which enables the Oculus Dash to composite over the <a class="el" href="namespace_unity.html">Unity</a> application.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9212"></a>
+Android settings</h2>
+<ul>
+<li><b>Stereo Rendering Mode</b> - You can select <em>Multi Pass</em> or <em>Multiview</em> stereo rendering mode.<ul>
+<li><em>Multi Pass</em> - <a class="el" href="namespace_unity.html">Unity</a> renders each eye independently by making two passes across the scene graph. Each pass has its own eye matrices and render target. <a class="el" href="namespace_unity.html">Unity</a> draws everything twice, which includes setting the graphics state for each pass. This is a slow and simple rendering method which doesn't require any special modification to shaders.</li>
+<li><em>Multiview</em> - Multiview is essentially the same as the <em>Single Pass Instanced</em> option described above, except the graphics driver does the draw call conversion, requiring less work from the <a class="el" href="namespace_unity.html">Unity</a> engine. As with <em>Single Pass Instanced</em>, you need to author shaders to enable Multiview. Using <a class="el" href="namespace_unity.html">Unity</a>'s [XR shader macros](xref:SinglePassInstancing) will simplify custom shader development.</li>
+</ul>
+</li>
+<li><b>Low Overhead Mode</b> - If enabled, the GLES graphics driver will bypass validation code, potentially running faster. Disable this if you experience graphics instabilities. GLES only.</li>
+<li><b>Optimize Buffer Discards</b> - If enabled, the depth buffer contents will be discarded rather than resolved and the MSAA color buffer will be resolved rather than stored after rendering. This is a performance optimization that can possibly break rendering effects that sample from the depth buffer, such as camera stacking. Vulkan only.</li>
+<li><b>Symmetric Projection</b> - If enabled, this allows the application to render with symmetric projection matrices. This can improve GPU performance when using multiview due to more common workloads between the left and right eye. Supported when using Vulkan and Multiview.</li>
+<li><b>Subsampled Layout</b> - If enabled, the eye textures will use a subsampled layout. When using Fixed Foveated Rendering (FFR), the subsampled layout will improve app GPU performance and reduce FFR-related visual artifacts. However, this feature will slightly increase the GPU cost of Timewarp. Therefore, enable it only if the app is using FFR level 2 or higher, in which case, the app GPU performance improvement should outweigh the extra Timewarp cost. Vulkan only.</li>
+<li><b>Foveated Rendering Method</b> - Choose which foveated rendering method is used when foveation is enabled.<ul>
+<li><em>Fixed Foveated Rendering</em> - Foveates the image based on a fixed pattern.</li>
+<li><em>Eye Tracked Foveated Rendering</em> - Foveates the image using eye tracking. Only supported on Quest Pro with proper permissions and when using Vulkan, Multiview, and ARM64.</li>
+<li><em>Fixed Foveated Rendering Using <a class="el" href="namespace_unity.html">Unity</a> API For URP</em> - Foveates the image based on a fixed pattern. This option will use <a class="el" href="namespace_unity.html">Unity</a>'s common Foveated Rendering API that allows improved support for URP. This option does not work with the Built-In Render Pipeline.</li>
+<li><em>Eye Tracked Foveated Rendering Using <a class="el" href="namespace_unity.html">Unity</a> API For URP</em> - Foveates the image using eye tracking. Only supported on Quest Pro with proper permissions and when using Vulkan, Multiview, and ARM64. This option will use <a class="el" href="namespace_unity.html">Unity</a>'s common Foveated Rendering API that allows improved support for URP. This option does not work with the Built-In Renderer Pipeline.</li>
+</ul>
+</li>
+<li><b>Enable TrackingOrigin Stage Mode</b> - If you enable <b>TrackingOrigin Stage Mode</b> when the <span class="tt">TrackingOriginMode</span> of your <span class="tt">XR Origin</span> component is set to <span class="tt">Floor</span>, the tracking origin won’t change with a system recenter.</li>
+<li><b>Depth Submission</b> - Enables support for submitting the depth buffer on mobile. This enables depth testing between layers on Oculus mobile platforms.</li>
+<li><b>System Splash Screen</b> - You can add a PNG file under the Assets folder as the system splash screen image. If set, the OS will display the system splash screen as a high quality compositor layer as soon as the app is starting to launch until the app submits the first frame.</li>
+<li><b>Late Latching</b> - This feature reduces tracked rendering latency by updating head and controller poses as late as possible before rendering. Vulkan only.</li>
+<li><b>Late Latching Debug Mode</b> - Enables a debug mode for Late Latching which will print information about the Late Latching system as well as any errors. This can be used to verify that Late Latching is performing correctly. Debug mode is only active in Development builds.</li>
+<li><b>Application SpaceWarp</b> - Enables support for a frame synthesis technology to allow your application to render at half frame rate, while still delivering a smooth experience. Note that this currently requires a custom version of the URP provided by Oculus in order to work, and should not be enabled if you aren't using that customized Oculus URP package.</li>
+<li><b>Optimize Multiview Render Regions (Vulkan)</b> - If enabled, Multiview Render Regions will prevent graphics processing outside of the user’s view. Refer to <a href="https://docs.unity3d.com/6000.1/Documentation/Manual/xr-multiview-render-regions.html">Multiview Render Regions</a> to learn more about this feature.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9213"></a>
+Technical details</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9214"></a>
+Environment Depth</h2>
+<p>For Quest 3 and Quest 3S, Environment Depth can be enabled to allow the sampling of real world depth data. This can be used to have real world objects occlude virtual objects in the application. <span class="tt">GetEnvironmentDepthSupported</span> can be used to check if the device supports Environment Depth. The Environment Depth rendering system can be started by calling <span class="tt">SetupEnvironmentDepth</span>. To check if the device or platform supports cleaner hand masking, use <span class="tt">GetEnvironmentDepthHandRemovalSupported</span>. Hand masking can be turned on by setting <span class="tt">removeHands</span> in <span class="tt">EnvironmentDepthCreateParams</span> to true and passing it into <span class="tt">SetupEnvironmentDepth</span>. Hand masking can also be toggled on and off using <span class="tt">SetEnvironmentDepthHandRemoval</span>. The depth texture can then be accessed by getting the depth texture ID using <span class="tt">GetEnvironmentDepthTextureId</span> and passing the ID to <span class="tt">GetRenderTexture</span> on the XRDisplaySubsystem. The rendering can then be enabled/disabled with <span class="tt">SetEnvironmentDepthRendering</span> and to completely free resources <span class="tt">ShutdownEnvironmentDepth</span> must be called. Extra data about the depth frame can be accessed through <span class="tt">GetEnvironmentDepthFrameDesc</span>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9215"></a>
+Fixed-Foveated Rendering (FFR)</h2>
+<p>Support for <a href="https://developer.oculus.com/documentation/quest/latest/concepts/mobile-ffr/">fixed-foveated rendering</a> to provide better performance for <a href="https://en.wikipedia.org/wiki/Fillrate">pixel-fill limited</a> applications. Controlling the level of foveation is made available through APIs in the Oculus XR Plugin.</p>
+<p>When not using <a class="el" href="namespace_unity.html">Unity</a>'s common Foveated Rendering API for URP, FFR only works when rendering directly into the <em>eye textures</em> using the <a href="https://docs.unity3d.com/Manual/RenderTech-ForwardRendering.html">foward rendering mode</a>. <a href="https://docs.unity3d.com/Manual/RenderTech-DeferredShading.html"><em>Deferred rendering</em> mode</a>, which is characterized by rendering into an intermediate render texture, is not recommended for use with FFR. This situation arises often when using the default <em>Universal Rendering Pipeline</em>, which includes a blit operation by default at the end of the frame.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9216"></a>
+Unity's common Foveated Rendering API for URP</h2>
+<p>This API uses the same underlying technology as FFR and ETFR, but improves the support in URP to allow the use of foveated rendering on passes that the previous API was not able to support. This allows the use of post-processing and other options that require the use of an intermediate render target, while still allowing foveated rendering to be applied.</p>
+<p>To use foveation, the level needs to be set in a script since the default value is 0 (no foveation applied).</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">List&lt;XRDisplaySubsystem&gt; xrDisplays = <span class="keyword">new</span> List&lt;XRDisplaySubsystem&gt;();</div>
+<div class="line">SubsystemManager.GetSubsystems(xrDisplays);</div>
+<div class="line"><span class="keywordflow">if</span> (xrDisplays.Count == 1)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Set the level of foveation needed, 0 is disabled, 1 is the maximum foveation</span></div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    <span class="comment">// In the case of Meta Quest devices, only 4 levels are available:</span></div>
+<div class="line">    <span class="comment">// [0] = disabled</span></div>
+<div class="line">    <span class="comment">// (0..0.33) : Low</span></div>
+<div class="line">    <span class="comment">// [0.33, 0.66) : Medium</span></div>
+<div class="line">    <span class="comment">// [0.66, 1.0]: High</span></div>
+<div class="line">    xrDisplays[0].foveatedRenderingLevel = 1.0f;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Set this flag to request Gaze Tracking (ETFR), this will only affect Quest Pro</span></div>
+<div class="line">    <span class="comment">// and will be ignored on devices that do not have hardware to track eye movement</span></div>
+<div class="line">    <span class="comment">// or if the XR plugin settings don&#39;t allow eye tracking (ETFR)</span></div>
+<div class="line">    xrDisplays[0].foveatedRenderingFlags = XRDisplaySubsystem.FoveatedRenderingFlags.GazeAllowed;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

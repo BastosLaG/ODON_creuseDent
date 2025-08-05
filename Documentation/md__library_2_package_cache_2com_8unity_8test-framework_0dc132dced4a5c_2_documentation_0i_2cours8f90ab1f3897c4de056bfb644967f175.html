@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: 17\. Running tests programmatically</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2cours8f90ab1f3897c4de056bfb644967f175.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">17. Running tests programmatically </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5358"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5359"></a>
+Learning objectives</h1>
+<p>This section will introduce the TestRunnerApi, teaching you how to trigger a test run programmatically.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5360"></a>
+Intro and motivation</h1>
+<p>A recent new feature in the test framework is the addition of the <span class="tt">TestRunnerApi</span>. This api allows for interactions with the test framework programmatically, such as listing tests, running tests and receiving test results. <br  />
+</p>
+<p>For details and examples, see the TestRunnerApi documentation.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5361"></a>
+Exercise</h1>
+<p>The <a href="./welcome.md#import-samples">sample</a> <span class="tt">17_RunningTestsProgrammatically</span> contains a mono behavior script called <span class="tt"><a class="el" href="class_my_mono_behaviour.html">MyMonoBehaviour</a></span>, which has a property for whether it has been configured. The project also contains a scene with multiple game objects with <span class="tt"><a class="el" href="class_my_mono_behaviour.html">MyMonoBehaviour</a></span> on them. <br  />
+</p>
+<p>The task is to create a set of scene validation tests, which verifies that the scene MyScene.unity: <br  />
+</p>
+<ul>
+<li>The scene contains precisely 5 game objects with <span class="tt"><a class="el" href="class_my_mono_behaviour.html">MyMonoBehaviour</a></span> on them.</li>
+<li>All game objects with <span class="tt"><a class="el" href="class_my_mono_behaviour.html">MyMonoBehaviour</a></span> must have <span class="tt">IsConfigured</span> set to true</li>
+</ul>
+<p>After these tests have been created, implement a MenuItem, which can trigger the test run of the scene validation tests, using the <span class="tt">TestRunnerApi</span> and report the result to the console log. <br  />
+</p>
+<p>It is recommended to give your scene validation test a category, so it is easier to make a filter that runs those exclusively.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5362"></a>
+Hints</h1>
+<ul>
+<li>Remember to include the test mode in the filter provided to <span class="tt">Execute</span></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5363"></a>
+Solution</h1>
+<p>A full example solution for the excersise is available in the sample <span class="tt">17_RunningTestsProgrammatically_Solution</span>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

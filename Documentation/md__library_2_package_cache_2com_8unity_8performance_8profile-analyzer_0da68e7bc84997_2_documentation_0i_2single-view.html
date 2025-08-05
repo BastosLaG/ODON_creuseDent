@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Single view</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2single-view.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Single view </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2585"></a></p>
+<p>The <b>Single</b> view displays information about a single set of profiling data. You can use it to analyze how markers perform across frames. The view is divided into several frames, which contain information on frame timings, as well as min, max, median, mean, and lower / upper quartile values for frames, threads, and markers.</p>
+<p>For information on navigating the window, see the <a href="profile-analyzer-window.html/#window-navigation">Profile Analyzer window navigation</a> documentation.</p>
+<p><img src="images/profile-analyzer-single-view.png" alt="Single View" class="inline"/><br  />
+ <em>The Single view in the Profile Analyzer window, with some data loaded</em></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2586"></a>
+Loading data</h1>
+<p>To load data into the <b>Single</b> view, select the <b>Pull Data</b> button in the frame control pane, and the Profile Analyzer pulls in any data in the <a href="https://docs.unity3d.com/Manual/Profiler.html">Profiler</a> window. Alternatively, select the <b>Load</b> button to load Profile Analyzer (.pdata) data you have saved from a previous session.</p>
+<p>&gt;[!NOTE] &gt;If you select the <b>Load</b> option, the data must be in the Profile Analyzer .pdata format. If you have data from the Profiler in the .data file format, open it in the Profiler first, and then select the <b>Pull Data</b> button in the Profile Analyzer.</p>
+<p>For more information on how to pull data into the Profile Analyzer, see the workflow documentation on <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_document47e92b7bdc85f4c99ef1c3a1806b4494.html">Collecting and viewing data</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2587"></a>
+Marker details list</h1>
+<p>The <b>Marker details</b> pane contains a sortable list of markers with a number of useful statistics. If you select a marker in the list, the <b>Marker Summary</b> panel displays in depth information on the marker. Each marker in the list is an aggregation of all the instances of that marker, across all filtered threads and in all ranged frames.</p>
+<p>You can filter the columns in the <b>Marker details</b> to a more relevant set. This is particularly useful if you want to filter out irrelevant data when you look for <b>Time</b> or <b>Count</b> values. To filter the columns, select the <b>Marker columns</b> dropdown from the <b>Filters</b> pane. For more information on how to filter data, see the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2filtering-system.html">Filters</a> documentation.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2588"></a>
+Marker details columns and groups</h2>
+<p>By default, the <b>Marker columns</b> dropdown in the <b>Filters</b> pane has six preset column layouts that you can use to adjust the layout of the <b>Marker details</b> pane. They are:</p>
+<ul>
+<li><b>Time and count:</b> Displays information on the average timings and number of times the markers were called.</li>
+<li><b>Time:</b> Displays information on the average timings of the markers.</li>
+<li><b>Totals:</b> Displays information about the total amount of time the markers took on the whole data set.</li>
+<li><b>Time with totals:</b> Displays information about both the average and total times of the markers.</li>
+<li><b>Count totals:</b> Displays information about the total number of times the markers were called.</li>
+<li><b>Count per frame:</b> Displays information on the average total per frame the markers were called.</li>
+<li><b>Depths:</b> Displays information on where the markers are in the Hierarchy. For more information, see the documentation on Depth Slices in <a href="filtering-system.html#depth-slice">Filters pane</a>.</li>
+<li><b>Threads:</b> Displays the name of the thread that the markers appear on. For more information, see the documentation on the Thread window in <a href="filtering-system.html#thread-window">Filters pane</a>.</li>
+</ul>
+<p>You can also use the <b>Custom</b> column layout, to select your own custom mix of columns to add to the layout. To do this, right-click on the header of any column, and manually enable or disable any of the columns as necessary.</p>
+<p>The following table shows the columns that the Profile Analyzer displays when you select that layout.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"></th><th class="markdownTableHeadNone"><b>Time and count</b>  </th><th class="markdownTableHeadNone"><b>Time</b>  </th><th class="markdownTableHeadNone"><b>Totals</b>  </th><th class="markdownTableHeadNone"><b>Time with totals</b>  </th><th class="markdownTableHeadNone"><b>Count totals</b>  </th><th class="markdownTableHeadNone"><b>Count per frame</b>  </th><th class="markdownTableHeadNone"><b>Depths</b>  </th><th class="markdownTableHeadNone"><b>Threads</b>  </th><th class="markdownTableHeadNone"><b>Custom only</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Marker Name</b>  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone" colspan="2">&amp;#10003;  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Depth</b>  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone" colspan="3">&amp;#10003;  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Median</b>  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone" colspan="2">&amp;#10003;  </td><td class="markdownTableBodyNone" colspan="6">&amp;#10003;  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Median Bar</b>  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone" colspan="2">&amp;#10003;  </td><td class="markdownTableBodyNone" colspan="6">&amp;#10003;  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Mean</b>  </td><td class="markdownTableBodyNone" colspan="9">&amp;#10003;  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="9"><b>SD</b>  </td><td class="markdownTableBodyNone">&amp;#10003;  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Min</b>  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone" colspan="2">&amp;#10003;  </td><td class="markdownTableBodyNone" colspan="6">&amp;#10003;  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Max</b>  </td><td class="markdownTableBodyNone">&amp;#10003;  </td><td class="markdownTableBodyNone" colspan="2">&amp;#10003;  </td><td class="markdownTableBodyNone" colspan="6">&amp;#10003;  </td></tr>
+</table>
+<p>|**Range**|&amp;#10003;|&amp;#10003;||&amp;#10003;||||| |**Count**|&amp;#10003;||||&amp;#10003;||||| |**Count Bar**|||||&amp;#10003;||||| |**Count Frame**|&amp;#10003;|||||&amp;#10003;|||| |**Count Frame Bar**||||||&amp;#10003;|||| |**Count SD**|||||||||&amp;#10003;| |**1st**|||||||&amp;#10003;|||| |**At Median Frame**|&amp;#10003;|&amp;#10003;||&amp;#10003;|||||| |**Total**|||&amp;#10003;|&amp;#10003;|||||| |**Total Bar**|||&amp;#10003;|&amp;#10003;|||||| |**Threads**||||||||&amp;#10003;||</p>
+<p>The following table explains what each column does:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Column</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Marker Name</b>  </td><td class="markdownTableBodyNone">Displays the name of the marker.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Depth</b>  </td><td class="markdownTableBodyNone">The depth in the hierarchy that the marker appears on.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Median</b>  </td><td class="markdownTableBodyNone">The median value of the marker's time distribution.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Median Bar</b>  </td><td class="markdownTableBodyNone">A visualization of the <b>Median</b> value.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Mean</b>  </td><td class="markdownTableBodyNone">The average value of the marker's time distribution.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>SD</b>  </td><td class="markdownTableBodyNone">The standard deviation of the marker's time distribution.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Min</b>  </td><td class="markdownTableBodyNone">The minimum value of the marker's time distribution.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Max</b>  </td><td class="markdownTableBodyNone">The maximum value of the marker's time distribution.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Range</b>  </td><td class="markdownTableBodyNone">The difference between the marker's <b>Min</b> and <b>Max</b> timings.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Count</b>  </td><td class="markdownTableBodyNone">The number of times the marker was pushed / popped.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Count Bar</b>  </td><td class="markdownTableBodyNone">A visualization of the <b>Count</b> value.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Count Frame</b>  </td><td class="markdownTableBodyNone">The average number of times per frame that the marker was pushed/popped.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Count Frame Bar</b>  </td><td class="markdownTableBodyNone">A visualization of the <b>Count Frame</b> value.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Count SD</b>  </td><td class="markdownTableBodyNone">The standard deviation of <b>Count</b> value.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>1st</b>  </td><td class="markdownTableBodyNone">The frame number in which the marker first was pushed / popped.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>At Median Frame</b>  </td><td class="markdownTableBodyNone">The sum of activity for the marker in the median frame.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Total</b>  </td><td class="markdownTableBodyNone">The total time spent for this marker in all selected frames.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Total Bar</b>  </td><td class="markdownTableBodyNone">A visualization of the <b>Total</b> value.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Threads</b>  </td><td class="markdownTableBodyNone">The name of the thread that the marker appears on.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2589"></a>
+Marker Details context menu commands</h2>
+<p>If you right click on a marker in the <b>Marker Details</b> list you can control the filter and list even further.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Command</b>  </th><th class="markdownTableHeadNone"><b>Function</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Select Frames that contain this marker (within whole data set)</b>  </td><td class="markdownTableBodyNone">Select all the frames from the entire data set that contain an instance of this marker.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Select Frames that contain this marker (within current selection)</b>  </td><td class="markdownTableBodyNone">Select all the frames from a selected range of data that contain an instance of this marker.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Select All</b>  </td><td class="markdownTableBodyNone">Selects the entire data set, if you have a range of data selected.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Add to / Remove From Include Filter</b>  </td><td class="markdownTableBodyNone">Add or remove the selected marker to the <b>Include</b> filter. This filters the marker list to only markers that match.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Add to Exclude Filter</b>  </td><td class="markdownTableBodyNone">Add the selected marker to the <b>Exclude</b> filter. This removes the marker from the marker list. This is useful if you want to remove markers that are using up resources and skewing the markers that you are interested in.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Set as Parent Marker Filter</b>  </td><td class="markdownTableBodyNone">Limit the analysis to this marker and markers included below it on the callstack. For more information, see the <a href="filtering-system.html#parent-marker">Parent Marker</a> documentation on the Filters page.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Clear Parent Marker Filter</b>  </td><td class="markdownTableBodyNone">Select this to clear the marker as a parent marker filter.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Copy To Clipboard</b>  </td><td class="markdownTableBodyNone">Copies the selected value to the clipboard.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_area =
+[
+    [ "GenerateTeleportRequest", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_area.html#a3ddda9a0765b6a56e3a7e36b0bb1e4cc", null ],
+    [ "IsSelectableBy", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_area.html#af95fa408c0d5d4f079dcfb075333070d", null ]
+];

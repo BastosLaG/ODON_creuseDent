@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Custom C# node attributes reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-ce42125dc9dbdfb238818dd01748884e0.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Custom C# node attributes reference </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7052"></a></p>
+<p>You can add attributes to a node class and port variable definitions to customize the look of a Custom C# node.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7053"></a>
+Node class attributes</h1>
+<p>You can customize the titles that appear on a node, where it appears in the fuzzy finder, and its icon. Node class attributes must be placed above the node class definition in a node's C# script.</p>
+<p>Visual Scripting has 5 node class attributes:</p>
+<ul>
+<li>UnitTitle</li>
+<li>UnitShortTitle</li>
+<li>UnitSubtitle</li>
+<li>UnitCategory</li>
+<li>TypeIcon</li>
+</ul>
+<p>Usually, Visual Scripting automatically applies any changes you make to a node's class attributes after you save the C# file.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7054"></a>
+UnitTitle</h2>
+<p>&lt;img src="images/vs-my-node-custom-node-unit-title.png" alt="An image of the Graph window. The opened Script Graph has two groups that each contain a single Custom C# node: a yellow Before group and a purple After group. In the Before group, the title of the Custom C# node is "My Node." In the After group, the title of the Custom C# node is "My New Title.""/&gt;</p>
+<p>You can specify a <span class="tt">[UnitTitle]</span> to display a different title than the node's class name on the node when it appears in a Script Graph, and when you view details about the node in the Graph Inspector:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span>Unity.VisualScripting;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">[UnitTitle(<span class="stringliteral">&quot;My New Title&quot;</span>)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyNodeAfter : <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line">{</div>
+<div class="line">    ...</div>
+<div class="line"> </div>
+<div class="line">   }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_unit_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_unit.html">Unity.VisualScripting.Unit</a></div><div class="ttdef"><b>Definition</b> Unit.cs:11</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><p>The <span class="tt">[UnitTitle]</span> attribute overrides the node's class name.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7055"></a>
+UnitShortTitle</h2>
+<p>&lt;img src="images/vs-my-node-custom-node-short-title.png" alt="An image of the Graph window. The opened Script Graph has two groups that each contain a single Custom C# node: a yellow Before group and a purple After group. In the Before group, the title of the Custom C# node is "My Node." In the After group, the title of the Custom C# node is "Short Title.""/&gt;</p>
+<p>You can specify a <span class="tt">[UnitShortTitle]</span> to display a different title on the node when it appears in a Script Graph:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span>Unity.VisualScripting;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">[UnitShortTitle(<span class="stringliteral">&quot;Short Title&quot;</span>)]</div>
+<div class="line">[UnitTitle(<span class="stringliteral">&quot;My New Title&quot;</span>)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyNodeAfter : <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line">{</div>
+<div class="line">    ...</div>
+<div class="line"> </div>
+<div class="line">   }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The <span class="tt">[UnitShortTitle]</span> only appears on the node in a Script Graph. The <span class="tt">[UnitTitle]</span> or node class name still displays in the Graph Inspector.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7056"></a>
+UnitSubtitle</h2>
+<p>&lt;img src="images/vs-my-node-custom-node-subtitle.png" alt="An image of the Graph window. The opened Script Graph has two groups that each contain a single Custom C# node: a yellow Before group and a purple After group. In the Before group, the Custom C# node doesn't have a subtitle. In the After group, the Custom C# node has a subtitle of "It's a subtitle!" that displays underneath the node title."/&gt;</p>
+<p>You can add a <span class="tt">[UnitSubtitle]</span> to add a line of text below the <span class="tt">[UnitTitle]</span>, <span class="tt">[UnitShortTitle]</span>, or node class name when a node appears in a Script Graph:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span>Unity.VisualScripting;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">[UnitSubtitle(<span class="stringliteral">&quot;It&#39;s a subtitle!&quot;</span>)]</div>
+<div class="line">[UnitShortTitle(<span class="stringliteral">&quot;Short Title&quot;</span>)]</div>
+<div class="line">[UnitTitle(<span class="stringliteral">&quot;My New Title&quot;</span>)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyNodeAfter : <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line">{</div>
+<div class="line">    ...</div>
+<div class="line"> </div>
+<div class="line">   }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The <span class="tt">[UnitSubtitle]</span> doesn't appear in the Graph Inspector.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7057"></a>
+UnitCategory</h2>
+<p><img src="images/vs-my-node-custom-node-fuzzy-finder-level.png" alt="An image of the Graph window. The opened Script Graph has two groups that each contain an open fuzzy finder: a yellow Before group and a purple After group. In the Before group, the fuzzy finder displays the Custom C# node, My Node, at the end of the top level of available nodes and node categories in the fuzzy finder. In the After group, the Custom C# node, My Node, has moved to the My Nodes category." class="inline"/></p>
+<p>You can specify a <span class="tt">[UnitCategory]</span> to tell Visual Scripting where to place the node in the fuzzy finder:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span>Unity.VisualScripting;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">[<a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit_category.html">UnitCategory</a>(<span class="stringliteral">&quot;FirstLevel/SecondLevel&quot;</span>)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyNodeAfter : <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line">{</div>
+<div class="line">    ...</div>
+<div class="line"> </div>
+<div class="line">   }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_unit_category_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_unit_category.html">Unity.VisualScripting.UnitCategory</a></div><div class="ttdef"><b>Definition</b> UnitCategory.cs:10</div></div>
+</div><!-- fragment --><p>Replace <span class="tt">FirstLevel</span> with the name of the top-level category in the fuzzy finder where you want Visual Scripting to place the node. Replace <span class="tt">SecondLevel</span> with the name of a subcategory. Visual Scripting creates the categories if they don't already exist in the fuzzy finder.</p>
+<dl class="section note"><dt>Note</dt><dd>You must <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-configuration.html">regenerate your Node Library</a> for changes made to a node's <span class="tt">[UnitCategory]</span> to take effect.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7058"></a>
+TypeIcon</h2>
+<p><img src="images/vs-my-node-custom-node-type-icon.png" alt="An image of the Graph window. The opened Script Graph has two groups that each contain a single Custom C# node: a yellow Before group and a purple After group. In the Before group, the Custom C# node, My Node, displays with the standard icon for a custom node. The icon is a white rectangle with two white circles attached to the left side, and one white circle on the right, as a simplified representation of a node. In the After group, the Custom C# node has a ToggleValue icon. The ToggleValue icon has two white circles beside a rounded, hollow rectangle with a green circle at the bottom, to represent a switch or toggle." class="inline"/></p>
+<p>You can use the <span class="tt">[TypeIcon]</span> attribute to change the icon that appears on a node when it appears in a Script Graph:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span>Unity.VisualScripting;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">[TypeIcon(typeof(<a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_toggle_value.html">ToggleValue</a>))]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyNodeAfter : <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line">{</div>
+<div class="line">    ...</div>
+<div class="line"> </div>
+<div class="line">   }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_toggle_value_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_toggle_value.html">Unity.VisualScripting.ToggleValue</a></div><div class="ttdoc">Toggles between two values with on and off triggers.</div><div class="ttdef"><b>Definition</b> ToggleValue.cs:10</div></div>
+</div><!-- fragment --><p> The icon for the node changes in the Graph Inspector, too.</p>
+<dl class="section note"><dt>Note</dt><dd>You can't point to your own custom icons from this attribute. You must use an icon from the Visual Scripting icons library, which includes all <a class="el" href="namespace_unity.html">Unity</a> types.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7059"></a>
+Port attributes</h1>
+<p>Custom nodes have one mandatory port attribute and one optional port attribute: DoNotSerialize and PortLabelHidden, respectively. Port attributes must be placed above your variable declarations for each port variable in the node.</p>
+<p>Visual Scripting automatically applies any changes you make to a node's port attributes after you save the script file.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7060"></a>
+DoNotSerialize</h2>
+<p><span class="tt">[DoNotSerialize]</span> is a mandatory attribute for all ports on custom nodes. Add this attribute to avoid serialization of data that shouldn't be serialized:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span>Unity.VisualScripting;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">[UnitShortTitle(<span class="stringliteral">&quot;Short Title&quot;</span>)]</div>
+<div class="line">[UnitTitle(<span class="stringliteral">&quot;My New Title&quot;</span>)]</div>
+<div class="line">[<a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit_category.html">UnitCategory</a>(<span class="stringliteral">&quot;My Nodes&quot;</span>)]</div>
+<div class="line">[UnitSubtitle(<span class="stringliteral">&quot;It&#39;s a subtitle!&quot;</span>)]</div>
+<div class="line">[TypeIcon(typeof(Color))]</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyNodeAfter : <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line">{</div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_input.html">ControlInput</a> inputTrigger;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_output.html">ControlOutput</a> outputTrigger;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput</a> myValueA;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput</a> myValueB;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_output.html">ValueOutput</a> result;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">private</span> <span class="keywordtype">string</span> resultValue;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Definition()</div>
+<div class="line">   {</div>
+<div class="line">       ...</div>
+<div class="line">   }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_control_input_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_control_input.html">Unity.VisualScripting.ControlInput</a></div><div class="ttdef"><b>Definition</b> ControlInput.cs:9</div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_control_output_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_control_output.html">Unity.VisualScripting.ControlOutput</a></div><div class="ttdef"><b>Definition</b> ControlOutput.cs:8</div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_value_input_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_value_input.html">Unity.VisualScripting.ValueInput</a></div><div class="ttdef"><b>Definition</b> ValueInput.cs:10</div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_value_output_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_value_output.html">Unity.VisualScripting.ValueOutput</a></div><div class="ttdef"><b>Definition</b> ValueOutput.cs:8</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md7061"></a>
+PortLabelHidden</h2>
+<p><img src="images/vs-my-node-custom-node-port-labels-hidden.png" alt="An image of the Graph window. The opened Script Graph has two groups that each contain a single Custom C# node: a yellow Before group and a purple After group. In the Before group, every label for each port on the Custom C# node, My Node, displays on the node. In the After group, all labels for every port on the node are hidden and are only represented by their port type icons." class="inline"/></p>
+<p>You can add the <span class="tt">[PortLabelHidden]</span> attribute to hide the name label for any port on a node when it appears in a Script Graph:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span>Unity.VisualScripting;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">[UnitShortTitle(<span class="stringliteral">&quot;Short Title&quot;</span>)]</div>
+<div class="line">[UnitTitle(<span class="stringliteral">&quot;My New Title&quot;</span>)]</div>
+<div class="line">[<a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit_category.html">UnitCategory</a>(<span class="stringliteral">&quot;My Nodes&quot;</span>)]</div>
+<div class="line">[UnitSubtitle(<span class="stringliteral">&quot;It&#39;s a subtitle!&quot;</span>)]</div>
+<div class="line">[TypeIcon(typeof(Color))]</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyNodeAfter : <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line">{</div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   [PortLabelHidden]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_input.html">ControlInput</a> inputTrigger;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   [PortLabelHidden]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_output.html">ControlOutput</a> outputTrigger;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput</a> myValueA;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput</a> myValueB;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_output.html">ValueOutput</a> result;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">private</span> <span class="keywordtype">string</span> resultValue;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Definition()</div>
+<div class="line">   {</div>
+<div class="line">       ...</div>
+<div class="line">   }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The port's label is still visible in the Graph Inspector. Use the same name in a port's variable definition and the port's key in the <span class="tt">Definition</span> method for the node's class, as shown:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span>Unity.VisualScripting;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyNode : <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line">{</div>
+<div class="line">    ...</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize, PortLabelHidden]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput</a> myValueA;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize, PortLabelHidden]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput</a> myValueB;</div>
+<div class="line"> </div>
+<div class="line">    ...</div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Definition()</div>
+<div class="line">   {</div>
+<div class="line">       ...</div>
+<div class="line"> </div>
+<div class="line">       myValueA = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput&lt;string&gt;</a>(<span class="stringliteral">&quot;myValueA&quot;</span>, <span class="stringliteral">&quot;Hello &quot;</span>);</div>
+<div class="line">       myValueB = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput&lt;string&gt;</a>(<span class="stringliteral">&quot;myValueB&quot;</span>, String.Empty);</div>
+<div class="line"> </div>
+<div class="line">    ...</div>
+<div class="line">   }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

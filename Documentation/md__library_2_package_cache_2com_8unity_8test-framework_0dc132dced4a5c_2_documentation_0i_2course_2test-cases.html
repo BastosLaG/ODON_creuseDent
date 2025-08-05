@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: 15\. Test cases</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2course_2test-cases.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">15. Test cases </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5385"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5386"></a>
+Learning objectives</h1>
+<p>This section will cover <span class="tt">[TestCase]</span> and similar NUnit attributes and how to work with them in UnityTests.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5387"></a>
+Intro and motivation</h1>
+<p>NUnit has a few tools for parameterized tests, which can be used to specify test cases with variating parameters. This can drastically reduce the amount of repeated code and make the test cleaner to use. <br  />
+</p>
+<p>An example of a parameterized test using the <span class="tt">[TestCase]</span> attribute: <br  />
+</p>
+<div class="fragment"><div class="line">[Test]</div>
+<div class="line">[TestCase(49, &quot;a string&quot;, true)]</div>
+<div class="line">[TestCase(9, &quot;something&quot;, false)]</div>
+<div class="line">public void MyTest(int firstValue, string secondValue, bool expectedOutcome)</div>
+<div class="line">{</div>
+<div class="line"> ...</div>
+<div class="line">}  </div>
+</div><!-- fragment --><p>This will generate two tests, each with a different input to the method body. <br  />
+</p>
+<p>In addition to the <span class="tt">[TestCase]</span> attribute, NUnit also has a <span class="tt">[Values]</span> attribute, which specifies a set of values on each individual input. An example of such is: <br  />
+</p>
+<div class="fragment"><div class="line">[Test]</div>
+<div class="line">public void MyTest([Values(49, 9)]int firstValue, [Values(&quot;a string&quot;, &quot;something&quot;)]string secondValue)</div>
+<div class="line">{</div>
+<div class="line"> ...</div>
+<div class="line">}  </div>
+</div><!-- fragment --><p>When specifying multiple input parameters, they are treated as combinatorial. That means that each combination of them will be tested. For the above example, that will result in a total of 4 cases: <br  />
+</p>
+<div class="fragment"><div class="line">MyTest(49, &quot;a string&quot;)</div>
+<div class="line">MyTest(49, &quot;something&quot;)</div>
+<div class="line">MyTest(9, &quot;a string&quot;)</div>
+<div class="line">MyTest(9, &quot;something&quot;) </div>
+</div><!-- fragment --><p>This can easily explode into many combinations. The combinations might not all be valuable and would just waste time, so use this with care. <br  />
+</p>
+<p>For both the <span class="tt">[TestCase]</span> and <span class="tt">[Values]</span> attributes, there is a more dynamic version called <span class="tt">[TestCaseSource]</span> and <span class="tt">[ValueSource]</span> accordingly. These each take in a static method or array, returning a collection of objects. <br  />
+</p>
+<p>Of these 4 methods, the <span class="tt">[ValueSource]</span> attribute is currently the only one supported by <span class="tt">[UnityTest]</span>. Since this would produce combinational tests, if multiple arguments with <span class="tt">[ValueSource]</span> are provided, then it is recommended to make a test case struct, if multiple arguments are needed for the test. An example of such could look like this: <br  />
+</p>
+<div class="fragment"><div class="line">[UnityTest]</div>
+<div class="line">public IEnumerator AddAsyncCalculatesCorrectValue([ValueSource(nameof(TestCases))] TestCase testCase)</div>
+<div class="line">{</div>
+<div class="line"> ...</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">private static IEnumerable TestCases()</div>
+<div class="line">{</div>
+<div class="line"> yield return new TestCase {value1 = 4, value2 = &quot;a string&quot;};</div>
+<div class="line"> yield return new TestCase {value1 = 8, value2 = &quot;another string&quot;};</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">public struct TestCase</div>
+<div class="line">{</div>
+<div class="line"> public int value1;</div>
+<div class="line"> public string value2;</div>
+<div class="line"> </div>
+<div class="line"> public override string ToString()</div>
+<div class="line"> {</div>
+<div class="line">  return $&quot;{value1}, {value2}&quot;;</div>
+<div class="line"> }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md5388"></a>
+Exercise</h1>
+<p>In the <a href="./welcome.md#import-samples">sample</a> <span class="tt">15_TestCases</span> a class is set up with some basic math. It has two methods: <br  />
+</p>
+<ul>
+<li><span class="tt">Add</span> which takes two integers and adds them together.</li>
+<li><span class="tt">AddAsync</span> also adds two integers together, but does so asynchronously, yielding back an <span class="tt">IEnumerator</span></li>
+</ul>
+<p>The task is to add tests for the two methods. The <span class="tt">AddAsync</span> method first returns the result after a few frames, so that will be best suited for a <span class="tt">[UnityTest]</span>. Note that it is not enough to yield back the <span class="tt">IEnumerator</span>, as the test framework does not curently support nested yields. Instead, create a loop to move over each element until it's done. At each step of the while loop, let the test yield back null. <br  />
+</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5389"></a>
+Hints</h1>
+<ul>
+<li>The <span class="tt">ToString()</span> implementation in the struct is there to provide readable info in the test runner treeview. Without it, it would just show the struct name as the test argument for every case.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5390"></a>
+Solution</h1>
+<p>A solution for the exercise is available in the sample <span class="tt">15_TestCases_Solution</span>. <a class="el" href="class_tests.html">Tests</a> for both methods can be implemented as follows: <br  />
+</p>
+<div class="fragment"><div class="line">[Test]</div>
+<div class="line">[TestCase(24, 80, 104)]</div>
+<div class="line">[TestCase(10, -15, -5)]</div>
+<div class="line">[TestCase(int.MaxValue, 10, int.MinValue + 9)]</div>
+<div class="line">public void AddCalculatesCorrectValue(int valueA, int valueB, int expectedResult)</div>
+<div class="line">{</div>
+<div class="line"> var myClass = new MyClass();</div>
+<div class="line"> </div>
+<div class="line"> var result = myClass.Add(valueA, valueB);</div>
+<div class="line"> </div>
+<div class="line"> Assert.That(result, Is.EqualTo(expectedResult));</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">[UnityTest]</div>
+<div class="line">public IEnumerator AddAsyncCalculatesCorrectValue([ValueSource(nameof(AdditionCases))] AddCase addCase)</div>
+<div class="line">{</div>
+<div class="line"> var myClass = new MyClass();</div>
+<div class="line"> </div>
+<div class="line"> var enumerator = myClass.AddAsync(addCase.valueA, addCase.valueB);</div>
+<div class="line"> while (enumerator.MoveNext())</div>
+<div class="line"> {</div>
+<div class="line">  yield return null;</div>
+<div class="line"> }</div>
+<div class="line"> var result = enumerator.Current;</div>
+<div class="line"> </div>
+<div class="line"> Assert.That(result, Is.EqualTo(addCase.expectedResult));</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">private static IEnumerable AdditionCases()</div>
+<div class="line">{</div>
+<div class="line"> yield return new AddCase {valueA = 24, valueB = 80, expectedResult = 104};</div>
+<div class="line"> yield return new AddCase {valueA = 10, valueB = -15, expectedResult = -5};</div>
+<div class="line"> yield return new AddCase {valueA = int.MaxValue, valueB = 10, expectedResult = int.MinValue + 9};</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">public struct AddCase</div>
+<div class="line">{</div>
+<div class="line"> public int valueA;</div>
+<div class="line"> public int valueB;</div>
+<div class="line"> public int expectedResult;</div>
+<div class="line"> </div>
+<div class="line"> public override string ToString()</div>
+<div class="line"> {</div>
+<div class="line">  return $&quot;{valueA} + {valueB} = {expectedResult}&quot;;</div>
+<div class="line"> }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

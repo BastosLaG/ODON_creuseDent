@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Gamepad</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_gamepad.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Gamepad </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2074"></a>
+autotoc_md2074</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2075"></a>
+uid: input-system-gamepad</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2076"></a>
+Gamepad Support</h1>
+<ul>
+<li>Controls<ul>
+<li>Deadzones</li>
+</ul>
+</li>
+<li>Polling</li>
+<li>Rumble<ul>
+<li>Pausing, resuming, and stopping haptics</li>
+</ul>
+</li>
+<li>PlayStation controllers</li>
+<li>Xbox controllers</li>
+<li>Switch controllers</li>
+<li>Cursor Control</li>
+<li>Discover all connected devices</li>
+</ul>
+<p>A <a href="../api/UnityEngine.InputSystem.Gamepad.html"><span class="tt">Gamepad</span></a> is narrowly defined as a Device with two thumbsticks, a D-pad, and four face buttons. Additionally, gamepads usually have two shoulder and two trigger buttons. Most gamepads also have two buttons in the middle.</p>
+<p>A gamepad can have additional Controls, such as a gyro, which the Device can expose. However, all gamepads are guaranteed to have at least the minimum set of Controls described above.</p>
+<p>Gamepad support guarantees the correct location and functioning of Controls across platforms and hardware. For example, a PS4 DualShock controller layout should look identical regardless of which platform it is supported on. A gamepad's south face button should always be the lowermost face button.</p>
+<p>&gt;NOTE: Generic <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_h_i_d.html">HID</a> gamepads will <b>not</b> be surfaced as <a href="../api/UnityEngine.InputSystem.Gamepad.html"><span class="tt">Gamepad</span></a> devices but rather be created as generic <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_joystick.html">joysticks</a>. This is because the Input System cannot guarantee correct mapping of buttons and axes on the controller (the information is simply not available at the HID level). Only HID gamepads that are explicitly supported by the Input System (like the PS4 controller) will come out as gamepads. Note that you can set up the same kind of support for specific HID gamepads yourself (see <a href="./HID.md#creating-a-custom-device-layout">"Overriding the HID Fallback"</a>).</p>
+<p>&gt;NOTE: In case you want to use the gamepad for driving mouse input, there is a sample called <span class="tt">Gamepad Mouse Cursor</span> you can install from the package manager UI when selecting the Input System package. The sample demonstrates how to set up gamepad input to drive a virtual mouse cursor.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2077"></a>
+Controls</h2>
+<p>Every gamepad has the following Controls:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Control  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_leftStick"><span class="tt">leftStick</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.StickControl.html"><span class="tt">StickControl</span></a>  </td><td class="markdownTableBodyNone">Thumbstick on the left side of the gamepad. Deadzoned. Provides a normalized 2D motion vector. X is [-1..1] from left to right, Y is [-1..1] from bottom to top. Has up/down/left/right buttons for use like a D-pad.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_rightStick"><span class="tt">rightStick</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.StickControl.html"><span class="tt">StickControl</span></a>  </td><td class="markdownTableBodyNone">Thumbstick on the right side of the gamepad. Deadzoned. Provides a normalized 2D motion vector. X is [-1..1] from left to right, Y is [-1..1] from bottom to top. Has up/down/left/right buttons for use like a D-pad.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_dpad"><span class="tt">dpad</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.DpadControl.html"><span class="tt">DpadControl</span></a>  </td><td class="markdownTableBodyNone">The D-pad on the gamepad.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_buttonNorth"><span class="tt">buttonNorth</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The upper button of the four action buttons, which are usually located on the right side of the gamepad. Labelled "Y" on Xbox controllers and "Triangle" on PlayStation controllers.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_buttonSouth"><span class="tt">buttonSouth</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The lower button of the four action buttons, which are usually located on the right side of the gamepad. Labelled "A" on Xbox controllers and "Cross" on PlayStation controllers.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_buttonWest"><span class="tt">buttonWest</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The left button of the four action buttons, which are usually located on the right side of the gamepad. Labelled "X" on Xbox controllers and "Square" on PlayStation controllers.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_buttonEast"><span class="tt">buttonEast</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The right button of the four action buttons, which are usually located on the right side of the gamepad. Labelled "B" on Xbox controllers and "Circle" on PlayStation controllers.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_leftShoulder"><span class="tt">leftShoulder</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The left shoulder button.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_rightShoulder"><span class="tt">rightShoulder</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The right shoulder button.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_leftTrigger"><span class="tt">leftTrigger</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The left trigger button.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_rightTrigger"><span class="tt">rightTrigger</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The right trigger button.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_startButton"><span class="tt">startButton</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The start button.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_selectButton"><span class="tt">selectButton</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The select button.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_leftStickButton"><span class="tt">leftStickButton</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The button pressed when the user presses down the left stick.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_rightStickButton"><span class="tt">rightStickButton</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a>  </td><td class="markdownTableBodyNone">The button pressed when the user presses down the right stick.  </td></tr>
+</table>
+<p>&gt;<b>Note</b>: Buttons are also full floating-point axes. For example, the left and right triggers can function as buttons as well as full floating-point axes.</p>
+<p>You can also access gamepad buttons using the indexer property on <a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_Item_UnityEngine_InputSystem_LowLevel_GamepadButton_"><span class="tt">Gamepad</span></a> and the <a href="../api/UnityEngine.InputSystem.LowLevel.GamepadButton.html"><span class="tt">GamepadButton</span></a> enumeration:</p>
+<div class="fragment"><div class="line">Gamepad.current[GamepadButton.LeftShoulder];</div>
+</div><!-- fragment --><p>Gamepads have both both Xbox-style and PS4-style aliases on buttons. For example, the following four accessors all retrieve the same "north" face button:</p>
+<div class="fragment"><div class="line">Gamepad.current[GamepadButton.Y]</div>
+<div class="line">Gamepad.current[<span class="stringliteral">&quot;Y&quot;</span>]</div>
+<div class="line">Gamepad.current[GamepadButton.Triangle]</div>
+<div class="line">Gamepad.current[<span class="stringliteral">&quot;Triangle&quot;</span>]</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2078"></a>
+Deadzones</h3>
+<p>Deadzones prevent accidental input due to slight variations in where gamepad sticks come to rest at their centre point. They allow a certain small inner area where the input is considered to be zero even if it is slightly off from the zero position.</p>
+<p>To add a deadzone to gamepad stick, put a <a href="Processors.md#stick-deadzone">stick deadzone Processor</a> on the sticks, like this:</p>
+<div class="fragment"><div class="line"> {</div>
+<div class="line">    &quot;name&quot; : &quot;MyGamepad&quot;,</div>
+<div class="line">    &quot;extend&quot; : &quot;Gamepad&quot;,</div>
+<div class="line">    &quot;controls&quot; : [</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot; : &quot;leftStick&quot;,</div>
+<div class="line">            &quot;processors&quot; : &quot;stickDeadzone(min=0.125,max=0.925)&quot;</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot; : &quot;rightStick&quot;,</div>
+<div class="line">            &quot;processors&quot; : &quot;stickDeadzone(min=0.125,max=0.925)&quot;</div>
+<div class="line">        }</div>
+<div class="line">    ]</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You can do the same in your C# state structs.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   <span class="keyword">public</span> <span class="keyword">struct </span>MyDeviceState</div>
+<div class="line">   {</div>
+<div class="line">       [InputControl(processors = <span class="stringliteral">&quot;stickDeadzone(min=0.125,max=0.925)&quot;</span>]</div>
+<div class="line">       <span class="keyword">public</span> StickControl leftStick;</div>
+<div class="line">       [InputControl(processors = <span class="stringliteral">&quot;stickDeadzone(min=0.125,max=0.925)&quot;</span>]</div>
+<div class="line">       <span class="keyword">public</span> StickControl rightStick;</div>
+<div class="line">   }</div>
+</div><!-- fragment --><p>The gamepad layout already adds stick deadzone processors which take their min and max values from <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultDeadzoneMin"><span class="tt">InputSettings.defaultDeadzoneMin</span></a> and <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultDeadzoneMax"><span class="tt">InputSettings.defaultDeadzoneMax</span></a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2079"></a>
+Polling</h2>
+<p>On Windows (XInput controllers only), Universal Windows Platform (UWP), and Switch, <a class="el" href="namespace_unity.html">Unity</a> polls gamepads explicitly rather than deliver updates as events.</p>
+<p>You can control polling frequency manually. The default polling frequency is 60 Hz. Use <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_pollingFrequency"><span class="tt">InputSystem.pollingFrequency</span></a> to get or set the frequency.</p>
+<div class="fragment"><div class="line"><span class="comment">// Poll gamepads at 120 Hz.</span></div>
+<div class="line">InputSystem.pollingFrequency = 120;</div>
+</div><!-- fragment --><p>Increased frequency should lead to an increased number of events on the respective Devices. The timestamps provided on the events should roughly follow the spacing dictated by the polling frequency. Note, however, that the asynchronous background polling depends on OS thread scheduling and can vary.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2080"></a>
+Rumble</h2>
+<p>The <a href="../api/UnityEngine.InputSystem.Gamepad.html"><span class="tt">Gamepad</span></a> class implements the <a href="../api/UnityEngine.InputSystem.Haptics.IDualMotorRumble.html"><span class="tt">IDualMotorRumble</span></a> interface that allows you to control the left and right motor speeds. In most common gamepads, the left motor emits a low-frequency rumble, and the right motor emits a high-frequency rumble.</p>
+<div class="fragment"><div class="line"><span class="comment">// Rumble the  low-frequency (left) motor at 1/4 speed and the high-frequency</span></div>
+<div class="line"><span class="comment">// (right) motor at 3/4 speed.</span></div>
+<div class="line">Gamepad.current.SetMotorSpeeds(0.25f, 0.75f);</div>
+</div><!-- fragment --><p>&gt;<b>Note</b>: Only the following combinations of Devices/OSes currently support rumble: &gt;* PS4, Xbox, and Switch controllers, when connected to their respective consoles. Only supported if you install console-specific input packages in your Project. &gt;* PS4 controllers, when connected to Mac or Windows/UWP computers. &gt;* Xbox controllers on Windows.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2081"></a>
+Pausing, resuming, and stopping haptics</h3>
+<p><a href="../api/UnityEngine.InputSystem.Haptics.IDualMotorRumble.html"><span class="tt">IDualMotorRumble</span></a> is based on <a href="../api/UnityEngine.InputSystem.Haptics.IHaptics.html"><span class="tt">IHaptics</span></a>, which is the base interface for any haptics support on any Device. You can pause, resume, and reset haptic feedback using the <a href="../api/UnityEngine.InputSystem.Haptics.IHaptics.html#UnityEngine_InputSystem_Haptics_IHaptics_PauseHaptics"><span class="tt">PauseHaptics</span></a>, <a href="../api/UnityEngine.InputSystem.Haptics.IHaptics.html#UnityEngine_InputSystem_Haptics_IHaptics_ResumeHaptics"><span class="tt">ResumeHaptics</span></a>, and <a href="../api/UnityEngine.InputSystem.Haptics.IHaptics.html#UnityEngine_InputSystem_Haptics_IHaptics_ResetHaptics"><span class="tt">ResetHaptics</span></a> methods respectively.</p>
+<p>In certain situations, you might want to globally pause or stop haptics for all Devices. For example, if the player enters an in-game menu, you can pause haptics while the player is in the menu, and then resume haptics once the player resumes the game. You can use the corresponding methods on <a href="../api/UnityEngine.InputSystem.InputSystem.html"><span class="tt">InputSystem</span></a> to achieve this result. These methods work the same way as Device-specific methods, but affect all Devices:</p>
+<div class="fragment"><div class="line"><span class="comment">// Pause haptics globally.</span></div>
+<div class="line">InputSystem.PauseHaptics();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Resume haptics globally.</span></div>
+<div class="line">InputSystem.ResumeHaptics();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Stop haptics globally.</span></div>
+<div class="line">InputSystem.ResetHaptics();</div>
+</div><!-- fragment --><p>The difference between <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_PauseHaptics"><span class="tt">PauseHaptics</span></a> and <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_ResetHaptics"><span class="tt">ResetHaptics</span></a> is that the latter resets haptics playback state on each Device to its initial state, whereas <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_PauseHaptics"><span class="tt">PauseHaptics</span></a> preserves playback state in memory and only stops playback on the hardware.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2082"></a>
+PlayStation controllers</h2>
+<p>PlayStation controllers are well supported on different Devices. The Input System implements these as different derived types of the <a href="../api/UnityEngine.InputSystem.DualShock.DualShockGamepad.html"><span class="tt">DualShockGamepad</span></a> base class, which derives from <a href="../api/UnityEngine.InputSystem.Gamepad.html"><span class="tt">Gamepad</span></a>):</p>
+<ul>
+<li><a href="../api/UnityEngine.InputSystem.DualShock.DualShock3GamepadHID.html"><span class="tt">DualShock3GamepadHID</span></a>: A DualShock 3 controller connected to a desktop computer using the HID interface. Currently only supported on macOS. Doesn't support rumble.</li>
+<li><a href="../api/UnityEngine.InputSystem.DualShock.DualShock4GamepadHID.html"><span class="tt">DualShock4GamepadHID</span></a>: A DualShock 4 controller connected to a desktop computer using the HID interface. Supported on macOS, Windows, UWP, and Linux.</li>
+<li></li>
+<li><a href="../api/UnityEngine.InputSystem.DualShock.DualSenseGamepadHID.html"><span class="tt">DualSenseGamepadHID</span></a>: A DualSense controller connected to a desktop computer using the HID interface. Supported on macOS, Windows.</li>
+<li><a href="../api/UnityEngine.InputSystem.iOS.DualShock4GampadiOS.html"><span class="tt">DualShock4GampadiOS</span></a>: A DualShock 4 controller connected to an iOS Device via Bluetooth. Requires iOS 13 or higher.</li>
+<li><a href="../api/UnityEngine.InputSystem.DualShock.DualShockGamepad.html#UnityEngine_InputSystem_DualShock_DualShockGamepad_SetLightBarColor_UnityEngine_Color_"><span class="tt">SetLightBarColor(Color)</span></a>: Used to set the color of the light bar on the controller.</li>
+</ul>
+<p>Note that, due to limitations in the USB driver and/or the hardware, only one IOCTL (input/output control) command can be serviced at a time. <a href="../api/UnityEngine.InputSystem.DualShock.DualShockGamepad.html#UnityEngine_InputSystem_DualShock_DualShockGamepad_SetLightBarColor_UnityEngine_Color_"><span class="tt">SetLightBarColor(Color)</span></a> and <a href="../api/UnityEngine.InputSystem.Gamepad.html#UnityEngine_InputSystem_Gamepad_SetMotorSpeeds_System_Single_System_Single_"><span class="tt">SetMotorSpeeds(Single, Single)</span></a> functionality on Dualshock 4 is implemented using IOCTL commands, and so if either method is called in quick succession, it is likely that only the first command will successfully complete. The other commands will be dropped. If there is a need to set both lightbar color and rumble motor speeds at the same time, use the <a href="../api/UnityEngine.InputSystem.DualShock.DualShock4GamepadHID.html#UnityEngine_InputSystem_DualShock_DualShock4GamepadHID_SetMotorSpeedsAndLightBarColor_System_Single_System_Single_UnityEngine_Color_"><span class="tt">SetMotorSpeedsAndLightBarColor(Single, Single, Color)</span></a> method.</p>
+<p>&gt;<b>Note</b>: &gt;* <a class="el" href="namespace_unity.html">Unity</a> supports PlayStation controllers on WebGL in some browser and OS configurations, but treats them as basic <a href="../api/UnityEngine.InputSystem.Gamepad.html"><span class="tt">Gamepad</span></a> or <a href="../api/UnityEngine.InputSystem.Joystick.html"><span class="tt">Joystick</span></a> Devices, and doesn't support rumble or any other DualShock-specific functionality. &gt;* <a class="el" href="namespace_unity.html">Unity</a> doesn't support connecting a PlayStation controller to a desktop machine using the DualShock 4 USB Wireless Adaptor. Use USB or Bluetooth to connect it.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2083"></a>
+Xbox controllers</h2>
+<p>Xbox controllers are well supported on different Devices. The Input System implements these using the <a href="../api/UnityEngine.InputSystem.XInput.XInputController.html"><span class="tt">XInputController</span></a> class, which derives from <a href="../api/UnityEngine.InputSystem.Gamepad.html"><span class="tt">Gamepad</span></a>. On Windows and UWP, <a class="el" href="namespace_unity.html">Unity</a> uses the XInput API to connect to any type of supported XInput controller, including all Xbox One or Xbox 360-compatible controllers. These controllers are represented as an <a href="../api/UnityEngine.InputSystem.XInput.XInputController.html"><span class="tt">XInputController</span></a> instance. You can query the <a href="../api/UnityEngine.InputSystem.XInput.XInputController.html#UnityEngine_InputSystem_XInput_XInputController_subType"><span class="tt">XInputController.subType</span></a> property to get information about the type of controller (for example, a wheel or a gamepad).</p>
+<p>On other platforms <a class="el" href="namespace_unity.html">Unity</a>, uses derived classes to represent Xbox controllers:</p>
+<ul>
+<li><a href="../api/UnityEngine.InputSystem.XInput.XboxGamepadMacOS.html"><span class="tt">XboxGamepadMacOS</span></a>: Any Xbox or compatible gamepad connected to a Mac via USB using the <a href="https://github.com/360Controller/360Controller">Xbox Controller Driver for macOS</a>.</li>
+<li><a href="../api/UnityEngine.InputSystem.XInput.XboxOneGampadMacOSWireless.html"><span class="tt">XboxOneGampadMacOSWireless</span></a>: An Xbox One controller connected to a Mac via Bluetooth. Only the latest generation of Xbox One controllers supports Bluetooth. These controllers don't require any additional drivers in this scenario.</li>
+<li><a href="../api/UnityEngine.InputSystem.iOS.XboxOneGampadiOS.html"><span class="tt">XboxOneGampadiOS</span></a>: An Xbox One controller connected to an iOS Device via Bluetooth. Requires iOS 13 or higher.</li>
+</ul>
+<p>&gt;<b>Note</b>: &gt;* XInput controllers on Mac currently require the installation of the <a href="https://github.com/360Controller/360Controller">Xbox Controller Driver for macOS</a>. This driver only supports USB connections, and doesn't support wireless dongles. However, the latest generation of Xbox One controllers natively support Bluetooth. Macs natively support these controllers as HIDs without any additional drivers when connected via Bluetooth. &gt;* <a class="el" href="namespace_unity.html">Unity</a> supports Xbox controllers on WebGL in some browser and OS configurations, but treats them as basic <a href="../api/UnityEngine.InputSystem.Gamepad.html"><span class="tt">Gamepad</span></a> or <a href="../api/UnityEngine.InputSystem.Joystick.html"><span class="tt">Joystick</span></a> Devices, and doesn't support rumble or any other Xbox-specific functionality.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2084"></a>
+Switch controllers</h2>
+<p>The Input System support Switch Pro controllers on desktop computers via the <a href="../api/UnityEngine.InputSystem.Switch.SwitchProControllerHID.html"><span class="tt">SwitchProControllerHID</span></a> class, which implements basic gamepad functionality.</p>
+<p>&gt;<b>Note</b>: This support does not currently work for Switch Pro controllers connected via wired USB. Instead, the Switch Pro controller <em>must</em> be connected via Bluetooth. This is due to the controller using a prioprietary communication protocol on top of HID which does not allow treating the controller like any other HID.</p>
+<p>&gt;<b>Note</b>: Switch Joy-Cons are not currently supported on desktop.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2085"></a>
+Cursor Control</h2>
+<p>To give gamepads and joysticks control over a hardware or software cursor, you can use the <a href="../api/UnityEngine.InputSystem.UI.VirtualMouseInput.html"><span class="tt">VirtualMouseInput</span></a> component. See <a href="UISupport.md#virtual-mouse-cursor-control"><span class="tt">VirtualMouseInput</span> component</a> in the UI section of the manual.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2086"></a>
+Discover all connected devices</h2>
+<p>There are various ways to discover the currently connected devices, as shown in the code samples below.</p>
+<p>To query a list of all connected devices (does not allocate; read-only access): </p><div class="fragment"><div class="line">InputSystem.devices</div>
+</div><!-- fragment --><p>To get notified when a device is added or removed: </p><div class="fragment"><div class="line">InputSystem.onDeviceChange +=</div>
+<div class="line">    (device, change) =&gt;</div>
+<div class="line">    {</div>
+<div class="line">        if (change == InputDeviceChange.Added || change == InputDeviceChange.Removed)</div>
+<div class="line">        {</div>
+<div class="line">            Debug.Log($&quot;Device &#39;{device}&#39; was {change}&quot;);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>To find all gamepads and joysticks: </p><div class="fragment"><div class="line">var devices = InputSystem.devices;</div>
+<div class="line">for (var i = 0; i &lt; devices.Count; ++i)</div>
+<div class="line">{</div>
+<div class="line">    var device = devices[i];</div>
+<div class="line">    if (device is Joystick || device is Gamepad)</div>
+<div class="line">    {</div>
+<div class="line">        Debug.Log(&quot;Found &quot; + device);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

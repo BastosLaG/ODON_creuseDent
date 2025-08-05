@@ -1,0 +1,5 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_d4cb5cdea77474613b163609a164bd89 =
+[
+    [ "HandleTween", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_d4cb5cdea77474613b163609a164bd89.html#a07e77eb0257d8ad75e80c4504bb66762", null ],
+    [ "UpdateStateFromCompletedJob", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_d4cb5cdea77474613b163609a164bd89.html#a71d7c096bd41955f2e5ca26fac1f31e5", null ]
+];

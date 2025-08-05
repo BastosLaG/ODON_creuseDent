@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: input-readers</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2input-readers.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">input-readers </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8247"></a>
+autotoc_md8247</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8248"></a>
+uid: xri-input-readers</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8249"></a>
+Input readers</h1>
+<p>Input readers specify how a physical input, such as a button press on a controller, maps to an interaction, such as selecting or activating an interactable object.</p>
+<p><b>Interactor</b> and <b>Locomotion Provider</b> components typically have a few properties that define the input to use to trigger interactions. For example, most interactor components have <b>Select Input</b> and <b>Activate Input</b> properties in an <b>Input Configuration</b> section of their Inspectors:</p>
+<p><img src="images/reader-multiline-effective.png" alt="" class="inline"/></p>
+<p>These input properties derive from the <a href="xref:UnityEngine.XR.Interaction.Toolkit.Inputs.Readers.XRInputButtonReader"><span class="tt">XRInputButtonReader</span></a> or <a href="xref:UnityEngine.XR.Interaction.Toolkit.Inputs.Readers.XRInputValueReader"><span class="tt">XRInputValueReader</span></a> class, but differ in the type of input they support. For example, interactions like select, require a button-like input, while interactions like UI scroll require a 2-axis input, such as that from a thumbstick.</p>
+<p>The following table shows typical interactor and locomotion provider input properties by type:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Interactor and Locomotion input properties  </th><th class="markdownTableHeadLeft">Action type  </th><th class="markdownTableHeadLeft">Input reader type  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Select, Activate, UI Press, Scale Toggle, Grab Move, Teleport Mode Cancel  </td><td class="markdownTableBodyLeft">Button  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Interaction.Toolkit.Inputs.Readers.XRInputButtonReader"><span class="tt">XRInputButtonReader</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">UI Scroll, Translate, <a class="el" href="class_rotate.html">Rotate</a>, Directional, Scale Over Time, Teleport Mode, Turn, Snap Turn, Move  </td><td class="markdownTableBodyLeft">Value (2D vector)  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Interaction.Toolkit.Inputs.Readers.XRInputValueReader`1"><span class="tt">XRInputValueReader&lt;Vector2&gt;</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Scale Distance Delta  </td><td class="markdownTableBodyLeft">Value (float)  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Interaction.Toolkit.Inputs.Readers.XRInputValueReader`1"><span class="tt">XRInputValueReader&lt;float&gt;</span></a>  </td></tr>
+</table>
+<p>Refer to <a class="el" href="#configure-an-input-reader">Configure an input reader</a> for information about setting an interactor's input properties.</p>
+<dl class="section remark"><dt>Remarques</dt><dd>Previous versions of the XR Interaction Toolkit (prior to version 3) used separate <b>XR Controller</b> (Action- or Device-based) components to map user input to interactions. You now use input reader properties to map user input to interactions directly on the interactor components themselves.</dd></dl>
+<p><a class="anchor" id="configure-an-input-reader"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8250"></a>
+Configure an input reader</h2>
+<p>The input reader properties of interactor components all use similar settings in the Inspector. The primary difference between different properties is the type of input they accept, such as a button, a 2D thumbstick input, or a float value. This topic discusses the various ways you can configure input reader properties in general, but you must also take the specific characteristics of each particular interaction into account when setting up input bindings.</p>
+<dl class="section remark"><dt>Remarques</dt><dd>The XR Interaction Toolkit settings provide an <b><a href="xref:xri-settings#editor-settings">Input Reader Property Drawer Mode</a></b> setting, which changes how the input reader properties are displayed in the Inspector: <br  />
+<br  />
+<ul>
+<li><b>Compact</b> takes up the smallest amount of space in the Inspector, but hides the current input source mode inside a <b>&amp;vellip;</b> menu. This is the default mode.</li>
+<li><b>Multiline All</b> shows all possible subproperties no matter which mode you choose, which can make the Inspector harder to read but could be useful for comparing components or prefab overrides.</li>
+<li><b>Multiline Effective</b> shows an extra line for the <b>Input Source Mode</b>, but is otherwise the same as <b>Compact</b>. It only shows the subproperties relevant to the chosen mode. When you are actively editing the input reader properties while configuring your interactors, you might want to choose the <b>Multiline Effective</b> setting. The rest of the time, you might find the <b>Compact</b> setting improves the readability of the component in the Inspector as a whole.</li>
+</ul>
+</dd></dl>
+<p>The <b>Input Source Mode</b> of each input reader property determines what kind of input source you can assign to the property. The mode you choose also determines the subproperties for you to set in the Inspector. The modes include:</p>
+<ul>
+<li><b><a class="el" href="#input-action-reference">Input Action Reference</a></b>: a reference to an Input System [Action](xref:input-system-actions) defined in an [Input Action Asset](xref:input-system-action-assets).</li>
+<li><b><a class="el" href="#input-action">Input Action</a></b>: an [Action](xref:input-system-actions) that you set up and bind directly in an interactor's Inspector.</li>
+<li><b><a class="el" href="#object-reference">Object Reference</a></b>: a reference to an object that implements the <a href="xref:UnityEngine.XR.Interaction.Toolkit.Inputs.Readers.IXRInputValueReader`1"><span class="tt">IXRInputValueReader</span></a> interface. The object can be an <a href="xref:UnityEngine.XR.Interaction.Toolkit.Inputs.Readers.XRInputDeviceValueReader"><span class="tt">XRInputDeviceValueReader</span></a> ScriptableObject or a custom component on a GameObject in the scene.</li>
+<li><b>Manual Value</b>: an explicit value assigned to the property. (At runtime, you can change a manual value through a script or in the Inspector during Play mode.)</li>
+<li><b><a class="el" href="#unused">Unused</a></b>: the input property is ignored.</li>
+</ul>
+<p><a class="anchor" id="input-action-reference"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8251"></a>
+Input Action Reference</h3>
+<p>Specify a reference to an action in an Input Action asset that contains one or more bindings to physical input.</p>
+<p>An Input Action reference can be used by more than one interactor. Thus, if you have more than one interactor that can perform a given interaction, you can use an Input Action asset as the single place to define the map rather than setting the control bindings up separately for each interactor component.</p>
+<p><img src="images/reader-input-action-reference.png" alt="" class="inline"/></p>
+<p>The number of references that you can set for a property depends on the action type of the input. Properties that support button-like behavior (using <a href="xref:UnityEngine.XR.Interaction.Toolkit.Inputs.Readers.XRInputButtonReader"><span class="tt">XRInputButtonReader</span></a>) let you specify two inputs. One input is for boolean, pressed or not pressed behavior. The other input is for buttons that report a number between 0 and 1 depending on how far they are depressed, like a trigger or XR controller grip button. All other types of input reader properties take a single reference.</p>
+<p>Input Actions must be enabled at runtime. The [Input Manager](xref:xri-input-action-manager) component automatically enables the actions for all the Input Actions in the assets you add to its [Action Assets](xref:xri-input-action-manager) list. (The starter and example scenes are configured with the <a href="xref:xri-samples-starter-assets#input-actions-asset">XRI Default Input Actions</a> asset in this list by default.)</p>
+<p><a class="anchor" id="input-action"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8252"></a>
+Input Action</h3>
+<p>Add one or more bindings to a specific Interactor component.</p>
+<p>This association of input action and binding cannot be reused by other interactors. You can add more than one binding to provide alternate ways to perform an interaction.</p>
+<p><img src="images/reader-input-action.png" alt="" class="inline"/></p>
+<ul>
+<li>Gear icon: set Action Type, Processors, and Interactions properties</li>
+<li>+/- icons: add or remove bindings for the Action.</li>
+<li>Double-click a binding in the list to specify binding properties.</li>
+</ul>
+<p>The standard <b>Interactor</b> and <b>Locomotion Provider</b> components automatically enable the input actions that you specify with this input source mode.</p>
+<p>Refer to [Actions](xref:input-system-actions) for general information about Input System Actions and how to configure them. Refer to [Input Bindings](xref:input-system-action-bindings) for detailed information about configuring the bindings for an action.</p>
+<p><a class="anchor" id="object-reference"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8253"></a>
+Object Reference</h3>
+<p>Specify an object that implements the <a href="xref:UnityEngine.XR.Interaction.Toolkit.Inputs.Readers.IXRInputValueReader`1"><span class="tt">IXRInputValueReader</span></a> interface.</p>
+<p>You can implement such an object to provide custom or synthesized input.</p>
+<p><img src="images/reader-object-reference.png" alt="" class="inline"/></p>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="#legacy-xr-input-readers">Legacy XR Input Reader</a> sample provides a set of assets that you can use with the <b>Object Reference</b> source mode get input directly from a specific hardware device control, such as the <b>X</b> button of the left-hand controller. These assets are designed to replace the <b>XR Controller (Device-based)</b> components used in earlier versions of the XR Interaction Toolkit.</dd></dl>
+<p><a class="anchor" id="manual"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8254"></a>
+Manual Value</h3>
+<p>Manually specify the input.</p>
+<p>You can specify a value in the Inspector to set a permanent value for the input. You can change the input value at runtime with a script or in the Inspector during Play mode.</p>
+<p><img src="images/reader-manual-value.png" alt="" class="inline"/></p>
+<p>The properties that you can set for a manual value depend on the action type of the input. For example, a button-type input, like <b>Select Input</b>, has both a binary, on-or-off value and a numerical value with a range of 0 to 1, because some controller buttons, like a trigger, support both a value for on and off and a value indicating how far it is depressed. In contrast, a <b>UI Scroll Input</b> has a 2D vector setting to correspond with the 2-axis thumbstick input needed to scroll vertically and horizontally.</p>
+<p><a class="anchor" id="unused"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8255"></a>
+Unused</h3>
+<p>Ignore the property.</p>
+<p>If an interactor is never used for a given type of input, then set the source mode to <b>Unused</b> to avoid the small performance costs associated with checking that input.</p>
+<p><img src="images/reader-unused.png" alt="" class="inline"/></p>
+<p><a class="anchor" id="legacy-xr-input-readers"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8256"></a>
+Legacy XR input readers</h2>
+<p>The XR Interaction Toolkit provides a set of input value reader assets in the [Legacy XR Input Readers](xref:xri-samples-legacy-xr-input-readers) sample. These assets are ScriptableObjects that implement the <a href="xref:UnityEngine.XR.Interaction.Toolkit.Inputs.Readers.IXRInputValueReader`1"><span class="tt">IXRInputValueReader</span></a> interface and are configured with direct bindings to common XR controls. If you are updating a project that used the <b>XR Controller (Device-based)</b> component for input, you can use these assets to specify the input to use for each interaction or locomotion input:</p>
+<ol type="1">
+<li>Import the <a href="xref:xri-samples-legacy-xr-input-readers#import">Legacy XR Input Readers</a> sample.</li>
+<li>Locate the input reader property to change. The input reader properties that replace the <b>XR Controller</b> properties are now on the [Interactor](xref:xri-interactor-components) and [Locomotion Provider](xref:xri-locomotion-providers) components.</li>
+<li>Set the <b>Input Source Mode</b> of the input reader property to <b>Object Reference</b>. The mode is set using a dropdown inside a <b>&amp;vellip;</b> menu in the default Compact drawing setting.</li>
+<li>Assign the appropriate Legacy XR Input Reader asset to the <b>Object Reference</b>. (You can drag the asset onto the field or click the <b>Object Picker</b> icon to open the <b>Select Object</b> dialog).</li>
+<li>Repeat for each interactor and locomotion provider.</li>
+</ol>
+<p><img src="images/legacy-ir-example.png" alt="Example use of legacy input reader asset" class="inline"/> <br  />
+<em>The <b>Left_Primary2DAxis</b> legacy input reader asset assigned to the <b>Left Hand Turn Input</b> property of a <b>Continuous Turn Provider</b> component</em> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

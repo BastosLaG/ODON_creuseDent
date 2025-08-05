@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Create a new state</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-state.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Create a new state </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7103"></a></p>
+<p>You can create three types of State nodes in a State Graph: Script States, Any States, and Super States. For more information on the types of State nodes, see State Graphs in <a href="vs-graph-types.md#state-graphs">Graphs</a>.</p>
+<p>You can also add a <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-sticky-notes.html">Sticky Note</a> to add comments to a graph.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7104"></a>
+Create a Script State</h1>
+<p>To create a new blank Script State:</p>
+<ol>
+<li>
+<p class="startli"></p>
+<p class="interli">[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-state-menu.html">vs-open-state-menu</a>]</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Select <b>Create Script State</b>. <br  />
+Visual Scripting creates a new Script State node.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Open the <a href="vs-interface-overview.md#the-graph-inspector">Graph Inspector</a>.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">In the Graph Inspector, choose a source for the Script State node:</p>
+<ul>
+<li>
+<p class="startli"></p>
+<p class="interli"><b>Embed</b>: The graph only exists on the Script State node. You can only modify the graph from the node in its parent State Graph.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli"><b>Graph</b>: The graph exists in a separate file. You can modify the graph outside of its parent State Graph and reuse the graph in other areas of your application.</p>
+<p class="endli"></p>
+</li>
+</ul>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">If you chose <b>Graph</b>:</p>
+<ol type="a">
+<li>
+<p class="startli"></p>
+<p class="interli">Select <b>New</b>.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Enter a name for the graph file.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Choose where you want to save the new graph.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Select <b>Save</b>.</p>
+<p class="endli"></p>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="images/vs-blank-graph-script-state-example.png" alt="An image of a State Graph with a new blank Script State node." class="inline"/></p>
+<p>To create a Script State from an existing Script Graph:</p>
+<ol>
+<li>
+<p class="startli"></p>
+<p class="interli">[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-state-menu.html">vs-open-state-menu</a>]</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Select <b>Create Script State</b>. <br  />
+Visual Scripting creates a new Script State node.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Open the <a href="vs-interface-overview.md#the-graph-inspector">Graph Inspector</a>.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">In the Graph Inspector, set the source for the Script State node to <b>Graph</b>.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Do one of the following:</p>
+<ul>
+<li>
+<p class="startli"></p>
+<p class="interli">Select the object picker (circle icon) and choose a compatible Script Graph from your project.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Click and drag a Script Graph file from your Project window and release on the <b>Graph</b> field.</p>
+<p class="endli"></p>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="images/vs-existing-graph-example-script-state.png" alt="An image of a State Graph with a Script State node with an existing Script Graph." class="inline"/></p>
+<dl class="section remark"><dt>Remarques</dt><dd>Click and drag the Script Graph from your Project window into the Graph Editor to automatically create a Script State node.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7105"></a>
+Create an Any State</h1>
+<p>To create a new Any State node:</p>
+<ol type="1">
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-state-menu.html">vs-open-state-menu</a>]</li>
+<li>Select <b>Create Any State</b>.</li>
+</ol>
+<p><img src="images/vs-states-any-state-node.png" alt="An image of a State Graph with a new Any State node" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7106"></a>
+Create a Super State</h1>
+<p>To create a new blank Super State:</p>
+<ol>
+<li>
+<p class="startli"></p>
+<p class="interli">[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-state-menu.html">vs-open-state-menu</a>]</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Select <b>Create Super State</b>. <br  />
+Visual Scripting creates a new Super State node.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Open the <a href="vs-interface-overview.md#the-graph-inspector">Graph Inspector</a>.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">In the Graph Inspector, choose a source for the Super State node:</p>
+<ul>
+<li>
+<p class="startli"></p>
+<p class="interli"><b>Embed</b>: The graph only exists on the Super State node. You can only modify the graph from the node in its parent State Graph.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli"><b>Graph</b>: The graph exists in a separate file. You can modify the graph outside of its parent State Graph and reuse the graph in other areas of your application.</p>
+<p class="endli"></p>
+</li>
+</ul>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">If you chose <b>Graph</b>:</p>
+<ol type="a">
+<li>
+<p class="startli"></p>
+<p class="interli">Select <b>New</b>.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Enter a name for the graph file.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Choose where you want to save the new graph.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Select <b>Save</b>.</p>
+<p class="endli"></p>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="images/vs-blank-graph-super-state-example.png" alt="An image of a State Graph with a new blank Super State node." class="inline"/></p>
+<p>To create a Super State from an existing State Graph:</p>
+<ol>
+<li>
+<p class="startli"></p>
+<p class="interli">[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-state-menu.html">vs-open-state-menu</a>]</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Select <b>Create Super State</b>. <br  />
+Visual Scripting creates a new Super State node.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Open the <a href="vs-interface-overview.md#the-graph-inspector">Graph Inspector</a>.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">In the Graph Inspector, set the source for the Super State node to <b>Graph</b>.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Do one of the following:</p>
+<ul>
+<li>
+<p class="startli"></p>
+<p class="interli">Select the object picker (circle icon) and choose a compatible State Graph from your project.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli"></p>
+<p class="interli">Click and drag a State Graph file from your Project window and release on the <b>Graph</b> field.</p>
+<p class="endli"></p>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="images/vs-existing-graph-example-super-state.png" alt="An image of a State Graph with a Super State node with an existing State Graph." class="inline"/></p>
+<dl class="section remark"><dt>Remarques</dt><dd>Click and drag the State Graph from your Project window into the Graph Editor to automatically create a Super State node. </dd></dl>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

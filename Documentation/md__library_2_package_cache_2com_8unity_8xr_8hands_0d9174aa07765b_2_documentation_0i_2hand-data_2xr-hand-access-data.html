@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: xr-hand-access-data</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8hands_0d9174aa07765b_2_documentation_0i_2hand-data_2xr-hand-access-data.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">xr-hand-access-data </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md7710"></a>
+autotoc_md7710</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7711"></a>
+uid: xrhands-access-data</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7712"></a>
+Access hand data from Unity components in the scene</h1>
+<p>Access hand-tracking data from <a class="el" href="namespace_unity.html">Unity</a> components in the scene.</p>
+<p>The <a href="xref:UnityEngine.XR.Hands.XRHandTrackingEvents">XRHandTrackingEvents</a> component can be added to a GameObject in the scene to subscribe to hand-tracking events for a particular hand chosen by the Handedness property. This component subscribes to the <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem">XRHandSubsystem</a> and dispatches events when the hand data is updated. Callbacks to these events can either be added via script, or from the Inspector window.</p>
+<p>There are also standard components to drive a Skinned Mesh Renderer component and its skeleton from these events which is outlined in the [Hand Visuals](xref:xrhands-visuals) section.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7713"></a>
+Access hand data from the XR Hand Subsystem</h1>
+<p>Access hand tracking data from the <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem">XRHandSubsystem</a>.</p>
+<p>The <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem">XRHandSubsystem</a> updates hands twice per frame. The first update occurs as close as possible to the frame [Update](xref:ExecutionOrder) event. Use the data in this update to perform game logic, such as interactions, that depend on the hand data. The second update occurs just before rendering, as close as possible to the <a href="https://docs.unity3d.com/ScriptReference/Application-onBeforeRender.html">Application.onBeforeRender</a> event. Use the data in this event to position game objects or other visual representations of the hands. This second update provides the lowest latency between hand motion and rendering.</p>
+<p>The best way to access the data is through the <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.updatedHands">updatedHands</a> callback, which is dispatched twice a frame when the hand data is updated. Getting the data in response to the callback provides the lowest latency and guarantees that you are using the latest data. Refer to <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_2performance-settings.html#subscribe">Subscribe to hand update events</a> for more information.</p>
+<p>You can also access <a href="xref:UnityEngine.XR.Hands.XRHand">XRHand</a> objects directly from the <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem">XRHandSubsystem</a> without waiting for the <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.updatedHands">updatedHands</a> callback to be invoked. The <a href="xref:UnityEngine.XR.Hands.XRHand">XRHand</a> objects reflect the data as of the latest successful update event. This might be from a previous frame.</p>
+<dl class="section note"><dt>Note</dt><dd>The <span class="tt">XRHandSubsystem</span> does not supply data to the <a class="el" href="namespace_unity_engine.html">UnityEngine</a> <a href="https://docs.unity3d.com/ScriptReference/XR.Hand.html">XR.Hand</a> or <a href="https://docs.unity3d.com/ScriptReference/XR.Bone.html">XR.Bone</a> structs.</dd></dl>
+<p><a class="anchor" id="get-instance"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7714"></a>
+Get the XRHandSubsystem instance</h2>
+<p>Get the hand subsystem from the active XR loader using <a href="https://docs.unity3d.com/ScriptReference/SubsystemManager.GetSubsystems.html"><span class="tt">SubsystemManager.GetSubsystems</span></a>:</p>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">using System.Collections.Generic;</div>
+<div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.XR.Hands;</div>
+<div class="line"> </div>
+<div class="line">// ...</div>
+<div class="line"> </div>
+<div class="line">var handSubsystems = new List&lt;XRHandSubsystem&gt;();</div>
+<div class="line">SubsystemManager.GetSubsystems(handSubsystems);</div>
+</div><!-- fragment --><p>You can get the subsystem after the XR system has finished initialization. By default, initialization occurs before any MonoBehaviour [Start](xref:ExecutionOrder) methods are called. However, if your project initializes XR manually, you must wait for your code to finish loading the subsystem.</p>
+<p><a class="anchor" id="subscribe"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7715"></a>
+Subscribe to hand update events</h2>
+<p>To subscribe to the hand update event, assign an <a href="xref:System.Action">Action</a> delegate function to the <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.updatedHands">XRHandSubsystem.updatedHands</a> property. When a hand update occurs, the <span class="tt">XRHandSubsystem</span> calls your delegate function.</p>
+<p>Use the <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.updatedHands">updateType</a> parameter to determine whether the update event is "Dynamic" which occurs near the MonoBehaviour <span class="tt">Update</span> event, or "BeforeRender" which occurs just before rendering begins.</p>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">using System.Collections.Generic;</div>
+<div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.XR.Hands;</div>
+<div class="line"> </div>
+<div class="line">public class HandsExample : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    XRHandSubsystem m_HandSubsystem;</div>
+<div class="line"> </div>
+<div class="line">    void Start()</div>
+<div class="line">    {</div>
+<div class="line">        var handSubsystems = new List&lt;XRHandSubsystem&gt;();</div>
+<div class="line">        SubsystemManager.GetSubsystems(handSubsystems);</div>
+<div class="line"> </div>
+<div class="line">        for (var i = 0; i &lt; handSubsystems.Count; ++i)</div>
+<div class="line">        {</div>
+<div class="line">            var handSubsystem = handSubsystems[i];</div>
+<div class="line">            if (handSubsystem.running)</div>
+<div class="line">            {</div>
+<div class="line">                m_HandSubsystem = handSubsystem;</div>
+<div class="line">                break;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        if (m_HandSubsystem != null)</div>
+<div class="line">            m_HandSubsystem.updatedHands += OnUpdatedHands;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    void OnUpdatedHands(XRHandSubsystem subsystem,</div>
+<div class="line">        XRHandSubsystem.UpdateSuccessFlags updateSuccessFlags,</div>
+<div class="line">        XRHandSubsystem.UpdateType updateType)</div>
+<div class="line">    {</div>
+<div class="line">        switch (updateType)</div>
+<div class="line">        {</div>
+<div class="line">            case XRHandSubsystem.UpdateType.Dynamic:</div>
+<div class="line">                // Update game logic that uses hand data</div>
+<div class="line">                break;</div>
+<div class="line">            case XRHandSubsystem.UpdateType.BeforeRender:</div>
+<div class="line">                // Update visual objects that use hand data</div>
+<div class="line">                break;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>For a complete code example including how to handle late initialization, refer to the <span class="tt">HandVisualizer</span> component in the <a href="xref:xrhands-manual#samples">HandVisualizer sample</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7716"></a>
+Get joint data</h2>
+<p>Get the data for individual joints with the <a href="xref:UnityEngine.XR.Hands.XRHand.GetJoint*">XRHand.GetJoint</a> method, passing in the index of the joint. This method returns an <a href="xref:UnityEngine.XR.Hands.XRHandJoint">XRHandJoint</a> object that contains the latest data for a joint.</p>
+<p>The joints of the hand are indexed by the <a href="xref:UnityEngine.XR.Hands.XRHandJointID">XRHandJointID</a> enum. You can iterate through the list of joints in a for loop:</p>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">for(var i = XRHandJointID.BeginMarker.ToIndex();</div>
+<div class="line">        i &lt; XRHandJointID.EndMarker.ToIndex();</div>
+<div class="line">        i++)</div>
+<div class="line">{</div>
+<div class="line">    var trackingData = hand.GetJoint(XRHandJointIDUtility.FromIndex(i));</div>
+<div class="line"> </div>
+<div class="line">    if (trackingData.TryGetPose(out Pose pose))</div>
+<div class="line">    {</div>
+<div class="line">        // displayTransform is some GameObject&#39;s Transform component</div>
+<div class="line">        displayTransform.localPosition = pose.position;</div>
+<div class="line">        displayTransform.localRotation = pose.rotation;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Note that some or all of the data for a joint might not be successfully tracked in a given update. The TryGet functions of the <a href="xref:UnityEngine.XR.Hands.XRHandJoint">XRHandJoint</a> object return false if the data they access is unavailable. You can also use the <a href="xref:UnityEngine.XR.Hands.XRHandJoint.trackingState">XRHandJoint.trackingState</a> flags to determine whether the data is valid or not. Refer to <a class="el" href="#check-data-validity">Check data validity</a> for more information.</p>
+<p>In addition, the hand data plug-in providing the hand data might not support every joint in the <a href="xref:UnityEngine.XR.Hands.XRHandJointID">XRHandJointID</a> list. The TryGet functions of an unsupported joint always return false and the <a href="xref:UnityEngine.XR.Hands.XRHandJoint.trackingState">trackingState</a> has the <a href="xref:UnityEngine.XR.Hands.XRHandJointTrackingState.WillNeverBeValid">WillNeverBeValid</a> flag set. Refer to <a class="el" href="#joint-layout">Get provider data support</a> for more information.</p>
+<dl class="section note"><dt>Note</dt><dd>The XRHandSubsystem stores the data associated with each joint in an internal native array and updates the elements in place when new hand data becomes available. If you make a copy of an <a href="xref:UnityEngine.XR.Hands.XRHand">XRHand</a> object, the copy still points to the original native array. To take a snapshot of the joint data, you must copy the individual XRHandJoint objects at the desired point in time.</dd></dl>
+<p><a class="anchor" id="check-data-validity"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7717"></a>
+Check data validity</h2>
+<p>Hand data can be unreliable for a variety of reasons. A hand or part of a hand might be occluded or out of sensor range. The provider plug-in supplying the data might not support every tracked point or might not calculate certain aspects of the data, such as velocity. Before you use the hand data, you should make sure that it is valid.</p>
+<p>The XR Hands API provides several APIs that you can use to check data validity.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">API  </th><th class="markdownTableHeadLeft">Purpose  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.jointsInLayout">XRHandSubsystem.jointsInLayout</a>  </td><td class="markdownTableBodyLeft">Indicates which joints are supported by the current hand data provider. You can use this property before the <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem">XRHandSystem</a> is loaded or initialized.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.trackingAcquired">XRHandSubsystem.trackingAcquired</a>  </td><td class="markdownTableBodyLeft">A callback function invoked when the system starts tracking a hand.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.trackingLost">XRHandSubsystem.trackingLost</a>  </td><td class="markdownTableBodyLeft">A callback function invoked when tracking of a hand is lost.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.updateSuccessFlags">XRHandSubsystem.updateSuccessFlags</a>  </td><td class="markdownTableBodyLeft">Flags describing which types of data are available in the most recent update. These flags apply to the <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.rightHand">XRHandSubsystem.rightHand</a> and <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.leftHand">XRHandSubsystem.leftHand</a> properties.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHand.isTracked">XRHand.isTracked</a>  </td><td class="markdownTableBodyLeft">Indicates whether the user's corresponding hand is currently being tracked by the system.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandJoint.trackingState">XRHandJoint.trackingState</a>  </td><td class="markdownTableBodyLeft">Indicates which types of data in the joint are valid. A specific type of data might be invalid because the system could not determine the value in the current update or because the hand data provider does not support that type of data.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandJoint#methods">XRHandJoint TryGet functions</a>  </td><td class="markdownTableBodyLeft">The <a href="xref:UnityEngine.XR.Hands.XRHandJoint">XRHandJoint</a> object uses the "TryGet" pattern to provide access to a specific type of data for a joint, such as the pose or a velocity. These functions return false if the corresponding type of data is invalid for the joint.  </td></tr>
+</table>
+<p><a class="anchor" id="joint-layout"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7718"></a>
+Get supported joints array</h2>
+<p>The <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.jointsInLayout">XRHandSubsystem.jointsInLayout</a> is an array of boolean values that indicate which joints the current hand data provider supports. The array contains a value for each joint defined by the <a href="xref:UnityEngine.XR.Hands.XRHandJointID">XRHandJointID</a> enumeration.</p>
+<p>The following example uses the <span class="tt">jointsInLayout</span> array to instantiate a prefab for each supported joint, which are stored in a dictionary keyed by the joint ID so that they can be updated when new hand data is available:</p>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">Dictionary&lt;XRHandJointID, Transform&gt; CreateHandDisplay(</div>
+<div class="line">            GameObject jointPrefab,</div>
+<div class="line">            Transform sceneParent,</div>
+<div class="line">            XRHandSubsystem handSubsystem)</div>
+<div class="line">{</div>
+<div class="line">    var displayObjects = new Dictionary&lt;XRHandJointID, Transform&gt;();</div>
+<div class="line"> </div>
+<div class="line">    for(var i = XRHandJointID.BeginMarker.ToIndex();</div>
+<div class="line">            i &lt; XRHandJointID.EndMarker.ToIndex();</div>
+<div class="line">            i++)</div>
+<div class="line">    {</div>
+<div class="line">        if (handSubsystem.jointsInLayout[i])</div>
+<div class="line">        {</div>
+<div class="line">            XRHandJointID jointID = XRHandJointIDUtility.FromIndex(i);</div>
+<div class="line">            var go = Instantiate(jointPrefab, sceneParent);</div>
+<div class="line">            go.name = jointID.ToString();</div>
+<div class="line">            displayObjects.Add(jointID, go.transform);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    return displayObjects;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>With this dictionary, you could update the transforms of these game objects when a hand update is available:</p>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">void UpdateJointTransforms(XRHand hand,</div>
+<div class="line">         Dictionary&lt;XRHandJointID, Transform&gt; displayObjects)</div>
+<div class="line">{</div>
+<div class="line">    foreach (var joint in displayObjects)</div>
+<div class="line">    {</div>
+<div class="line">        var trackingData = hand.GetJoint(joint.Key);</div>
+<div class="line">        var displayTransform = joint.Value;</div>
+<div class="line">        if (trackingData.TryGetPose(out Pose pose))</div>
+<div class="line">        {</div>
+<div class="line">            displayTransform.localPosition = pose.position;</div>
+<div class="line">            displayTransform.localRotation = pose.rotation;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

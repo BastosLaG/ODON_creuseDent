@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Custom allocator overview</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2allocator-custom-define.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Custom allocator overview </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1380"></a></p>
+<p>You can use a custom allocator for specific memory allocation needs. To create a custom allocator, it must contain an allocator handle of type <a href="xref:Unity.Collections.AllocatorManager.AllocatorHandle"><span class="tt">AllocatorManager.AllocatorHandle</span></a> and implement the interface, <a href="xref:Unity.Collections.AllocatorManager.IAllocator"><span class="tt">AllocatorManager.IAllocator</span></a>. After you create a custom allocator, you need to register it in a global allocator table in <a href="xref:Unity.Collections.AllocatorManager"><span class="tt">AllocatorManager</span></a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1381"></a>
+Add the AllocatorManager.AllocatorHandle type to the custom allocator</h1>
+<p>A custom allocator must contain an allocator handle of type <a href="xref:Unity.Collections.AllocatorManager.AllocatorHandle"><span class="tt">AllocatorManager.AllocatorHandle</span></a>. An allocator handle includes the following:</p>
+<ul>
+<li><span class="tt">Version</span>: A 2 byte unsigned version number. Only the lower 15 bits are valid.</li>
+<li><span class="tt">Index</span>: A 2 byte unsigned index of the global allocator table obtained during registration.</li>
+<li>Method to add a safety handle to the list of child safety handles of the allocator handle.</li>
+<li>Method to add a child allocator to the list of child allocators of the allocator handle.</li>
+<li>A rewind method to invalidate and unregister all the child allocators, invalidate all the child safety handles of the allocator handle, and increment the allocator handle' <span class="tt">Version</span> and <span class="tt">OfficialVersion</span>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1382"></a>
+Implement AllocatorManager.IAllocator interface</h1>
+<p>To define a custom allocator, you must implement the interface <a href="xref:Unity.Collections.AllocatorManager.IAllocator"><span class="tt">AllocatorManager.IAllocator</span></a> which includes:</p>
+<ul>
+<li><a href="xref:Unity.Collections.AllocatorManager.IAllocator.Function"><span class="tt">Function</span></a>: A property that gets the allocator function of delegate <a href="xref:Unity.Collections.AllocatorManager.TryFunction"><span class="tt">TryFunction</span></a>. The allocator function can allocate, deallocate, and reallocate memory.</li>
+<li><a href="xref:Unity.Collections.AllocatorManager.IAllocator.Try(Unity.Collections.AllocatorManager.Block@)"><span class="tt">Try</span></a>: A method that the allocator function invokes to allocate, deallocate, or reallocate memory.</li>
+<li><a href="xref:Unity.Collections.AllocatorManager.IAllocator.Handle"><span class="tt">Handle</span></a>: A property that gets and sets the allocator handle which is of type <a href="xref:Unity.Collections.AllocatorManager.AllocatorHandle"><span class="tt">AllocatorManager.AllocatorHandle</span></a>.</li>
+<li><a href="xref:Unity.Collections.AllocatorManager.IAllocator.ToAllocator"><span class="tt">ToAllocator</span></a>: A property that casts the allocator handle index to the enum <span class="tt">Allocator</span>.</li>
+<li><a href="xref:Unity.Collections.AllocatorManager.IAllocator.IsCustomAllocator"><span class="tt">IsCustomAllocator</span></a>: A property that checks whether the allocator is a custom allocator. An allocator is a custom allocator if its handle <span class="tt">Index</span> is larger or equal to <a href="xref:Unity.Collections.AllocatorManager.FirstUserIndex"><span class="tt">AllocatorManager.FirstUserIndex</span></a>.</li>
+<li><a href="xref:Unity.Collections.AllocatorManager.AllocatorHandle.IsAutoDispose"><span class="tt">IsAutoDispose</span></a>: A property that checks whether the allocator is able to dispose individual allocations. True if disposing an individual allocation is a no-op.</li>
+</ul>
+<p>Because <span class="tt">AllocatorManager.IAllocator</span> implements <span class="tt">IDisposable</span>, your custom allocator must implement the <span class="tt">Dispose</span> method.</p>
+<p>The following is an example of how to set up the <span class="tt">IAllocator</span> interface and its required properties except the <span class="tt">Try</span> and <span class="tt">AllocatorFunction</span> method:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="comment">// A custom allocator must implement AllocatorManager.IAllocator interface</span></div>
+<div class="line">[BurstCompile(CompileSynchronously = <span class="keyword">true</span>)]</div>
+<div class="line">internal <span class="keyword">struct </span>ExampleCustomAllocator : AllocatorManager.IAllocator</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// A custom allocator must contain AllocatorManager.AllocatorHandle</span></div>
+<div class="line">    AllocatorManager.AllocatorHandle m_handle;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Implement the Function property required by IAllocator interface</span></div>
+<div class="line">    <span class="keyword">public</span> AllocatorManager.TryFunction Function =&gt; AllocatorFunction;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Implement the Handle property required by IAllocator interface</span></div>
+<div class="line">    <span class="keyword">public</span> AllocatorManager.AllocatorHandle Handle { get { <span class="keywordflow">return</span> m_handle; } set { m_handle = value; } }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Implement the ToAllocator property required by IAllocator interface</span></div>
+<div class="line">    <span class="keyword">public</span> Allocator ToAllocator { get { <span class="keywordflow">return</span> m_handle.ToAllocator; } }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Implement the IsCustomAllocator property required by IAllocator interface</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">bool</span> IsCustomAllocator { get { <span class="keywordflow">return</span> m_handle.IsCustomAllocator; } }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Implement the IsAutoDispose property required by IAllocator interface</span></div>
+<div class="line">    <span class="comment">// Allocations made by this example allocator are not automatically disposed.</span></div>
+<div class="line">    <span class="comment">// This implementation can be skipped because the default implementation of</span></div>
+<div class="line">    <span class="comment">// this property is false.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">bool</span> IsAutoDispose { get { <span class="keywordflow">return</span> <span class="keyword">false</span>; } }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Implement the Dispose method required by IDisposable interface because</span></div>
+<div class="line">    <span class="comment">// AllocatorManager.IAllocator implements IDisposable</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> Dispose()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Make sure no memory leaks</span></div>
+<div class="line">        Assert.AreEqual(0, m_allocationCount);</div>
+<div class="line"> </div>
+<div class="line">        m_handle.Dispose();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The <span class="tt">Try</span> method tells a custom allocator how to allocate or deallocate memory. The following is an example of the<span class="tt">Try</span> method where a custom allocator allocates memory from <span class="tt">Allocator.Persistant</span>, initializes the allocated memory with a user configured value, and increments an allocation count. The custom allocator also decrements the allocation count when deallocating the allocated memory.</p>
+<p>[!code-cs<a href="../Unity.Collections.Tests/AllocatorCustomTests.cs#allocator-custom-try">Try method of allocate/deallocate memory</a>]</p>
+<p>Example method <span class="tt">AllocatorFunction</span> below shows an allocator function of the custom allocator.</p>
+<p>[!code-cs<a href="../Unity.Collections.Tests/AllocatorCustomTests.cs#allocator-custom-allocator-function">Allocator function</a>]</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1383"></a>
+Global allocator table</h1>
+<p>The global allocator table in <a href="xref:Unity.Collections.AllocatorManager"><span class="tt">AllocatorManager</span></a> stores all the necessary information for custom allocators to work. When you instantiate a custom allocator, you must register the allocator in the global allocator table. The table stores the following information:</p>
+<ul>
+<li>A pointer to the custom allocator instance</li>
+<li>A pointer to the allocator function of the custom allocator instance</li>
+<li>The current official version of the custom allocator instance, lower 15 bits of a 2 byte unsigned integer value</li>
+<li>A list of child safety handles of native containers that are created using the custom allocator instance</li>
+<li>A list of child allocators that are allocated using the custom allocator instance</li>
+<li>A bit flag indicating whether the custom allocator is able to dispose individual allocations</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1384"></a>
+Custom allocator example</h1>
+<p>The following is an example of a custom allocator that has an <span class="tt">AllocatorManager.AllocatorHandle</span> and initializes the allocated memory with a user configured value and increments the allocation count. It also uses <span class="tt">AllocatorManager.TryFunction</span> to register the allocator on the global allocator table:</p>
+<p>[!code-cs<a href="../Unity.Collections.Tests/AllocatorCustomTests.cs#allocator-custom-example">Custom allocator example</a>]</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1385"></a>
+Further information</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2allocator-custom-use.html">Use a custom allocator</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

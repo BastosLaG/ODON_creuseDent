@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: xr-ray-interactor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-ray-interactor.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">xr-ray-interactor </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8690"></a>
+autotoc_md8690</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8691"></a>
+uid: xri-xr-ray-interactor</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8692"></a>
+XR Ray Interactor</h1>
+<p>Interactor used for interacting with Interactables at a distance. This is handled via ray casts that update the current set of valid targets for this interactor.</p>
+<p><img src="images/xr-ray-interactor.png" alt="XRRayInteractor component" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Interaction Manager</b>  </td><td class="markdownTableBodyNone">The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-interaction-manager.html">XRInteractionManager</a> that this Interactor will communicate with (will find one if <b>None</b>).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Interaction Layer Mask</b>  </td><td class="markdownTableBodyNone">Allows interaction with Interactables whose <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2interaction-layers.html">Interaction Layer Mask</a> overlaps with any Layer in this Interaction Layer Mask.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Handedness</b>  </td><td class="markdownTableBodyNone">Represents which hand or controller the interactor is associated with.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>UI Interaction</b>  </td><td class="markdownTableBodyNone">Enable to affect <a class="el" href="namespace_unity.html">Unity</a> UI GameObjects in a way that is similar to a mouse pointer. Requires the XR UI Input Module on the Event System.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Block Interactions With Screen Space UI</b>  </td><td class="markdownTableBodyNone">Enable this to make the XR Ray Interactor ignore interactions when occluded by a screen space canvas.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Block UI on Interactable Selection</b>  </td><td class="markdownTableBodyNone">Enabling this option will block UI interaction when selecting interactables.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Force Grab</b>  </td><td class="markdownTableBodyNone">Force grab moves the object to your hand rather than interacting with it at a distance.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Manipulate Attach Transform</b>  </td><td class="markdownTableBodyNone">Allows the user to move the Attach Transform using the thumbstick.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Translate Speed</b>  </td><td class="markdownTableBodyNone">Speed that the Attach Transform is translated along the ray. Only used and displayed when <b>Manipulate Attach Transform</b> is enabled.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><a class="el" href="class_rotate.html">Rotate</a> Reference Frame</b>  </td><td class="markdownTableBodyNone">The optional reference frame to define the up axis when rotating the Attach Transform. When not set, rotates about the local up axis of the attach transform. Only used and displayed when <b>Manipulate Attach Transform</b> is enabled.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><a class="el" href="class_rotate.html">Rotate</a> Mode</b>  </td><td class="markdownTableBodyNone">Specifies how the Attach Transform rotation manipulation is controlled. Only used and displayed when <b>Manipulate Attach Transform</b> is enabled.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;<a class="el" href="class_rotate.html">Rotate</a> Over Time  </td><td class="markdownTableBodyNone">Set <b>Rotation Mode</b> to <b><a class="el" href="class_rotate.html">Rotate</a> Over Time</b> to control attach rotation over time while rotation input is active.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;Match Direction  </td><td class="markdownTableBodyNone">Set <b>Rotation Mode</b> to <b>Match Direction</b> to match the attach rotation to the direction of the 2-dimensional rotation input.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><a class="el" href="class_rotate.html">Rotate</a> Speed</b>  </td><td class="markdownTableBodyNone">Speed that the Attach Transform is rotated. Only used and displayed when <b>Manipulate Attach Transform</b> is enabled and <b>Rotation Mode</b> is set to <b><a class="el" href="class_rotate.html">Rotate</a> Over Time</b>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Scale Mode</b>  </td><td class="markdownTableBodyNone">Determines how the Scale Value should be used by the interactable objects requesting it.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Attach Transform</b>  </td><td class="markdownTableBodyNone">The <span class="tt">Transform</span> that is used as the attach point for Interactables.<br  />
+Automatically instantiated and set in <span class="tt">Awake</span> if <b>None</b>.<br  />
+Setting this will not automatically destroy the previous object.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Ray Origin Transform</b>  </td><td class="markdownTableBodyNone">The starting position and direction of any ray casts.<br  />
+Automatically instantiated and set in <span class="tt">Awake</span> if <b>None</b> and initialized with the pose of the <span class="tt">XRBaseInteractor.attachTransform</span>. Setting this will not automatically destroy the previous object.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Disable Visuals When Blocked In Group</b>  </td><td class="markdownTableBodyNone">Whether to disable visuals when this Interactor is part of an <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-interaction-group.html">Interaction Group</a> and is incapable of interacting due to active interaction by another Interactor in the Group.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Line Type</b>  </td><td class="markdownTableBodyNone">The type of ray cast.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Straight Line  </td><td class="markdownTableBodyNone">Set <b>Line Type</b> to <b>Straight Line</b> to perform a single ray cast into the scene with a set ray length.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;Projectile Curve  </td><td class="markdownTableBodyNone">Set <b>Line Type</b> to <b>Projectile Curve</b> to sample the trajectory of a projectile to generate a projectile curve.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Bezier Curve  </td><td class="markdownTableBodyNone">Set <b>Line Type</b> to <b>Bezier Curve</b> to use a control point and an end point to create a quadratic Bezier curve.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;Max Raycast Distance  </td><td class="markdownTableBodyNone">Only used and displayed if <b>Line Type</b> is <b>Straight Line</b>.<br  />
+Increasing this value will make the line reach further.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Reference Frame</b>  </td><td class="markdownTableBodyNone">Only used and displayed if <b>Line Type</b> is either <b>Projectile Curve</b> or <b>Bezier Curve</b>.<br  />
+The reference frame of the curve to define the ground plane and up. If not set at startup it will try to find the <span class="tt">XROrigin.Origin</span> <span class="tt">GameObject</span>, and if that does not exist it will use global up and origin by default.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Velocity</b>  </td><td class="markdownTableBodyNone">Only used and displayed if <b>Line Type</b> is <b>Projectile Curve</b>. Initial velocity of the projectile.<br  />
+Increasing this value will make the curve reach further.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Acceleration</b>  </td><td class="markdownTableBodyNone">Only used and displayed if <b>Line Type</b> is <b>Projectile Curve</b>.<br  />
+Gravity of the projectile in the reference frame.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Additional Ground Height</b>  </td><td class="markdownTableBodyNone">Only used and displayed if <b>Line Type</b> is <b>Projectile Curve</b>.<br  />
+Additional height below ground level that the projectile will continue to. Increasing this value will make the end point drop lower in height.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Additional Flight Time</b>  </td><td class="markdownTableBodyNone">Only used and displayed if <b>Line Type</b> is <b>Projectile Curve</b>.<br  />
+Additional flight time after the projectile lands at the adjusted ground level. Increasing this value will make the end point drop lower in height.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><a class="el" href="class_sample.html">Sample</a> Frequency</b>  </td><td class="markdownTableBodyNone">Only used and displayed if <b>Line Type</b> is <b>Projectile Curve</b> or <b>Bezier Curve</b>.<br  />
+The number of sample points <a class="el" href="namespace_unity.html">Unity</a> uses to approximate curved paths. Larger values produce a better quality approximate at the cost of reduced performance due to the number of ray casts.<br  />
+A value of <span class="tt">n</span> will result in <span class="tt">n - 1</span> line segments for ray casting. This property is not used when using a <b>Line Type</b> of <b>Straight Line</b> since the effective value would always be 2.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>End Point Distance</b>  </td><td class="markdownTableBodyNone">Only used and displayed if <b>Line Type</b> is <b>Bezier Curve</b>.<br  />
+Increase this value distance to make the end of the curve further from the start point.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>End Point Height</b>  </td><td class="markdownTableBodyNone">Only used and displayed if <b>Line Type</b> is <b>Bezier Curve</b>.<br  />
+Decrease this value to make the end of the curve drop lower relative to the start point.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Control Point Distance</b>  </td><td class="markdownTableBodyNone">Only used and displayed if <b>Line Type</b> is <b>Bezier Curve</b>.<br  />
+Increase this value to make the peak of the curve further from the start point.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Control Point Height</b>  </td><td class="markdownTableBodyNone">Only used and displayed if <b>Line Type</b> is <b>Bezier Curve</b>.<br  />
+Increase this value to make the peak of the curve higher relative to the start point.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Raycast Mask</b>  </td><td class="markdownTableBodyNone">The layer mask used for limiting ray cast targets.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Raycast Trigger Interaction</b>  </td><td class="markdownTableBodyNone">The type of interaction with trigger colliders via ray cast.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Raycast Snap Volume Interaction</b>  </td><td class="markdownTableBodyNone">Whether ray cast should include or ignore hits on trigger colliders that are snap volume colliders, even if the ray cast is set to ignore triggers. If you are not using gaze assistance or XR Interactable Snap Volume components, you should set this property to Ignore to avoid the performance cost.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Hit Detection Type</b>  </td><td class="markdownTableBodyNone">Which type of hit detection to use for the ray cast.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Raycast  </td><td class="markdownTableBodyNone">Set <b>Hit Detection Type</b> to <b>Raycast</b> to use <span class="tt">Physics</span> Raycast to detect collisions.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;Sphere Cast  </td><td class="markdownTableBodyNone">Set <b>Hit Detection Type</b> to <b>Sphere Cast</b> to use <span class="tt">Physics</span> Sphere Cast to detect collisions.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Cone Cast  </td><td class="markdownTableBodyNone">Set <b>Hit Detection Type</b> to <b>Cone Cast</b> to use cone casting to detect collisions.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Hit Closest Only</b>  </td><td class="markdownTableBodyNone">Whether <a class="el" href="namespace_unity.html">Unity</a> considers only the closest Interactable as a valid target for interaction.<br  />
+Enable this to make only the closest Interactable receive hover events. Otherwise, all hit Interactables will be considered valid and this Interactor will multi-hover.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Blend Visual Line Points</b>  </td><td class="markdownTableBodyNone">Blend the line sample points <a class="el" href="namespace_unity.html">Unity</a> uses for ray casting with the current pose of the controller. Use this to make the line visual stay connected with the controller instead of lagging behind.<br  />
+When the controller is configured to sample tracking input directly before rendering to reduce input latency, the controller may be in a new position or rotation relative to the starting point of the sample curve used for ray casting.<br  />
+A value of <span class="tt">false</span> will make the line visual stay at a fixed reference frame rather than bending or curving towards the end of the ray cast line.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Select Action Trigger</b>  </td><td class="markdownTableBodyNone">Choose how <a class="el" href="namespace_unity.html">Unity</a> interprets the select input action from the controller. Controls between different input styles for determining if this Interactor can select, such as whether the button is currently pressed or just toggles the active state. When this is set to <span class="tt">State</span> and multiple interactors select an interactable set to <span class="tt">InteractableSelectMode.Single</span>, you may experience undesired behavior where the selection of the interactable is passed back and forth between the interactors each frame. This can also cause the select interaction events to fire each frame. This can be resolved by setting this to <span class="tt">State Change</span> which is the default and recommended option.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;State  </td><td class="markdownTableBodyNone"><a class="el" href="namespace_unity.html">Unity</a> will consider the input active while the button is pressed. A user can hold the button before the interaction is possible and still trigger the interaction when it is possible.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;State Change  </td><td class="markdownTableBodyNone"><a class="el" href="namespace_unity.html">Unity</a> will consider the input active only on the frame the button is pressed, and if successful remain engaged until the input is released. A user must press the button while the interaction is possible to trigger the interaction. They will not trigger the interaction if they started pressing the button before the interaction was possible.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Toggle  </td><td class="markdownTableBodyNone">The interaction starts on the frame the input is pressed and remains engaged until the second time the input is pressed.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;Sticky  </td><td class="markdownTableBodyNone">The interaction starts on the frame the input is pressed and remains engaged until the second time the input is released.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Keep Selected Target Valid</b>  </td><td class="markdownTableBodyNone">Whether to keep selecting an Interactable after initially selecting it even when it is no longer a valid target.<br  />
+Enable to make the <span class="tt">XRInteractionManager</span> retain the selection even if the Interactable is not contained within the list of valid targets. Disable to make the Interaction Manager clear the selection if it isn't within the list of valid targets.<br  />
+A common use for disabling this is for Ray Interactors used for teleportation to make the teleportation Interactable no longer selected when not currently pointing at it.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Hide Controller On Select</b>  </td><td class="markdownTableBodyNone">Controls whether this Interactor should hide the controller model on selection.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Allow Hovered Activate</b>  </td><td class="markdownTableBodyNone">Controls whether to send activate and deactivate events to interactables that this interactor is hovered over but not selected when there is no current selection. By default, the interactor will only send activate and deactivate events to interactables that it's selected.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Target Track Mode</b>  </td><td class="markdownTableBodyNone">Specifies how many Interactables that should be tracked in the Targets For Selection property, useful for custom feedback. The options are in order of best performance.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Hover To Select</b>  </td><td class="markdownTableBodyNone">Enable to have Interactor automatically select an Interactable after hovering over it for a period of time. Will also select UI if UI Interaction is also enabled.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Hover Time To Select</b>  </td><td class="markdownTableBodyNone">Number of seconds an Interactor must hover over an Interactable to select it.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Auto Deselect</b>  </td><td class="markdownTableBodyNone">Enable to have Interactor automatically deselect an Interactable after selecting it for a period of time.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Time To Auto Deselect</b>  </td><td class="markdownTableBodyNone">Number of seconds an Interactor must select an Interactable before it is automatically deselected when <b>Auto Deselect</b> is true.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Starting Selected Interactable</b>  </td><td class="markdownTableBodyNone">The Interactable that this Interactor automatically selects at startup (optional, may be <b>None</b>).  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Audio Events</b>  </td><td class="markdownTableBodyNone">These tie into the same selection and hover events as the <b>Interactor Events</b> further below - these audio events provide a convenient way to play specified audio clips for any of those events you want.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;On Select Entered  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the audio clip to play when this Interactor begins selecting an Interactable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;On Select Exited  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the audio clip to play when this Interactor successfully exits selection of an Interactable.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;On Select Canceled  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the audio clip to play when this Interactor cancels selection of an Interactable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;On Hover Entered  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the audio clip to play when this Interactor begins hovering over an Interactable.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;On Hover Exited  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the audio clip to play when this Interactor successfully ends hovering over an Interactable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;On Hover Canceled  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the audio clip to play when this Interactor cancels hovering over an Interactable.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Allow Hover Audio While Selecting  </td><td class="markdownTableBodyNone">Whether to allow playing audio from hover events if the hovered Interactable is currently selected by this Interactor. This is enabled by default.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Haptic Events</b>  </td><td class="markdownTableBodyNone">These tie into the same selection and hover events as the <b>Interactor Events</b> further below - these haptic events provide a convenient way to provide haptic feedback for any of those events you want.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;On Select Entered  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the duration (in seconds) and intensity (normalized) to play in haptic feedback when this Interactor begins selecting an Interactable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;On Select Exited  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the duration (in seconds) and intensity (normalized) to play in haptic feedback when this Interactor successfully exits selection of an Interactable.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;On Select Canceled  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the duration (in seconds) and intensity (normalized) to play in haptic feedback when this Interactor cancels selection of an Interactable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;On Hover Entered  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the duration (in seconds) and intensity (normalized) to play in haptic feedback when this Interactor begins hovering over an Interactable.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;On Hover Exited  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the duration (in seconds) and intensity (normalized) to play in haptic feedback when this Interactor successfully ends hovering over an Interactable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;On Hover Canceled  </td><td class="markdownTableBodyNone">If enabled, the <a class="el" href="namespace_unity.html">Unity</a> editor will display UI for supplying the duration (in seconds) and intensity (normalized) to play in haptic feedback when this Interactor cancels hovering over an Interactable.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Allow Hover Haptics While Selecting  </td><td class="markdownTableBodyNone">Whether to allow playing haptics from hover events if the hovered Interactable is currently selected by this Interactor. This is enabled by default.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Interactor Events</b>  </td><td class="markdownTableBodyNone">See the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2interactor-events.html">Interactor Events</a> page.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8693"></a>
+Supporting XR Interactable Snap Volume</h2>
+<p>For an XR Ray Interactor to snap to an <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentationeb0e6caa21cd3ef79a8561aa3a617dba.html">XR Interactable Snap Volume</a>, the ray interactor must be properly configured. The <b>Raycast Snap Volume Interaction</b> property of the XR Ray Interactor must be set to <b>Collide</b>. Additionally, the XR Ray Interactor GameObject must have an <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-interactor-line-visual.html">XR Interactor Line Visual</a> component with the <b>Snap Endpoint If Available</b> property enabled. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

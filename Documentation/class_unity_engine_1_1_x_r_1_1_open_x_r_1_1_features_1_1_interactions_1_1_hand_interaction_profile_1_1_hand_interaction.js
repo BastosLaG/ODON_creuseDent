@@ -1,0 +1,27 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction =
+[
+    [ "FinishSetup", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a4966204a1c68543122d86980f9484e4e", null ],
+    [ "devicePose", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#ac82be2e22918176c236971d2220d4b84", null ],
+    [ "devicePosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#af26807b0a3c6f8c7cbab976b1c6c105c", null ],
+    [ "deviceRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a547703bf68de07d176d66f7cd322b956", null ],
+    [ "graspFirm", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a79ae3f756a8cc6a06253efa6f88c3d6e", null ],
+    [ "graspReady", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a9e9bd64638625edffc9d00198ac88f33", null ],
+    [ "graspValue", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a61f48287a9c6314f52d2bcb2bfce15e0", null ],
+    [ "isTracked", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#ab54ea6b1432dc237d1598d90ce98a19c", null ],
+    [ "pinchPose", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#adb6df70e3efc6234756168bbebda27ea", null ],
+    [ "pinchPosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#aad3701622633540469bce57d0ded57f6", null ],
+    [ "pinchReady", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a08c2b7093cd9b2a6dcf28e48e3550276", null ],
+    [ "pinchRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#abdd9ee0e52d38fcb07f2c466d68f2fe1", null ],
+    [ "pinchTouched", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a7af48294cb88254d3c2b745ae91f3e77", null ],
+    [ "pinchValue", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#ab0cd08a021224a94ea3b36a6ee5047b7", null ],
+    [ "pointer", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a3cb502b68c8176ac1ff5e4534cbbe0aa", null ],
+    [ "pointerActivated", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#aec413d309290c811c40199076431667a", null ],
+    [ "pointerActivateReady", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a2b24530447648e790f9df784b22e3652", null ],
+    [ "pointerActivateValue", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a3335c95f1cd511ac9791ab299ab6c1e5", null ],
+    [ "pointerPosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#ae48ee583031ac154e9ee919750109642", null ],
+    [ "pointerRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#adfce83ab3aac9a156e53f38cb7008948", null ],
+    [ "pokePose", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a00766789e1a73675e4692f96a366b1d6", null ],
+    [ "pokePosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a2484a4f0417c09db87c43082d742ff14", null ],
+    [ "pokeRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a007549832f5faf2894898067a3b8d561", null ],
+    [ "trackingState", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html#a46c6ad9eae1a3443eb9026ac596c4e0a", null ]
+];

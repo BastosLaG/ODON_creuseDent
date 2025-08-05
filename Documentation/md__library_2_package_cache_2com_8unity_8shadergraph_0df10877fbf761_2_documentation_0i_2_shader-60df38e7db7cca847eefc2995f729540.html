@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: How to make shapes that adapt to the aspect ratio of the UI element</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-60df38e7db7cca847eefc2995f729540.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">How to make shapes that adapt to the aspect ratio of the UI element </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4543"></a></p>
+<p>Buttons and other UI elements come in all shapes and sizes. Frequently, the same style of button or background element needs to work with many different shapes or adapt to a changing width and height. Many of the UI elements in this sample are designed to adapt to changing dimensions. Follow these steps to create a UI element that can do that.</p>
+<ol type="1">
+<li>Create a new Shader Graph asset.</li>
+</ol>
+<ol type="1">
+<li>In the Graph Inspector, set the Shader Graph’s Material setting to <b>Canvas</b>.</li>
+</ol>
+<ol type="1">
+<li>Add an SDF Pill node to the new Shader Graph file. ( You can find this node in the <b>Add Node</b> menu under <b>UI/SDFs</b>.)</li>
+</ol>
+<ol type="1">
+<li>Connect the Pill node’s <b>Fill</b> output port to the <b>Base Color</b> input port of the <b>Master Stack</b>. Now you’ve created a shader for a UI element that’s meant to be square. If you assign this shader to a non-square UI element, it will stretch and not look like a proper pill shape. Notice that the Pill node’s last input port is called <b>WidthHeight</b>. This is an input for the width and height data of the UI element that the shader will be assigned to. By default, the Pill node assumes the UI element will be square, but if you plan to use a different aspect ratio, you can enter other values. Rather than entering the values manually, it’s best to connect them to the actual UI element values. That’s what we’ll do next.</li>
+</ol>
+<ol type="1">
+<li>Open the <b>Blackboard</b> and add a new Vector2 parameter. <br  />
+</li>
+</ol>
+<ol type="1">
+<li>Name the parameter <b>WidthHeight</b>. <br  />
+</li>
+</ol>
+<ol type="1">
+<li>Drag the parameter into the graph and connect it to the <b>WidthHeight</b> input port on the Pill node. You’ve now exposed the <b>WidthHeight</b> parameter so it can be connected outside the shaders.</li>
+</ol>
+<ol type="1">
+<li>In your scene, create a new <b>Canvas</b> element (if there isn’t one already) in the <b>Hierarchy</b> panel. (Right click in the <b>Hierarchy</b> panel and select <b>UI</b> &gt; <b>Canvas</b>).</li>
+</ol>
+<ol type="1">
+<li>Then add an Image element to the Canvas. (Right click on the <b>Canvas</b> element and select <b>UI</b> &gt; <b>Image</b>) Select the Image element.</li>
+</ol>
+<ol type="1">
+<li>Select the material associated with your shader in the Project panel and drag and drop it into the Material slot in the Inspector for the Image UI element. Now your shader’s material is assigned to the UI element.</li>
+</ol>
+<ol type="1">
+<li>Click the <b>Add Component</b> button at the bottom of the Inspector.</li>
+</ol>
+<ol type="1">
+<li>Select and assign the <b>Image Size</b> script to the Image element. This script connects the Image element’s Width and Height parameters to the WidthHeight parameter of your shader, so when the Width or Height values change, the shader adapts.</li>
+</ol>
+<p>Now you have a shader that will adapt to the aspect ratio of the UI element it’s assigned to. You can adjust the Width and Height parameters of the Image element and the Pill shape will maintain its rounded shape. This same feature is also available on many of the other nodes in the node library. You can control any subgraph node with a WidthHeight input port in this same way. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

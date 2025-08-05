@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Référence de la structure RingBuf</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_ring_buf.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la structure RingBuf</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Types publics</h2></td></tr>
+<tr class="memitem:ad7b1a7e8acfd52cf0b78d26d455e9db8" id="r_ad7b1a7e8acfd52cf0b78d26d455e9db8"><td class="memItemLeft" align="right" valign="top"><a id="ad7b1a7e8acfd52cf0b78d26d455e9db8" name="ad7b1a7e8acfd52cf0b78d26d455e9db8"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>OverflowMode</b> { <b>kOverflowModeWrap</b>
+, <b>kOverflowModeTruncate</b>
+, <b>kOverflowModeGrowDouble</b>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a8fcfec83d5a63c8e4ae136f5c9557da3" id="r_a8fcfec83d5a63c8e4ae136f5c9557da3"><td class="memItemLeft" align="right" valign="top"><a id="a8fcfec83d5a63c8e4ae136f5c9557da3" name="a8fcfec83d5a63c8e4ae136f5c9557da3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (uint32_t csize, OverflowMode overflowMode)</td></tr>
+<tr class="memitem:a68d16ee099ad58f6d0003cf15f8c25e7" id="r_a68d16ee099ad58f6d0003cf15f8c25e7"><td class="memItemLeft" align="right" valign="top"><a id="a68d16ee099ad58f6d0003cf15f8c25e7" name="a68d16ee099ad58f6d0003cf15f8c25e7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOverflowMode</b> (OverflowMode overflowMode)</td></tr>
+<tr class="memitem:adfd69a8e59d4ac4c15264919266fa851" id="r_adfd69a8e59d4ac4c15264919266fa851"><td class="memItemLeft" align="right" valign="top"><a id="adfd69a8e59d4ac4c15264919266fa851" name="adfd69a8e59d4ac4c15264919266fa851"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr>
+<tr class="memitem:a375c6664a304184a1db09eec4d7db09a" id="r_a375c6664a304184a1db09eec4d7db09a"><td class="memItemLeft" align="right" valign="top"><a id="a375c6664a304184a1db09eec4d7db09a" name="a375c6664a304184a1db09eec4d7db09a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Destroy</b> ()</td></tr>
+<tr class="memitem:a58d095cfe6662ae52ea4567f64c4c277" id="r_a58d095cfe6662ae52ea4567f64c4c277"><td class="memItemLeft" align="right" valign="top"><a id="a58d095cfe6662ae52ea4567f64c4c277" name="a58d095cfe6662ae52ea4567f64c4c277"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateNewBlock</b> ()</td></tr>
+<tr class="memitem:a35b7206ab98ae151b6f63d1c2ff1b29b" id="r_a35b7206ab98ae151b6f63d1c2ff1b29b"><td class="memItemLeft" align="right" valign="top"><a id="a35b7206ab98ae151b6f63d1c2ff1b29b" name="a35b7206ab98ae151b6f63d1c2ff1b29b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DropLastBlock</b> ()</td></tr>
+<tr class="memitem:a63c8c8d81bc3cfdcfaac707643ee190b" id="r_a63c8c8d81bc3cfdcfaac707643ee190b"><td class="memItemLeft" align="right" valign="top"><a id="a63c8c8d81bc3cfdcfaac707643ee190b" name="a63c8c8d81bc3cfdcfaac707643ee190b"></a>
+uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>GetForWrite</b> (uint32_t size)</td></tr>
+<tr class="memitem:aa3e1c3859ab32fe41bca13029332a4f0" id="r_aa3e1c3859ab32fe41bca13029332a4f0"><td class="memItemLeft" align="right" valign="top"><a id="aa3e1c3859ab32fe41bca13029332a4f0" name="aa3e1c3859ab32fe41bca13029332a4f0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasDataForRead</b> ()</td></tr>
+<tr class="memitem:acbc154e089c91a4ab6ebde85108e15e6" id="r_acbc154e089c91a4ab6ebde85108e15e6"><td class="memItemLeft" align="right" valign="top"><a id="acbc154e089c91a4ab6ebde85108e15e6" name="acbc154e089c91a4ab6ebde85108e15e6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetForReadAndClear</b> (uint8_t **ptr, uint32_t *size)</td></tr>
+<tr class="memitem:a274624050a426f15762cc67a29f35212" id="r_a274624050a426f15762cc67a29f35212"><td class="memItemLeft" align="right" valign="top"><a id="a274624050a426f15762cc67a29f35212" name="a274624050a426f15762cc67a29f35212"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetForRead</b> (uint8_t **ptr, uint32_t *size)</td></tr>
+<tr class="memitem:a49c9abbf4b052351eed33494b47dbb66" id="r_a49c9abbf4b052351eed33494b47dbb66"><td class="memItemLeft" align="right" valign="top"><a id="a49c9abbf4b052351eed33494b47dbb66" name="a49c9abbf4b052351eed33494b47dbb66"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>MoveFrom</b> (<a class="el" href="struct_ring_buf.html">RingBuf</a> &amp;other)</td></tr>
+<tr class="memitem:a1909a30922142552e1afab826ce10700" id="r_a1909a30922142552e1afab826ce10700"><td class="memItemLeft" align="right" valign="top"><a id="a1909a30922142552e1afab826ce10700" name="a1909a30922142552e1afab826ce10700"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (Command c)</td></tr>
+<tr class="memitem:a3c26b662aceb7f75a41bf6d0baafc025" id="r_a3c26b662aceb7f75a41bf6d0baafc025"><td class="memItemLeft" align="right" valign="top"><a id="a3c26b662aceb7f75a41bf6d0baafc025" name="a3c26b662aceb7f75a41bf6d0baafc025"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (LUT l)</td></tr>
+<tr class="memitem:a966e0c1ac8d6ba128a0d330e22d64977" id="r_a966e0c1ac8d6ba128a0d330e22d64977"><td class="memItemLeft" align="right" valign="top"><a id="a966e0c1ac8d6ba128a0d330e22d64977" name="a966e0c1ac8d6ba128a0d330e22d64977"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (std::thread::id id)</td></tr>
+<tr class="memitem:a1ffda8ac786d781b99437855a080ec7c" id="r_a1ffda8ac786d781b99437855a080ec7c"><td class="memItemLeft" align="right" valign="top"><a id="a1ffda8ac786d781b99437855a080ec7c" name="a1ffda8ac786d781b99437855a080ec7c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (const std::string &amp;s)</td></tr>
+<tr class="memitem:ade735a90cf19671d6c608e47683e7923" id="r_ade735a90cf19671d6c608e47683e7923"><td class="memItemLeft" align="right" valign="top"><a id="ade735a90cf19671d6c608e47683e7923" name="ade735a90cf19671d6c608e47683e7923"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (float f)</td></tr>
+<tr class="memitem:acf92d9d6c26f511e0469d972f2bf982f" id="r_acf92d9d6c26f511e0469d972f2bf982f"><td class="memItemLeft" align="right" valign="top"><a id="acf92d9d6c26f511e0469d972f2bf982f" name="acf92d9d6c26f511e0469d972f2bf982f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (int32_t i)</td></tr>
+<tr class="memitem:a116a0f86fadb4ec7c11edd7af04043fd" id="r_a116a0f86fadb4ec7c11edd7af04043fd"><td class="memItemLeft" align="right" valign="top"><a id="a116a0f86fadb4ec7c11edd7af04043fd" name="a116a0f86fadb4ec7c11edd7af04043fd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (int64_t i)</td></tr>
+<tr class="memitem:a2c31d026e8c6f800bee659b834240088" id="r_a2c31d026e8c6f800bee659b834240088"><td class="memItemLeft" align="right" valign="top"><a id="a2c31d026e8c6f800bee659b834240088" name="a2c31d026e8c6f800bee659b834240088"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint32_t u)</td></tr>
+<tr class="memitem:a6c71c228e045e14710de3352e137ec0f" id="r_a6c71c228e045e14710de3352e137ec0f"><td class="memItemLeft" align="right" valign="top"><a id="a6c71c228e045e14710de3352e137ec0f" name="a6c71c228e045e14710de3352e137ec0f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (uint64_t u)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Champs de données</h2></td></tr>
+<tr class="memitem:a7c8647fed2a9a83965ef0dbdf580f0fd" id="r_a7c8647fed2a9a83965ef0dbdf580f0fd"><td class="memItemLeft" align="right" valign="top"><a id="a7c8647fed2a9a83965ef0dbdf580f0fd" name="a7c8647fed2a9a83965ef0dbdf580f0fd"></a>
+uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+<tr class="memitem:ac83ceff77c23cc2bf2e63bf2c7c7f72d" id="r_ac83ceff77c23cc2bf2e63bf2c7c7f72d"><td class="memItemLeft" align="right" valign="top"><a id="ac83ceff77c23cc2bf2e63bf2c7c7f72d" name="ac83ceff77c23cc2bf2e63bf2c7c7f72d"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>cacheSize</b></td></tr>
+<tr class="memitem:af65dbdf3211543644f1cf92f0efbc223" id="r_af65dbdf3211543644f1cf92f0efbc223"><td class="memItemLeft" align="right" valign="top"><a id="af65dbdf3211543644f1cf92f0efbc223" name="af65dbdf3211543644f1cf92f0efbc223"></a>
+OverflowMode&#160;</td><td class="memItemRight" valign="bottom"><b>overflowMode</b></td></tr>
+<tr class="memitem:a303488456c50337ec1a75f4307cb8a6e" id="r_a303488456c50337ec1a75f4307cb8a6e"><td class="memItemLeft" align="right" valign="top"><a id="a303488456c50337ec1a75f4307cb8a6e" name="a303488456c50337ec1a75f4307cb8a6e"></a>
+std::deque&lt; uint32_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>offsets</b></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="struct_ring_buf.html">RingBuf</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

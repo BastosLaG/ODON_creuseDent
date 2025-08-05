@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Changelog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8legacyinputhelpers_0db7579e86f3b4_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Changelog </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md8719"></a></p>
+<p>All notable changes to this package will be documented in this file.</p>
+<p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a> and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8720"></a>
+[2.1.12] - 2025-01-24</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8721"></a>
+Fixed</h2>
+<ul>
+<li>Fixed camera projection type when converting an existing camera to an <b>XR Rig</b> to ensure resulting camera is not set to orthographic (<a href="https://issuetracker.unity3d.com/product/unity/issues/guid/XRLIH-5">XRLIH-5</a>).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8722"></a>
+[2.1.11] - 2024-09-12</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8723"></a>
+Fixed</h2>
+<ul>
+<li>Removed an empty script file and corresponding meta file.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8724"></a>
+[2.1.10] - 2022-07-26</h1>
+<p>Fixed a build error about a mismatch of the serialized fields between Editor and Player due to <span class="tt">m_PoseProviderComponent</span>. That field and its type is now always included, not just when <span class="tt">ENABLE_AR</span> or <span class="tt">ENABLE_VR</span> are defined.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8725"></a>
+[2.1.9] - 2022-02-18</h1>
+<p>Fixed a build failure when building through script for a platform other than what is selected in the Editor UI as the current platform to build for. (<a href="https://issuetracker.unity3d.com/product/unity/issues/guid/1371347">1371347</a>)</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8726"></a>
+[2.1.8] - 2021-05-04</h1>
+<p>Changed Tracked Pose Driver so it applies the pose to the Transform before the default time during the "Just Before Render" phase of the frame. This was already the case for Update, and is now also the case for <a href="https://docs.unity3d.com/ScriptReference/Application-onBeforeRender.html"><span class="tt">Application.onBeforeRender</span></a> callbacks. Use the <a href="https://docs.unity3d.com/ScriptReference/BeforeRenderOrderAttribute.html"><span class="tt">BeforeRenderOrder</span></a> attribute to specify a custom callback order lower than -30000 if your callback needs to execute before Tracked Pose Driver. Fixed issue with OpenXR and reacting to an invalid stage space on startup.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8727"></a>
+[2.1.7] - 2020-12-09</h1>
+<p>Fixes XR Rig upgrade scenarios for when URP and HDRP are in the same project <a class="el" href="class_tests.html">Tests</a> agains URP and HDRP v11.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8728"></a>
+[2.1.6] - 2020-10-28</h1>
+<p>Fixes error message when using the color camera Changes default near clip plane to 0.01f Fixes rig migration for URP and HDRP.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8729"></a>
+[2.1.5] - 2020-10-14</h1>
+<p>Updates to latest yamato scripts. fixes CI isssues.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8730"></a>
+[2.1.4] - 2020-04-23</h1>
+<p>Fix for URP and HDRP project migrating.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8731"></a>
+[2.1.3] - 2020-04-08</h1>
+<p>Fixes incorrect documentation merge</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8732"></a>
+[2.1.2] - 2020-04-06</h1>
+<p>Better backcompat with 1.3.X streams</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8733"></a>
+[2.1.1] - 2020-03-27</h1>
+<p>Better backcompat with 1.3.X streams</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8734"></a>
+[2.1.0] - 2020-03-25</h1>
+<p>Roll up of 1.4.0, 1.4.1, 1.4.2 XR Management changes to the 2.X stream</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8735"></a>
+[2.0.8] - 2020-02-13</h1>
+<p>Roll up of fixes from 1.3.9-&gt;1.3.11 fix for <a class="el" href="namespace_unity_engine_1_1_x_r.html">UnityEngine.XR</a> usage outside of ifdefs. fix for programatically added TPD's not saving Fixes for 2020.1 deprecation of features.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8736"></a>
+[2.0.7] - 2019-12-18</h1>
+<p>Fixes for 2020.1 deprecation of features. (from 1.3.9) Fixes switch compile errors. (from 1.3.8) Fix for PS4 compile error. (from 1.3.7) </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8737"></a>
+[2.0.6] - 2019-07-25</h1>
+<p>Fix for incorrect selection logic (from 1.3.6)</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8738"></a>
+[2.0.5] - 2019-07-23</h1>
+<p>merges 1.3.5 into the mainline stream</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8739"></a>
+[2.0.4] - 2019-06-07</h1>
+<p>Update version number for Yamato.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8740"></a>
+[2.0.3] - 2019-06-03</h1>
+<p>More fixes to compiler error on non XR platforms (thanks again @zilys!) fixes unit test. removes knuckles finger input bindings</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8741"></a>
+[2.0.2] - 2019-03-12</h1>
+<p>fixes compiler error on non XR platforms (thanks @zilys!)</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8742"></a>
+[2.0.1] - 2019-01-02</h1>
+<p>fixes standalone compile error / forward port of 1.3.2 fix</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8743"></a>
+[2.0.0] - 2019-01-02</h1>
+<p>breaking changes to API to allow pose data queries to indiciate what data was actually valid. this fixes the bug where position was being set to identity if only rotation was provided by the input system.</p>
+<p>Pose provider API has now changed to return a PoseDataFlags bitflag, the bitflag will indiciate what pieces of data was set on the output pose parameter. </p><div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keywordtype">bool</span> TryGetPoseFromProvider(out Pose output)</div>
+</div><!-- fragment --><p> is now </p><div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">virtual</span> PoseDataFlags GetPoseFromProvider(out Pose output)</div>
+</div><!-- fragment --><p> All pose providers in this package have been updated, as has the tracked pose driver code to correctly handle the returned bitflags. Any user derived users of this API will need to also update their code accordingly.</p>
+<p>New unit tests added for this case in the tracked pose driver</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8744"></a>
+[1.4.2] - 2020-03-24</h1>
+<p>removes incorrect comment.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8745"></a>
+[1.4.1] - 2020-03-23</h1>
+<p>minor tweaks to version</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8746"></a>
+[1.4.0] - 2020-02-11</h1>
+<p>Updates for XR Management UX Flow changes, the correct version to use for XR mgt is 2.1.0</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8747"></a>
+[1.3.11] - 2020-02-05</h1>
+<p>fix for <a class="el" href="namespace_unity_engine_1_1_x_r.html">UnityEngine.XR</a> usage outside of ifdefs.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8748"></a>
+[1.3.10] - 2019-12-05</h1>
+<p>fix for programatically added TPD's not saving</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8749"></a>
+[1.3.9] - 2019-11-12</h1>
+<p>Fixes for 2020.1 deprecation of features.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8750"></a>
+[1.3.8] - 2019-10-21</h1>
+<p>Fixes switch compile errors.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8751"></a>
+[1.3.7] - 2019-08-02</h1>
+<p>Fix for PS4 compile error.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8752"></a>
+[1.3.6] - 2019-07-25</h1>
+<p>Fix for incorrect selection logic</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8753"></a>
+[1.3.5] - 2019-07-17</h1>
+<p>Minor changes to the TPD and its associated editor</p><ul>
+<li>TPD defaults to "Center Eye - HMD Reference" and Reference Tracking off.</li>
+<li>Warnings for when center eye is not picked, if the TPD is on a camera</li>
+<li>"Center Eye renamed" to "Center Eye - HMD Reference" for clarity</li>
+</ul>
+<p>Adds XR Settings page when using com.unity.xr.management that allows automatic TPD attachment to cameras.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8754"></a>
+[1.3.4] - 2019-07-07</h1>
+<p>Verified package for 2019.3</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8755"></a>
+[1.3.2] - 2019-01-18</h1>
+<p>fixes standalone only compile error</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8756"></a>
+[1.3.1] - 2018-12-17</h1>
+<p>merges 1.0.3 into mainline branch.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8757"></a>
+[1.3.0] - 2018-12-05</h1>
+<p>Adds arm model support for 3dof controllers.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8758"></a>
+[1.2.1] - 2018-10-25</h1>
+<p>Makes the input settings menu pop up when you click the menu item</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8759"></a>
+[1.2.0] - 2018-10-15</h1>
+<p>Adds the XR Binding Input Asset Seeder and associated documentation and tests</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8760"></a>
+[1.1.0] - 2018-10-11</h1>
+<p>Moved some classes internal for cleaner docs.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8761"></a>
+[1.0.3] - 2018-11-09</h1>
+<p>fixes enums erroneously removed</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8762"></a>
+[1.0.2] - 2018-10-25</h1>
+<p>fix for inconsistent line endings in trackedposedriver.cs</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8763"></a>
+[1.0.1] - 2018-10-10</h1>
+<p>ported API documentation from the engine</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8764"></a>
+[1.0.0] - 2018-10-09</h1>
+<p>release prep</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8765"></a>
+[0.0.4] - 2018-10-09</h1>
+<p>ci fixes</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8766"></a>
+[0.0.3] - 2018-10-08</h1>
+<p>fix for changelog values.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8767"></a>
+[0.0.2] - 2018-10-08</h1>
+<p>updated to latest upm package template</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8768"></a>
+[0.0.1] - 2018-10-08</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8769"></a>
+This is the first release of <em>Unity Package XR Tools</em></h2>
+<p>Initial move from XR Tools to Legacy Input Helper package </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

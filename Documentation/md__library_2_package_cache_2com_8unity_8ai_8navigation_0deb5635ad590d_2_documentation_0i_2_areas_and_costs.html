@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Navigation Areas and Costs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_areas_and_costs.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Navigation Areas and Costs </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md254"></a></p>
+<p>The <b>Navigation Area</b> defines how difficult it is to walk across a specific area. This is important for finding the path with the lowest total cost. In addition, each <a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_mesh_agent.html">NavMesh Agent</a> has an <b>Area Mask</b> which you can use to specify which areas the agent can move on.</p>
+<p><img src="./Images/NavMeshAreaType.svg" alt="A scene with a door that only some agents can traverse, and a water area that is more expensive to walk through." style="pointer-events: none;" class="inline"/></p>
+<p>In the example above the area types are used for two common use cases:</p>
+<ul>
+<li>The <b>Water</b> area is made more costly to walk through by assigning it a higher cost, to deal with a scenario where walking in shallow water is slower.</li>
+<li>The <b>Door</b> area is made accessible to specific characters, to create a scenario where humans can walk through doors, but zombies cannot.</li>
+</ul>
+<p>You can assign the area type to every object that is included in the <a href="./Glossary.md#NavMesh" title="A mesh that Unity generates to approximate the walkable areas and obstacles in your environment for path finding and AI-controlled navigation."><b>NavMesh</b></a> baking. In addition, each <b>NavMesh Link</b> has a property to specify the area type.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md255"></a>
+Pathfinding Cost</h1>
+<p>In a nutshell, the cost allows you to control which areas the pathfinder favors when finding a path. For example, if you set the cost of an area to 3.0, traveling across that area is considered to be three times longer than alternative routes.</p>
+<p>To fully understand how the cost works, let’s take a look at how the pathfinder works.</p>
+<p><img src="./Images/NavMeshNodePositions.svg" alt="Nodes and links visited during pathfinding." style="pointer-events: none;" class="inline"/></p>
+<p>Nodes and links visited during pathfinding.</p>
+<p><a class="el" href="namespace_unity.html">Unity</a> uses A* to calculate the shortest path on the NavMesh. A* works on a graph of connected nodes. The algorithm starts from the nearest node to the path start and visits the connect nodes until the destination is reached.</p>
+<p>Since the <a class="el" href="namespace_unity.html">Unity</a> navigation representation is a <a href="./Glossary.md#Mesh" title="The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons."><b>mesh</b></a> of polygons, the first thing the pathfinder needs to do is to place a point on each polygon, which is the location of the node. The shortest path is then calculated between these nodes.</p>
+<p>The yellow dots and lines in the above picture shows how the nodes and links are placed on the NavMesh, and in which order they are traversed during the A*.</p>
+<p>The cost to move between two nodes depends on the distance to travel and the cost associated with the area type of the polygon under the link, that is, <em>distance * cost</em>. In practice this means, that if the cost of an area is 2.0, the distance across such polygon will appear to be twice as long. The A* algorithm requires that all costs must be larger than 1.0.</p>
+<p>The effect of the costs on the resulting path can be hard to tune, especially for longer paths. The best way to approach costs is to treat them as hints. For example, if you want the agents to not use <b>NavMesh Links</b> too often, you could increase their cost. But it can be challenging to tune a behavior where the agents prefer to walk on sidewalks.</p>
+<p>Another thing you may notice on some levels is that the pathfinder does not always choose the shortest path. The reason for this is the node placement. The effect can be noticeable in scenarios where big open areas are next to tiny obstacles, which results in a navigation mesh with very big and small polygons. In such cases the nodes on the big polygons may get placed anywhere in the big polygon and from the pathfinder’s point of view it looks like a detour.</p>
+<p>The <em>cost</em> per <em>area type</em> can be set globally in the <em>Areas</em> tab, or you can override them per agent using a script.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md256"></a>
+Area Types</h1>
+<p><img src="./Images/NavMeshAreaTypeList.png" alt="A table of areas, each showing their cost." class="inline"/></p>
+<p>The area types are specified in the <em>Navigation Window_’s _Areas</em> tab. There are 29 custom types, and 3 built-in types: <em>Walkable</em>, <em>Not Walkable</em>, and <em>Jump</em>.</p>
+<ul>
+<li><b>Walkable</b> is a generic area type which specifies that the area can be walked on.</li>
+<li><b>Not Walkable</b> is a generic area type which prevents navigation. It is useful for cases where you want to mark certain object to be an obstacle, but without getting NavMesh on top of it.</li>
+<li><b>Jump</b> is an area type that is assigned to all auto-generated <b>NavMesh Links</b>.</li>
+</ul>
+<p>If several objects of different area types are overlapping, the resulting NavMesh area type will generally be the one with the highest index. There is one exception however: <em>Not Walkable</em> always takes precedence. Which can be helpful if you need to block out an area.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md257"></a>
+Area Mask</h1>
+<p><img src="./Images/NavMeshAreaMask.svg" alt="The Area Mask dropdown list, with four selected options: Walkable, Not Walkable, Jump, and Water." style="pointer-events: none;" class="inline"/></p>
+<p>Each agent has an <em>Area Mask</em> which describes which areas it can use when navigating. The area mask can be set in the agent properties, or the bitmask can be manipulated using a script at runtime.</p>
+<p>The area mask is useful when you want only certain types characters to be able to walk through an area. For example, in a zombie evasion game, you could mark the area under each door with a <em>Door</em> area type, and uncheck the Door area from the zombie character’s Area Mask.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md258"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_create_nav_mesh.html">Workflow to create a NavMesh.</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_mesh_modifier.html">Use for affecting the NavMesh generation of NavMesh area types based on the transform hierarchy.</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_mesh_modifier_volume.html">Use for affecting the NavMesh generation of NavMesh area types based on volume.</a></li>
+<li><a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.NavMeshAgent-areaMask.html" title="Script API to set which area types an agent can use for movement.">NavMeshAgent.areaMask scripting reference</a></li>
+<li><a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.NavMeshAgent.SetAreaCost.html" title="Script API to set what cost an agent considers for each area type.">NavMeshAgent.SetAreaCost() scripting reference</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

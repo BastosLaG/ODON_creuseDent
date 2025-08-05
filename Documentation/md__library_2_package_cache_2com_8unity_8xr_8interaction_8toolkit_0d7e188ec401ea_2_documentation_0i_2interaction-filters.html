@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: interaction-filters</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2interaction-filters.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">interaction-filters </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8290"></a>
+autotoc_md8290</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8291"></a>
+uid: xri-interaction-filters</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8292"></a>
+Interaction filters</h1>
+<p>Interaction filters are used to add additional checks to an Interactor and Interactable interaction after the base class validations are passed.</p>
+<p>The interaction filters also include an implementation of a filter delegate that forwards the filter processing to a delegate. This enables users to add additional filter logic without needing to create new classes.</p>
+<p>The current interaction filters supported in the XR Interaction Toolkit are:</p>
+<ul>
+<li>Hover filter</li>
+<li>Select filter</li>
+<li>Interaction strength filter</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8293"></a>
+Hover filter</h2>
+<p><a href="xref:UnityEngine.XR.Interaction.Toolkit.Filtering.IXRHoverFilter"><span class="tt">IXRHoverFilter</span></a> is an interface that allows additional filter processing between an <a href="xref:UnityEngine.XR.Interaction.Toolkit.Interactors.IXRHoverInteractor"><span class="tt">IXRHoverInteractor</span></a> and an <a href="xref:UnityEngine.XR.Interaction.Toolkit.Interactables.IXRHoverInteractable"><span class="tt">IXRHoverInteractable</span></a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8294"></a>
+Usage</h3>
+<p>An <span class="tt">IXRHoverFilter</span> can be added to the following objects to extend its hover validation:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Object  </th><th class="markdownTableHeadNone">Usage  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><a href="xref:UnityEngine.XR.Interaction.Toolkit.XRInteractionManager"><span class="tt">XRInteractionManager</span></a></b>  </td><td class="markdownTableBodyNone">A hover filter added to the Interaction Manager is used to validate all hover interactions globally in the manager.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><a href="xref:UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor"><span class="tt">XRBaseInteractor</span></a></b>  </td><td class="markdownTableBodyNone">A hover filter added to an Interactor is used to validate the hover interactions in the Interactor.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><a href="xref:UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable"><span class="tt">XRBaseInteractable</span></a></b>  </td><td class="markdownTableBodyNone">A hover filter added to an Interactable is used to validate the hover interactions in the Interactable.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8295"></a>
+Interface definition</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>bool <span class="tt">canProcess</span></b>  </td><td class="markdownTableBodyNone">Whether this hover filter can process interactions. Hover filters that can process interactions receive calls to <span class="tt">IXRHoverFilter.Process</span>; hover filters that cannot process do not call <span class="tt">IXRHoverFilter.Process</span>. It's recommended to return <span class="tt">isActiveAndEnabled</span> when implementing this interface in a <span class="tt">MonoBehaviour</span>.  </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>bool <span class="tt">Process(IXRHoverInteractor interactor, IXRHoverInteractable interactable)</span></b>  </td><td class="markdownTableBodyNone">Called by the host object (<span class="tt">XRInteractionManager</span>, <span class="tt">XRBaseInteractor</span> or <span class="tt">XRBaseInteractable</span>) to verify if the hover interaction between the given Interactor and Interactable can be performed. Returns <span class="tt">true</span> when the given Interactor can hover the given Interactable. Otherwise, returns <span class="tt">false</span>.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8296"></a>
+Setup</h3>
+<p>Add the implementation of <span class="tt">IXRHoverFilter</span> component to a GameObject and add it to the <span class="tt">Starting Hover Filters</span> property of an <span class="tt">XRInteractionManager</span>, <span class="tt">XRBaseInteractor</span>, or <span class="tt">XRBaseInteractable</span>. Filters in the <span class="tt">Starting Hover Filters</span> list will automatically be linked and applied to their respective host object.</p>
+<p><img src="images/hover-filter-setup.png" alt="hover-filter-setup" class="inline"/></p>
+<p>Multiple hover filters can be added to a single Interaction Manager, Interactor, or Interactable.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8297"></a>
+Example</h3>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.XR.Interaction.Toolkit;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.XR.Interaction.Toolkit.Filtering;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>CustomHoverFilter : MonoBehaviour, <a class="code hl_interface" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_hover_filter.html">IXRHoverFilter</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">bool</span> canProcess =&gt; isActiveAndEnabled;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">bool</span> Process(IXRHoverInteractor interactor, IXRHoverInteractable interactable)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordtype">bool</span> canHover = <span class="keyword">true</span>;</div>
+<div class="line">        <span class="comment">// Do any additional validation checks on the interactor and interactable.</span></div>
+<div class="line">        <span class="keywordflow">return</span> canHover;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="ainterface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_hover_filter_html"><div class="ttname"><a href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_hover_filter.html">UnityEngine.XR.Interaction.Toolkit.Filtering.IXRHoverFilter</a></div><div class="ttdoc">Instances that implement this interface are called hover filters. Hover filters process additional va...</div><div class="ttdef"><b>Definition</b> IXRHoverFilter.cs:34</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md8298"></a>
+Select filter</h2>
+<p><a href="xref:UnityEngine.XR.Interaction.Toolkit.Filtering.IXRSelectFilter"><span class="tt">IXRSelectFilter</span></a> is an interface that allows additional filter processing between an <a href="xref:UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor"><span class="tt">IXRSelectInteractor</span></a> and an <a href="xref:UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable"><span class="tt">IXRSelectInteractable</span></a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8299"></a>
+Usage</h3>
+<p>An <span class="tt">IXRSelectFilter</span> can be added following objects to extend its select validation:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Object  </th><th class="markdownTableHeadNone">Usage  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><a href="xref:UnityEngine.XR.Interaction.Toolkit.XRInteractionManager"><span class="tt">XRInteractionManager</span></a></b>  </td><td class="markdownTableBodyNone">A select filter added to the Interaction Manager is used to validate all select interactions globally in the manager.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><a href="xref:UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor"><span class="tt">XRBaseInteractor</span></a></b>  </td><td class="markdownTableBodyNone">A select filter added to an Interactor is used to validate the select interactions in the Interactor.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><a href="xref:UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable"><span class="tt">XRBaseInteractable</span></a></b>  </td><td class="markdownTableBodyNone">A select filter added to an Interactable is used to validate the select interactions in the Interactable.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8300"></a>
+Interface definition</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>bool <span class="tt">canProcess</span></b>  </td><td class="markdownTableBodyNone">Whether this select filter can process interactions. Select filters that can process interactions receive calls to <span class="tt">IXRSelectFilter.Process</span>. Select filters that cannot process do not call <span class="tt">IXRSelectFilter.Process</span>. It's recommended to return <span class="tt">isActiveAndEnabled</span> when implementing this interface in a <span class="tt">MonoBehaviour</span>.  </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>bool <span class="tt">Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)</span></b>  </td><td class="markdownTableBodyNone">Called by the host object (<span class="tt">XRInteractionManager</span>, <span class="tt">XRBaseInteractor</span> or <span class="tt">XRBaseInteractable</span>) to verify if the select interaction between the given Interactor and Interactable can be performed. Returns <span class="tt">true</span> when the given Interactor can select the given Interactable. Otherwise, returns <span class="tt">false</span>.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8301"></a>
+Setup</h3>
+<p>Add the implementation of <span class="tt">IXRSelectFilter</span> component to a GameObject and add it to the <span class="tt">Starting Select Filters</span> property of an <span class="tt">XRInteractionManager</span>, <span class="tt">XRBaseInteractor</span>, or <span class="tt">XRBaseInteractable</span>. Filters in the <span class="tt">Starting Select Filters</span> list will automatically be linked and applied to their respective host object.</p>
+<p><img src="images/select-filter-setup.png" alt="select-filter-setup" class="inline"/></p>
+<p>Multiple select filters can be added to a single Interaction Manager, Interactor, or Interactable.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8302"></a>
+Example</h3>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.XR.Interaction.Toolkit;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.XR.Interaction.Toolkit.Filtering;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>CustomSelectFilter : MonoBehaviour, <a class="code hl_interface" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_select_filter.html">IXRSelectFilter</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">bool</span> canProcess =&gt; isActiveAndEnabled;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">bool</span> Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordtype">bool</span> canSelect = <span class="keyword">true</span>;</div>
+<div class="line">        <span class="comment">// Do additional validation checks on the interactor and interactable.</span></div>
+<div class="line">        <span class="keywordflow">return</span> canSelect;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="ainterface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_select_filter_html"><div class="ttname"><a href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_select_filter.html">UnityEngine.XR.Interaction.Toolkit.Filtering.IXRSelectFilter</a></div><div class="ttdoc">Instances that implement this interface are called select filters. Select filters process additional ...</div><div class="ttdef"><b>Definition</b> IXRSelectFilter.cs:34</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md8303"></a>
+Interaction strength filter</h2>
+<p><a href="xref:UnityEngine.XR.Interaction.Toolkit.Filtering.IXRInteractionStrengthFilter"><span class="tt">IXRInteractionStrengthFilter</span></a> is an interface used to adjust or set the interaction strength between an <a href="xref:UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractor"><span class="tt">IXRInteractor</span></a> and <a href="xref:UnityEngine.XR.Interaction.Toolkit.Interactables.IXRInteractable"><span class="tt">IXRInteractable</span></a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8304"></a>
+Usage</h3>
+<p>An <span class="tt">IXRInteractionStrengthFilter</span> can be added following objects to extend its interaction strength computation:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Object  </th><th class="markdownTableHeadNone">Usage  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><a href="xref:UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable"><span class="tt">XRBaseInteractable</span></a></b>  </td><td class="markdownTableBodyNone">An interaction strength filter added to an Interactable is used to modify the interaction strength in the Interactable for a hovering or selecting Interactor.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8305"></a>
+Interface definition</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>bool <span class="tt">canProcess</span></b>  </td><td class="markdownTableBodyNone">Whether this interaction strength filter can process interactions. Interaction strength filters that can process interactions receive calls to <span class="tt">IXRInteractionStrengthFilter.Process</span>. Interaction strength filters that cannot process do not receive calls to <span class="tt">IXRInteractionStrengthFilter.Process</span>. It's recommended to return <span class="tt">isActiveAndEnabled</span> when implementing this interface in a <span class="tt">MonoBehaviour</span>.  </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>float <span class="tt">Process(IXRInteractor interactor, IXRInteractable interactable, float interactionStrength)</span></b>  </td><td class="markdownTableBodyNone">Called by the host object (<span class="tt">XRBaseInteractable</span>) to calculate the interaction strength between the given Interactor and Interactable. Returns the modified interaction strength that is the result of passing the interaction strength through the filter.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8306"></a>
+Setup</h3>
+<p>Add the implementation of <span class="tt">IXRInteractionStrengthFilter</span> component to a GameObject and add it to the <span class="tt">Starting Interaction Strength Filters</span> property of an <span class="tt">XRBaseInteractable</span>. Filters in the <span class="tt">Starting Interaction Strength Filters</span> list will automatically be linked and applied to their respective host object.</p>
+<p><img src="images/select-filter-setup.png" alt="select-filter-setup" class="inline"/></p>
+<p>Multiple interaction strength filters can be added to a single Interactable.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8307"></a>
+Example</h3>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.XR.Interaction.Toolkit;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.XR.Interaction.Toolkit.Filtering;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>CustomInteractionStrengthFilter : MonoBehaviour, <a class="code hl_interface" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_interaction_strength_filter.html">IXRInteractionStrengthFilter</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">bool</span> canProcess =&gt; isActiveAndEnabled;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">float</span> Process(IXRInteractor interactor, IXRInteractable interactable, <span class="keywordtype">float</span> interactionStrength)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordtype">float</span> modifiedInteractionStrength = interactionStrength;</div>
+<div class="line">        <span class="comment">// Do any modification the interaction strength value based on the interactor and the interactable.</span></div>
+<div class="line">        <span class="keywordflow">return</span> modifiedInteractionStrength;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="ainterface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_interaction_strength_filter_html"><div class="ttname"><a href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_interaction_strength_filter.html">UnityEngine.XR.Interaction.Toolkit.Filtering.IXRInteractionStrengthFilter</a></div><div class="ttdoc">Instances that implement this interface are called interaction strength filters. Interaction strength...</div><div class="ttdef"><b>Definition</b> IXRInteractionStrengthFilter.cs:21</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md8308"></a>
+Delegates</h2>
+<p><span class="tt">IXRHoverFilter</span>, <span class="tt">IXRSelectFilter</span>, <span class="tt">IXRInteractionStrength</span> each contain an implementation of a filter delegate that forwards the filter processing to a delegate. This enables users to add additional filter logic without needing to create new classes.</p>
+<p>With filter delegates you provide a callback function that runs as the filter's <span class="tt">Process</span> method. Filter delegates also provide access to a <span class="tt">canProcess</span> property as well.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8309"></a>
+Example</h3>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>UnityEngine.XR.Interaction.Toolkit;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.XR.Interaction.Toolkit.Filtering;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>FilterDelegateExampleInteractable : XRBaseInteractable</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Call this method to add the custom filters</span></div>
+<div class="line">    <span class="keywordtype">void</span> SetupFilters()</div>
+<div class="line">    {</div>
+<div class="line">        var hoverFilterDelegate = <span class="keyword">new</span> <a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_hover_filter_delegate.html">XRHoverFilterDelegate</a>((interactor, interactable) =&gt;</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordtype">bool</span> canHover = <span class="keyword">false</span>;</div>
+<div class="line">            <span class="comment">// Do any additional validation checks on the interactor and interactable.</span></div>
+<div class="line">            <span class="keywordflow">return</span> canHover;</div>
+<div class="line">        });</div>
+<div class="line"> </div>
+<div class="line">        var selectFilterDelegate = <span class="keyword">new</span> <a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_select_filter_delegate.html">XRSelectFilterDelegate</a>((interactor, interactable) =&gt;</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordtype">bool</span> canSelect = <span class="keyword">false</span>;</div>
+<div class="line">            <span class="comment">// Do any additional validation checks on the interactor and interactable.</span></div>
+<div class="line">            <span class="keywordflow">return</span> canSelect;</div>
+<div class="line">        });</div>
+<div class="line"> </div>
+<div class="line">        var interactionStrengthFilterDelegate = <span class="keyword">new</span> XRInteractionStrengthFilterDelegate((interactor, interactable, interactionStrength) =&gt;</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordtype">float</span> modifiedInteractionStrength = interactionStrength;</div>
+<div class="line">            <span class="comment">// Do any modification the interaction strength value based on the interactor and the interactable.</span></div>
+<div class="line">            <span class="keywordflow">return</span> modifiedInteractionStrength;</div>
+<div class="line">        });</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Filter delegates can modify the filter&#39;s canProcess property. Example:</span></div>
+<div class="line">        hoverFilterDelegate.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_select_filter_delegate.html#a34c8f2cf86bc24ab12086ddae984e53a">canProcess</a> = <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Link the filter by adding the filter delegate to the filters list to ensure it is processed</span></div>
+<div class="line">        hoverFilters.Add(hoverFilterDelegate);</div>
+<div class="line">        selectFilters.Add(selectFilterDelegate);</div>
+<div class="line">        interactionStrengthFilters.Add(interactionStrengthFilterDelegate);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_hover_filter_delegate_html"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_hover_filter_delegate.html">UnityEngine.XR.Interaction.Toolkit.Filtering.XRHoverFilterDelegate</a></div><div class="ttdoc">A hover filter that forwards its processing to a delegate (delegateToProcess). Useful to create custo...</div><div class="ttdef"><b>Definition</b> IXRHoverFilter.cs:66</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_select_filter_delegate_html"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_select_filter_delegate.html">UnityEngine.XR.Interaction.Toolkit.Filtering.XRSelectFilterDelegate</a></div><div class="ttdoc">A select filter that forwards its processing to a delegate (delegateToProcess). Useful to create cust...</div><div class="ttdef"><b>Definition</b> IXRSelectFilter.cs:66</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_select_filter_delegate_html_a34c8f2cf86bc24ab12086ddae984e53a"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_select_filter_delegate.html#a34c8f2cf86bc24ab12086ddae984e53a">UnityEngine.XR.Interaction.Toolkit.Filtering.XRSelectFilterDelegate.canProcess</a></div><div class="ttdeci">bool canProcess</div><div class="ttdoc">Whether this select filter can process interactions. Select filters that can process interactions rec...</div><div class="ttdef"><b>Definition</b> IXRSelectFilter.cs:73</div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Forest Stream Construction Tutorial</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-753f4ab72edb263411499f5247807405.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Forest Stream Construction Tutorial </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4477"></a></p>
+<p>This tutorial shows you, step by step, how to use the assets included in this sample to construct a forest stream environment.</p>
+<ol type="1">
+<li>Sculpt Terrain</li>
+<li>Paint Terrain Materials</li>
+<li>Add Water Planes</li>
+<li>Add Waterfall Meshes</li>
+<li>Add Rocks</li>
+<li>Add Water Decals</li>
+<li>Add Reflection Probes</li>
+<li>Add Terrain Detail Meshes Additional Ideas</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4478"></a>
+<a class="anchor" id="step-1"></a>Step 1 - Sculpt Terrain</h1>
+<ol type="1">
+<li>Start by blocking out the main shapes of the terrain. Use the <b>Set Height</b> brush to create a sloping terrain by creating a series of terraces and then use the <b>Smooth</b> brush to smooth out the hard edges between the terraces.</li>
+<li>Cut in the stream channel with the <b>Set Height</b> brush in several different tiers heading down the slope. After you cut in the stream, smooth out the hard edges with the <b>Smooth</b> brush.</li>
+<li>Add polish to finalize the terrain shape. Use the <b>Raise/Lower Height</b> brush and the <b>Smooth</b> brush to add touch-ups and variety. In this process, start out with large brushes and end with the small ones.</li>
+</ol>
+<p>When this step is done, you can revisit the terrain shape occasionally to add additional touch ups, especially after adding in the water meshes in steps 3 and 4, to ensure that the water meshes and terrain shape work together.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4479"></a>
+<a class="anchor" id="step-2"></a>Step 2 - Paint Terrain Materials</h1>
+<p>Next, it’s time to add materials to our terrain. We have four material layers - cobblestone rocks for our stream bed, dry dirt, rocky moss, and mossy grass. To apply the materials, we begin by establishing guidelines. The stones material goes in the stream bed. The dirt material goes along the banks of the stream. As a transition between the first and the grass, we use the rocky moss material. And finally, we use the grass material for the background.</p>
+<ol type="1">
+<li>First block in the materials according to the guidelines with large, hard-edged brushes.</li>
+<li>Then we go back and blend the materials together using smaller brushes. Paint one material over the other using brushes with a low opacity value to blend the two materials together.</li>
+</ol>
+<p>Even though our terrain materials exhibit tiling artifacts by themselves, we’re able to hide the tiling by giving each material a different tiling frequency. When the materials are blended, they break up each others tiling artifacts. We also cover the terrain with detail meshes (step 7) which further hides the tiling.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4480"></a>
+<a class="anchor" id="step-3"></a>Step 3 - Add Water Planes</h1>
+<p>The stream itself is constructed from simple planes that are added to the scene.</p><ol type="1">
+<li>Right-click in the Hierarchy panel and select <b>3D Object</b>&gt;<b>Plane</b>.</li>
+<li>Then apply the WaterStream material. <br  />
+</li>
+<li>Place the planes in the stream channel that’s cut into the terrain.</li>
+<li>Scale the planes along the Z axis to stretch them along the length of the stream. Water flows in the local -Z direction of the planes. Planes are scaled as long as they need to be in order to reach from one stream height drop to the next.</li>
+</ol>
+<p>Notice that the edges of the stream mesh are transparent at the start and at the end. This is to allow the stream meshes to blend together correctly with the waterfall meshes that link the stream planes together.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4481"></a>
+<a class="anchor" id="step-4"></a>Step 4 - Add Waterfall Meshes</h1>
+<p>The waterfall meshes are designed to connect one level of stream plane to the next lower level.</p><ol type="1">
+<li>Place the waterfall meshes at the end of a stream plane. They slope down to connect to the next stream plane.</li>
+<li><a class="el" href="class_rotate.html">Rotate</a> the waterfall meshes around the Y axis to align the waterfall mesh between the two stream planes.</li>
+<li>Scale the waterfall mesh on the Y axis so that the bottom portion of the waterfall mesh aligns with the lower stream plane. The pivot point of the waterfall is lined up vertically with the top portion of the waterfall, so you can place the waterfall mesh at the exact same height as the top stream plane, and then scale to meet the lower stream plane.</li>
+</ol>
+<p>Notice that the Sorting Priority parameter in the Advanced Options of the material has been set to -1. This makes the waterfall meshes draw behind the stream meshes so there isn’t a draw order conflict.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4482"></a>
+<a class="anchor" id="step-5"></a>Step 5 - Add Rocks</h1>
+<p>Streams are often filled with rocks that have been pushed by the current. To save memory and reduce draw calls, we’re just using two different rock meshes that both use the same texture set.</p><ol type="1">
+<li>Place rocks at random intervals along the length of the stream.</li>
+<li><a class="el" href="class_rotate.html">Rotate</a> and scale the rocks to give a variety of appearances.</li>
+</ol>
+<p>Notice that we’ve created visual variety by creating two different sizes of rocks - large boulders, and smaller rocks. Overall, the rocks break up the shape of the stream and change the pattern of the foam on the water surface.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4483"></a>
+<a class="anchor" id="step-6"></a>Step 6 - Add Water Decals</h1>
+<p>We use the Water Wetness and Water Caustics decal to more tightly integrate the stream water with the terrain and rocks. The Wetness decal makes the terrain and other meshes around the stream look like they’re wet, and the Caustics decal imitates the appearance of lighting getting refracted by the surface of the water and getting focused in animated patterns on the bottom of the stream.</p>
+<ol type="1">
+<li>Create and scale the Wetness decals so that the top of the decal extends around half a meter above the surface of the water. The top of the Caustics decal should be just under the water.</li>
+<li>Create and scale the caustics decals so that the caustic patterns are only projected under the water planes.</li>
+</ol>
+<p>For both decals, the decal volumes should be kept as small as possible in all three dimensions - just large enough to cover their intended use and no larger. You can also save some performance by lowering the Draw Distance parameter on each decal so they are not drawn at a distance.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4484"></a>
+<a class="anchor" id="step-7"></a>Step 7 - Add Reflection Probes</h1>
+<p>Reflections are a critical component of realistic-looking water.</p><ol type="1">
+<li>To improve the appearance of the water reflections, create a Reflection Probe for each of the stream segments and place it at about head height and in the middle of the stream. If there are objects like rocks and trees nearby, they will be captured in the Reflection Probes and then reflected more accurately in the water.</li>
+</ol>
+<p>Especially notice how water to the right of this point correctly reflects the high bank behind the signs while water to the left only reflects the sky. The Reflection Probes contribute this additional realism.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4485"></a>
+<a class="anchor" id="step-8"></a>Step 8 - Add Terrain Detail Meshes</h1>
+<p>Our last step is to add detail meshes to the terrain.</p><ol type="1">
+<li>Add pebble meshes everywhere, including under the water.</li>
+<li>Add broad-leaf nettle plants around the edges of the water in the dirt areas.</li>
+<li>Add ferns (3 variations) just above the nettle in the transition between dirt and grass.</li>
+<li>Add clover in between the ferns and the grass.</li>
+<li>For the grass, add the three different meshes. Each of them fade out at a different distance from the camera to soften the fade-out so that it doesn’t happen all at once. The most dense grass is only visible at 10 meters from the camera to improve performance. Paint the three different grass layers somewhat randomly with all three layers being applied where the terrain grass material is most dense and the most sparse grass being painted around the edges. Each grass mesh also has slightly different wind direction and intensity values in the material to give variety to the grass appearance. Only one of the three grass meshes has shadows turned on - which gives the impression of grass shadows without paying the full performance cost.</li>
+</ol>
+<p>To save on performance, our terrain is set to fade out the detail meshes at 30 meters. This allows us to achieve a nice density of meshes up close and then get rid of them further away where they’re not as visible. We hide the transition by dither fading the meshes in the shader before the 30 meter point so there’s no popping.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4486"></a>
+<a class="anchor" id="additional-ideas"></a>Additional Ideas</h1>
+<p>We have a pretty nice looking environment here, but there’s a lot more that could be done. You could complete this environment by adding your own trees, stumps and fallen logs. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

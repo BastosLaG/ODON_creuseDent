@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: srp-using-scriptable-render-context</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_055a2d33a81db61dc78264d7b15b8ca62.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">srp-using-scriptable-render-context </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2900"></a>
+autotoc_md2900</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2901"></a>
+uid: um-srp-using-scriptable-render-context</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2902"></a>
+Execute rendering commands in a custom render pipeline</h1>
+<p>This page explains how to schedule and execute rendering commands in the Scriptable Render Pipeline (SRP)ScriptableRenderPipeline, either by using CommandBuffers or by making direct API calls to the ScriptableRenderContext. The information on this page is applicable to the Universal Render Pipeline (URP), the High Definition Render Pipeline (HDRP), and custom render pipelines that are based on SRP.</p>
+<p>In SRP, you use C# scripts to configure and schedule rendering commands. You then tell <a class="el" href="namespace_unity.html">Unity</a>'s low-level graphics architecture to execute them, which sends instructions to the graphics API.</p>
+<p>The main way of doing this is by making API calls to the ScriptableRenderContext, but you can also execute CommandBuffers immediately.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2903"></a>
+Using the ScriptableRenderContext APIs</h2>
+<p>In SRP, the ScriptableRenderContext class acts as an interface between the C# render pipeline code and <a class="el" href="namespace_unity.html">Unity</a>'s low-level graphics code. SRP rendering works using delayed execution; you use the ScriptableRenderContext to build up a list of rendering commands, and then you tell <a class="el" href="namespace_unity.html">Unity</a> to execute them. <a class="el" href="namespace_unity.html">Unity</a>'s low-level graphics architecture then sends instructions to the graphics API.</p>
+<p>To schedule rendering commands, you can:</p>
+<ul>
+<li>Pass <a href="xref:UnityEngine.Rendering.CommandBuffer">CommandBuffers</a> to the ScriptableRenderContext, using <a href="xref:UnityEngine.Rendering.ScriptableRenderContext.ExecuteCommandBuffer(UnityEngine.Rendering.CommandBuffer)">ScriptableRenderContext.ExecuteCommandBuffer</a></li>
+<li>Make direct API calls to the Scriptable Render Context, such as <a href="xref:UnityEngine.Rendering.ScriptableRenderContext.Cull(UnityEngine.Rendering.ScriptableCullingParameters&amp;)">ScriptableRenderContext.Cull</a> or <a href="xref:UnityEngine.Rendering.ScriptableRenderContext.DrawRenderers(UnityEngine.Rendering.CullingResults,UnityEngine.Rendering.DrawingSettings&amp;,UnityEngine.Rendering.FilteringSettings&amp;)">ScriptableRenderContext.DrawRenderers</a></li>
+</ul>
+<p>To tell <a class="el" href="namespace_unity.html">Unity</a> to perform the commands that you have scheduled, call <a href="xref:UnityEngine.Rendering.ScriptableRenderContext.Submit">ScriptableRenderContext.Submit</a>. Note that it does not matter whether you used a CommandBuffer to schedule the command, or whether you scheduled the command by calling an API; <a class="el" href="namespace_unity.html">Unity</a> schedules all rendering commands on the ScriptableRenderContext in the same way, and does not execute any of them until you call <span class="tt">Submit()</span>.</p>
+<p>This example code demonstrates how to schedule and perform a command to clear the current render target, using a CommandBuffer.</p>
+<div class="fragment"><div class="line"> -csharp</div>
+<div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.Rendering;</div>
+<div class="line"> </div>
+<div class="line">public class ExampleRenderPipeline : RenderPipeline</div>
+<div class="line">{</div>
+<div class="line">        public ExampleRenderPipeline() {</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">    protected override void Render(ScriptableRenderContext context, Camera[] cameras) {</div>
+<div class="line">        // Create and schedule a command to clear the current render target</div>
+<div class="line">        var cmd = new CommandBuffer();</div>
+<div class="line">        cmd.ClearRenderTarget(true, true, Color.red);</div>
+<div class="line">        context.ExecuteCommandBuffer(cmd);</div>
+<div class="line">        cmd.Release();</div>
+<div class="line"> </div>
+<div class="line">         // Tell the Scriptable Render Context to tell the graphics API to perform the scheduled commands</div>
+<div class="line">        context.Submit();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md2904"></a>
+Executing CommandBuffers immediately</h2>
+<p>You can execute CommandBuffers immediately without using the ScriptableRenderContext, by calling <a href="xref:UnityEngine.Graphics.ExecuteCommandBuffer(UnityEngine.Rendering.CommandBuffer)">Graphics.ExecuteCommandBuffer</a>. Calls to this API take place outside of the render pipeline.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2905"></a>
+Additional information</h2>
+<p>For more information on commands that you can schedule using CommandBuffers, see <a href="xref:UnityEngine.Rendering.CommandBuffer">CommandBuffers API documentation</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Debugging and profiling tools</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2debugging-profiling-tools.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Debugging and profiling tools </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md904"></a></p>
+<p>The following sections describe how to debug and profile your Burst-compiled code in the Editor and in Player builds.</p>
+<p>&gt;[!TIP] &gt;Before attempting to debug Burst-compiled code, enable script debugging for the Editor, or a Player build by following the steps in [Debug C# code in <a class="el" href="namespace_unity.html">Unity</a>](xref:ManagedCodeDebugging). Although you can theoretically debug Burst-compiled code even when the script compilation mode is set to Release, in practice it doesn't work reliably. Breakpoints might be skipped, and variables might not appear in the Locals window, for example.</p>
+<p><a class="anchor" id="debugging-in-editor"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md905"></a>
+Debugging Burst-compiled code in the Editor</h1>
+<p>To debug Burst-compiled code in the Editor, you can either use a managed debugger or a native debugger. This section explains both options.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md906"></a>
+Attach a managed debugger</h2>
+<p>You can attach a managed debugger such as Visual Studio or <a class="el" href="namespace_jet_brains.html">JetBrains</a> <a class="el" href="namespace_rider.html">Rider</a>. This is the same type of debugger you can use to debug regular managed C# code in your <a class="el" href="namespace_unity.html">Unity</a> project.</p>
+<p>When you place a breakpoint inside Burst-compiled code, and you have a managed debugger attached, <a class="el" href="namespace_unity.html">Unity</a> disables <a class="el" href="namespace_burst.html">Burst</a> automatically for that code path. This allows you to use a managed debugger to debug the managed version of your code. When you remove all breakpoints from that code path, <a class="el" href="namespace_unity.html">Unity</a> re-enables <a class="el" href="namespace_burst.html">Burst</a> for that code path.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md907"></a>
+Attach a native debugger</h2>
+<p>You can attach a native debugger such as Visual Studio or Xcode. Before doing so, you need to disable <a class="el" href="namespace_burst.html">Burst</a> optimizations. You can do this in the following ways:</p>
+<ul>
+<li>Use the <b>Native Debug Mode Compilation</b> setting in the Editor <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2editor-burst-menu.html">Burst menu</a> (<b>Jobs</b> &gt; <b><a class="el" href="namespace_burst.html">Burst</a></b> &gt; <b>Native Debug Mode Compilation</b>). <b>Important:</b> This setting disables optimizations across all jobs, which impacts the performance of <a class="el" href="namespace_burst.html">Burst</a> code. If you want to disable optimizations only for a specific job, use the other option in this list.</li>
+<li><p class="startli">Add the <span class="tt">Debug = true</span> flag to your job, which disables optimizations and enables debugging on that specific job:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   [BurstCompile(Debug = <span class="keyword">true</span>)]</div>
+<div class="line">   <span class="keyword">public</span> <span class="keyword">struct </span>MyJob : IJob</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// ...</span></div>
+<div class="line">   }</div>
+</div><!-- fragment --><p class="startli">&gt;[!TIP] &gt;Player builds pick up the <span class="tt">Debug</span> flag, so you can also use this to debug a Player build.</p>
+</li>
+</ul>
+<p>To attach a native debugger to the <a class="el" href="namespace_unity.html">Unity</a> Editor process, refer to <a class="el" href="#native-debugging">native debugging</a>.</p>
+<p><a class="anchor" id="debugging-in-player"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md908"></a>
+Debugging Burst-compiled code in a Player build</h1>
+<p>Because of how <a class="el" href="namespace_unity.html">Unity</a> builds the code for a Player, you need to tell the debugging tool where to find the symbols. To do this, point the tool to the folder that contains the <span class="tt">lib_burst_generated</span> files, which is usually in the <span class="tt">Plugins</span> folder.</p>
+<p>To debug Burst-compiled code in a Player build, you need to attach a native debugger (such as Visual Studio or Xcode) to the player process. Before doing so, you need to:</p>
+<ul>
+<li>Enable symbol generation. You can do this in either of two ways:<ul>
+<li>Enable the <b>Development Build</b> option before you build the Player, or</li>
+<li>Enable the <b>Force Debug Information</b> option in <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2building-aot-settings.html">Burst AOT Player Settings</a></li>
+</ul>
+</li>
+<li>Disable <a class="el" href="namespace_burst.html">Burst</a> optimizations. You can do this in either of two ways:<ul>
+<li>Disable the <b>Enable Optimizations</b> option in <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2building-aot-settings.html">Burst AOT Player Settings</a>. <b>Important:</b> This setting disables optimizations across all jobs, which impacts the performance of <a class="el" href="namespace_burst.html">Burst</a> code. If you want to disable optimizations only for a specific job, use the other option in this list.</li>
+<li><p class="startli">Add the <span class="tt">Debug = true</span> flag to your job, which disables optimizations and enables debugging on that specific job:</p>
+<p class="startli"><span class="tt">c#
+        [BurstCompile(Debug = true)]
+        public struct MyJob : IJob
+        {
+            // ...
+        }
+        </span></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>To attach a native debugger to the player process, refer to <a class="el" href="#native-debugging">native debugging</a>.</p>
+<p><a class="anchor" id="native-debugging"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md909"></a>
+Native debugging</h1>
+<p>Follow the previous instructions to set up native debugging correctly for the <a class="el" href="#debugging-in-editor">Editor</a> or a <a class="el" href="#debugging-in-player">Player build</a>. Then, attach a native debugger such as Visual Studio or Xcode.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md910"></a>
+Native debugging limitations</h2>
+<ul>
+<li>Native debuggers can't discover lambda captures on <span class="tt">Entity.ForEach</span>, so you can't inspect variables originating from these.</li>
+<li>Structs that use <a href="https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.layoutkind?view=net-6.0"><span class="tt">[StructLayout(LayoutKind=Explicit)]</span></a> and have overlapping fields are represented by a struct that hides one of the overlaps.</li>
+</ul>
+<p>Types that are nested, are namespaced in C/C++ style. e.g.</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">namespace </span>Pillow</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">struct </span>Spot</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">public</span> <span class="keyword">struct </span>SubSpot</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keyword">public</span> <span class="keywordtype">int</span> a;</div>
+<div class="line">            <span class="keyword">public</span> <span class="keywordtype">int</span> b;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">int</span> a;</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">int</span> b;</div>
+<div class="line">        <span class="keyword">public</span> SubSpot sub;</div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>You would refer to SubSpot as Pillow::Spot::SubSpot in this case (for instance if you were trying to cast a pointer in a debugger watch window).</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md911"></a>
+Code-based breakpoints</h2>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports code-based breakpoints through the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.debugger.break?view=net-6.0"><span class="tt">System.Diagnostics.Debugger.Break</span></a> method. This method generates a debug trap in your code. You must attach a debugger to your code so that it can intercept the break. Breakpoints trigger whether you've attached a debugger or not.</p>
+<p><a class="el" href="namespace_burst.html">Burst</a> adds information to track local variables, function parameters and breakpoints. If your debugger supports conditional breakpoints, use these over adding breakpoints in your code, because they only fire when you've attached a debugger.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md912"></a>
+Profiling Burst-compiled code</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md913"></a>
+Profiling using standalone profiling tools</h2>
+<p>You can use profiling tools (such as Instruments or Superluminal) to profile Burst-compiled code in a Player build. Because of how <a class="el" href="namespace_unity.html">Unity</a> builds the code for a Player, you need to tell the profiling tool where to find the symbols. To do this, point the tool to the folder that contains the <span class="tt">lib_burst_generated</span> files, which is usually in the <span class="tt">Plugins</span> folder.</p>
+<p><a class="anchor" id="profiler-markers"></a></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md914"></a>
+Unity Profiler markers</h2>
+<p>To improve the data you get from <a class="el" href="namespace_unity.html">Unity</a> Profiler (either for Burst-compiled code running in the Editor or in an attached player), you can create <a class="el" href="namespace_unity.html">Unity</a> Profiler markers from <a class="el" href="namespace_burst.html">Burst</a> code by calling <span class="tt">new ProfilerMarker("MarkerName")</span>:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class </span>ProfilerMarkerWrapper</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> readonly ProfilerMarker StaticMarker = <span class="keyword">new</span> ProfilerMarker(<span class="stringliteral">&quot;TestStaticBurst&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    [BurstCompile(CompileSynchronously = <span class="keyword">true</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> CreateAndUseProfilerMarker(<span class="keywordtype">int</span> start)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">using</span> (StaticMarker.Auto())</div>
+<div class="line">        {</div>
+<div class="line">            var p = <span class="keyword">new</span> ProfilerMarker(<span class="stringliteral">&quot;TestBurst&quot;</span>);</div>
+<div class="line">            p.Begin();</div>
+<div class="line">            var result = 0;</div>
+<div class="line">            <span class="keywordflow">for</span> (var i = start; i &lt; start + 100000; i++)</div>
+<div class="line">            {</div>
+<div class="line">                result += i;</div>
+<div class="line">            }</div>
+<div class="line">            p.End();</div>
+<div class="line">            <span class="keywordflow">return</span> result;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md915"></a>
+Additional resources</h1>
+<ul>
+<li>[Debug C# code in <a class="el" href="namespace_unity.html">Unity</a>](xref:um-managed-code-debugging) </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

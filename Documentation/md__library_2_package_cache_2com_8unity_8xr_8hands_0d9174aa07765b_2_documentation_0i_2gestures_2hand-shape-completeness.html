@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: hand-shape-completeness</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8hands_0d9174aa07765b_2_documentation_0i_2gestures_2hand-shape-completeness.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">hand-shape-completeness </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md7692"></a>
+autotoc_md7692</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7693"></a>
+uid: xrhands-handshape-completeness-calculator</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7694"></a>
+Hand Shape Completeness Calculator Component</h1>
+<p>The <b>Hand Shape Completeness Calculator</b> component evaluates how closely the current hand shape matches a predefined target [hand shape](xref:xrhands-hand-shapes).</p>
+<p><img src="../images/gestures/hand-shape-completeness-calculator-component.png" alt="The Hand Shape Completeness Calculator component" class="inline"/><br  />
+<em>The Hand Shape Completeness Calculator component</em></p>
+<p>The completeness calculation is based on comparing the current detected finger shapes with each <a href="xref:UnityEngine.XR.Hands.Gestures.XRFingerShapeCondition.Target">finger shape condition target</a> defined for the desired hand shape. A finger shape condition is considered met if the detected finger shape value falls within the tolerance range defined by:</p>
+<p><span class="tt">[desired value - lower tolerance, desired value + upper tolerance]</span></p>
+<p>The hand shape completeness score, ranging from 0.0 to 1.0, represents the average accuracy of all finger shape conditions.</p>
+<ul>
+<li>1.0: All finger shape conditions are met, indicating a perfect match.</li>
+<li>0.0: None of the conditions are met, indicating no match.</li>
+</ul>
+<p>This score is used to update the progress bar UI in the <a href="xref:xrhands-understand-gesture-debugger#handshape-debug-panel--hand-shape-completeness-debugger">Hand Shape Completeness Debugger</a>.</p>
+<p><img src="../images/gestures/hand-shape-completeness-demo.png" alt="The handshape completeness debugger" class="inline"/><br  />
+<em>The progress bar shows the left hand performing an incomplete grab shape and the right hand performing a full grab shape.</em></p>
+<dl class="section important"><dt>Important</dt><dd>You must import the <b>Gestures</b> sample provided by the XR Hands package to use the <b>Hand Shape Completeness Calculator</b> component. Refer to <a href="xref:xrhands-manual#samples">Samples</a> for instructions.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7695"></a>
+Add Hand Shape Completeness Calculator Component</h2>
+<p>To use the <b>Hand Shape Completeness Calculator</b> component, follow these steps:</p>
+<ol type="1">
+<li><p class="startli"><b>Set Up the XR Scene</b></p>
+<p class="startli">Ensure your XR scene is configured with an <b>XR Origin</b>. For guidance, please refer to [Scene Setup](xref:xrhands-scene-setup).</p>
+</li>
+<li><p class="startli"><b>Add the Calculator Component</b></p>
+<p class="startli">Create a new GameObject in your scene and attach the <b>Hand Shape Completeness Calculator</b> component to it.</p>
+</li>
+<li><p class="startli"><b>Reference the Calculator Component and Target Hand Shape</b></p>
+<p class="startli">Create a test script. In this script:</p><ul>
+<li>Add a reference to the <b>Hand Shape Completeness Calculator</b> component.</li>
+<li>Add a reference to the target <b>Hand Shape</b> asset.</li>
+</ul>
+</li>
+<li><p class="startli"><b>Calculate the Completeness Score</b></p>
+<p class="startli">Use the <span class="tt">TryCalculateHandShapeCompletenessScore</span> method in your script to calculate the hand shape completeness score. Example:</p>
+<div class="fragment"><div class="line">[SerializeField]</div>
+<div class="line">HandShapeCompletenessCalculator m_HandShapeCompletenessCalculator;</div>
+<div class="line"> </div>
+<div class="line">[SerializeField]</div>
+<div class="line">XRHandShape m_HandShape;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line"><span class="keywordtype">void</span> Update()</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">// ...</span></div>
+<div class="line">   var handShapeCompletenessScore = 0f;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordflow">if</span> (hand.isTracked &amp;&amp; m_HandShapeCompletenessCalculator.TryCalculateHandShapeCompletenessScore(</div>
+<div class="line">      hand, m_HandShape, out handShapeCompletenessScore))</div>
+<div class="line">   {</div>
+<div class="line">      <span class="comment">// ...</span></div>
+<div class="line">   }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p class="startli">Refer to the <span class="tt">XRHandShapeDebugUI</span> script in the <span class="tt">Gestures</span> sample for a complete example of how the calculator is implemented in the sample scene.</p>
+</li>
+</ol>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7696"></a>
+Customize the Completeness Calculation Method</h2>
+<p>To prevent abrupt changes in the completeness score near the boundaries of the valid condition range, you can apply smoothing techniques. These techniques ensure smoother transitions and avoid sudden jumps in the score.</p>
+<p>Two smoothing methods are demonstrated in the <span class="tt">HandShapeCompletenessCalculator</span> script in the <span class="tt">Gestures</span> sample:</p>
+<ul>
+<li><span class="tt">CalculateScoreWithExternalBuffer</span>: Uses a smoothing buffer outside the tolerance range to adjust the score gradually. This is the default smoothing method used in the sample code. <dl class="section note"><dt>Note</dt><dd>The plot below demonstrates the external buffer method for smoothing the completeness score using linear interpolation. The target finger shape condition has a desired value of 0.5, with a lower tolerance of 0.2, and an upper tolerance of 0.3. External buffer size is set to 0.1 in the example.</dd></dl>
+<img src="../images/gestures/hand-shape-completeness-external-buffer.png" alt="A diagram illustrating how completeness score is smoothed using external buffers" class="inline"/><br  />
+<em>External smoothing buffers refine completeness scores for smoother transitions</em> <br  />
+</li>
+<li><span class="tt">CalculateScoreWithInternalBuffer</span>: Smooths the score based on values within the tolerance range.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>The plot below demonstrates the internal buffer method for smoothing the completeness score using linear interpolation. The target finger shape condition has a desired value of 0.5, with a lower tolerance of 0.2 and an upper tolerance of 0.3.</dd></dl>
+<p><img src="../images/gestures/hand-shape-completeness-internal-buffer.png" alt="A diagram illustrating how completeness score is smoothed using internal smoothing buffers" class="inline"/><br  />
+<em>Internal smoothing buffers refine completeness scores for smoother transitions</em></p>
+<p>These examples provide flexibility, allowing you to select or customize the approach that best fits your requirements. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

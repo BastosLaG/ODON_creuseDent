@@ -1,0 +1,11 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_smart_tw62978af32735b33cabd77d948da70a6f =
+[
+    [ "SmartFollowVector3TweenableVariable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_smart_tw62978af32735b33cabd77d948da70a6f.html#a48347bfbc761b2f5265cc17ba42c3dfc", null ],
+    [ "HandleSmartTween", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_smart_tw62978af32735b33cabd77d948da70a6f.html#aa0c2dbdf683327e22c0b4fca272e59b6", null ],
+    [ "IsNewTargetWithinThreshold", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_smart_tw62978af32735b33cabd77d948da70a6f.html#a82ce54e827242a54fc0c3b7ec9db57b2", null ],
+    [ "OnTargetChanged", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_smart_tw62978af32735b33cabd77d948da70a6f.html#a20f27eb688483cb23b8dc916890b202b", null ],
+    [ "SetTargetWithinThreshold", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_smart_tw62978af32735b33cabd77d948da70a6f.html#a14eb1ed7721b481ab13a471883bc4b03", null ],
+    [ "maxDistanceAllowed", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_smart_tw62978af32735b33cabd77d948da70a6f.html#ac0a98c27cff2229cb6d34acc623d9299", null ],
+    [ "minDistanceAllowed", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_smart_tw62978af32735b33cabd77d948da70a6f.html#a2cd16b22847563b5dff78341e326fa6b", null ],
+    [ "minToMaxDelaySeconds", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_smart_tw62978af32735b33cabd77d948da70a6f.html#a7f9fcfa4fb7bdb0a18b98f2c2151d6c1", null ]
+];

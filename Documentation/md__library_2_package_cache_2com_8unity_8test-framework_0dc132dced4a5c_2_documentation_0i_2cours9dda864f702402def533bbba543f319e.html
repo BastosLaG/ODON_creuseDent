@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: 8\. Performance Tests</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2cours9dda864f702402def533bbba543f319e.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">8. Performance Tests </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5310"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5311"></a>
+Learning Objectives</h1>
+<p>One final thing we'll explore is a package that extends <a class="el" href="namespace_unity.html">Unity</a> Test Framework with Performance <a class="el" href="class_tests.html">Tests</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5312"></a>
+Exercise</h1>
+<p>The Performance Testing package can be used to measure performance in our game. This is a great tool if we want to track various regressions/progressions that happen over time in our project. In this example, you'll learn how to create a test that measures game average frames.</p>
+<ol type="1">
+<li>LostCrypt does not include the Performance Testing package installed by default. Install it by following <a href="https://docs.unity3d.com/Packages/com.unity.test-framework.performance@2.8/manual/index.html">these instructions</a>.</li>
+<li>Add the package as a dependency to the <a href="https://docs.unity3d.com/Manual/upm-manifestPrj.html">project manifest</a>.</li>
+<li>When the package is installed, add a reference to <span class="tt"><a class="el" href="namespace_unity_1_1_performance_testing.html">Unity.PerformanceTesting</a></span> in your <b>PlayModeTests</b> assembly definition to access the performance testing APIs.</li>
+<li>Create a new C# class under <b>Assets/Tests/PlayModeTests</b> called <b>PerformanceTests.cs</b>.</li>
+</ol>
+<p>You're now ready to complete your objective. In <span class="tt">PerformanceTests.cs</span> create a new function called <span class="tt">MainScene_MeasureAverageFrames()</span>. In this function move your character to the wand position and wait until the wand pickup effect is over. During all that time, measure the frames. <br  />
+</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5313"></a>
+Bonus</h1>
+<ul>
+<li>Try to measure the average FPS in LostCrypt. You might need to use <span class="tt">Time.deltaTime</span> from <a class="el" href="namespace_unity_engine.html">UnityEngine</a> API and <span class="tt">Measure.Custom</span> from the Performance Testing package API.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5314"></a>
+Hints</h1>
+<ul>
+<li>The first handful of frames after loading Scene are usually unstable, let's utilize the <span class="tt">Measure.Frames().Scope()</span> API to measure them into a separate scope.</li>
+<li>After your test finishes, performance results can be viewed under <b>Window &gt; Analysis &gt; Performance Test Report</b> or you can even hook into results using <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/extension-get-test-results.html">Callback API</a>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5315"></a>
+Solution</h1>
+<p>PerformanceTests.cs </p><div class="fragment"><div class="line">using System.Collections;</div>
+<div class="line">using Unity.PerformanceTesting;</div>
+<div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.TestTools;</div>
+<div class="line">using UnityEngine.SceneManagement;</div>
+<div class="line"> </div>
+<div class="line">public class PerformanceTests</div>
+<div class="line">{</div>
+<div class="line">    private Transform _characterTransform;</div>
+<div class="line">    private float _wandLocation = 21.080f;</div>
+<div class="line">        </div>
+<div class="line">    [UnityTest, Performance]</div>
+<div class="line">    public IEnumerator MainScene_MeasureAverageFrames()</div>
+<div class="line">    {</div>
+<div class="line">        SceneManager.LoadScene(&quot;Assets/Scenes/Main.unity&quot;, LoadSceneMode.Single);</div>
+<div class="line">        using (Measure.Frames().Scope(&quot;Frames.MainSceneOnLoad.Unstable&quot;))</div>
+<div class="line">        {</div>
+<div class="line">            for (var i = 0; i &lt; 25; i++)</div>
+<div class="line">            {</div>
+<div class="line">                yield return null;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        using (Measure.Frames().Scope(&quot;Frames.MainSceneGameplay&quot;))</div>
+<div class="line">        {</div>
+<div class="line">            yield return GoRight();</div>
+<div class="line">            while (GetCurrentCharacterPosition() &lt;= _wandLocation)</div>
+<div class="line">            {</div>
+<div class="line">                yield return null;</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">            StopMoving();</div>
+<div class="line">            yield return new WaitForSeconds(15);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private float GetCurrentCharacterPosition()</div>
+<div class="line">    {</div>
+<div class="line">        // Get Main character&#39;s Transform which is used to manipulate position.</div>
+<div class="line">        if (_characterTransform == null)</div>
+<div class="line">        {</div>
+<div class="line">            _characterTransform = GameObject.Find(&quot;Sara Variant&quot;).transform;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        return _characterTransform.position.x;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private IEnumerator GoRight()</div>
+<div class="line">    {</div>
+<div class="line">        TestInputControl.MoveLeft = false;</div>
+<div class="line">        yield return null;</div>
+<div class="line">        TestInputControl.MoveRight = true;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private void StopMoving()</div>
+<div class="line">    {</div>
+<div class="line">        TestInputControl.MoveRight = false;</div>
+<div class="line">        TestInputControl.MoveLeft = false;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Bonus Solution</p>
+<p><span class="tt">Measure.Custom("FPS", (int)(1f / Time.deltaTime));</span> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

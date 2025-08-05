@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: NoAlias attribute</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2aliasing-noalias.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">NoAlias attribute </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md772"></a></p>
+<p>Use the <a href="xref:Unity.Burst.NoAliasAttribute"><span class="tt">[NoAlias]</span></a> attribute to give <a class="el" href="namespace_burst.html">Burst</a> additional information on the aliasing of pointers and structs.</p>
+<p>In most use cases, you won't need to use the <span class="tt">[NoAlias]</span> attribute. You don't need to apply it to a struct definition that already has a <a href="xref:Unity.Collections.LowLevel.Unsafe.NativeContainerAttribute"><span class="tt">[NativeContainer]</span></a> attribute or to fields in job structs because in these cases <a class="el" href="namespace_burst.html">Burst</a> infers the no-alias information.</p>
+<p>The <span class="tt">[NoAlias]</span> attribute is exposed so that you can construct complex data structures where <a class="el" href="namespace_burst.html">Burst</a> can't infer the aliasing. If you use the <span class="tt">[NoAlias]</span> attribute on a pointer that could alias with another, it might result in undefined behavior and make it hard to track down bugs.</p>
+<p>You can use this attribute in the following ways:</p>
+<ul>
+<li>On a function parameter it signifies that the parameter doesn't alias with any other parameter to the function.</li>
+<li>On a struct field it signifies that the field doesn't alias with any other <span class="tt">[NoAlias]</span> field of the struct.</li>
+<li>On a struct it signifies that the address of the struct can't appear within the struct itself.</li>
+<li>On a function return value it signifies that the returned pointer doesn't alias with any other pointer returned from the same function.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md773"></a>
+NoAlias function parameter</h1>
+<p>The following is an example of aliasing:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keywordtype">int</span> Foo(ref <span class="keywordtype">int</span> a, ref <span class="keywordtype">int</span> b)</div>
+<div class="line">{</div>
+<div class="line">    b = 13;</div>
+<div class="line">    a = 42;</div>
+<div class="line">    <span class="keywordflow">return</span> b;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>For this, <a class="el" href="namespace_burst.html">Burst</a> produces the following assembly:</p>
+<div class="fragment"><div class="line">mov     dword ptr [rdx], 13</div>
+<div class="line">mov     dword ptr [rcx], 42</div>
+<div class="line">mov     eax, dword ptr [rdx]</div>
+<div class="line">ret</div>
+</div><!-- fragment --><p>This means that <a class="el" href="namespace_burst.html">Burst</a> does the following:</p>
+<ul>
+<li>Stores 13 into <span class="tt">b</span>.</li>
+<li>Stores 42 into <span class="tt">a</span>.</li>
+<li>Reloads the value from <span class="tt">b</span> to return it.</li>
+</ul>
+<p><a class="el" href="namespace_burst.html">Burst</a> has to reload <span class="tt">b</span> because it doesn't know whether <span class="tt">a</span> and <span class="tt">b</span> are backed by the same memory or not.</p>
+<p>Add the <span class="tt">[NoAlias]</span> attribute to the code to change this:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keywordtype">int</span> Foo([NoAlias] ref <span class="keywordtype">int</span> a, ref <span class="keywordtype">int</span> b)</div>
+<div class="line">{</div>
+<div class="line">    b = 13;</div>
+<div class="line">    a = 42;</div>
+<div class="line">    <span class="keywordflow">return</span> b;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>For this, <a class="el" href="namespace_burst.html">Burst</a> produces the following assembly:</p>
+<div class="fragment"><div class="line">mov     dword ptr [rdx], 13</div>
+<div class="line">mov     dword ptr [rcx], 42</div>
+<div class="line">mov     eax, 13</div>
+<div class="line">ret</div>
+</div><!-- fragment --><p>In this case, the load from <span class="tt">b</span> has been replaced with moving the constant 13 into the return register.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md774"></a>
+NoAlias struct field</h1>
+<p>The following example is the same as the previous, but applied to a struct:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">struct </span>Bar</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> NativeArray&lt;int&gt; a;</div>
+<div class="line">    <span class="keyword">public</span> NativeArray&lt;float&gt; b;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> Foo(ref Bar bar)</div>
+<div class="line">{</div>
+<div class="line">    bar.b[0] = 42.0f;</div>
+<div class="line">    bar.a[0] = 13;</div>
+<div class="line">    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)bar.b[0];</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>For this, <a class="el" href="namespace_burst.html">Burst</a> produces the following assembly:</p>
+<div class="fragment"><div class="line">mov     rax, qword ptr [rcx + 16]</div>
+<div class="line">mov     dword ptr [rax], 1109917696</div>
+<div class="line">mov     rcx, qword ptr [rcx]</div>
+<div class="line">mov     dword ptr [rcx], 13</div>
+<div class="line">cvttss2si       eax, dword ptr [rax]</div>
+<div class="line">ret</div>
+</div><!-- fragment --><p>In this case, <a class="el" href="namespace_burst.html">Burst</a> does the following:</p>
+<ul>
+<li>Loads the address of the data in <span class="tt">b</span> into <span class="tt">rax</span>.</li>
+<li>Stores 42 into it (<span class="tt">1109917696</span> is <span class="tt">0x42280000</span>, which is <span class="tt">42.0f</span>).</li>
+<li>Loads the address of the data in <span class="tt">a</span> into <span class="tt">rcx</span>.</li>
+<li>Stores 13 into it.</li>
+<li>Reloads the data in <span class="tt">b</span> and converts it to an integer for returning.</li>
+</ul>
+<p>If you know that the two <span class="tt">NativeArrays</span> aren't backed by the same memory, you can change the code to the following:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">struct </span>Bar</div>
+<div class="line">{</div>
+<div class="line">    [NoAlias]</div>
+<div class="line">    <span class="keyword">public</span> NativeArray&lt;int&gt; a;</div>
+<div class="line"> </div>
+<div class="line">    [NoAlias]</div>
+<div class="line">    <span class="keyword">public</span> NativeArray&lt;float&gt; b;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> Foo(ref Bar bar)</div>
+<div class="line">{</div>
+<div class="line">    bar.b[0] = 42.0f;</div>
+<div class="line">    bar.a[0] = 13;</div>
+<div class="line">    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)bar.b[0];</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>If you attribute both <span class="tt">a</span> and <span class="tt">b</span> with <span class="tt">[NoAlias]</span> it tells <a class="el" href="namespace_burst.html">Burst</a> that they don't alias with each other within the struct, which produces the following assembly:</p>
+<div class="fragment"><div class="line">mov     rax, qword ptr [rcx + 16]</div>
+<div class="line">mov     dword ptr [rax], 1109917696</div>
+<div class="line">mov     rax, qword ptr [rcx]</div>
+<div class="line">mov     dword ptr [rax], 13</div>
+<div class="line">mov     eax, 42</div>
+<div class="line">ret</div>
+</div><!-- fragment --><p>This means that <a class="el" href="namespace_burst.html">Burst</a> can return the integer constant 42.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md775"></a>
+NoAlias struct</h1>
+<p><a class="el" href="namespace_burst.html">Burst</a> assumes that the pointer to a struct doesn't appear within the struct itself. However, there are cases where this isn't true:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">unsafe <span class="keyword">struct </span>CircularList</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> CircularList* next;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> CircularList()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// The &#39;empty&#39; list just points to itself.</span></div>
+<div class="line">        next = <span class="keyword">this</span>;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Lists are one of the few structures where it's normal to have the pointer to the struct accessible from somewhere within the struct itself.</p>
+<p>The following example indicates where <span class="tt">[NoAlias]</span> on a struct can help:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">unsafe <span class="keyword">struct </span>Bar</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> i;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span>* p;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">float</span> Foo(ref Bar bar)</div>
+<div class="line">{</div>
+<div class="line">    *(<span class="keywordtype">int</span>*)bar.p = 42;</div>
+<div class="line">    <span class="keywordflow">return</span> ((<span class="keywordtype">float</span>*)bar.p)[bar.i];</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This produces the following assembly:</p>
+<div class="fragment"><div class="line">mov     rax, qword ptr [rcx + 8]</div>
+<div class="line">mov     dword ptr [rax], 42</div>
+<div class="line">mov     rax, qword ptr [rcx + 8]</div>
+<div class="line">mov     ecx, dword ptr [rcx]</div>
+<div class="line">movss   xmm0, dword ptr [rax + 4*rcx]</div>
+<div class="line">ret</div>
+</div><!-- fragment --><p>In this case, <a class="el" href="namespace_burst.html">Burst</a>:</p><ul>
+<li>Loads <span class="tt">p</span> into <span class="tt">rax</span>.</li>
+<li>Stores 42 into <span class="tt">p</span>.</li>
+<li>Loads <span class="tt">p</span> into <span class="tt">rax</span> again.</li>
+<li>Loads <span class="tt">i</span> into <span class="tt">ecx</span>.</li>
+<li>Returns the index into <span class="tt">p</span> by <span class="tt">i</span>.</li>
+</ul>
+<p>In this situation, <a class="el" href="namespace_burst.html">Burst</a> loads <span class="tt">p</span> twice. This is because it doesn't know if <span class="tt">p</span> points to the address of the struct <span class="tt">bar</span>. Once it stores 42 into <span class="tt">p</span> it has to reload the address of <span class="tt">p</span> from <span class="tt">bar</span>, which is a costly operation.</p>
+<p>Add <span class="tt">[NoAlias]</span> to prevent this:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[NoAlias]</div>
+<div class="line">unsafe <span class="keyword">struct </span>Bar</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> i;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span>* p;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">float</span> Foo(ref Bar bar)</div>
+<div class="line">{</div>
+<div class="line">    *(<span class="keywordtype">int</span>*)bar.p = 42;</div>
+<div class="line">    <span class="keywordflow">return</span> ((<span class="keywordtype">float</span>*)bar.p)[bar.i];</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This produces the following assembly:</p>
+<div class="fragment"><div class="line">mov     rax, qword ptr [rcx + 8]</div>
+<div class="line">mov     dword ptr [rax], 42</div>
+<div class="line">mov     ecx, dword ptr [rcx]</div>
+<div class="line">movss   xmm0, dword ptr [rax + 4*rcx]</div>
+<div class="line">ret</div>
+</div><!-- fragment --><p>In this situation, <a class="el" href="namespace_burst.html">Burst</a> only loads the address of <span class="tt">p</span> once, because <span class="tt">[NoAlias]</span> tells it that <span class="tt">p</span> can't be the pointer to <span class="tt">bar</span>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md776"></a>
+NoAlias function return</h1>
+<p>Some functions can only return a unique pointer. For instance, <span class="tt">malloc</span> only returns a unique pointer. In this case, <span class="tt">[return:NoAlias]</span> gives some useful information to <a class="el" href="namespace_burst.html">Burst</a>.</p>
+<p>&gt;[!IMPORTANT] &gt;Only use <span class="tt">[return: NoAlias]</span> on functions that are guaranteed to produce a unique pointer. For example, with bump-allocations, or with things like <span class="tt">malloc</span>. <a class="el" href="namespace_burst.html">Burst</a> aggressively inlines functions for performance considerations, so with small functions, <a class="el" href="namespace_burst.html">Burst</a> inlines them into their parents to produce the same result without the attribute.</p>
+<p>The following example uses a bump allocator backed with a stack allocation:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="comment">// Only ever returns a unique address into the stackalloc&#39;ed memory.</span></div>
+<div class="line"><span class="comment">// We&#39;ve made this no-inline because Burst will always try and inline</span></div>
+<div class="line"><span class="comment">// small functions like these, which would defeat the purpose of this</span></div>
+<div class="line"><span class="comment">// example</span></div>
+<div class="line">[MethodImpl(MethodImplOptions.NoInlining)]</div>
+<div class="line">unsafe <span class="keywordtype">int</span>* BumpAlloc(<span class="keywordtype">int</span>* alloca)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> location = alloca[0]++;</div>
+<div class="line">    <span class="keywordflow">return</span> alloca + location;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">unsafe <span class="keywordtype">int</span> Func()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span>* alloca = stackalloc <span class="keywordtype">int</span>[128];</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Store our size at the start of the alloca.</span></div>
+<div class="line">    alloca[0] = 1;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span>* ptr1 = BumpAlloc(alloca);</div>
+<div class="line">    <span class="keywordtype">int</span>* ptr2 = BumpAlloc(alloca);</div>
+<div class="line"> </div>
+<div class="line">    *ptr1 = 42;</div>
+<div class="line">    *ptr2 = 13;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> *ptr1;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This produces the following assembly:</p>
+<div class="fragment"><div class="line">push    rsi</div>
+<div class="line">push    rdi</div>
+<div class="line">push    rbx</div>
+<div class="line">sub     rsp, 544</div>
+<div class="line">lea     rcx, [rsp + 36]</div>
+<div class="line">movabs  rax, offset memset</div>
+<div class="line">mov     r8d, 508</div>
+<div class="line">xor     edx, edx</div>
+<div class="line">call    rax</div>
+<div class="line">mov     dword ptr [rsp + 32], 1</div>
+<div class="line">movabs  rbx, offset &quot;BumpAlloc(int* alloca)&quot;</div>
+<div class="line">lea     rsi, [rsp + 32]</div>
+<div class="line">mov     rcx, rsi</div>
+<div class="line">call    rbx</div>
+<div class="line">mov     rdi, rax</div>
+<div class="line">mov     rcx, rsi</div>
+<div class="line">call    rbx</div>
+<div class="line">mov     dword ptr [rdi], 42</div>
+<div class="line">mov     dword ptr [rax], 13</div>
+<div class="line">mov     eax, dword ptr [rdi]</div>
+<div class="line">add     rsp, 544</div>
+<div class="line">pop     rbx</div>
+<div class="line">pop     rdi</div>
+<div class="line">pop     rsi</div>
+<div class="line">ret</div>
+</div><!-- fragment --><p>The key things that <a class="el" href="namespace_burst.html">Burst</a> does:</p>
+<ul>
+<li>Has <span class="tt">ptr1</span> in <span class="tt">rdi</span>.</li>
+<li>Has <span class="tt">ptr2</span> in <span class="tt">rax</span>.</li>
+<li>Stores 42 into <span class="tt">ptr1</span>.</li>
+<li>Stores 13 into <span class="tt">ptr2</span>.</li>
+<li>Loads <span class="tt">ptr1</span> again to return it.</li>
+</ul>
+<p>If you add the <span class="tt">[return: NoAlias]</span> attribute:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[MethodImpl(MethodImplOptions.NoInlining)]</div>
+<div class="line">[<span class="keywordflow">return</span>: NoAlias]</div>
+<div class="line">unsafe <span class="keywordtype">int</span>* BumpAlloc(<span class="keywordtype">int</span>* alloca)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> location = alloca[0]++;</div>
+<div class="line">    <span class="keywordflow">return</span> alloca + location;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">unsafe <span class="keywordtype">int</span> Func()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span>* alloca = stackalloc <span class="keywordtype">int</span>[128];</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Store our size at the start of the alloca.</span></div>
+<div class="line">    alloca[0] = 1;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span>* ptr1 = BumpAlloc(alloca);</div>
+<div class="line">    <span class="keywordtype">int</span>* ptr2 = BumpAlloc(alloca);</div>
+<div class="line"> </div>
+<div class="line">    *ptr1 = 42;</div>
+<div class="line">    *ptr2 = 13;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> *ptr1;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>It produces the following assembly:</p>
+<div class="fragment"><div class="line">push    rsi</div>
+<div class="line">push    rdi</div>
+<div class="line">push    rbx</div>
+<div class="line">sub     rsp, 544</div>
+<div class="line">lea     rcx, [rsp + 36]</div>
+<div class="line">movabs  rax, offset memset</div>
+<div class="line">mov     r8d, 508</div>
+<div class="line">xor     edx, edx</div>
+<div class="line">call    rax</div>
+<div class="line">mov     dword ptr [rsp + 32], 1</div>
+<div class="line">movabs  rbx, offset &quot;BumpAlloc(int* alloca)&quot;</div>
+<div class="line">lea     rsi, [rsp + 32]</div>
+<div class="line">mov     rcx, rsi</div>
+<div class="line">call    rbx</div>
+<div class="line">mov     rdi, rax</div>
+<div class="line">mov     rcx, rsi</div>
+<div class="line">call    rbx</div>
+<div class="line">mov     dword ptr [rdi], 42</div>
+<div class="line">mov     dword ptr [rax], 13</div>
+<div class="line">mov     eax, 42</div>
+<div class="line">add     rsp, 544</div>
+<div class="line">pop     rbx</div>
+<div class="line">pop     rdi</div>
+<div class="line">pop     rsi</div>
+<div class="line">ret</div>
+</div><!-- fragment --><p>In this case, <a class="el" href="namespace_burst.html">Burst</a> doesn't reload <span class="tt">ptr2</span>, and moves 42 into the return register.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md777"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2aliasing.html">Memory aliasing</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2aliasing-job-system.html">Aliasing and the job system</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

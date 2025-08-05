@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Auto Layout</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_u_i_auto_layout.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Auto Layout </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6756"></a></p>
+<p>The Rect Transform layout system is flexible enough to handle a lot of different types of layouts and it also allows placing elements in a complete freeform fashion. However, sometimes something a bit more structured can be needed.</p>
+<p>The auto layout system provides ways to place elements in nested layout groups such as horizontal groups, vertical groups, or grids. It also allows elements to automatically be sized according to the contained content. For example a button can be dynamically resized to exactly fit its text content plus some padding.</p>
+<p>The auto layout system is a system built on top of the basic Rect Transform layout system. It can optionally be used on some or all elements.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6757"></a>
+Understanding Layout Elements</h1>
+<p>The auto layout system is based on a concept of <b>layout elements</b> and <b>layout controllers</b>. A layout element is an Game Object with a Rect Transform and optionally other components as well. The layout element has certain knowledge about which size it should have. Layout elements don't directly set their own size, but other components that function as layout controllers can use the information they provide in order to calculate a size to use for them.</p>
+<p>A layout element has properties that defines its own:</p>
+<ul>
+<li>Minimum width</li>
+<li>Minimum height</li>
+<li>Preferred width</li>
+<li>Preferred height</li>
+<li>Flexible width</li>
+<li>Flexible height</li>
+</ul>
+<p>Examples of layout controller components that use the information provided by layout elements are <b>Content Size Fitter</b> and the various <b>Layout Group</b> components. The basic principles for how layout elements in a layout group are sized is as follows:</p>
+<ul>
+<li>First minimum sizes are allocated.</li>
+<li>If there is sufficient available space, preferred sizes are allocated.</li>
+<li>If there is additional available space, flexible size is allocated.</li>
+</ul>
+<p>Any Game Object with a Rect Transform on it can function as a layout element. They will by default have minimum, preferred, and flexible sizes of 0. Certain components will change these layout properties when added to the Game Object.</p>
+<p>The Image and Text components are two examples of components that provide layout element properties. They change the preferred width and height to match the sprite or text content.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6758"></a>
+Layout Element Component</h2>
+<p>If you want to override the minimum, preferred, or flexible size, you can do that by adding a Layout Element component to the Game Object.</p>
+<p><img src="images/UI_LayoutElementInspector.png" alt="" class="inline"/></p>
+<p>The Layout Element component lets you override the values for one or more of the layout properties. Enable the checkbox for a property you want to override and then specify the value you want to override with.</p>
+<p>See the reference page for <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_layout_element.html">Layout Element</a> for more information.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6759"></a>
+Understanding Layout Controllers</h1>
+<p>Layout controllers are components that control the sizes and possibly positions of one or more layout elements, meaning Game Objects with Rect Transforms on. A layout controller may control its <b>own layout element</b> (the same Game Object it is on itself) or it may control <b>child layout elements</b>.</p>
+<p>A component that functions as a layout controller may also itself function as a layout element at the same time.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6760"></a>
+Content Size Fitter</h2>
+<p>The Content Size Fitter functions as a layout controller that controls the size of its own layout element. The simplest way to see the auto layout system in action is to add a Content Size Fitter component to a Game Object with a Text component.</p>
+<p><img src="images/UI_ContentSizeFitterInspector.png" alt="" class="inline"/></p>
+<p>If you set either the Horizontal Fit or Vertical Fit to Preferred, the Rect Transform will adjust its width and/or height to fit the Text content.</p>
+<p>See the reference page for <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_content_size_fitter.html">Content Size Fitter</a> for more information.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6761"></a>
+Aspect Ratio Fitter</h2>
+<p>The Aspect Ratio Fitter functions as a layout controller that controls the size of its own layout element.</p>
+<p><img src="images/UI_AspectRatioFitterInspector.png" alt="" class="inline"/></p>
+<p>It can adjust the height to fit the width or vice versa, or it can make the element fit inside its parent or envelope its parent. The Aspect Ratio Fitter does not take layout information into account such as minimum size and preferred size.</p>
+<p>See the reference page for <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_aspect_ratio_fitter.html">Aspect Ratio Fitter</a> for more information.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6762"></a>
+Layout Groups</h2>
+<p>A layout group functions as a layout controller that controls the sizes and positions of its child layout elements. For example, a Horizontal Layout Group places its children next to each other, and a Grid Layout Group places its children in a grid.</p>
+<p>A layout group doesn't control its own size. Instead it functions as a layout element itself which may be controlled by other layout controllers or be set manually.</p>
+<p>Whatever size a layout group is allocated, it will in most cases try to allocate an appropriate amount of space for each of its child layout elements based on the minimum, preferred, and flexible sizes they reported. Layout groups can also be nested arbitrarily this way.</p>
+<p>See the reference pages for <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_horizontal_layout_group.html">Horizontal Layout Group</a>, <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_vertical_layout_group.html">Vertical Layout Group</a> and <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_grid_layout_group.html">Grid Layout Group</a> for more information.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6763"></a>
+Driven Rect Transform properties</h2>
+<p>Since a layout controller in the auto layout system can automatically control the sizes and placement of certain UI elements, those sizes and positions should not be manually edited at the same time through the Inspector or Scene View. Such changed values would just get reset by the layout controller on the next layout calculation anyway.</p>
+<p>The Rect Transform has a concept of <b>driven properties</b> to address this. For example, a Content Size Fitter which has the Horizontal Fit property set to Minimum or Preferred will drive the width of the Rect Transform on the same Game Object. The width will appear as read-only and a small info box at the top of the Rect Transform will inform that one or more properties are driven by Conten Size Fitter.</p>
+<p>The driven Rect Transforms properties have other reasons beside preventing manual editing. A layout can be changed just by changing the resolution or size of the Game View. This in turn can change the size or placement of layout elements, which changes the values of driven properties. But it wouldn't be desirable that the Scene is marked as having unsaved changes just because the Game View was resized. To prevent this, the values of driven properties are not saved as part of the Scene and changes to them do not mark the scene as changed.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6764"></a>
+Technical Details</h1>
+<p>The auto layout system comes with certain components built-in, but it is also possible to create new components that controls layouts in custom ways. This is done by having a component implement specific interfaces which are recognized by the auto layout system.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6765"></a>
+Layout Interfaces</h2>
+<p>A component is treated as a layout element by the auto layout system if it implements the interface <b>ILayoutElement</b>.</p>
+<p>A component is expected to drive the Rect Transforms of its children if it implements the interface <b>ILayoutGroup</b>.</p>
+<p>A component is expected to drive its own RectTransform if it implements the interface <b>ILayoutSelfController</b>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6766"></a>
+Layout Calculations</h2>
+<p>The auto layout system evaluates and executes layouts in the following order:</p>
+<ol type="1">
+<li>The minimum, preferred, and flexible widths of layout elements are calculated by calling CalculateLayoutInputHorizontal on ILayoutElement components. This is performed in bottom-up order, where children are calculated before their parents, such that the parents may take the information in their children into account in their own calculations.</li>
+<li>The effective widths of layout elements are calculated and set by calling SetLayoutHorizontal on ILayoutController components. This is performed in top-down order, where children are calculated after their parents, since allocation of child widths needs to be based on the full width available in the parent. After this step the Rect Transforms of the layout elements have their new widths.</li>
+<li>The minimum, preferred, and flexible heights of layout elements are calculated by calling CalculateLayoutInputVertical on ILayoutElement components. This is performed in bottom-up order, where children are calculated before their parents, such that the parents may take the information in their children into account in their own calculations.</li>
+<li>The effective heights of layout elements are calculated and set by calling SetLayoutVertical on ILayoutController components. This is performed in top-down order, where children are calculated after their parents, since allocation of child heights needs to be based on the full height available in the parent. After this step the Rect Transforms of the layout elements have their new heights.</li>
+</ol>
+<p>As can be seen from the above, the auto layout system evaluates widths first and then evaluates heights afterwards. Thus, calculated heights may depend on widths, but calculated widths can never depend on heights.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6767"></a>
+Triggering Layout Rebuild</h2>
+<p>When a property on a component changes which can cause the current layout to no longer be valid, a layout recalculation is needed. This can be triggered using the call:</p>
+<p>LayoutRebuilder.MarkLayoutForRebuild (transform as RectTransform);</p>
+<p>The rebuild will not happen immediately, but at the end of the current frame, just before rendering happens. The reason it is not immediate is that this would cause layouts to be potentially rebuild many times during the same frame, which would be bad for performance.</p>
+<p>Guidelines for when a rebuild should be triggered:</p>
+<ul>
+<li>In setters for properties that can change the layout.</li>
+<li>In these callbacks:<ul>
+<li>OnEnable</li>
+<li>OnDisable</li>
+<li>OnRectTransformDimensionsChange</li>
+<li>OnValidate (only needed in the editor, not at runtime)</li>
+<li>OnDidApplyAnimationProperties </li>
+</ul>
+</li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

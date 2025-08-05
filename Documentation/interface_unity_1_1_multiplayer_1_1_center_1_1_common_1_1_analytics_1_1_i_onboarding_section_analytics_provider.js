@@ -1,0 +1,4 @@
+var interface_unity_1_1_multiplayer_1_1_center_1_1_common_1_1_analytics_1_1_i_onboarding_section_analytics_provider =
+[
+    [ "SendInteractionEvent", "interface_unity_1_1_multiplayer_1_1_center_1_1_common_1_1_analytics_1_1_i_onboarding_section_analytics_provider.html#a776b37e39db2c1c933c62c1edb13c01b", null ]
+];

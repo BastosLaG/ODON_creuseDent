@@ -1,0 +1,25 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group =
+[
+    [ "AddGroupMember", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#ace3168ac97b7518caa2e6cd4be69b5f6", null ],
+    [ "ClearGroupMembers", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#ace301fb13fbe4dfbee913d4ffa16560b", null ],
+    [ "ContainsGroupMember", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a867d510fa50892db31849d679fe4324a", null ],
+    [ "GetGroupMembers", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a8438eb29a0c62cec9a1192288d4042eb", null ],
+    [ "HasDependencyOnGroup", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a6d6f8d648c659cc108c9c1c58644cddd", null ],
+    [ "MoveGroupMemberTo", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#addb517ff2eccea71991378581cb7dcc2", null ],
+    [ "OnBeforeUnregistered", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#ada1b6d1a79a4639d311b19ca55fa77ea", null ],
+    [ "OnFocusEntering", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a5ae3db8e7637621fa4b399884792524d", null ],
+    [ "OnFocusExiting", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#abd9760ad927cf2878ec7f5eee1ad8f0a", null ],
+    [ "OnRegistered", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a185001539ebe21e3347f73ceb28d920d", null ],
+    [ "OnUnregistered", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#ad4d251f93724338589165e17915ecd9a", null ],
+    [ "PreprocessGroupMembers", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a2ef56b24d5c00fea6e790d25fde1afef", null ],
+    [ "ProcessGroupMembers", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a06e10f3d1fa4ac06bfdb225e94f2e5d7", null ],
+    [ "RemoveGroupMember", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#aca2e416de9d7a05fb1a4779202146573", null ],
+    [ "UpdateGroupMemberInteractions", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a8875eda3e791dc45a5ac28055f7aea79", null ],
+    [ "UpdateGroupMemberInteractions", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#ac2c701755f5e66e0ac4afa0f77920420", null ],
+    [ "activeInteractor", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#aca471be24cc1b5d5c3d0c9e34e6a162a", null ],
+    [ "focusInteractable", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#ac0cf8a368f3126df35b64c9f764fe8b1", null ],
+    [ "focusInteractor", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a7e06c8680130f7ff01aa56d54f3782cb", null ],
+    [ "groupName", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a9bbd2ffcb00a7515a3bef3118e31f179", null ],
+    [ "registered", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a85f40cef75b219f4373eaa7fd39bb953", null ],
+    [ "unregistered", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a955b65e9e83df472d5d57daa5c02afba", null ]
+];

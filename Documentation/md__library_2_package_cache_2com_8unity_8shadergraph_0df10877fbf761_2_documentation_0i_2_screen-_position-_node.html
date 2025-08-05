@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Screen Position Node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_screen-_position-_node.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Screen Position Node </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4317"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4318"></a>
+Description</h1>
+<p>Provides access to the screen position of the mesh vertex or fragment. The X and Y values represent the horizontal and vertical positions respectively. Use the <b>Mode</b> dropdown control to select the mode of the output value. The available modes are as follows:</p>
+<ul>
+<li><b>Default</b> - Returns X and Y values that represent the normalized <b>Screen Position</b>. The normalized <b>Screen Position</b> is the <b>Screen Position</b> divided by the clip space position W component. The X and Y value ranges are between 0 and 1 with position <span class="tt">float2(0,0)</span> at the lower left corner of the screen. The Z and W values aren't used in this mode, so they're always 0.</li>
+<li><b>Raw</b> - Returns the raw <b>Screen Position</b> values, which are the <b>Screen Position</b> values before the clip space position W component is divided out. Position <span class="tt">float2(0,0)</span> is at the lower left corner of the screen. This mode is useful for projection.</li>
+<li><b>Center</b> - Returns X and Y values that represent the normalized <b>Screen Position</b> offset so position <span class="tt">float2(0,0)</span> is at the center of the screen. The range of the X and Y values is –1 to 1. The Z and W values aren't used in this mode, so they're always 0.</li>
+<li><b>Tiled</b> - Returns <b>Screen Position</b> offset so position <span class="tt">float2(0,0)</span> is at the center of the screen and tiled using <span class="tt">frac</span>.</li>
+<li><b>Pixel</b> - Returns <b>Screen Position</b> in terms of the actual pixel width and height values of the screen. In this mode, position <span class="tt">float2(0,0)</span> is at the lower left corner of the screen. Whereas the range of Default mode is always 0 to 1, the range of Pixel mode depends on the screen resolution. The Z and W values aren't used in this mode, so they're always 0.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4319"></a>
+Ports</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Direction  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Binding  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Out  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 4  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Get the <b>Screen Position</b> of the mesh.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4320"></a>
+Controls</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Options  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Mode  </td><td class="markdownTableBodyLeft">Dropdown  </td><td class="markdownTableBodyLeft">Default, Raw, Center, Tiled, Pixel  </td><td class="markdownTableBodyLeft">Select which coordinate space to use for the <b>Screen Position</b> output.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4321"></a>
+Generated Code Example</h1>
+<p>The following code examples represent one possible outcome for each mode.</p>
+<p><b>Default</b></p>
+<div class="fragment"><div class="line">float4 Out = float4(IN.NDCPosition.xy, 0, 0);</div>
+</div><!-- fragment --><p><b>Raw</b></p>
+<div class="fragment"><div class="line">float4 Out = IN.ScreenPosition;</div>
+</div><!-- fragment --><p><b>Center</b></p>
+<div class="fragment"><div class="line">float4 Out = float4(IN.NDCPosition.xy * 2 - 1, 0, 0);</div>
+</div><!-- fragment --><p><b>Tiled</b></p>
+<div class="fragment"><div class="line">float4 Out = frac(float4((IN.NDCPosition.x * 2 - 1) * _ScreenParams.x / _ScreenParams.y, IN.{0}.y * 2 - 1, 0, 0));</div>
+</div><!-- fragment --><p><b>Pixel</b></p>
+<div class="fragment"><div class="line">float4 Out = float4(IN.PixelPosition.xy, 0, 0);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

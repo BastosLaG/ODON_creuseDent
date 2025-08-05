@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Branch On Input Connection node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_branch-_on-_input-_connection-_node.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Branch On Input Connection node </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md3464"></a></p>
+<p>The Branch On Input Connection node allows you to change the behavior of a Subgraph based on the connected state of an input property in the parent Shader Graph. You should use the Branch On Input Connection node when you want to create a default input for a port</p>
+<p>Shader Graph determines whether the property in the parent Shader Graph is connected, or not connected, and chooses a value to use as an output based on that connection state.</p>
+<p><img src="images/sg-branch-on-input-connection-node.png" alt="An image of the Graph window, that shows the Branch on Input Connection node." class="inline"/></p>
+<p>Shader Graph uses two ports when it determines the node's connection state:</p>
+<ul>
+<li>The Branch On Input Connection node's <b>Input</b> port.</li>
+<li>The Subgraph node's matching Property port in the parent Shader Graph. For more information on Subgraph nodes, see [Subgraph node](Sub-graph-Node).</li>
+</ul>
+<p>The Branch On Input Connection node's functionality is based on the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_branch-_node.html">Branch node</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>You can't use the Branch On Input Connection node with a Streaming Virtual Texture Property. For more information on Streaming Virtual Texturing, see <a href="https://docs.unity3d.com/Documentation/Manual/svt-use-in-shader-graph.html">Using Streaming Virtual Texturing in Shader Graph</a>.</dd></dl>
+<p>The Branch On Input Connection node generates branching HLSL source code, but during compilation, the branch is optimized out of your shader.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3465"></a>
+Create Node menu category</h1>
+<p>The Branch On Input Connection node is under the <b>Utility</b> &gt; <b>Logic</b> category in the Create Node menu. You can only use it in a Shader Subgraph.</p>
+<p>To use the Branch On Input Connection node in a Subgraph:</p>
+<ol type="1">
+<li>Open the Subgraph where you want to add a Branch On Input Connection node.</li>
+<li>In the Blackboard, do one of the following:<ul>
+<li>To add a new property, select <b>Add</b> (+), then select a property type from the menu. Enter a name for your new property and press Enter. Then, select your property in the Blackboard and drag it onto your graph to create a Property node.</li>
+<li>Select an existing property in the Blackboard and drag it onto your graph to create a Property node.</li>
+</ul>
+</li>
+<li>With your Property node selected, in the Graph Inspector, enable <b>Use Custom Binding</b>.</li>
+</ol>
+<dl class="section note"><dt>Note</dt><dd>If you disable <b>Use Custom Binding</b>, you can't connect your Property node to the Branch On Input Connection node. If you've already made a connection, the <a class="el" href="namespace_unity.html">Unity</a> Editor breaks the connection and displays a warning on the node.</dd></dl>
+<ol type="1">
+<li>In the <b>Label</b> field, enter the label for the default value that displays on your Subgraph node's port binding in its parent Shader Graph. For more information on port bindings, see <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_port-_bindings.html">Port Bindings</a>.</li>
+<li>Press Spacebar or right-click and select <b>Create Node</b>. Find the <b>Branch On Input Connection</b> node in the Create Node Menu, then double-click or press Enter with the node selected to add it to your Subgraph.</li>
+<li>On your Property node, select the output port and drag its new connection to the Branch On Connection node's <b>Input</b> port.</li>
+<li>To specify the value Shader Graph uses when the <b>Input</b> port is connected on the Subgraph node in the parent Shader Graph, connect a node to the <b>Connected</b> port. To specify the value that Shader Graph uses when the <b>Input</b> port isn't connected, connect another node to the <b>NotConnected</b> port.</li>
+<li>To specify how Shader Graph uses your <b>Connected</b> or <b>NotConnected</b> values in your shader, connect any valid node to the <b>Output</b> port on the Branch On Input Connection node.</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3466"></a>
+Compatibility</h1>
+<p>The Branch On Input Connection [!include<a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2snippets_2nodes-compatibility-all.html">nodes-compatibility-all</a>]</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3467"></a>
+Inputs</h1>
+<p>The Branch On Input Connection [!include<a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2snippets_2nodes-inputs.html">nodes-inputs</a>]</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Name</b>  </th><th class="markdownTableHeadLeft"><b>Type</b>  </th><th class="markdownTableHeadLeft"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Input</b>  </td><td class="markdownTableBodyLeft">Property  </td><td class="markdownTableBodyLeft">The property that determines the branching logic in the node, based on its connection state in the parent Shader Graph.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Connected</b>  </td><td class="markdownTableBodyLeft">Dynamic Vector  </td><td class="markdownTableBodyLeft">The value to send to the <b>Out</b> port when <b>Input</b> is connected in the parent Shader Graph.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>NotConnected</b>  </td><td class="markdownTableBodyLeft">Dynamic Vector  </td><td class="markdownTableBodyLeft">The value to send to the <b>Out</b> port when <b>Input</b> isn't connected in the parent Shader Graph.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3468"></a>
+Outputs</h1>
+<p>The Branch On Input Connection [!include<a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2snippets_2nodes-single-output.html">nodes-single-output</a>]</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Name</b>  </th><th class="markdownTableHeadLeft"><b>Type</b>  </th><th class="markdownTableHeadLeft"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Out</b>  </td><td class="markdownTableBodyLeft">Dynamic Vector  </td><td class="markdownTableBodyLeft">Outputs the value of either <b>Connected</b> or <b>NotConnected</b>, based on the <b>Input</b> property's connection state in the parent Shader Graph.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3469"></a>
+Example Subgraph usage</h1>
+<p>In the following example, a Branch On Input Connection node specifies the default behavior for a UV Subgraph input property. When a value for the <b>UV</b> property is connected in the parent graph, then the value from that property is passed to the Checkerboard node to determine the UV coordinates for the checkerboard pattern. When the <b>UV</b> property isn't connected, then the Branch On Input Connection node uses the <b>UV0</b> channel from the UV node for the Checkerboard node's UV coordinates:</p>
+<dl class="section note"><dt>Note</dt><dd>When you preview a Subgraph, the Branch On Input Connection node always uses its NotConnected value.</dd></dl>
+<p><img src="images/sg-branch-on-input-connection-node-example.png" alt="An image of the Graph window. A UV property is connected to the Input port on a Branch On Input Connection node. The property also connects to the Branch On Input Connection node's Connected input port, while a UV node with its channel set to UV0 connects to the NotConnected port. The Branch On Input Connection node's Out port connects to a Checkerboard node's UV input port." class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3470"></a>
+Related nodes</h1>
+<p>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2snippets_2nodes-related.html">nodes-related</a>] Branch On Input Connection node:</p>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_branch-_node.html">Branch node</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_sub-graph-_node.html">Subgraph node</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

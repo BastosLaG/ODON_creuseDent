@@ -1,0 +1,6 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_casters_1_1_i_curve_interaction_caster =
+[
+    [ "TryGetColliderTargets", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_casters_1_1_i_curve_interaction_caster.html#a33821069d0c35bb6420378eda32e491d", null ],
+    [ "lastSamplePoint", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_casters_1_1_i_curve_interaction_caster.html#ab92cd05ec295cb5e48c25f4059eb6c9d", null ],
+    [ "samplePoints", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_casters_1_1_i_curve_interaction_caster.html#a501a3927a542f60a80b7d6ffb41cb039", null ]
+];

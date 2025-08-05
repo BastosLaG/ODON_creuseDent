@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Migration</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_migration.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Migration </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2161"></a>
+autotoc_md2161</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2162"></a>
+uid: input-system-migration</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2163"></a>
+Migrating from the old Input Manager</h1>
+<ul>
+<li>Read the introductory documentation first</li>
+<li>Which system is enabled?</li>
+<li>Comparison of API in the old Input Manager and the new Input System package<ul>
+<li>Action-based input</li>
+<li>Directly reading Gamepad and Joystick controls</li>
+<li>Keyboard</li>
+<li>Mouse</li>
+<li>Touch and Pen</li>
+<li>Sensors</li>
+</ul>
+</li>
+</ul>
+<p>This page is provided to help you match input-related API from <a class="el" href="namespace_unity.html">Unity</a>'s old, built-in input (known as the <a href="https://docs.unity3d.com/Manual/class-InputManager.html">Input Manager</a>) to the corresponding API in the new Input System package.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2164"></a>
+Read the introductory documentation first</h2>
+<p>If you're new to the Input System package and have landed on this page looking for documentation, it's best to read the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_quick_start_guide.html">QuickStart Guide</a>, and the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_concepts.html">Concepts</a> and <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_workflows.html">Workflows</a> pages from the introduction section of the documentation, so that you can make sure you're choosing the best workflow for your project's input requirements.</p>
+<p>This is because there are a number of different ways to read input using the Input System, and some of the directly corresponding API methods on this page might give you the quickest - but least flexible - solution, and may not be suitable for a project with more complex requirements.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2165"></a>
+Which system is enabled?</h2>
+<p>When installing the new Input System, <a class="el" href="namespace_unity.html">Unity</a> prompts you to enable the new input system and disable the old one. You can change this setting at any time later, by going to <b>Edit &gt; Project Settings &gt; Player &gt; Other Settings &gt; Active Input Handling</b>, <a href="./Installation.md#enabling-the-new-input-backends">as described here</a>.</p>
+<p>There are scripting symbols defined which allow you to use conditional compilation based on which system is enabled, as shown in the example below.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#if ENABLE_INPUT_SYSTEM</span></div>
+<div class="line">    <span class="comment">// New input system backends are enabled.</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#if ENABLE_LEGACY_INPUT_MANAGER</span></div>
+<div class="line">    <span class="comment">// Old input backends are enabled.</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p><b>Note:</b> It is possible to have both systems enabled at the same time, in which case both sets of code in the example above above will be active. </p>
+</blockquote>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2166"></a>
+Comparison of API in the old Input Manager and the new Input System package</h2>
+<p>Below is a list comparing the API from the old Input Manager with the corresponding API for the new Input System package. All of the new Input System package APIs listed below are in the <span class="tt"><a class="el" href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a></span> namespace. The namespace is omitted here for brevity.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2167"></a>
+Action-based input</h3>
+<p>Action-based input refers to reading pre-configured named axes, buttons, or other controls. (<a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_workflow-_actions.html">Read more about Action-based input</a>)</p>
+<ul>
+<li>In the old Input Manager, these are defined in the <b>Axes</b> list, in the <b>Input Manager</b> section of the <b>Project Settings</b> window. <em>(Below, left)</em></li>
+<li>In the new Input System, these are defined in the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Actions Editor</a>, which can be found in the <b>Input System Package</b> section of the <b>Project Settings</b> window, or by opening an <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_assets.html">Action Asset</a>. <em>(Below, right)</em></li>
+</ul>
+<p><img src="Images/InputManagerVsInputActions.png" alt="" class="inline"/><em>On the left, the old Input Manager Axes Configuration window, in Project settings. On the right, the new Input System's <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Actions Editor</a>.</em></p>
+<p><b>Note:</b> In some cases for named axes and buttons, the new Input System requires slightly more code than the old Input Manager, but this results in better performance. This is because in the new Input System, the logic is separated into two parts: the first is to find and store a reference to the action (usually done once, for example in your <span class="tt">Start</span> method), and the second is to read the action (usually done every frame, for example in your <span class="tt">Update</span> method). In contrast, the old Input Manager used a string-based API to "find" and "read" the value at the same time, because it was not possible to store a reference to a button or axis. This results in worse performance, because the axis or button is looked up each time the value is read.</p>
+<p>To find and store references to actions, which can be axes or buttons use <a href="../api/UnityEngine.InputSystem.InputActionAsset.html#UnityEngine_InputSystem_InputActionAsset_FindAction_System_String_System_Boolean_"><span class="tt">FindAction</span></a>. For example: </p><div class="fragment"><div class="line"> // A 2D axis action named &quot;Move&quot;</div>
+<div class="line">InputAction moveAction = InputSystem.actions.FindAction(&quot;Move&quot;);</div>
+<div class="line"> </div>
+<div class="line"> // A button action named &quot;Jump&quot;</div>
+<div class="line">InputAction jumpAction = InputSystem.actions.FindAction(&quot;Jump&quot;);</div>
+</div><!-- fragment --><p>Then, to read the action values, use the following:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Input Manager (Old)  </th><th class="markdownTableHeadNone">Input System (New)  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetAxis.html"><span class="tt">Input.GetAxis</span></a><br  />
+In the old Input Manager System, all axes are 1D and return float values. For example, to read the horizontal and vertical axes:<br  />
+<span class="tt">float h = Input.GetAxis("Horizontal");</span><br  />
+<span class="tt">float v = Input.GetAxis("Vertical");</span><br  />
+<br  />
+  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.InputBindingComposite-1.html#UnityEngine_InputSystem_InputBindingComposite_1_ReadValue_UnityEngine_InputSystem_InputBindingCompositeContext__"><span class="tt">ReadValue</span></a> on the reference to the action to read the current value of the axis. In the new Input System, axes can be 1D, 2D or other value types. You must specify the correct value type that corresponds with how the action is set up. This example shows a 2D axis:<br  />
+<span class="tt">Vector2 moveVector = moveAction.ReadValue&lt;Vector2&gt;();</span>.<br  />
+<br  />
+  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetButton.html"><span class="tt">Input.GetButton</span></a><br  />
+Example:<br  />
+<span class="tt">bool jumpValue = Input.GetButton("Jump");</span><br  />
+<br  />
+  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_IsPressed_"><span class="tt">IsPressed</span></a> on the reference to the action to read the button value.<br  />
+Example:<br  />
+<span class="tt">bool jumpValue = jumpAction.IsPressed();</span>.<br  />
+<br  />
+  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetButtonDown.html"><span class="tt">Input.GetButtonDown</span></a><br  />
+Example: <span class="tt">bool jump = Input.GetButtonDown("Jump");</span><br  />
+<br  />
+  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_WasPressedThisFrame_"><span class="tt">WasPressedThisFrame</span></a> on the reference to the action to read if the button was pressed this frame.<br  />
+Example: <span class="tt">bool jumpValue = jumpAction.WasPressedThisFrame();</span>.<br  />
+<br  />
+  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetButtonUp.html"><span class="tt">Input.GetButtonUp</span></a><br  />
+Example: <span class="tt">bool jump = Input.GetButtonUp("Jump");</span><br  />
+<br  />
+  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_WasReleasedThisFrame_"><span class="tt">WasReleasedThisFrame</span></a> on the reference to the action to read whether the button was released this frame.<br  />
+Example: <span class="tt">bool jumpValue = jumpAction.WasReleasedThisFrame();</span>.<br  />
+<br  />
+  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetAxisRaw.html"><span class="tt">Input.GetAxisRaw</span></a><br  />
+For example, to read the raw values of the horizontal and vertical axes:<br  />
+<span class="tt">float h = Input.GetAxisRaw("Horizontal");</span><br  />
+<span class="tt">float v = Input.GetAxisRaw("Vertical");</span><br  />
+<br  />
+  </td><td class="markdownTableBodyNone">No direct equivalent, but if there are <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_processors.html">processors</a> associated with the action, you can use <a href="../api/UnityEngine.InputSystem.InputControl-1.html#UnityEngine_InputSystem_InputControl_1_ReadUnprocessedValue"><span class="tt">InputControl&lt;&gt;.ReadUnprocessedValue()</span></a> to read unprocessed values.<br  />
+Example: <span class="tt">Vector2 moveVector = moveAction.ReadUnprocessedValue();</span><br  />
+Note: This returns the same value as ReadValue when there are no processors on the action.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2168"></a>
+Directly reading Gamepad and Joystick controls</h3>
+<p>Directly reading hardware controls bypasses the new Input System's action-based workflow, which has some benefits and some drawbacks. (<a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_workflow-_direct.html">Read more about directly reading devices</a>)</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Input Manager (Old)  </th><th class="markdownTableHeadNone">Input System (New)  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetKey.html"><span class="tt">Input.GetKey</span></a><br  />
+Example: <span class="tt">Input.GetKey(KeyCode.JoystickButton0)</span><br  />
+<br  />
+  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html#UnityEngine_InputSystem_Controls_ButtonControl_isPressed"><span class="tt">isPressed</span></a> on the corresponding Gamepad button.<br  />
+Example: <span class="tt">InputSystem.GamePad.current.buttonNorth.isPressed</span>.<br  />
+  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetKeyDown.html"><span class="tt">Input.GetKeyDown</span></a><br  />
+Example: <span class="tt">Input.GetKeyDown(KeyCode.JoystickButton0)</span><br  />
+<br  />
+  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html#UnityEngine_InputSystem_Controls_ButtonControl_wasPressedThisFrame"><span class="tt">wasPressedThisFrame</span></a> on the corresponding Gamepad button.<br  />
+Example: <span class="tt">InputSystem.GamePad.current.buttonNorth.WasPressedThisFrame</span>.<br  />
+  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetKeyUp.html"><span class="tt">Input.GetKeyUp</span></a><br  />
+Example: <span class="tt">Input.GetKeyUp(KeyCode.JoystickButton0)</span><br  />
+<br  />
+  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html#UnityEngine_InputSystem_Controls_ButtonControl_wasReleasedThisFrame"><span class="tt">wasReleasedThisFrame</span></a> on the corresponding Gamepad button.<br  />
+Example: <span class="tt">InputSystem.GamePad.current.buttonNorth.wasReleasedThisFrame</span>.<br  />
+  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetJoystickNames.html"><span class="tt">Input.GetJoystickNames</span></a>  </td><td class="markdownTableBodyNone">There is no API that corresponds to this exactly, but there are examples of <a href="Gamepad.html#discover-all-connected-devices">how to read all connected devices here</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.IsJoystickPreconfigured.html"><span class="tt">Input.IsJoystickPreconfigured</span></a>  </td><td class="markdownTableBodyNone">Not needed. Devices which derive from <a href="../api/UnityEngine.InputSystem.Gamepad.html"><span class="tt">Gamepad</span></a> always correctly implement the mapping of axes and buttons to the corresponding <a href="../api/UnityEngine.InputSystem.InputControl.html"><span class="tt">InputControl</span></a> members of the <a href="../api/UnityEngine.InputSystem.Gamepad.html"><span class="tt">Gamepad</span></a> class. <a href="https://docs.unity3d.com/ScriptReference/Input.ResetInputAxes.html"><span class="tt">Input.ResetInputAxes</span></a>  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2169"></a>
+Keyboard</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Input Manager (Old)  </th><th class="markdownTableHeadNone">Input System (New)  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetKey.html"><span class="tt">Input.GetKey</span></a><br  />
+Example: <span class="tt">Input.GetKey(KeyCode.Space)</span><br  />
+<br  />
+  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html#UnityEngine_InputSystem_Controls_ButtonControl_isPressed"><span class="tt">isPressed</span></a> on the corresponding key.<br  />
+ Example: <span class="tt">InputSystem.Keyboard.current.spaceKey.isPressed</span><br  />
+<br  />
+  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetKeyDown.html"><span class="tt">Input.GetKeyDown</span></a><br  />
+Example: <span class="tt">Input.GetKeyDown(KeyCode.Space)</span><br  />
+<br  />
+  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html#UnityEngine_InputSystem_Controls_ButtonControl_wasPressedThisFrame"><span class="tt">wasPressedThisFrame</span></a> on the corresponding key.<br  />
+ Example: <span class="tt">InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame</span><br  />
+<br  />
+  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetKeyUp.html"><span class="tt">Input.GetKeyUp</span></a><br  />
+Example: <span class="tt">Input.GetKeyUp(KeyCode.Space)</span><br  />
+<br  />
+  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html#UnityEngine_InputSystem_Controls_ButtonControl_wasReleasedThisFrame"><span class="tt">wasReleasedThisFrame</span></a> on the corresponding key.<br  />
+ Example: <span class="tt">InputSystem.Keyboard.current.spaceKey.wasReleasedThisFrame</span><br  />
+<br  />
+  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-anyKey.html"><span class="tt">Input.anyKey</span></a>  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_onAnyButtonPress"><span class="tt">onAnyButtonPress</span></a>.<br  />
+This also includes controller buttons as well as keyboard keys.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-anyKeyDown.html"><span class="tt">Input.anyKeyDown</span></a>  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Keyboard.html#UnityEngine_InputSystem_Keyboard_anyKey"><span class="tt">Keyboard.current.anyKey.wasUpdatedThisFrame</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-compositionCursorPos.html"><span class="tt">Input.compositionCursorPos</span></a>  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Keyboard.html#UnityEngine_InputSystem_Keyboard_SetIMECursorPosition_UnityEngine_Vector2_"><span class="tt">Keyboard.current.SetIMECursorPosition(myPosition)</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-compositionString.html"><span class="tt">Input.compositionString</span></a>  </td><td class="markdownTableBodyNone">Subscribe to the <a href="../api/UnityEngine.InputSystem.Keyboard.html#UnityEngine_InputSystem_Keyboard_onIMECompositionChange"><span class="tt">Keyboard.onIMECompositionChange</span></a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-imeCompositionMode.html"><span class="tt">Input.imeCompositionMode</span></a>  </td><td class="markdownTableBodyNone">Use: <a href="../api/UnityEngine.InputSystem.Keyboard.html#UnityEngine_InputSystem_Keyboard_SetIMEEnabled_System_Boolean_"><span class="tt">Keyboard.current.SetIMEEnabled(true)</span></a><br  />
+Also see: <a href="Keyboard.html#ime">Keyboard text input documentation</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-imeIsSelected.html"><span class="tt">Input.imeIsSelected</span></a>  </td><td class="markdownTableBodyNone">Use: <a href="../api/UnityEngine.InputSystem.Keyboard.html#UnityEngine_InputSystem_Keyboard_imeSelected"><span class="tt">Keyboard.current.imeSelected</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-inputString.html"><span class="tt">Input.inputString</span></a>  </td><td class="markdownTableBodyNone">Subscribe to the <a href="../api/UnityEngine.InputSystem.Keyboard.html#UnityEngine_InputSystem_Keyboard_onTextInput"><span class="tt">Keyboard.onTextInput</span></a> event:<br  />
+<span class="tt">Keyboard.current.onTextInput += character =&gt; /* ... */;</span>  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2170"></a>
+Mouse</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Input Manager (Old)  </th><th class="markdownTableHeadNone">Input System (New)  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetMouseButton.html"><span class="tt">Input.GetMouseButton</span></a><br  />
+Example: <span class="tt">Input.GetMouseButton(0)</span>  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html#UnityEngine_InputSystem_Controls_ButtonControl_isPressed"><span class="tt">isPressed</span></a> on the corresponding mouse button.<br  />
+Example: <span class="tt">InputSystem.Mouse.current.leftButton.isPressed</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetMouseButtonDown.html"><span class="tt">Input.GetMouseButtonDown</span></a><br  />
+Example: <span class="tt">Input.GetMouseButtonDown(0)</span>  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html#UnityEngine_InputSystem_Controls_ButtonControl_wasPressedThisFrame"><span class="tt">wasPressedThisFrame</span></a> on the corresponding mouse button.<br  />
+Example: <span class="tt">InputSystem.Mouse.current.leftButton.wasPressedThisFrame</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetMouseButtonUp.html"><span class="tt">Input.GetMouseButtonUp</span></a><br  />
+Example: <span class="tt">Input.GetMouseButtonUp(0)</span>  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html#UnityEngine_InputSystem_Controls_ButtonControl_wasReleasedThisFrame"><span class="tt">wasReleasedThisFrame</span></a> on the corresponding mouse button.<br  />
+Example: <span class="tt">InputSystem.Mouse.current.leftButton.wasReleasedThisFrame</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-mousePosition.html"><span class="tt">Input.mousePosition</span></a>  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.Mouse.html"><span class="tt">Mouse.current.position.ReadValue()</span></a><br  />
+Example: <span class="tt">Vector2 position = Mouse.current.position.ReadValue();</span><br  />
+<b>Note</b>: Mouse simulation from touch isn't implemented yet.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-mousePresent.html"><span class="tt">Input.mousePresent</span></a>  </td><td class="markdownTableBodyNone">No corresponding API yet.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2171"></a>
+Touch and Pen</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Input Manager (Old)  </th><th class="markdownTableHeadNone">Input System (New)  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetTouch.html"><span class="tt">Input.GetTouch</span></a><br  />
+For example:<br  />
+<span class="tt">Touch touch = Input.GetTouch(0);</span><br  />
+<span class="tt">Vector2 touchPos = touch.position;</span>  </td><td class="markdownTableBodyNone">Use <a href="../api/UnityEngine.InputSystem.EnhancedTouch.Touch.html#UnityEngine_InputSystem_EnhancedTouch_Touch_activeTouches"><span class="tt">EnhancedTouch.Touch.activeTouches[i]</span></a><br  />
+Example: <span class="tt">Vector2 touchPos = EnhancedTouch.Touch.activeTouches[0].position;</span><br  />
+<b>Note</b>: Enable enhanced touch support first by calling <a href="../api/UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.html#UnityEngine_InputSystem_EnhancedTouch_EnhancedTouchSupport_Enable"><span class="tt">EnhancedTouch.Enable()</span></a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-multiTouchEnabled.html"><span class="tt">Input.multiTouchEnabled</span></a>  </td><td class="markdownTableBodyNone">No corresponding API yet.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-multiTouchEnabled.html"><span class="tt">Input.simulateMouseWithTouches</span></a>  </td><td class="markdownTableBodyNone">No corresponding API yet.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-stylusTouchSupported.html"><span class="tt">Input.stylusTouchSupported</span></a>  </td><td class="markdownTableBodyNone">No corresponding API yet.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-touchCount.html"><span class="tt">Input.touchCount</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.EnhancedTouch.Touch.html#UnityEngine_InputSystem_EnhancedTouch_Touch_activeTouches"><span class="tt">EnhancedTouch.Touch.activeTouches.Count</span></a><br  />
+<b>Note</b>: Enable enhanced touch support first by calling <a href="../api/UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.html#UnityEngine_InputSystem_EnhancedTouch_EnhancedTouchSupport_Enable"><span class="tt">EnhancedTouchSupport.Enable()</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-touches.html"><span class="tt">Input.touches</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.EnhancedTouch.Touch.html#UnityEngine_InputSystem_EnhancedTouch_Touch_activeTouches"><span class="tt">EnhancedTouch.Touch.activeTouches</span></a><br  />
+<b>Note</b>: Enable enhanced touch support first by calling <a href="../api/UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.html#UnityEngine_InputSystem_EnhancedTouch_EnhancedTouchSupport_Enable"><span class="tt">EnhancedTouch.Enable()</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-touchPressureSupported.html"><span class="tt">Input.touchPressureSupported</span></a>  </td><td class="markdownTableBodyNone">No corresponding API yet.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-touchSupported.html"><span class="tt">Input.touchSupported</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Touchscreen.html#UnityEngine_InputSystem_Touchscreen_current"><span class="tt">Touchscreen.current != null</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-backButtonLeavesApp.html"><span class="tt">Input.backButtonLeavesApp</span></a>  </td><td class="markdownTableBodyNone">No corresponding API yet.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetPenEvent.html"><span class="tt">GetPenEvent</span></a><br  />
+<a href="https://docs.unity3d.com/ScriptReference/Input.GetLastPenContactEvent.html"><span class="tt">GetLastPenContactEvent</span></a><br  />
+<a href="https://docs.unity3d.com/ScriptReference/Input.ResetPenEvents.html"><span class="tt">ResetPenEvents</span></a><br  />
+<a href="https://docs.unity3d.com/ScriptReference/Input.ClearLastPenContactEvent.html"><span class="tt">ClearLastPenContactEvent</span></a>  </td><td class="markdownTableBodyNone">Use: <a href="../api/UnityEngine.InputSystem.Pen.html#UnityEngine_InputSystem_Pen_current"><span class="tt">Pen.current</span></a><br  />
+See the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_pen.html">Pen, tablet and stylus support</a> docs for more information.  </td></tr>
+</table>
+<hr  />
+<p>Note: <a href="https://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html"><span class="tt">UnityEngine.TouchScreenKeyboard</span></a> is not part of the old Input Manager API, so you can continue to use it when migrating to the new Input System package.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2172"></a>
+Sensors</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Input Manager (Old)  </th><th class="markdownTableHeadNone">Input System (New)  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-acceleration.html"><span class="tt">Input.acceleration</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Accelerometer.html"><span class="tt">Accelerometer.current.acceleration.ReadValue()</span></a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-accelerationEventCount.html"><span class="tt">Input.accelerationEventCount</span></a><br  />
+<a href="https://docs.unity3d.com/ScriptReference/Input-accelerationEvents.html"><span class="tt">Input.accelerationEvents</span></a>  </td><td class="markdownTableBodyNone">Acceleration events aren't made available separately from other input events. See the <a href="Sensors.html#accelerometer">accelerometer code sample on the Sensors page</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-compass.html"><span class="tt">Input.compass</span></a>  </td><td class="markdownTableBodyNone">No corresponding API yet.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-compensateSensors.html"><span class="tt">Input.compensateSensors</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_compensateForScreenOrientation"><span class="tt">InputSettings.compensateForScreenOrientation</span></a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-deviceOrientation.html"><span class="tt">Input.deviceOrientation</span></a>  </td><td class="markdownTableBodyNone">No corresponding API yet.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-gyro.html"><span class="tt">Input.gyro</span></a>  </td><td class="markdownTableBodyNone">The <span class="tt">UnityEngine.Gyroscope</span> class is replaced by multiple separate sensor Devices in the new Input System:<br  />
+<a href="../api/UnityEngine.InputSystem.Gyroscope.html"><span class="tt">Gyroscope</span></a> to measure angular velocity.<br  />
+<a href="../api/UnityEngine.InputSystem.GravitySensor.html"><span class="tt">GravitySensor</span></a> to measure the direction of gravity.<br  />
+<a href="../api/UnityEngine.InputSystem.AttitudeSensor.html"><span class="tt">AttitudeSensor</span></a> to measure the orientation of the device.<br  />
+<a href="../api/UnityEngine.InputSystem.Accelerometer.html"><span class="tt">Accelerometer</span></a> to measure the total acceleration applied to the device.<br  />
+<a href="../api/UnityEngine.InputSystem.LinearAccelerationSensor.html"><span class="tt">LinearAccelerationSensor</span></a> to measure acceleration applied to the device, compensating for gravity.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Gyroscope-attitude.html"><span class="tt">Input.gyro.attitude</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.AttitudeSensor.html"><span class="tt">AttitudeSensor.current.orientation.ReadValue()</span></a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Gyroscope-enabled.html"><span class="tt">Input.gyro.enabled</span></a>  </td><td class="markdownTableBodyNone">Get: <span class="tt">Gyroscope.current.enabled</span><br  />
+Set:<br  />
+<span class="tt">EnableDevice(Gyroscope.current);</span><br  />
+<span class="tt">DisableDevice(Gyroscope.current);</span><br  />
+<br  />
+<b>Note</b>: The new Input System replaces <span class="tt">UnityEngine.Gyroscope</span> with multiple separate sensor devices. Substitute <a href="../api/UnityEngine.InputSystem.Gyroscope.html"><span class="tt">Gyroscope</span></a> with other sensors in the sample as needed. See the notes for <span class="tt">Input.gyro</span> above for details.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Gyroscope-gravity.html"><span class="tt">Input.gyro.gravity</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.GravitySensor.html"><span class="tt">GravitySensor.current.gravity.ReadValue()</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Gyroscope-rotationRate.html"><span class="tt">Input.gyro.rotationRate</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gyroscope.html"><span class="tt">Gyroscope.current.angularVelocity.ReadValue()</span></a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Gyroscope-rotationRateUnbiased.html"><span class="tt">Input.gyro.rotationRateUnbiased</span></a>  </td><td class="markdownTableBodyNone">No corresponding API yet.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Gyroscope-updateInterval.html"><span class="tt">Input.gyro.updateInterval</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Sensor.html#UnityEngine_InputSystem_Sensor_samplingFrequency"><span class="tt">Sensor.samplingFrequency</span></a><br  />
+Example:<br  />
+<span class="tt">Gyroscope.current.samplingFrequency = 1.0f / updateInterval;</span><br  />
+<br  />
+<b>Notes</b>:<br  />
+<a href="../api/UnityEngine.InputSystem.Sensor.html#UnityEngine_InputSystem_Sensor_samplingFrequency"><span class="tt">samplingFrequency</span></a> is in Hz, not in seconds as <a href="https://docs.unity3d.com/ScriptReference/Gyroscope-updateInterval.html"><span class="tt">updateInterval</span></a>, so you need to divide 1 by the value.<br  />
+<br  />
+The new Input System replaces <span class="tt">UnityEngine.Gyroscope</span> with multiple separate sensor devices. Substitute <a href="../api/UnityEngine.InputSystem.Gyroscope.html"><span class="tt">Gyroscope</span></a> with other sensors in the sample as needed. See the notes for <span class="tt">Input.gyro</span> above for details.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Gyroscope-userAcceleration.html"><span class="tt">Input.gyro.userAcceleration</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.LinearAccelerationSensor.html"><span class="tt">LinearAccelerationSensor.current.acceleration.acceleration.ReadValue()</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input-location.html"><span class="tt">Input.location</span></a>  </td><td class="markdownTableBodyNone">No corresponding API yet.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://docs.unity3d.com/ScriptReference/Input.GetAccelerationEvent.html"><span class="tt">Input.GetAccelerationEvent</span></a>  </td><td class="markdownTableBodyNone">See notes for <span class="tt">Input.accelerationEvents</span> above.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

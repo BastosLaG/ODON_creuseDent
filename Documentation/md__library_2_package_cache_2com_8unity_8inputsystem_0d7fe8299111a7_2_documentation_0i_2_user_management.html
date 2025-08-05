@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: UserManagement</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_user_management.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">UserManagement </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2373"></a>
+autotoc_md2373</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2374"></a>
+uid: input-system-user-management</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2375"></a>
+User Management</h1>
+<p>The Input System supports multi-user management through the <a href="../api/UnityEngine.InputSystem.Users.InputUser.html"><span class="tt">InputUser</span></a> class. This comprises both user account management features on platforms that have these capabilities built into them (such as Xbox and PS4), as well as features to manage Device allocations to one or more local users.</p>
+<p>&gt;<b>Note</b>: The user management API is quite low-level in nature. The stock functionality of Player Input Manager component (see <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input_manager.html">Player Input Manager</a>) provides an easier way to set up user management. The API described here is useful when you want more control over user management.</p>
+<p>In the Input System, each <a href="../api/UnityEngine.InputSystem.Users.InputUser.html"><span class="tt">InputUser</span></a> represents a human interacting with the application. For example, you can have multiple users playing a game together on a single computer or device (local multiplayer), where each user has one or more paired Input Devices.</p>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input_manager.html"><span class="tt">PlayerInputManager</span></a> class uses <a href="../api/UnityEngine.InputSystem.Users.InputUser.html"><span class="tt">InputUser</span></a> internally to handle users.</p>
+<p>&gt;<b>Note</b>: In the editor, all <span class="tt">InputUser</span> instances are automatically removed when exiting play mode thus also removing any device pairings. In essence, <span class="tt">InputUser</span> is considered a player-only API.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2376"></a>
+Device pairing</h2>
+<p>You can use the <a href="../api/UnityEngine.InputSystem.Users.InputUser.html#UnityEngine_InputSystem_Users_InputUser_PerformPairingWithDevice_UnityEngine_InputSystem_InputDevice_UnityEngine_InputSystem_Users_InputUser_UnityEngine_InputSystem_Users_InputUserPairingOptions_"><span class="tt">InputUser.PerformPairingWithDevice</span></a> method to create a new <a href="../api/UnityEngine.InputSystem.Users.InputUser.html"><span class="tt">InputUser</span></a> instance and pair it with an <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a>. You can also optionally pass in an existing <a href="../api/UnityEngine.InputSystem.Users.InputUser.html"><span class="tt">InputUser</span></a> instance to pair it with the Device, if you don't want to create a new user instance.</p>
+<p>To query the Devices paired to a specific <a href="../api/UnityEngine.InputSystem.Users.InputUser.html"><span class="tt">InputUser</span></a>, use <a href="../api/UnityEngine.InputSystem.Users.InputUser.html#UnityEngine_InputSystem_Users_InputUser_pairedDevices"><span class="tt">InputUser.pairedDevices</span></a>. To remove the pairing, use <a href="../api/UnityEngine.InputSystem.Users.InputUser.html#UnityEngine_InputSystem_Users_InputUser_UnpairDevice_UnityEngine_InputSystem_InputDevice_"><span class="tt">InputUser.UnpairDevice</span></a> or <a href="../api/UnityEngine.InputSystem.Users.InputUser.html#UnityEngine_InputSystem_Users_InputUser_UnpairDevices"><span class="tt">InputUser.UnpairDevices</span></a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2377"></a>
+Initial engagement</h3>
+<p>After you create a user, you can use <a href="../api/UnityEngine.InputSystem.Users.InputUser.html#UnityEngine_InputSystem_Users_InputUser_AssociateActionsWithUser_UnityEngine_InputSystem_IInputActionCollection_"><span class="tt">InputUser.AssociateActionsWithUser</span></a> to associate <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Input Actions</a> to it, and use <a href="../api/UnityEngine.InputSystem.Users.InputUser.html#UnityEngine_InputSystem_Users_InputUser_ActivateControlScheme_System_String_"><span class="tt">InputUser.ActivateControlScheme</span></a> to associate and activate a <a href="ActionBindings.md#control-schemes">Control Scheme</a>. You can use <a href="../api/UnityEngine.InputSystem.InputControlScheme.html#UnityEngine_InputSystem_InputControlScheme_FindControlSchemeForDevice__1_UnityEngine_InputSystem_InputDevice___0_"><span class="tt">InputControlScheme.FindControlSchemeForDevice</span></a> to pick a control scheme that matches the selected Actions and Device:</p>
+<div class="fragment"><div class="line">var scheme = InputControlScheme.FindControlSchemeForDevice(user.pairedDevices[0], user.actions.controlsSchemes);</div>
+<div class="line">if (scheme != null)</div>
+<div class="line">    user.ActivateControlScheme(scheme);</div>
+</div><!-- fragment --><p>When you activate a Control Scheme, the Input System automatically switches the active Binding mask for the user's Actions to that Control Scheme.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2378"></a>
+Loss of Device</h3>
+<p>If paired Input Devices disconnect during the session, the system notifies the <a href="../api/UnityEngine.InputSystem.Users.InputUser.html"><span class="tt">InputUser</span></a> class. It still keeps track of the Device, and automatically re-pairs the Device if it becomes available again.</p>
+<p>To get notifications about these changes, subscribe to the <a href="../api/UnityEngine.InputSystem.Users.InputUser.html#UnityEngine_InputSystem_Users_InputUser_onChange"><span class="tt">InputUser.onChange</span></a> event.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2379"></a>
+Debugging</h2>
+<p>Check the debugger documentation to learn <a href="Debugging.md#debugging-users-and-playerinput">how to debug active users</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

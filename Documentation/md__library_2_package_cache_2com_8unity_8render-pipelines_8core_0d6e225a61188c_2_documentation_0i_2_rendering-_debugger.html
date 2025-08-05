@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Rendering Debugger</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2_rendering-_debugger.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Rendering Debugger </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2847"></a></p>
+<p>The <b>Rendering Debugger</b> is a window you can customize with your own controls and scripts to visualize your project's lighting, rendering, or Material properties.</p>
+<p>If your project uses a custom Scriptable Render Pipeline (SRP), you can add controls to the default empty window.</p>
+<p>If your project uses the Universal Render Pipeline (URP) or the High-Definition Render Pipeline (HDRP), refer to the following pages:</p>
+<ul>
+<li><a href="https://docs.unity3d.com/Manual/urp/features/rendering-debugger-add-controls.html">Add controls to the Rendering Debugger in URP</a></li>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@15.0/manual/Rendering-Debugger-Add-Controls.html">Add controls to the Rendering Debugger in HDRP</a></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2848"></a>
+How to access the Rendering Debugger</h1>
+<p>The Rendering Debugger window is available in the following modes:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Mode  </th><th class="markdownTableHeadNone">Platform  </th><th class="markdownTableHeadNone">Availability  </th><th class="markdownTableHeadNone">How to Open the Rendering Debugger  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Editor  </td><td class="markdownTableBodyNone">All  </td><td class="markdownTableBodyNone">Yes (window in the Editor)  </td><td class="markdownTableBodyNone">Select <b>Window &gt; Analysis &gt; Rendering Debugger</b>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Play mode  </td><td class="markdownTableBodyNone">All  </td><td class="markdownTableBodyNone">Yes (overlay in the Game view)  </td><td class="markdownTableBodyNone">On a desktop or laptop computer, press <b>LeftCtrl+Backspace</b> (<b>LeftCtrl+Delete</b> on macOS)<br  />
+On a console controller, press L3 and R3 (Left Stick and Right Stick)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Runtime  </td><td class="markdownTableBodyNone">Desktop/Laptop  </td><td class="markdownTableBodyNone">Yes (only in Development builds)  </td><td class="markdownTableBodyNone">Press <b>LeftCtrl+Backspace</b> (<b>LeftCtrl+Delete</b> on macOS)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Runtime  </td><td class="markdownTableBodyNone">Console  </td><td class="markdownTableBodyNone">Yes (only in Development builds)  </td><td class="markdownTableBodyNone">Press L3 and R3 (Left Stick and Right Stick)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Runtime  </td><td class="markdownTableBodyNone">Mobile  </td><td class="markdownTableBodyNone">Yes (only in Development builds)  </td><td class="markdownTableBodyNone">Use a three-finger double tap  </td></tr>
+</table>
+<p>To disable the runtime UI, use the <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.core@17.0/api/UnityEngine.Rendering.DebugManager.html#UnityEngine_Rendering_DebugManager_enableRuntimeUI">enableRuntimeUI</a> property.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2849"></a>
+Navigation at runtime</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2850"></a>
+Keyboard</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Action  </th><th class="markdownTableHeadNone">Control  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Change the current active item</b>  </td><td class="markdownTableBodyNone">Use the arrow keys  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Change the current tab</b>  </td><td class="markdownTableBodyNone">Use the Page up and Page down keys (Fn + Up and Fn + Down keys respectively for MacOS)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Display the current active item independently of the debug window</b>  </td><td class="markdownTableBodyNone">Press the right Shift key  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2851"></a>
+Xbox Controller</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Action  </th><th class="markdownTableHeadNone">Control  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Change the current active item</b>  </td><td class="markdownTableBodyNone">Use the Directional pad (D-Pad)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Change the current tab</b>  </td><td class="markdownTableBodyNone">Use the Left Bumper and Right Bumper  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Display the current active item independently of the debug window</b>  </td><td class="markdownTableBodyNone">Press the X button  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2852"></a>
+PlayStation Controller</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Action  </th><th class="markdownTableHeadNone">Control  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Change the current active item</b>  </td><td class="markdownTableBodyNone">Use the Directional buttons  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Change the current tab</b>  </td><td class="markdownTableBodyNone">Use the L1 button and R1 button  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Display the current active item independently of the debug window</b>  </td><td class="markdownTableBodyNone">Press the Square button  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2853"></a>
+Add a control</h1>
+<p>The <b>Rendering Debugger</b> window can contain multiple tabs ('panels'). When you select a panel, the window displays one or more controls ('widgets').</p>
+<p>To create a widget and add it to a new panel, do the following:</p>
+<ol type="1">
+<li>Create a script that uses <span class="tt">using <a class="el" href="namespace_unity_engine_1_1_rendering.html">UnityEngine.Rendering</a>;</span> to include the <span class="tt"><a class="el" href="namespace_unity_engine_1_1_rendering.html">UnityEngine.Rendering</a></span> namespace.</li>
+<li>Create a widget by creating an instance of a child class of <a href="../api/UnityEngine.Rendering.DebugUI.Widget.html">DebugUI.Widget</a>, for example <span class="tt">DebugUI.Button</span>.</li>
+<li>In the widget, implement the <span class="tt">onValueChanged</span> callback, which <a class="el" href="namespace_unity.html">Unity</a> calls when you change the value in the widget.</li>
+<li>Create a panel using <a href="../api/UnityEngine.Rendering.DebugManager.html#UnityEngine_Rendering_DebugManager_GetPanel_System_String_System_Boolean_System_Int32_System_Boolean_">DebugUI.instance.GetPanel</a>.</li>
+<li>Add the widget to an array.</li>
+<li>Add the widget array to the list of children in the panel.</li>
+</ol>
+<p>If you add 2 or more widgets to the array, the panel displays the widgets in the same order as the array.</p>
+<p>The following code sample creates and adds a widget that enables or disables the main directional light:</p>
+<div class="fragment"><div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.Rendering;</div>
+<div class="line">using System.Collections.Generic;</div>
+<div class="line">using System.Linq;</div>
+<div class="line"> </div>
+<div class="line">[ExecuteInEditMode]</div>
+<div class="line">public class CustomDebugPanel : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">    static bool lightEnabled = true;</div>
+<div class="line"> </div>
+<div class="line">    void OnEnable()</div>
+<div class="line">    {</div>
+<div class="line">        // Create a list of widgets</div>
+<div class="line">        var widgetList = new List&lt;DebugUI.Widget&gt;();</div>
+<div class="line"> </div>
+<div class="line">        // Add a checkbox widget to the list of widgets</div>
+<div class="line">        widgetList.AddRange(new DebugUI.Widget[]</div>
+<div class="line">        {</div>
+<div class="line">            new DebugUI.BoolField</div>
+<div class="line">            {</div>
+<div class="line">                displayName = &quot;Enable main directional light&quot;,</div>
+<div class="line">                tooltip = &quot;Enable or disable the main directional light&quot;,</div>
+<div class="line">                getter = () =&gt; lightEnabled,</div>
+<div class="line"> </div>
+<div class="line">                // When the widget value is changed, change the value of lightEnabled</div>
+<div class="line">                setter = value =&gt; lightEnabled = value,</div>
+<div class="line"> </div>
+<div class="line">                // Run a custom function to enable or disable the main directional light based on the widget value</div>
+<div class="line">                onValueChanged = DisplaySunChanged</div>
+<div class="line">            },</div>
+<div class="line">        });</div>
+<div class="line"> </div>
+<div class="line">        // Create a new panel (tab) in the Rendering Debugger</div>
+<div class="line">        var panel = DebugManager.instance.GetPanel(&quot;My Custom Panel&quot;, createIfNull: true);</div>
+<div class="line"> </div>
+<div class="line">        // Add the widgets to the panel</div>
+<div class="line">        panel.children.Add(widgetList.ToArray());</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    // Remove the custom panel if the GameObject is disabled</div>
+<div class="line">    void OnDisable()</div>
+<div class="line">    {</div>
+<div class="line">        DebugManager.instance.RemovePanel(&quot;My Custom Panel&quot;);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    // Enable or disable the main directional light based on the widget value</div>
+<div class="line">    void DisplaySunChanged(DebugUI.Field&lt;bool&gt; field, bool displaySun)</div>
+<div class="line">    {</div>
+<div class="line">        Light sun = FindObjectsOfType&lt;Light&gt;().Where(x =&gt; x.type == LightType.Directional).FirstOrDefault();</div>
+<div class="line">        if (sun)</div>
+<div class="line">            sun.enabled = displaySun;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Add the script to a GameObject. You should see a new <b>My Custom Panel</b> panel in the <b>Rendering Debugger</b> window.</p>
+<p><img src="Images/rendering-debugger.png" alt="Screenshot of the Rendering Debugger window showing a new custom panel." class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2854"></a>
+Add a control to an existing panel</h2>
+<p>You can only add properties to existing panels if you're using a custom SRP. You shouldn't add widgets to URP or HDRP's built-in Rendering Debugger panels.</p>
+<p>To fetch an existing panel, use <span class="tt">DebugManager.instance.GetPanel</span> with the panel name. Set <span class="tt">createIfNull</span> to <span class="tt">false</span>, so you don't accidentally create a new panel if the name doesn't match an existing panel.</p>
+<p>The following code sample fetches the panel from the code sample above:</p>
+<div class="fragment"><div class="line">var panel = DebugManager.instance.GetPanel(&quot;My Custom Panel&quot;, createIfNull: false);</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md2855"></a>
+Add a container</h1>
+<p>You can use containers to display groups of widgets together.</p>
+<ol type="1">
+<li>Create a container using one of the child classes of <a href="../api/UnityEngine.Rendering.DebugUI.Container.html">DebugUI.Container</a>, for example <span class="tt">DebugUI.Foldout</span>.</li>
+<li>Add a widget array using the container's <span class="tt">Add</span> method.</li>
+</ol>
+<p>The following example creates a collapsible container that contains 2 checkboxes:</p>
+<div class="fragment"><div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.Rendering;</div>
+<div class="line">using System.Collections.Generic;</div>
+<div class="line"> </div>
+<div class="line">[ExecuteInEditMode]</div>
+<div class="line">public class CustomDebugPanelWithContainer : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    void OnEnable()</div>
+<div class="line">    {</div>
+<div class="line">        // Create a list of widgets</div>
+<div class="line">        var widgetList = new List&lt;DebugUI.Widget&gt;();</div>
+<div class="line"> </div>
+<div class="line">        // Add 2 checkbox widgets to the list of widgets</div>
+<div class="line">        widgetList.AddRange(new DebugUI.Widget[]</div>
+<div class="line">        {</div>
+<div class="line">            new DebugUI.BoolField</div>
+<div class="line">            {</div>
+<div class="line">                displayName = &quot;Visualisation 1&quot;,</div>
+<div class="line">            },</div>
+<div class="line">            new DebugUI.BoolField</div>
+<div class="line">            {</div>
+<div class="line">                displayName = &quot;Visualisation 2&quot;,</div>
+<div class="line">            },</div>
+<div class="line">        });</div>
+<div class="line"> </div>
+<div class="line">        // Create a container</div>
+<div class="line">        var container = new DebugUI.Foldout</div>
+<div class="line">        {</div>
+<div class="line">            displayName = &quot;My Container&quot;</div>
+<div class="line">        };</div>
+<div class="line"> </div>
+<div class="line">        // Add the widgets to the container</div>
+<div class="line">        container.children.Add(widgetList.ToArray());</div>
+<div class="line"> </div>
+<div class="line">        // Create a new panel (tab) in the Rendering Debugger</div>
+<div class="line">        var panel = DebugManager.instance.GetPanel(&quot;My Custom Panel With Container&quot;, createIfNull: true);</div>
+<div class="line"> </div>
+<div class="line">        // Add the container to the panel</div>
+<div class="line">        panel.children.Add(container);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md2856"></a>
+Control the Rendering Debugger overlay</h1>
+<p>To change the value of the currently active widget:</p>
+<ul>
+<li>On a keyboard, press the Left and Right arrow keys.</li>
+<li>On a touch screen, tap the arrows next to the properties.</li>
+<li>On an Xbox controller, use the Directional pad (D-Pad).</li>
+<li>On a PlayStation controller, use the Directional buttons.</li>
+</ul>
+<p>To change the current panel:</p>
+<ul>
+<li>On a Windows keyboard, use the Page up and Page down keys (macOS: fn + Up arrow key, and fn + Down arrow key).</li>
+<li>On a touch screen, tap the arrows next to the tab title.</li>
+<li>On an Xbox controller, use the Left Bumper and Right Bumper.</li>
+<li>On a PlayStation controller, use L1 and R1.</li>
+</ul>
+<p>To display the currently active widget independently of the debug window:</p>
+<ul>
+<li>On a keyboard, press Right Shift.</li>
+<li>On an Xbox controller, press X.</li>
+<li>On a PlayStation controller, press Square.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2857"></a>
+Disable the Rendering Debugger</h1>
+<p>To disable the Rendering Debugger in your built application, set <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.core@15.0/api/UnityEngine.Rendering.DebugManager.html#UnityEngine_Rendering_DebugManager_enableRuntimeUI">DebugManager.enableRuntimeUI</a> to <span class="tt">false</span>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

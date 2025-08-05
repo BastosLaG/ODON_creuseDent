@@ -1,0 +1,9 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_interaction =
+[
+    [ "HandInteractionPoses", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_inte32dafa9261dd6bd87d3a3a85c830031c.html", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_inte32dafa9261dd6bd87d3a3a85c830031c" ],
+    [ "GetDeviceLayoutName", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_interaction.html#a7216b795cb0fa3c56e6d33d7348973a3", null ],
+    [ "GetInteractionProfileType", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_interaction.html#a6ef264bfbcf4b845c3df0faa480d2386", null ],
+    [ "RegisterActionMapsWithRuntime", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_interaction.html#a39cd0e756d70fa4f5569be207aa19123", null ],
+    [ "RegisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_interaction.html#aeae59f8085fc328a8fa00b00dfcb2374", null ],
+    [ "UnregisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_interaction.html#ab6943e3afa37a99a5d7dc09b53fc515b", null ]
+];

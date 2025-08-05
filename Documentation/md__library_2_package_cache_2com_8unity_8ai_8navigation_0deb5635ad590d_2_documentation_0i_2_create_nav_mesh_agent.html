@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Create a NavMesh Agent</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_create_nav_mesh_agent.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Create a NavMesh Agent </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md268"></a></p>
+<p>Once you have a <a href="./Glossary.md#NavMesh" title="A mesh that Unity generates to approximate the walkable areas and obstacles in your environment for path finding and AI-controlled navigation."><b>NavMesh</b></a> baked for your level it is time to create a character which can navigate the <a href="./Glossary.md#scene" title="A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces."><b>Scene</b></a>. We’re going to build our prototype agent from a cylinder and set it in motion. This is done using a NavMesh Agent component and a simple script.</p>
+<p><img src="./Images/NavMeshAgentSetup.svg" alt="The agent is a cylinder mesh, with a Nav Mesh Agent component." style="pointer-events: none;" class="inline"/></p>
+<p>First let’s create the character:</p>
+<ol type="1">
+<li>Create a <b>cylinder</b>: <b>GameObject &gt; 3D Object &gt; Cylinder</b>.</li>
+<li>The default cylinder dimensions (height 2 and radius 0.5) are good for a humanoid shaped agent, so we will leave them as they are.</li>
+<li>Add a <b>NavMesh Agent</b> component: <b>Component &gt; Navigation &gt; NavMesh Agent</b>.</li>
+</ol>
+<p>Now you have simple NavMesh Agent set up ready to receive commands!</p>
+<p>When you start to experiment with a NavMesh Agent, you most likely are going to adjust its dimensions for your character size and speed.</p>
+<p>The <b>NavMesh Agent</b> component handles both the pathfinding and the movement control of a character. In your <a href="./Glossary.md#scripts" title="A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like."><b>scripts</b></a>, navigation can be as simple as setting the desired destination point - the NavMesh Agent can handle everything from there on.</p>
+<div class="fragment"><div class="line">C#</div>
+<div class="line">   // MoveTo.cs</div>
+<div class="line">   using UnityEngine;</div>
+<div class="line">   using UnityEngine.AI;</div>
+<div class="line"> </div>
+<div class="line">   public class MoveTo : MonoBehaviour {</div>
+<div class="line"> </div>
+<div class="line">      public Transform goal;</div>
+<div class="line"> </div>
+<div class="line">      void Start () {</div>
+<div class="line">         NavMeshAgent agent = GetComponent&lt;NavMeshAgent&gt;();</div>
+<div class="line">         agent.destination = goal.position;</div>
+<div class="line">      }</div>
+<div class="line">   }</div>
+</div><!-- fragment --><p>Next we need to build a simple script which allows you to send your character to the destination specified by another Game Object, and a Sphere which will be the destination to move to:</p>
+<ol type="1">
+<li>Create a new <b>C# script</b> (<span class="tt">MoveTo.cs</span>) and replace its contents with the above script.</li>
+<li>Assign the MoveTo script to the character you’ve just created.</li>
+<li>Create a <b>sphere</b>, this will be the destination the agent will move to.</li>
+<li>Move the sphere away from the character to a location that is close to the NavMesh surface.</li>
+<li>Select the character, locate the MoveTo script, and assign the Sphere to the <b>Goal</b> property.</li>
+<li><b>Press Play</b>; you should see the agent navigating to the location of the sphere.</li>
+</ol>
+<p>To sum it up, in your script, you will need to get a reference to the NavMesh Agent component and then to set the agent in motion, you just need to assign a position to its <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.NavMeshAgent-destination.html" title="Script reference for the NavMeshAgent destination property.">destination</a> property. The <a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_how_tos.html">Navigation How Tos</a> will give you further examples on how to solve common gameplay scenarios with the NavMesh Agent.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md269"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_create_nav_mesh.html">Create a NavMesh</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_how_tos.html">Common use cases for NavMesh Agent, with source code.</a></li>
+<li><a href="./NavInnerWorkings.md#following-the-path" title="Learn more about path following.">Inner Workings of the Navigation System</a></li>
+<li><a href="./NavigationWindow.md#agents-tab" title="Guidance on how to define classes of agents with different attributes.">Navigation agent configurations</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_mesh_agent.html">Full description of all the NavMeshAgent properties.</a></li>
+<li><a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.NavMeshAgent.html" title="Full description of the NavMeshAgent scripting API.">NavMesh Agent scripting reference</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

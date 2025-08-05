@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_meta_quest_touch_plus_controller_profile =
+[
+    [ "QuestTouchPlusController", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_meta_quest_touch_plus_9f52bac29c386d70661441b85b17736f.html", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_meta_quest_touch_plus_9f52bac29c386d70661441b85b17736f" ],
+    [ "GetDeviceLayoutName", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_meta_quest_touch_plus_controller_profile.html#a3a360ceda3243dd2d93e60ae22225218", null ],
+    [ "RegisterActionMapsWithRuntime", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_meta_quest_touch_plus_controller_profile.html#a3a8d575edd0c85e3b190d0c0e41da0f9", null ],
+    [ "RegisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_meta_quest_touch_plus_controller_profile.html#a59d3c6ca906417617d83dbf560b20a63", null ],
+    [ "UnregisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_meta_quest_touch_plus_controller_profile.html#ad6212a5321344f39f50f1df47940a7fd", null ]
+];

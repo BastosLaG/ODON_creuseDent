@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Sensors</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_sensors.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Sensors </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2267"></a>
+autotoc_md2267</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2268"></a>
+uid: input-system-sensors</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2269"></a>
+Sensor support</h1>
+<ul>
+<li>Sampling frequency</li>
+<li>`Accelerometer`</li>
+<li>`Gyroscope`</li>
+<li>`GravitySensor`</li>
+<li>`AttitudeSensor`</li>
+<li>`LinearAccelerationSensor`</li>
+<li>`MagneticFieldSensor`</li>
+<li>`LightSensor`</li>
+<li>`PressureSensor`</li>
+<li>`ProximitySensor`</li>
+<li>`HumiditySensor`</li>
+<li>`AmbientTemperatureSensor`</li>
+<li>`StepCounter`</li>
+<li>`HingeAngle`</li>
+</ul>
+<p>Sensors are <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_devices.html"><span class="tt">InputDevices</span></a> that measure environmental characteristics of the device that the content is running on. <a class="el" href="namespace_unity.html">Unity</a> currently supports sensors on iOS and Android. Android supports a wider range of sensors than iOS.</p>
+<p>&gt;<b>Note</b>: To test your app on iOS or Android in the editor with sensor input from your mobile device, you can use the <a class="el" href="namespace_unity.html">Unity</a> Remote as described <a href="Debugging.md#unity-remote">here</a>. This currently supports `Accelerometer`, `Gyroscope`, `GravitySensor`, `AttitudeSensor`, and `LinearAccelerationSensor`.</p>
+<p>To determine whether a particular sensor is present, you can use its <span class="tt">.current</span> getter.</p>
+<div class="fragment"><div class="line"><span class="comment">// Determine if a Gyroscope sensor device is present.</span></div>
+<div class="line"><span class="keywordflow">if</span> (Gyroscope.current != <span class="keyword">null</span>)</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;Gyroscope present&quot;</span>);</div>
+</div><!-- fragment --><p>Unlike other devices, sensors are disabled by default. To enable a sensor, call <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_EnableDevice_UnityEngine_InputSystem_InputDevice_"><span class="tt">InputSystem.EnableDevice()</span></a>).</p>
+<div class="fragment"><div class="line">InputSystem.EnableDevice(Gyroscope.current);</div>
+</div><!-- fragment --><p>To disable a sensor, call <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_DisableDevice_UnityEngine_InputSystem_InputDevice_System_Boolean_"><span class="tt">InputSystem.DisableDevice()</span></a>.</p>
+<div class="fragment"><div class="line">InputSystem.DisableDevice(Gyroscope.current);</div>
+</div><!-- fragment --><p>To check whether a sensor is currently enabled, use <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_enabled"><span class="tt">InputDevice.enabled</span></a>.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (Gyroscope.current.enabled)</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;Gyroscope is enabled&quot;</span>);</div>
+</div><!-- fragment --><p>Each sensor Device implements a single Control which represents the data read by the sensor. The following sensors are available:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Device  </th><th class="markdownTableHeadNone">Android  </th><th class="markdownTableHeadNone">iOS  </th><th class="markdownTableHeadNone"><b>WebGL</b>  </th><th class="markdownTableHeadNone">Control  </th><th class="markdownTableHeadNone">Type  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">`Accelerometer`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes(1)  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Accelerometer.html#UnityEngine_InputSystem_Accelerometer_acceleration"><span class="tt">acceleration</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.Vector3Control.html"><span class="tt">Vector3Control</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">`Gyroscope`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes(1)  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Gyroscope.html#UnityEngine_InputSystem_Gyroscope_angularVelocity"><span class="tt">angularVelocity</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.Vector3Control.html"><span class="tt">Vector3Control</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">`GravitySensor`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes(1)  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.GravitySensor.html#UnityEngine_InputSystem_GravitySensor_gravity"><span class="tt">gravity</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.Vector3Control.html"><span class="tt">Vector3Control</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">`AttitudeSensor`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes(1)  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.AttitudeSensor.html#properties"><span class="tt">attitude</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.QuaternionControl.html"><span class="tt">QuaternionControl</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">`LinearAccelerationSensor`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes(1)  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.LinearAccelerationSensor.html#UnityEngine_InputSystem_LinearAccelerationSensor_acceleration"><span class="tt">acceleration</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.Vector3Control.html"><span class="tt">Vector3Control</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">`MagneticFieldSensor`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.MagneticFieldSensor.html#UnityEngine_InputSystem_MagneticFieldSensor_magneticField"><span class="tt">magneticField</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.Vector3Control.html"><span class="tt">Vector3Control</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">`LightSensor`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.LightSensor.html#UnityEngine_InputSystem_LightSensor_lightLevel"><span class="tt">lightLevel</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">`PressureSensor`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PressureSensor.html#UnityEngine_InputSystem_PressureSensor_atmosphericPressure"><span class="tt">atmosphericPressure</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">`ProximitySensor`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.ProximitySensor.html#UnityEngine_InputSystem_ProximitySensor_distance"><span class="tt">distance</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">`HumiditySensor`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.HumiditySensor.html#UnityEngine_InputSystem_HumiditySensor_relativeHumidity"><span class="tt">relativeHumidity</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">`AmbientTemperatureSensor`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.AmbientTemperatureSensor.html#UnityEngine_InputSystem_AmbientTemperatureSensor_ambientTemperature"><span class="tt">ambientTemperature</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">`StepCounter`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.StepCounter.html#UnityEngine_InputSystem_StepCounter_stepCounter"><span class="tt">stepCounter</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.IntegerControl.html"><span class="tt">IntegerControl</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">`HingeAngle`  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.HingeAngle.html#UnityEngine_InputSystem_HingeAngle_angle"><span class="tt">angle</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html"><span class="tt">AxisControl</span></a>  </td></tr>
+</table>
+<p>&gt;<b>Notes</b>: &gt;1. Sensor support for WebGL on Android and iOS devices is available in <a class="el" href="namespace_unity.html">Unity</a> 2021.2</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2270"></a>
+Sampling frequency</h2>
+<p>Sensors sample continuously at a set interval. You can set or query the sampling frequency for each sensor using the <a href="../api/UnityEngine.InputSystem.Sensor.html#UnityEngine_InputSystem_Sensor_samplingFrequency"><span class="tt">samplingFrequency</span></a> property. The frequency is expressed in Hertz (number of samples per second).</p>
+<div class="fragment"><div class="line"><span class="comment">// Get sampling frequency of gyro.</span></div>
+<div class="line">var frequency = Gyroscope.current.samplingFrequency;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Set sampling frequency of gyro to sample 16 times per second.</span></div>
+<div class="line">Gyroscope.current.samplingFrequency = 16;</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md2271"></a>
+<a class="anchor" id="accelerometer"></a><a href="../api/UnityEngine.InputSystem.Accelerometer.html"><span class="tt">Accelerometer</span></a></h2>
+<p>Use the accelerometer to measure the acceleration of a device. This is useful to control content by moving a device around. It reports the acceleration measured on a device both due to moving the device around, and due to gravity pulling the device down. You can use <span class="tt">GravitySensor</span> and <span class="tt">LinearAccelerationSensor</span> to get separate values for these. Values are affected by the <a href="Settings.md#compensate-orientation"><b>Compensate Orientation</b></a> setting.</p>
+<p>The following code traces all input events on the <a href="../api/UnityEngine.InputSystem.Accelerometer.html"><span class="tt">Accelerometer.current</span></a> device. </p><div class="fragment"><div class="line"><span class="keyword">private</span> InputEventTrace trace;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> StartTrace()</div>
+<div class="line">{</div>
+<div class="line">    InputSystem.EnableDevice(Accelerometer.current);</div>
+<div class="line"> </div>
+<div class="line">    trace = <span class="keyword">new</span> InputEventTrace(Accelerometer.current);</div>
+<div class="line">    trace.Enable();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Update()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">foreach</span> (var e <span class="keywordflow">in</span> trace)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">//...</span></div>
+<div class="line">    }</div>
+<div class="line">    trace.Clear();</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md2272"></a>
+<a class="anchor" id="gyroscope"></a><a href="../api/UnityEngine.InputSystem.Gyroscope.html"><span class="tt">Gyroscope</span></a></h2>
+<p>Use the gyroscope to measure the angular velocity of a device. This is useful to control content by rotating a device. Values are affected by the <a href="Settings.md#compensate-orientation"><b>Compensate Orientation</b></a> setting.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2273"></a>
+<a class="anchor" id="gravitysensor"></a><a href="../api/UnityEngine.InputSystem.GravitySensor.html"><span class="tt">GravitySensor</span></a></h2>
+<p>Use the gravity sensor to determine the direction of the gravity vector relative to a device. This is useful to control content by device orientation. This is usually derived from a hardware <span class="tt">Accelerometer</span>, by subtracting the effect of linear acceleration (see <span class="tt">LinearAccelerationSensor</span>). Values are affected by the <a href="Settings.md#compensate-orientation"><b>Compensate Orientation</b></a> setting.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2274"></a>
+<a class="anchor" id="attitudesensor"></a><a href="../api/UnityEngine.InputSystem.AttitudeSensor.html"><span class="tt">AttitudeSensor</span></a></h2>
+<p>Use the attitude sensor to determine the orientation of a device. This is useful to control content by rotating a device. Values are affected by the <a href="Settings.md#compensate-orientation"><b>Compensate Orientation</b></a> setting.</p>
+<p><b>Note</b>: On Android devices, there are two types of attitude sensors: <a href="https://developer.android.com/reference/android/hardware/Sensor#TYPE_ROTATION_VECTOR"><b>RotationVector</b></a> and <a href="https://developer.android.com/reference/android/hardware/Sensor#TYPE_GAME_ROTATION_VECTOR"><b>GameRotationVector</b></a>. Some Android devices have both types of sensor, while other devices may only have one or the other type available. These two types of attitude sensor behave slightly differently to each other. You can <a href="https://developer.android.com/guide/topics/sensors/sensors_position#sensors-pos-gamerot">read about the differences between them here</a>. Because of this variety in what type of rotation sensors are available across devices, when you require input from a rotation sensor on Android devices, you should include code that checks for your preferred type of rotation sensor with a fallback to the alternative type of rotation sensor if it is not present. For example:</p>
+<div class="fragment"><div class="line">AttitudeSensor attitudeSensor = InputSystem.GetDevice&lt;AndroidRotationVector&gt;();</div>
+<div class="line"><span class="keywordflow">if</span> (attitudeSensor == <span class="keyword">null</span>)</div>
+<div class="line">{</div>
+<div class="line">    attitudeSensor = InputSystem.GetDevice&lt;AndroidGameRotationVector&gt;();</div>
+<div class="line">    <span class="keywordflow">if</span> (attitudeSensor == <span class="keyword">null</span>)</div>
+<div class="line">       Debug.LogError(<span class="stringliteral">&quot;AttitudeSensor is not available&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (attitudeSensor != <span class="keyword">null</span>)</div>
+<div class="line">    InputSystem.EnableDevice(attitudeSensor);</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md2275"></a>
+<a class="anchor" id="linearaccelerationsensor"></a><a href="../api/UnityEngine.InputSystem.LinearAccelerationSensor.html"><span class="tt">LinearAccelerationSensor</span></a></h2>
+<p>Use the accelerometer to measure the acceleration of a device. This is useful to control content by moving a device around. Linear acceleration is the acceleration of a device unaffected by gravity. This is usually derived from a hardware <span class="tt">Accelerometer</span>, by subtracting the effect of gravity (see <span class="tt">GravitySensor</span>). Values are affected by the <a href="Settings.md#compensate-orientation"><b>Compensate Orientation</b></a> setting.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2276"></a>
+<a class="anchor" id="magneticfieldsensor"></a><a href="../api/UnityEngine.InputSystem.MagneticFieldSensor.html"><span class="tt">MagneticFieldSensor</span></a></h2>
+<p>This Input Device represents the magnetic field that affects the device which is running the content. Values are in micro-Tesla (μT) and measure the ambient magnetic field in the X, Y, and Z axis.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2277"></a>
+<a class="anchor" id="lightsensor"></a><a href="../api/UnityEngine.InputSystem.LightSensor.html"><span class="tt">LightSensor</span></a></h2>
+<p>This Input Device represents the ambient light measured by the device which is running the content. Value is in SI lux units.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2278"></a>
+<a class="anchor" id="pressuresensor"></a><a href="../api/UnityEngine.InputSystem.PressureSensor.html"><span class="tt">PressureSensor</span></a></h2>
+<p>This Input Device represents the atmospheric pressure measured by the device which is running the content. Value is in in hPa (millibar).</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2279"></a>
+<a class="anchor" id="proximitysensor"></a><a href="../api/UnityEngine.InputSystem.ProximitySensor.html"><span class="tt">ProximitySensor</span></a></h2>
+<p>This Input Device measures how close the device which is running the content is to the user. Phones typically use the proximity sensor to determine if the user is holding the phone to their ear or not. Values represent distance measured in centimeters.</p>
+<p>&gt;NOTE: The Samsung devices' proximity sensor is only enabled during calls and not when using speakerphone or Bluetooth earphones. This means the lock screen function won't work, allowing the user to use the display during the call. It is important to note that the proximity sensor only works during non-speakerphone or non-Bluetooth calls, as it is designed to prevent accidental touches during calls. However, the proximity sensor can work slightly differently on different Samsung phones.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2280"></a>
+<a class="anchor" id="humiditysensor"></a><a href="../api/UnityEngine.InputSystem.HumiditySensor.html"><span class="tt">HumiditySensor</span></a></h2>
+<p>This Input Device represents the ambient air humidity measured by the device which is running the content. Values represent the relative ambient air humidity in percent.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2281"></a>
+<a class="anchor" id="ambienttemperaturesensor"></a><a href="../api/UnityEngine.InputSystem.AmbientTemperatureSensor.html"><span class="tt">AmbientTemperatureSensor</span></a></h2>
+<p>This Input Device represents the ambient air temperature measured by the device which is running the content. Values represent temperature in Celsius degrees.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2282"></a>
+<a class="anchor" id="stepcounter"></a><a href="../api/UnityEngine.InputSystem.StepCounter.html"><span class="tt">StepCounter</span></a></h2>
+<p>This Input Device represents the user's footstep count as measured by the device which is running the content.</p>
+<p>&gt;NOTE: To access the pedometer on iOS/tvOS devices, you need to enable the <a href="Settings.md#iostvos"><b>Motion Usage</b> setting</a> in the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_settings.html">Input Settings</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2283"></a>
+<a class="anchor" id="hingeangle"></a><a href="../api/UnityEngine.InputSystem.HingeAngle.html"><span class="tt">HingeAngle</span></a></h2>
+<p>This Input Device represents hinge angle for foldable devices. For ex., Google Fold Android phone.</p>
+<div class="fragment"><div class="line">[Serializable]</div>
+<div class="line"><span class="keyword">class </span>SensorCapabilities</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> sensorType;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">float</span> resolution;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> minDelay;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Start()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (HingeAngle.current != <span class="keyword">null</span>)</div>
+<div class="line">    {</div>
+<div class="line">        InputSystem.EnableDevice(HingeAngle.current);</div>
+<div class="line">        var caps = JsonUtility.FromJson&lt;SensorCapabilities&gt;(HingeAngle.current.description.capabilities);</div>
+<div class="line">        Debug.Log($<span class="stringliteral">&quot;HingeAngle Capabilities: resolution = {caps.resolution}, minDelay = {caps.minDelay}&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> Update()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (HingeAngle.current != <span class="keyword">null</span>)</div>
+<div class="line">        Debug.Log($<span class="stringliteral">&quot;HingeAngle={HingeAngle.current.angle.ReadValue()}&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

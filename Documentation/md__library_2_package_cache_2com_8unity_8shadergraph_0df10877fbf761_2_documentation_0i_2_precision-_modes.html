@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Precision Modes</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_precision-_modes.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Precision Modes </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4095"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4096"></a>
+Description</h1>
+<p>Shader Graph provides specific <a href="https://en.wikipedia.org/wiki/Precision_(computer_science)">data precision modes</a> for nodes, graphs, and Sub Graphs to help you optimize your content for different platforms.</p>
+<p>To set the precision of an entire graph, select the [<b>Graph Settings</b>](Graph-Settings-Menu) tab in the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_internal-_inspector.html">Graph Inspector</a> and adjust the <b>Precision</b> control. Select a node in your graph and select the <b>Node Settings</b> tab in the Graph Inspector to adjust the precision of individual nodes.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4097"></a>
+Precision mode settings</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadRight">Name  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">Single  </td><td class="markdownTableBodyNone">This is a high-precision floating point value. The number of bits is platform-specific. For modern desktop computers, it is 32 bits.<br  />
+This mode is useful for world space positions, texture coordinates, and scalar computations that involve complex functions such as trigonometry, power, and exponentiation.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight">Half  </td><td class="markdownTableBodyNone">This is a low-precision floating point value. The number of bits is platform-specific. For modern desktop computers, it is 16 bits.<br  />
+This mode is useful for short vectors, directions, object space positions, and many high dynamic range colors, but not very strong light sources, such as the sun.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">Switchable  </td><td class="markdownTableBodyNone">This mode is only for Sub Graphs. When you enable this mode for a Sub Graph, the default precision of the Sub Graph is decided by its Sub Graph node. See <b>Use Graph Precision</b> below.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight">Inherit  </td><td class="markdownTableBodyNone">This mode determines a node's precision based on a set of inheritance rules. See Precision inheritance.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">Use Graph Precision  </td><td class="markdownTableBodyNone">This mode forces this node to use the same precision setting as the graph.<br  />
+If this is a node in a Sub Graph, and that Sub Graph’s <b>Precision</b> is set to <b>Switchable</b>, then the precision of this node is the precision of the Sub Graph node representing this Sub Graph.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4098"></a>
+Using Precision Modes</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4099"></a>
+Visualizing Precision in a graph</h2>
+<p>To visualize data precision in a graph, set the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_color-_modes.html"><b>Color Mode</b></a> control to <b>Precision</b>. This applies color coding to your nodes:</p>
+<ul>
+<li><b>Single</b> nodes are blue</li>
+<li><b>Half</b> nodes are red</li>
+<li><b>Switchable</b> nodes are Green.</li>
+</ul>
+<p><img src="images/Color-Mode-Precision.png" alt="" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4100"></a>
+Setting graph Precision</h2>
+<p>To set the default precision for the entire graph to <b>Single</b> or <b>Half</b>, open the <b>Graph Settings</b> and set the Precision property. Newly-created nodes in a graph default to the <b>Inherit</b> precision mode, and inherit the graph's precision.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4101"></a>
+Setting node Precision</h2>
+<p>Select a node to access its precision setting. The precision you set for a node determines the precision of the data types which that node uses for its calculations.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4102"></a>
+Precision Inheritance</h2>
+<p>All nodes use the <b>Inherit</b> precision mode by default. In this mode, a node that has one or more edge connections takes on the precision mode of an incoming [edge](Edge). Nodes that do not have any edge connections take on <b>Graph Precision</b>. If you change the <b>Graph Precision</b> mode, the precision of those nodes also changes.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Inputs on the node</b>  </th><th class="markdownTableHeadNone"><b>Final precision determined by inheritance</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">No inputs  </td><td class="markdownTableBodyNone"><b>Graph Precision</b>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Only <b>Half</b> inputs  </td><td class="markdownTableBodyNone"><b>Half</b>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Only <b>Single</b> inputs  </td><td class="markdownTableBodyNone"><b>Single</b>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Half</b> and <b>Single</b> inputs  </td><td class="markdownTableBodyNone"><b>Single</b>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Only <b>Switchable</b> inputs  </td><td class="markdownTableBodyNone"><b>Switchable</b>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Switchable</b> and <b>Half</b> inputs  </td><td class="markdownTableBodyNone"><b>Switchable</b>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Switchable</b> and <b>Single</b> inputs  </td><td class="markdownTableBodyNone"><b>Single</b>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Switchable</b>, <b>Half</b> and <b>Single</b> inputs  </td><td class="markdownTableBodyNone"><b>Single</b>  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4103"></a>
+Simple inheritance</h3>
+<p>Simple inheritance refers to the inheritance behaviour of a node with only one precision type on its inputs.</p>
+<p>In the figure below, Node A has the <b>Inherit</b> mode. Because it has no incoming edge, it takes the <b>Graph Precision</b>, which is <b>Half</b>. Node B also has the <b>Inherit</b> mode, so it inherits the <b>Half</b> precision mode from Node A.</p>
+<p><img src="images/precisionmodes1.png" alt="" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4104"></a>
+Complex inheritance</h3>
+<p>Complex inheritance refers to the inheritance behaviour of a node with multiple precision types on its inputs.</p>
+<p>A node reads precision settings from each input port. If you connect a node to several others with a variety of precision modes, the node with the highest resolution determines the precision mode for the group.</p>
+<p>In the figure below, node D has the <b>Inherit</b> mode. It receives input from the adjacent edges via inputs 1 and 2. Node B passes the <b>Half</b> mode through input 1. Node C passes the <b>Single</b> mode through input 2. Because <b>Single</b> is 32-bit and <b>Half</b> only 16-bit, <b>Single</b> takes precedence, so Node D uses <b>Single</b> precision.</p>
+<p><img src="images/precisionmodes2.png" alt="" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4105"></a>
+Mixed inheritance</h3>
+<p>Mixed inheritance refers to the inheritance behaviour on a node with both simple and complex inheritance types.</p>
+<p>Nodes with no input ports, such as [Input nodes](Input-Nodes), inherit the <b>Graph Precision</b>. However, complex inheritance rules still affect other nodes in the same group, as illustrated in the figure below.</p>
+<p><img src="images/precisionmodes3.png" alt="" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4106"></a>
+Switchable precision</h2>
+<p>The <b>Switchable</b> mode overrides <b>Half</b> mode but not <b>Single</b>.</p>
+<p><img src="images/precisionmodes4.png" alt="" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4107"></a>
+Sub Graph precision</h2>
+<p>Precision behavior and user interface elements for [Sub Graphs](Sub-graph) and their nodes do not differ from other graphs and nodes. Sub Graphs represent a function, and you can affect that function's inputs, outputs, and operators by modifying the relevant set of precision settings.</p>
+<ul>
+<li>The Sub Graph properties correspond to the function's inputs.</li>
+<li>The internal node properties correspond to the function's operators.</li>
+<li>The output node corresponds to the function's outputs.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4108"></a>
+Outputs</h3>
+<p>To manually determine the precision of a Sub Graph's output, modify the <b>Output</b> node’s <b>Precision Mode</b> setting.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4109"></a>
+Inputs</h3>
+<p>To manually determine the precision of <b>Sub Graph Inputs</b>, open the [Graph Inspector](Internal-Inspector) and set precision modes for each individual [Property](Property-Types). Properties that use the Inherit option take on the <b>Graph Precision</b> you set for the Sub Graph.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4110"></a>
+Sub Graph Precision within other graphs</h3>
+<p>By default, a Sub Graph has a Precision Mode of <span class="tt">Switchable</span>. You can modify Precision Mode of any [Sub Graph node](Sub-graph-Node) for that Sub Graph, as long as you set the Precision Mode on the Sub Graph as <span class="tt">Switchable</span>.</p>
+<p>Shader Graph won't allow you to change the Precision Mode for any Sub Graph node that doesn't have its Sub Graph set to <span class="tt">Switchable</span>. This is because the input and output precision you set in a Sub Graph define the precision of its associated Sub Graph Node.</p>
+<p>For example, let's say that Sub Graph A is <b>Switchable</b>. You open Graph 1, which includes a Sub Graph Node referencing Sub Graph A. Like all other nodes, Sub Graph Node A defaults to <b>Inherit</b>. You change the precision of Sub Graph Node A to <b>Half</b>. The precision of Sub Graph A also becomes <b>Half</b>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

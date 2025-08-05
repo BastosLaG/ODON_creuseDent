@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Changelog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Changelog </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5623"></a></p>
+<p>All notable changes to the Code Coverage package will be documented in this file.</p>
+<p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a> and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5624"></a>
+[1.2.6] - 2024-07-26</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5625"></a>
+Fixes</h2>
+<ul>
+<li><a class="el" href="namespace_documentation.html">Documentation</a>: Fixed formatting in <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html">Using Code Coverage in batchmode</a> page (case <a href="https://issuetracker.unity3d.com/issues/docs-formatting-in-using-code-coverage-in-batchmode-docs-page-is-incorrect">COV-40</a>).</li>
+<li>Removed the references to the deprecated FindObjectOfType method in the <em>Asteroids sample project</em> (case <a href="https://issuetracker.unity3d.com/issues/sample-project-is-using-obsolete-findobjectoftype-method-which-causes-multiple-warnings-in-console-when-it-is-imported">COV-42</a>).</li>
+<li>Added missing logs for the ReportGenerator (case <a href="https://issuetracker.unity3d.com/issues/code-coverage-package-does-not-report-some-of-the-internal-reportgenerator-errors">COV-46</a>).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5626"></a>
+[1.2.5] - 2023-12-20</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5627"></a>
+Fixes</h2>
+<ul>
+<li>Fixed failing to generate code coverage for assemblies whose name starts with 'system' (case <a href="https://issuetracker.unity3d.com/issues/code-coverage-fails-to-generate-a-report-when-the-assembly-name-begins-with-the-word-system">COV-38</a>).</li>
+<li>Fixed results xml file not been correctly stored under the EditMode folder if it is written after a domain reload (case <a href="https://issuetracker.unity3d.com/issues/coverage-results-xml-file-is-not-categorized-as-editmode-if-it-is-written-after-domain-reload">COV-36</a>).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5628"></a>
+[1.2.4] - 2023-06-02</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5629"></a>
+Fixes</h2>
+<ul>
+<li>Fixed failing to gather code coverage for normal methods in generic classes (case <a href="https://issuetracker.unity3d.com/issues/non-generic-methods-in-generic-classes-always-show-no-coverage">COV-27</a>).</li>
+<li><a class="el" href="namespace_documentation.html">Documentation</a>: Corrected <em>Settings.json</em> path in <span class="tt">useProjectSettings</span> section in <em>-coverageOptions</em> (case <a href="https://issuetracker.unity3d.com/issues/documentation-for-useprojectsettings-references-incorrect-settings-dot-json-path">COV-26</a>).</li>
+<li>Make sure <em>Auto Generate Report</em> defaults to true when running from the command line (case <a href="https://issuetracker.unity3d.com/issues/useprojectsettings-does-not-generate-report-until-auto-generate-report-is-toggled-off-and-on-again">COV-25</a>).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5630"></a>
+[1.2.3] - 2023-04-14</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5631"></a>
+Fixes</h2>
+<ul>
+<li>Fixed failing to gather code coverage for generic methods (case <a href="https://issuetracker.unity3d.com/issues/coverage-package-fails-to-gather-any-coverage-for-generic-methods">COV-17</a>).</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5632"></a>
+Improvements</h2>
+<ul>
+<li>Added <span class="tt">filtersFromFile</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html">batchmode</a>. This allows specifying an external Json file which contains path and assembly filtering rules. When this file contains relative paths, the <span class="tt">sourcePaths</span> option can be used to specify the source directories. <br  />
+<b>Note:</b> The <span class="tt">pathFiltersFromFile</span> option will be deprecated in the next package major release. Please use the new <span class="tt">filtersFromFile</span> option instead.</li>
+<li>Make sure <span class="tt">--burst-disable-compilation</span> is <a href="https://docs.unity3d.com/Packages/com.unity.burst@latest/index.html?subfolder=/manual/getting-started.html#command-line-options">expected</a> to be passed with two dashes, unlike other editor command line options.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5633"></a>
+[1.2.2] - 2022-11-18</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5634"></a>
+Fixes</h2>
+<ul>
+<li>Temporary fix for the <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html">Test Framework</a> 1.3 issue where the <em>RunFinished</em> callback is not called when running from the command line and there is a domain reload (case <a href="https://issuetracker.unity3d.com/issues/registered-callbacks-dont-work-after-domain-reload">DSTR-692</a>).</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5635"></a>
+Improvements</h2>
+<ul>
+<li>Reduced the number of logs for the default <em>Verbosity:Info</em>.</li>
+<li>Added <em>Uncoverable lines</em> definition in <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/HowToInterpretResults.html#summary">How to interpret the results</a> page in the documentation.</li>
+<li>Updated documentation to match version 1.2.2.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5636"></a>
+[1.2.1] - 2022-10-27</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5637"></a>
+Fixes</h2>
+<ul>
+<li>Fixed compatibility with <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html">Test Framework</a> package version 1.3.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5638"></a>
+Improvements</h2>
+<ul>
+<li>A single file summary version of the report is now generated in Json format, in addition to the XML and Markdown formats.</li>
+<li>Added a warning when an invalid coverage option is passed in <em>-coverageOptions</em> in <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html">batchmode</a>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5639"></a>
+[1.2.0] - 2022-08-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5640"></a>
+Fixes</h2>
+<ul>
+<li>Ensure assemblies are removed from the Included Assemblies field if they no longer exist (case <a href="https://issuetracker.unity3d.com/issues/code-coverage-the-included-assemblies-field-shows-assemblies-that-no-longer-exist">1318668</a>).</li>
+<li>Ensure hidden sequence points are ignored (case <a href="https://issuetracker.unity3d.com/issues/class-which-derives-from-methodbase-causes-incorrect-sequence-points-to-be-generated-by-coverage-api">1372305</a>).</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5641"></a>
+Changes</h2>
+<ul>
+<li>Updated Report Generator to version 5.0.4.</li>
+<li>Updated the UI of the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html">Code Coverage window</a> moving the action buttons into a toolbar at the top.</li>
+<li>Renamed <em>assemblyFilters</em> aliases in <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html">batchmode</a>; <span class="tt">&lt;user&gt;</span> was renamed to <span class="tt">&lt;assets&gt;</span> and <span class="tt">&lt;project&gt;</span> was renamed to <span class="tt">&lt;all&gt;</span>.</li>
+<li>Replaced <span class="tt">pathStrippingPatterns</span> with <span class="tt">pathReplacePatterns</span> in <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html">batchmode</a>. The <span class="tt">pathReplacePatterns</span> option allows stripping and replacing specific sections from the paths that are stored in the coverage results xml files.</li>
+</ul>
+<p>See the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/upgrade-guide.html">Upgrade guide</a> if upgrading to Code Coverage package version 1.2.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5642"></a>
+Improvements</h2>
+<ul>
+<li>The size of the coverage result files and the Code Coverage session duration have been optimized. At the start of the session a coverage xml result file is generated which includes all the lines but with zero coverage. The following coverage xml result files that are generated within a Code Coverage session include only the coverage data of the visited lines.</li>
+<li>Added Help IconButton in the toolbar in the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html">Code Coverage window</a>.</li>
+<li>Updated the mechanic for opening the containing folder, change the location or reset to the default location for <em>Results Location</em> and <em>Report History Location</em>.</li>
+<li>Refactored the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html">Code Coverage window</a> UI to include a new <em>Report Options</em> section and removing the word 'Generate' from the options.</li>
+<li>Introduced new selection buttons under the <em>Included Assemblies</em> dropdown in the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html">Code Coverage window</a>; use the <em>All</em> button to select all the assemblies in the project. Use the <em>Assets</em> button to select only the assemblies under the <span class="tt">Assets</span> folder. Use the <em><a class="el" href="namespace_packages.html">Packages</a></em> button to select only the <a class="el" href="namespace_packages.html">Packages</a>' assemblies. If searching, the buttons will apply only to the assemblies visible in the list.</li>
+<li>Updated <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/whats-new.html">What's new</a> and <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/upgrade-guide.html">Upgrade guide</a> pages in the documentation.</li>
+<li>Added <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html#using-relative-paths-in-path-filters">Using relative paths in path filters</a> section in documentation.</li>
+<li>Updated the editor and console logs; added information about the assembly and path filters, improved coverage session logs.</li>
+<li>Improved the progress bars for <span class="tt">Writing coverage results</span> and <span class="tt">Generating the report</span>.</li>
+<li>Added an icon for the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html">Code Coverage window</a>.</li>
+<li>Updated documentation to match version 1.2.0.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5643"></a>
+Features</h2>
+<ul>
+<li>Added <span class="tt">Pause Recording</span> and <span class="tt">Resume Recording</span> buttons in the toolbar in the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html">Code Coverage window</a>.</li>
+<li>Added <span class="tt">Log Verbosity Level</span> setting in the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html">Code Coverage window</a> which allows setting the verbosity level for the editor and console logs.</li>
+<li>Added <span class="tt">Additional Reports</span> option in the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html">Code Coverage window</a> which if checked <a href="https://docs.sonarqube.org/latest/analysis/generic-test">SonarQube</a>, <a href="https://cobertura.github.io/cobertura">Cobertura</a> and <a href="https://github.com/linux-test-project/lcov">LCOV</a> reports will be generated. Added <span class="tt">generateAdditionalReports</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html">batchmode</a>.</li>
+<li>Added <span class="tt">Test Runner References</span> report option in the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html">Code Coverage window</a> which if checked includes test references to the generated coverage results and enables the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/HowToInterpretResults.html#coverage-by-test-methods">Coverage by test methods</a> section in the HTML report, allowing you to see how each test contributes to the overall coverage. Added <span class="tt">generateTestReferences</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html">batchmode</a>.</li>
+<li>Added <span class="tt">Auto Open Report</span> option in the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html">Code Coverage window</a> which if checked the coverage report will open automatically after it has been generated.</li>
+<li>Added <span class="tt">pathFiltersFromFile</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html">batchmode</a> which allows specifying an external file which contains a list of path filters. When this file contains relative paths, the <span class="tt">sourcePaths</span> option can be used to specify the source directories.</li>
+<li>Added <span class="tt">dontClear</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html">batchmode</a> which allows coverage results to be accumulated after every code coverage session. If not passed the results are cleared before a new session. For more information see <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html#generate-combined-report-from-editmode-and-playmode-tests">Generate combined report from EditMode and PlayMode tests</a>.</li>
+<li>When the <span class="tt">pathFilters</span> option or the <span class="tt">pathFiltersFromFile</span> option in <em>-coverageOptions</em> contains relative paths, the <span class="tt">sourcePaths</span> option can be used to specify the source directories.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5644"></a>
+[1.1.1] - 2021-12-17</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5645"></a>
+Fixes</h2>
+<ul>
+<li>Ensure assemblies are removed from the Included Assemblies field if they no longer exist (case <a href="https://issuetracker.unity3d.com/issues/code-coverage-the-included-assemblies-field-shows-assemblies-that-no-longer-exist">1318668</a>)</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5646"></a>
+Changes</h2>
+<ul>
+<li>Updated Report Generator to version 4.8.13</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5647"></a>
+Improvements</h2>
+<ul>
+<li>Added Help IconButton in the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CodeCoverageWindow.html">Code Coverage window</a> for <a class="el" href="namespace_unity.html">Unity</a> versions 2021.2.2f1 and above</li>
+<li>Added <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/whats-new.html">What's new</a> and <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/upgrade-guide.html">Upgrade guide</a> pages in the documentation</li>
+<li>Updated documentation to match version 1.1.1</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5648"></a>
+[1.1.0] - 2021-06-09</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5649"></a>
+Fixes</h2>
+<ul>
+<li>Ensure Results and History folders are created if they do not exist (case <a href="https://issuetracker.unity3d.com/issues/code-coverage-results-slash-history-location-path-is-reset-to-default-if-set-path-no-longer-exists">1334551</a>)</li>
+<li>Added support for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/UsingCodeCoverage.html#excluding-code-from-code-coverage">ExcludeFromCoverage/ExcludeFromCodeCoverage</a> for lambda expressions and yield statements (case <a href="https://issuetracker.unity3d.com/issues/code-coverage-excludefromcoverage-attribute-doesnt-exclude-lambda-expressions-and-yield-statements-from-coverage">1338636</a>)</li>
+<li>Added support for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/UsingCodeCoverage.html#excluding-code-from-code-coverage">ExcludeFromCodeCoverage</a> for getter/setter properties (case <a href="https://issuetracker.unity3d.com/issues/code-coverage-get-and-set-accessors-are-still-marked-as-coverable-when-property-has-excludefromcodecoverage-attribute">1338665</a>)</li>
+<li><em>-coverageOptions</em> are only parsed when running from the command line (<a href="https://forum.unity.com/threads/code-coverage-slowing-editor-on-enter-playmode-and-assembly-reload.1121566">feedback</a>)</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5650"></a>
+Changes</h2>
+<ul>
+<li>Updated Report Generator to version 4.8.9</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5651"></a>
+Improvements</h2>
+<ul>
+<li>Implemented changes to support <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html">Test Framework</a> package version 1.2</li>
+<li>Logs while the Report is generated are output per message rather than at the end of the generation</li>
+<li>Do not log burst warning when <span class="tt">--burst-disable-compilation</span> is passed in the command line</li>
+<li>Added <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CoverageBatchmode.html#ignoring-tests-for-code-coverage">Ignoring tests for Code Coverage</a> section in documentation</li>
+<li>Updated the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CoverageBatchmode.html#generate-combined-report-from-separate-projects">Generate combined report from separate projects</a> section in documentation</li>
+<li>Updated documentation to match version 1.1.0</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5652"></a>
+Features</h2>
+<ul>
+<li>Added <span class="tt">Code Coverage session Events</span> <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/api/UnityEditor.TestTools.CodeCoverage.Events.html">API</a> to subscribe to events invoked during a Code Coverage session</li>
+<li>Added <span class="tt">useProjectSettings</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CoverageBatchmode.html">batchmode</a> which allows using the settings specified in <span class="tt">ProjectSettings/Settings.json</span></li>
+<li>Added <span class="tt">pathStrippingPatterns</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CoverageBatchmode.html">batchmode</a> which allows stripping specific sections from the paths that are stored in the coverage results xml files</li>
+<li>Added <span class="tt">sourcePaths</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CoverageBatchmode.html">batchmode</a> which allows specifying the source directories which contain the corresponding source code</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5653"></a>
+[1.0.0] - 2021-03-09</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5654"></a>
+Fixes</h2>
+<ul>
+<li>Fixed issues with Path Filtering (cases <a href="https://issuetracker.unity3d.com/issues/code-coverage-typing-comma-into-the-included-or-excluded-paths-list-will-start-adding-row-for-each-letter-you-type-afterwards">1318896</a>, <a href="https://issuetracker.unity3d.com/issues/code-coverage-clearing-last-included-paths-row-immediatly-jumps-to-the-first-excluded-paths-row-and-starts-editing-it">1318897</a>)</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5655"></a>
+Improvements</h2>
+<ul>
+<li>Selection/focus is cleared when mouse is clicked outside of the individual settings' areas</li>
+<li>Added <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/Quickstart.html">Quickstart guide</a> in documentation</li>
+<li>Renamed the <em>Code Coverage Workshop</em> sample to <em>Code Coverage Tutorial</em></li>
+<li>Updated documentation and workshop to match version 1.0.0</li>
+</ul>
+<p><b>Note:</b> In <a class="el" href="namespace_unity.html">Unity</a> 2019 and 2020 you can enable Code Coverage in <a href="https://docs.unity3d.com/Manual/Preferences.html">General Preferences</a>. This was removed in <a class="el" href="namespace_unity.html">Unity</a> 2021; the user interface for managing Code Coverage is now entirely inside the Code Coverage package.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5656"></a>
+[1.0.0-pre.4] - 2021-02-26</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5657"></a>
+Fixes</h2>
+<ul>
+<li>Fixed assembly version validation error due to internal libraries included in the ReportGeneratorMerged.dll (case <a href="https://issuetracker.unity3d.com/issues/code-coverage-reportgeneratormerged-cant-be-loaded-due-to-assembly-version-validation-failure">1312121</a>)</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5658"></a>
+Changes</h2>
+<ul>
+<li>Added <em>Enable Code Coverage</em> checkbox under Settings in <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/CodeCoverageWindow.html">Code Coverage window</a>.<br  />
+<b>Note:</b> In <a class="el" href="namespace_unity.html">Unity</a> 2019 and 2020 you can enable Code Coverage in <a href="https://docs.unity3d.com/Manual/Preferences.html">General Preferences</a>. This was removed in <a class="el" href="namespace_unity.html">Unity</a> 2021; the user interface for managing Code Coverage is now entirely inside the Code Coverage package.</li>
+<li>The settings and options passed in the command line override/disable the settings in the Code Coverage window and relevant warnings display to indicate this</li>
+<li>Updated Report Generator to version 4.8.5</li>
+<li>Updated documentation and workshop to match version 1.0.0-pre.4</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5659"></a>
+Improvements</h2>
+<ul>
+<li>Added <span class="tt">verbosity</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/CoverageBatchmode.html">batchmode</a></li>
+<li>Added <em>Generate combined report from separate projects</em> section in documentation, under <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/CoverageBatchmode.html#generate-combined-report-from-separate-projects">Using Code Coverage in batchmode</a></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5660"></a>
+[1.0.0-pre.3] - 2021-01-21</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5661"></a>
+Fixes</h2>
+<ul>
+<li>Updated Include Platforms to Editor only in the ReportGeneratorMerged.dll settings. Fixes an Android build error introduced in 1.0.0-pre.2 (case 1306557)</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5662"></a>
+[1.0.0-pre.2] - 2021-01-13</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5663"></a>
+Fixes</h2>
+<ul>
+<li>Fixed multiple reports generated in batchmode when passing <span class="tt">generateHtmlReport</span> in <em>-coverageOptions</em> without passing <span class="tt">-runTests</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5664"></a>
+Changes</h2>
+<ul>
+<li>All project assemblies are included when there are included paths specified in <em>pathFilters</em> but no included assemblies in <em>assemblyFilters</em>, when running in batchmode</li>
+<li>Updated Report Generator to version 4.8.4</li>
+<li>Updated documentation to match version 1.0.0-pre.2</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5665"></a>
+Improvements</h2>
+<ul>
+<li>Introduced new <em>assemblyFilters</em> aliases in <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/CoverageBatchmode.html">batchmode</a>, used for referencing a group of assemblies to include or exclude. These are <span class="tt">&lt;user&gt;</span>, <span class="tt">&lt;project&gt;</span> and <span class="tt">&lt;packages&gt;</span></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5666"></a>
+[1.0.0-pre.1] - 2020-11-12</h1>
+<ul>
+<li><em>1.0.0-pre.1</em> matches <em>0.4.0-preview</em></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5667"></a>
+[0.4.0-preview] - 2020-11-11</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5668"></a>
+Changes</h2>
+<ul>
+<li>Moved Code Coverage window under <em>Window</em> &gt; <em>Analysis</em></li>
+<li><em>Included Assemblies</em> now use a single dropdown instead of an editable text field which acted as a dropdown</li>
+<li>Added CommandLineParser and removed dependency to internals in Test Framework</li>
+<li>Removed the old <em>EditorPref</em> workflow from CoveragePreferences</li>
+<li>Moved <em>Generate History</em> outside of <em>Generate HTML Report</em>. It is now disabled only if both <em>Generate HTML Report</em> and <em>Generate Badges</em> are not selected</li>
+<li>Updated Report Generator to version 4.7.1</li>
+<li>Updated documentation and workshop to match version 0.4.0-preview</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5669"></a>
+Improvements</h2>
+<ul>
+<li>Implemented <span class="tt">{ProjectPath}</span> alias in <span class="tt">Settings.json</span></li>
+<li>Added a console warning when <em><a class="el" href="namespace_burst.html">Burst</a> Compilation</em> is enabled and an info HelpBox with a button to disable</li>
+<li>Added Analytics to help improve the user experience</li>
+<li>Disabled <em>Generate from Last</em> button when there are no assemblies selected</li>
+<li>Display an info HelpBox when there are no assemblies selected</li>
+<li>Paths are now stored with forward slashes on Windows</li>
+<li>Added warning about Code Coverage not being supported currently when running PlayMode tests in standalone player</li>
+<li>Refactored code; in Utils, Filtering, ResultWriter, Window and API classes</li>
+<li>Added <em>CoverageWindow</em> and <em>Filtering</em> folders</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5670"></a>
+Features</h2>
+<ul>
+<li>Added <em>Included Paths</em> and <em>Excluded Paths</em> as ReorderableLists in the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.4/manual/CodeCoverageWindow.html">Code Coverage window</a></li>
+<li>Added <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.4/manual/UsingCodeCoverage.html#excluding-code-from-code-coverage">support</a> for <span class="tt">ExcludeFromCoverage</span> and <span class="tt">ExcludeFromCodeCoverage</span> attributes</li>
+<li>Added <span class="tt">CodeCoverage.VerbosityLevel</span> <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.4/api/UnityEditor.TestTools.CodeCoverage.CodeCoverage.html">API</a> to set the verbosity level used in editor and console logs</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5671"></a>
+[0.3.1-preview] - 2020-08-03</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5672"></a>
+Fixes</h2>
+<ul>
+<li>Fixed issue where CRAP calculation was incorrect when generic methods were parsed</li>
+<li>Corrected Six Labors License copyright in Third Party Notices</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5673"></a>
+Changes</h2>
+<ul>
+<li>If <span class="tt">assemblyFilters</span> is not specified in <em>-coverageOptions</em> in batchmode, include only the assemblies found under the <em>Assets</em> folder</li>
+<li>Updated Report Generator to version 4.6.4</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5674"></a>
+[0.3.0-preview] - 2020-05-20</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5675"></a>
+Fixes</h2>
+<ul>
+<li>Make sure <em>operator</em> and <em>anonymous function</em> names are generated correctly</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5676"></a>
+Changes</h2>
+<ul>
+<li>Added <em>Generate Additional Metrics</em> setting in the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/CodeCoverageWindow.html">Code Coverage window</a> and removed <em>Cyclomatic Complexity</em> (it is now included in Additional Metrics)</li>
+<li>Updated Report Generator to version 4.5.8</li>
+<li>Updated documentation to match version 0.3.0-preview</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5677"></a>
+Improvements</h2>
+<ul>
+<li>Added <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/CodeCoverageWorkshop.html">Code Coverage Workshop</a> sample project</li>
+<li>Using the <a href="https://docs.unity3d.com/Manual/com.unity.settings-manager.html">Settings Manager</a> package to handle the serialization of project settings</li>
+<li>Added an info HelpBox when <em>Code Optimization</em> is set to Release mode with a button to switch to Debug mode</li>
+<li>Execute <em>Stop Recording</em> on the update loop, instead of the OnGUI (removes an <em>EndLayoutGroup</em> error)</li>
+<li>Refactored code; in OpenCoverReporter class (to reduce Cyclomatic Complexity), in CodeCoverageWindow class and others</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5678"></a>
+Features</h2>
+<ul>
+<li>Added <em>History Location</em> and <em>Generate History</em> settings in the <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/CodeCoverageWindow.html">Code Coverage window</a></li>
+<li>Added <span class="tt">coverageHistoryPath</span> and <span class="tt">generateHtmlReportHistory</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/UsingCodeCoverage.html#using-code-coverage-in-batchmode">batchmode</a></li>
+<li>Added <span class="tt">generateAdditionalMetrics</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/UsingCodeCoverage.html#using-code-coverage-in-batchmode">batchmode</a> and removed <em>enableCyclomaticComplexity</em> (it is now included in Additional Metrics)</li>
+<li>Added <em>Crap Score</em> in Additional Metrics. See <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/HowToInterpretResults.html">How to interpret the results</a>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5679"></a>
+[0.2.3-preview] - 2020-02-18</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5680"></a>
+Fixes</h2>
+<ul>
+<li><em>Included Assemblies</em> dropdown is now resizing to the longest assembly name (<a href="https://issuetracker.unity3d.com/issues/there-is-no-way-to-view-the-full-name-of-an-assembly-when-selecting-it-in-a-small-code-coverage-window">1215600</a>)</li>
+<li>When closing (selecting outside of) the <em>Included Assemblies</em> dropdown, input is not accidentally propagated to the Code Coverage window</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5681"></a>
+Improvements</h2>
+<ul>
+<li>If more than one instance of the <em>-coverageOptions</em> command-line argument is specified, they will now be merged into a single instance</li>
+<li>If more than one instance of the <em>-coverageResultsPath</em> command-line argument is specified, only the first instance will be accepted</li>
+<li>Added <em>Generate combined report from EditMode and PlayMode tests</em> section in documentation, under <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.2/manual/UsingCodeCoverage.html#using-code-coverage-in-batchmode">Using Code Coverage in batchmode</a></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5682"></a>
+[0.2.2-preview] - 2019-12-11</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5683"></a>
+Fixes</h2>
+<ul>
+<li>Fixed unassigned <em>CodeCoverageWindow.m_IncludeWarnings</em> warning in 2019.3</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5684"></a>
+Changes</h2>
+<ul>
+<li>The default <em>Included Assemblies</em> are now only the assemblies found under the project's <em>Assets</em> folder, instead of all project assemblies</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5685"></a>
+Improvements</h2>
+<ul>
+<li>After the report is generated, the file viewer window highlights the <span class="tt">index.htm</span> file, if <em>Generate HTML Report</em> is selected</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5686"></a>
+[0.2.1-preview] - 2019-12-04</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5687"></a>
+Improvements</h2>
+<ul>
+<li>Improved globbing for <span class="tt">pathFilters</span> and <span class="tt">assemblyFilters</span></li>
+<li>Added new sections and examples in documentation</li>
+<li>Added confirmation dialogs when selecting <em>Clear Data</em> and <em>Clear History</em> buttons</li>
+<li>Added warning and button to switch to debug mode, when using Code Optimization in release mode in 2020.1 and above</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5688"></a>
+Features</h2>
+<ul>
+<li>Added <span class="tt">pathFilters</span> in <em>-coverageOptions</em> for <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.2/manual/UsingCodeCoverage.html#using-code-coverage-in-batchmode">batchmode</a></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5689"></a>
+[0.2.0-preview] - 2019-11-13</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5690"></a>
+Fixes</h2>
+<ul>
+<li>Make sure recording coverage results are saved in the <em>Recording</em> folder, and starting a new recording session does not affect existing non-recording data</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5691"></a>
+Changes</h2>
+<ul>
+<li>Updated Report Generator to version 4.3.6</li>
+<li>Split documentation into separate pages</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5692"></a>
+Improvements</h2>
+<ul>
+<li>Updated UX design of the Code Coverage window</li>
+<li>Make sure settings and Record button are disabled when coverage is running</li>
+<li>Make sure coverage window is disabled before unity is restarted when <em>Enabling Code Coverage</em> in Preferences</li>
+<li>Only parse xml files with the correct filename format when generating the report</li>
+<li>Implemented try/catch when deleting files/folders when selecting <em>Clear Data</em> or <em>Clear History</em></li>
+<li>Handle nested classes, nested generic classes and anonymous functions</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5693"></a>
+Features</h2>
+<ul>
+<li>Exposed <span class="tt">CodeCoverage.StartRecording()</span>, <span class="tt">CodeCoverage.StopRecording()</span>, <span class="tt">CodeCoverage.PauseRecording()</span> and <span class="tt">CodeCoverage.UnpauseRecording()</span> <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.2/api/UnityEditor.TestTools.CodeCoverage.CodeCoverage.html">API</a></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5694"></a>
+[0.1.0-preview.3] - 2019-09-27</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5695"></a>
+Improvements</h2>
+<ul>
+<li>Passing <span class="tt">-coverageOptions generateHtmlReport</span> on the command line now creates a report if <span class="tt">-runTests</span> is not passed</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5696"></a>
+[0.1.0-preview.2] - 2019-09-23</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5697"></a>
+Changes</h2>
+<ul>
+<li>Updated Report Generator to version 4.2.20</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5698"></a>
+Improvements</h2>
+<ul>
+<li>Added support for correct naming of c# operators</li>
+<li>Added support for correct naming of constructors</li>
+<li>Added declaring type name as a prefix</li>
+<li>Added support for return types in method names</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5699"></a>
+Features</h2>
+<ul>
+<li>Added <a href="https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.2/manual/CoverageRecording.html">Coverage Recording</a> feature</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5700"></a>
+[0.1.0-preview.0] - 2019-03-18</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5701"></a>
+This is the first release of <em>Code Coverage Package</em></h2>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

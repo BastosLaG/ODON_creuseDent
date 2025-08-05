@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Changelog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8de-panther_8webxr_0dfab01af98209_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Changelog </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md91"></a></p>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>, and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md92"></a>
+[Unreleased]</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md93"></a>
+[0.22.1] - 2024-11-09</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md94"></a>
+Added</h2>
+<ul>
+<li>Support for WebAssembly Table, to support newer <a class="el" href="namespace_unity.html">Unity</a> versions features.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md95"></a>
+Fixed</h2>
+<ul>
+<li>Adapt Color Space warning to <a class="el" href="namespace_unity.html">Unity</a> 6 and up.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md96"></a>
+[0.22.0] - 2024-02-25</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md97"></a>
+Added</h2>
+<ul>
+<li>An option in WebXRCameraSettings to set flat/normal mode camera pose when returning from XR mode.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md98"></a>
+Changed</h2>
+<ul>
+<li>XR Hand pinch is now detected manually instead of relying on system select event, to support Apple Vision Pro.</li>
+<li>Renamed <a class="el" href="namespace_web_x_r.html">WebXR</a> HMD to <a class="el" href="namespace_web_x_r.html">WebXR</a> Tracked Display.</li>
+<li>WebXRCamera to work with TrackedPoseDriver and the Input System.</li>
+<li>Editor error messages as warnings.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md99"></a>
+Fixed</h2>
+<ul>
+<li>Errors of Module._malloc and Module._free are not functions.</li>
+<li>Mapping of <a class="el" href="namespace_web_x_r.html">WebXR</a> Tracked Display device.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md100"></a>
+[0.21.0] - 2024-01-17</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md101"></a>
+Added</h2>
+<ul>
+<li>An option to auto-load WebXRManager on start in WebXRSettings.</li>
+<li>An option to auto-load WebXRInputSystem on start in WebXRSettings.</li>
+<li>Error message when there's no Universal Render Pipeline package in project.</li>
+<li>Error message when Player Settings Color Space not set to Gamma.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md102"></a>
+Changed</h2>
+<ul>
+<li>Updated WebGLTemplates assets based on newer <a class="el" href="namespace_unity.html">Unity</a> versions.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md103"></a>
+[0.20.0] - 2023-12-18</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md104"></a>
+Added</h2>
+<ul>
+<li>Native XRSubsystem for <a class="el" href="namespace_web_x_r.html">WebXR</a> Display rendering.</li>
+<li>Native XRSubsystem for <a class="el" href="namespace_web_x_r.html">WebXR</a> Headset/Device tracking.</li>
+<li>WebXRCameraSettings for updating Camera settings when switching XR modes.</li>
+<li>WebXRModesNotifier with events when switching to or from XR modes.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md105"></a>
+Removed</h2>
+<ul>
+<li>Support for <a class="el" href="namespace_unity.html">Unity</a> versions older than 2020.3.6f1.</li>
+<li>Support for Built-in Render Pipeline.</li>
+<li>Old 2019 WebGLTemplates.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md106"></a>
+[0.19.0] - 2023-11-22</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md107"></a>
+Added</h2>
+<ul>
+<li>WebXRHandData pointerPosition and pointerRotation (<a class="el" href="namespace_web_x_r.html">WebXR</a> targetRaySpace for hands).</li>
+<li>An option for eventsCamera in WebXRCamera.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md108"></a>
+Changed</h2>
+<ul>
+<li>Enabled stencil buffer when creating the session XRWebGLLayer.</li>
+<li>OnControllerUpdate is not dependent on OnHandUpdate in WebXRSubsystem.</li>
+<li>WebXRControllerData gripPosition and gripRotation return world space value instead of relative to pointer pose.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md109"></a>
+Fixed</h2>
+<ul>
+<li>Performance issues in AR mode.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md110"></a>
+[0.18.0] - 2023-08-29</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md111"></a>
+Added</h2>
+<ul>
+<li>Option to update active camera tag in WebXRCamera.</li>
+<li>Options to set Framebuffer Scale Factor in WebXRSettings.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md112"></a>
+[0.17.0] - 2023-07-10</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md113"></a>
+Changed</h2>
+<ul>
+<li>Improve performance.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md114"></a>
+Fixed</h2>
+<ul>
+<li>Missing Provider class in build.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md115"></a>
+[0.16.1] - 2023-05-27</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md116"></a>
+Fixed</h2>
+<ul>
+<li>Issues when using more than one WebXRManager components.</li>
+<li>Missing SubsystemRegistration when using newer versions of <a class="el" href="namespace_unity.html">Unity</a> XR Management package.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md117"></a>
+[0.16.0] - 2023-02-02</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md118"></a>
+Added</h2>
+<ul>
+<li>Support for Spectator Camera.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md119"></a>
+Fixed</h2>
+<ul>
+<li><a class="el" href="namespace_web_x_r.html">WebXR</a> input profiles loading on SteamVR.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md120"></a>
+[0.15.0] - 2022-06-04</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md121"></a>
+Added</h2>
+<ul>
+<li>GetButtonTouched to WebXRController, to support buttons touched values.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md122"></a>
+Fixed</h2>
+<ul>
+<li>Another ugly hack to fix <a class="el" href="namespace_web_x_r.html">WebXR</a> Viewer viewports on iOS.</li>
+<li>Issue of a delay on controller buttons press.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md123"></a>
+[0.14.0] - 2021-12-26</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md124"></a>
+Fixed</h2>
+<ul>
+<li>hapticActuators didn't work.</li>
+<li>Error on XR session end in <a class="el" href="namespace_unity.html">Unity</a> 2021.2 builds.</li>
+<li>Issues with Touch events on AR session in <a class="el" href="namespace_unity.html">Unity</a> 2021 builds.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md125"></a>
+Changed</h2>
+<ul>
+<li>Minimum <a class="el" href="namespace_unity.html">Unity</a> Editor version 2019.4.33.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md126"></a>
+[0.13.0] - 2021-10-18</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md127"></a>
+Added</h2>
+<ul>
+<li>Support for <a class="el" href="namespace_unity.html">Unity</a> 2021.2 (currently beta) and up.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md128"></a>
+Changed</h2>
+<ul>
+<li>Actions to delegates in WebXRSubsystem.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md129"></a>
+[0.12.1] - 2021-06-26</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md130"></a>
+Changed</h2>
+<ul>
+<li>How WebGL context clear alpha works.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md131"></a>
+[0.12.0] - 2021-06-20</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md132"></a>
+Added</h2>
+<ul>
+<li>Support for <a class="el" href="namespace_web_x_r.html">WebXR</a> Polyfill config. Need to set window.WebXRPolyfillConfig.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md133"></a>
+Changed</h2>
+<ul>
+<li>How the interoperability between JavaScript and C# works.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md134"></a>
+[0.11.0] - 2021-06-06</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md135"></a>
+Added</h2>
+<ul>
+<li>Support for <a class="el" href="namespace_web_x_r.html">WebXR</a> XRVisibilityState.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md136"></a>
+Changed</h2>
+<ul>
+<li>Use view transform matrix instead of orientation/position for pose.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md137"></a>
+[0.10.1] - 2021-05-08</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md138"></a>
+Fixed</h2>
+<ul>
+<li>Hand joints don't get radius.</li>
+<li>Hand joints instantiate at wrong position.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md139"></a>
+[0.10.0] - 2021-05-06</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md140"></a>
+Added</h2>
+<ul>
+<li>WebXRHandJoint enum instead of const values.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md141"></a>
+Changed</h2>
+<ul>
+<li>Scripts execution order.</li>
+<li>How XR session switch is handled.</li>
+<li>OnXRChange is called from the Update loop.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md142"></a>
+Fixed</h2>
+<ul>
+<li>User scaling issue in FullView WebGLTemplates.</li>
+<li>Issue with disabling hand when not tracking.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md143"></a>
+Removed</h2>
+<ul>
+<li>Const hand joints index values from WebXRHandData.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md144"></a>
+[0.9.0] - 2021-04-16</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md145"></a>
+Added</h2>
+<ul>
+<li>CameraFollower to WebXRCamera, for AudioListener to follow active cameras poses.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md146"></a>
+Changed</h2>
+<ul>
+<li>Optimization for JavaScript to C# communication.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md147"></a>
+Fixed</h2>
+<ul>
+<li>Errors when building for other platforms using IL2CPP.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md148"></a>
+Removed</h2>
+<ul>
+<li>Custom JavaScript dispatch events from the WebGLTemplates.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md149"></a>
+[0.8.1] - 2021-03-06</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md150"></a>
+Fixed</h2>
+<ul>
+<li>Workaround for Chromium depth bug (Chromium issue 1167450).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md151"></a>
+[0.8.0] - 2021-02-26</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md152"></a>
+Added</h2>
+<ul>
+<li>ToggleAR, ToggleVR, isSupportedAR and isSupportedVR to WebXRManager.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md153"></a>
+Changed</h2>
+<ul>
+<li>WebXRDisplayCapabilities class to struct.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md154"></a>
+Removed</h2>
+<ul>
+<li>hasExternalDisplay from WebXRDisplayCapabilities.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md155"></a>
+[0.7.0] - 2021-02-13</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md156"></a>
+Added</h2>
+<ul>
+<li>Support for <span class="tt">targetRaySpace</span> for controllers poses.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md157"></a>
+Changed</h2>
+<ul>
+<li>Use <span class="tt">targetRaySpace</span> as the default controller pose instead of <span class="tt">gripSpace</span>.</li>
+<li>Use generic Input Profile in editor for all controllers types.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md158"></a>
+Fixed</h2>
+<ul>
+<li>Hack for Oculus on Chrome Desktop wrong <span class="tt">targetRaySpace</span> bug.</li>
+<li>WebXRCamera now removes event listeners OnDisable.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md159"></a>
+[0.6.0] - 2021-01-23</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md160"></a>
+Added</h2>
+<ul>
+<li>GetLocalRotation and GetLocalPosition to WebXRCamera.</li>
+<li>Support for the new/updated <a class="el" href="namespace_web_x_r.html">WebXR</a> Hands API.</li>
+<li>isControllerActive and isHandActive to WebXRController.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md161"></a>
+Changed</h2>
+<ul>
+<li>Using <span class="tt">frame.fillPoses</span> and <span class="tt">frame.fillJointRadii</span> instead of <span class="tt">frame.getJointPose</span> for XRHand.</li>
+<li>Camera matrices handling.</li>
+<li>WebGLTemplates webxr.js merged into Plugins webxr.jspre.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md162"></a>
+Fixed</h2>
+<ul>
+<li>Bug related to pose view eye can be <span class="tt">none</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md163"></a>
+Removed</h2>
+<ul>
+<li>Matrix utilities files.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md164"></a>
+[0.5.2] - 2020-01-16</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md165"></a>
+Added</h2>
+<ul>
+<li>Multi touch support for Handheld AR.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md166"></a>
+Fixed</h2>
+<ul>
+<li>OnDisable in WebXRController.</li>
+<li>Depth and Stencil clear issue in Handheld AR.</li>
+<li>Ugly hack to fix <a class="el" href="namespace_web_x_r.html">WebXR</a> Viewer viewports on iOS.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md167"></a>
+[0.5.1] - 2020-12-26</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md168"></a>
+Fixed</h2>
+<ul>
+<li>WebXRController Button Up/Down state.</li>
+<li>Protect compilation on other platforms.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md169"></a>
+[0.5.0] - 2020-12-19</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md170"></a>
+Added</h2>
+<ul>
+<li>Docs page.</li>
+<li>XRInputSource profiles support.</li>
+<li>Added OnControllerActive, OnHandActive and OnHandUpdate actions to WebXRController.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md171"></a>
+Changed</h2>
+<ul>
+<li>WebXRController no longer instantiate hand joints.</li>
+<li>Better handling for controllers buttons in the editor.</li>
+<li>WebXRController TryUpdateButtons is now private.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md172"></a>
+Fixed</h2>
+<ul>
+<li>Disable controllers on XR session end.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md173"></a>
+[0.4.1] - 2020-11-28</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md174"></a>
+Added</h2>
+<ul>
+<li>Support for <a class="el" href="namespace_unity.html">Unity</a> 2020.1.</li>
+<li>WebGLTemplates for <a class="el" href="namespace_unity.html">Unity</a> 2020.1.</li>
+<li>Debug project for <a class="el" href="namespace_unity.html">Unity</a> 2020.1.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md175"></a>
+Changed</h2>
+<ul>
+<li>Fixes for JavaScript and <a class="el" href="namespace_unity.html">Unity</a> communication to support both <a class="el" href="namespace_unity.html">Unity</a> 2019.1 and <a class="el" href="namespace_unity.html">Unity</a> 2020.1.</li>
+<li>Added info about OpenUPM package in README.md.</li>
+<li>Invert Y axis for touchpad and thumbstick, so they'll work the same as other XR Providers in <a class="el" href="namespace_unity.html">Unity</a>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md176"></a>
+[0.4.0] - 2020-11-08</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md177"></a>
+Added</h2>
+<ul>
+<li>Added missing OnXRCapabilitiesUpdate to WebXRManager.</li>
+<li>Added missing controller inputs.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md178"></a>
+Changed</h2>
+<ul>
+<li>Changed controller action names to enums.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md179"></a>
+[0.3.1] - 2020-11-07</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md180"></a>
+Added</h2>
+<ul>
+<li>emscripten browser object pause/resume when switching sessions.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md181"></a>
+Changed</h2>
+<ul>
+<li>Replaced Inline XR Session with window.rAF.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md182"></a>
+[0.3.0] - 2020-11-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md183"></a>
+Added</h2>
+<ul>
+<li>Support for XR providers in the editor.</li>
+<li>Settings asset required and optional features in <a class="el" href="namespace_web_x_r.html">WebXR</a> Session.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md184"></a>
+Changed</h2>
+<ul>
+<li>Fixed compile and runtime errors, to make sure that WebGL build works again.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md185"></a>
+[0.2.0] - 2020-10-30</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md186"></a>
+Added</h2>
+<ul>
+<li>Some XR SDK features, like the subsystems. Still not fully support the XR SDK.</li>
+<li>Info about <a class="el" href="namespace_web_x_r.html">WebXR</a> Interactions in the README file. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

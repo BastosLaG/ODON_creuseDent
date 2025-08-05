@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: whats-new-3.0</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2whats-new-3_80.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">whats-new-3.0 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8605"></a>
+autotoc_md8605</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8606"></a>
+uid: xri-whats-new-3-0</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8607"></a>
+What's new in version 3.0</h1>
+<p>Summary of changes in XR Interaction Toolkit package version 3.0:</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8608"></a>
+Added</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8609"></a>
+Input Readers</h3>
+<p>The biggest change in XRI 3.0 comes in the form of a new <a href="architecture.md#input-readers">Input Reader</a> architecture. The input readers allow a simplified, yet more sophisticated abstraction of input. Within this new architecture, it is possible to use legacy input, actions from the Input System package, manual manipulation (in Editor or via APIs), or custom scriptable objects for special cases or custom hardware platforms. Due to these changes, it became possible to simplify the input in such a way that the divergence in the old <span class="tt">XRBaseController</span> was no longer required and input could be embedded directly into the interactors, lowering code complexity and decreasing component count across GameObjects. To find out more about the new input readers, check out the <span class="tt">Demo Scene</span> in the <a href="samples-starter-assets.md#demo-scene">Starter Assets</a>. If you need to continue to use legacy input, there is a set of <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation4fae9a62665b1d57dac574cd3eb4c56b.html">Legacy Input Readers</a> in the included sample packages as well.</p>
+<dl class="section note"><dt>Note</dt><dd>Due to the nature of the changes introduced by the input readers, you may notice rolling changes to many of the other components throughout the XR Interaction Toolkit that reflect the usage of these new classes. You will likely want to upgrade your own project if you use Input Actions on any of your custom components.</dd></dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8610"></a>
+Near-Far Interactor and multi-casting</h3>
+<p>Another new feature of XRI 3.0 is the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2near-far-interactor.html">Near-Far Interactor</a>, which is an interactor capable of combining multiple types of physics casters. This allows a seamless transition when pulling objects closer to you from a distance or pushing them away, using the <span class="tt">SphereInteractionCaster</span> for near interaction and the <span class="tt">CurveInteractorCaster</span> for far interaction. Because casting occurs in both the near and far regions, this interactor replaces the need for using the XR Direct Interactor and the XR Ray Interactor. This modular new approach makes it easier to create and apply customized casters without having to extend or replace core components by simply implementing the new <span class="tt">IInteractionCaster</span> and <span class="tt">ICurveInteractionCaster</span> interfaces.</p>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation8aea7e8bcc574c9367672d0c3a3d8489.html"><span class="tt">InteractionAttachController</span></a> is added by default along side the Near-Far Interactor to control the movement behavior of the interactable objects when selected at a distance. The default implementation allows for accelerated and smoothed motion by performing a pulling gesture towards the user, but custom movement behavior can be applied by implementing the IInteractionAttachController interface and replacing the component reference in the Near-Far Interactor.</p>
+<p>The Near-Far Interactor also takes advantage of the new <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2curve-visual-controller.html">Curve Visual Controller</a>, which is designed to provide a versatile and configurable controller for the Line Renderer component. It allows for more flexibility when displaying line-based visual feedback for interactions. The included <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-starter-assets.html">Starter Assets</a> have been updated to utilize the new interactor and related components. For more information, please review the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2near-far-interactor.html">Near Far Interactor</a> manual pages.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8611"></a>
+XR Body Transformers and Locomotion Mediator</h3>
+<p>A new way to move and manipulate the XR Origin in response to input and interactions has been added. XR Body Transformers allow specific types of manipulation of the XR Origin and can be queued up for processing by the new <span class="tt">LocomotionMediator</span>. The original locomotion provider classes have been updated to use the new XR body transformations, simplifying the code and allowing for greater flexibility when extending the locomotion system as a whole. Along with the input changes, the original locomotion provider classes have also been updated or replaced to take full advantage of the new input architecture, streamlining the way locomotion is handled across the board. Read more about this in the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2locomotion.html">Locomotion</a> documentation.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8612"></a>
+Climb teleportation</h3>
+<p>On top of the locomotion mediator changes, climbing and teleportation has been enhanced to provide teleportation up and down ladders. In addition to simple endpoint-to-endpoint teleportation, <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentationf2730844a3e220393539a1de957d9613.html">Teleportation multi-anchor volumes</a> have been added. These allow multiple predefined teleport outlets per climbing surface which can be selected based on head or eye gaze (or any other method of determination). For more information about these new additions, please read the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2locomotion.html">Locomotion</a> documentation and check out an example of how these updates are used in the <span class="tt">Demo Scene</span> of the <a href="samples-starter-assets.md#demo-scene">Starter Assets</a> sample package.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8613"></a>
+Changed</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8614"></a>
+Namespace changes</h3>
+<p>As a part of the move to XRI 3.0, a number of classes, structs, enums, and interfaces have been moved into namespaces that better reflect their use and the organizational structure they reside in. For a full list of namespace changes, please refer to our [changelog](xref:xri-changelog).</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8615"></a>
+Deprecations</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8616"></a>
+Controller-based classes</h3>
+<p>With the new input changes outlined above, the controller-based classes are now obsolete and have been deprecated to reflect this. The functionality of the controller classes can be found in a combination of the standard <span class="tt">TrackedPoseDriver</span> as well the input properties on the individual interactors where that input makes sense.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8617"></a>
+AR interactables and gesture interactor</h3>
+<p>With the introduction of <span class="tt">ARTransformer</span>, <span class="tt">ScreenSpaceRayInteractor</span>, and the associated input components for screen space interaction, the individual AR interactable classes and the <span class="tt">ARGestureInteractor</span> have been deprecated.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8618"></a>
+Locomotion system and controller-based providers</h3>
+<p>The <span class="tt">LocomotionSystem</span> has been deprecated and replaced by the <span class="tt">LocomotionMediator</span> component. Along with this, and due to the input changes outlined above, the locomotion providers that depended on the previous input handling architecture have been deprecated and replaced with a simplified streamlined variant of each.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8619"></a>
+Affordance system</h3>
+<p>The affordance system has also been deprecated in XRI 3.0. A new feedback system to handle visuals, audio, haptics and more will be coming soon in a future release of XRI.</p>
+<p>For a full list of changes and updates in this version, refer to the [XR Interaction Toolkit package changelog](xref:xri-changelog). </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

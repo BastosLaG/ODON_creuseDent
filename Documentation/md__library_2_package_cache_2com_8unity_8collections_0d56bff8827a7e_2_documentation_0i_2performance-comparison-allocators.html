@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Performance Comparison: Allocators</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2performance-comparison-allocators.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Performance Comparison: Allocators </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1423"></a></p>
+<blockquote class="doxtable">
+<p>**<span style="color:red">This file is auto-generated</span>**</p>
+<p>All measurments were taken on 12th Gen Intel(R) <a class="el" href="namespace_core.html">Core(TM)</a> i9-12900K with 24 logical cores.<br  />
+ <a class="el" href="namespace_unity.html">Unity</a> Editor version: 2022.2.8f1<br  />
+ To regenerate this file locally use: <b>DOTS -&gt; <a class="el" href="namespace_unity_1_1_collections.html">Unity.Collections</a> -&gt; Generate &amp;ast;&amp;ast;&amp;ast;</b> menu.<br  />
+ </p>
+</blockquote>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1424"></a>
+Table of Contents</h1>
+<ul>
+<li>Benchmark Results<ul>
+<li>RewindableAllocator</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1425"></a>
+Benchmark Results</h1>
+<p>The following benchmarks make <b>150 consecutive allocations</b> per sample set.<br  />
+Multithreaded benchmarks make the full <b>150 consecutive allocations *per worker thread*** per sample set.<br  />
+The **Min of 50 sample sets</b> is compared against the baseline on the far right side of the table.<br  />
+5 extra sample sets are run as warmup.<br  />
+ <br  />
+</p>
+<blockquote class="doxtable">
+<p><b>Legend</b></p>
+<p><span class="tt">(S)</span> = Safety Enabled<br  />
+ <span class="tt">(B)</span> = <a class="el" href="namespace_burst.html">Burst</a> Compiled <em>with Safety Disabled</em><br  />
+ <span class="tt">(S+B)</span> = <a class="el" href="namespace_burst.html">Burst</a> Compiled <em>with Safety Enabled</em><br  />
+ <span class="tt">(E)</span> = Engine Provided<br  />
+ <br  />
+ <em><span class="tt">italic</span></em> results are for benchmarking comparison only; these are not included in standard Performance Framework tests<br  />
+ </p>
+</blockquote>
+<p><br  />
+</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1426"></a>
+<em>RewindableAllocator</em></h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Functionality  </th><th class="markdownTableHeadRight">RewindableAllocator (S)  </th><th class="markdownTableHeadRight">RewindableAllocator (S+B)  </th><th class="markdownTableHeadRight">RewindableAllocator (B)  </th><th class="markdownTableHeadRight"><em>TempJob (E)</em>  </th><th class="markdownTableHeadRight"><em>Temp (E)</em>  </th><th class="markdownTableHeadRight"><em>Persistent (E)</em>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(1, 1024)</span>*³*  </td><td class="markdownTableBodyRight">11.4µs  <span style="color:green">(2.2x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.0µs   <span style="color:green">(6.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">3.8µs   <span style="color:green">(6.6x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*17.0µs  <span style="color:green">(1.5x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*10.1µs   <span style="color:green">(2.5x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*25.1µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(2, 1024)</span>*²˒³*  </td><td class="markdownTableBodyRight">23.0µs  <span style="color:green">(2.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">23.1µs   <span style="color:green">(2.0x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">9.0µs   <span style="color:green">(5.2x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*20.2µs  <span style="color:green">(2.3x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.2µs   <span style="color:green">(4.2x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*47.2µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(4, 1024)</span>*²˒³*  </td><td class="markdownTableBodyRight">66.4µs  <span style="color:green">(1.9x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">71.9µs   <span style="color:green">(1.7x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">80.8µs   <span style="color:green">(1.5x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*23.5µs  <span style="color:green">(5.3x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.5µs  <span style="color:green">(10.7x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*123.5µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(8, 1024)</span>*²˒³*  </td><td class="markdownTableBodyRight">167.1µs  <span style="color:green">(2.2x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">169.2µs   <span style="color:green">(2.2x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">167.3µs   <span style="color:green">(2.2x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*45.6µs  <span style="color:green">(8.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*12.8µs  <span style="color:green">(28.6x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*366.4µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(1, 1048576)</span>*³*  </td><td class="markdownTableBodyRight">11.9µs <span style="color:green">(16.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.7µs  <span style="color:green">(41.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.4µs  <span style="color:green">(44.1x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*17.1µs <span style="color:green">(11.4x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*10.9µs  <span style="color:green">(17.8x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*194.1µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(2, 1048576)</span>*²˒³*  </td><td class="markdownTableBodyRight">26.0µs <span style="color:green">(10.0x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">17.0µs  <span style="color:green">(15.2x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">14.1µs  <span style="color:green">(18.4x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*32.0µs  <span style="color:green">(8.1x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.7µs  <span style="color:green">(22.1x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*258.9µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(4, 1048576)</span>*²˒³*  </td><td class="markdownTableBodyRight">70.1µs <span style="color:green">(11.6x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">71.3µs  <span style="color:green">(11.4x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">75.3µs  <span style="color:green">(10.8x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*208.5µs  <span style="color:green">(3.9x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*12.5µs  <span style="color:green">(65.0x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*812.2µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(8, 1048576)</span>*²˒³*  </td><td class="markdownTableBodyRight">139.7µs <span style="color:green">(14.6x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">161.0µs  <span style="color:green">(12.7x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">179.8µs  <span style="color:green">(11.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*1317.1µs  <span style="color:green">(1.5x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*19.5µs <span style="color:green">(104.6x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*2039.9µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">IncSize(1, 4096)</span>*⁴*  </td><td class="markdownTableBodyRight">11.9µs  <span style="color:green">(4.0x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.6µs  <span style="color:green">(10.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.3µs  <span style="color:green">(11.0x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*17.9µs  <span style="color:green">(2.6x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*10.3µs   <span style="color:green">(4.6x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*47.2µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">IncSize(2, 4096)</span>*²˒⁴*  </td><td class="markdownTableBodyRight">26.8µs  <span style="color:green">(4.8x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">10.9µs  <span style="color:green">(11.7x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">10.5µs  <span style="color:green">(12.2x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*31.7µs  <span style="color:green">(4.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*10.9µs  <span style="color:green">(11.7x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*127.6µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">IncSize(4, 4096)</span>*²˒⁴*  </td><td class="markdownTableBodyRight">58.9µs  <span style="color:green">(7.6x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">67.6µs   <span style="color:green">(6.6x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">64.5µs   <span style="color:green">(6.9x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*71.9µs  <span style="color:green">(6.2x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.2µs  <span style="color:green">(39.7x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*444.7µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">IncSize(8, 4096)</span>*²˒⁴*  </td><td class="markdownTableBodyRight">169.3µs  <span style="color:green">(7.8x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">159.0µs   <span style="color:green">(8.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">185.7µs   <span style="color:green">(7.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*350.8µs  <span style="color:green">(3.8x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.5µs <span style="color:green">(114.7x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*1319.0µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">IncSize(1, 65536)</span>*⁴*  </td><td class="markdownTableBodyRight">12.7µs <span style="color:green">(49.2x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">5.0µs <span style="color:green">(125.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.7µs <span style="color:green">(133.1x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*19.0µs <span style="color:green">(32.9x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.0µs  <span style="color:green">(56.9x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*625.4µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">IncSize(2, 65536)</span>*²˒⁴*  </td><td class="markdownTableBodyRight">25.0µs <span style="color:green">(46.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">15.8µs  <span style="color:green">(73.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">13.0µs  <span style="color:green">(89.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*578.1µs  <span style="color:green">(2.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.3µs <span style="color:green">(102.5x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*1157.7µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">IncSize(4, 65536)</span>*²˒⁴*  </td><td class="markdownTableBodyRight">73.3µs <span style="color:green">(34.7x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">73.0µs  <span style="color:green">(34.8x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">70.5µs  <span style="color:green">(36.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*2098.0µs  <span style="color:green">(1.2x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.9µs <span style="color:green">(213.6x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*2542.2µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">IncSize(8, 65536)</span>*²˒⁴*  </td><td class="markdownTableBodyRight">141.3µs <span style="color:green">(40.5x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">168.1µs  <span style="color:green">(34.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">162.6µs  <span style="color:green">(35.2x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*6036.0µs  <span style="color:red">(0.9x)</span>*&#160;🟠  </td><td class="markdownTableBodyRight">*12.7µs <span style="color:green">(450.8x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*5724.9µs <span style="color:grey">(1.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">DecSize(1, 4096)</span>*⁵*  </td><td class="markdownTableBodyRight">12.2µs  <span style="color:green">(6.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.6µs  <span style="color:green">(16.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.3µs  <span style="color:green">(17.2x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*16.9µs  <span style="color:green">(4.4x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*9.8µs   <span style="color:green">(7.5x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*73.9µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">DecSize(2, 4096)</span>*²˒⁵*  </td><td class="markdownTableBodyRight">27.6µs  <span style="color:green">(3.4x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">12.5µs   <span style="color:green">(7.6x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">11.9µs   <span style="color:green">(8.0x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*37.3µs  <span style="color:green">(2.5x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.4µs   <span style="color:green">(8.3x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*94.9µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">DecSize(4, 4096)</span>*²˒⁵*  </td><td class="markdownTableBodyRight">68.5µs  <span style="color:green">(7.5x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">74.7µs   <span style="color:green">(6.8x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">69.4µs   <span style="color:green">(7.4x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*79.3µs  <span style="color:green">(6.5x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.0µs  <span style="color:green">(46.5x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*511.6µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">DecSize(8, 4096)</span>*²˒⁵*  </td><td class="markdownTableBodyRight">173.5µs  <span style="color:green">(7.4x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">173.4µs   <span style="color:green">(7.4x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">168.3µs   <span style="color:green">(7.6x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*313.4µs  <span style="color:green">(4.1x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*17.1µs  <span style="color:green">(75.1x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*1284.6µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">DecSize(1, 65536)</span>*⁵*  </td><td class="markdownTableBodyRight">12.1µs <span style="color:green">(47.9x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.6µs <span style="color:green">(126.0x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.3µs <span style="color:green">(134.8x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*20.8µs <span style="color:green">(27.9x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.7µs  <span style="color:green">(49.6x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*579.8µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">DecSize(2, 65536)</span>*²˒⁵*  </td><td class="markdownTableBodyRight">28.6µs <span style="color:green">(37.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">17.7µs  <span style="color:green">(60.0x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">11.5µs  <span style="color:green">(92.3x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*658.8µs  <span style="color:green">(1.6x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*12.5µs  <span style="color:green">(84.9x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*1061.4µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">DecSize(4, 65536)</span>*²˒⁵*  </td><td class="markdownTableBodyRight">67.3µs <span style="color:green">(38.8x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">69.4µs  <span style="color:green">(37.6x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">73.1µs  <span style="color:green">(35.7x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*2386.4µs  <span style="color:green">(1.1x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*14.2µs <span style="color:green">(183.8x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*2609.3µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">DecSize(8, 65536)</span>*²˒⁵*  </td><td class="markdownTableBodyRight">154.4µs <span style="color:green">(37.8x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">166.6µs  <span style="color:green">(35.0x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">155.9µs  <span style="color:green">(37.4x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*5938.8µs  <span style="color:grey">(1.0x)</span>*&#160;🟠  </td><td class="markdownTableBodyRight">*28.6µs <span style="color:green">(203.9x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*5830.8µs <span style="color:grey">(1.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td></tr>
+</table>
+<p><em>²</em> Benchmark run on parallel job workers - results may vary<br  />
+ <em>³</em> FixedSize(workerThreads, allocSize)<br  />
+ <em>⁴</em> IncSize(workerThreads, allocSize) &ndash; Makes linearly increasing allocations [1⋅allocSize, 2⋅allocSize ... N⋅allocSize]<br  />
+ <em>⁵</em> DecSize(workerThreads, allocSize) &ndash; Makes linearly decreasing allocations [N⋅allocSize ... 2⋅allocSize, 1⋅allocSize]<br  />
+</p>
+<hr  />
+ </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

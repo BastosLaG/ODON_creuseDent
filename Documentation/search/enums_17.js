@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['xrdetectedhandmeshlayout_0',['XRDetectedHandMeshLayout',['../namespace_unity_engine_1_1_x_r_1_1_hands.html#a0bfe15419aa4b1b9f70af67ec74b7403',1,'UnityEngine::XR::Hands']]],
+  ['xrenvironmentblendmode_1',['XrEnvironmentBlendMode',['../namespace_unity_engine_1_1_x_r_1_1_open_x_r_1_1_native_types.html#a672be072083477675be25ec56db0df69',1,'UnityEngine::XR::OpenXR::NativeTypes']]],
+  ['xrfingershapetype_2',['XRFingerShapeType',['../namespace_unity_engine_1_1_x_r_1_1_hands_1_1_gestures.html#a1a8c12df2d3fea871ea88b28c8302487',1,'UnityEngine::XR::Hands::Gestures']]],
+  ['xrfingershapetypes_3',['XRFingerShapeTypes',['../namespace_unity_engine_1_1_x_r_1_1_hands_1_1_gestures.html#ad6f04d2863dd322f44e23eaa205da417',1,'UnityEngine::XR::Hands::Gestures']]],
+  ['xrhandalignmentcondition_4',['XRHandAlignmentCondition',['../namespace_unity_engine_1_1_x_r_1_1_hands_1_1_gestures.html#a5091163d8f4ff9be3d899a755f692aa6',1,'UnityEngine::XR::Hands::Gestures']]],
+  ['xrhandaxis_5',['XRHandAxis',['../namespace_unity_engine_1_1_x_r_1_1_hands_1_1_gestures.html#a26c59389c315bcaca659a1ebf77830ec',1,'UnityEngine::XR::Hands::Gestures']]],
+  ['xrhandfingerid_6',['XRHandFingerID',['../namespace_unity_engine_1_1_x_r_1_1_hands.html#a74c845b19d5cee9254c900ec917bdcec',1,'UnityEngine::XR::Hands']]],
+  ['xrhandjointid_7',['XRHandJointID',['../namespace_unity_engine_1_1_x_r_1_1_hands.html#a2e705d3e8008a58c1dd55b10c1f52ed3',1,'UnityEngine::XR::Hands']]],
+  ['xrhandjointtrackingstate_8',['XRHandJointTrackingState',['../namespace_unity_engine_1_1_x_r_1_1_hands.html#a57673a664482a97b3555977140c8316a',1,'UnityEngine::XR::Hands']]],
+  ['xrhandtargetrelativedirection_9',['XRHandTargetRelativeDirection',['../namespace_unity_engine_1_1_x_r_1_1_hands_1_1_gestures.html#a9473f48fcabfdef5113ac6e5e744225c',1,'UnityEngine::XR::Hands::Gestures']]],
+  ['xrhanduserrelativedirection_10',['XRHandUserRelativeDirection',['../namespace_unity_engine_1_1_x_r_1_1_hands_1_1_gestures.html#ac30f7e1f348d58340f9cf7002f2a79e9',1,'UnityEngine::XR::Hands::Gestures']]],
+  ['xrreferencespacetype_11',['XrReferenceSpaceType',['../namespace_unity_engine_1_1_x_r_1_1_open_x_r_1_1_native_types.html#a520b37812ce0c17b21642036d4e6eb40',1,'UnityEngine::XR::OpenXR::NativeTypes']]],
+  ['xrresult_12',['XrResult',['../namespace_unity_engine_1_1_x_r_1_1_open_x_r_1_1_native_types.html#a5ae4f3ef47ae3ee48c209133cc852942',1,'UnityEngine::XR::OpenXR::NativeTypes']]],
+  ['xrsessionstate_13',['XrSessionState',['../namespace_unity_engine_1_1_x_r_1_1_open_x_r_1_1_native_types.html#a885b1a36810f0f02e8a3cd264803ddbf',1,'UnityEngine::XR::OpenXR::NativeTypes']]],
+  ['xrspacelocationflags_14',['XrSpaceLocationFlags',['../namespace_unity_engine_1_1_x_r_1_1_open_x_r_1_1_native_types.html#a2ff549178d922c8aeb618390434f1ab1',1,'UnityEngine::XR::OpenXR::NativeTypes']]],
+  ['xrstructuretype_15',['XrStructureType',['../namespace_unity_engine_1_1_x_r_1_1_open_x_r_1_1_native_types.html#a9c29faf9f7ed8f6c9e887b1f35f4e4c4',1,'UnityEngine::XR::OpenXR::NativeTypes']]],
+  ['xrswapchainusageflags_16',['XrSwapchainUsageFlags',['../namespace_unity_engine_1_1_x_r_1_1_open_x_r_1_1_native_types.html#a644937ee2c6d28ecd6f14ea02807578f',1,'UnityEngine::XR::OpenXR::NativeTypes']]],
+  ['xrviewconfigurationtype_17',['XrViewConfigurationType',['../namespace_unity_engine_1_1_x_r_1_1_open_x_r_1_1_native_types.html#a77e5bf2f0f7081a575cad0c931c7a571',1,'UnityEngine::XR::OpenXR::NativeTypes']]],
+  ['xrviewstateflags_18',['XrViewStateFlags',['../namespace_unity_engine_1_1_x_r_1_1_open_x_r_1_1_native_types.html#a88f88266d01e8d39496ee410a6399f3b',1,'UnityEngine::XR::OpenXR::NativeTypes']]]
+];

@@ -1,0 +1,10 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_visuals_1_1_i_curve_interaction_data_provider =
+[
+    [ "TryGetCurveEndNormal", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_visuals_1_1_i_curve_interaction_data_provider.html#a6c0b113f5ca0208cf47e7ac793d843c4", null ],
+    [ "TryGetCurveEndPoint", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_visuals_1_1_i_curve_interaction_data_provider.html#a1eb4d60caa4df7c05a9413e8b98b3bbb", null ],
+    [ "curveOrigin", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_visuals_1_1_i_curve_interaction_data_provider.html#a2079f61ccf9423fcc64ee883d8a7d736", null ],
+    [ "hasValidSelect", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_visuals_1_1_i_curve_interaction_data_provider.html#a6025bf20e70e00fbe46f471e6aad6002", null ],
+    [ "isActive", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_visuals_1_1_i_curve_interaction_data_provider.html#a256ad5e49d4a6ea15b67ac509da08c9f", null ],
+    [ "lastSamplePoint", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_visuals_1_1_i_curve_interaction_data_provider.html#acd39942f20ab62c9acb189b28b2ecce4", null ],
+    [ "samplePoints", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_visuals_1_1_i_curve_interaction_data_provider.html#a9b009259d4fa38753a3fb21f9a4376c8", null ]
+];

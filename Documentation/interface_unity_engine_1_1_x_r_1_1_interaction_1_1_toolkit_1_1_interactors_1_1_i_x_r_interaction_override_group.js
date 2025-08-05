@@ -1,0 +1,10 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group =
+[
+    [ "AddInteractionOverrideForGroupMember", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#af5cb27e09cf93fab6a19839c9086bc2b", null ],
+    [ "ClearInteractionOverridesForGroupMember", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#a2ad2a7c15deaecbf7f584de0a6821fef", null ],
+    [ "GetInteractionOverridesForGroupMember", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#a96c7ea03214fb7b6cf5d58d09784243f", null ],
+    [ "GroupMemberIsPartOfOverrideChain", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#a53d8ae95d92f244da1952a8a19fb6375", null ],
+    [ "RemoveInteractionOverrideForGroupMember", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#a90e792caf3d7ad8098f5a437eb5851b0", null ],
+    [ "ShouldAnyMemberOverrideInteraction", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#a302d95147f0ec85e9b7eaee434238413", null ],
+    [ "ShouldOverrideActiveInteraction", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#aadcc4d5905da41920d90e4af2434999f", null ]
+];

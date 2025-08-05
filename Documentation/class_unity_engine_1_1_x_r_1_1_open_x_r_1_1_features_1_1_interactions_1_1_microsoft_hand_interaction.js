@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_hand_interaction =
+[
+    [ "HoloLensHand", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_hand_interaction_1_1_holo_lens_hand.html", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_hand_interaction_1_1_holo_lens_hand" ],
+    [ "GetDeviceLayoutName", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_hand_interaction.html#a8b2da5deb0f22789163a9efc28957dea", null ],
+    [ "RegisterActionMapsWithRuntime", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_hand_interaction.html#afa4ea633ac4a8a2915df1e9f73e7d1c6", null ],
+    [ "RegisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_hand_interaction.html#a7e4ea1b9e206a73d6c6af58f31c7a21b", null ],
+    [ "UnregisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_hand_interaction.html#a6b0d6204148fb6289e0c28fd8184e8c4", null ]
+];

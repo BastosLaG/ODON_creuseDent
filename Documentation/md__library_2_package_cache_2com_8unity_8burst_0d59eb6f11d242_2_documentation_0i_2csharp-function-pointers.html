@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Function pointers</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-function-pointers.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Function pointers </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md852"></a></p>
+<p>To work with dynamic functions that process data based on other data states, use <a href="xref:Unity.Burst.FunctionPointer`1"><span class="tt">FunctionPointer&lt;T&gt;</span></a>. Because <a class="el" href="namespace_burst.html">Burst</a> treats delegates as managed objects, you can't use <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/">C# delegates</a> to work with dynamic functions.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md853"></a>
+Support details</h1>
+<p>Function pointers don't support generic delegates. Also, avoid wrapping <a href="xref:Unity.Burst.BurstCompiler.CompileFunctionPointer``1(``0)"><span class="tt">BurstCompiler.CompileFunctionPointer&lt;T&gt;</span></a> within another open generic method. If you do this, <a class="el" href="namespace_burst.html">Burst</a> can't apply required attributes to the delegate, perform additional safety analysis, or perform potential optimizations.</p>
+<p>Argument and return types are subject to the same restrictions as <span class="tt">DllImport</span> and internal calls. For more information, refer to the documentation on <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-burst-intrinsics-dllimport.html">DllImport and internal calls</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md854"></a>
+Interoperability with IL2CPP</h2>
+<p>Interoperability of function pointers with IL2CPP requires <span class="tt">System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute</span> on the delegate. Set the calling convention to <span class="tt">CallingConvention.Cdecl</span>. <a class="el" href="namespace_burst.html">Burst</a> automatically adds this attribute to delegates that are used with <a href="xref:Unity.Burst.BurstCompiler.CompileFunctionPointer``1(``0)"><span class="tt">BurstCompiler.CompileFunctionPointer&lt;T&gt;</span></a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md855"></a>
+Using function pointers</h1>
+<p>To use function pointers, identify the static functions that you want <a class="el" href="namespace_burst.html">Burst</a> to compile and do the following:</p>
+<ol type="1">
+<li>Add a <span class="tt">[BurstCompile]</span> attribute to these functions.</li>
+</ol>
+<ol type="1">
+<li>Add a <span class="tt">[BurstCompile]</span> attribute to the containing type. This helps the <a class="el" href="namespace_burst.html">Burst</a> compiler find the static methods that have the <span class="tt">[BurstCompile]</span> attribute.</li>
+</ol>
+<ol type="1">
+<li>Declare a delegate to create the "interface" of these functions.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Add a <span class="tt">[MonoPInvokeCallbackAttribute]</span> attribute to the functions to make them compatible with IL2CPP. For example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   <span class="comment">// Instruct Burst to look for static methods with [BurstCompile] attribute</span></div>
+<div class="line">   [BurstCompile]</div>
+<div class="line">   <span class="keyword">class </span>EnclosingType {</div>
+<div class="line">       [BurstCompile]</div>
+<div class="line">       [MonoPInvokeCallback(typeof(Process2FloatsDelegate))]</div>
+<div class="line">       <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">float</span> MultiplyFloat(<span class="keywordtype">float</span> a, <span class="keywordtype">float</span> b) =&gt; a * b;</div>
+<div class="line">   </div>
+<div class="line">       [BurstCompile]</div>
+<div class="line">       [MonoPInvokeCallback(typeof(Process2FloatsDelegate))]</div>
+<div class="line">       <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">float</span> AddFloat(<span class="keywordtype">float</span> a, <span class="keywordtype">float</span> b) =&gt; a + b;</div>
+<div class="line">   </div>
+<div class="line">       <span class="comment">// A common interface for both MultiplyFloat and AddFloat methods</span></div>
+<div class="line">       <span class="keyword">public</span> delegate <span class="keywordtype">float</span> Process2FloatsDelegate(<span class="keywordtype">float</span> a, <span class="keywordtype">float</span> b);</div>
+<div class="line">   }</div>
+</div><!-- fragment --></li>
+</ol>
+<ol type="1">
+<li><p class="startli">Compile these function pointers from regular C# code:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">       <span class="comment">// Contains a compiled version of MultiplyFloat with Burst</span></div>
+<div class="line">       FunctionPointer&lt;Process2FloatsDelegate&gt; mulFunctionPointer = BurstCompiler.CompileFunctionPointer&lt;Process2FloatsDelegate&gt;(MultiplyFloat);</div>
+<div class="line">   </div>
+<div class="line">       <span class="comment">// Contains a compiled version of AddFloat with Burst</span></div>
+<div class="line">       FunctionPointer&lt;Process2FloatsDelegate&gt; addFunctionPointer = BurstCompiler.CompileFunctionPointer&lt;Process2FloatsDelegate&gt;(AddFloat);</div>
+</div><!-- fragment --></li>
+</ol>
+<p>The <span class="tt">[MonoPInvokeCallbackAttribute]</span> is available under the <span class="tt">AOT</span> namespace. If for any reason it's not available, you can create it locally by declaring it as follows:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MonoPInvokeCallbackAttribute : Attribute</div>
+<div class="line">{​</div>
+<div class="line"> </div>
+<div class="line">}</div>
+</div><!-- fragment --><p>For more information on <span class="tt">[MonoPInvokeCallbackAttribute]</span> and example usage in the iOS context, refer to [Callback from native code](xref:um-ios-native-plugin-call-back) in the manual.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md856"></a>
+Using function pointers in a job</h2>
+<p>To use the function pointers directly from a job, pass them to the job struct:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   <span class="comment">// Invoke the function pointers from HPC# jobs</span></div>
+<div class="line">   var resultMul = mulFunctionPointer.Invoke(1.0f, 2.0f);</div>
+<div class="line">   var resultAdd = addFunctionPointer.Invoke(1.0f, 2.0f);</div>
+</div><!-- fragment --><p><a class="el" href="namespace_burst.html">Burst</a> compiles function pointers asynchronously for jobs by default. To force a synchronous compilation of function pointers use <span class="tt">[BurstCompile(SynchronousCompilation = true)]</span>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md857"></a>
+Using function pointers in C# code</h2>
+<p>To use these function pointers from regular C# code, cache the <span class="tt">FunctionPointer&lt;T&gt;.Invoke</span> property (which is the delegate instance) to a static field to get the best performance:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   <span class="keyword">private</span> readonly <span class="keyword">static</span> Process2FloatsDelegate mulFunctionPointerInvoke = BurstCompiler.CompileFunctionPointer&lt;Process2FloatsDelegate&gt;(MultiplyFloat).Invoke;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Invoke the delegate from C#</span></div>
+<div class="line">   var resultMul = mulFunctionPointerInvoke(1.0f, 2.0f);</div>
+</div><!-- fragment --><p>Using Burst-compiled function pointers from C# might be slower than their pure C# version counterparts if the function is too small compared to the overhead of <a href="https://docs.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke"><span class="tt">P/Invoke</span></a> interop.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md858"></a>
+Performance considerations</h1>
+<p>Where possible, use a job over a function pointer to run <a class="el" href="namespace_burst.html">Burst</a> compiled code, because jobs are more performant. <a class="el" href="namespace_burst.html">Burst</a> provides better aliasing calculations for jobs because the job safety system has more optimizations by default.</p>
+<p>You also can't pass most of the <span class="tt">[NativeContainer]</span> structs like <span class="tt">NativeArray</span> directly to function pointers and must use a job struct to do so. Native container structs contain managed objects for safety checks that the <a class="el" href="namespace_burst.html">Burst</a> compiler can work around when compiling jobs, but not for function pointers.</p>
+<p>The following example shows a bad example of how to use function pointers in <a class="el" href="namespace_burst.html">Burst</a>. The function pointer computes <span class="tt">math.sqrt</span> from an input pointer and stores it to an output pointer. <span class="tt">MyJob</span> feeds this function pointer sources from two <span class="tt">NativeArray</span>s which isn't optimal:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyFunctionPointers</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> unsafe delegate <span class="keywordtype">void</span> MyFunctionPointerDelegate(<span class="keywordtype">float</span>* input, <span class="keywordtype">float</span>* output);</div>
+<div class="line"> </div>
+<div class="line">    [BurstCompile]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> unsafe <span class="keywordtype">void</span> MyFunctionPointer(<span class="keywordtype">float</span>* input, <span class="keywordtype">float</span>* output)</div>
+<div class="line">    {</div>
+<div class="line">        *output = math.sqrt(*input);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keyword">struct </span>MyJob : IJobParallelFor</div>
+<div class="line">{</div>
+<div class="line">     <span class="keyword">public</span> FunctionPointer&lt;MyFunctionPointers.MyFunctionPointerDelegate&gt; FunctionPointer;</div>
+<div class="line"> </div>
+<div class="line">    [<a class="code hl_enumvalue" href="namespace_unity_editor_1_1_timeline.html#af9aefa8b1ec710da91fbc7bdf0bcafbca131fb182a881796e7606ed6da27f1197">ReadOnly</a>] <span class="keyword">public</span> NativeArray&lt;float&gt; Input;</div>
+<div class="line">    [WriteOnly] <span class="keyword">public</span> NativeArray&lt;float&gt; Output;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> unsafe <span class="keywordtype">void</span> Execute(<span class="keywordtype">int</span> index)</div>
+<div class="line">    {</div>
+<div class="line">        var inputPtr = (<span class="keywordtype">float</span>*)Input.GetUnsafeReadOnlyPtr();</div>
+<div class="line">        var outputPtr = (<span class="keywordtype">float</span>*)Output.GetUnsafePtr();</div>
+<div class="line">        FunctionPointer.Invoke(inputPtr + index, outputPtr + index);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_editor_1_1_timeline_html_af9aefa8b1ec710da91fbc7bdf0bcafbca131fb182a881796e7606ed6da27f1197"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#af9aefa8b1ec710da91fbc7bdf0bcafbca131fb182a881796e7606ed6da27f1197">UnityEditor.Timeline.TimelineModes.ReadOnly</a></div><div class="ttdeci">@ ReadOnly</div><div class="ttdoc">The timeline is not editable. (the TimelineAsset file is either readonly on disk or locked by source ...</div><div class="ttdef"><b>Definition</b> TimelineMode.cs:72</div></div>
+</div><!-- fragment --><p>This example isn't optimal for the following reasons:</p>
+<ul>
+<li><a class="el" href="namespace_burst.html">Burst</a> can't vectorize the function pointer because it's being fed a single scalar element. This means that 4-8x performance is lost from a lack of vectorization.</li>
+<li>The <span class="tt">MyJob</span> knows that the <span class="tt">Input</span> and <span class="tt">Output</span> native arrays can't alias, but this information isn't communicated to the function pointer.</li>
+<li>There is a non-zero overhead to constantly branching to a function pointer somewhere else in memory.</li>
+</ul>
+<p>To use a function pointer in an optimal way, always process batches of data in the function pointer, like so:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyFunctionPointers</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> unsafe delegate <span class="keywordtype">void</span> MyFunctionPointerDelegate(<span class="keywordtype">int</span> count, <span class="keywordtype">float</span>* input, <span class="keywordtype">float</span>* output);</div>
+<div class="line"> </div>
+<div class="line">    [BurstCompile]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> unsafe <span class="keywordtype">void</span> MyFunctionPointer(<span class="keywordtype">int</span> count, <span class="keywordtype">float</span>* input, <span class="keywordtype">float</span>* output)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
+<div class="line">        {</div>
+<div class="line">            output[i] = math.sqrt(input[i]);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keyword">struct </span>MyJob : IJobParallelForBatch</div>
+<div class="line">{</div>
+<div class="line">     <span class="keyword">public</span> FunctionPointer&lt;MyFunctionPointers.MyFunctionPointerDelegate&gt; FunctionPointer;</div>
+<div class="line"> </div>
+<div class="line">    [<a class="code hl_enumvalue" href="namespace_unity_editor_1_1_timeline.html#af9aefa8b1ec710da91fbc7bdf0bcafbca131fb182a881796e7606ed6da27f1197">ReadOnly</a>] <span class="keyword">public</span> NativeArray&lt;float&gt; Input;</div>
+<div class="line">    [WriteOnly] <span class="keyword">public</span> NativeArray&lt;float&gt; Output;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> unsafe <span class="keywordtype">void</span> Execute(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> count)</div>
+<div class="line">    {</div>
+<div class="line">        var inputPtr = (<span class="keywordtype">float</span>*)Input.GetUnsafeReadOnlyPtr() + index;</div>
+<div class="line">        var outputPtr = (<span class="keywordtype">float</span>*)Output.GetUnsafePtr() + index;</div>
+<div class="line">        FunctionPointer.Invoke(count, inputPtr, outputPtr);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The modified <span class="tt">MyFunctionPointer</span> takes a <span class="tt">count</span> of elements to process, and loops over the <span class="tt">input</span> and <span class="tt">output</span> pointers to do a lot of calculations. The <span class="tt">MyJob</span> becomes an <span class="tt">IJobParallelForBatch</span>, and the <span class="tt">count</span> is passed directly into the function pointer. This is better for performance because:</p>
+<ul>
+<li><a class="el" href="namespace_burst.html">Burst</a> vectorizes the <span class="tt">MyFunctionPointer</span> call.</li>
+<li><a class="el" href="namespace_burst.html">Burst</a> processes <span class="tt">count</span> items per function pointer, so any overhead of calling the function pointer is reduced by <span class="tt">count</span> times. For example, if you run a batch of 128, the function pointer overhead is 1/128th per <span class="tt">index</span> of what it was previously.</li>
+<li>Batching results in a 1.53x performance gain over not batching.</li>
+</ul>
+<p>However, to get the best possible performance, use a job. This gives <a class="el" href="namespace_burst.html">Burst</a> the most visibility over what you want it to do, and the most opportunities to optimize:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keyword">struct </span>MyJob : IJobParallelFor</div>
+<div class="line">{</div>
+<div class="line">    [ReadOnly] <span class="keyword">public</span> NativeArray&lt;float&gt; Input;</div>
+<div class="line">    [WriteOnly] <span class="keyword">public</span> NativeArray&lt;float&gt; Output;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> unsafe <span class="keywordtype">void</span> Execute(<span class="keywordtype">int</span> index)</div>
+<div class="line">    {</div>
+<div class="line">        Output[i] = math.sqrt(Input[i]);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This runs 1.26x faster than the batched function pointer example, and 1.93x faster than the non-batched function pointer examples. <a class="el" href="namespace_burst.html">Burst</a> has perfect aliasing knowledge and can make the broadest modifications to the above. This code is also a lot simpler than either of the function pointer cases.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md859"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-hpc-overview.html">HPC# Overview</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-calling-burst-code.html">Calling Burst-compiled code</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

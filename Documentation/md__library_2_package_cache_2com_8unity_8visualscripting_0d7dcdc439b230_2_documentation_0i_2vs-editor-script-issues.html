@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Known Issues: Unity Editor script functions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-editor-script-issues.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Known Issues: Unity Editor script functions </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7158"></a></p>
+<p>If you use nodes that use <a class="el" href="namespace_unity.html">Unity</a> Editor script functions in any of the Visual Scripting graphs in your project, it causes errors when you try to build your project.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7159"></a>
+Cause of the build errors</h1>
+<p><a class="el" href="namespace_unity.html">Unity</a> Visual Scripting (UVS) doesn't support preprocessor directives, so the use of <a class="el" href="namespace_unity.html">Unity</a> Editor script functions within graphs isn't possible. However, these functions can appear as node options within UVS because UVS uses C# reflection to generate nodes for your project based on your included assemblies. If you add one of these <a class="el" href="namespace_unity.html">Unity</a> Editor script nodes to a graph that's used in a build of your project, <a class="el" href="namespace_unity.html">Unity</a> generates an error when it attempts to build the project. An error message of the following format is displayed in the <a class="el" href="namespace_unity.html">Unity</a> Console:</p>
+<p>&lsquo;/&lt;ProjectPath&gt;/&lt;CSharpFile&gt;.cs: error CS0103: The name &rsquo;&lt;MissingApiName&gt;' does not exist in the current context.`</p>
+<p>The following code sample is an example of preprocessor directives for <a class="el" href="namespace_unity.html">Unity</a> Editor scripts : </p><div class="fragment"><div class="line">#if UNITY_EDITOR</div>
+<div class="line">public static List&lt;Type&gt; GetAllVolumeComponents()</div>
+<div class="line">{</div>
+<div class="line">    // TypeCache is only accessible in UnityEditor.</div>
+<div class="line">    // If you instantiate a GetAllVolumeComponents node in a graph</div>
+<div class="line">    // it prevents the project from being built. </div>
+<div class="line">    return TypeCache.GetTypesDerivedFrom&lt;VolumeComponent&gt;().ToList();</div>
+<div class="line">}</div>
+<div class="line">#endif</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md7160"></a>
+Find flagged packages</h1>
+<p><a class="el" href="namespace_packages.html">Packages</a> that contain editor scripts are flagged with a warning icon in the Node Library section of the Visual Scripting tab in the Project Settings window.</p>
+<p>To find the affected packages, do the following:</p>
+<ol type="1">
+<li>Go to <b>Edit</b> &gt; <b>Project Settings</b>.</li>
+</ol>
+<ol type="1">
+<li>In the Project Settings window, select the <b>Visual Scripting</b> tab.</li>
+</ol>
+<ol type="1">
+<li>On the Visual Scripting tab expand the <b>Node Library</b> section. </li>
+</ol>
+<p>A yellow warning flag is displayed next to any affected packages as shown in the following screenshot. <img src="images/vs-flagged-assembly.png" alt="An example of a flagged package in the Visual Scripting project settings tab" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7161"></a>
+Resolution</h1>
+<p>To resolve this issue, go through your graphs and replace nodes that correspond to the API mentioned in the error message until you find the error no longer occurs. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_0e27665d0de4da3049c7b271da4a9b22 =
+[
+    [ "affordanceTheme", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_0e27665d0de4da3049c7b271da4a9b22.html#a174f68c9425d606a726a90f22195ba66", null ],
+    [ "currentAffordanceValue", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_0e27665d0de4da3049c7b271da4a9b22.html#a4d5e5afd3f5f0be1d35e4ee644610287", null ]
+];

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: interaction-layers</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2interaction-layers.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">interaction-layers </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8310"></a>
+autotoc_md8310</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8311"></a>
+uid: xri-interaction-layers</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8312"></a>
+Interaction layers</h1>
+<p>The interaction layers are used as a mechanism for filtering which interactors can act upon which interactables. Interactors and interactables that share at least one interaction layer in their <b>Interaction Layer Mask</b> properties are allowed to interact. If an interactor and interactable do not share at least one interaction layer in their Interaction Layer Mask then they are not allowed to interact. Mask comparisons do not consider the Layer set in the GameObject header on either the interactor or interactable, it only considers the Interaction Layer Mask.</p>
+<p>You can add new interaction layers by editing the Interaction Layers in the Project Settings window. They are unrelated to the physics layers defined in <b>Edit &gt; Project Settings &gt; Tags and Layers</b>.</p>
+<p>The Interaction Layer Mask specifies whether an interactor and interactable can interact through state changes such as select and hover. Interaction Layer Mask can be set on both interactors and interactables. Interactors interact with all layers by default, and interactables interact with the <span class="tt">Default</span> built-in layer by default.</p>
+<p>The XR Ray Interactor makes use of both interaction layers and physics layers. The <b>Interaction Layer Mask</b> property is common to all Interactors and is used for filtering, as described above. However, the <b>Raycast Mask</b> property is specific to the XR Ray Interactor and is a <a href="https://docs.unity3d.com/ScriptReference/LayerMask.html">LayerMask</a> used to limit which Colliders are hit when ray casting. The <b>Layer</b> in the GameObject header of the interactable's Collider components will determine if the ray cast can hit it. Other GameObjects that do not have an Interactable component will also play a role since anything hit will block Interactables behind it from being a valid target.</p>
+<p>The XR Direct Interactor similarly uses both interaction layers and physics layers. The <a href="https://docs.unity3d.com/Manual/LayerBasedCollision.html">Layer Collision Matrix</a> in <b>Edit &gt; Project Settings &gt; Physics</b> determines if the trigger Collider on the XR Direct Interactor GameObject will detect collisions at all with the interactable's Collider components.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8313"></a>
+Interaction Layers Settings</h2>
+<p>Add and remove interaction layers using <b>Edit</b> &gt; <b>Project Settings</b> &gt; <b>XR Plug-in Management</b> &gt; <b>XR Interaction Toolkit</b> and editing the fields under Interaction Layers.</p>
+<p><img src="images/interaction-layer-settings.png" alt="interaction-layer-settings" class="inline"/></p>
+<p>The settings are stored in an asset in the <span class="tt">Assets/XRI/Settings/Resources</span> folder inside your project. You should not move or rename the <span class="tt">InteractionLayerSettings</span> asset file from that folder. Its relative path in your project is used internally to update and create it. If you delete the asset, a new asset with default values will be created in the same place when required.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8314"></a>
+Interaction Layer Mask Updater</h2>
+<p>If you're upgrading your project from a version prior to XR Interaction Toolkit 2.0.0 then it's recommended to update the interaction layer masks in your Interactables and Interactors. This can be done through the following dialog box that is shown after the package installation or by clicking <b>Run Interaction Layer Mask Updater</b> in <b>Edit</b> &gt; <b>Project Settings</b> &gt; <b>XR Plug-in Management</b> &gt; <b>XR Interaction Toolkit</b>. Select <b>I Made a Backup, Go Ahead!</b> to scan your project for layers that were used and convert to interaction layers.</p>
+<p><img src="images/interaction-layer-mask-updater.png" alt="interaction-layer-mask-updater" class="inline"/> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

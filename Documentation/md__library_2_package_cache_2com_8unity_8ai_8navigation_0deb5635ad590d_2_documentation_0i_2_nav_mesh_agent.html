@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: NavMesh Agent component reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_mesh_agent.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">NavMesh Agent component reference </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md336"></a></p>
+<p>The NavMesh Agent component allows you to create characters (agents) that avoid each other as they move through a scene. Agents use the <a href="./Glossary.md#NavMesh" title="A mesh that Unity generates to approximate the walkable areas and obstacles in your environment for path finding and AI-controlled navigation.">NavMesh</a> to navigate through the space of the game and avoid each other and other moving obstacles. You can use the scripting API of the NavMesh Agent to handle pathfinding and spatial reasoning.</p>
+<p>To use the NavMesh Agent component, add it to a GameObject:</p><ol type="1">
+<li>Select the GameObject that represents your agent.</li>
+<li>In the Inspector, click <b>Add Component</b>.</li>
+<li>Select <b>Navigation</b> &gt; <b>NavMesh Agent</b>. <br  />
+The NavMesh Agent component is displayed in the Inspector window.</li>
+</ol>
+<p>You can use this component to create NavMesh agents. For more details, see <a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_create_nav_mesh_agent.html">Create a NavMesh Agent</a>. For more information about NavMesh agents, see <a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_about_agents.html">About NavMesh agents</a>.</p>
+<p>The following tables describe the properties available in the NavMesh agent component.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Property  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Agent type</b>  </td><td class="markdownTableBodyLeft">Select the type of agent you want to create. This allows the agent to move along any NavMesh created for the selected agent type.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Base offset</b>  </td><td class="markdownTableBodyLeft">Specify the offset of the collision cylinder in relation to the transform pivot point.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md337"></a>
+Steering</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Property  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Speed</b>  </td><td class="markdownTableBodyLeft">Set the maximum speed (in <a class="el" href="namespace_unity.html">Unity</a> units per second) at which the agent can move along a path.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Angular Speed</b>  </td><td class="markdownTableBodyLeft">Set the maximum rotation speed (in degrees per second) of the agent.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Acceleration</b>  </td><td class="markdownTableBodyLeft">Set the maximum acceleration (in <a class="el" href="namespace_unity.html">Unity</a> units per second squared).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Stopping Distance</b>  </td><td class="markdownTableBodyLeft">Specify how close the agent can get to its destination. The agent stops when it arrives this close to the destination location.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Auto Braking</b>  </td><td class="markdownTableBodyLeft">Specify if the agent slows down as it approaches its destination. When enabled, the agent slows down as it approaches the destination. Disable this if you want the agent to move smoothly between multiple points (for example, if the agent is a guard on patrol).  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md338"></a>
+Obstacle Avoidance</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Property  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Radius</b>  </td><td class="markdownTableBodyLeft">Specify the distance from the agent's center that is used to calculate <a href="./Glossary.md#collision" title="A collision occurs when the physics engine detects that the colliders of two game objects make contact or overlap, and at least one has a Rigidbody component and is in motion.">collisions</a> between the agent and other GameObjects.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Height</b>  </td><td class="markdownTableBodyLeft">Specify the height clearance that the agent needs to pass below an obstacle that is overhead. For example, the minimum height of a doorway or tunnel.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Quality</b>  </td><td class="markdownTableBodyLeft">Select the obstacle avoidance quality. If you have a high number of agents, you can reduce the obstacle avoidance quality to reduce performance costs. If you set obstacle avoidance quality to none, then collisions resolve, but other agents and obstacles are not actively avoided.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Priority</b>  </td><td class="markdownTableBodyLeft">Specify how agents behave as they avoid each other. Agents avoid other agents of higher priority and ignore other agents of lower priority. The value should be in the range 0–99 where lower numbers indicate higher priority.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md339"></a>
+Path Finding</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Property  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Auto Traverse OffMesh Link</b>  </td><td class="markdownTableBodyLeft">Specify whether or not the agent automatically traverses NavMesh links or OffMesh links (deprecated). When enabled, the agent automatically traverses NavMesh links. Disable <b>Auto Traverse OffMesh Link</b> if you want to use animation or a specific way to traverse NavMesh links.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Auto Repath</b>  </td><td class="markdownTableBodyLeft">Specify what the agent does when it reaches the end of a partial path. When there is no path to the destination, <a class="el" href="namespace_unity.html">Unity</a> generates a partial path to the reachable location that is closest to the destination. If this property is enabled, when the agent reaches the end of a partial path it tries again to find a path to the destination.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Area Mask</b>  </td><td class="markdownTableBodyLeft">Specify which <a href="./AreasAndCosts.md#area-mask">area types</a> the agent considers as it tries to find a path. You can select multiple options. When you prepare meshes for NavMesh baking, you can set each mesh's area type. For example, you can mark stairs with a special area type, and restrict some agent types from using the stairs.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md340"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_create_nav_mesh_agent.html">Create a NavMesh Agent</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_about_agents.html">About NavMesh agents</a></li>
+<li><a href="./NavInnerWorkings.md#moving-the-agent">Inner Workings of the Navigation System</a></li>
+<li><a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.NavMeshAgent.html">NavMesh Agent scripting reference</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

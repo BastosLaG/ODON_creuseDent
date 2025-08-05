@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Create Custom UI Effects With Shader Graph</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_h_o_w_t_o-_shader_graph.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Create Custom UI Effects With Shader Graph </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6141"></a></p>
+<p>Shader Graph can help you create customized UI effects, including animated backgrounds and unique UI elements. With Shader Graph, you can transform Image elements from static to dynamic and easily define your own button state appearances. Shader Graph can also provide you with more control over the appearance of your UI and help you optimize performance and texture memory.</p>
+<p>Here are some examples of what you can achieve with Shader Graph in <a class="el" href="namespace_unity.html">Unity</a> UI:</p><ul>
+<li>Create custom backgrounds for your user interfaces that subtly swirl, flow, or drift.</li>
+<li>Define visual button states, such as mouse hover and mouse press, or unfocused with just a single grayscale image.</li>
+<li>Design animated HUD elements that indicate the passage of time.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6142"></a>
+The Basics</h1>
+<p>To create a Shader Graph shader for a Canvas UI element, use one of the following methods:</p>
+<ul>
+<li>Modify an existing Shader Graph:<ol type="1">
+<li>Open the Shader Graph in the Shader Editor.</li>
+<li>In <b>Graph Settings</b>, select the <b>HDRP</b> Target. If there isn't one, go to <b>Active Targets</b> &gt; <b>Plus</b>, and select <b>HDRP</b>.</li>
+<li>In the <b>Material</b> drop-down, select <b>Canvas</b>.</li>
+</ol>
+</li>
+<li>Create a new Shader Graph. Go to <b>Assets</b> &gt; <b>Create</b> &gt; <b>Shader Graph</b> &gt; <b>HDRP</b>, and select <b>Canvas Shader Graph</b>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6143"></a>
+Create animated backgrounds</h1>
+<p>Follow these steps to create a simple animated background for a user interface.</p>
+<ol type="1">
+<li>Add two <a class="el" href="class_sample.html">Sample</a> Texture 2D nodes to the graph and set them to use a tiling clouds texture. We will scroll these in different directions speeds. <img src="Images/Background1.png" alt="Step 1" class="inline"/><br  />
+</li>
+<li>For each of the <a class="el" href="class_sample.html">Sample</a> Texture 2D nodes, add a Tiling and Offset node and connect it to the UV input port of the <a class="el" href="class_sample.html">Sample</a> Texture 2D node. We will use the Offset input ports to add the scrolling. <img src="Images/Background2.png" alt="Step 2" class="inline"/><br  />
+</li>
+<li>For each of the Tiling and Offset nodes, create a multiply node and connect it to the Offset input port. <img src="Images/Background3.png" alt="Step 3" class="inline"/><br  />
+</li>
+<li>For the first Multiply node, create a Vector 2 node connected to the A input port and set it to <span class="tt">0.2</span> and <span class="tt">0.13</span>. For the second Multiply node, create a Vector 2 node connected to the B input port and set it to <span class="tt">-0.1</span> and <span class="tt">0.23</span>. These values control the scrolling directions. <img src="Images/Background4.png" alt="Step 4" class="inline"/><br  />
+</li>
+<li>Create a Time node and multiply the Time output value by <span class="tt">0.3</span>. This value is used to adjust the speed of the effect. <img src="Images/Background5.png" alt="Step 5" class="inline"/><br  />
+</li>
+<li>Connect the ouput port of the Time multiply node to the other two multiply nodes. Now our textures are scrolling. <img src="Images/Background6.png" alt="Step 6" class="inline"/><br  />
+</li>
+<li>Create a new Blend node and use it to blend the outputs of the two <a class="el" href="class_sample.html">Sample</a> Texture 2D nodes. This will combine the contributions of both textures together. <img src="Images/Background7.png" alt="Step 7" class="inline"/><br  />
+</li>
+<li>Add a Lerp node and wire the output of the Blend node to the T input of the Lerp. This uses the texture contributions as a mask for blending. <img src="Images/Background8.png" alt="Step 8" class="inline"/><br  />
+</li>
+<li>To blend the two colors using the animated mask, create two Color nodes and connect them to the A and B inputs of the Lerp. Set the colors according to your preference. <img src="Images/Background9.png" alt="Step 9" class="inline"/><br  />
+</li>
+<li>Finally, connect the output of the Lerp to the Base Color input on the Fragment Context Block.</li>
+</ol>
+<p>You now have an animated background shader. You can customize it by changing the colors, changing the texture being used, or controlling the speed.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6144"></a>
+Apply the shader to a Canvas element</h1>
+<p>Follow the steps below to apply the shader you created to a Canvas UI element.</p><ol type="1">
+<li>Right-click your Shader Graph asset in the Project window and select <b>Create</b> &gt; <b>Material</b>. Give your material a name. <img src="Images/CreateMaterial.png" alt="Step 9" class="inline"/><br  />
+</li>
+<li>Ensure that your scene has a Canvas element. If it doesn't, right-click in the Hierarchy panel and select UI &gt; Canvas. <img src="Images/CreateCanvas.png" alt="Step 9" class="inline"/><br  />
+</li>
+<li>Add a new Image element to your Canvas. Right-click the Canvas element and select <b>UI</b> &gt; <b>Image</b>. <img src="Images/CreateImage.png" alt="Step 9" class="inline"/><br  />
+</li>
+<li>Select the Image element in the Hierarchy panel. In the Inspector window, select <b>Browse</b> on the Material slot. <img src="Images/SelectMaterial.png" alt="Step 9" class="inline"/><br  />
+</li>
+<li>Select the Material asset you created in step 1.</li>
+</ol>
+<p>Now your Canvas element is using the shader you created.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6145"></a>
+Pass custom data into the shader</h1>
+<p>It's possible to retrieve custom data in a Shader Graph shader, such as the width and height dimensions of Canvas Image elements. You can easily achieve this using a script by following the steps below:</p>
+<ol type="1">
+<li>Follow the steps in Apply The Shader To A Canvas Element to create a material and apply it to a Canvas Image element.</li>
+<li>To access the Blackboard window, open the Shader Graph asset and then select <b>Blackboard</b> on the top right. <img src="Images/Blackboard.png" alt="Step 2" class="inline"/><br  />
+</li>
+<li>In the Blackboard window, click <b>+</b> on the top right to add a new Blackboard parameter.</li>
+<li>Select the data type that matches the type of data you want to bring in. In this example, add a Vector 2 parameter.</li>
+<li>Name the new parameter "Size". You can then drag the Size parameter into the graph and use it based on your needs. <img src="Images/BlackboardToGraph.png" alt="Step 5" class="inline"/><br  />
+</li>
+<li>Create the following script to connect the Canvas Image's Width and Height values to the shader's Size parameter: <div class="fragment"><div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.UI;</div>
+<div class="line"> </div>
+<div class="line">[RequireComponent(typeof(Graphic))]</div>
+<div class="line">[ExecuteAlways]</div>
+<div class="line">public class ImageSize : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    private Image m_myCanvasImage;</div>
+<div class="line">    private void Start() </div>
+<div class="line">    {</div>
+<div class="line">        m_myCanvasImage = GetComponent&lt;Image&gt;();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">#if UNITY_EDITOR</div>
+<div class="line">    void OnValidate() { UpdateMaterial(); }</div>
+<div class="line">#endif </div>
+<div class="line"> </div>
+<div class="line">    private void FixedUpdate()</div>
+<div class="line">    {</div>
+<div class="line">        UpdateMaterial();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    void UpdateMaterial()</div>
+<div class="line">    {</div>
+<div class="line">        if (m_myCanvasImage != null &amp;&amp; m_myCanvasImage.material != null)</div>
+<div class="line">        {</div>
+<div class="line">            var imageRect = m_myCanvasImage.rectTransform.rect;</div>
+<div class="line">            var widthHeight = new Vector2(x: imageRect.width, y: imageRect.height);</div>
+<div class="line">            m_myCanvasImage.material.SetVector(name: &quot;_Size&quot;, widthHeight);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li>Save the script as <span class="tt">ImageSize.cs</span> and add it to your project.</li>
+<li>Select the Image element in the Hierarchy panel of your scene.</li>
+<li>In the Inspector window, select <b>Add Component</b> and then choose <b>Scripts</b> &gt; <b>Image Size</b>. <img src="Images/AddComponent.png" alt="Step 9" class="inline"/><br  />
+</li>
+</ol>
+<p>The Image element's Width and Height values from the Rect Transform are passed into the Material's Size parameter. You can now use them in the shader. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

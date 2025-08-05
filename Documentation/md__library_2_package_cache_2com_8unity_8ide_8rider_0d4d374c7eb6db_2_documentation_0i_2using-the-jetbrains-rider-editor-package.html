@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Using the JetBrains Rider Editor package</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ide_8rider_0d4d374c7eb6db_2_documentation_0i_2using-the-jetbrains-rider-editor-package.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Using the JetBrains Rider Editor package </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1605"></a></p>
+<p>To use the package, go to <b>Edit &gt; Preferences &gt; External Tools</b>, click on the <b>External Script Editor</b> dropdown menu and select your version of <b><a class="el" href="namespace_rider.html">Rider</a></b>. When you select this option, the window reloads.</p>
+<p>After the window reloads, new settings that control production of .csproj files become available.</p>
+<p><img src="images/preferences-settings-external-tools-window.png" alt="" class="inline"/> <br  />
+ <em>External Tools tab in the Preferences window</em></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1606"></a>
+Commandline endpoints</h1>
+<p>Q: Generate sln/csproj files for CI?</p>
+<p>A: <span class="tt"><a class="el" href="namespace_unity.html">Unity</a> -batchmode -quit -projectPath ProjectPath -executeMethod Packages.Rider.Editor.RiderScriptEditor.SyncSolution</span></p>
+<p>Q: Generate sln/csproj and open External Editor?</p>
+<p>A: <span class="tt"><a class="el" href="namespace_unity.html">Unity</a> -batchmode -quit -projectPath ProjectPath -executeMethod Packages.Rider.Editor.RiderScriptEditor.SyncSolutionAndOpenExternalEditor</span></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1607"></a>
+Package preferences</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Description:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Extensions handled</b>  </td><td class="markdownTableBodyLeft">This field lists the file extensions that open in <a class="el" href="namespace_jet_brains.html">JetBrains</a> <a class="el" href="namespace_rider.html">Rider</a>. This field contains a variety of extensions by default.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Generate .csproj files for:</b>  </td><td class="markdownTableBodyLeft">Each setting in this list enables or disables production of .csproj files for a different type of package. The <b>Regenerate project files</b> button updates existing .csproj files and creates the necessary new ones based on the settings you choose. These settings control whether to generate .csproj files for any installed packages. For more information on how to install packages, see the <a href="https://docs.unity3d.com/Manual/upm-ui-actions.html">Adding and removing packages documentation</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>&#160;&#160;&#160;&#160;Embedded &#160;&#160;&#160;&#160;packages</b>  </td><td class="markdownTableBodyLeft">Any package that appears under your project’s <a class="el" href="namespace_packages.html">Packages</a> folder is an embedded package. An embedded package is not necessarily built-in; you can create your own packages and embed them inside your project. This setting is enabled by default. For more information on embedded packages, see the <a href="https://docs.unity3d.com/Manual/upm-embed.html">Embedded dependencies documentation</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>&#160;&#160;&#160;&#160;Local &#160;&#160;&#160;&#160;packages</b>  </td><td class="markdownTableBodyLeft">Any package that you install from a local repository stored on your machine, but from outside of your <a class="el" href="namespace_unity.html">Unity</a> project. This setting is enabled by default.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>&#160;&#160;&#160;&#160;Registry &#160;&#160;&#160;&#160;packages</b>  </td><td class="markdownTableBodyLeft">Any package that you install from either the official <a class="el" href="namespace_unity.html">Unity</a> registry or a custom registry. <a class="el" href="namespace_packages.html">Packages</a> in the <a class="el" href="namespace_unity.html">Unity</a> registry are available to install directly from the Package Manager. For more information about the <a class="el" href="namespace_unity.html">Unity</a> package registry, see the <a href="https://docs.unity3d.com/Packages/com.unity.package-manager-ui@1.8/manual/index.html#PackManRegistry">Package Registry section of the Unity Package Manager documentation</a>. For information on creating and using custom registries in addition to the <a class="el" href="namespace_unity.html">Unity</a> registry, see the <a href="https://docs.unity3d.com/Manual/upm-scoped.html">Scoped package registries documentation</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>&#160;&#160;&#160;&#160;Git &#160;&#160;&#160;&#160;packages</b>  </td><td class="markdownTableBodyLeft">Any package you install directly from a Git repository using a URL.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>&#160;&#160;&#160;&#160;Built-in &#160;&#160;&#160;&#160;packages</b>  </td><td class="markdownTableBodyLeft">Any package that is already installed as part of the default <a class="el" href="namespace_unity.html">Unity</a> installation.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>&#160;&#160;&#160;&#160;Tarball &#160;&#160;&#160;&#160;packages</b>  </td><td class="markdownTableBodyLeft">Any package you install from a GZip tarball archive on the local machine, outside of your <a class="el" href="namespace_unity.html">Unity</a> project.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>&#160;&#160;&#160;&#160;Unknown &#160;&#160;&#160;&#160;packages</b>  </td><td class="markdownTableBodyLeft">Any package which <a class="el" href="namespace_unity.html">Unity</a> cannot determine an origin for. This could be because the package doesn’t list its origin, or that <a class="el" href="namespace_unity.html">Unity</a> doesn’t recognize the origin listed.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Player projects</b>  </td><td class="markdownTableBodyLeft">For each player project, generate an additional .csproj file named 'originalProjectName.Player.csproj'. This allows different project types to have their code included in Rider’s systems, such as assembly definitions or testing suites.  </td></tr>
+</table>
+<p>This package also adds a second tab under <b>Preferences</b> named <b><a class="el" href="namespace_rider.html">Rider</a></b>, pictured below.</p>
+<p><img src="images/preferences-rider-tab.png" alt="" class="inline"/> <br  />
+<em><a class="el" href="namespace_rider.html">Rider</a> tab in the Preferences window</em></p>
+<dl class="section note"><dt>Note</dt><dd>The Logging Level menu does not control the level of <a class="el" href="namespace_unity.html">Unity</a>'s logging, only the level of log messages that <a class="el" href="namespace_rider.html">Rider</a> package logs in its own log file. For more information on controlling <a class="el" href="namespace_unity.html">Unity</a>'s logging level, see the <a href="https://docs.unity3d.com/Manual/Console.html#StackTraceLogging">Stack Trace Logging section of the Console Window documentation</a>.</dd></dl>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Description:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b><b>Pass Console to <a class="el" href="namespace_rider.html">Rider</a></b></b>  </td><td class="markdownTableBodyLeft">If <b>Pass Console to <a class="el" href="namespace_rider.html">Rider</a></b> is enabled, <a class="el" href="namespace_rider.html">Rider</a> can access data that <a class="el" href="namespace_unity.html">Unity</a> sends to the <a class="el" href="namespace_unity.html">Unity</a> Console and display it within its own environment instead.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b><b>Log file</b></b>  </td><td class="markdownTableBodyLeft">The <b>Log file</b> field contains an <b>Open log</b> button. Select this button to open the log file inside the <a class="el" href="namespace_rider.html">Rider</a> IDE. This button is unavailable when <b>Logging Level</b> is set to <b>OFF</b>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Logging Level</b>  </td><td class="markdownTableBodyLeft">The <b>Logging Level</b> menu controls how detailed are the <a class="el" href="namespace_rider.html">Rider</a> package logs. Those logs may be used for troubleshooting communication between <a class="el" href="namespace_rider.html">Rider</a> and <a class="el" href="namespace_unity.html">Unity</a>. <a class="el" href="namespace_rider.html">Rider</a> package logs all messages of the type you select as well as any messages of a more severe type. For example, if you choose <b>WARN</b>, then <a class="el" href="namespace_rider.html">Rider</a> logs all <b>ERROR</b> and <b>FATAL</b> messages as well as <b>WARN</b> messages. The message types are listed below in order of severity, with <b>FATAL</b> as the most severe type of message and <b>TRACE</b> as the least severe.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b><b>OFF</b></b>  </td><td class="markdownTableBodyLeft"><a class="el" href="namespace_rider.html">Rider</a> does not produce any logs.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>**FATAL</b>  </td><td class="markdownTableBodyLeft">Logs information relating to serious problems that cause the application to crash. This setting produces the smallest logs.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b><b>ERROR</b></b>  </td><td class="markdownTableBodyLeft">Logs information about errors that prevent some functionality from working, but don’t cause the application to fail (for example, a failed database connection).  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b><b>WARN</b></b>  </td><td class="markdownTableBodyLeft">Logs information about possible problems, or any unusual behaviour. Warnings don’t indicate that something has gone wrong, but that <a class="el" href="namespace_unity.html">Unity</a> detects something that might potentially cause an issue if not investigated.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b><b>INFO</b></b>  </td><td class="markdownTableBodyLeft">Logs information about normal operation of the application, such as a successful database connection attempt.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b><b>VERBOSE</b></b>  </td><td class="markdownTableBodyLeft">Logs detailed but not exhaustive information about your code. This setting is helpful for checking how your code executes or providing diagnostic information for other developers.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b><b>TRACE</b></b>  </td><td class="markdownTableBodyLeft">Logs as much information about the application as possible. This can create a very large and detailed log, so it’s good practice to only use it when attempting to find the cause of a specific issue with your code.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

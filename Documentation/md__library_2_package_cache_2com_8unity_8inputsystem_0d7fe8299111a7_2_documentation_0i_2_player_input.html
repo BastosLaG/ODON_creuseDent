@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: PlayerInput</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">PlayerInput </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2192"></a>
+autotoc_md2192</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2193"></a>
+uid: input-system-player-input</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2194"></a>
+The Player Input component</h1>
+<p>The Player Input component provides two related but separate features which can be useful in common game scenarios. These are:</p>
+<ul>
+<li>Configuring how <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Actions</a> map to methods or callbacks in the script that controls your player.</li>
+<li>Handling local multiplayer scenarios such as player lobbies, device filtering, and screen-splitting.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2195"></a>
+The Player Input component</h2>
+<p><img src="Images/PlayerInput.png" alt="PlayerInput" class="inline"/><br  />
+ <em>Above, the Player Input component displayed in the inspector.</em></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2196"></a>
+Connecting actions to methods or callbacks</h3>
+<p>The <b>Player Input</b> component represents a single player, and the connection between that player's associated device, Actions, and methods or callbacks.</p>
+<p>You can use a single instance of a Player Input component in a single-player game to set up a mapping between your Input Actions and methods or callbacks in the script that controls your player.</p>
+<p>For example, by using the Player Input component, you can set up a mapping between actions such as "Jump" to C# methods in your script such as <span class="tt">public void OnJump()</span>.</p>
+<p>There are a few options for doing exactly how the Player Input component does this, such as using SendMessage, or <a class="el" href="namespace_unity.html">Unity</a> Events, which is described in more detail below.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2197"></a>
+Handling local multiplayer scenarios</h3>
+<p>You can also have multiple <b>Player Input</b> components active at the same time (each on a separate instance of a prefab) along with the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input_manager.html"><b>Player Input Manager</b></a> component to implement local multiplayer features, such as device filtering, and screen-splitting.</p>
+<p>In these local multiplayer scenarios, the Player Input component should be on a prefab that represents a player in your game, which the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input_manager.html"><b>Player Input Manager</b></a> has a reference to. The <b>Player Input Manager</b> then instantiates players as they join the game and pairs each player instance to a unique device that the player uses exclusively (for example, one gamepad for each player). You can also manually pair devices in a way that enables two or more players to share a Device (for example, left/right keyboard splits or hot seat use).</p>
+<p>Each <span class="tt">PlayerInput</span> corresponds to one <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_user_management.html"><span class="tt">InputUser</span></a>. You can use <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_user"><span class="tt">PlayerInput.user</span></a> to query the <span class="tt">InputUser</span> from the component.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2198"></a>
+Getting started</h2>
+<p>To get started using the Player Input component, use the following steps:</p>
+<ol type="1">
+<li><a href="https://docs.unity3d.com/Manual/UsingComponents.html">Add</a> a <b>Player Input</b> component to a GameObject. This would usually be the GameObject that represents the player in your game.</li>
+</ol>
+<ol type="1">
+<li>Assign your <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_assets.html">Action Asset</a> to the <b>Actions</b> field. This is usually the default project-wide action asset named "InputSystem_Actions"</li>
+</ol>
+<ol type="1">
+<li>Set up Action responses, by selecting a <b>Behaviour</b> type from the Behaviour menu. The Behaviour type you select affects how you should implement the methods that handle your Action responses. See the notification behaviors section further down for details.<br  />
+<br  />
+<img src="Images/PlayerInputNotificationBehaviors.png" alt="PlayerInput Notification Behavior" class="inline"/><br  />
+<br  />
+</li>
+</ol>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2199"></a>
+Configuring the Player Input component</h2>
+<p>You can use the following properties to configure <span class="tt">PlayerInput</span>:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_actions"><span class="tt">Actions</span></a>  </td><td class="markdownTableBodyNone">The set of <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Input Actions</a> associated with the player. Typically you would set this to Project-Wide Actions, however you can assign an <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_assets.html">ActionAsset</a> reference here). To receive input, each player must have an associated set of Actions. See documentation on Actions for details.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_defaultControlScheme"><span class="tt">Default Control Scheme</span></a>  </td><td class="markdownTableBodyNone">Which <a href="ActionBindings.md#control-schemes">Control Scheme</a> (from what is defined in <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_actions"><span class="tt">Actions</span></a>) to enable by default.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_defaultActionMap"><span class="tt">Default Action Map</span></a>  </td><td class="markdownTableBodyNone">Which <a href="Actions.md#overview">Action Map</a> in <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_actions"><span class="tt">Actions</span></a> to enable by default. If set to <span class="tt">None</span>, then the player starts with no Actions being enabled.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_camera"><span class="tt">Camera</span></a>  </td><td class="markdownTableBodyNone">The individual camera associated with the player. This is only required when employing <a href="PlayerInputManager.md#split-screen">split-screen</a> setups and has no effect otherwise.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_notificationBehavior"><span class="tt">Behavior</span></a>  </td><td class="markdownTableBodyNone">How the <span class="tt">PlayerInput</span> component notifies game code about things that happen with the player. See documentation on notification behaviors.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2200"></a>
+Actions</h3>
+<p>To receive input, each player must have an associated set of Input Actions.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2201"></a>
+Specifying the Actions to use</h4>
+<p>The simplest workflow is to use the project-wide actions defined in the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions editor</a>. However, the Player Input component also allows you to use an <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_assets.html">Actions Asset</a> to specify the actions that should be used by any instance of the component. If you set the <b>Actions</b> field to <b>Actions Asset</b>, the inspector displays a field into which you can assign an actions asset, and a <b>Create Actions</b> button which allows you to create a new actions asset. When you create these via the Player Input inspector's <b>Create Actions</b> button, the Input System creates a default set of Actions. However, the Player Input component places no restrictions on the arrangement of Actions.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2202"></a>
+Enabling and disabling Actions</h4>
+<p>The Player Input component automatically handles enabling and disabling Actions, and also handles installing <a href="RespondingToActions.md#responding-to-actions-using-callbacks">callbacks</a> on the Actions. When multiple Player Input components use the same Actions, the components automatically create <a href="RespondingToActions.md#using-actions-with-multiple-players">private copies of the Actions</a>. This is why, when writing input code that works with the PlayerInput component, you should not use <span class="tt">InputSystem.actions</span> because this references the "singleton" copy of the actions rather than the specific private copy associated with the PlayerInput instance you are coding for.</p>
+<p>When first enabled, the Player Input component enables all Actions from the the <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_defaultActionMap"><span class="tt">Default Action Map</span></a>. If no default Action Map exists, the Player Input component does not enable any Actions. To manually enable Actions, you can call <a href="../api/UnityEngine.InputSystem.InputActionMap.html#UnityEngine_InputSystem_InputActionMap_Enable"><span class="tt">Enable</span></a> and <a href="../api/UnityEngine.InputSystem.InputActionMap.html#UnityEngine_InputSystem_InputActionMap_Disable"><span class="tt">Disable</span></a> on the Action Maps or Actions, like you would do <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">without <span class="tt">PlayerInput</span></a>. To check which Action Map is currently enabled, or to switch to a different one, use the <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_currentActionMap"><span class="tt">PlayerInput.currentActionMap</span></a> property. To switch Action Maps with an Action Map name, you can also call <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_SwitchCurrentActionMap_System_String_"><span class="tt">PlayerInput.SwitchCurrentActionMap</span></a>.</p>
+<p>To disable a player's input, call <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_DeactivateInput"><span class="tt">PlayerInput.DeactivateInput</span></a>. To re-enable it, call <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_ActivateInput"><span class="tt">PlayerInput.ActivateInput</span></a>. The latter enables the default Action Map, if it exists.</p>
+<p>When <span class="tt">PlayerInput</span> is disabled, it automatically disables the currently active Action Map (<a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_currentActionMap"><span class="tt">PlayerInput.currentActionMap</span></a>) and disassociate any Devices paired to the player.</p>
+<p>See the notification behaviors section below for how to be notified when player triggers an Action.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2203"></a>
+When using <b>Send Messages</b> or <b>Broadcast Messages</b></h3>
+<p>When the notification behavior of <span class="tt">PlayerInput</span> is set to <b>Send Messages</b> or <b>Broadcast Messages</b>, you can set your app to respond to Actions by defining methods in components like so:</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyPlayerScript : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// &quot;jump&quot; action becomes &quot;OnJump&quot; method.</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// If you&#39;re not interested in the value from the control that triggers the action, use a method without arguments.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnJump()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// your Jump code here</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// If you are interested in the value from the control that triggers an action, you can declare a parameter of type InputValue.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnMove(InputValue value)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Read value from control. The type depends on what type of controls.</span></div>
+<div class="line">        <span class="comment">// the action is bound to.</span></div>
+<div class="line">        var v = value.Get&lt;Vector2&gt;();</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// IMPORTANT:</span></div>
+<div class="line">        <span class="comment">// The given InputValue is only valid for the duration of the callback. Storing the InputValue references somewhere and calling Get&lt;T&gt;() later does not work correctly.</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The component must be on the same <span class="tt">GameObject</span> if you are using <span class="tt">Send Messages</span>, or on the same or any child <span class="tt">GameObject</span> if you are using <span class="tt">Broadcast Messages</span>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2204"></a>
+When using <b>Invoke Unity Events</b></h3>
+<p>When the notification behavior of <span class="tt">PlayerInput</span> is set to <span class="tt">Invoke <a class="el" href="namespace_unity.html">Unity</a> Events</span>, each Action has to be routed to a target method. The methods have the same format as the <a href="RespondingToActions.md#action-callbacks"><span class="tt">started</span>, <span class="tt">performed</span>, and <span class="tt">canceled</span> callbacks</a> on <a href="../api/UnityEngine.InputSystem.InputAction.html"><span class="tt">InputAction</span></a>.</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyPlayerScript : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnFire(InputAction.CallbackContext context)</div>
+<div class="line">    {</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnMove(InputAction.CallbackContext context)</div>
+<div class="line">    {</div>
+<div class="line">        var value = context.ReadValue&lt;Vector2&gt;();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2205"></a>
+Notification behaviors</h3>
+<p>You can use the <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_notificationBehavior"><span class="tt">Behavior</span></a> property in the Inspector to determine how a <span class="tt">PlayerInput</span> component notifies game code when something related to the player has occurred.</p>
+<p>The following options are available:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Behavior  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerNotifications.html"><span class="tt">Send Messages</span></a>  </td><td class="markdownTableBodyNone">Uses <a href="https://docs.unity3d.com/ScriptReference/GameObject.SendMessage.html"><span class="tt">GameObject.SendMessage</span></a> on the <span class="tt">GameObject</span> that the <span class="tt">PlayerInput</span> component belongs to.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerNotifications.html"><span class="tt">Broadcast Messages</span></a>  </td><td class="markdownTableBodyNone">Uses <a href="https://docs.unity3d.com/ScriptReference/GameObject.BroadcastMessage.html"><span class="tt">GameObject.BroadcastMessage</span></a> on the <span class="tt">GameObject</span> that the <span class="tt">PlayerInput</span> component belongs to. This broadcasts the message down the <span class="tt">GameObject</span> hierarchy.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerNotifications.html"><span class="tt">Invoke Unity Events</span></a>  </td><td class="markdownTableBodyNone">Uses a separate <a href="https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html"><span class="tt">UnityEvent</span></a> for each individual type of message. When this is selected, the events available on the <span class="tt">PlayerInput</span> are accessible from the <b>Events</b> foldout. The argument received by events triggered for Actions is the same as the one received by <a href="RespondingToActions.md#action-callbacks"><span class="tt">started</span>, <span class="tt">performed</span>, and <span class="tt">canceled</span> callbacks</a>.<br  />
+<br  />
+<img src="Images/MyPlayerActionEvents.png" alt="PlayerInput UnityEvents" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerNotifications.html"><span class="tt">Invoke CSharp Events</span></a>  </td><td class="markdownTableBodyNone">Similar to <span class="tt">Invoke <a class="el" href="namespace_unity.html">Unity</a> Events</span>, except that the events are plain C# events available on the <span class="tt">PlayerInput</span> API. You cannot configure these from the Inspector. Instead, you have to register callbacks for the events in your scripts.<br  />
+<br  />
+The following events are available:<br  />
+<br  />
+<ul>
+<li>
+<a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_onActionTriggered"><span class="tt">onActionTriggered</span></a> (collective event for all actions on the player)</li>
+<li>
+<a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_onDeviceLost"><span class="tt">onDeviceLost</span></a></li>
+<li>
+<a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_onDeviceRegained"><span class="tt">onDeviceRegained</span></a></li>
+</ul>
+</td></tr>
+</table>
+<p>In addition to per-action notifications, <span class="tt">PlayerInput</span> sends the following general notifications:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Notification  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_DeviceLostMessage"><span class="tt">DeviceLostMessage</span></a>  </td><td class="markdownTableBodyNone">The player has lost one of the Devices assigned to it. This can happen, for example, if a wireless device runs out of battery.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_DeviceRegainedMessage"><span class="tt">DeviceRegainedMessage</span></a>  </td><td class="markdownTableBodyNone">Notification that triggers when the player recovers from Device loss and is good to go again.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2206"></a>
+Device assignments</h3>
+<p>If the <span class="tt">PlayerInput</span> component has any Devices assigned, it matches these to the <a href="ActionBindings.md#control-schemes">Control Schemes</a> in the associated Action Asset, and only enables Control Schemes which match its Input Devices.</p>
+<p>Each <span class="tt">PlayerInput</span> can have one or more Devices assigned to it. By default, no two <span class="tt">PlayerInput</span> components are assigned the same Devices, but you can force this; to do so, manually assign Devices to a player when calling <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_Instantiate_UnityEngine_GameObject_System_Int32_System_String_System_Int32_UnityEngine_InputSystem_InputDevice_"><span class="tt">PlayerInput.Instantiate</span></a>, or call <a href="../api/UnityEngine.InputSystem.Users.InputUser.html#UnityEngine_InputSystem_Users_InputUser_PerformPairingWithDevice_UnityEngine_InputSystem_InputDevice_UnityEngine_InputSystem_Users_InputUser_UnityEngine_InputSystem_Users_InputUserPairingOptions_"><span class="tt">InputUser.PerformPairingWithDevice</span></a> on the <span class="tt">InputUser</span> of a <span class="tt">PlayerInput</span>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2207"></a>
+Debug information</h3>
+<p>When the Editor is in Play mode, each PlayerInput component instance displays a <b>Debug</b> section, as shown below.</p>
+<p><img src="images/PlayerInputUserDeviceDebug.png" alt="The debug section of the PlayerInput component" class="inline"/></p>
+<p>The Debug section shows the User number (which starts counting from zero), the control Scheme, and the devices assigned to the PlayerInput instance.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2208"></a>
+UI input</h3>
+<p>The <span class="tt">PlayerInput</span> component can work together with an <a href="UISupport.md#setting-up-ui-input"><span class="tt">InputSystemUIInputModule</span></a> to drive the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_u_i_support.html">UI system</a>.</p>
+<p>To set this up, assign a reference to a <span class="tt">InputSystemUIInputModule</span> component in the <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_uiInputModule"><span class="tt">UI Input Module</span></a> field of the <span class="tt">PlayerInput</span> component. The <span class="tt">PlayerInput</span> and <span class="tt">InputSystemUIInputModule</span> components should be configured to work with the same <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html"><span class="tt">InputActionAsset</span></a> for this to work.</p>
+<p>Once you've completed this setup, when the <span class="tt">PlayerInput</span> component configures the Actions for a specific player, it assigns the same Action configuration to the <span class="tt">InputSystemUIInputModule</span>. In other words, the same Action and Device configuration that controls the player now also controls the UI.</p>
+<p>If you use <a href="UISupport.md#multiplayer-uis"><span class="tt">MultiplayerEventSystem</span></a> components to dispatch UI events, you can also use this setup to simultaneously have multiple UI instances on the screen, each controlled by a separate player.</p>
+<p>&gt;<b>Notes</b>: </p><blockquote class="doxtable">
+<ul>
+<li>As a general rule, if you are using the PlayerInput workflow, you should read input through callbacks as described above, however if you need to access the input actions asset directly while using the PlayerInput component, you should access the <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_actions">PlayerInput component's copy of the actions</a>, not <span class="tt">InputSystem.actions</span>. This is because the PlayerInput component performs device filtering to automatically assign devices to multiple players, so each instance has its own copy of the actions filtered for each player. If you bypass this by reading <span class="tt">InputSystem.actions</span> directly, the automatic device assignment won't work.</li>
+<li>This component is built on top of the public Input System API. As such, they don't do anything that you can't program yourself. They are meant primarily as an easy, out-of-the-box setup that eliminates much of the need for custom scripting. <br  />
+&#160; </li>
+</ul>
+</blockquote>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

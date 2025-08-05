@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Profile Analyzer window</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_document20622394dc864dd8a51b5cff96815e25.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Profile Analyzer window </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2577"></a></p>
+<p>The Profile Analyzer window visualizes frame, thread, and marker data from the <a href="https://docs.unity3d.com/Manual/Profiler.html">Unity Profiler</a> window. You can use it to analyze the performance of specific markers, threads, and frames.</p>
+<p>To open the Profile Analyzer window, in the <a class="el" href="namespace_unity.html">Unity</a> Editor go to menu: <b>Window &gt; Analysis &gt; Profile Analyzer</b>.</p>
+<p><img src="images/profile-analyzer-window.png" alt="Profile Analyzer Window" class="inline"/><br  />
+<em>The Profile Analyzer window on start up, with no data loaded.</em></p>
+<p>The Profile Analyzer has two views:</p>
+<ul>
+<li><b>Single:</b> The <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2single-view.html">Single view</a> displays one set of Profiler data. You can use this view to analyze specific events on one set of profiling data.</li>
+<li><b>Compare:</b> In the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2compare-view.html">Compare view</a>, you can load two sets of Profiler data to compare. You can use the Compare view to compare two different sets of profiling data, or to compare different events in the same data set.</li>
+</ul>
+<p>In both views, the Profile Analyzer displays min, max, median, mean, and lower/upper quartile values of the selected frame range. It also displays information on the distribution of each profiler marker in histograms and box and whisker plots.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2578"></a>
+Pulling and analyzing performance data</h1>
+<p>The Profile Analyzer only analyzes CPU data. It can either analyze data from the active set of frames loaded into the Profiler, or from a saved Profile Analyzer .pdata file.</p>
+<p>The Profile Analyzer aggregates the activity of each marker, and generates useful statistics to help you analyze the marker costs over a number of threads and frames. This includes summing the runtime and counts of each occurrence of every marker for all active threads and frames the Profile captured.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2579"></a>
+Pulling data from the Profiler window</h2>
+<p>To pull data from an active profiling session, click the <b>Pull Data</b> button. This pulls in the current set of available frames from the Profiler and visualizes the analyzed results.</p>
+<p>If you don't have an active profile session, click the <b>Open Profiler Window</b> button, then load or record some data.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2580"></a>
+Loading and saving a data set</h2>
+<p>You can save or reload any data that the Profile Analyzer analyzes at any point in time. This means you can share your analysis with others and load the results into the <b>Single</b> or <b>Compare</b> view at any time. To save the data from the Profile Analyzer, click the <b>Save</b> button in any view. This saves the data in the .pdata format. To load this data, click the <b>Load</b> button in any view.</p>
+<p>&gt;[!NOTE] &gt;If you select the <b>Load</b> option, the data must be in the Profile Analyzer .pdata format. If you have data from the Profiler in the .data file format, open it in the Profiler first, and then select the <b>Pull Data</b> button in the Profile Analyzer.</p>
+<p>For more information on how to pull data into the Profile Analyzer, see the workflow documentation on <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_document47e92b7bdc85f4c99ef1c3a1806b4494.html">Collecting and viewing data</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2581"></a>
+Window navigation</h1>
+<p>The controls and navigation for the Profile Analyzer window are very similar in both the Single and Compare view.</p>
+<p>The Profile Analyzer window has the following controls across both views, which you can access at the top of the window:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Control</b>  </th><th class="markdownTableHeadNone"><b>Function</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Single</b>  </td><td class="markdownTableBodyNone">Enter the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2single-view.html">Single view</a> mode. This is the default view mode.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Compare</b>  </td><td class="markdownTableBodyNone">Enter the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2compare-view.html">Compare view</a> mode. You can compare two sets of profiling data in this mode.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Export</b>  </td><td class="markdownTableBodyNone">Export the data into a .csv format. When you click this button, a dialog box opens and you can choose from:<br  />
+ <b>Marker table:</b> Exports the marker data visible in <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2single-view.html">Single view</a><br  />
+<b>Single Frame Times:</b> Exports the frame data visible in the Single view<br  />
+<b>Comparison Frame Times:</b> Exports both sets of data visible in the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2compare-view.html">Compare view</a>.<br  />
+<br  />
+This button is disabled if you haven't imported any data into the Profile Analyzer window.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Open Profiler Window</b>  </td><td class="markdownTableBodyNone">Click this button to open the <a href="https://docs.unity3d.com/Manual/ProfilerWindow.html">Profiler window</a>. When the Profiler window is open, this button changes to <b>Close Profiler Window</b>.  </td></tr>
+</table>
+<p>When you load some data into the Profile Analyzer window, the window populates with the profiling data, and is laid out as follows:</p>
+<p><img src="images/profile-analyzer-single-view-annotated.png" alt="Profile Analyzer Window" class="inline"/><br  />
+*The Profile Analyzer window in Single view</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Pane  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>A:</b> Frame control  </td><td class="markdownTableBodyNone">Displays individual frame timings, ordered by frame index or frame duration. You can also use this pane to select a range of frames for the Profile Analyzer to analyze. For more information on this pane, see the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2frame-range-selection.html">Frame control</a> documentation. <br  />
+<br  />
+ In Compare View, to select the same range on both sets of data, enable <b>Pair Graph Selection</b> underneath the charts and then click and drag a selection on either of the charts. For more information on this pane, see the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2frame-range-selection.html">Frame control</a> documentation.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>B:</b> Filters  </td><td class="markdownTableBodyNone">Use the filter pane to limit the data that the Profile Analyzer displays. You can filter by partial match name, thread, or depth slice. You can also exclude markers to remove any markers that aren't relevant from the filtered view. For more information on how to use the filter pane, see the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2filtering-system.html">Filter</a> documentation.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>C:</b> Top 10 markers on median frame(s)  </td><td class="markdownTableBodyNone">Visualizes the ten highest duration markers that contributed to the frame. In Compare view, this shows the ten highest markers for both sets of data. You can select any of the markers in this pane to see more information on them. The Profile Analyzer reflects changes you make to the Depth filter in this pane.<br  />
+<br  />
+In Compare view, to adjust how the Profile Analyzer draws the markers against each other, use the <b>Ratio</b> dropdown.<br  />
+ <b>Normalised</b> displays the two data sets relative to their own time at the selected depth. <br  />
+<b>Longest</b> displays the absolute difference between the two sets at the selected depth.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>D:</b> Marker details for currently selected range <em>(Single view)</em><br  />
+Marker Comparison for currently selected range <em>(Compare view)</em>  </td><td class="markdownTableBodyNone">A sortable list of markers, with detailed information on their timings. For more information on the particular statistics available in these panes, see the documentation on <a href="single-view.html#marker-details-list">Single view marker details list</a> and <a href="compare-view.html#marker-comparison-list">Compare view Marker Comparison list</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>E:</b> Frame summary  </td><td class="markdownTableBodyNone">Displays a summary of frame times. For more information on this pane, see the documentation on <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2frame-summary.html">Frame Summary</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>F:</b> Thread summary  </td><td class="markdownTableBodyNone">Displays information about the threads in the data set. For more information, see the documentation on the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2thread-summary.html">Thread Summary pane</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>G:</b> Marker summary  </td><td class="markdownTableBodyNone">Summarizes the marker data of the current selected item in the <b>Marker Details</b> list. For more information, see the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2marker-summary.html">Marker summary</a> documentation.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2582"></a>
+Frame buttons</h2>
+<p>If the data you analyze in the Profile Analyzer is also loaded into the Profiler window, you can click on the frame buttons in the Profile Analyzer window to jump to the relevant frames in the Profiler.</p>
+<p><img src="images/jump-to-frame-button.png" alt="Jump to frame button" class="inline"/><br  />
+<em>The Frame Summary pane with the frame buttons highlighted.</em></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2583"></a>
+Frame range selection</h1>
+<p>You can limit the analysis to a subset or selection of frames. To do this, you can click and drag on the chart in the Frame Control pane at the top of the <b>Single</b> and <b>Compare</b> views and select a range, or use the context menu commands to select a range. For more information on using the frame range pane, see the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2frame-range-selection.html">Frame Control pane</a> documentation.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2584"></a>
+Filtering</h1>
+<p>You can also filter the data to limit the number of markers the Profile Analyzer displays. This includes filtering by thread, call depth and name substrings. You can order the remaining markers by any of the available metrics in the marker list control. For more information on how to use the filter system, see the <a class="el" href="md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0da68e7bc84997_2_documentation_0i_2filtering-system.html">Filters pane</a> documentation. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

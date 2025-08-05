@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: TestRunCallback attribute</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-attribute-testruncallback.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">TestRunCallback attribute </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5450"></a></p>
+<p>It is possible for the test framework to invoke callbacks as the current test run progresses. To do this, there is a <span class="tt">TestRunCallback</span> attribute which takes the type of <span class="tt">ITestRunCallback</span> implementation. You can invoke the callbacks with <a href="http://www.nunit.org/">NUnit</a> <span class="tt">ITest</span> and <span class="tt">ITestResult</span> classes.</p>
+<p>At the <span class="tt">RunStarted</span> and <span class="tt">RunFinished</span> methods, the test and test results are for the whole test tree. These methods invoke at each node in the test tree; first with the whole test assembly, then with the test class, and last with the test method.</p>
+<p>From these callbacks, it is possible to read the partial or the full results, and it is furthermore possible to save the XML version of the result for further processing or continuous integration.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5451"></a>
+Example</h1>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>NUnit.Framework.Interfaces;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.TestRunner;</div>
+<div class="line"> </div>
+<div class="line">[assembly:TestRunCallback(typeof(MyTestRunCallback))]</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyTestRunCallback : <a class="code hl_interface" href="interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback.html">ITestRunCallback</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> RunStarted(ITest testsToRun)</div>
+<div class="line">    {</div>
+<div class="line">        </div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> RunFinished(ITestResult testResults)</div>
+<div class="line">    {</div>
+<div class="line">        </div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> TestStarted(ITest test)</div>
+<div class="line">    {</div>
+<div class="line">        </div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> TestFinished(ITestResult result)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (!result.Test.IsSuite)</div>
+<div class="line">        {</div>
+<div class="line">            Debug.Log($<span class="stringliteral">&quot;Result of {result.Name}: {result.ResultState.Status}&quot;</span>);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="ainterface_unity_engine_1_1_test_runner_1_1_i_test_run_callback_html"><div class="ttname"><a href="interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback.html">UnityEngine.TestRunner.ITestRunCallback</a></div><div class="ttdoc">Interface for getting callsbacks on test progress directly from NUnit. This is available both in the ...</div><div class="ttdef"><b>Definition</b> ITestRunCallback.cs:10</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p><b>Note:</b> The <span class="tt">TestRunCallback</span> does not need any references to the <span class="tt"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></span> namespace and is thus able to run in standalone Players, on the <b>Player</b> side. Note also that <span class="tt">TestRunCallback</span> is part of the runtime code and should not be confused with <span class="tt">iCallbacks</span> which are part of the <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-test-runner-api.html">TestRunnerApi</a>. If you want to receive callbacks for tests run programmatically through the TestRunnerApi, see <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-icallbacks.html">iCallbacks</a>. </p>
+</blockquote>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Tangent modes and types</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2curves-tangents.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Tangent modes and types </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5943"></a></p>
+<p>This topic describes <a class="el" href="#keytangents">keyframe tangents</a>, <a class="el" href="#tangentmodes">tangent modes</a>, <a class="el" href="#tangenttypes">tangent types</a>, and <a class="el" href="#weighted">weighted tangents</a>. Many of the features described in this topic are similar to <a href="https://docs.unity3d.com/Manual/animeditor-AnimationCurves.html">editing tangents in the Editing Curves topic</a> in the Animation window.</p>
+<p><a class="anchor" id="keytangents"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5944"></a>
+Keyframe tangents</h1>
+<p>Use keyframe tangents to modify the shape of the animation curve between keyframes. Each keyframe has one or two tangents depending on the location of the keyframe on its animation curve.</p>
+<p><img src="images/spec-tangents.png" alt="" class="inline"/></p>
+<p><b>(A)</b> The first keyframe has a single right tangent that controls the shape of the animation curve after the keyframe.<br  />
+ <b>(B)</b> Most keyframes have two tangents where the left tangent controls the shape of the animation curve before the keyframe, and the right tangent controls the shape after the keyframe.<br  />
+ <b>(C)</b> The last keyframe has a single left tangent that controls the shape of the animation curve before the last keyframe.<br  />
+</p>
+<p>By default, left and right tangents are joined. Rotating a joined tangent handle rotates both tangents which changes the shape of the animation curve both before and after the keyframe.</p>
+<p>You can break joined tangents to modify the left and right tangent handles independently. In addition, each keyframe has a <a class="el" href="#tangentmodes">tangent mode</a> and a <a class="el" href="#tangenttypes">tangent type</a> that controls tangents and the shape of the animation curve.</p>
+<p><a class="anchor" id="tangentmodes"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5945"></a>
+Tangent modes</h1>
+<p>The term <b>tangent mode</b> refers to the algorithm that automatically adjusts tangent handles when you modify the time or value of a keyframe.</p>
+<p>To display the tangent mode for a keyframe, right-click the keyframe. A context menu displays the selected tangent mode with a checkmark. In some cases, a keyframe can have more than one tangent mode. For example, keyframe tangents can be both <b>Free Smooth</b> and <b>Flat</b>.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Tangent mode</b>  </th><th class="markdownTableHeadLeft"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Clamped Auto</b>  </td><td class="markdownTableBodyLeft">This is the default tangent mode. In this mode, the Curves view automatically adjusts the rotation of each tangent handle to ensure that the animation curve smoothly passes through the keyframe.<br  />
+<br  />
+For example, if you drag a keyframe to modify its time or value, the <b>Clamped Auto</b> tangent mode automatically adjusts the rotation of each tangent handle.<br  />
+<br  />
+When in <b>Clamped Auto</b> mode, if you rotate a keyframe tangent handle, its tangent mode changes to <b>Free Smooth</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Auto</b>  </td><td class="markdownTableBodyLeft">Do not select this tangent mode. This is a legacy tangent mode that is only included for backward compatibility with projects prior to <a class="el" href="namespace_unity.html">Unity</a> 5.5. If you have a keyframe set to this tangent mode, you should change it to another tangent mode.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Free Smooth</b>  </td><td class="markdownTableBodyLeft">Joins broken tangent handles. Selecting this tangent mode may rotate the tangent handles as they are joined.<br  />
+<br  />
+This tangent mode does not use an algorithm to automatically adjust tangent handles. For example, if you drag a keyframe set to the <b>Free Smooth</b> tangent mode, the rotation of the each tangent handles are not adjusted.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Flat</b>  </td><td class="markdownTableBodyLeft">Use this tangent mode to join tangent handles and flatten them horizontally. This tangent mode is linked to the <b>Free Smooth</b> tangent mode.<br  />
+<br  />
+For example, if you change the tangent mode from <b>Clamped Auto</b> to <b>Flat</b>, the keyframe is set to both the <b>Free Smooth</b> and <b>Flat</b> tangent modes.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Broken</b>  </td><td class="markdownTableBodyLeft">Select this mode to break joined tangent handles. When tangent handles are broken, you can control the left and right tangent handles independently. In some cases, both the <b>Free Smooth</b> and <b>Broken</b> tangent modes may be selected.  </td></tr>
+</table>
+<p>The tangent mode is automatically selected in the following cases:</p>
+<ul>
+<li>If you <a class="el" href="#tangenttypes">select the tangent type</a> for the <b>Left Tangent</b>, <b>Right Tangent</b>, or <b>Both Tangents</b> of a keyframe, the tangent mode changes to either <b>Free Smooth</b> or <b>Broken</b>.</li>
+<li>If you rotate the left or right tangent handle of a keyframe, the tangents are broken and the tangent mode changes to <b>Broken</b>.</li>
+</ul>
+<p><a class="anchor" id="tangenttypes"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5946"></a>
+Tangent types</h1>
+<p>Select a tangent type to have greater control over the shape and slope of the animation curve before and after a keyframe.</p>
+<p>The term <b>tangent type</b> refers to the interpolation algorithm that determines the shape of an animation curve between keyframes. The term <b>interpolation</b> refers to the estimation of values between two known points.</p>
+<p>To set the tangent type of a keyframe tangent, do the following:</p><ol type="1">
+<li>Right-click a keyframe. A context menu appears.</li>
+</ol>
+<ol type="1">
+<li>Select a tangent type from the <b>Left Tangent</b>, <b>Right Tangent</b>, or <b>Both Tangents</b> sub-menu.</li>
+</ol>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Tangent type</b>  </th><th class="markdownTableHeadLeft"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Free</b>  </td><td class="markdownTableBodyLeft">Select this tangent type to freely rotate the left tangent handle (Left Tangent), right tangent handle (Right Tangent), or both tangent handles (Both Tangents).<br  />
+<br  />
+When you select <b>Free</b> this breaks joined tangent handles and sets the tangent mode to <b>Broken</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Linear</b>  </td><td class="markdownTableBodyLeft">Select this tangent type to draw a straight line to the keyframe (Left Tangent), away from the keyframe (Right Tangent), or both to and away from the keyframe (Both Tangents).<br  />
+<br  />
+When you select this tangent type, the tangent is hidden. Selecting this tangent type also breaks joined tangent handles and sets the tangent mode to <b>Broken</b>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Constant</b>  </td><td class="markdownTableBodyLeft">Select this tangent type to keep a constant value from the last keyframe to this keyframe (Left Tangent), from this keyframe to the next keyframe (Right Tangent), or both (Both Tangents).<br  />
+<br  />
+When you select this tangent type, the tangent is hidden. Selecting this tangent type also breaks joined tangent handles and sets the tangent mode to <b>Broken</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Weighted</b>  </td><td class="markdownTableBodyLeft">Select this tangent type to use a weighted tangent to modify the shape and slope of the animation curve before the keyframe (Left Tangent), after the keyframe (Right Tangent), or both before and after the keyframe (Both Tangents). Consult <a class="el" href="#weighted">weighted tangents</a> for more information.  </td></tr>
+</table>
+<p><a class="anchor" id="weighted"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5947"></a>
+Weighted tangents</h1>
+<p>Use weighted tangents to modify the shape and slope of an animation curve. You can modify the length of a weighted tangent which modifies the slope of its animation curve. This provides greater control over the animation when compared to the default tangent.</p>
+<p>By default, tangents are non-weighted: you can only rotate a non-weighted tangent to modify the shape of its animation curve. You cannot modify the slope of the animation curve because the tangent is set to a fixed length.</p>
+<p><img src="images/spec-tangents-weighted.png" alt="" class="inline"/></p>
+<p><b>(A)</b> Keyframe with default non-weighted tangents. The length of the tangent cannot be changed.<br  />
+ <b>(B)</b> Keyframe with weighted tangents. Its tangent handles are drawn as outlines. In this example, the left and right tangents are set to different lengths.<br  />
+</p>
+<p>To change a non-weighted tangent to a weighted tangent, do the following:</p><ol type="1">
+<li>Right-click a keyframe. A context menu appears.</li>
+</ol>
+<ol type="1">
+<li>Select <b>Weighted</b> as the tangent type for the <b>Left Tangent</b>, <b>Right Tangent</b>, or <b>Both Tangents</b> sub-menu. </li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

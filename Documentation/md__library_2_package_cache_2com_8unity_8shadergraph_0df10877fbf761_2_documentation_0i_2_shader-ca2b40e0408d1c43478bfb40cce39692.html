@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Weather</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-ca2b40e0408d1c43478bfb40cce39692.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Weather </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4492"></a></p>
+<p>This sample comes with a full set of weather-related subgraphs (rain and snow) that can be mixed and matched depending on the requirements of the object type they’re applied to. </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4493"></a>
+Rain</h2>
+<p>There are several subgraphs that generate rain effects. Each has a different subset of the available rain effects. Applying all of the effects at once is a bit expensive on performance, so it’s best to choose the option with just the effects you need for the specific type of object/surface.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4494"></a>
+Rain</h3>
+<p>The Rain subgraph combines all of the rain effect - drops, drips, puddles, wetness - to create a really nice rain weather effect - but it’s the most expensive on performance. Puddles are a bit expensive to generate as are drips, so this version should only be used on objects that will have both flat horizontal surfaces as well as vertical surfaces. </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4495"></a>
+Rain Floor</h3>
+<p>The Rain Floor subgraph creates puddle and drop effects, but it does not have the drip effects that would run down vertical surfaces. This subgraph is best used for flat, horizontal surfaces. </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4496"></a>
+Rain Props</h3>
+<p>The Rain Props subgraph has the drop and drip effects but does not include the puddles. It’s best for small prop objects. </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4497"></a>
+Rain Rocks</h3>
+<p>The Rain Rocks subgraph has been specifically tuned for use on rocks. It includes drips and drops, but not puddles. It also includes the LOD0 parameter that is meant to turn off close-up features on LODs other than the first one. </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4498"></a>
+Components</h3>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4499"></a>
+Puddles</h4>
+<p>The puddles subgraph creates procedurally-generated puddles on flat, up-facing surfaces. It outputs a mask that controls where the puddles appear and normals from the puddles. It uses the PuddleWindRipples and RainRipples subgraph to generate both wind and rain ripples in the puddles. </p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4500"></a>
+PuddleWindRipples</h4>
+<p>The PuddleWindRipples subgraph creates puddle wind ripples by scrolling two normal map textures. It’s used by the Puddles subgraph. </p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4501"></a>
+Rain_Drips</h4>
+<p>This subgraph creates drips that drip down the sides of an object. The drips are projected in world space, so they work well for static objects but are not meant for moving objects. The speed of the drips is controlled by the permeability of the material. Smooth, impermeable surfaces have fast moving drips while permeable surfaces have slow-moving drips. </p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4502"></a>
+Rain_DripsOnTheLens</h4>
+<p>This subgraph is very similar to the Rain_Drips subgraph, but it’s adapted to work correctly for the RainOnTheLens post-process shader. </p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4503"></a>
+Rain_Drops</h4>
+<p>This subgraph applies animated rain drops to objects. The drops are projected in world space from the top down. Because of the world space projection, these rain drops are not designed to be added to objects that move in the scene but instead should be used for static objects. The IsRaining input port turns the effect on and off (when the input value is 1 and 0). </p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4504"></a>
+Rain_Parameters</h4>
+<p>A common set of rain parameters used by most of the rain subgraphs. Setting parameters once in this subgraph means you don’t have to set them all over in multiple places. </p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4505"></a>
+RainDropsOnTheLens</h4>
+<p>This subgraph is very similar to the RainDrops subgraph, but it’s adapted to work correctly for the RainOnTheLens post-process shader. </p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4506"></a>
+RainRipple</h4>
+<p>Creates an animated circular ripple pattern. This subgraph is used multiple times in the RainRipples subgraph to create a really nice-looking pattern of multiple overlapping ripples. </p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4507"></a>
+RainRipples</h4>
+<p>The RainRipples subgraph creates ripples from rain drops in a puddle or pool of water. It combines four instances of the RainRipple subgraph (each with its own scale, position, and timing offset) to create the chaotic appearance of multiple ripples all happening at once. It’s used by the Puddles subgraph to add rain ripples to the puddles. </p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4508"></a>
+Wet</h4>
+<p>This subgraph makes surfaces look wet by darkening and saturating their base color and by increasing their smoothness. The effect is different depending on how permeable the surface is. </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4509"></a>
+Snow</h2>
+<p>The Snow subgraph creates a snow effect and applies it to the tops of objects. The snow material includes color, smoothness, normal, metallic, and emissive - where the emissive is used to apply sparkles to the snow. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

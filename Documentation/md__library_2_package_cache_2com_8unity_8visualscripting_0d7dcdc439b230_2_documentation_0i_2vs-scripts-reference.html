@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Script Graph nodes</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-scripts-reference.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Script Graph nodes </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7374"></a></p>
+<p>Visual scripting has four nodes that you can use to identify and manipulate the Script Graphs assigned to a GameObject and its Script Machines:</p>
+<ul>
+<li>Set Script Graph</li>
+<li>Has Script Graph</li>
+<li>Get Script Graph</li>
+<li>Get Script Graphs</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7375"></a>
+<a class="anchor" id="SetScript"></a>Set Script Graph</h1>
+<p>You can use the Set Script Graph node to assign a Script Graph to a specific Script Machine, or to the first Script Machine attached to a specific GameObject.</p>
+<p><img src="images/VS-set-script-graph-node.png" alt="The Set Script Graph node" class="inline"/></p>
+<table class="doxtable">
+<tr>
+<th colspan="2"><b>Item</b></th><th><b>Description</b></th></tr>
+</table>
+<p><b>Node Parameters</b></p>
+<p><img src="images\Label-A.png" alt="The letter A in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Container Type</b></p>
+<p>Specifies whether the <b>Target</b> is a GameObject or Script Machine.</p>
+<p><b>Input Ports</b></p>
+<p><img src="images\Label-B.png" alt="The letter B in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Enter</b></p>
+<p>(Input Trigger) The execution input trigger for the node.</p>
+<p><img src="images\Label-C.png" alt="The letter C in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Target</b></p>
+<p>(GameObject or Script Machine) The GameObject or Script Machine where the node sets the <b>Graph</b>.</p>
+<p><img src="images\Label-D.png" alt="The letter D in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Graph</b></p>
+<p>(Script Graph Asset) The Script Graph the node sets on the <b>Target</b>.</p>
+<p><b>Output Ports</b></p>
+<p><img src="images\Label-E.png" alt="The letter E in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Exit</b></p>
+<p>(Output Trigger) The execution output trigger.</p>
+<p><img src="images\Label-F.png" alt="The letter F in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Graph</b></p>
+<p>(Script Graph Asset; Optional) Outputs the <b>Graph</b>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7376"></a>
+Setting the required node parameters and inputs</h2>
+<p>The Set Script Graph node has one required input parameter, called <b>Container Type</b>, which is set using the dropdown in the node's header. The <b>Container Type</b> specifies what component type the node should expect as an input for its <b>Target</b>:</p>
+<ul>
+<li>If you choose <b>GameObject</b>, the node expects to receive a GameObject, and assigns the graph to the first Script Machine attached to that GameObject.</li>
+<li>If you choose <b>Script Machine</b>, the node expects to receive a Script Machine, and you can specify the exact Script Machine where you want to set your Script Graph.</li>
+</ul>
+<p>Depending on which <b>Container Type</b> you select, the icon displayed next to the <b>Target</b> input port on the node changes:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Container Type</b>  </th><th class="markdownTableHeadLeft"><b>Target Icon</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>GameObject</b>  </td><td class="markdownTableBodyLeft"><img src="images/vs-gameobject-icon.png" alt="The GameObject icon" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Script Machine</b>  </td><td class="markdownTableBodyLeft"><img src="images/vs-script-graph-icon.png" alt="The Script Machine icon" class="inline"/>  </td></tr>
+</table>
+<p>The node has three input ports, located on the left side. The first port, <b>Enter</b>, connects to the node that should start the execution of the Set Script Graph node.</p>
+<p>The other two ports collect the Set Script Graph node's required input data:</p>
+<ul>
+<li>The <b>Target</b>, or the GameObject or Script Machine where you want to set a Script Graph.</li>
+<li>The <b>Graph</b>, or the Script Graph to assign to the GameObject or Script Machine.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7377"></a>
+Outputs</h2>
+<p>The Set Script Graph node has two output ports, located on the right side.</p>
+<p>The first port, <b>Exit</b>, establishes the connection to the node that should execute after the Set Script Graph node has finished.</p>
+<p>The second port, <b>Graph</b>, can output the Script Graph that you assigned using the node.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7378"></a>
+<a class="anchor" id="HasScript"></a>Has Script Graph</h1>
+<p>The Has Script Graph node allows you to determine whether a GameObject or Script Machine has a specific Script Graph assigned to it.</p>
+<p><img src="images/VS-has-script-graph-node.png" alt="The Has Script Graph node" class="inline"/></p>
+<table class="doxtable">
+<tr>
+<th colspan="2"><b>Item</b></th><th><b>Description</b></th></tr>
+</table>
+<p><b>Node Parameters</b></p>
+<p><img src="images\Label-A.png" alt="The letter A in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Container Type</b></p>
+<p>Specify whether the <b>Target</b> is a GameObject or Script Machine.</p>
+<p><b>Input Ports</b></p>
+<p><img src="images\Label-B.png" alt="The letter B in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Enter</b></p>
+<p>(Input Trigger) The execution input trigger for the node.</p>
+<p><img src="images\Label-C.png" alt="The letter C in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Target</b></p>
+<p>(GameObject or Script Machine) The GameObject or Script Machine where the node should check for the <b>Graph</b>.</p>
+<p><img src="images\Label-D.png" alt="The letter D in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Graph</b></p>
+<p>(Script Graph Asset) The Script Graph to search for on the GameObject or Script Machine.</p>
+<p><b>Output Ports</b></p>
+<p><img src="images\Label-E.png" alt="The letter E in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Exit</b></p>
+<p>(Output Trigger) The execution output trigger, which starts execution of the next node in the flow after checking for the specified Script Graph.</p>
+<p><img src="images\Label-F.png" alt="The letter F in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Has Graph</b></p>
+<p>(Boolean) Outputs <code>true</code> if the node found the specified Script Graph, <code>false</code> if not.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7379"></a>
+Setting the required node parameters and inputs</h2>
+<p>The Has Script Graph node has one required input parameter, called <b>Container Type</b>, which is set using the dropdown in the node's header. The <b>Container Type</b> specifies what component type the node should expect as an input for its <b>Target</b>:</p>
+<ul>
+<li>If you choose <b>GameObject</b>, the node expects to receive a GameObject, and checks for the graph on the first Script Machine attached to that GameObject.</li>
+<li>If you choose <b>Script Machine</b>, the node expects to receive a Script Machine, and you can specify the exact Script Machine where you want to check for the Script Graph.</li>
+</ul>
+<p>Depending on which <b>Container Type</b> you select, the icon displayed next to the <b>Target</b> input port on the node changes:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Container Type</b>  </th><th class="markdownTableHeadLeft"><b>Target Icon</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>GameObject</b>  </td><td class="markdownTableBodyLeft"><img src="images/vs-gameobject-icon.png" alt="The GameObject icon" class="inline"/>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Script Machine</b>  </td><td class="markdownTableBodyLeft"><img src="images/vs-script-graph-icon.png" alt="The Script Machine icon" class="inline"/>  </td></tr>
+</table>
+<p>The node has three input ports, located on the left side. The first port, <b>Enter</b>, connects to the node that should start the execution of the Has Script Graph node.</p>
+<p>The other two ports collect the Has Script Graph node's required input data:</p>
+<ul>
+<li>The <b>Target</b>, or the GameObject or Script Machine where you want to check for a Script Graph.</li>
+<li>The <b>Graph</b>, or the Script Graph to search for on the GameObject or Script Machine.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7380"></a>
+Outputs</h2>
+<p>The Has Script Graph node returns <span class="tt">true</span> if it finds the specified Script Graph. Otherwise, it returns <span class="tt">false</span>.</p>
+<p>You can use a control node connected to the Has Script Graph's output port to change what your script does next, based on the result from Has Script Graph. For more information about control nodes, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-control.html">Control nodes</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7381"></a>
+<a class="anchor" id="GetScript"></a>Get Script Graph</h1>
+<p>The Get Script Graph node returns the first Script Graph set on a GameObject.</p>
+<p><img src="images/VS-get-script-graph-node.png" alt="The Get Script Graph node" class="inline"/></p>
+<table class="doxtable">
+<tr>
+<th colspan="2"><b>Item</b></th><th><b>Description</b></th></tr>
+</table>
+<p><b>Input Ports</b></p>
+<p><img src="images\Label-A.png" alt="The letter A in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>GameObject</b></p>
+<p>(GameObject) The GameObject where the node should retrieve a set Script Graph.</p>
+<p><b>Output Ports</b></p>
+<p><img src="images\Label-B.png" alt="The letter B in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Graph</b></p>
+<p>(Script Graph Asset) Outputs the first or only Script Graph set on the GameObject, or null if there is no set Script Graph.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7382"></a>
+Setting the required node parameters and inputs</h2>
+<p>The Get Script Graph node is a data node. It can't control any logic in your script, and is only used to return data.</p>
+<p>The node has a single input port, located on the left side, which collects the node's required input data:</p>
+<ul>
+<li>The GameObject where the node should retrieve the Script Graph. You can choose a specific GameObject, or leave the default selection as <b>This</b> to use the GameObject where your script is currently running.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7383"></a>
+Outputs</h2>
+<p>The Get Script Graph node has a single output port, located on the right side. The output port returns the GameObject's first set Script Graph, or <span class="tt">null</span>, if there is no set Script Graph.</p>
+<dl class="section note"><dt>Note</dt><dd>The Get Script Graph node returns only the first Script Graph set on a GameObject. To return all Script Graphs set on a GameObject, use the Get Script Graphs node.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7384"></a>
+<a class="anchor" id="GetScripts"></a>Get Script Graphs</h1>
+<p>The Get Script Graphs node returns a list of all Script Graphs set on a GameObject.</p>
+<p><img src="images/VS-get-script-graphs-node.png" alt="The Get Script Graphs node" class="inline"/></p>
+<table class="doxtable">
+<tr>
+<th colspan="2"><b>Item</b></th><th><b>Description</b></th></tr>
+</table>
+<p><b>Input Ports</b></p>
+<p><img src="images\Label-A.png" alt="The letter A in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>GameObject</b></p>
+<p>(GameObject) The GameObject where the node should retrieve a list of set Script Graphs.</p>
+<p><b>Output Ports</b></p>
+<p><img src="images\Label-B.png" alt="The letter B in a blue circle, matching the label on the Set Script Graph node image." class="inline"/></p>
+<p><b>Graphs</b></p>
+<p>(List of Script Graph Assets) Outputs a list of all Script Graphs set on the GameObject, or an empty list if there are no set Script Graphs.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7385"></a>
+Setting the required node parameters and inputs</h2>
+<p>The Get Script Graphs node is a data node. It can't control any logic in your script, and is only used to return data.</p>
+<p>The node has a single input port, located on the left side, which collects the node's required input data:</p>
+<ul>
+<li>The GameObject where the node should retrieve a list of Script Graphs. You can choose a specific GameObject, or leave the default selection as <b>This</b> to use the GameObject where your script is currently running.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7386"></a>
+Outputs</h2>
+<p>The Get Script Graphs node has a single output port, located on the right side. The output port returns a list of all set Script Graphs for the GameObject, or an empty list, if there are no set Script Graphs. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

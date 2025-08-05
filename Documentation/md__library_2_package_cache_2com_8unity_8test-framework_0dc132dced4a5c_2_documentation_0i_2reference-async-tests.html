@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Async tests</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-async-tests.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Async tests </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5437"></a></p>
+<p>You can use the dotnet Task asynchronous programming model to write asynchronous tests. If you're new to asynchronous programming and its applications, see the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/">Microsoft documentation</a> for a comprehensive guide. See also the documentation for NUnit <a href="https://docs.nunit.org/articles/nunit/writing-tests/attributes/test.html">Test</a>, which explains the requirements for an async test. Async code is run on the main thread and <a class="el" href="namespace_unity.html">Unity</a> Test Framework will <span class="tt">await</span> it by checking if the task is done on each <a href="https://docs.unity3d.com/ScriptReference/PlayerLoop.Update.html">update</a> for Play Mode or on each <a href="https://docs.unity3d.com/ScriptReference/EditorApplication-update.html">EditorApplication.update</a> outside Play Mode.</p>
+<p>Note that any failing log messages will first be evaluated after the async test has completed. This means that if you have a failing log message in an async test, it will not be reported until the test has completed.</p>
+<p>The following code snippet demonstrates an async test based on <a class="el" href="namespace_microsoft.html">Microsoft</a>'s making breakfast example. Note that the test method is marked with the <span class="tt">async</span> keyword and has return type <span class="tt">Task</span>. We set up a list of Tasks corresponding to asynchronous methods representing parts of the breakfast making process. We use <span class="tt">await</span> to start these tasks in a non-blocking way, write to the log when each one completes, and write again to the log when all are completed.</p>
+<div class="fragment"><div class="line">using System.Collections.Generic;</div>
+<div class="line">using System.Threading.Tasks;</div>
+<div class="line">using NUnit.Framework;</div>
+<div class="line">using UnityEngine;</div>
+<div class="line"> </div>
+<div class="line">public class AsyncExample</div>
+<div class="line">{</div>
+<div class="line">    [Test]</div>
+<div class="line">    public async Task MakeBreakfast_InTheMorning_IsEdible()</div>
+<div class="line">    {</div>
+<div class="line">        var eggsTask = FryEggsAsync(2);</div>
+<div class="line">        var baconTask = FryBaconAsync(3);</div>
+<div class="line">        var toastTask = MakeToastWithButterAndJamAsync(2);</div>
+<div class="line"> </div>
+<div class="line">        var breakfastTasks = new List&lt;Task&gt; { eggsTask, baconTask, toastTask };</div>
+<div class="line">        while (breakfastTasks.Count &gt; 0)</div>
+<div class="line">        {</div>
+<div class="line">            Task finishedTask = await Task.WhenAny(breakfastTasks);</div>
+<div class="line">            if (finishedTask == eggsTask)</div>
+<div class="line">            {</div>
+<div class="line">                Debug.Log(&quot;eggs are ready&quot;);</div>
+<div class="line">            }</div>
+<div class="line">            else if (finishedTask == baconTask)</div>
+<div class="line">            {</div>
+<div class="line">                Debug.Log(&quot;bacon is ready&quot;);</div>
+<div class="line">            }</div>
+<div class="line">            else if (finishedTask == toastTask)</div>
+<div class="line">            {</div>
+<div class="line">                Debug.Log(&quot;toast is ready&quot;);</div>
+<div class="line">            }</div>
+<div class="line">            breakfastTasks.Remove(finishedTask);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        Debug.Log(&quot;Breakfast is ready!&quot;);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    static async Task&lt;Toast&gt; MakeToastWithButterAndJamAsync(int number)</div>
+<div class="line">    {</div>
+<div class="line">        var toast = await ToastBreadAsync(number);</div>
+<div class="line">        ApplyButter(toast);</div>
+<div class="line">        ApplyJam(toast);</div>
+<div class="line"> </div>
+<div class="line">        return toast;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private static Juice PourOJ()</div>
+<div class="line">    {</div>
+<div class="line">        Debug.Log(&quot;Pouring orange juice&quot;);</div>
+<div class="line">        return new Juice();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private static void ApplyJam(Toast toast) =&gt;</div>
+<div class="line">        Debug.Log(&quot;Putting jam on the toast&quot;);</div>
+<div class="line"> </div>
+<div class="line">    private static void ApplyButter(Toast toast) =&gt;</div>
+<div class="line">        Debug.Log(&quot;Putting butter on the toast&quot;);</div>
+<div class="line"> </div>
+<div class="line">    private static async Task&lt;Toast&gt; ToastBreadAsync(int slices)</div>
+<div class="line">    {</div>
+<div class="line">        for (int slice = 0; slice &lt; slices; slice++)</div>
+<div class="line">        {</div>
+<div class="line">            Debug.Log(&quot;Putting a slice of bread in the toaster&quot;);</div>
+<div class="line">        }</div>
+<div class="line">        Debug.Log(&quot;Start toasting...&quot;);</div>
+<div class="line">        await Task.Delay(3000);</div>
+<div class="line">        Debug.Log(&quot;Remove toast from toaster&quot;);</div>
+<div class="line"> </div>
+<div class="line">        return new Toast();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private static async Task&lt;Bacon&gt; FryBaconAsync(int slices)</div>
+<div class="line">    {</div>
+<div class="line">        Debug.Log($&quot;putting {slices} slices of bacon in the pan&quot;);</div>
+<div class="line">        Debug.Log(&quot;cooking first side of bacon...&quot;);</div>
+<div class="line">        await Task.Delay(3000);</div>
+<div class="line">        for (int slice = 0; slice &lt; slices; slice++)</div>
+<div class="line">        {</div>
+<div class="line">            Debug.Log(&quot;flipping a slice of bacon&quot;);</div>
+<div class="line">        }</div>
+<div class="line">        Debug.Log(&quot;cooking the second side of bacon...&quot;);</div>
+<div class="line">        await Task.Delay(3000);</div>
+<div class="line">        Debug.Log(&quot;Put bacon on plate&quot;);</div>
+<div class="line"> </div>
+<div class="line">        return new Bacon();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private static async Task&lt;Egg&gt; FryEggsAsync(int howMany)</div>
+<div class="line">    {</div>
+<div class="line">        Debug.Log(&quot;Warming the egg pan...&quot;);</div>
+<div class="line">        await Task.Delay(3000);</div>
+<div class="line">        Debug.Log($&quot;cracking {howMany} eggs&quot;);</div>
+<div class="line">        Debug.Log(&quot;cooking the eggs ...&quot;);</div>
+<div class="line">        await Task.Delay(3000);</div>
+<div class="line">        Debug.Log(&quot;Put eggs on plate&quot;);</div>
+<div class="line"> </div>
+<div class="line">        return new Egg();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private static Coffee PourCoffee()</div>
+<div class="line">    {</div>
+<div class="line">        Debug.Log(&quot;Pouring coffee&quot;);</div>
+<div class="line">        return new Coffee();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    public struct Toast</div>
+<div class="line">    {</div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    public struct Juice</div>
+<div class="line">    {</div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    public struct Bacon</div>
+<div class="line">    {</div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    public struct Egg</div>
+<div class="line">    {</div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    public struct Coffee</div>
+<div class="line">    {</div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The following shows the result of running this example in the <b>Test Runner</b> window:</p>
+<p><img src="./images/async.png" alt="Run async test example" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5438"></a>
+Editor freezing on <span class="tt">Assert.ThrowsAsync</span> and workaround</h1>
+<p>NUnit's assertion for asynchronous code, <a href="https://docs.nunit.org/articles/nunit/writing-tests/assertions/classic-assertions/Assert.ThrowsAsync.html">Assert.ThrowsAsync</a>, blocks the calling thread until the async function you pass in completes. By default <a class="el" href="namespace_unity.html">Unity</a> runs asynchronous functions on the main thread in case they need to call the Editor API, which means <span class="tt">Assert.ThrowsAsync</span> can lock up the main thread and cause the Editor to freeze.</p>
+<p>To workaround this problem, you can unwrap the <span class="tt">Assert.ThrowsAsync</span> logic into your own <span class="tt">try</span>/<span class="tt">catch</span> blocks and assert that you caught something. For example, <b>do</b> this:</p>
+<div class="fragment"><div class="line">[Test]</div>
+<div class="line">public async Task ThisDoesNotLockTheMainThread()</div>
+<div class="line"> {</div>
+<div class="line">  bool caught = false;</div>
+<div class="line">  try</div>
+<div class="line">  { </div>
+<div class="line">    await Task.Delay(1000); throw new System.Exception(&quot;Hello world.&quot;); }</div>
+<div class="line">    catch (System.Exception x)</div>
+<div class="line">   {</div>
+<div class="line">     caught = true;</div>
+<div class="line">   }</div>
+<div class="line">   Assert.That(caught);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><b>Instead of</b> this:</p>
+<div class="fragment"><div class="line">[Test]</div>
+<div class="line">public void ThisLocksTheMainThread()</div>
+<div class="line"> {</div>
+<div class="line">  Assert.ThrowsAsync&lt;System.Exception&gt;(async () =&gt;</div>
+<div class="line">   { await Task.Delay(1000); throw new System.Exception(&quot;Hello world.&quot;); }</div>
+<div class="line">  );</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

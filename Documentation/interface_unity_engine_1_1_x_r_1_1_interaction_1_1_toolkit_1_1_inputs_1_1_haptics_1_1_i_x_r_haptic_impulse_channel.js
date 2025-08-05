@@ -1,0 +1,4 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_i_x_r_haptic_impulse_channel =
+[
+    [ "SendHapticImpulse", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_i_x_r_haptic_impulse_channel.html#ab44dd61efeef5951d7f476275583d82a", null ]
+];

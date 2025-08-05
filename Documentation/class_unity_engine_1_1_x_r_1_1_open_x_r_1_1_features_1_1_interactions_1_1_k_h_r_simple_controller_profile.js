@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controller_profile =
+[
+    [ "KHRSimpleController", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8" ],
+    [ "GetDeviceLayoutName", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controller_profile.html#ab981406243b7bcea16eb681880f19b1c", null ],
+    [ "RegisterActionMapsWithRuntime", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controller_profile.html#ad0eb635b58791044b16e598180d2fd62", null ],
+    [ "RegisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controller_profile.html#a84de5a6d1ec0c200e1067863e780cd95", null ],
+    [ "UnregisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controller_profile.html#a78b005baa9e099f03844944aa30a1786", null ]
+];

@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Gather Texture 2D node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_gather-_texture-2_d-_node.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Gather Texture 2D node </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md3759"></a></p>
+<p>The Gather Texture 2D node samples the red channel of four neighboring pixels from a sample point. It returns a value of <span class="tt">RRRR</span>, and takes each <span class="tt">R</span> value from a different neighbor. Normal Texture sampling reads all four channels (RGBA) of a Texture.</p>
+<p>This node is useful when you want to modify the bilinear interpolation between pixels, such as when you want to create custom blends.</p>
+<p><img src="images/sg-gather-Texture-2d-node.png" alt="An image of the Graph window, with a Gather Texture 2D node." class="inline"/></p>
+<p>This node uses the <a href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-to-gather">Gather</a> HLSL intrinsic function. For platforms where this intrinsic function doesn't exist, Shader Graph uses an appropriate approximation, instead.</p>
+<dl class="section note"><dt>Note</dt><dd>When you use the Metal graphics API, the <span class="tt">sample</span>, <span class="tt">sample_compare</span>, <span class="tt">gather</span>, and <span class="tt">gather_compare</span> intrinsics use an integer (int2) <span class="tt">offset</span> argument when sampling or gathering from a 2D Texture. The intrinsics apply this value to Texture coordinates before looking up each pixel. The <span class="tt">offset</span> value must be in the range of <span class="tt">-8</span> to <span class="tt">+7</span>, or the Metal API clamps the <span class="tt">offset</span> value.</dd></dl>
+<p>The pixels that the Gather Texture 2D samples are always from the top mip level of the Texture, from a 2×2 block of pixels around the sample point. Rather than blending the 2×2 sample, it returns the sampled pixels in counter-clockwise order. It starts with the sample to the lower left of the query location:</p>
+<p><img src="images/sg-gather-Texture-2d-node-sample-order.png" alt="An image that shows 4 quadrants, numbered 1 to 4, to display the order that the Gather Texture 2D node collects its samples: (-,+), (+,+), (-,+), (-,-)." class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3760"></a>
+Create Node menu category</h1>
+<p>The Gather Texture 2D node is under the <b>Input</b> &gt; <b>Texture</b> category in the Create Node menu.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3761"></a>
+Compatibility</h1>
+<p>The Gather Texture 2D [!include<a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2snippets_2nodes-compatibility-all.html">nodes-compatibility-all</a>]</p>
+<p>The Gather Texture 2D [!include<a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2snippets_2nodes-fragment-only.html">nodes-fragment-only</a>]</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3762"></a>
+Inputs</h1>
+<p>The Gather Texture 2D [!include<a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2snippets_2nodes-inputs.html">nodes-inputs</a>]</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Name</b>  </th><th class="markdownTableHeadLeft"><b>Type</b>  </th><th class="markdownTableHeadLeft"><b>Binding</b>  </th><th class="markdownTableHeadLeft"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Texture  </td><td class="markdownTableBodyLeft">Texture 2D  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The Texture to sample.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">UV  </td><td class="markdownTableBodyLeft">Vector 2  </td><td class="markdownTableBodyLeft">UV  </td><td class="markdownTableBodyLeft">The UV coordinates to use to take the sample.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Sampler  </td><td class="markdownTableBodyLeft">SamplerState  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The Sampler State and its corresponding settings to use for the sample.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Offset  </td><td class="markdownTableBodyLeft">Vector 2  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The pixel offset to apply to the sample's UV coordinates. The <b>Offset</b> value is in pixels, not UV space.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3763"></a>
+Outputs</h1>
+<p>The Gather Texture 2D [!include<a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2snippets_2nodes-outputs.html">nodes-outputs</a>]</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Name</b>  </th><th class="markdownTableHeadLeft"><b>Type</b>  </th><th class="markdownTableHeadLeft"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">RGBA  </td><td class="markdownTableBodyLeft">Vector 4  </td><td class="markdownTableBodyLeft">The sample value. This is the red channels of the 4 neighboring pixels from the specified sample position on the given Texture.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">R  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">The first neighboring pixel's red channel.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">G  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">The second neighboring pixel's red channel.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">B  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">The third neighboring pixel's red channel.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">A  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">The fourth neighboring pixel's red channel.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3764"></a>
+Example graph usage</h1>
+<p>In the following example, a Gather Texture 2D node creates a blurred version of a Texture by averaging its 4 samples:</p>
+<p><img src="images/sg-gather-Texture-2d-node-example.png" alt="An image of the Graph window, that displays a Gather Texture 2D node with its R & G ports connected to one Add node, its B port connected to another Add node, and its A port connected to another. The Add nodes add all the Gather Texture 2D node's ports together, then uses a Divide node to divide them by 4." class="inline"/></p>
+<p>Then, the rest of the Shader Graph uses a <a class="el" href="class_sample.html">Sample</a> Texture 2D node to sample the Texture again, and uses a Lerp node to determine when to use the blurred Texture and when to use the regular Texture:</p>
+<p><img src="images/sg-gather-Texture-2d-node-example-2.png" alt="An image of the Graph window, that displays a Sample Texture 2D node with its R port connected to the B port on a Lerp node. The Lerp node takes the result of the Divide node from the previous image and sends its Output port result to the Fragment Stage's Base Color and Emission nodes." class="inline"/></p>
+<p>By changing the value provided to the T port on the Lerp node, you can change whether you want to blur or sharpen the Texture in your Shader Graph:</p>
+<p><img src="images/sg-gather-Texture-2d-node-example-3.png" alt="An image of the Graph window, that displays the full graph from the previous two example images." class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3765"></a>
+Related nodes</h1>
+<p>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2snippets_2nodes-related.html">nodes-related</a>] Gather Texture 2D node:</p>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_sample-_texture-2_d-_node.html">Sample Texture 2D node</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_sample-_texture-2_d-_l_o_d-_node.html">Sample Texture 2D LOD node</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_sampler-_state-_node.html">Sampler State node</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_texture-2_d-_asset-_node.html">Texture 2D Asset node</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

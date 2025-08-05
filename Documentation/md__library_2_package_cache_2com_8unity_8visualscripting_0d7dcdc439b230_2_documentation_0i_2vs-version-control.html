@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Version control systems</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-version-control.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Version control systems </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7469"></a></p>
+<p>To avoid any problems with automatically generated files, exclude some Visual Scripting files from your version control solution.</p>
+<p>To exclude files from version control, include a file or configure your settings to specify which files and folders to exclude:</p>
+<ol type="1">
+<li><p class="startli">Create a new file at the root of your project directory.</p>
+<p class="startli">&gt;[!TIP] </p><blockquote class="doxtable">
+<p>The root of your project directory is at the level above your <b>Assets</b> folder. </p>
+</blockquote>
+</li>
+</ol>
+<ol type="1">
+<li>Name the file based on your chosen version control system:<ul>
+<li><b>Git</b>: <span class="tt">.gitignore</span>. For more information, see <a href="https://git-scm.com/docs/gitignore">Git's documentation on gitignore</a>.</li>
+<li><b><a class="el" href="namespace_unity.html">Unity</a> Collab</b>: <span class="tt">.collabignore</span>. For more information, see the <a href="https://docs.unity3d.com/Manual/UnityCollaborateIgnoreFiles.html">Unity User Manual</a>.</li>
+<li><b>Subversion</b>: Ignore the files from your <span class="tt">svn:ignore</span> property or runtime configuration options. For more information, see Subversion's documentation on <a href="https://svnbook.red-bean.com/en/1.7/svn.advanced.props.special.ignore.html">Ignoring Unversioned Items</a>.</li>
+</ul>
+</li>
+<li>Open the file in a text editor.</li>
+<li>Add the appropriate files or file patterns to your ignore file or configuration. For an example and more information, see Ignore file template.</li>
+</ol>
+<dl class="section note"><dt>Note</dt><dd>If you have an issue when you try to create a <span class="tt">.gitignore</span> file on Windows, refer to <a class="el" href="namespace_microsoft.html">Microsoft</a>'s documentation on <a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/ignore-files?view=azure-devops&amp;tabs=command-line#create-a-gitignore">how to create a .gitignore file from the command line</a>.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7470"></a>
+Ignore file template</h1>
+<p>The following template ignores all core Visual Scripting files, but preserves your project settings and variables. It also includes the standard <a class="el" href="namespace_unity.html">Unity</a> ignore directives for files that you can exclude from version control. For more information, see the <span class="tt">Unity.gitignore</span> file included in <a href="https://github.com/github/gitignore/blob/master/Unity.gitignore">GitHub's gitignore template repository</a>.</p>
+<p>Refer to the comments in the template for which lines to comment or remove.</p>
+<div class="fragment"><div class="line"># Optionally exclude these transient (generated) files, </div>
+<div class="line"># because they can be easily re-generated by the package</div>
+<div class="line"> </div>
+<div class="line">Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db</div>
+<div class="line">Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta</div>
+<div class="line">Assets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers</div>
+<div class="line">Assets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta</div>
+<div class="line"> </div>
+<div class="line">## Unity</div>
+<div class="line"># From: https://github.com/github/gitignore/blob/master/Unity.gitignore</div>
+<div class="line"> </div>
+<div class="line">/[Ll]ibrary/</div>
+<div class="line">/[Tt]emp/</div>
+<div class="line">/[Oo]bj/</div>
+<div class="line">/[Bb]uild/</div>
+<div class="line">/[Bb]uilds/</div>
+<div class="line">/[Ll]ogs/</div>
+<div class="line">/[Uu]ser[Ss]ettings/</div>
+<div class="line"> </div>
+<div class="line"># MemoryCaptures can get excessive in size.</div>
+<div class="line"># They also could contain extremely sensitive data</div>
+<div class="line">/[Mm]emoryCaptures/</div>
+<div class="line"> </div>
+<div class="line"># Asset meta data should only be ignored when the corresponding asset is also ignored</div>
+<div class="line">!/[Aa]ssets/**/*.meta</div>
+<div class="line"> </div>
+<div class="line"># Uncomment this line if you want to ignore the asset store tools plugin</div>
+<div class="line"># /[Aa]ssets/AssetStoreTools*</div>
+<div class="line"> </div>
+<div class="line"># Autogenerated Jetbrains Rider plugin</div>
+<div class="line">/[Aa]ssets/Plugins/Editor/JetBrains*</div>
+<div class="line"> </div>
+<div class="line"># Visual Studio cache directory</div>
+<div class="line">.vs/</div>
+<div class="line"> </div>
+<div class="line"># Gradle cache directory</div>
+<div class="line">.gradle/</div>
+<div class="line"> </div>
+<div class="line"># Autogenerated VS/MD/Consulo solution and project files</div>
+<div class="line">ExportedObj/</div>
+<div class="line">.consulo/</div>
+<div class="line">*.csproj</div>
+<div class="line">*.unityproj</div>
+<div class="line">*.sln</div>
+<div class="line">*.suo</div>
+<div class="line">*.tmp</div>
+<div class="line">*.user</div>
+<div class="line">*.userprefs</div>
+<div class="line">*.pidb</div>
+<div class="line">*.booproj</div>
+<div class="line">*.svd</div>
+<div class="line">*.pdb</div>
+<div class="line">*.opendb</div>
+<div class="line">*.VC.db</div>
+<div class="line"> </div>
+<div class="line"># Unity3D generated meta files</div>
+<div class="line">*.pidb.meta</div>
+<div class="line">*.pdb.meta</div>
+<div class="line">*.mdb.meta</div>
+<div class="line"> </div>
+<div class="line"># Unity3D Generated File On Crash Reports</div>
+<div class="line">sysinfo.txt</div>
+<div class="line"> </div>
+<div class="line"># Builds</div>
+<div class="line">*.apk</div>
+<div class="line">*.aab</div>
+<div class="line">*.unitypackage</div>
+<div class="line"> </div>
+<div class="line"># Crashlytics generated file</div>
+<div class="line">crashlytics-build.properties</div>
+<div class="line"> </div>
+<div class="line"># Packed Addressables</div>
+<div class="line">/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*.*.bin*</div>
+<div class="line"> </div>
+<div class="line"># Temporary auto-generated Android Assets</div>
+<div class="line">/[Aa]ssets/[Ss]treamingAssets/aa.meta</div>
+<div class="line">/[Aa]ssets/[Ss]treamingAssets/aa/*</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md7471"></a>
+Remove previously committed files</h1>
+<p>If you committed any files to a version control solution that you want to exclude:</p>
+<ul>
+<li>See Git's documentation on <a href="https://git-scm.com/docs/git-rm">the <span class="tt">git-rm</span> command</a>.</li>
+<li>See Subversion's documentation on <a href="https://svnbook.red-bean.com/en/1.6/svn.ref.svn.c.delete.html">the <span class="tt">svn delete</span> command</a>. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

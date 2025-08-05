@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: features</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">features </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md9330"></a>
+autotoc_md9330</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9331"></a>
+uid: openxr-features</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9332"></a>
+OpenXR Features</h1>
+<p>OpenXR is an extensible API that can be extended with new features. To facilitate this within the <a class="el" href="namespace_unity.html">Unity</a> ecosystem, the <a class="el" href="namespace_unity.html">Unity</a> OpenXR provider offers a feature extension mechanism.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9333"></a>
+Feature Management</h2>
+<p><img src="images/openxr-features.png" alt="feature-ui" class="inline"/></p>
+<p>You can manage features from the <b>Project Settings &gt; XR Plug-in Management &gt; OpenXR</b> window.</p>
+<p>To enable or disable a feature, select or clear the checkbox next to it. <a class="el" href="namespace_unity.html">Unity</a> doesn't execute disabled features at runtime, and doesn't deploy any of the feature's native libraries with the Player build. To configure additional build-time properties specific to each feature, click the gear icon to the right of the feature.</p>
+<p>All of the information in this window is populated via the <span class="tt">OpenXRFeatureAttribute</span> described below.</p>
+<p><b>Feature Groups</b> group a number of different <b>features</b> together to allow you to configure them simultaneously, which might offer a better development experience. For more information, see the Defining a feature group section on this page.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9334"></a>
+Defining a feature</h2>
+<p><a class="el" href="namespace_unity.html">Unity</a> OpenXR features are defined and executed in C#. C# can call to a custom native plugin if desired. The feature can live somewhere in the user's project or in a package, and it can include any Assets that a normal <a class="el" href="namespace_unity.html">Unity</a> project would use.</p>
+<p>A feature must override the <span class="tt">OpenXRFeature</span> ScriptableObject class. There are several methods that you can override on the <span class="tt">OpenXRFeature</span> class in order to do things like intercepting native OpenXR calls, obtaining the <span class="tt">xrInstance</span> and <span class="tt">xrSession</span> handles, starting <a class="el" href="namespace_unity.html">Unity</a> subsystems, etc.</p>
+<p>A feature can add public fields for user configuration at build time. <a class="el" href="namespace_unity.html">Unity</a> renders these fields via a <span class="tt">PropertyDrawer</span> in the feature UI, and you can override them. Your feature can access any of the set values at runtime.</p>
+<p>A feature must also provide an <span class="tt">OpenXRFeature</span> attribute when running in the Editor.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line"><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line">   [<a class="code hl_namespace" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code hl_namespace" href="namespace_unity_editor_1_1_x_r.html">XR</a>.<a class="code hl_namespace" href="namespace_unity_editor_1_1_x_r_1_1_open_x_r.html">OpenXR</a>.<a class="code hl_namespace" href="namespace_unity_editor_1_1_x_r_1_1_open_x_r_1_1_features.html">Features</a>.OpenXRFeature(UiName = <span class="stringliteral">&quot;Example Intercept Create Session&quot;</span>,</div>
+<div class="line">       BuildTargetGroups = <span class="keyword">new</span> []{BuildTargetGroup.Standalone, BuildTargetGroup.WSA},</div>
+<div class="line">       Company = <span class="stringliteral">&quot;Unity&quot;</span>,</div>
+<div class="line">       Desc = <span class="stringliteral">&quot;Example feature extension showing how to intercept a single OpenXR function.&quot;</span>,</div>
+<div class="line">       DocumentationLink = <span class="stringliteral">&quot;https://docs.unity3d.com/Packages/com.unity.xr.openxr@0.1/manual/index.html&quot;</span>,</div>
+<div class="line">       OpenxrExtensionStrings = <span class="stringliteral">&quot;XR_test&quot;</span>, <span class="comment">// this extension doesn&#39;t exist, a log message will be printed that it couldn&#39;t be enabled</span></div>
+<div class="line">       Version = <span class="stringliteral">&quot;0.0.1&quot;</span>,</div>
+<div class="line">       FeatureId = featureId)]</div>
+<div class="line">   #endif</div>
+<div class="line">   <span class="keyword">public</span> <span class="keyword">class</span> InterceptCreateSessionFeature : OpenXRFeature</div>
+<div class="line">   {</div>
+<div class="line">       <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">string</span> featureId = <span class="stringliteral">&quot;com.unity.openxr.feature.example.intercept&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">   }</div>
+<div class="ttc" id="anamespace_unity_editor_1_1_x_r_1_1_open_x_r_1_1_features_html"><div class="ttname"><a href="namespace_unity_editor_1_1_x_r_1_1_open_x_r_1_1_features.html">UnityEditor.XR.OpenXR.Features</a></div><div class="ttdef"><b>Definition</b> BootConfigBuilder.cs:7</div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_x_r_1_1_open_x_r_html"><div class="ttname"><a href="namespace_unity_editor_1_1_x_r_1_1_open_x_r.html">UnityEditor.XR.OpenXR</a></div><div class="ttdef"><b>Definition</b> BootConfig.cs:6</div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_x_r_html"><div class="ttname"><a href="namespace_unity_editor_1_1_x_r.html">UnityEditor.XR</a></div><div class="ttdef"><b>Definition</b> HandsSampleProjectValidation.cs:12</div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition</b> HandsSampleProjectValidation.cs:12</div></div>
+</div><!-- fragment --><p><a class="el" href="namespace_unity.html">Unity</a> uses this information at build time, either to build the Player or to display it to the user in the UI.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9335"></a>
+Defining a feature group</h2>
+<p><a class="el" href="namespace_unity.html">Unity</a> OpenXR allows you to define a feature group you can use to enable or disable a group of features at the same time. This way, you don't need to access the <b>Feature</b> section in <b>Project Settings &gt; XR Plug-in Management &gt; OpenXR</b> window to enable or disable features.</p>
+<p>Declare a feature group through the definition of one or more <span class="tt">OpenXRFeatureSetAttribute</span> declarations in your code. You can place the attribute anywhere because the feature group functionality only depends on the attribute existing and not on the actual class it's declared on.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">     [OpenXRFeatureSet(</div>
+<div class="line">         FeatureIds = <span class="keyword">new</span> <span class="keywordtype">string</span>[] {   <span class="comment">// The list of features that this feature group is defined for.</span></div>
+<div class="line">             EyeGazeInteraction.featureId,</div>
+<div class="line">             KHRSimpleControllerProfile.featureId,</div>
+<div class="line">             <span class="stringliteral">&quot;com.mycompany.myprovider.mynewfeature&quot;</span>,</div>
+<div class="line">             },</div>
+<div class="line">         UiName = <span class="stringliteral">&quot;Feature_Set_Name&quot;</span>,</div>
+<div class="line">         Description = <span class="stringliteral">&quot;Feature group that allows for setting up the best environment for My Company&#39;s hardware.&quot;</span>,</div>
+<div class="line">         <span class="comment">// Unique ID for this feature group</span></div>
+<div class="line">         FeatureSetId = <span class="stringliteral">&quot;com.mycompany.myprovider.mynewfeaturegroup&quot;</span>,</div>
+<div class="line">         SupportedBuildTargets = <span class="keyword">new</span> BuildTargetGroup[]{ BuildTargetGroup.Standalone, BuildTargetGroup.Android }</div>
+<div class="line">     )]</div>
+<div class="line">     <span class="keyword">class</span> MyCompanysFeatureSet</div>
+<div class="line">     {}</div>
+</div><!-- fragment --><p>You can configure feature groups in the <b>XR Plug-in Management</b> plug-in selection window. When you select the <b>OpenXR</b> plug-in from this window, the section under the plug-in displays the groups of features available. Not all feature groups are configurable. Some require you to install third-party definitions. The window displays information on where to get the required packages if needed.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9336"></a>
+Enabling OpenXR spec extension strings</h3>
+<p><a class="el" href="namespace_unity.html">Unity</a> will attempt to enable any extension strings listed in <span class="tt">OpenXRFeatureAttribute.OpenxrExtensionStrings</span> (separated via spaces) on startup. Your feature can check the enabled extensions in order to see if the requested extension was enabled (via <span class="tt">OpenXRRuntime.IsExtensionEnabled</span>).</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> OnInstanceCreate(ulong xrInstance)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (!OpenXRRuntime.IsExtensionEnabled(<span class="stringliteral">&quot;XR_UNITY_mock_driver&quot;</span>))</div>
+<div class="line">  {</div>
+<div class="line">    Debug.LogWarning(<span class="stringliteral">&quot;XR_UNITY_mock_driver is not enabled, disabling Mock Driver.&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Return false here to indicate the system should disable your feature for this execution.</span></div>
+<div class="line">    <span class="comment">// Note that if a feature is marked required, returning false will cause the OpenXRLoader to abort and try another loader.</span></div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Initialize your feature, check version to make sure you are compatible with it</span></div>
+<div class="line">  <span class="keywordflow">if</span>(OpenXRRuntime.GetExtensionVersion(<span class="stringliteral">&quot;XR_UNITY_mock_driver&quot;</span>) &lt; 100)</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md9337"></a>
+OpenXRFeature call order</h3>
+<p>The <span class="tt">OpenXRFeature</span> class has a number of methods that your method can override. Implement overrides to get called at specific points in the OpenXR application lifecycle.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9338"></a>
+Bootstrapping</h4>
+<p><span class="tt">HookGetInstanceProcAddr</span></p>
+<p>This is the first callback invoked, giving your feature the ability to hook native OpenXR functions.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9339"></a>
+Initialize</h4>
+<p><span class="tt">OnInstanceCreate =&gt; OnSystemChange =&gt; OnSubsystemCreate =&gt; OnSessionCreate</span></p>
+<p>The initialize sequence allows features to initialize <a class="el" href="namespace_unity.html">Unity</a> subsystems in the Loader callbacks and execute them when specific OpenXR resources are created or queried.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9340"></a>
+Start</h4>
+<p><span class="tt">OnFormFactorChange =&gt; OnEnvironmentBlendModeChange =&gt; OnViewConfigurationTypeChange =&gt; OnSessionBegin =&gt;  OnAppSpaceChange =&gt; OnSubsystemStart</span></p>
+<p>The Start sequence allows features to start <a class="el" href="namespace_unity.html">Unity</a> subsystems in the Loader callbacks and execute them when the session is created.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9341"></a>
+Gameloop</h4>
+<p>Several: <span class="tt">OnSessionStateChange</span></p>
+<p><span class="tt">OnSessionBegin</span></p>
+<p>Maybe: <span class="tt">OnSessionEnd</span></p>
+<p>Callbacks during the gameloop can react to session state changes.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9342"></a>
+Stop</h4>
+<p><span class="tt">OnSubsystemStop =&gt; OnSessionEnd</span></p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9343"></a>
+Shutdown</h4>
+<p><span class="tt">OnSessionExiting =&gt; OnSubsystemDestroy =&gt; OnAppSpaceChange =&gt; OnSessionDestroy =&gt; OnInstanceDestroy</span></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9344"></a>
+Build Time Processing</h3>
+<p>A feature can inject some logic into the <a class="el" href="namespace_unity.html">Unity</a> build process in order to do things like modify the manifest.</p>
+<p>Typically, you can do this by implementing the following interfaces:</p>
+<ul>
+<li><span class="tt">IPreprocessBuildWithReport</span></li>
+<li><span class="tt">IPostprocessBuildWithReport</span></li>
+<li><span class="tt">IPostGenerateGradleAndroidProject</span></li>
+</ul>
+<p>Features <b>should not</b> implement these classes, but should instead implement <span class="tt">OpenXRFeatureBuildHooks</span>, which only provide callbacks when the feature is enabled. For more information, see <span class="tt">OpenXRFeatureBuildHooks</span>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9345"></a>
+Build time validation</h3>
+<p>If your feature has project setup requirements or suggestions that require user acceptance, implement <span class="tt">GetValidationChecks</span>. Features can add to a list of validation rules which <a class="el" href="namespace_unity.html">Unity</a> evaluates at build time. If any validation rule fails, <a class="el" href="namespace_unity.html">Unity</a> displays a dialogue asking you to fix the error before proceeding. <a class="el" href="namespace_unity.html">Unity</a> can also presents warning through the same mechanism. It's important to note which build target the rules apply to.</p>
+<p>Example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> GetValidationChecks(List&lt;OpenXRFeature.ValidationRule&gt; results, BuildTargetGroup targetGroup)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (targetGroup == BuildTargetGroup.WSA)</div>
+<div class="line">    {</div>
+<div class="line">        results.Add( <span class="keyword">new</span> ValidationRule(<span class="keyword">this</span>){</div>
+<div class="line">            message = <span class="stringliteral">&quot;Eye Gaze support requires the Gaze Input capability.&quot;</span>,</div>
+<div class="line">            error = <span class="keyword">false</span>,</div>
+<div class="line">            checkPredicate = () =&gt; PlayerSettings.WSA.GetCapability(PlayerSettings.WSACapability.GazeInput),</div>
+<div class="line">            fixIt = () =&gt; PlayerSettings.WSA.SetCapability(PlayerSettings.WSACapability.GazeInput, <span class="keyword">true</span>)</div>
+<div class="line">        } );</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --><p><img src="images/ProjectValidation/feature-validation.png" alt="feature-validation" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9346"></a>
+Custom Loader library</h3>
+<p>One and only one <a class="el" href="namespace_unity.html">Unity</a> OpenXR feature per BuildTarget can have a custom loader library. This must be named <span class="tt">openxr_loader</span> with native platform naming conventions (for example, <span class="tt">libopenxr_loader.so</span> on Android).</p>
+<p>Features with a custom loader library must set the <span class="tt">OpenXRFeatureAttribute</span>: <span class="tt">CustomRuntimeLoaderBuildTargets</span> to a list of BuildTargets in which a custom loader library is expected to be used. Features that do not use a custom loader library do not have to set <span class="tt">CustomRuntimeLoaderBuildTargets</span> (or can set it to null or an empty list).</p>
+<p>The custom loader library must be placed in the same directory or a subdirectory of the C# script that extends the <span class="tt">OpenXRFeature</span> class. When the feature is enabled, <a class="el" href="namespace_unity.html">Unity</a> will include the custom loader library in the build for the active BuildTarget, instead of the default loader library for that target.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9347"></a>
+Feature native libraries</h3>
+<p>Any native libraries included in the same directory or a subdirectory of your feature will only be included in the built Player if your feature is enabled.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9348"></a>
+Feature use cases</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9349"></a>
+Intercepting OpenXR function calls</h3>
+<p>To intercept OpenXR function calls, override <span class="tt">OpenXRFeature.HookGetInstanceProcAddr</span>. Returning a different function pointer allows intercepting any OpenXR method. For an example, see the <span class="tt">Intercept Feature</span> sample.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9350"></a>
+Calling OpenXR functions from a feature</h3>
+<p>To call an OpenXR function within a feature you first need to retrieve a pointer to the function. To do this use the <span class="tt">OpenXRFeature.xrGetInstanceProcAddr</span> function pointer to request a pointer to the function you want to call. Using <span class="tt">OpenXRFeature.xrGetInstanceProcAddr</span> to retrieve the function pointer ensures that any intercepted calls set up by features using <span class="tt">OpenXRFeature.HookGetInstanceProcAddr</span> will be included.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9351"></a>
+Providing a Unity subsystem implementation</h3>
+<p><span class="tt">OpenXRFeature</span> provides several XR Loader callbacks where you can manage the lifecycle of <a class="el" href="namespace_unity.html">Unity</a> subsystems. For an example meshing subsystem feature, see the <span class="tt">Meshing Subsystem Feature</span> sample.</p>
+<p>Note that a <span class="tt">UnitySubsystemsManifest.json</span> file is required in order for <a class="el" href="namespace_unity.html">Unity</a> to discover any subsystems you define. At the moment, there are several restrictions around this file:</p>
+<ul>
+<li>It must be only 1 subfolder deep in the project or package.</li>
+<li>The native library it refers to must be only 1-2 subfolders deeper than the <span class="tt">UnitySubsystemsManfiest.json</span> file. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

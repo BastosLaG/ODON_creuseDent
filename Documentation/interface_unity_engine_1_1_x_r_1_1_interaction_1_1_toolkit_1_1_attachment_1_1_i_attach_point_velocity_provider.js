@@ -1,0 +1,5 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_attachment_1_1_i_attach_point_velocity_provider =
+[
+    [ "GetAttachPointAngularVelocity", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_attachment_1_1_i_attach_point_velocity_provider.html#a9e9a38a5cfb58c25e74b5ff6576a43a4", null ],
+    [ "GetAttachPointVelocity", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_attachment_1_1_i_attach_point_velocity_provider.html#a0e76311de6e454524e4e59ded40bce97", null ]
+];

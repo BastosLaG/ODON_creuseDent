@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: create-basic-scene</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2create-basic-scene.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">create-basic-scene </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8151"></a>
+autotoc_md8151</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8152"></a>
+uid: xri-create-basic-scene</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8153"></a>
+Create a basic scene</h1>
+<p>This section will walk you through the steps to create an XR Origin camera rig for a head-mounted device and create the basic building blocks of XR interactivity.</p>
+<p><a class="anchor" id="import-starter-assets"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8154"></a>
+Import starter assets</h2>
+<p>See the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-starter-assets.html">Starter Assets</a> sample for steps to import assets to streamline setup of behaviors. That sample contains a default set of input actions and presets which will be used in this guide.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8155"></a>
+Add the XR Interaction Manager</h2>
+<p>Add the XR Interaction Manager using <b>GameObject &gt; XR &gt; Interaction Manager</b>. The component on this GameObject allows the interactors and interactables in your scenes to interact with each other.</p>
+<p><a class="anchor" id="add-xr-origin"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8156"></a>
+Add the XR Origin camera rig for tracked devices</h2>
+<p>If you have <a class="el" href="#import-starter-assets">imported the starter assets</a>, you can add the <b>XR Origin (XR Rig)</b> prefab to the scene. This prefab contains the XR Origin required for any XR scene with interactor components already added, including:</p>
+<ul>
+<li>XR Origin<ul>
+<li>Camera</li>
+<li>Gaze Interactor</li>
+<li>Controller objects for right and left hand<ul>
+<li>Poke Interactor</li>
+<li>Near-Far Interactor</li>
+<li>Teleport Interactor</li>
+<li>Controller visual (using a generic controller model)</li>
+</ul>
+</li>
+<li>Teleport stabilizer</li>
+<li>Locomotion setup<ul>
+<li>Turn</li>
+<li>Move</li>
+<li>Grab Move (disabled by default)</li>
+<li>Teleportation</li>
+<li>Climb</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>You can find the Prefab in your project's Assets folder: <span class="tt">Assets/Samples/XR Interaction Toolkit/&lt;version&gt;/Starter Assets/Prefabs</span>.</p>
+<p>If you prefer to set up the XR Origin yourself, you can add a minimal one from the <b>GameObject</b> menu: <b>GameObject &gt; XR &gt; XR Origin (VR)</b>. This also automatically creates a new Main Camera GameObject tagged as "MainCamera" as a child of a new Camera Offset GameObject. The GameObject with the Camera is assigned as the value of <b>Camera GameObject</b> on XR Origin. If you already had a Camera tagged "MainCamera" in your scene, <a class="el" href="namespace_unity.html">Unity</a> may warn about there being another Camera tagged "MainCamera" in your scene. You will typically only need one Main Camera, so you should delete the original Camera at this time. For more information about the Main Camera, see <a href="https://docs.unity3d.com/ScriptReference/Camera-main.html"><span class="tt">Camera.main</span></a>.</p>
+<dl class="section remark"><dt>Remarques</dt><dd>If you already have components that are referencing the original Camera GameObject, you may want to keep the original Camera instead. Drag the original Camera in the Hierarchy window to be a child GameObject of Camera Offset then reset the Transform by clicking the <b>More menu (&amp;#8942;)</b> in the Inspector window next to Transform and select <b>Reset</b>. Then use the <b>More menu (&amp;#8942;)</b> to <b>Copy Component</b> and <b>Paste Component As New</b> to move each additional component from the new Camera GameObject to your old Camera GameObject. Finally delete the new Camera GameObject and update <b>Camera GameObject</b> on XR Origin to your Camera.</dd></dl>
+<p>The <a href="https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.2/manual/xr-origin.html">XR Origin</a> component on this GameObject transforms trackable devices like the head-mounted display and controllers to their final position in the <a class="el" href="namespace_unity.html">Unity</a> scene. This is the GameObject that is moved around the environment to achieve locomotion rather than applying movement directly to the Main Camera itself.</p>
+<p>The Camera Offset child GameObject that is created is automatically assigned as the value of <b>Camera Floor Offset Object</b> on XR Origin. This GameObject's position is updated automatically by <a class="el" href="namespace_unity.html">Unity</a> depending on the <b>Tracking Origin Mode</b> value on XR Origin.</p>
+<p>For this guide, leave the <b>Tracking Origin Mode</b> set to <b>Not Specified</b>.</p>
+<dl class="section note"><dt>Note</dt><dd>When the mode is <b>Device</b>, the XR runtime will generally report the position of tracked devices relative to a fixed position in space, such as the initial position of the HMD when started. Set the <b>Camera Y Offset</b> on XR Origin to the height you want the Main Camera to be above ground when in that mode. When the mode is <b>Floor</b>, the XR runtime will generally report the position of tracked devices relative to the player's real floor. <a class="el" href="namespace_unity.html">Unity</a> will automatically clear the height of the Camera Offset when in this mode since it is not necessary to artificially raise the tracking origin up. Set the mode to <b>Not Specified</b> to use the default mode of the XR runtime.</dd></dl>
+<p>To have the position and rotation of the XR HMD update the Main Camera Transform, a Tracked Pose Driver (Input System) component is added. This component is configured to set the <b>Position Input</b> binding to <span class="tt">&lt;XRHMD&gt;/centerEyePosition</span>, the <b>Rotation Input</b> binding to <span class="tt">&lt;XRHMD&gt;/centerEyeRotation</span>, and the <b>Tracking State Input</b> binding to <span class="tt">&lt;XRHMD&gt;/trackingState</span>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8157"></a>
+Configure Interactor</h2>
+<p>An Interactor component controls how a GameObject interacts with Interactable components in the scene. There are multiple types of Interactors, one of which is an [Near-Far Interactor](xref:xri-near-far-interactor), a component that uses both <a href="xref:UnityEngine.Physics.SphereCastNonAlloc(UnityEngine.Vector3,System.Single,UnityEngine.Vector3,UnityEngine.RaycastHit[],System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)">sphere casting</a> and <a href="xref:UnityEngine.Physics.RaycastNonAlloc(UnityEngine.Ray,UnityEngine.RaycastHit[],System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)">ray casting</a> in order to find both close and distant Interactable objects in the scene.</p>
+<p>To read input from an XR input device, the Interactor has various input properties that allow you to define the source of input. One example is the <b>Select Input</b> which allows you to set the input action that triggers selection. Refer to the property table in the documentation for [Interactor components](xref:xri-interactor-components) or refer to the tooltips in the Inspector window for more information.</p>
+<p>To enable haptic vibration feedback for an interactor, add a <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2simple-haptic-feedback.html">Simple Haptic Feedback</a> component to the GameObject to trigger haptics in response to select and hover events. You can then specify intensities and durations of haptic feedback to play back on select and hover events in the Inspector window. That component references a <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2haptic-impulse-player.html">Haptic Impulse Player</a> component (which can be shared by different interactors) that is used to actually play the haptics to a device. On the Haptic Impulse Player, set <b>Haptic Output</b> to an input action with a binding path to any active control, such as <span class="tt">&lt;XRController&gt;{LeftHand}/*</span>, in order to identify the device. If you are using OpenXR, you can instead set the binding path to a <span class="tt">haptic</span> control.</p>
+<p>The <b>UI Interaction</b> option controls whether this Interactor can interact with <a class="el" href="namespace_unity.html">Unity</a> UI elements in a world space canvas in the scene. See <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2ui-setup.html">UI Setup</a> for more information and steps for enabling UI interactivity.</p>
+<p>To have the position and rotation of a motion controller update the Transform component, a Tracked Pose Driver (Input System) component should be added. As an example for the left controller, this component should be configured to set the <b>Position Input</b> binding to <span class="tt">&lt;XRController&gt;{LeftHand}/devicePosition</span>, the <b>Rotation Input</b> binding to <span class="tt">&lt;XRController&gt;{LeftHand}/deviceRotation</span>, and the <b>Tracking State Input</b> binding to <span class="tt">&lt;XRController&gt;{LeftHand}/trackingState</span>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8158"></a>
+Enable an XR provider</h2>
+<p>Open <b>Edit &gt; Project Settings &gt; XR Plug-in Management</b>. If you do not yet have the package installed, click <b>Install XR Plugin Management</b> in that window. Select one or more of the plug-in providers for the device(s) you wish to target, such as <a href="https://docs.unity3d.com/Packages/com.unity.xr.oculus@latest/">Oculus</a> or <a href="https://docs.unity3d.com/Packages/com.unity.xr.openxr@latest/">Open XR</a>. Open XR will require additional configuration, see its package documentation for those steps. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

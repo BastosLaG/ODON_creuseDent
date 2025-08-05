@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: lens-flare-data-driven-asset</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_04a619857f222d0132ec6e18403b3784c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">lens-flare-data-driven-asset </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md2755"></a>
+Lens Flare (SRP) Asset</h1>
+<p>Unity’s <a href="https://docs.unity3d.com/Manual/ScriptableRenderPipeline.html">Scriptable Render Pipeline (SRP)</a> includes the <b>Lens Flare Data</b> asset. You can use this asset to control the appearance of Lens Flares in your scene. This is the SRP equivalent of the Built-in Render Pipeline's <a href="https://docs.unity3d.com/Manual/class-Flare.html">Flare</a> asset, which is incompatible with SRPs.</p>
+<p>To create a Lens Flare Data asset, select <b>Assets &gt; Create &gt; Lens Flare (SRP)</b>. To use this asset, assign it to the <b>Lens Flare Data</b> property of a Lens Flare (SRP) component.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2756"></a>
+Properties</h2>
+<p>The Lens Flare Element asset has the following properties:</p>
+<ul>
+<li>Type<ul>
+<li><a class="el" href="#Image">Image</a></li>
+<li><a class="el" href="#Circle">Circle</a></li>
+<li><a class="el" href="#Polygon">Polygon</a></li>
+<li><a class="el" href="#Ring">Ring</a></li>
+<li><a class="el" href="#LensFlareDataSRP">Lens Flare Data SRP</a></li>
+</ul>
+</li>
+<li><a class="el" href="#Common">Common</a><ul>
+<li><a class="el" href="#Cutoff">Cutoff</a></li>
+<li><a class="el" href="#Transform">Transform</a></li>
+<li><a class="el" href="#AxisTransform">AxisTransform</a></li>
+<li><a class="el" href="#Distortion">Distortion</a></li>
+<li><a class="el" href="#Multiple-Elements">Multiple Elements</a><ul>
+<li>Uniform</li>
+<li><a class="el" href="#Curve">Curve</a></li>
+<li><a class="el" href="#Random">Random</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a class="anchor" id="Image"></a></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2757"></a>
+Type</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Type  </td><td class="markdownTableBodyNone">Select the type of Lens Flare Element this asset creates: <br  />
+&amp;#8226; <a class="el" href="#Image">Image</a> <br  />
+&amp;#8226; <a class="el" href="#Circle">Circle</a> <br  />
+&amp;#8226; <a class="el" href="#Polygon">Polygon</a>  </td></tr>
+</table>
+<p><a class="anchor" id="Image"></a></p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2758"></a>
+Image</h4>
+<p><img src="images/LensFlareShapeImage.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Flare Texture  </td><td class="markdownTableBodyNone">The Texture this lens flare element uses.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Preserve Aspect Ratio  </td><td class="markdownTableBodyNone">Fixes the width and height (aspect ratio) of the <b>Flare Texture</b>. You can use <a class="el" href="#Distortion">Distortion</a> to change this property.  </td></tr>
+</table>
+<p><a class="anchor" id="Circle"></a></p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2759"></a>
+Circle</h4>
+<p><img src="images/LensFlareShapeCircle.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Gradient  </td><td class="markdownTableBodyNone">Controls the offset of the circular flare's gradient. This value ranges from 0 to 1.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Falloff  </td><td class="markdownTableBodyNone">Controls the falloff of the circular flare's gradient. This value ranges from 0 to 1, where 0 has no falloff between the tones and 1 creates a falloff that is spread evenly across the circle.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Inverse  </td><td class="markdownTableBodyNone">Enable this property to reverse the direction of the gradient.  </td></tr>
+</table>
+<p><a class="anchor" id="Polygon"></a></p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2760"></a>
+Polygon</h4>
+<p><img src="images/LensFlareShapePolygon.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Gradient  </td><td class="markdownTableBodyNone">Controls the offset of the polygon flare's gradient. This value ranges from 0 to 1.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Falloff  </td><td class="markdownTableBodyNone">Controls the falloff of the polygon flare's gradient. This value ranges from 0 to 1, where 0 has no falloff between the tones and 1 creates a falloff that is spread evenly across the polygon.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Side Count  </td><td class="markdownTableBodyNone">Determines how many sides the polygon flare has.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Roundness  </td><td class="markdownTableBodyNone">Defines how smooth the edges of the polygon flare are. This value ranges from 0 to 1, where 0 is a sharp polygon and 1 is a circle.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Inverse  </td><td class="markdownTableBodyNone">Enable this property to reverse the direction of the gradient  </td></tr>
+</table>
+<p><a class="anchor" id="Ring"></a></p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2761"></a>
+Ring</h4>
+<p><img src="images/LensFlareShapeRing.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Gradient  </td><td class="markdownTableBodyNone">Controls the offset of the circular flare's gradient. This value ranges from 0 to 1.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Falloff  </td><td class="markdownTableBodyNone">Controls the falloff of the circular flare's gradient. This value ranges from 0 to 1, where 0 has no falloff between the tones and 1 creates a falloff that is spread evenly across the circle.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Inverse  </td><td class="markdownTableBodyNone">Enable this property to reverse the direction of the gradient.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Amplitude  </td><td class="markdownTableBodyNone">Amplitude of the sampling of the noise.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Repeat  </td><td class="markdownTableBodyNone">Frequency of the sampling for the noise.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Speed  </td><td class="markdownTableBodyNone">Scale the speed of the animation.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Ring Thickness  </td><td class="markdownTableBodyNone">Ring Thickness.  </td></tr>
+</table>
+<p><a class="anchor" id="LensFlareDataSRP"></a></p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2762"></a>
+Lens Flare Data Driven SRP</h4>
+<p><img src="images/LensFlareShapeLensFlareDataSRP.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Asset  </td><td class="markdownTableBodyNone">Lens Flare Data SRP asset as an element.  </td></tr>
+</table>
+<p><a class="el" href="namespace_unity.html">Unity</a> support an Lens Flare Data SRP recursive, but with a hard cutoff after 16 recursions call. For instance asset A constains asset B which constains asset A (infinite recursion). That will trigger a warning and execution 16 recursions: </p><div class="fragment"><div class="line">&quot;LensFlareSRPAsset contains too deep recursive asset (&gt; 16). Be careful to not have recursive aggregation, A contains B, B contains A, ... which will produce an infinite loop.&quot;</div>
+</div><!-- fragment --><p><a class="anchor" id="Color"></a></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2763"></a>
+Color</h2>
+<p><img src="images/LensFlareColor.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Color Type  </td><td class="markdownTableBodyNone">Select the color type of Lens Flare Element this asset creates: <br  />
+&amp;#8226; <a class="el" href="#ColorConstant">Constant</a> <br  />
+&amp;#8226; <a class="el" href="#ColorRadial">Radial</a> <br  />
+&amp;#8226; <a class="el" href="#ColorAngular">Angular</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Tint  </td><td class="markdownTableBodyNone">Changes the tint of the lens flare. If this asset is attached to the light, this property is based on the light tint.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Modulate By Light Color  </td><td class="markdownTableBodyNone">Allows light color to affect this Lens Flare Element. This only applies when the asset is used in a SRP Lens Flare Override Component that is attached to a point, spot, or area light.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Intensity  </td><td class="markdownTableBodyNone">Controls the intensity of this element.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Blend Mode  </td><td class="markdownTableBodyNone">Select the blend mode of the Lens Flare Element this asset creates:<br  />
+&amp;#8226; Additive <br  />
+&amp;#8226; Screen <br  />
+&amp;#8226; Premultiplied <br  />
+&amp;#8226; Lerp  </td></tr>
+</table>
+<p><a class="anchor" id="ColorConstant"></a></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2764"></a>
+Constant Color</h3>
+<p><img src="images/LensFlareColorConstant.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Tint  </td><td class="markdownTableBodyNone">Changes the tint of the lens flare. If this asset is attached to the light, this property is based on the light tint.  </td></tr>
+</table>
+<p><a class="anchor" id="ColorRadial"></a></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2765"></a>
+Constant Color</h3>
+<p><img src="images/LensFlareColorRadialGradient.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Tint Radial  </td><td class="markdownTableBodyNone">Specifies the radial gradient tint of the element. If the element type is set to Image, the Flare Texture is multiplied by this color.  </td></tr>
+</table>
+<p><a class="anchor" id="ColorAngular"></a></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2766"></a>
+Constant Color</h3>
+<p><img src="images/LensFlareColorAngularGradient.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Tint Angular  </td><td class="markdownTableBodyNone">Specifies the angular gradient tint of the element. If the element type is set to Image, the Flare Texture is multiplied by this color.  </td></tr>
+</table>
+<p><a class="anchor" id="Common"></a></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2767"></a>
+Common</h2>
+<p><a class="anchor" id="Cutoff"></a></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2768"></a>
+Cutoff</h3>
+<p><img src="images/LensFlareCutoff.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Cutoff Speed  </td><td class="markdownTableBodyNone">Sets the speed at which the radius occludes the element.  </td></tr>
+</table>
+<p>A value of zero (with a large radius) does not occlude anything. The higher this value, the faster the element is occluded on the side of the screen. The effect of this value is more noticeable with multiple elements. . | | Cutoff Radius | Sets the normalized radius of the lens shape used to occlude the lens flare element. A radius of one is equivalent to the scale of the element.. |</p>
+<p><a class="anchor" id="Transform"></a></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2769"></a>
+Transform</h3>
+<p><img src="images/LensFlareTransform.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Position Offset  </td><td class="markdownTableBodyNone">Defines the offset of the lens flare's position in screen space, relative to its source.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Auto <a class="el" href="class_rotate.html">Rotate</a>  </td><td class="markdownTableBodyNone">Enable this property to automatically rotate the Lens Flare Texture relative to its angle on the screen. <a class="el" href="namespace_unity.html">Unity</a> uses the <b>Auto <a class="el" href="class_rotate.html">Rotate</a></b> angle to override the <b>Rotation</b> parameter. <br  />
+<br  />
+ To ensure the Lens Flare can rotate, assign a value greater than 0 to the <a class="el" href="#AxisTransform">**Starting Position**</a> property.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Rotation  </td><td class="markdownTableBodyNone">Rotates the lens flare. This value operates in degrees of rotation.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Size  </td><td class="markdownTableBodyNone">Use this to adjust the scale of this lens flare element. <br  />
+<br  />
+ This property is not available when the Type is set to <a class="el" href="#Image">Image</a> and <b>Preserve Aspect Ratio</b> is enabled.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Scale  </td><td class="markdownTableBodyNone">The size of this lens flare element in world space.  </td></tr>
+</table>
+<p><a class="anchor" id="AxisTransform"></a></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2770"></a>
+Axis Transform</h3>
+<p><img src="images/LensFlareAxisTransform.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Starting Position  </td><td class="markdownTableBodyNone">Defines the starting position of the lens flare relative to its source. This value operates in screen space.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Angular Offset  </td><td class="markdownTableBodyNone">Controls the angular offset of the lens flare, relative to its current position. This value operates in degrees of rotation.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Translation Scale  </td><td class="markdownTableBodyNone">Limits the size of the lens flare offset. For example, values of (1, 0) create a horizontal lens flare, and (0, 1) create a vertical lens flare. <br  />
+<br  />
+You can also use this property to control how quickly the lens flare appears to move. For example, values of (0.5, 0.5) make the lens flare element appear to move at half the speed.  </td></tr>
+</table>
+<p><a class="anchor" id="Distortion"></a></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2771"></a>
+Distortion</h3>
+<p><img src="images/LensFlareRadialDistortion.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Enable  </td><td class="markdownTableBodyNone">Set this property to True to enable distortion.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Radial Edge Size  </td><td class="markdownTableBodyNone">Controls the size of the distortion effect from the edge of the screen.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Radial Edge Curve  </td><td class="markdownTableBodyNone">Blends the distortion effect along a curve from the center of the screen to the edges of the screen.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Relative To Center  </td><td class="markdownTableBodyNone">Set this value to True to make distortion relative to the center of the screen. Otherwise, distortion is relative to the screen position of the lens flare.  </td></tr>
+</table>
+<p><a class="anchor" id="Multiple-Elements"></a></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2772"></a>
+Multiple Elements</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Enable  </td><td class="markdownTableBodyNone">Enable this to allow multiple lens flare elements in your scene.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Count  </td><td class="markdownTableBodyNone">Determines the number of identical lens flare elements <a class="el" href="namespace_unity.html">Unity</a> generates.<br  />
+A value of <b>1</b> appears the same as a single lens flare element.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Distribution  </td><td class="markdownTableBodyNone">Select the method that <a class="el" href="namespace_unity.html">Unity</a> uses to generate multiple lens flare elements:<br  />
+&amp;#8226;Uniform<br  />
+&amp;#8226;<a class="el" href="#Curve">Curve</a><br  />
+&amp;#8226;<a class="el" href="#Random">Random</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Length Spread  </td><td class="markdownTableBodyNone">Controls how spread out multiple lens flare elements appear.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Relative To Center  </td><td class="markdownTableBodyNone">If true the distortion is relative to center of the screen otherwise relative to lensFlare source screen position.  </td></tr>
+</table>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2773"></a>
+Uniform</h4>
+<p><img src="images/LensFlareMultileElementUniform.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Colors  </td><td class="markdownTableBodyNone">The range of colors that this asset applies to the lens flares.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Rotation  </td><td class="markdownTableBodyNone">The angle of rotation (in degrees) applied to each element incrementally.  </td></tr>
+</table>
+<p><a class="anchor" id="Curve"></a></p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2774"></a>
+Curve</h4>
+<p><img src="images/LensFlareMultileElementCurve.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Colors  </td><td class="markdownTableBodyNone">The range of colors that this asset applies to the lens flares. You can use the <b>Position Spacing</b> curve to determine how this range affects each lens flare.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Position Variation  </td><td class="markdownTableBodyNone">Adjust this curve to change the placement of the lens flare elements in the <b>Lens Spread</b>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Rotation  </td><td class="markdownTableBodyNone">The uniform angle of rotation (in degrees) applied to each element distributed along the curve. This value ranges from -180° to 180°.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Scale  </td><td class="markdownTableBodyNone">Adjust this curve to control the size range of the lens flare elements.  </td></tr>
+</table>
+<p><a class="anchor" id="Random"></a></p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2775"></a>
+Random</h4>
+<p><img src="images/LensFlareMultileElementRandom.png" alt="" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Seed  </td><td class="markdownTableBodyNone">The base value that this asset uses to generate randomness.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Intensity Variation  </td><td class="markdownTableBodyNone">Controls the variation of brightness across the lens flare elements. A high value can make some elements might invisible.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Colors  </td><td class="markdownTableBodyNone">The range of colors that this asset applies to the lens flares. This property is based on the <b>Seed</b> value.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Position Variation  </td><td class="markdownTableBodyNone">Controls the position of the lens flares. The <b>X</b> value is spread along the same axis as <b>Length Spread</b>. A value of 0 means there is no change in the lens flare position. The <b>Y</b> value is spread along the vertical screen space axis based on the <b>Seed</b> value.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Rotation Variation  </td><td class="markdownTableBodyNone">Controls the rotation variation of the lens flares, based on the <b>Seed</b> value. The <b>Rotation</b> and <b>Auto <a class="el" href="class_rotate.html">Rotate</a></b> parameters inherit from this property.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Scale Variation  </td><td class="markdownTableBodyNone">Controls the scale of the lens flares based on the <b>Seed</b> value.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

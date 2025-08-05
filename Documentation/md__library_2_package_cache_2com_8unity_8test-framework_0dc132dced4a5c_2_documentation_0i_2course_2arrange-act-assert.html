@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: 2\. Arrange, Act, Assert</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2course_2arrange-act-assert.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">2. Arrange, Act, Assert </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5243"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5244"></a>
+Learning Objectives</h1>
+<p>In this exercise, you will learn about the core unit testing principle of AAA (Arrange, Act, Assert), which will help you structure your unit test.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5245"></a>
+Intro and Motivation</h1>
+<p>The Arrange, Act, Assert concept is an industry standard in unit testing. It allows for a clear distinction of the code for setting up your test, carrying out the test, and evaluation. Using this can make your test more readable both for yourself and for your colleagues. <br  />
+</p>
+<p>In the first part of the code, we arrange all the elements needed for the test. In the middle part, we act on the object that is under test. In the final part, we assert on the result of the act part. The three parts of the code are usually separated by an empty line. <br  />
+</p>
+<p>An example of Arrange, Act, Assert could look like the following: <br  />
+ </p><div class="fragment"><div class="line">[Test]</div>
+<div class="line">public void StringWriterTest()</div>
+<div class="line">{</div>
+<div class="line"> // Arrange</div>
+<div class="line"> var stringWriterUnderTest = new StringWriter();</div>
+<div class="line"> stringWriterUnderTest.NewLine = &quot;\\n&quot;;</div>
+<div class="line"> var testStringA = &quot;I am testing&quot;;</div>
+<div class="line"> var testStringB = &quot;with new line&quot;;</div>
+<div class="line"> </div>
+<div class="line"> // Act</div>
+<div class="line"> stringWriterUnderTest.WriteLine(testStringA);</div>
+<div class="line"> stringWriterUnderTest.WriteLine(testStringB);</div>
+<div class="line"> </div>
+<div class="line"> // Assert</div>
+<div class="line"> Assert.AreEqual(&quot;I am testing\\nwith new line\\n&quot;, stringWriterUnderTest.ToString());</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>It is good practice to use <span class="tt">XUnderTest</span> as a variable name of the class that is being tested. This helps to keep the focus of the test clean. <br  />
+</p>
+<p>The Act part of the code should have as few lines as possible, reflecting what is actually being tested. The assert should in the optimal case only contain assert calls, but it can also be necessary to include some lines of logic to allow for the assertion.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5246"></a>
+Exercise</h1>
+<p>Import the <a href="./welcome.md#import-samples">sample</a> <span class="tt">2_ActArrangeAssert</span> into your <a class="el" href="namespace_unity.html">Unity</a> Editor (version 2019.2 or newer) from the Package Manager window. <br  />
+</p>
+<p>In this project we have a class called <span class="tt">StringFormatter</span>. It has two methods of interest: <span class="tt">void Configure(string joinDelimiter)</span> and <span class="tt">string Join(object[] args)</span>. <br  />
+</p>
+<p>The goal of this exercise is to write one or more tests, testing the <span class="tt">Join</span> method. For example, testing that it can join with a ";" (semicolon) delimiter.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5247"></a>
+Hints</h1>
+<ul>
+<li>Setup of the test input and the call to <span class="tt">Configure(";")</span> would go into the <span class="tt">Arrange</span> part of your test.</li>
+<li>It is good practice to separate the three parts of your test (arrange, act and assert) with a blank line.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5248"></a>
+Solution</h1>
+<p>The exercise can be solved with a test like the following:</p>
+<div class="fragment"><div class="line">[Test]</div>
+<div class="line">public void JoinsObjectsWithSemiColon()</div>
+<div class="line">{</div>
+<div class="line"> // Arrange</div>
+<div class="line"> var formatterUnderTest = new StringFormatter();</div>
+<div class="line"> formatterUnderTest.Configure(&quot;;&quot;);</div>
+<div class="line"> var objects = new object[] {&quot;a&quot;, &quot;bc&quot;, 5, &quot;d&quot;};</div>
+<div class="line"> </div>
+<div class="line"> // Act</div>
+<div class="line"> var result = formatterUnderTest.Join(objects);</div>
+<div class="line"> </div>
+<div class="line"> // Assert</div>
+<div class="line"> Assert.AreEqual(&quot;a;bc;5;d&quot;, result);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>A full project with the solution can be found in the sample <span class="tt">2_ActArrangeAssert_Solution.</span></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5249"></a>
+Further reading and Resources</h1>
+<p>The AAA concept is a widely used standard which you can read more about in many online sources, including <a href="https://defragdev.com/blog/?p=783">this blogpost.</a> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

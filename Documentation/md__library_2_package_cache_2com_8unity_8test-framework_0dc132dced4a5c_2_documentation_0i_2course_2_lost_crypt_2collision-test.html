@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: 5\. Collision Test</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2course_2_lost_crypt_2collision-test.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">5. Collision Test </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5295"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5296"></a>
+Learning Objectives</h1>
+<p>Check for collisions and make sure that LostCrypt does not have bugs that allow your character to move outside of the map.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5297"></a>
+Exercise</h1>
+<p>Take a look at a game object <span class="tt">Environment/Character Bounds - Left</span>. You can see that it is placed at the left side of our 2D map. It is meant to protect players from exiting the map and falling into textures. Let's see if it fulfills its purpose.</p>
+<ol type="1">
+<li>Add a new test <span class="tt">MainScene\_CharacterDoesNotFallIntoTextures</span> in <span class="tt">MovementTest.cs</span>.</li>
+<li>Make your character move left and occasionally jump with some wait interval in between jumps.</li>
+<li>In test, Assert that <em>Sara Variant</em> game object position is within bounds of our current scene. <br  />
+</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5298"></a>
+Hints</h1>
+<ul>
+<li>Similarly to the previous test, let's set some arbitrary amount of seconds as our timeout. Sara should stay within the bounds of the scene for the given time.</li>
+<li>You might want to use <span class="tt">WaitForSeconds(0.5f)</span> between jumps to emulate User behaviour better.</li>
+<li>Study the Scene and hardcode X, and Y position used for out of map check, or better - get it dynamically from <span class="tt">Character Bounds - Left</span> game object.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5299"></a>
+Solution</h1>
+<p>MovementTest.cs </p><div class="fragment"><div class="line">using System.Collections;</div>
+<div class="line">using NUnit.Framework;</div>
+<div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.TestTools;</div>
+<div class="line">using UnityEngine.SceneManagement;</div>
+<div class="line"> </div>
+<div class="line">public class MovementTest</div>
+<div class="line">{</div>
+<div class="line">    const float _testTimeout = 20.0f;</div>
+<div class="line">    private Transform _characterTransform;</div>
+<div class="line"> </div>
+<div class="line">    [UnityTest]</div>
+<div class="line">    public IEnumerator MainScene_CharacterDoesNotFallIntoTextures()</div>
+<div class="line">    {</div>
+<div class="line">        SceneManager.LoadScene(&quot;Assets/Scenes/Main.unity&quot;, LoadSceneMode.Single);</div>
+<div class="line">        yield return waitForSceneLoad();</div>
+<div class="line"> </div>
+<div class="line">        yield return GoLeft();</div>
+<div class="line">        while (Time.timeSinceLevelLoad &lt; _testTimeout)</div>
+<div class="line">        {</div>
+<div class="line">            yield return new WaitForSeconds(0.5f);</div>
+<div class="line">            yield return Jump();</div>
+<div class="line">            if (GetCurrentCharacterPosition().x &lt; -75f &amp;&amp; GetCurrentCharacterPosition().y &lt; -10f)</div>
+<div class="line">            {</div>
+<div class="line">                Assert.Fail(&quot;Character escaped the map and fell into textures! :(&quot;);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private Vector3 GetCurrentCharacterPosition()</div>
+<div class="line">    {</div>
+<div class="line">        // Get Main character&#39;s Transform which is used to manipulate position.</div>
+<div class="line">        if (_characterTransform == null)</div>
+<div class="line">        {</div>
+<div class="line">            _characterTransform = GameObject.Find(&quot;Sara Variant&quot;).transform;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        return _characterTransform.position;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private IEnumerator Jump()</div>
+<div class="line">    {</div>
+<div class="line">        TestInputControl.Jump = true;</div>
+<div class="line">        yield return null;</div>
+<div class="line">        TestInputControl.Jump = false;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private IEnumerator GoLeft()</div>
+<div class="line">    {</div>
+<div class="line">        TestInputControl.MoveRight = false;</div>
+<div class="line">        yield return null;</div>
+<div class="line">        TestInputControl.MoveLeft = true;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private IEnumerator waitForSceneLoad()</div>
+<div class="line">    {</div>
+<div class="line">        while (SceneManager.GetActiveScene().buildIndex &gt; 0)</div>
+<div class="line">        {</div>
+<div class="line">            yield return null;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Our test fails, we have a bug in one of our <a class="el" href="class_sample.html">Sample</a> <a class="el" href="namespace_unity.html">Unity</a> projects. How would you approach fixing this problem? There are plenty of possibilities, go ahead and try to fix it as part of this training:</p>
+<ul>
+<li>Introduce new Character Bounds Box collider that will prevent the bug from happening.</li>
+<li>Rework our Sara character collision logic. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Changelog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Changelog </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2611"></a></p>
+<p>All notable changes to this package will be documented in this file.</p>
+<p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a> and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2612"></a>
+[Unreleased]</h1>
+<p>Version Updated The version number for this package has increased due to a version update of a related graphics package.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2613"></a>
+[17.0.3] - 2025-02-13</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 6000.0.39f1.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2614"></a>
+Added</h2>
+<ul>
+<li>helper functions to Render Graph.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2615"></a>
+Changed</h2>
+<ul>
+<li>Improved the Native Render Pass CPU performance by implementing a Render Pass pooling system (URP RG).</li>
+<li>Reworked the additional properties.</li>
+<li>Improved Render Graph warning message in URP when missing RecordRenderGraph implementation.</li>
+<li>Displayed subpass and attachment index on Render Graph Viewer.</li>
+<li>Added a new icon and tooltip if there are multiple usage details for a resource block on Render Graph Viewer.</li>
+<li>Fixed Render Graph Viewer being called before Render Graph execution and its resource deallocation.</li>
+<li>Added What's New in <a class="el" href="namespace_unity.html">Unity</a> 6 to SRP <a class="el" href="namespace_core.html">Core</a> Package.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2616"></a>
+Fixed</h2>
+<ul>
+<li>Added messaging to the Rendering Debugger UI to make it clearer that GPU Resident Drawer settings do not work if GPU Resident Drawer is not enabled.</li>
+<li>GPU Resident Drawer: Changed BatchRendererGroup variants was not reinitializing the system.</li>
+<li>Improved the compiler logic that detects if the current render target is being used outside the current native render pass (e.g., when the pass is broken up by an unsafe pass), and determines the store action for this case. The fix now ensures that the <span class="tt">StoreAndResolve</span> action is used when the resource is read by an Unsafe Pass.</li>
+<li>Rendering Debugger - Keep the correct selected panel when entering and exiting from playmode.</li>
+<li>Removed "depth only surface" warning message appearing when using Game View Gizmos in URP RG.</li>
+<li>Render Graph Viewer: Fixed missing min height when resizing side panel vertical splitter.</li>
+<li>Render Graph Viewer: Fixed possible NullReferenceException when opening the project.</li>
+<li>Render Graph Viewer: Fixed side panel splitter state after returning from empty pass/resource filter.</li>
+<li>Render Graph Viewer: Fixed long resource name clipping issues in side panel.</li>
+<li>Render Graph Viewer: Fixed tooltip size bug and restructure tooltip messages.</li>
+<li>Fixed memory usage regression causing up to 150MB higher memory usage in URP player builds.</li>
+<li>Added missing user-facing text when inspecting volume profile when render pipeline has not been properly initialized yet.</li>
+<li>Game view background turn yellow after enable render graph.</li>
+<li>Fixed light.useViewFrustumForShadowCasterCull previously being ignored for shadow cascades. light.useViewFrustumForShadowCasterCull now works as expected.</li>
+<li>Fixed an exception thrown when Render Graph pass was missing its renderFunc but tried to compute its hash value.</li>
+<li>Fixed Render Graph Compiler logic bug where UnsafePass using MSAA texture could result in missing resolve surface errors.</li>
+<li>Fixed incorrect default source texture name for Render Graph blit util function.</li>
+<li>Fixed NullReferenceException when jumping to pass code from Render Graph Viewer.</li>
+<li>Fixed _FOVEATED_RENDERING_NON_UNIFORM_RASTER shader compilation errors.</li>
+<li>Fixed a null reference exception on the <a class="el" href="namespace_graphics.html">Graphics</a> Settings stripper.</li>
+<li>Avoid that the same volume can be registered more than 1 time in the VolumeManager.</li>
+<li>Fixed crash caused by indirect argument buffer being one item too small.</li>
+<li>[GLES3] Fixed an issue where Blitter.GetBlitMaterial(TextureDimension.Tex2DArray) returns null.</li>
+<li>Fixed alignment of the columns on DebugUI.Foldouts.</li>
+<li>Fixed BlitTexture(RenderTargetIdentifier) to be affected by PostProcessing.</li>
+<li>Fixed errors that could happen when interacting with the Default Volume Profile context menu in Project Settings &gt; <a class="el" href="namespace_graphics.html">Graphics</a>.</li>
+<li>Fixed a numerical error of ComputeEdgeFactor(V1, V2) when two vectors are colinear.</li>
+<li>Fixed potential data corruption due to incorrect native render pass store action in NRP compiler.</li>
+<li>Added stencil flag to read-only depth logic in NRP compiler to avoid unintentional usage of depth read and stencil write states on some APIs.</li>
+<li>Added more error checking to <span class="tt">RenderGraph.ImportTexture</span> to prevent importing RenderTextures that have both color and depth. An exception will now be thrown in this case.</li>
+<li>Fixed an issue when using multiple AddBlitPass would binds the _BlitTexture wrongly.</li>
+<li>Modified TextureDesc so it can now use GraphicsFormat to set the depthStencil format (TextureDesc.format). The TextureDesc.depthBufferBits and TextureDesc.colorFormat fields are now properties that call GraphicsFormatUtilities functions for backwards compatibility. The descriptor now unambiguously describes a single resource, either color or depth. Therefore, TextureHandle clearly represents a single resource.</li>
+<li>Modified RTHandle allocators so they can now use GraphicsFormat to set the depthStencil format (TextureDesc.format). The allocators take a single format for either color or depth stencil to avoid incorrectly creating depth instead of color or vice versa.</li>
+<li>Fixed a crash on DX12 due to invalid subpass flags passed by native render pass compiler.</li>
+<li>Fixed an issue where Lens Flare was not rendering properly in OpenGLES3.</li>
+<li>Fixed render graph incorrectly handling rendering to array slices and mipmaps other than 0 in some cases.</li>
+<li>Render Graph Viewer - Improved UI lock when searching on side panels.</li>
+<li>Render Graph Viewer - Padding corrected on burger menu on the side panels.</li>
+<li>Fixed missing STP shaders &amp; visual artifacts when targeting GLCore renderer</li>
+<li>Rendering Debugger - Silent crash when selecting a Volume component with public RTHandles.</li>
+<li>Fixed a crash on leaking streaming scratch buffer differently sized into the current pool.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2617"></a>
+[17.0.2] - 2024-04-02</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 6000.0.0b15.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2618"></a>
+Changed</h2>
+<ul>
+<li>Improved Render Graph Viewer UI to allow jumping to pass definitions in C# IDE.</li>
+<li>Replaced the overlays inside the RenderGraph Viewer with a fixed side panel.</li>
+<li>Small optimization, frame allocation checks of the Render Graph resource pool are now enabled through Validation checks.</li>
+<li>Improved and unified render graph profiling markers.</li>
+<li>Improved execution performance with Render Graph.</li>
+<li>Improved the resource pooling system in Render Graph.</li>
+<li>Improved <span class="tt">BeginRenderPass</span> CPU performance in the Native Render Pass Render Graph (URP).</li>
+<li>Made various improvements to Render Graph Viewer UX.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2619"></a>
+Fixed</h2>
+<ul>
+<li>Improve reliability of shader variance list regex parser. Current parser includes time stamps which cause duplicates to not be parsed correctly. Changes improve regex parsing and sanitize the liens from the log (which include time stamps).</li>
+<li>Fixed amemory leak from NativeList in RenderGraph.</li>
+<li>Fixed some leaks / missing calls to Dispose() in GI probe baking code.</li>
+<li>Fixed an issue where Screen Space UI Overlay would not rendered again without a camera in URP/HDRP.</li>
+<li>Fixed issue where using BiRP-only Camera APIs with active SRP didn't display a warning as expected.</li>
+<li>Fixed issue where errors could be thrown by debug action registration if deleting all axes in Input Manager.</li>
+<li>Tier0 rendering ignores the scene visibility toggle.</li>
+<li>Rendering Debugger - Fixed Render Graph Debug Display Reset behaviour.</li>
+<li>Added CreateSkyboxRendererList in Render Graph API.</li>
+<li>Fixed <span class="tt">PackFloat2To8</span> in <span class="tt">packing.hlsl</span>.</li>
+<li>Fixed <span class="tt">DebugUI.Button</span> not working in Rendering Debugger runtime UI.</li>
+<li>Fix Render Graph Viewer generating warnings when RenderGraph.Begin/EndProfilingSampler functions are used</li>
+<li>Fixed Render Graph Viewer becoming empty on URP when selecting Project Settings &gt; <a class="el" href="namespace_graphics.html">Graphics</a></li>
+<li>Fix Render Graph Viewer displaying incorrect store action reasoning for MSAA textures</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2620"></a>
+[17.0.1] - 2023-12-21</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 2023.3.0b2.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2621"></a>
+Added</h2>
+<ul>
+<li>API to manage global textures</li>
+<li>New useDynamicScaleExplicit flag to render graph's TextureDesc which can be used to control the underlying RenderTexture's dynamic scaling behavior</li>
+<li>Added <span class="tt">TEMPLATE_X_HALF</span> shader macros that define functions using <span class="tt">min16float</span> only.</li>
+<li>Added <span class="tt">TEMPLATE_X_FLT_HALF</span> shader macros that defines functions with both <span class="tt">min16float</span> and <span class="tt">float</span>.</li>
+<li>Foveated rendering API to fix FSR rendering</li>
+<li>new API that allows users to execute Scalable Temporal Post-Processing (STP) upscaling in a render graph.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2622"></a>
+Changed</h2>
+<ul>
+<li>Replaced DynamicArray with NativeList in NativeRenderPassCompiler to improve performance</li>
+<li>Improved CPU performance of Native Render Pass Render Graph compiler by 15-40% (combined with NativeList PR and other optimization) depending on the complexity of the rendering and the runtime device</li>
+<li>Merged rendergraph native render passes that have different depths.</li>
+<li>Added GPU Resident Drawer debug panel to display culling stats when Instanced Drawing is enabled.</li>
+<li>Added icons and fixed bugs in Render Graph Viewer.</li>
+<li>Prevented the unnecessary store op of MSAA buffers in URP when using Native Render Pass Render Graph.</li>
+<li>RenderGraphObjectPool is now 3x faster with RasterRenderRenderGraphPass objects by using UnityEngine.Pool</li>
+<li>Reducing AddRaster/Compute/UnsafeRenderPass Render Graph API CPU cost by not clearing anymore internal arrays. Now relying on handle IsValid() API instead.</li>
+<li>Validation checks of Render Graph can be enabled/disabled from the Editor. Enabled by default, disabling them slightly improves Render Graph performance.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2623"></a>
+Fixed</h2>
+<ul>
+<li>Bump MaxReaders</li>
+<li>Fixed CurrentPipelineHelpURLAttribute.URL returning null when render no pipeline is active, causing errors.</li>
+<li>Fix volume profile reset action in graphics settings</li>
+<li>Fix Remove All context action for Volume Profile not working in VolumeEditor</li>
+<li>Add XR for Lens Flare Data Driven</li>
+<li>Fixed left eye's Lens Flare light in XR</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2624"></a>
+[17.0.0] - 2023-09-26</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 2023.3.0a8.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2625"></a>
+Changed</h2>
+<ul>
+<li>Dumping in the temp folder the stripping of IRenderPipelineGraphicsSettings</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2626"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an issue in the Rendering Debugger where APV was not shown on editor when <span class="tt">Strip runtime debug shaders</span> was enabled in the global settings.</li>
+<li>Fixed Stripping.meta corrupted metal file.</li>
+<li>When changing the <em>Global Settings</em> asset, the UI was not being refreshed to and the old asset was being displayed.</li>
+<li>Allowing buffer read through NRP RenderGraph API.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2627"></a>
+[16.0.3] - 2023-07-04</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 2023.3.0a1.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2628"></a>
+Added</h2>
+<ul>
+<li><a class="el" href="namespace_render_pipeline_graphics_settings.html">RenderPipelineGraphicsSettings</a> container. That allows stripping of IRenderPipelineGraphicsSettings.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2629"></a>
+Changed</h2>
+<ul>
+<li>Improved VolumeEditor UI</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2630"></a>
+Fixed</h2>
+<ul>
+<li>Fix console errors when debug actions are removed from Input Manager during play mode</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2631"></a>
+[16.0.2] - 2023-06-28</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 2023.2.0a22.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2632"></a>
+Fixed</h2>
+<ul>
+<li>Fixed Rendering Debugger runtime UI getting occluded by user UI with sorting order larger than 0.</li>
+<li>Fixed potentially broken rendering and errors after renaming a VolumeProfile asset.</li>
+<li>Removed some unexpected SRP changed callback invocations.</li>
+<li>Fixed HDRP FrameSettings object changes getting lost during editing.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2633"></a>
+[16.0.1] - 2023-05-23</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 2023.2.0a17.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2634"></a>
+Added</h2>
+<ul>
+<li>ObjectID Render Request that provides a render texture with the ObjectId of each pixel.</li>
+<li>Exposed VolumeProfileEditor as public.</li>
+<li>Added RenderPipelineGlobalSettingsUI::DrawVolumeProfileAssetField.</li>
+<li>Added VolumeComponentListEditor::SetIsGlobalDefaultVolumeProfile.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2635"></a>
+Changed</h2>
+<ul>
+<li>Added optimizations to Static APV for Mobile Devices.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2636"></a>
+Fixed</h2>
+<ul>
+<li>Rendering Debugger - Foldouts - Right Click anywhere on the foldout opens the context menu.</li>
+<li>Rendering Debugger - Foldouts - Left click on context menu collapsed/expand the foldout.</li>
+<li>Rendering Debugger - HotKeys- Fixed regression to open the Rendering Debugger with Ctrl + Backspace on standalone/player modes.</li>
+<li>Fixed SerializedBitArray behavior when editing multiple objects or values. (e.g. HDRP Frame Settings toggles working inconsistently)</li>
+<li>Fixed a crash on <span class="tt">keywords::LocalKeywordState::ResetWithSpace</span> when shader contains Grab Pass.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2637"></a>
+[16.0.0] - 2023-03-22</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 2023.2.0a9.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2638"></a>
+Added</h2>
+<ul>
+<li>Common C# &amp; Shader Code for Scalable Temporal Post-Processing Upscaler.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2639"></a>
+Changed</h2>
+<ul>
+<li>Unified the Create, Clone and Ensure workflows for RenderPipelineGlobalSettings.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2640"></a>
+Fixed</h2>
+<ul>
+<li>Updated the Render Graph documentation to reflect API changes.</li>
+<li>Fixed an IES Importer issue producing incorrect results.</li>
+<li>Fixed the Revert Property for animation curves on Volume Components so it now works correctly.</li>
+<li>Fixed Decal Projector Editor fields so they are now saved when editing a prefab.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2641"></a>
+[15.0.3] - 2022-12-02</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 2023.2.0a1.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2642"></a>
+Added</h2>
+<ul>
+<li>Added HDR output utilities to handle keywords and shader stripping.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2643"></a>
+Changed</h2>
+<ul>
+<li>Deprecated the VolumeComponentMenuForRenderPipeline.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2644"></a>
+Fixed</h2>
+<ul>
+<li>Fixed volume profile field state when asset is removed.</li>
+<li>Fixed ColorCurves volume leaking Texture2D objects under certain circumstances.</li>
+<li>Fixed virtual offset pushing probes outside of geometry.</li>
+<li>Added Local mode to fit Probe Volumes to scene.</li>
+<li>Fixed APV so it is now present in the light explorer.</li>
+<li>Fixed reset of APV debug.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2645"></a>
+[15.0.2] - 2022-11-04</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 2023.1.0a23.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2646"></a>
+Added</h2>
+<ul>
+<li>Extended RendererList to handle UI, WireFrame, CameraSetup and Gizmo draw.</li>
+<li>Added bigQuery Nested columns extensions.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2647"></a>
+Changed</h2>
+<ul>
+<li>Restructured the APV indirection buffer to decrease the amount of memory required when an high number of subdivision levels is used.</li>
+<li>Allow setting order for panels on the rendering debugger.</li>
+<li>Enabled VolumeComponent BoolParameter UI to display enabled/disabled dropdown instead of checkboxes.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2648"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a FreeCamera printing an error when using old InputSystem.</li>
+<li>Fixed an issue where shaders from any SRP not are completely stripped when building for Built-in renderer.</li>
+<li>Fixed dropdowns for multiple editors.</li>
+<li>Fixed the behaviour preventing the bake to restart if probe volumes are changed while a bake has started.</li>
+<li>Fixed global probe volumes not fitting to all objects.</li>
+<li>Fixed shadow cascade editor so the snatches now appear and the gradient appearance is improved.</li>
+<li>Fixed missing subdivision label when looking at APV realtime subdivision preview.</li>
+<li>Updated the Volumes when the Volume Info is collapsed.</li>
+<li>Fixed changing current value by mouse click on DebugUI.ObjectFields on the runtime UI.</li>
+<li>Fixed missing documentation and documentation links on Rendering-Debugger and components used for the Runtime UI.</li>
+<li>Fixed popup showing multiple time when trying to remove additional data while in multi selection.</li>
+<li>Fixed VolumeComponent visibility without additional attributes.</li>
+<li>Fixed null exception while selecting a camera on the Rendering Debugger &gt; Volumes &gt; Camera.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2649"></a>
+[15.0.1] - 2022-08-04</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 2023.1.0a19.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2650"></a>
+Added</h2>
+<ul>
+<li>An extension method to fetch the Render Pipeline assets from a BuildTarget.</li>
+<li>Added new XRSystem API to allow SRPs override the XR built-in stereo matrices.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2651"></a>
+Changed</h2>
+<ul>
+<li>Tooltips improvement across SRPs.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2652"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a Volume Component Editor issue where Foldouts states were stored by position instead of state.</li>
+<li>Fixed a SerializedObjectNotCreatableException on Volume Component Editors.</li>
+<li>Fixed a null reference exception when settings null Render Pipeline Global settings on the Settings provider.</li>
+<li>Fixed a swaping Volume Component issue in a Volume profile when there was mixed pipeline Volume Components did not override correctly.</li>
+<li>Fixed a serialization error when Recovering Default Volume Profile after it was deleted from the project folder.</li>
+<li>Fixed an editor drawer for Value tuples in the Rendering Debugger.</li>
+<li>Fixed an issue where Asset Icons and MonoBehaviour for SRP's where not unified.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2653"></a>
+[15.0.0] - 2022-06-13</h1>
+<p>This version is compatible with <a class="el" href="namespace_unity.html">Unity</a> 2023.1.0a6.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2654"></a>
+Added</h2>
+<ul>
+<li>Extension method to fetch the Render Pipeline assets from a BuildTarget.</li>
+<li>New XRSystem API to allow SRPs override the XR built-in stereo matrices.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2655"></a>
+Changed</h2>
+<ul>
+<li>Improved performance of APV baking.</li>
+<li>Allow setting order for panels on the rendering debugger.</li>
+<li>Allow VolumeComponent BoolParameter UI to display enabled/disabled dropdown instead of checkboxes.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2656"></a>
+Fixed</h2>
+<ul>
+<li>Fixed the reset of APV volume placement when using multi selection.</li>
+<li>Fixed an issue so that APV dilated data not being written back to disk.</li>
+<li>Fixed realtime subdivision so it culls empty cells.</li>
+<li>Hid the warning on the reflection probe if you disable APV.</li>
+<li>Fixed so that data isn't cleared for probes to be dilated into, to avoid bright colored splotches.</li>
+<li>Fixed probes so that the max distance between then are respected.</li>
+<li>Fixed uninitialized memory for virtual offset.</li>
+<li>Fixed NaN when you bake high intensity lights.</li>
+<li>Fixed the APV touchup volume test so it uses OBB instead of AABB.</li>
+<li>Fixed null reference when you enable the Camera in a project with multiple SRPs installed.</li>
+<li>Volume Component Editor Foldouts states are now stored by type instead of by position.</li>
+<li>Fixed SerializedObjectNotCreatableException on Volume Component Editors.</li>
+<li>Fixed null reference exception when settings null Render Pipeline Global settings on the Settings provider.</li>
+<li>Fixed swapping Volume Component in a Volume profile with mixed pipeline Volume Components.</li>
+<li>Default Volume Profile can now be recovered when it is being deleted from the project folder.</li>
+<li>Fixed editor drawer for Value tuples in the Rendering Debugger.</li>
+<li>Fixed an issue where FreeCamera would print an error when using old InputSystem.</li>
+<li>Fixed missing subdivision label when looking at APV realtime subdivision preview.</li>
+<li>Fixed shadow cascade editor so the snatches now appear and the gradient appearance is improved.</li>
+<li>Fixed the behaviour preventing the bake to restart if probe volumes are changed while a bake has started.</li>
+<li>Fixed global probe volumes not fitting to all objects.</li>
+<li>Fixed dropdowns for multiple editors.</li>
+<li>Fixed Light Editor didn't apply changes to SerializedObject.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2657"></a>
+[14.0.3] - 2021-05-09</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2658"></a>
+Fixed</h2>
+<ul>
+<li>Added Shader Stripping Watcher so you get notifications when a Shader Variant is stripped.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2659"></a>
+[14.0.2] - 2021-02-04</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2660"></a>
+Added</h2>
+<ul>
+<li>Added new extension <span class="tt">TryRemoveElementsInRange</span> to remove a range of elements from a <span class="tt">IList</span>.</li>
+<li>Added error on ResourceReloader when attempting to use [ReloadGroup] on ScriptableObject.</li>
+<li>Added Screen Coordinates Override shader utilities.</li>
+<li>Added API to blend between baking states for Probe Volumes.</li>
+<li>Aded explicit control over scenario blending factor and a debug mode for visualization.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2661"></a>
+Fixed</h2>
+<ul>
+<li>Fixed texture gather macros for GLCore and moved them from target 4.6 to target 4.5.</li>
+<li>Fixed cubemap array macros for GLCore.</li>
+<li>Fixed regression on ResourceReloader due to change for supporting built-in resources.</li>
+<li>Fixed issue with debug markers in <a class="el" href="namespace_unity.html">Unity</a> Profiler in deep profiler mode</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2662"></a>
+[14.0.1] - 2021-12-07</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2663"></a>
+Added</h2>
+<ul>
+<li>Linear version of function that sets FSR RCAS shader constants</li>
+<li><span class="tt">DebugUI.ObjectPopupField</span> to render a list of <span class="tt">UnityEngine.Objects</span> as a popup on the Rendering Debugger.</li>
+<li>Add probe volume influence weight parameter</li>
+<li>Added support for multiple Baking States to Prove Volumes.</li>
+<li>Hidding Volume Components not available for the current pipeline on the Volume Profile Inspector.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2664"></a>
+Changed</h2>
+<ul>
+<li>Volume Component editor are now specified by <span class="tt">CustomEditorAttribute</span> instead of <span class="tt">VolumeComponentEditorAttribute</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2665"></a>
+Fixed</h2>
+<ul>
+<li>The Volume Panel on the Rendering Debugger was not corretly showing cameras when they were added or deleted.</li>
+<li>Fixed issue in DynamicResolutionHandler when camera request was turned off at runtime, the ScalableBufferManager would leak state and not unset DRS state (case 1383093).</li>
+<li>Fixed undo in for <span class="tt">DebugUI.EnumFields</span> on the rendering debugger. (case 1386964)</li>
+<li>Fixed <span class="tt">DebugUI.Enum</span> fields collapsing their parent <span class="tt">DebugUI.Foldout</span></li>
+<li>Fixed IES profile importer handling of overflow (outside 0-1 range) of attenutation splines values.</li>
+<li>Fixed issue with Probe Volume Baking window incorrectly displaying the icon for probe volumes in scenes that don't contain probe volumes.</li>
+<li>Fixed unnecessary memory allocation inside FSR's RCAS shader constants helper function.</li>
+<li>Fixed the issue with the special Turkish i, when looking for the m_IsGlobal property in VolumeEditor. (case 1276892)</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2666"></a>
+[14.0.0] - 2021-11-17</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2667"></a>
+Added</h2>
+<ul>
+<li>Context menu on Volume Parameters to restore them to their default values.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2668"></a>
+Fixed</h2>
+<ul>
+<li>Fixed XR support in CoreUtils.DrawFullscreen function.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2669"></a>
+Changed</h2>
+<ul>
+<li>Removed FSR_ENABLE_16BIT option from FSRCommon.hlsl. The 16-bit FSR implementation is now automatically enabled when supported by the target platform.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2670"></a>
+[13.1.2] - 2021-11-05</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2671"></a>
+Added</h2>
+<ul>
+<li>Added function to allocate RTHandles using <span class="tt">RenderTextureDescriptor</span>.</li>
+<li>Added <span class="tt">vrUsage</span> support for RTHandles allocation.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2672"></a>
+Fixed</h2>
+<ul>
+<li>Fixed issue when changing volume profiles at runtime with a script (case 1364256).</li>
+<li>Fixed XR support in CoreUtils.DrawFullscreen function.</li>
+<li>Fixed an issue causing Render Graph execution errors after a random amount of time.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2673"></a>
+[13.1.1] - 2021-10-04</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2674"></a>
+Added</h2>
+<ul>
+<li>Added support for high performant unsafe (uint only) Radix, Merge and Insertion sort algorithms on CoreUnsafeUtils.</li>
+<li>Added DebugFrameTiming class that can be used by render pipelines to display CPU/GPU frame timings and bottlenecks in Rendering Debugger.</li>
+<li>Added new DebugUI widget types: ProgressBarValue and ValueTuple</li>
+<li>Added common support code for FSR.</li>
+<li>Added new <span class="tt">RenderPipelineGlobalSettingsProvider</span> to help adding a settings panel for editing global settings.</li>
+<li>Added blending for curves in post processing volumes.</li>
+<li>New extension for Render Pipeline Global Settings for shader variants settings -&gt; <span class="tt">IShaderVariantsSettings</span>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2675"></a>
+[13.1.0] - 2021-09-24</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2676"></a>
+Added</h2>
+<ul>
+<li>Debug Panels Framework See <span class="tt">IDebugDisplaySettingsQuery</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2677"></a>
+Fixed</h2>
+<ul>
+<li>Fixed keyword and float property upgrading in SpeedTree8MaterialUpgrader</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2678"></a>
+[13.0.0] - 2021-09-01</h1>
+<p>Version Updated The version number for this package has increased due to a version update of a related graphics package.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2679"></a>
+Added</h2>
+<ul>
+<li>New <span class="tt">IVolumeDebugSettings</span> interface and <span class="tt">VolumeDebugSettings&lt;T&gt;</span> class that stores the information for the Volumes Debug Panel.</li>
+<li>Added AMD FidelityFX shaders which were originally in HDRP</li>
+<li>Added support for high performant unsafe (uint only) Radix, Merge and Insertion sort algorithms on CoreUnsafeUtils.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2680"></a>
+Fixed</h2>
+<ul>
+<li>Fixed black pixel issue in AMD FidelityFX RCAS implementation</li>
+<li>Fixed a critical issue on android devices &amp; lens flares. Accidentally creating a 16 bit texture was causing gpus not supporting them to fail.</li>
+<li>Fixed serialization of DebugStateFlags, the internal Enum was not being serialized.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2681"></a>
+[12.0.0] - 2021-01-11</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2682"></a>
+Added</h2>
+<ul>
+<li>Support for the PlayStation 5 platform has been added.</li>
+<li>Support for additional properties for Volume Components without custom editor</li>
+<li>Added VolumeComponentMenuForRenderPipelineAttribute to specify a volume component only for certain RenderPipelines.</li>
+<li>Calculating correct rtHandleScale by considering the possible pixel rounding when DRS is on</li>
+<li>Support for the PlayStation 5 platform has been added.</li>
+<li>Support for the XboxSeries platform has been added.</li>
+<li>Added Editor window that allow showing an icon to browse the documentation</li>
+<li>New method DrawHeaders for VolumeComponentsEditors</li>
+<li>Unification of Material Editor Headers Scopes</li>
+<li>New API functions with no side effects in DynamicResolutionHandler, to retrieve resolved drs scale and to apply DRS on a size.</li>
+<li>Added helper for Volumes (Enable All Overrides, Disable All Overrides, Remove All Overrides).</li>
+<li>Added a blitter utility class. Moved from HDRP to RP core.</li>
+<li>Added a realtime 2D texture atlas utility classes. Moved from HDRP to RP core.</li>
+<li>New methods on CoreEditorDrawers, to allow adding a label on a group before rendering the internal drawers</li>
+<li>Method to generate a Texture2D of 1x1 with a plain color</li>
+<li>Red, Green, Blue Texture2D on CoreEditorStyles</li>
+<li>New API in DynamicResolutionHandler to handle multicamera rendering for hardware mode. Changing cameras and resetting scaling per camera should be safe.</li>
+<li>Added SpeedTree8MaterialUpgrader, which provides utilities for upgrading and importing SpeedTree 8 assets to scriptable render pipelines.</li>
+<li>Adding documentation links to Light Sections</li>
+<li>Support for Lens Flare Data Driven (from images and Procedural shapes), on HDRP</li>
+<li>New SRPLensFlareData Asset</li>
+<li>Adding documentation links to Light Sections.</li>
+<li>Added sampling noise to probe volume sampling position to hide seams between subdivision levels.</li>
+<li>Added DebugUI.Foldout.isHeader property to allow creating full-width header foldouts in Rendering Debugger.</li>
+<li>Added DebugUI.Flags.IsHidden to allow conditional display of widgets in Rendering Debugger.</li>
+<li>Added "Expand/Collapse All" buttons to Rendering Debugger window menu.</li>
+<li>Added mouse &amp; touch input support for Rendering Debugger runtime UI, and fix problems when InputSystem package is used.</li>
+<li>Add automatic spaces to enum display names used in Rendering Debugger and add support for InspectorNameAttribute.</li>
+<li>Adding new API functions inside DynamicResolutionHandler to get mip bias. This allows dynamic resolution scaling applying a bias on the frame to improve on texture sampling detail.</li>
+<li>Added a reminder if the data of probe volume might be obsolete.</li>
+<li>Added new API function inside DynamicResolutionHandler and new settings in GlobalDynamicResolutionSettings to control low res transparency thresholds. This should help visuals when the screen percentage is too low.</li>
+<li>Added common include file for meta pass functionality (case 1211436)</li>
+<li>Added OverridablePropertyScope (for VolumeComponentEditor child class only) to handle the Additional Property, the override checkbox and disable display and decorator attributes in one scope.</li>
+<li>Added IndentLevelScope (for VolumeComponentEditor child class only) to handle indentation of the field and the checkbox.</li>
+<li>Added an option to change the visibilty of the Volumes Gizmos (Solid, Wireframe, Everything), available at Preferences &gt; <a class="el" href="namespace_core.html">Core</a> Render Pipeline</li>
+<li>Added class for drawing shadow cascades <span class="tt">UnityEditor.Rendering.ShadowCascadeGUI.DrawShadowCascades</span>.</li>
+<li>Added UNITY_PREV_MATRIX_M and UNITY_PREV_MATRIX_I_M shader macros to support instanced motion vector rendering</li>
+<li>Added new API to customize the rtHandleProperties of a particular RTHandle. This is a temporary work around to assist with viewport setup of Custom post process when dealing with DLSS or TAAU</li>
+<li>Added <span class="tt">IAdditionalData</span> interface to identify the additional datas on the core package.</li>
+<li>Added new API to draw color temperature for Lights.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2683"></a>
+Fixed</h2>
+<ul>
+<li>Help boxes with fix buttons do not crop the label.</li>
+<li>Fixed missing warning UI about Projector component being unsupported (case 1300327).</li>
+<li>Fixed the display name of a Volume Parameter when is defined the attribute InspectorName</li>
+<li>Calculating correct rtHandleScale by considering the possible pixel rounding when DRS is on</li>
+<li>Problem on domain reload of Volume Parameter Ranges and UI values</li>
+<li>Fixed Right Align of additional properties on Volume Components Editors</li>
+<li>Fixed normal bias field of reference volume being wrong until the profile UI was displayed.</li>
+<li>Fixed L2 for Probe Volumes.</li>
+<li>When adding Overrides to the Volume Profile, only show Volume Components from the current Pipeline.</li>
+<li>Fixed assertion on compression of L1 coefficients for Probe Volume.</li>
+<li>Explicit half precision not working even when Unified Shader Precision Model is enabled.</li>
+<li>Fixed ACES filter artefact due to half float error on some mobile platforms.</li>
+<li>Fixed issue displaying a warning of different probe reference volume profiles even when they are equivalent.</li>
+<li>Fixed missing increment/decrement controls from DebugUIIntField &amp; DebugUIUIntField widget prefabs.</li>
+<li>Fixed IES Importer related to new API on core.</li>
+<li>Fixed a large, visible stretch ratio in a LensFlare Image thumbnail.</li>
+<li>Fixed Undo from script refreshing thumbnail.</li>
+<li>Fixed cropped thumbnail for Image with non-uniform scale and rotation</li>
+<li>Skip wind calculations for Speed Tree 8 when wind vector is zero (case 1343002)</li>
+<li>Fixed memory leak when changing SRP pipeline settings, and having the player in pause mode.</li>
+<li>Fixed alignment in Volume Components</li>
+<li>Virtual Texturing fallback texture sampling code correctly honors the enableGlobalMipBias when virtual texturing is disabled.</li>
+<li>Fixed LightAnchor too much error message, became a HelpBox on the Inspector.</li>
+<li>Fixed library function SurfaceGradientFromTriplanarProjection to match the mapping convention used in SampleUVMappingNormalInternal.hlsl and fix its description.</li>
+<li>Fixed Volume Gizmo size when rescaling parent GameObject</li>
+<li>Fixed rotation issue now all flare rotate on positive direction (1348570)</li>
+<li>Fixed error when change Lens Flare Element Count followed by undo (1346894)</li>
+<li>Fixed Lens Flare Thumbnails</li>
+<li>Fixed Lens Flare 'radialScreenAttenuationCurve invisible'</li>
+<li>Fixed Lens Flare rotation for Curve Distribution</li>
+<li>Fixed potentially conflicting runtime Rendering Debugger UI command by adding an option to disable runtime UI altogether (1345783).</li>
+<li>Fixed Lens Flare position for celestial at very far camera distances. It now locks correctly into the celestial position regardless of camera distance (1363291)</li>
+<li>Fixed issues caused by automatically added EventSystem component, required to support Rendering Debugger Runtime UI input. (1361901)</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2684"></a>
+Changed</h2>
+<ul>
+<li>Improved the warning messages for Volumes and their Colliders.</li>
+<li>Changed Window/Render Pipeline/Render Pipeline Debug to Window/Analysis/Rendering Debugger</li>
+<li>Changed Window/Render Pipeline/Look Dev to Window/Analysis/Look Dev</li>
+<li>Changed Window/Render Pipeline/Render Graph Viewer to Window/Analysis/Render Graph Viewer</li>
+<li>Changed Window/Render Pipeline/Graphics Compositor to Window/Rendering/Graphics Compositor</li>
+<li>Volume Gizmo Color setting is now under Colors-&gt;Scene-&gt;Volume Gizmo</li>
+<li>Volume Gizmo alpha changed from 0.5 to 0.125</li>
+<li>Moved Edit/Render Pipeline/Generate Shader Includes to Edit/Rendering/Generate Shader Includes</li>
+<li>Moved Assets/Create/LookDev/Environment Library to Assets/Create/Rendering/Environment Library (Look Dev)</li>
+<li>Changed Nintendo Switch specific half float fixes in color conversion routines to all platforms.</li>
+<li>Improved load asset time for probe volumes.</li>
+<li>ClearFlag.Depth does not implicitely clear stencil anymore. ClearFlag.Stencil added.</li>
+<li>The RTHandleSystem no longer requires a specific number of sample for MSAA textures. Number of samples can be chosen independently for all textures.</li>
+<li>Platform ShaderLibrary API headers now have a new macro layer for 2d texture sampling macros. This layer starts with PLATFORM_SAMPLE2D definition, and it gives the possibility of injecting sampling behavior on a render pipeline level. For example: being able to a global mip bias for temporal upscalers.</li>
+<li>Update icon for IES, LightAnchor and LensFlare</li>
+<li>LensFlare (SRP) can be now disabled per element</li>
+<li>LensFlare (SRP) tooltips now refer to meters.</li>
+<li>Serialize the Probe Volume asset as binary to improve footprint on disk and loading speed.</li>
+<li>LensFlare Element editor now have Thumbnail preview</li>
+<li>Improved IntegrateLDCharlie() to use uniform stratified sampling for faster convergence towards the ground truth</li>
+<li>DynamicResolutionHandler.GetScaledSize function now clamps, and never allows to return a size greater than its input.</li>
+<li>Removed DYNAMIC_RESOLUTION snippet on lens flare common shader. Its not necessary any more on HDRP, which simplifies the shader.</li>
+<li>Made occlusion Radius for lens flares in directional lights, be independant of the camera's far plane.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2685"></a>
+[11.0.0] - 2020-10-21</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2686"></a>
+Fixed</h2>
+<ul>
+<li>Fixed the default background color for previews to use the original color.</li>
+<li>Fixed spacing between property fields on the Volume Component Editors.</li>
+<li>Fixed ALL/NONE to maintain the state on the Volume Component Editors.</li>
+<li>Fixed the selection of the Additional properties from ALL/NONE when the option "Show additional properties" is disabled</li>
+<li>Fixed ACES tonemaping for Nintendo Switch by forcing some shader color conversion functions to full float precision.</li>
+<li>Fixed a bug in FreeCamera which would only provide a speed boost for the first frame when pressing the Shfit key.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2687"></a>
+Added</h2>
+<ul>
+<li>New View Lighting Tool, a component which allow to setup light in the camera space</li>
+<li>New function in GeometryTools.hlsl to calculate triangle edge and full triangle culling.</li>
+<li>Several utils functions to access SphericalHarmonicsL2 in a more verbose and intuitive fashion.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2688"></a>
+[10.2.0] - 2020-10-19</h1>
+<p>Version Updated The version number for this package has increased due to a version update of a related graphics package.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2689"></a>
+[10.1.0] - 2020-10-12</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2690"></a>
+Added</h2>
+<ul>
+<li>Added context options "Move to Top", "Move to Bottom", "Expand All" and "Collapse All" for volume components.</li>
+<li>Added the support of input system V2</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2691"></a>
+Fixed</h2>
+<ul>
+<li>Fixed the scene view to scale correctly when hardware dynamic resolution is enabled (case 1158661)</li>
+<li>Fixed game view artifacts on resizing when hardware dynamic resolution was enabled</li>
+<li>Fixed issue that caused <span class="tt">UNITY_REVERSED_Z</span> and <span class="tt">UNITY_UV_STARTS_AT_TOP</span> being defined in platforms that don't support it.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2692"></a>
+Changed</h2>
+<ul>
+<li>LookDev menu item entry is now disabled if the current pipeline does not support it.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2693"></a>
+[10.0.0] - 2019-06-10</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2694"></a>
+Added</h2>
+<ul>
+<li>Add rough version of ContextualMenuDispatcher to solve conflict amongst SRP.</li>
+<li>Add api documentation for TextureCombiner.</li>
+<li>Add tooltips in LookDev's toolbar.</li>
+<li>Add XRGraphicsAutomatedTests helper class.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2695"></a>
+Fixed</h2>
+<ul>
+<li>Fixed compile errors for platforms with no VR support</li>
+<li>Replaced reference to Lightweight Render Pipeline by Universal Render Pipeline in the package description</li>
+<li>Fixed LighProbes when using LookDev.</li>
+<li>Fix LookDev minimal window size.</li>
+<li>Fix object rotation at instentiation to keep the one in prefab or used in hierarchy.</li>
+<li>Fixed shader compile errors when trying to use tessellation shaders with PlayStation VR on PS4.</li>
+<li>Fixed shader compile errors about LODDitheringTransition not being supported in GLES2.</li>
+<li>Fix <span class="tt">WaveIsFirstLane()</span> to ignore helper lanes in fragment shaders on PS4.</li>
+<li>Fixed a bug where <a class="el" href="namespace_unity.html">Unity</a> would crash if you tried to remove a Camera component from a GameObject using the Inspector window, while other components dependended on the Camera component.</li>
+<li>Fixed errors due to the debug menu when enabling the new input system.</li>
+<li>Fix LookDev FPS manipulation in view</li>
+<li>Fix LookDev zoom being stuck when going near camera pivot position</li>
+<li>Fix LookDev manipulation in view non responsive if directly using an HDRI</li>
+<li>Fix LookDev behaviour when user delete the EnvironmentLibrary asset</li>
+<li>Fix LookDev SunPosition button position</li>
+<li>Fix LookDev EnvironmentLibrary tab when asset is deleted</li>
+<li>Fix LookDev used Cubemap when asset is deleted</li>
+<li>Fixed the definition of <span class="tt">rcp()</span> for GLES2.</li>
+<li>Fixed copy/pasting of Volume Components when loading a new scene</li>
+<li>Fix LookDev issue when adding a GameObject containing a Volume into the LookDev's view.</li>
+<li>Fixed duplicated entry for com.unity.modules.xr in the runtime asmdef file</li>
+<li>Fixed the texture curve being destroyed from another thread than main (case 1211754)</li>
+<li>Fixed unreachable code in TextureXR.useTexArray</li>
+<li>Fixed GC pressure caused by <span class="tt">VolumeParameter&lt;T&gt;.GetHashCode()</span></li>
+<li>Fixed issue when LookDev window is opened and the CoreRP Package is updated to a newer version.</li>
+<li>Fix LookDev's camera button layout.</li>
+<li>Fix LookDev's layout vanishing on domain reload.</li>
+<li>Fixed issue with the shader TransformWorldToHClipDir function computing the wrong result.</li>
+<li>Fixed division by zero in <span class="tt">V_SmithJointGGX</span> function.</li>
+<li>Fixed null reference exception in LookDev when setting the SRP to one not implementing LookDev (case 1245086)</li>
+<li>Fix LookDev's undo/redo on EnvironmentLibrary (case 1234725)</li>
+<li>Fix a compil error on OpenGL ES2 in directional lightmap sampling shader code</li>
+<li>Fix hierarchicalbox gizmo outside facing check in symetry or homothety mode no longer move the center</li>
+<li>Fix artifacts on Adreno 630 GPUs when using ACES Tonemapping</li>
+<li>Fixed a null ref in the volume component list when there is no volume components in the project.</li>
+<li>Fixed issue with volume manager trying to access a null volume.</li>
+<li>HLSL codegen will work with C# file using both the <span class="tt">GenerateHLSL</span> and C# 7 features.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2696"></a>
+Changed</h2>
+<ul>
+<li>Restored usage of ENABLE_VR to fix compilation errors on some platforms.</li>
+<li>Only call SetDirty on an object when actually modifying it in SRP updater utility</li>
+<li>Set depthSlice to -1 by default on SetRenderTarget() to clear all slices of Texture2DArray by default.</li>
+<li>ResourceReloader will now add additional InvalidImport check while it cannot load due to AssetDatabase not available.</li>
+<li>Replaced calls to deprecated PlayerSettings.virtualRealitySupported property.</li>
+<li>Enable RWTexture2D, RWTexture2DArray, RWTexture3D in gles 3.1</li>
+<li>Updated macros to be compatible with the new shader preprocessor.</li>
+<li>Updated shaders to be compatible with <a class="el" href="namespace_microsoft.html">Microsoft</a>'s DXC.</li>
+<li>Changed CommandBufferPool.Get() to create an unnamed CommandBuffer. (No profiling markers)</li>
+<li>Deprecating VolumeComponentDeprecad, using HideInInspector or Obsolete instead</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2697"></a>
+[7.1.1] - 2019-09-05</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2698"></a>
+Added</h2>
+<ul>
+<li>Add separated debug mode in LookDev.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2699"></a>
+Changed</h2>
+<ul>
+<li>Replaced usage of ENABLE_VR in XRGraphics.cs by a version define (ENABLE_VR_MODULE) based on the presence of the built-in VR module</li>
+<li><span class="tt">ResourceReloader</span> now works on non-public fields.</li>
+<li>Removed <span class="tt">normalize</span> from <span class="tt">UnpackNormalRGB</span> to match <span class="tt">UnpackNormalAG</span>.</li>
+<li>Fixed shadow routines compilation errors when "real" type is a typedef on "half".</li>
+<li>Removed debug menu in non development build.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2700"></a>
+[7.0.1] - 2019-07-25</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2701"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a precision issue with the ACES tonemapper on mobile platforms.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2702"></a>
+[7.0.0] - 2019-07-17</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2703"></a>
+Added</h2>
+<ul>
+<li>First experimental version of the LookDev. Works with all SRP. Only branched on HDRP at the moment.</li>
+<li>LookDev out of experimental</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2704"></a>
+[6.7.0-preview] - 2019-05-16</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2705"></a>
+[6.6.0] - 2019-04-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2706"></a>
+Fixed</h2>
+<ul>
+<li>Fixed compile errors in XRGraphics.cs when ENABLE_VR is not defined</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2707"></a>
+[6.5.0] - 2019-03-07</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2708"></a>
+[6.4.0] - 2019-02-21</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2709"></a>
+Added</h2>
+<ul>
+<li>Enabled support for CBUFFER on OpenGL <a class="el" href="namespace_core.html">Core</a> and OpenGL ES 3 backends.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2710"></a>
+[6.3.0] - 2019-02-18</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2711"></a>
+[6.2.0] - 2019-02-15</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2712"></a>
+[6.1.0] - 2019-02-13</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2713"></a>
+[6.0.0] - 2019-02-23</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2714"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a typo in ERROR_ON_UNSUPPORTED_FUNCTION() that was causing the shader compiler to run out of memory in GLES2. [Case 1104271] (<a href="https://issuetracker.unity3d.com/issues/mobile-os-restarts-because-of-high-memory-usage-when-compiling-shaders-for-opengles2">https://issuetracker.unity3d.com/issues/mobile-os-restarts-because-of-high-memory-usage-when-compiling-shaders-for-opengles2</a>)</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2715"></a>
+[5.2.0] - 2018-11-27</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2716"></a>
+[5.1.0] - 2018-11-19</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2717"></a>
+Added</h2>
+<ul>
+<li>Added a define for determining if any instancing path is taken.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2718"></a>
+Changed</h2>
+<ul>
+<li>The <a class="el" href="namespace_core.html">Core</a> SRP package is no longer in preview.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2719"></a>
+[5.0.0-preview] - 2018-10-18</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2720"></a>
+Changed</h2>
+<ul>
+<li>XRGraphicConfig has been changed from a read-write control of XRSettings to XRGraphics, a read-only accessor to XRSettings. This improves consistency of XR behavior between the legacy render pipeline and SRP.</li>
+<li>XRGraphics members have been renamed to match XRSettings, and XRGraphics has been modified to only contain accessors potentially useful to SRP</li>
+<li>You can now have up to 16 additional shadow-casting lights.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2721"></a>
+Fixed</h2>
+<ul>
+<li>LWRP no longer executes shadow passes when there are no visible shadow casters in a Scene. Previously, this made the Scene render as too dark, overall.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2722"></a>
+[4.0.0-preview] - 2018-09-28</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2723"></a>
+Added</h2>
+<ul>
+<li>Space transform functions are now defined in <span class="tt">ShaderLibrary/SpaceTransforms.hlsl</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2724"></a>
+Changed</h2>
+<ul>
+<li>Removed setting shader inclue path via old API, use package shader include paths</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2725"></a>
+[3.3.0] - 2018-01-01</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2726"></a>
+[3.2.0] - 2018-01-01</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2727"></a>
+[3.1.0] - 2018-01-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2728"></a>
+Added</h2>
+<ul>
+<li>Add PCSS shadow filter</li>
+<li>Added <a class="el" href="namespace_core.html">Core</a> EditMode tests</li>
+<li>Added <a class="el" href="namespace_core.html">Core</a> unsafe utilities</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2729"></a>
+Improvements</h2>
+<ul>
+<li>Improved volume UI &amp; styling</li>
+<li>Fixed CoreUtils.QuickSort infinite loop when two elements in the list are equals.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2730"></a>
+Changed</h2>
+<ul>
+<li>Moved root files into folders for easier maintenance </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

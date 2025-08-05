@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_t_c_vive_controller_profile =
+[
+    [ "ViveController", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_t_c_vive_controller_profile_1_1_vive_controller.html", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_t_c_vive_controller_profile_1_1_vive_controller" ],
+    [ "GetDeviceLayoutName", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_t_c_vive_controller_profile.html#a815fce356a32e3eecc313737e68d54f9", null ],
+    [ "RegisterActionMapsWithRuntime", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_t_c_vive_controller_profile.html#a9b3d4271a444ca0560a8f173d23c0c31", null ],
+    [ "RegisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_t_c_vive_controller_profile.html#abf557ecd8ffe510ca6844b0e2847f236", null ],
+    [ "UnregisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_h_t_c_vive_controller_profile.html#aa07c096dae37f261e4de3dd073979bb3", null ]
+];

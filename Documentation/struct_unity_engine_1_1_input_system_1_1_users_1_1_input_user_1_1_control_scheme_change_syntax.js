@@ -1,0 +1,4 @@
+var struct_unity_engine_1_1_input_system_1_1_users_1_1_input_user_1_1_control_scheme_change_syntax =
+[
+    [ "AndPairRemainingDevices", "struct_unity_engine_1_1_input_system_1_1_users_1_1_input_user_1_1_control_scheme_change_syntax.html#a50a82c53ae070c8921e0d625f3671477", null ]
+];

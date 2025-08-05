@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: About JetBrains Rider Editor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ide_8rider_0d4d374c7eb6db_2_documentation_0i_2index.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">About JetBrains Rider Editor </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1600"></a></p>
+<p>The <a class="el" href="namespace_jet_brains.html">JetBrains</a> <a class="el" href="namespace_rider.html">Rider</a> editor package integrates support for the <a href="https://www.jetbrains.com/rider/">JetBrains Rider</a> .NET Integrated Development Environment (IDE), into the <a class="el" href="namespace_unity.html">Unity</a> Editor. This package provides an end-point for <a class="el" href="namespace_rider.html">Rider</a> to call different <a class="el" href="namespace_unity.html">Unity</a> APIs and to generate .csproj and .sln files, which <a class="el" href="namespace_rider.html">Rider</a> uses to implement support for <a class="el" href="namespace_unity.html">Unity</a> in its <a href="https://github.com/JetBrains/resharper-unity">plug-in</a>.</p>
+<p>This package ensures that IDE features like autocomplete suggestions and flagging dependency conflicts work in <a class="el" href="namespace_rider.html">Rider</a>. It uses .cproj and .sln files which store information about your project such as:</p>
+<ul>
+<li>Versioning information</li>
+<li>Build files</li>
+<li>Platform requirements</li>
+<li>Web server or database settings</li>
+</ul>
+<p>Not all code in <a class="el" href="namespace_unity.html">Unity</a> is directly visible to code editors, particularly when using packages. This is because packages don’t provide their own .csproj files, and <a class="el" href="namespace_unity.html">Unity</a> doesn’t create them for installed packages by default. This means that IDE features like autocomplete suggestions and flagging dependency conflicts do not work with code in these packages. The purpose of this package is to produce the .csproj files that make these features possible by default when you use <a class="el" href="namespace_rider.html">Rider</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1601"></a>
+Installation</h1>
+<p>As of <a class="el" href="namespace_unity.html">Unity</a> version 2019.2, this package comes as a part of the default <a class="el" href="namespace_unity.html">Unity</a> installation. If you are updating your project from an older version of <a class="el" href="namespace_unity.html">Unity</a>, you might need to install this package via the Package Manager.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1602"></a>
+Requirements</h1>
+<p>This version of the <a class="el" href="namespace_jet_brains.html">JetBrains</a> <a class="el" href="namespace_rider.html">Rider</a> editor package is compatible with the following versions of the <a class="el" href="namespace_unity.html">Unity</a> Editor:</p>
+<ul>
+<li>2019.2.6 or later</li>
+</ul>
+<p>To use this package, you must have the following third-party products installed:</p>
+<ul>
+<li><a class="el" href="namespace_jet_brains.html">JetBrains</a> <a class="el" href="namespace_rider.html">Rider</a> version 2019.3 or newer</li>
+</ul>
+<p>For more information about the <a class="el" href="namespace_rider.html">Rider</a> IDE, see the <a href="https://www.jetbrains.com/rider/documentation/">JetBrains Rider documentation</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1603"></a>
+Submitting issues</h2>
+<p>This package is maintained by <a class="el" href="namespace_jet_brains.html">JetBrains</a> and <a class="el" href="namespace_unity.html">Unity</a>. Submit issues to the <a href="https://github.com/JetBrains/resharper-unity/issues">JetBrains/resharper-unity/issues GitHub page</a>. <a class="el" href="namespace_unity.html">Unity</a> intends for this package to become accessible to the public on GitHub in the future. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

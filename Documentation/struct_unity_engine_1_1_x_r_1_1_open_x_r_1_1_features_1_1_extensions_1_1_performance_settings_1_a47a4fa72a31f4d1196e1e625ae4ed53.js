@@ -1,0 +1,7 @@
+var struct_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_extensions_1_1_performance_settings_1_a47a4fa72a31f4d1196e1e625ae4ed53 =
+[
+    [ "domain", "struct_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_extensions_1_1_performance_settings_1_a47a4fa72a31f4d1196e1e625ae4ed53.html#a88f90494e1c8b4ab4b7a4cc3aa6ebbfa", null ],
+    [ "fromLevel", "struct_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_extensions_1_1_performance_settings_1_a47a4fa72a31f4d1196e1e625ae4ed53.html#a317b7b48bf0565da2c71017c6c865232", null ],
+    [ "subDomain", "struct_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_extensions_1_1_performance_settings_1_a47a4fa72a31f4d1196e1e625ae4ed53.html#a508a65c369ef006785c44042fc9264c1", null ],
+    [ "toLevel", "struct_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_extensions_1_1_performance_settings_1_a47a4fa72a31f4d1196e1e625ae4ed53.html#af36a44a61bd867181f8794e69477d5e4", null ]
+];

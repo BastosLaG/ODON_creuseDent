@@ -1,0 +1,4 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_i_tunneling_vignette_provider =
+[
+    [ "vignetteParameters", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_i_tunneling_vignette_provider.html#aa82d0f6fc2648904cf0bef51c2b12e5d", null ]
+];

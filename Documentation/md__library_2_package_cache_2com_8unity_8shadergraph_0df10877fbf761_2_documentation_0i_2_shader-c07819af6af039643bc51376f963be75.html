@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: How to create a resolution-independent shape</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-c07819af6af039643bc51376f963be75.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">How to create a resolution-independent shape </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4545"></a></p>
+<p>When creating a UI element, it’s very useful to be able to make it resolution-independent - meaning that it looks sharp and crisp regardless of if it’s rendered at very high resolution or very low resolution. UI elements that are based on textures are resolution dependent. The texture itself has a specific resolution - so if the UI element is rendered at a higher resolution than the texture, the result will be blurry, and if the texture is a higher resolution than the UI element is rendered, you’ll get filtering artifacts and waste texture memory.</p>
+<p>With the nodes in the library included with this sample set, you can generate shapes procedurally instead of with textures. You can render these shapes at any resolution and they will always look perfectly sharp and smoothly anti-aliased. Here’s how to do it:</p>
+<ol type="1">
+<li>Add one of the SDF shape nodes (Circle, Hexagon, Pill, Rectangle, Star, or Triangle) to your graph. You can find them in the Add Node menu under UI/SDFs. These nodes generate shapes using signed distance fields. If you grab the output from the Fill output port, you’ll get a shape, but you can also get the raw SDF output from the SDF output port. Each pixel in the SDF is a value that represents the distance to the nearest edge of the shape. Pixels that are inside the shape have a negative value to indicate that.</li>
+</ol>
+<ol type="1">
+<li>Add an AntiAliasing node to your graph. You can find it in the Add Node menu under UI/Helpers. The AntiAliasing node is designed to “resolve” an SDF into an anti-aliased shape in a resolution-independent way.</li>
+</ol>
+<ol type="1">
+<li>Connect the SDF output port of your SDF shape node to the Gradient input port of the AntiAliasing node.</li>
+</ol>
+<ol type="1">
+<li>Set the Cutoff port to a default value of zero. The AntiAliasing node will convert the shape’s SDF into a solid shape using a method that correctly adapts to the number of pixels on the screen.</li>
+</ol>
+<ol type="1">
+<li>To make your shape white and the background black, connect the <b>Out</b> port of the AntiAliasing node to a One Minus node to invert the result.</li>
+</ol>
+<p>You now have a resolution-independent shape. You can fill the whole screen with this shape and render it at 8k, or scale it down to a tiny portion of the screen and render it on a low-end smartphone and it will have a sharp, anti-aliased edge in all cases. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

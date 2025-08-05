@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Custom Events</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-custom-events.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Custom Events </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7117"></a></p>
+<p>Events trigger, or start, a chain of logic in a Script Graph based on a specific occurrence in your application. Some Event types, such as On Start or On Update, exist by default in Visual Scripting. These Event nodes tell Visual Scripting to run the nodes they're connected to after the Script Graph starts, or on every frame while the Script Graph is active.</p>
+<p>You can also create your own custom Scripting Events to specify conditions for when a Script Graph's logic runs.</p>
+<p>Visual Scripting has two types of custom Events:</p>
+<ul>
+<li>Custom Event nodes: Use Custom Event nodes and Custom Event Trigger nodes to raise simple custom Events that don't require complex logic.</li>
+<li>Custom Scripting Events: Create your own Custom Scripting Event nodes to raise more complex Event logic.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7118"></a>
+Custom Event nodes</h1>
+<p>Custom Event nodes are always accessible from the fuzzy finder. You don't need to write your own code to use these custom Events in a Script Graph. They don't require an event listener.</p>
+<p>You can use the Custom Event node to create multiple custom Events, as long as you give each Event a unique name. You can also customize the number of arguments that the Custom Event node can send.</p>
+<p>To configure a Custom Event node, you need to provide:</p>
+<ul>
+<li>A unique name.</li>
+<li>A GameObject.</li>
+<li>The number of arguments the Custom Event receives.</li>
+</ul>
+<p>For more information on how to configure and use a Custom Event node, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-add-custom-event-node.html">Add a Custom Event node</a>.</p>
+<p>To trigger a Custom Event, use a Custom Event Trigger node and provide the unique name of the Event. For more information, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-add-custom-event-node-trigger.html">Add a Custom Event Trigger node</a>.</p>
+<p>Visual Scripting displays errors in the <a href="vs-interface-overview.md#the-graph-inspector">Graph Inspector</a> if the Custom Event node and a Custom Event Trigger node have different values for:</p>
+<ul>
+<li>The name of the Event.</li>
+<li>The provided GameObject for the Event.</li>
+<li>The number of arguments for the Event.</li>
+</ul>
+<p><img src="images/vs-events-custom-event-trigger-node-error-2.png" alt="An image of the Graph Editor and Graph Inspector. An On Keyboard Input node with its Key set to Space and its Action set to Hold connects to a Custom Event Trigger node. The node triggers the MyEvent Custom Event node, which connects to a Debug Log node to write the value of Arg. 0 to the console. The Custom Event Trigger node displays in red, because its Arguments field is set to 0, while the Custom Event node has its Arguments set to 2. The Graph Inspector displays an Index out of Range Exception error." class="inline"/></p>
+<p>All arguments on a Custom Event Trigger node must have values, even if the Custom Event node doesn't give those values to another node. In the following example, Visual Scripting displays an error for both <b>Arg. 0</b> and <b>Arg. 1</b>, even though <b>Arg. 1</b> isn't used.</p>
+<p><img src="images/vs-events-custom-event-trigger-node-error.png" alt="An image of the Graph Editor and Graph Inspector. An On Keyboard Input node with its Key set to Space and its Action set to Hold connects to a Custom Event Trigger node. The node triggers the MyEvent Custom Event node, which connects to a Debug Log node to write the value of Arg. 0 to the console. The Custom Event Trigger node displays in orange because its Arg. 0 and Arg. 1 input ports don't receive any input values. The Graph Inspector displays two warnings that state that Arg. 0 is missing, and Arg. 1 is missing." class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7119"></a>
+Custom Scripting Events</h1>
+<p>You can create a Custom Scripting Event node with a C# script. With C#, you can customize all aspects of your Custom Scripting Event, such as which category or categories to use for your node in the fuzzy finder. For more information, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-own-custom-event-node.html">Create a Custom Scripting Event node</a>.</p>
+<p><img src="images/vs-custom-event-nodes-example.png" alt="An image of the Graph Editor, that displays a Custom Scripting Event node and a Custom Scripting Event Sender node. An On Keyboard Input node with its Key set to Space and its Action set to Down connects to the Send My Custom Event node. When a user presses the Spacebar, the graph triggers the Send My Custom Event node, which triggers the On My Custom Event node. The On My Custom Event node connects to a Debug Log node, which logs the Result to the console." class="inline"/></p>
+<p>To use and trigger the Event, code a Custom Scripting Event Sender node or another C# script:</p>
+<ul>
+<li>For more information on how to send or trigger an Event with a node in a Script Graph, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-cecd37ef3c8f1278e03ea5710a74eea90.html">Create a Custom Scripting Event Sender node</a>.</li>
+<li>For more information on how to send or trigger an Event with code, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-c5e5b37eedf951814f87079c830dc466c.html">Trigger a Custom Scripting Event from a C# script</a>.</li>
+</ul>
+<p>You can also use a C# script to listen to or receive your Event after you trigger it in a Script Graph. You can use your receiver script to trigger more logic in your application. For more information, see Listen to a Custom Scripting Event from a C# script. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

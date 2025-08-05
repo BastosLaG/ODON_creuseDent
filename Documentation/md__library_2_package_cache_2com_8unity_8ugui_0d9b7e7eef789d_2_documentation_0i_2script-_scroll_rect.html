@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Scroll Rect</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_scroll_rect.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Scroll Rect </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6263"></a></p>
+<p>A Scroll Rect can be used when content that takes up a lot of space needs to be displayed in a small area. The Scroll Rect provides functionality to scroll over this content.</p>
+<p>Usually a Scroll Rect is combined with a <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_mask.html">Mask</a> in order to create a scroll view, where only the scrollable content inside the Scroll Rect is visible. It can also additionally be combined with one or two <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_scrollbar.html">Scrollbars</a> that can be dragged to scroll horizontally or vertically.</p>
+<p><img src="images/UI_ScrollRectExample.png" alt="A Scroll Rect." class="inline"/></p>
+<p><img src="images/UI_ScrollRectInspector.png" alt="" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6264"></a>
+Properties</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Function:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Content</b>  </td><td class="markdownTableBodyLeft">This is a reference to the Rect Transform of the UI element to be scrolled, for example a large image.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Horizontal</b>  </td><td class="markdownTableBodyLeft">Enables horizontal scrolling  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Vertical</b>  </td><td class="markdownTableBodyLeft">Enables vertical scrolling  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Movement Type</b>  </td><td class="markdownTableBodyLeft">Unrestricted, Elastic or Clamped. Use Elastic or Clamped to force the content to remain within the bounds of the Scroll Rect. Elastic mode bounces the content when it reaches the edge of the Scroll Rect  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Elasticity</b>  </td><td class="markdownTableBodyLeft">This is the amount of bounce used in the elasticity mode.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Inertia</b>  </td><td class="markdownTableBodyLeft">When Inertia is set the content will continue to move when the pointer is released after a drag. When Inertia is not set the content will only move when dragged.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Deceleration Rate</b>  </td><td class="markdownTableBodyLeft">When Inertia is set the deceleration rate determines how quickly the contents stop moving. A rate of 0 will stop the movement immediately. A value of 1 means the movement will never slow down.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Scroll Sensitivity</b>  </td><td class="markdownTableBodyLeft">The sensitivity to scroll wheel and track pad scroll events.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Viewport</b>  </td><td class="markdownTableBodyLeft">Reference to the viewport Rect Transform that is the parent of the content Rect Transform.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Horizontal Scrollbar</b>  </td><td class="markdownTableBodyLeft">Optional reference to a horizontal scrollbar element.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Visibility</b>  </td><td class="markdownTableBodyLeft">Whether the scrollbar should automatically be hidden when it isn't needed, and optionally expand the viewport as well.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Spacing</b>  </td><td class="markdownTableBodyLeft">The space between the scrollbar and the viewport.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Vertical Scrollbar</b>  </td><td class="markdownTableBodyLeft">Optional reference to a vertical scrollbar element.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Visibility</b>  </td><td class="markdownTableBodyLeft">Whether the scrollbar should automatically be hidden when it isn't needed, and optionally expand the viewport as well.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<b>Spacing</b>  </td><td class="markdownTableBodyLeft">The space between the scrollbar and the viewport.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6265"></a>
+Events</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Function:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>On Value Changed</b>  </td><td class="markdownTableBodyLeft">A <a href="https://docs.unity3d.com/Manual/UnityEvents.html">UnityEvent</a> that is invoked when the scroll position of the Scroll Rect changes. The event can send the current scroll position as a <span class="tt">Vector2</span> type dynamic argument.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6266"></a>
+Details</h1>
+<p>The important elements in a scroll view are the <b>viewport</b>, the scrolling <b>content</b>, and optionally one or two <b>scrollbars</b>.</p>
+<ul>
+<li>The root GameObject has the Scroll Rect component.</li>
+<li>The viewport has a <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_mask.html">Mask</a> component. The viewport can either be the root GameObject, or a separate GameObject that's a child to the root. If auto-hiding scrollbars are used, it must be a child. The viewport Rect Transform needs to be referenced in the <b>Viewport</b> property of the Scroll Rect.</li>
+<li>All the scrolling content must be children of a single content GameObject that is a child to the viewport. The content Rect Transform needs to be referenced in the <b>Content</b> property of the Scroll Rect.</li>
+<li>The scrollbars - if used - are children to the root GameObject. See the <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_scrollbar.html">Scrollbar</a> page for more details on the setup of a scrollbar and see the section <b>Scrollbar setup</b> below for information about setup of scrollbars with a scroll view.</li>
+</ul>
+<p>This image shows a setup where the viewport is a child to the scroll view root. This is the default used when using the GameObject &gt; UI &gt; Scroll View menu option.</p>
+<p><img src="images/UI_ScrollRectHierarchy.png" alt="" class="inline"/></p>
+<p>To scroll content, the input must be received from inside the bounds of the ScrollRect, not on the content itself.</p>
+<p>Take care when using Unrestricted scrolling movement as it is possible to lose control of the content in an irretrievable way. When using Elastic or Constrained movement it is best to position the content so that it starts within the bounds of the ScrollRect, or undesirable behaviour may occur as the RectTransform tries to bring the content back within its bounds.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6267"></a>
+Scrollbar setup</h2>
+<p>Optionally, the Scroll Rect can be linked to a horizontal and/or a vertical <b>Scrollbar</b>. These are typically placed in the hierarchy as siblings to the viewport, and when present, should be dragged into the <b>Horizontal Scrollbar</b> and <b>Vertical Scrollbar</b> properties of the Scroll Rect, respectively. Note that the <b>Direction</b> property on such a horizontal Scrollbar should be set to <b>Left To Right</b>, and on the vertical Scrollbar to <b>Bottom To Top</b>.</p>
+<p>The scrollbars can optionally have auto-hiding behaviour that hides the scrollbars if the content doesn't need to scroll because it isn't larger than the viewport. Note that the auto-hiding only ever happens in Play Mode. In Edit Mode the scrollbars are always shown. This prevents marking the scene as dirty when it shouldn't be, and also help authoring content with proportions that there's room for even when the scrollbars are shown.</p>
+<p>If one or both scrollbars have their visibility behaviour set to <b>Auto Hide And Expand View</b>, the viewport is automatically expanded when the scrollbars are hidden in order to take up the extra room where the scrollbars would otherwise have been. With this setup, the position and size of the <b>view</b> is driven by the Scroll Rect, and the width of the <b>horizontal scrollbar</b> as well as the height of the <b>vertical scrollbar</b> is driven as well. With this setup the viewport as well as the scrollbars must be children to the Scroll Rect root GameObject.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6268"></a>
+Hints</h1>
+<ul>
+<li>The pivot and anchors of the content RectTransform can be used to determine how the content is aligned inside the scroll view if the content grows or shrinks. If the content should stay aligned with the top, set the anchors to the top of the parent, and set the pivot to the top position.</li>
+<li>See the page <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_h_o_w_t_o-_u_i_fit_content_size.html">Making UI elements fit the size of their content</a> for information about how to make the content Rect Transform automatically resize to fit the content. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

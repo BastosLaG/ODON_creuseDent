@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Marking code for Burst compilation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2compilation-burstcompile.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Marking code for Burst compilation </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md797"></a></p>
+<p>Apply the <a href="xref:Unity.Burst.BurstCompileAttribute"><span class="tt">[BurstCompile]</span></a> attribute to the parts of your code you want <a class="el" href="namespace_burst.html">Burst</a> to compile. You can apply the <span class="tt">[BurstCompile]</span> attribute to the following:</p>
+<ul>
+<li><b>Jobs</b>: When you apply <span class="tt">[BurstCompile]</span> to a job definition, <a class="el" href="namespace_burst.html">Burst</a> compiles everything within the job. For more information on jobs, refer to [Job system](xref:um-job-system) in the <a class="el" href="namespace_unity.html">Unity</a> Manual.</li>
+<li><b>Classes</b>: Apply <span class="tt">[BurstCompile]</span> to a class definition if the class contains static methods that are also marked with <span class="tt">[BurstCompile]</span>. <a class="el" href="namespace_burst.html">Burst</a> can't compile the class itself but only its member methods.</li>
+<li><b>Structs</b>: Apply <span class="tt">[BurstCompile]</span> to a regular (non-job) struct definition if the struct contains static methods that are also marked with <span class="tt">[BurstCompile]</span>.</li>
+<li><b>Static methods</b>: Apply <span class="tt">[BurstCompile]</span> to the method and its parent type. To work with dynamic functions that process data based on other data states, refer to <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-function-pointers.html">Function pointers</a>.</li>
+<li><b>Assemblies</b>: Apply <span class="tt">[BurstCompile]</span> to an assembly to set options for all <a class="el" href="namespace_burst.html">Burst</a> jobs and function-pointers within the assembly. For more information, refer to <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2compilation-burstcompile-assembly.html">Defining Burst options for an assembly</a>.</li>
+</ul>
+<dl class="section important"><dt>Important</dt><dd>&gt;You don't always need to mark a method with the <span class="tt">[BurstCompile]</span> attribute for <a class="el" href="namespace_burst.html">Burst</a> to compile it. Any method where the program execution switches from managed to Burst-compiled code is referred to as a <a class="el" href="namespace_burst.html">Burst</a> entry point. If a static entry point method is marked with <span class="tt">[BurstCompile]</span>, <a class="el" href="namespace_burst.html">Burst</a> also compiles any methods it calls into, even if they're not marked <span class="tt">[BurstCompile]</span>.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md798"></a>
+Configure Burst compilation with parameters</h1>
+<p>You can supply parameters to the <a href="xref:Unity.Burst.BurstCompileAttribute"><span class="tt">[BurstCompile]</span></a> attribute to modify aspects of compilation and improve <a class="el" href="namespace_burst.html">Burst</a>'s performance. You can use attribute parameters to:</p>
+<ul>
+<li>Use a different accuracy for math functions (for example, sin, cos).</li>
+<li>Relax the order of math computations so that <a class="el" href="namespace_burst.html">Burst</a> can rearrange the floating point calculations.</li>
+<li>Force a synchronous compilation of a job (only for <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2compilation.html">just-in-time compilation</a>).</li>
+</ul>
+<p>For example, you can use the <span class="tt">[BurstCompile]</span> attribute to change the <a href="xref:Unity.Burst.FloatPrecision">floating precision</a> and <a href="xref:Unity.Burst.FloatMode">float mode</a> of <a class="el" href="namespace_burst.html">Burst</a> like so: </p><pre class="fragment">[BurstCompile(FloatPrecision.Medium, FloatMode.Fast)]
+</pre><h1 class="doxsection"><a class="anchor" id="autotoc_md799"></a>
+FloatPrecision</h1>
+<p>Use the <a href="xref:Unity.Burst.FloatPrecision"><span class="tt">FloatPrecision</span></a> enumeration to define <a class="el" href="namespace_burst.html">Burst</a>'s floating precision accuracy.</p>
+<p>Float precision is measured in ulp (unit in the last place or unit of least precision). This is the space between floating-point numbers: the value the least significant digit represents if it's 1. <span class="tt"><a class="el" href="namespace_unity_1_1_burst.html#a869a28a1e7255c50e703becf62bd9d1c" title="Represents the floating point precision used for certain builtin operations e.g. sin/cos.">Unity.Burst.FloatPrecision</a></span> provides the following accuracy:</p>
+<ul>
+<li><span class="tt">FloatPrecision.Standard</span>: Default value, which is the same as <span class="tt">FloatPrecision.Medium</span>. This provides an accuracy of 3.5 ulp.</li>
+<li><span class="tt">FloatPrecision.High</span>: Provides an accuracy of 1.0 ulp.</li>
+<li><span class="tt">FloatPrecision.Medium</span>: Provides an accuracy of 3.5 ulp.</li>
+<li><span class="tt">FloatPrecision.Low</span>: Has an accuracy defined per function, and functions might specify a restricted range of valid inputs.</li>
+</ul>
+<p><b>Note:</b> In previous versions of the <a class="el" href="namespace_burst.html">Burst</a> API, the <span class="tt">FloatPrecision</span> enum was named <span class="tt">Accuracy</span>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md800"></a>
+FloatPrecision.Low</h2>
+<p>If you use the <a href="xref:Unity.Burst.FloatPrecision"><span class="tt">FloatPrecision.Low</span></a> mode, the following functions have a precision of 350.0 ulp. All other functions inherit the ulp from <span class="tt">FloatPrecision.Medium</span>.</p>
+<ul>
+<li><span class="tt">Unity.Mathematics.math.sin(x)</span></li>
+<li><span class="tt">Unity.Mathematics.math.cos(x)</span></li>
+<li><span class="tt">Unity.Mathematics.math.exp(x)</span></li>
+<li><span class="tt">Unity.Mathematics.math.exp2(x)</span> <br  />
+</li>
+<li><span class="tt">Unity.Mathematics.math.exp10(x)</span></li>
+<li><span class="tt">Unity.Mathematics.math.log(x)</span></li>
+<li><span class="tt">Unity.Mathematics.math.log2(x)</span></li>
+<li><span class="tt">Unity.Mathematics.math.log10(x)</span></li>
+<li><span class="tt">Unity.Mathematics.math.pow(x, y)</span><ul>
+<li>Negative <span class="tt">x</span> to the power of a fractional <span class="tt">y</span> aren't supported.</li>
+</ul>
+</li>
+<li><span class="tt">Unity.Mathematics.math.fmod(x, y)</span></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md801"></a>
+FloatMode</h1>
+<p>Use the <a href="xref:Unity.Burst.FloatMode"><span class="tt">FloatMode</span></a> enumeration to define <a class="el" href="namespace_burst.html">Burst</a>'s floating point math mode. It provides the following modes:</p>
+<ul>
+<li><span class="tt">FloatMode.Default</span>: Defaults to <span class="tt">FloatMode.Strict</span> mode.</li>
+<li><span class="tt">FloatMode.Strict</span>: <a class="el" href="namespace_burst.html">Burst</a> doesn't perform any re-arrangement of the calculation and respects special floating point values (such as denormals, NaN). This is the default value.</li>
+<li><span class="tt">FloatMode.Fast</span>: <a class="el" href="namespace_burst.html">Burst</a> can perform instruction re-arrangement and use dedicated or less precise hardware SIMD instructions.</li>
+<li><span class="tt">FloatMode.Deterministic</span>: Unsupported. Deterministic mode is reserved for a future iteration of <a class="el" href="namespace_burst.html">Burst</a>.</li>
+</ul>
+<p>For hardware that can support Multiply and Add (e.g mad <span class="tt">a * b + c</span>) into a single instruction, you can use <span class="tt">FloatMode.Fast</span> to enable this optimization. However, the reordering of these instructions might lead to a lower accuracy.</p>
+<p>Use <span class="tt">FloatMode.Fast</span> for scenarios where the exact order of the calculation and the uniform handling of NaN values aren't required.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md802"></a>
+Additional resources</h1>
+<ul>
+<li><a href="xref:Unity.Burst.BurstCompileAttribute"><span class="tt">[BurstCompile]</span> attribute API reference</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2compilation-burstcompile-assembly.html">Defining Burst options for an assembly</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

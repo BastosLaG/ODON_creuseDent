@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Measure.Method()</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_8performance_0d92d1d09a72ed_2_documentation_0i_2measure-method.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Measure.Method() </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5154"></a></p>
+<p>Executes the provided method, sampling performance using the following additional properties/methods to control how the measurements are taken:</p><ul>
+<li><b>WarmupCount(int n)</b> - number of times to execute before measurements are collected. If unspecified, a default warmup is executed for 100 ms or until at least 3 method executions have completed, whichever is longer.</li>
+<li><b>MeasurementCount(int n)</b> - number of measurements to capture, defaults to 9 if not specified.</li>
+<li><b>DynamicMeasurementCount(OutlierMode outlierMode)</b> - dynamically find a suitable measurement count based on the margin of error of the samples. The measurements will stop once a certain amount of samples (specified by a confidence interval) falls within an acceptable error range from the result (defined by a relative error of the mean). A default margin of error range of 2% and a default confidence interval of 99% will be used. Statistical outliers will not be taken into account unless different behaviour is specified through the outlierMode argument.</li>
+<li><b>DynamicMeasurementCount(double maxRelativeError, ConfidenceLevel confidenceLevel, OutlierMode outlierMode)</b> - dynamically find a suitable measurement count based on the margin of error of the samples and using the provided confidence interval and error range.</li>
+<li><b>IterationsPerMeasurement(int n)</b> - number of method executions per measurement to use. If this value is not specified, the method is executed as many times as possible until approximately 100 ms has elapsed.</li>
+<li><b>SampleGroup(string name)</b> - name of the measurement, defaults to "Time" if unspecified.</li>
+<li><b>SampleGroup(SampleGroup sampleGroup)</b> - a sample group with a custom name and measurement unit. This will override the otherwise default value of "Time".</li>
+<li><b>GC()</b> - if specified, measures the total number of Garbage Collection allocation calls.</li>
+<li><b>SetUp(Action action)</b> - is called every iteration before method execution. Setup time is not measured.</li>
+<li><b>CleanUp(Action action)</b> - is called every iteration after method execution. Cleanup time is not measured.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md5155"></a>
+Example 1: Simple method measurement using default values</h3>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">[Test, Performance]</div>
+<div class="line">public void Test()</div>
+<div class="line">{</div>
+<div class="line">    Measure.Method(() =&gt; { ... }).Run();</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md5156"></a>
+Example 2: Customize Measure.Method properties</h3>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">[Test, Performance]</div>
+<div class="line">public void Test()</div>
+<div class="line">{</div>
+<div class="line">    Measure.Method(() =&gt; { ... })</div>
+<div class="line">        .WarmupCount(10)</div>
+<div class="line">        .MeasurementCount(10)</div>
+<div class="line">        .IterationsPerMeasurement(5)</div>
+<div class="line">        .GC()</div>
+<div class="line">        .SetUp(()=&gt; {/*setup code*/})</div>
+<div class="line">        .CleanUp(()=&gt; {/*cleanup code*/})</div>
+<div class="line">        .Run();</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md5157"></a>
+Example 3: Measure.Method, SampleGroup and ProfilerMarkers</h3>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">[Test, Performance]</div>
+<div class="line">public void Test()</div>
+<div class="line">{</div>
+<div class="line">    var sg = new SampleGroup(&quot;Name&quot;, SampleUnit.Microsecond);</div>
+<div class="line">    var sgMarker = new SampleGroup(&quot;MarkerName&quot;, SampleUnit.Seconds);</div>
+<div class="line">    Measure.Method(() =&gt; { ... }).SampleGroup(sg).ProfilerMarkers(sgMarker).Run();</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

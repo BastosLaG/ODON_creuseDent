@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Light Anchor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2_view-_lighting-_tool.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Light Anchor </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2909"></a></p>
+<p>The Light Anchor can help to place light sources around subjects, in relation to a Camera and an anchor point. It's particularly effective for cinematic lighting, which often requires multiple light sources orbiting a subject.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2910"></a>
+Using the Light Anchor Component</h1>
+<p>To add a Light Anchor component to a GameObject in your Scene:</p>
+<ol type="1">
+<li>Select a Light GameObject in the hierarchy to open its Inspector window.</li>
+<li>Go to <b>Add Component</b> &gt; <b>Rendering</b> &gt; <b>Light Anchor</b></li>
+</ol>
+<p>By default, the Anchor's position is the same as the position of the GameObject the Light Anchor Component is attached to.</p>
+<p><b>Note</b>: To use the Light Anchor, you must set the Tag of at least one Camera to "MainCamera".</p>
+<p>Use the <b>Orbit</b> and <b>Elevation</b> to control the orientation of the light, in degrees, relative to the main Camera's and Anchor's positions. If the Light has a Cookie or an IES Profile, use the <b>Roll</b> to change their orientation. Use the <b>Distance</b> to control how far from the anchor, in meters, you want to place the Light.</p>
+<p>You can use the <b>Anchor Position Override</b> to provide a GameObject’s <a href="https://docs.unity3d.com/ScriptReference/Transform.html">Transform</a> as an anchor point for the Light. This is useful if you want the Light to follow a specific GameObject in the Scene.</p>
+<p>&lt;video title="A light uses the main camera as the reference GamObject that controls the rotation of the light. The light rotates synchronously with the camera." src="Images/videos/light-anchor-animation.mp4" width="100%" height="auto" autoplay="true" loop="true" controls&gt;&lt;/video&gt;</p>
+<p><b>Note</b>: The above example uses the Main Camera as the reference Camera that adjusts the light rotation. The Common presets might create a different result in the Scene View if your view isn't aligned with the Main Camera.</p>
+<p>You can set a <b>Position Offset</b> for this custom Anchor. This is useful if the Transform position of the custom Anchor isn't centered appropriately for the light to orbit correctly around the custom Anchor.</p>
+<p><img src="Images/LightAnchor0.png" alt="Light Anchor component screenshot. Orbit and Elevation properties display example values that change the orientation of a light." class="inline"/></p>
+<p>The Light Anchor component also includes a list of <b>Presets</b> that you can use to set the Light's orientation relative to the main Camera.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2911"></a>
+Properties</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Orbit</b>  </td><td class="markdownTableBodyNone">Use the left icon to control the Orbit of the light. This tool becomes green when you move the icon.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Elevation</b>  </td><td class="markdownTableBodyNone">Use the middle icon to control the Elevation of the light. This tool becomes blue when you move the icon.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Roll</b>  </td><td class="markdownTableBodyNone">Use the right icon to control the Roll of the light. This tool becomes gray when you move the icon. This is useful if the light has an IES or a Cookie.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Distance</b>  </td><td class="markdownTableBodyNone">Controls the distance between the light and its anchor in world space.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Up Direction</b>  </td><td class="markdownTableBodyNone">Defines the space of the up direction of the anchor. When you set this value to Local, the Up Direction is relative to the Camera.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Anchor Position Override</b>  </td><td class="markdownTableBodyNone">Allows you to use a GameObject's <a href="https://docs.unity3d.com/ScriptReference/Transform.html">Transform</a> as anchor position instead of the LightAnchor's Transform. When the Transform of the GameObject you assigned to this property changes, the Light Anchor's Transform also changes.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Common</b>  </td><td class="markdownTableBodyNone">Assigns a preset to the light component based on the behavior of studio lights.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

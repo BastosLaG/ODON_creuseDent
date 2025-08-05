@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_eye_gaze_interaction_1_1_eye_gaze_device =
+[
+    [ "FinishSetup", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_eye_gaze_interaction_1_1_eye_gaze_device.html#a902e9324252a55feb54f2cf4e6d2750a", null ],
+    [ "pose", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_eye_gaze_interaction_1_1_eye_gaze_device.html#aa3d15a3c677e00b1289a61deae935170", null ]
+];

@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Select clips</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-select.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Select clips </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5919"></a></p>
+<p>The <a class="el" href="namespace_timeline.html">Timeline</a> window supports many different methods of selecting clips depending on where you click, where you drag, and whether a clip or track is already selected.</p>
+<p>The easiest method is to click a clip to select it. The Content view displays the selected clip with a white border, including its blends. Selecting a clip deselects all other tracks or clips.</p>
+<p>Selecting a clip also displays its properties in the Inspector window. The clip properties change depending on the type of clip and whether multiple clips are selected. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-clip.html">Setting Clip properties</a> for details.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5920"></a>
+Select many clips</h1>
+<p>Hold Shift and click to select contiguous clips vertically on different tracks or horizontally on the same track. For example, to select three contiguous clips on the same track, select the first clip, then hold Shift and click the third clip. All three clips are selected.</p>
+<p><img src="images/tl-clip-select-first.png" alt="" class="inline"/></p>
+<p><em>Click to select the first clip, <span class="tt">2A</span></em></p>
+<p><img src="images/tl-clip-select-last.png" alt="" class="inline"/></p>
+<p><em>Shift-click the third clip, <span class="tt">2C</span>, to select contiguous clips (<span class="tt">2A</span>, <span class="tt">2B</span>, and <span class="tt">2C</span>) on the same track</em></p>
+<p>Hold Control (MacOS: Command) and click to select discontiguous clips. Hold Control (MacOS: Command) and click a selected clip to deselect it.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5921"></a>
+Select clips with a selection rectangle</h1>
+<p>Click and drag on an empty area in the Content view to draw a selection rectangle. This selects all clips inside or that intersect the rectangle. Hold Shift and draw a selection rectangle to add clips to the current selection.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5922"></a>
+Select clips with the Tab key</h1>
+<p>You can also press the Tab key to select clips. The behavior of the Tab key changes depending on the current selection:</p>
+<ul>
+<li>If a track is selected, press Tab to select the first clip on the selected track.</li>
+<li>If many discontiguous tracks are selected, press Tab to select the first clip on the last selected track.</li>
+<li>If a clip is selected, press Tab to <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2trk-select.html">select its track</a>.</li>
+<li>If there are no clips or tracks selected, press Tab to select the first clip on the first track.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5923"></a>
+Select clips with arrow keys</h1>
+<p>Use the arrow keys to change the selected clips. The behavior and results depend on the current selection and which modifier keys you press:</p>
+<ul>
+<li>If nothing is selected in the <a class="el" href="namespace_timeline.html">Timeline</a> window, press the Tab, Up arrow, or Down arrow key to select the first clip on the first track.</li>
+<li>If a clip is selected, press the Left arrow key to select the previous clip. If the selected clip is the first clip on the track, the Left arrow key selects the track.</li>
+<li>If a clip is selected, press the Right arrow key to select the next clip. Press the Up arrow key to select the closest clip on the previous track. Press the Down arrow key to select the closest clip on the next track.</li>
+<li>Hold Shift and press either the Left arrow key or Right arrow key to add or remove clips from the selection of clips. Whether a clip is added to or removed from the selection of clips is relative to the first selected clip. This selection method only selects or unselects clips on the same track.</li>
+</ul>
+<p>When using arrow keys to change selected clips, the Content view pans to display the most recently selected clip if it outside the Content view. For example, if the selected clip is framed in the Content view and you press the Right arrow key to select the next clip that is outside the Content view, the Content view pans to display the start of the selected clip.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5924"></a>
+Select clips with the Timeline Playhead</h1>
+<p>You can also select clips with the <a class="el" href="namespace_timeline.html">Timeline</a> Playhead. Right-click the <a class="el" href="namespace_timeline.html">Timeline</a> Playhead and choose a selection option. This selects clips that either start after, start before, end after, end before, or intersect the <a class="el" href="namespace_timeline.html">Timeline</a> Playhead. Clips are selected on all tracks.</p>
+<p><img src="images/tl-playhead-select-menu.png" alt="" class="inline"/></p>
+<p><em>Right-click the <a class="el" href="namespace_timeline.html">Timeline</a> Playhead and choose <b>Select</b> for more clip selection options</em> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

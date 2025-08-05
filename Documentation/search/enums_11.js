@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['reflectionsource_0',['ReflectionSource',['../namespace_unity_editor_1_1_rendering_1_1_universal.html#ac4ef0d1aaa018fd5db467eac7ff49fe7',1,'UnityEditor::Rendering::Universal']]],
+  ['refreshreason_1',['RefreshReason',['../namespace_unity_editor_1_1_timeline.html#a7bdf137d4baf48380ce479caf024ef50',1,'UnityEditor::Timeline']]],
+  ['region_2',['Region',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a68da053f581aa409d96c6238a2a66204',1,'UnityEngine::XR::Interaction::Toolkit::Interactors::NearFarInteractor']]],
+  ['registrationmode_3',['RegistrationMode',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_transformers_1_1_x_r_base_grab_transformer.html#a56d5192191713e07ee4f1243752cf89c',1,'UnityEngine::XR::Interaction::Toolkit::Transformers::XRBaseGrabTransformer']]],
+  ['rendereroverrideoption_4',['RendererOverrideOption',['../namespace_unity_engine_1_1_rendering_1_1_universal.html#a8895a2d7c0830f724593585f3dbb5851',1,'UnityEngine::Rendering::Universal']]],
+  ['renderertype_5',['RendererType',['../namespace_unity_engine_1_1_rendering_1_1_universal.html#a5d7d31b9b1a24a9406a1a47613bd4984',1,'UnityEngine::Rendering::Universal']]],
+  ['renderface_6',['RenderFace',['../class_unity_editor_1_1_base_shader_g_u_i.html#abee9ddf19abd9c5d8dbd8bba30d9fe30',1,'UnityEditor::BaseShaderGUI']]],
+  ['renderinglayermaskoperation_7',['RenderingLayerMaskOperation',['../class_unity_engine_1_1_rendering_1_1_probe_adjustment_volume.html#a2e4a45a9bcc6399f25125db813bb5172',1,'UnityEngine::Rendering::ProbeAdjustmentVolume']]],
+  ['renderingmode_8',['RenderingMode',['../namespace_unity_engine_1_1_rendering_1_1_universal.html#ab2b1b5c68947b640d3fd9c64170e6419',1,'UnityEngine::Rendering::Universal']]],
+  ['rendermode_9',['RenderMode',['../class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_open_x_r_settings.html#a0a4d7a3876278a45cb314eb919701d45',1,'UnityEngine::XR::OpenXR::OpenXRSettings']]],
+  ['renderpassevent_10',['RenderPassEvent',['../namespace_unity_engine_1_1_rendering_1_1_universal.html#abcf86de95108d2ec392bc873e92392d5',1,'UnityEngine::Rendering::Universal']]],
+  ['renderpathcompatibility_11',['RenderPathCompatibility',['../namespace_unity_engine_1_1_rendering_1_1_universal.html#aa52a87314ef625dcaa797d9d269a0915',1,'UnityEngine::Rendering::Universal']]],
+  ['renderqueuetype_12',['RenderQueueType',['../namespace_unity_engine_1_1_rendering_1_1_universal.html#a45a933867090b695a2983d16fd19fa4c',1,'UnityEngine::Rendering::Universal']]],
+  ['reorderablelistflags_13',['ReorderableListFlags',['../namespace_unity_1_1_visual_scripting_1_1_reorderable_list.html#ab50155d50a05f368df2f672a02a066df',1,'Unity::VisualScripting::ReorderableList']]],
+  ['repositorytype_14',['RepositoryType',['../namespace_nuget_for_unity_1_1_models.html#ae0b6c6d5ba287a07d35d57d8d03e43ae',1,'NugetForUnity::Models']]],
+  ['requestresult_15',['RequestResult',['../namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit.html#a6be9ce618760d7cf7c31169d955de25b',1,'UnityEngine::XR::Interaction::Toolkit']]],
+  ['requirement_16',['Requirement',['../class_samples_1_1_sample_settings.html#a72f8b32a5a07eae068e2af20939608f6',1,'Samples::SampleSettings']]],
+  ['result_17',['Result',['../struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command.html#ad4cadc5001abaa305a98b5fa8b94a237',1,'UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand.Result'],['../struct_unity_engine_1_1_input_system_1_1_low_level_1_1_query_paired_user_account_command.html#a415af6f1c31a9138c350e1980719c248',1,'UnityEngine.InputSystem.LowLevel.QueryPairedUserAccountCommand.Result']]],
+  ['resulttype_18',['ResultType',['../class_student_record.html#acc97a0daf145cfc792c647b353b8927b',1,'StudentRecord']]],
+  ['rotatemode_19',['RotateMode',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_x_r_ray_interactor.html#ae3d9e0c9a26a55335bd1c0a69c113a8d',1,'UnityEngine::XR::Interaction::Toolkit::Interactors::XRRayInteractor']]],
+  ['rotationfollowmode_20',['RotationFollowMode',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_lazy_follow.html#a398a98067275aaecbe5acbd05770400e',1,'UnityEngine::XR::Interaction::Toolkit::UI::LazyFollow']]],
+  ['runstate_21',['RunState',['../namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#ad6bcc775441176dd7331d8173c8527b7',1,'UnityEditor::TestTools::TestRunner::Api']]]
+];

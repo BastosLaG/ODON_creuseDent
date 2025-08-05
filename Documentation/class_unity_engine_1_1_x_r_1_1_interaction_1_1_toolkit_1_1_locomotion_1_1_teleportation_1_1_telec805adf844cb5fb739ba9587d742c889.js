@@ -1,0 +1,9 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_telec805adf844cb5fb739ba9587d742c889 =
+[
+    [ "destinationEvaluationDelayTime", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_telec805adf844cb5fb739ba9587d742c889.html#ab0b0a51888543246d17d1b6bc7c580af", null ],
+    [ "destinationEvaluationFilter", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_telec805adf844cb5fb739ba9587d742c889.html#a9deae43ac5494184b9086dc8cba6a039", null ],
+    [ "destinationFilterObject", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_telec805adf844cb5fb739ba9587d742c889.html#addaa78e97e462b0b31dcfaf46b15607a", null ],
+    [ "destinationPollFrequency", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_telec805adf844cb5fb739ba9587d742c889.html#a117d2f958924f8ff83ffcad953fa338a", null ],
+    [ "enableDestinationEvaluationDelay", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_telec805adf844cb5fb739ba9587d742c889.html#ad6ca3633cad6a352fa85966b7b50019f", null ],
+    [ "pollForDestinationChange", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_telec805adf844cb5fb739ba9587d742c889.html#a4ba135146b6123f58b35daeba505f905", null ]
+];

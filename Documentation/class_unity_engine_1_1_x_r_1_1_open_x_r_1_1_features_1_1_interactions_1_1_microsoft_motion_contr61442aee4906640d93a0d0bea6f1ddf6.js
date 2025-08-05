@@ -1,0 +1,23 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6 =
+[
+    [ "FinishSetup", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a34926ee1560ac60490c9a733f55be960", null ],
+    [ "devicePose", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a655ac1d93bb123d9b9f54b85c4c8ba45", null ],
+    [ "devicePosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a4a31f8bd6a34e668645a6426bc8d9b00", null ],
+    [ "deviceRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a40a00ee91fc127cc1d7abb948ccc5c1f", null ],
+    [ "grip", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a21fb24a11640a386b32b3dac178f4e0c", null ],
+    [ "gripPressed", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a8f40c8b7fc0767d6774e43486a17c994", null ],
+    [ "haptic", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a2bd938787b743c51532aeaf33ff198f8", null ],
+    [ "isTracked", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#aedf7623620e7152d8a2b7380dd91b7e1", null ],
+    [ "joystick", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#ab7d28a9bd8723a0462616573ebee3a07", null ],
+    [ "joystickClicked", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a50aae03f5155950f2d18af0ced07e159", null ],
+    [ "menu", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a39397f535fa94b7c7bab0705298e6c02", null ],
+    [ "pointer", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a38746e5c17464bbfceafc74f609002a1", null ],
+    [ "pointerPosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a146ff052d98ece0460da628f0fb0f68e", null ],
+    [ "pointerRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a7d01af2ad58014e88a8dce67b0c8f39d", null ],
+    [ "touchpad", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a3c9c924ba25178259051939978f55bb5", null ],
+    [ "touchpadClicked", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a45287db23c4a388b9dc735db4b0ccd70", null ],
+    [ "touchpadTouched", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#aa6edceb543d68b5cbf390cc9dcec5139", null ],
+    [ "trackingState", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a5fa0d2b8ecf98281148da4dcbe682041", null ],
+    [ "trigger", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a400e93e0d3e02a162b8c4cf83f0f40e0", null ],
+    [ "triggerPressed", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html#a1d073fa3b4f0383e3a5504f3eb836740", null ]
+];

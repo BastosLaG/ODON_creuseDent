@@ -1,0 +1,25 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset =
+[
+    [ "ApplyPreset", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#af22816fbfe28d0cfd43eed605550a300", null ],
+    [ "ComputeDotProductThresholds", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a7a16492ded69eca30deb6b588a217aff", null ],
+    [ "GetReferenceAxisForTrackingAnchor", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a094c8bdd762a9e8fcd6f16a6fefeda44", null ],
+    [ "allowSmoothing", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a279a6697510a2201071c44b242be8638", null ],
+    [ "followLowerSmoothingValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#aea64431290b96e14e795c32162da1f04", null ],
+    [ "followUpperSmoothingValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#aac70cbee10126f24a07864eae921716c", null ],
+    [ "hideDelaySeconds", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a926f374e577f592472bdcfc99575d557", null ],
+    [ "invertAxisForRightHand", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#afc8261af9f4b4174b7361a205c1c47b6", null ],
+    [ "leftHandLocalPosition", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a306d04489c30245d66e4623b63c6aff6", null ],
+    [ "leftHandLocalRotation", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a6c9aef72469d2475a2fdcacaecd7b674", null ],
+    [ "palmFacingUpDegreeAngleThreshold", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a0a3a6ceaaa8f5fcffd673885d399ebea", null ],
+    [ "palmFacingUserDegreeAngleThreshold", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a5d2120b9f949d427cdcfe6f1dfecf6ab", null ],
+    [ "palmReferenceAxis", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a86fb65f0c7e53e24b8b144b15735f4ff", null ],
+    [ "requirePalmFacingUp", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a77d177d61467efd67789ba9bbb32a268", null ],
+    [ "requirePalmFacingUser", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#ac0e44592a5306ba670304ebe6fd80a5d", null ],
+    [ "rightHandLocalPosition", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a8f1fcc18132425acff8dddefdf20be09", null ],
+    [ "rightHandLocalRotation", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#ab759760e05f1d5509c4684aa7f276639", null ],
+    [ "snapToGaze", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a9c0efcfad4a232ca3c5951bdb0120e59", null ],
+    [ "snapToGazeAngleThreshold", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#ac209b92f8062886566005c99fc06f2c2", null ],
+    [ "palmFacingUpDotThreshold", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#a5906518907644803355963544c50957e", null ],
+    [ "palmFacingUserDotThreshold", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#ae87f8c248714826ee20ac95eeb4ac814", null ],
+    [ "snapToGazeDotThreshold", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_body_u_i_1_1_follow_preset.html#aef698b4e31fdbe899565fdc93483fb9f", null ]
+];

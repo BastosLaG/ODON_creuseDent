@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Workflow-Direct</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_workflow-_direct.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Workflow-Direct </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2387"></a>
+autotoc_md2387</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2388"></a>
+uid: input-system-workflow-direct</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2389"></a>
+Workflow Overview - Directly Reading Device States</h1>
+<p><img src="Images/Workflow-Direct.png" alt="" height="200px" class="inline"/></p>
+<p>This is the simplest and most direct input workflow, but the least flexible. It bypasses the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions editor</a>, so you do not benefit from all the features come with <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Actions</a>.</p>
+<p>It can be useful if you want a quick implementation with one specific type of device. It's generally not the best choice if you want to provide your users with multiple types of input or if you want to target multiple platforms.</p>
+<p>You can directly read the values from connected devices by referring to the device’s <a href="Controls.html">controls</a> and reading the values they are currently generating, using code like this:</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyPlayerScript : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">void</span> Update()</div>
+<div class="line">    {</div>
+<div class="line">        var gamepad = <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_gamepad.html">Gamepad</a>.<a class="code hl_property" href="class_unity_engine_1_1_input_system_1_1_gamepad.html#a6f0bd4b71340da07b56f6ec56097da1d">current</a>;</div>
+<div class="line">        <span class="keywordflow">if</span> (gamepad == <span class="keyword">null</span>)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span>; <span class="comment">// No gamepad connected.</span></div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (gamepad.rightTrigger.wasPressedThisFrame)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// &#39;Use&#39; code here</span></div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        Vector2 move = gamepad.leftStick.ReadValue();</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// &#39;Move&#39; code here</span></div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_gamepad_html"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_gamepad.html">UnityEngine.InputSystem.Gamepad</a></div><div class="ttdoc">An Xbox-style gamepad with two sticks, a D-Pad, four face buttons, two triggers, two shoulder buttons...</div><div class="ttdef"><b>Definition</b> Gamepad.cs:417</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_gamepad_html_a6f0bd4b71340da07b56f6ec56097da1d"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_gamepad.html#a6f0bd4b71340da07b56f6ec56097da1d">UnityEngine.InputSystem.Gamepad.current</a></div><div class="ttdeci">static Gamepad current</div><div class="ttdoc">The gamepad last used/connected by the player or null if there is no gamepad connected to the system.</div><div class="ttdef"><b>Definition</b> Gamepad.cs:627</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_input_system_html"><div class="ttname"><a href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a></div><div class="ttdef"><b>Definition</b> AxisComposite.cs:14</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><p>The example above reads values directly from the right trigger, and the left stick, of the currently connected <a href="Gamepad.html">gamepad</a>. It does not use the input system’s "Action" class, and instead the conceptual actions in your game or app, such as "move" and "use", are implicitly defined by what your code does in response to the input. You can use the same approach for other Device types such as the <a href="../api/UnityEngine.InputSystem.Keyboard.html">keyboard</a> or <a href="../api/UnityEngine.InputSystem.Mouse.html">mouse</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2390"></a>
+Pros and Cons</h2>
+<p>This can be the fastest way to set up some code which responds to input, but it is the least flexible because there is no abstraction between your code and the values generated by a specific device.</p>
+<p>If you choose to use this technique:</p>
+<ul>
+<li>You won’t benefit from Unity’s management of <a href="Actions.html">actions</a> and <a href="Interactions.html">interactions</a>.</li>
+<li>It is harder to make your game or app work with multiple types of <a href="Devices.html">input device</a>.</li>
+<li>Your input bindings are hard-coded in your script, so any changes to bindings require changes to the code.</li>
+<li>It is harder to allow the user to <a href="ActionBindings.html#interactive-rebinding">remap their own controls to different actions at run time</a>.</li>
+</ul>
+<p>You can find an example of this workflow in the sample projects included with the input system package. To find it, in the Project window, look in <b>Assets &gt; <a class="el" href="class_samples.html">Samples</a> &gt; SimpleDemo</b> and open the scene: <b>SimpleDemo_UsingState</b>.</p>
+<p>See <a href="SupportedDevices.html">Supported Devices</a> for more information about devices supported by the input system, and the API to read their states.</p>
+<p>For more a more flexible workflow, see the <a href="Workflow-Actions.html">Actions Workflow</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

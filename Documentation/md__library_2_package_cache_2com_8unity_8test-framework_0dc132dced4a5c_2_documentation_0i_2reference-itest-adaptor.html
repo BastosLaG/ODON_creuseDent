@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: ITestAdaptor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-itest-adaptor.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">ITestAdaptor </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5540"></a></p>
+<p><span class="tt">ITestAdaptor</span> is a representation of a node in the test tree implemented as a wrapper around the <a href="http://www.nunit.org/">NUnit</a> <a href="https://github.com/nunit/nunit/blob/master/src/NUnitFramework/framework/Interfaces/ITest.cs">ITest</a> interface.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5541"></a>
+Properties</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Syntax  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">string Id</span>  </td><td class="markdownTableBodyNone">The ID of the test tree node. The ID can change if you add new tests to the suite. Use <span class="tt">UniqueName</span>, if you want to have a more permanent point of reference.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">string Name</span>  </td><td class="markdownTableBodyNone">The name of the test. E.g., <span class="tt">MyTest</span>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">string FullName</span>  </td><td class="markdownTableBodyNone">The full name of the test. E.g., <span class="tt">MyNamespace.MyTestClass.MyTest</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">int TestCaseCount</span>  </td><td class="markdownTableBodyNone">The total number of test cases in the node and all sub-nodes.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">bool HasChildren</span>  </td><td class="markdownTableBodyNone">Whether the node has any children.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">bool IsSuite</span>  </td><td class="markdownTableBodyNone">Whether the node is a test suite/fixture.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">IEnumerable&lt;ITestAdaptor&gt; Children</span>  </td><td class="markdownTableBodyNone">The child nodes.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">ITestAdaptor Parent</span>  </td><td class="markdownTableBodyNone">The parent node, if any.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">int TestCaseTimeout</span>  </td><td class="markdownTableBodyNone">The test case timeout in milliseconds. Note that this value is only available on TestFinished.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">ITypeInfo TypeInfo</span>  </td><td class="markdownTableBodyNone">The type of test class as an <span class="tt">NUnit</span> <a href="https://github.com/nunit/nunit/blob/master/src/NUnitFramework/framework/Interfaces/ITypeInfo.cs">ITypeInfo</a>. If the node is not a test class, then the value is <span class="tt">null</span>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">IMethodInfo Method</span>  </td><td class="markdownTableBodyNone">The <a href="https://github.com/nunit/nunit/blob/master/src/NUnitFramework/framework/Interfaces/IMethodInfo.cs">Nunit IMethodInfo</a> of the test method. If the node is not a test method, then the value is <span class="tt">null</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">object[] Arguments</span>  </td><td class="markdownTableBodyNone">The array of arguments that the test method/fixture will be invoked with.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">string[] Categories</span>  </td><td class="markdownTableBodyNone">An array of the categories applied to the test or fixture.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">bool IsTestAssembly</span>  </td><td class="markdownTableBodyNone">Whether the node represents a test assembly.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">RunState RunState</span>  </td><td class="markdownTableBodyNone">The run state of the test node. Either <span class="tt">NotRunnable</span>, <span class="tt">Runnable</span>, <span class="tt">Explicit</span>, <span class="tt">Skipped</span>, or <span class="tt">Ignored</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">string Description</span>  </td><td class="markdownTableBodyNone">The description of the test.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">string SkipReason</span>  </td><td class="markdownTableBodyNone">The skip reason. E.g., if ignoring the test.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">string ParentId</span>  </td><td class="markdownTableBodyNone">The ID of the parent node.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">string ParentFullName</span>  </td><td class="markdownTableBodyNone">The full name of the parent node.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">string UniqueName</span>  </td><td class="markdownTableBodyNone">A unique generated name for the test node. E.g., <span class="tt">Tests.dll/MyNamespace/MyTestClass/[<a class="el" href="class_tests.html">Tests</a>][MyNamespace.MyTestClass.MyTest]</span>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">string ParentUniqueName</span>  </td><td class="markdownTableBodyNone">A unique name of the parent node. E.g., <span class="tt">Tests.dll/MyNamespace/[<a class="el" href="class_tests.html">Tests</a>][MyNamespace.MyTestClass][suite]</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">int ChildIndex</span>  </td><td class="markdownTableBodyNone">The child index of the node in its parent.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TestMode TestMode</span>  </td><td class="markdownTableBodyNone">The mode of the test. Either <b>Edit Mode</b> or <b>Play Mode</b>.  </td></tr>
+</table>
+<blockquote class="doxtable">
+<p><b>Note</b>: Some properties are not available when receiving the test tree as a part of a test result coming from a standalone Player, such as <span class="tt">TypeInfo</span> and <span class="tt">Method</span>. </p>
+</blockquote>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: ActionBindings</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_bindings.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">ActionBindings </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md1915"></a>
+autotoc_md1915</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1916"></a>
+uid: input-system-action-bindings</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1917"></a>
+Input Bindings</h1>
+<ul>
+<li>Composite Bindings<ul>
+<li>1D Axis</li>
+<li>2D Vector</li>
+<li>3D Vector</li>
+<li>One Modifier</li>
+<li>Two Modifiers</li>
+<li>Writing custom Composites</li>
+</ul>
+</li>
+<li>Working with Bindings<ul>
+<li>Looking up Bindings</li>
+<li>Changing Bindings<ul>
+<li>Applying overrides</li>
+<li>Erasing Bindings</li>
+<li>Adding Bindings</li>
+<li>Setting parameters</li>
+</ul>
+</li>
+<li>Interactive rebinding</li>
+<li>Saving and loading rebinds</li>
+<li>Restoring original Bindings</li>
+<li>Displaying Bindings</li>
+</ul>
+</li>
+<li>Control schemes</li>
+<li>Details<ul>
+<li>Binding resolution<ul>
+<li>Binding resolution while Actions are enabled</li>
+<li>Choosing which Devices to use</li>
+</ul>
+</li>
+<li>Conflicting inputs</li>
+<li>Initial state check</li>
+</ul>
+</li>
+</ul>
+<p>An <a href="../api/UnityEngine.InputSystem.InputBinding.html"><span class="tt">InputBinding</span></a> represents a connection between an <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Action</a> and one or more <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_controls.html">Controls</a> identified by a <a href="Controls.md#control-paths">Control path</a>. For example, the <b>right trigger</b> of a gamepad (a control) might be bound to an an action named "accelerate", so that pulling the right trigger causes a car to accelerate in your game.</p>
+<p>You can add multiple bindings to an action, which is generally useful for supporting multiple types of input device. For example, in the default set of actions, the "Move" action has a binding to the left gamepad stick and the WSAD keys, which means input through any of these bindings will perform the action.</p>
+<p>You can also bind multiple controls from the same device to an action. For example, both the left and right trigger of a gamepad could be mapped to the same action, so that pulling either trigger has the same result in your game.</p>
+<p>&lt;img src="./Images/ActionWithMultipleBindings.png" alt="The default "move" action with its multiple bindings highlighted"/&gt;<br  />
+ <em>The default "Move" action in the Actions Editor window, displaying the multiple bindings associated with it.</em></p>
+<p>Each Binding has the following properties:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_path"><span class="tt">path</span></a>  </td><td class="markdownTableBodyNone"><a href="Controls.md#control-paths">Control path</a> that identifies the control(s) from which the Action should receive input.<br  />
+<br  />
+Example: <span class="tt">"&lt;Gamepad&gt;/leftStick"</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_overridePath"><span class="tt">overridePath</span></a>  </td><td class="markdownTableBodyNone"><a href="Controls.md#control-paths">Control path</a> that overrides <span class="tt">path</span>. Unlike <span class="tt">path</span>, <span class="tt">overridePath</span> is not persistent, so you can use it to non-destructively override the path on a Binding. If it is set to something other than null, it takes effect and overrides <span class="tt">path</span>. To get the path which is currently in effect (that is, either <span class="tt">path</span> or <span class="tt">overridePath</span>), you can query the <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_effectivePath"><span class="tt">effectivePath</span></a> property.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_action"><span class="tt">action</span></a>  </td><td class="markdownTableBodyNone">The name or ID of the Action that the Binding should trigger. Note that this can be null or empty (for instance, for composites). Not case-sensitive.<br  />
+<br  />
+Example: <span class="tt">"fire"</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_groups"><span class="tt">groups</span></a>  </td><td class="markdownTableBodyNone">A semicolon-separated list of Binding groups that the Binding belongs to. Can be null or empty. Binding groups can be anything, but are mostly used for Control Schemes. Not case-sensitive.<br  />
+<br  />
+Example: <span class="tt">"Keyboard&amp;Mouse;Gamepad"</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_interactions"><span class="tt">interactions</span></a>  </td><td class="markdownTableBodyNone">A semicolon-separated list of <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_interactions.html">Interactions</a> to apply to input on this Binding. Note that <a class="el" href="namespace_unity.html">Unity</a> appends Interactions applied to the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Action</a> itself (if any) to this list. Not case-sensitive.<br  />
+<br  />
+Example: <span class="tt">"slowTap;hold(duration=0.75)"</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_processors"><span class="tt">processors</span></a>  </td><td class="markdownTableBodyNone">A semicolon-separated list of <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_processors.html">Processors</a> to apply to input on this Binding. Note that <a class="el" href="namespace_unity.html">Unity</a> appends Processors applied to the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Action</a> itself (if any) to this list. Not case-sensitive.<br  />
+<br  />
+Processors on Bindings apply in addition to Processors on Controls that are providing values. For example, if you put a <span class="tt">stickDeadzone</span> Processor on a Binding and then bind it to <span class="tt">&lt;Gamepad&gt;/leftStick</span>, you get deadzones applied twice: once from the deadzone Processor sitting on the <span class="tt">leftStick</span> Control, and once from the Binding.<br  />
+<br  />
+Example: <span class="tt">"invert;axisDeadzone(min=0.1,max=0.95)"</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_id"><span class="tt">id</span></a>  </td><td class="markdownTableBodyNone">Unique ID of the Binding. You can use it to identify the Binding when storing Binding overrides in user settings, for example.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_name"><span class="tt">name</span></a>  </td><td class="markdownTableBodyNone">Optional name of the Binding. Identifies part names inside Composites.<br  />
+<br  />
+Example: <span class="tt">"Positive"</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_isComposite"><span class="tt">isComposite</span></a>  </td><td class="markdownTableBodyNone">Whether the Binding acts as a Composite.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_isPartOfComposite"><span class="tt">isPartOfComposite</span></a>  </td><td class="markdownTableBodyNone">Whether the Binding is part of a Composite.  </td></tr>
+</table>
+<p>To query the Bindings to a particular Action, you can use <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_bindings"><span class="tt">InputAction.bindings</span></a>. To query a flat list of Bindings for all Actions in an Action Map, you can use <a href="../api/UnityEngine.InputSystem.InputActionMap.html#UnityEngine_InputSystem_InputActionMap_bindings"><span class="tt">InputActionMap.bindings</span></a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1918"></a>
+Composite Bindings</h2>
+<p>Sometimes, you might want to have several Controls act in unison to mimic a different type of Control. The most common example of this is using the W, A, S, and D keys on the keyboard to form a 2D vector Control equivalent to mouse deltas or gamepad sticks. Another example is to use two keys to form a 1D axis equivalent to a mouse scroll axis.</p>
+<p>This is difficult to implement with normal Bindings. You can bind a <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a> to an action expecting a <span class="tt">Vector2</span>, but doing so results in an exception at runtime when the Input System tries to read a <span class="tt">Vector2</span> from a Control that can deliver only a <span class="tt">float</span>.</p>
+<p>Composite Bindings (that is, Bindings that are made up of other Bindings) solve this problem. Composites themselves don't bind directly to Controls; instead, they source values from other Bindings that do, and then synthesize input on the fly from those values.</p>
+<p>To see how to create Composites in the editor UI, see documentation on <a href="ActionsEditor.md#editing-composite-bindings">editing Composite Bindings</a>.</p>
+<p>To create composites in code, you can use the <a href="../api/UnityEngine.InputSystem.InputActionSetupExtensions.html#UnityEngine_InputSystem_InputActionSetupExtensions_AddCompositeBinding_UnityEngine_InputSystem_InputAction_System_String_System_String_System_String_"><span class="tt">AddCompositeBinding</span></a> syntax.</p>
+<div class="fragment"><div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;Axis&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Positive&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/rightTrigger&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Negative&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftTrigger&quot;</span>);</div>
+</div><!-- fragment --><p>Each Composite consists of one Binding that has <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_isComposite"><span class="tt">InputBinding.isComposite</span></a> set to true, followed by one or more Bindings that have <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_isPartOfComposite"><span class="tt">InputBinding.isPartOfComposiste</span></a> set to true. In other words, several consecutive entries in <a href="../api/UnityEngine.InputSystem.InputActionMap.html#UnityEngine_InputSystem_InputActionMap_bindings"><span class="tt">InputActionMap.bindings</span></a> or <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_bindings"><span class="tt">InputAction.bindings</span></a> together form a Composite.</p>
+<p>Note that each composite part can be bound arbitrary many times.</p>
+<div class="fragment"><div class="line"><span class="comment">// Make both shoulders and triggers pull on the axis.</span></div>
+<div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;Axis&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Positive&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/rightTrigger&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Positive&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/rightShoulder&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Negative&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftTrigger&quot;</span>);</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Negative&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftShoulder&quot;</span>);</div>
+</div><!-- fragment --><p>Composites can have parameters, just like <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_interactions.html">Interactions</a> and <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_processors.html">Processors</a>.</p>
+<div class="fragment"><div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;Axis(whichSideWins=1)&quot;</span>);</div>
+</div><!-- fragment --><p>There are currently five Composite types that come with the system out of the box: 1D-Axis, 2D-Vector, 3D-Vector, One Modifier and Two Modifiers. Additionally, you can add your own types of Composites.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1919"></a>
+1D axis</h3>
+<p><img src="./Images/Add1DAxisComposite.png" alt="Add 1D Axis Composite" class="inline"/></p>
+<p><img src="./Images/1DAxisComposite.png" alt="1D Axis Composite" class="inline"/></p>
+<p>A Composite made of two buttons: one that pulls a 1D axis in its negative direction, and another that pulls it in its positive direction. Implemented in the <a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html"><span class="tt">AxisComposite</span></a> class. The result is a <span class="tt">float</span>.</p>
+<div class="fragment"><div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;1DAxis&quot;</span>) <span class="comment">// Or just &quot;Axis&quot;</span></div>
+<div class="line">    .With(<span class="stringliteral">&quot;Positive&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/rightTrigger&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Negative&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftTrigger&quot;</span>);</div>
+</div><!-- fragment --><p>The axis Composite has two part bindings.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Part  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html#UnityEngine_InputSystem_Composites_AxisComposite_positive"><span class="tt">positive</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls pulling in the positive direction (towards <a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html#UnityEngine_InputSystem_Composites_AxisComposite_maxValue"><span class="tt">maxValue</span></a>).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html#UnityEngine_InputSystem_Composites_AxisComposite_negative"><span class="tt">negative</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls pulling in the negative direction, (towards <a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html#UnityEngine_InputSystem_Composites_AxisComposite_minValue"><span class="tt">minValue</span></a>).  </td></tr>
+</table>
+<p>You can set the following parameters on an axis Composite:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Parameter  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html#UnityEngine_InputSystem_Composites_AxisComposite_whichSideWins"><span class="tt">whichSideWins</span></a>  </td><td class="markdownTableBodyNone">What happens if both <a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html#UnityEngine_InputSystem_Composites_AxisComposite_positive"><span class="tt">positive</span></a> and <a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html#UnityEngine_InputSystem_Composites_AxisComposite_negative"><span class="tt">negative</span></a> are actuated. See table below.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html#UnityEngine_InputSystem_Composites_AxisComposite_minValue"><span class="tt">minValue</span></a>  </td><td class="markdownTableBodyNone">The value returned if the <a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html#UnityEngine_InputSystem_Composites_AxisComposite_negative"><span class="tt">negative</span></a> side is actuated. Default is -1.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html#UnityEngine_InputSystem_Composites_AxisComposite_maxValue"><span class="tt">maxValue</span></a>  </td><td class="markdownTableBodyNone">The value returned if the <a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.html#UnityEngine_InputSystem_Composites_AxisComposite_positive"><span class="tt">positive</span></a> side is actuated. Default is 1.  </td></tr>
+</table>
+<p>If Controls from both the <span class="tt">positive</span> and the <span class="tt">negative</span> side are actuated, then the resulting value of the axis Composite depends on the <span class="tt">whichSideWin</span> parameter setting.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Composites.AxisComposite.WhichSideWins.html"><span class="tt">WhichSideWins</span></a>  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">(0) <span class="tt">Neither</span>  </td><td class="markdownTableBodyNone">Neither side has precedence. The Composite returns the midpoint between <span class="tt">minValue</span> and <span class="tt">maxValue</span> as a result. At their default settings, this is 0.<br  />
+<br  />
+This is the default value for this setting.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">(1) <span class="tt">Positive</span>  </td><td class="markdownTableBodyNone">The positive side has precedence and the Composite returns <span class="tt">maxValue</span>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">(2) <span class="tt">Negative</span>  </td><td class="markdownTableBodyNone">The negative side has precedence and the Composite returns <span class="tt">minValue</span>.  </td></tr>
+</table>
+<p>&gt;<b>Note</b>: There is no support yet for interpolating between the positive and negative over time.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1920"></a>
+2D vector</h3>
+<p><img src="./Images/Add2DVectorComposite.png" alt="Add 2D Vector Composite" class="inline"/></p>
+<p><img src="./Images/2DVectorComposite.png" alt="2D Vector Composite" class="inline"/></p>
+<p>A Composite that represents a 4-way button setup like the D-pad on gamepads. Each button represents a cardinal direction. Implemented in the <a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.html"><span class="tt">Vector2Composite</span></a> class. The result is a <span class="tt">Vector2</span>.</p>
+<p>This Composite is most useful for representing up-down-left-right controls, such as WASD keyboard input.</p>
+<div class="fragment"><div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;2DVector&quot;</span>) <span class="comment">// Or &quot;Dpad&quot;</span></div>
+<div class="line">    .With(<span class="stringliteral">&quot;Up&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/w&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Down&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/s&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Left&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/a&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Right&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/d&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// To set mode (2=analog, 1=digital, 0=digitalNormalized):</span></div>
+<div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;2DVector(mode=2)&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Up&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick/up&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Down&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick/down&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Left&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick/left&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Right&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick/right&quot;</span>);</div>
+</div><!-- fragment --><p>The 2D vector Composite has four part Bindings.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Part  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.html#UnityEngine_InputSystem_Composites_Vector2Composite_up"><span class="tt">up</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls representing <span class="tt">(0,1)</span> (+Y).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.html#UnityEngine_InputSystem_Composites_Vector2Composite_down"><span class="tt">down</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls representing <span class="tt">(0,-1)</span> (-Y).  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.html#UnityEngine_InputSystem_Composites_Vector2Composite_left"><span class="tt">left</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls representing <span class="tt">(-1,0)</span> (-X).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.html#UnityEngine_InputSystem_Composites_Vector2Composite_right"><span class="tt">right</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls representing <span class="tt">(1,0)</span> (+X).  </td></tr>
+</table>
+<p>In addition, you can set the following parameters on a 2D vector Composite:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Parameter  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.html#UnityEngine_InputSystem_Composites_Vector2Composite_mode"><span class="tt">mode</span></a>  </td><td class="markdownTableBodyNone">Whether to treat the inputs as digital or as analog controls.<br  />
+<br  />
+If this is set to <a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.Mode.html#UnityEngine_InputSystem_Composites_Vector2Composite_Mode_DigitalNormalized"><span class="tt">Mode.DigitalNormalized</span></a>, inputs are treated as buttons (off if below <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint"><span class="tt">defaultButtonPressPoint</span></a> and on if equal to or greater). Each input is 0 or 1 depending on whether the button is pressed or not. The vector resulting from the up/down/left/right parts is normalized. The result is a diamond-shaped 2D input range.<br  />
+<br  />
+If this is set to <a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.Mode.html#UnityEngine_InputSystem_Composites_Vector2Composite_Mode_Digital"><span class="tt">Mode.Digital</span></a>, the behavior is essentially the same as <a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.Mode.html#UnityEngine_InputSystem_Composites_Vector2Composite_Mode_DigitalNormalized"><span class="tt">Mode.DigitalNormalized</span></a> except that the resulting vector is not normalized.<br  />
+<br  />
+Finally, if this is set to <a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.Mode.html#UnityEngine_InputSystem_Composites_Vector2Composite_Mode_Analog"><span class="tt">Mode.Analog</span></a>, inputs are treated as analog (i.e. full floating-point values) and, other than <a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.html#UnityEngine_InputSystem_Composites_Vector2Composite_down"><span class="tt">down</span></a> and <a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.html#UnityEngine_InputSystem_Composites_Vector2Composite_left"><span class="tt">left</span></a> being inverted, values will be passed through as is.<br  />
+<br  />
+The default is <a href="../api/UnityEngine.InputSystem.Composites.Vector2Composite.Mode.html#UnityEngine_InputSystem_Composites_Vector2Composite_Mode_DigitalNormalized"><span class="tt">Mode.DigitalNormalized</span></a>.  </td></tr>
+</table>
+<p>&gt;<b>Note</b>: There is no support yet for interpolating between the up/down/left/right over time.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1921"></a>
+3D vector</h3>
+<p><img src="./Images/Add3DVectorComposite.png" alt="Add 3D Vector Composite" class="inline"/></p>
+<p><img src="./Images/3DVectorComposite.png" alt="3D Vector Composite" class="inline"/></p>
+<p>A Composite that represents a 6-way button where two combinations each control one axis of a 3D vector. Implemented in the <a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.html"><span class="tt">Vector3Composite</span></a> class. The result is a <span class="tt">Vector3</span>.</p>
+<div class="fragment"><div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;3DVector&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Up&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/w&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Down&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/s&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Left&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/a&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Right&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/d&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// To set mode (2=analog, 1=digital, 0=digitalNormalized):</span></div>
+<div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;3DVector(mode=2)&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Up&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick/up&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Down&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick/down&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Left&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick/left&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Right&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick/right&quot;</span>);</div>
+</div><!-- fragment --><p>The 3D vector Composite has four part Bindings.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Part  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.html#UnityEngine_InputSystem_Composites_Vector3Composite_up"><span class="tt">up</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls representing <span class="tt">(0,1,0)</span> (+Y).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.html#UnityEngine_InputSystem_Composites_Vector3Composite_down"><span class="tt">down</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls representing <span class="tt">(0,-1,0)</span> (-Y).  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.html#UnityEngine_InputSystem_Composites_Vector3Composite_left"><span class="tt">left</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls representing <span class="tt">(-1,0,0)</span> (-X).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.html#UnityEngine_InputSystem_Composites_Vector3Composite_right"><span class="tt">right</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls representing <span class="tt">(1,0,0)</span> (+X).  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.html#UnityEngine_InputSystem_Composites_Vector3Composite_forward"><span class="tt">forward</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls representing <span class="tt">(0,0,1)</span> (+Z).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.html#UnityEngine_InputSystem_Composites_Vector3Composite_backward"><span class="tt">backward</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Controls representing <span class="tt">(0,0,-1)</span> (-Z).  </td></tr>
+</table>
+<p>In addition, you can set the following parameters on a 3D vector Composite:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Parameter  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.html#UnityEngine_InputSystem_Composites_Vector3Composite_mode"><span class="tt">mode</span></a>  </td><td class="markdownTableBodyNone">Whether to treat the inputs as digital or as analog controls.<br  />
+<br  />
+If this is set to <a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.Mode.html#UnityEngine_InputSystem_Composites_Vector3Composite_Mode_DigitalNormalized"><span class="tt">Mode.DigitalNormalized</span></a>, inputs are treated as buttons (off if below <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint"><span class="tt">defaultButtonPressPoint</span></a> and on if equal to or greater). Each input is 0 or 1 depending on whether the button is pressed or not. The vector resulting from the up/down/left/right/forward/backward parts is normalized.<br  />
+<br  />
+If this is set to <a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.Mode.html#UnityEngine_InputSystem_Composites_Vector3Composite_Mode_Digital"><span class="tt">Mode.Digital</span></a>, the behavior is essentially the same as <a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.Mode.html#UnityEngine_InputSystem_Composites_Vector3Composite_Mode_DigitalNormalized"><span class="tt">Mode.DigitalNormalized</span></a> except that the resulting vector is not normalized.<br  />
+<br  />
+Finally, if this is set to <a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.Mode.html#UnityEngine_InputSystem_Composites_Vector3Composite_Mode_Analog"><span class="tt">Mode.Analog</span></a>, inputs are treated as analog (that is, full floating-point values) and, other than <a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.html#UnityEngine_InputSystem_Composites_Vector3Composite_down"><span class="tt">down</span></a>, <a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.html#UnityEngine_InputSystem_Composites_Vector3Composite_left"><span class="tt">left</span></a>, and <a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.html#UnityEngine_InputSystem_Composites_Vector3Composite_backward"><span class="tt">backward</span></a> being inverted, values will be passed through as they are.<br  />
+<br  />
+The default is <a href="../api/UnityEngine.InputSystem.Composites.Vector3Composite.Mode.html#UnityEngine_InputSystem_Composites_Vector3Composite_Mode_Analog"><span class="tt">Analog</span></a>.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1922"></a>
+One Modifier</h3>
+<p><img src="./Images/AddBindingWithOneModifier.png" alt="Add Binding With One Modifier" class="inline"/></p>
+<p><img src="./Images/OneModifierComposite.png" alt="One Modifier Composite" class="inline"/></p>
+<p>A Composite that requires the user to hold down a "modifier" button in addition to another control from which the actual value of the Binding is determined. This can be used, for example, for Bindings such as "SHIFT+1". Implemented in the <a href="../api/UnityEngine.InputSystem.Composites.OneModifierComposite.html"><span class="tt">OneModifierComposite</span></a> class. The buttons can be on any Device, and can be toggle buttons or full-range buttons such as gamepad triggers.</p>
+<p>The result is a value of the same type as the controls bound to the <a href="../api/UnityEngine.InputSystem.Composites.OneModifierComposite.html#UnityEngine_InputSystem_Composites_OneModifierComposite_binding"><span class="tt">binding</span></a> part.</p>
+<div class="fragment"><div class="line"><span class="comment">// Add binding for &quot;CTRL+1&quot;.</span></div>
+<div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;OneModifier&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Binding&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/1&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Modifier&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/ctrl&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Add binding to mouse delta such that it only takes effect</span></div>
+<div class="line"><span class="comment">// while the ALT key is down.</span></div>
+<div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;OneModifier&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Binding&quot;</span>, <span class="stringliteral">&quot;&lt;Mouse&gt;/delta&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Modifier&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/alt&quot;</span>);</div>
+</div><!-- fragment --><p>The button with one modifier Composite has two part Bindings.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Part  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.OneModifierComposite.html#UnityEngine_InputSystem_Composites_OneModifierComposite_modifier"><span class="tt">modifier</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">Modifier that has to be held for <span class="tt">binding</span> to come through. If the user holds any of the buttons bound to the <span class="tt">modifier</span> at the same time as the button that triggers the action, the Composite assumes the value of the <span class="tt">modifier</span> Binding. If the user does not press any button bound to the <span class="tt">modifier</span>, the Composite remains at default value.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.OneModifierComposite.html#UnityEngine_InputSystem_Composites_OneModifierComposite_binding"><span class="tt">binding</span></a>  </td><td class="markdownTableBodyNone">Any  </td><td class="markdownTableBodyNone">The control(s) whose value the Composite assumes while the user holds down the <span class="tt">modifier</span> button.  </td></tr>
+</table>
+<p>This Composite has no parameters.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1923"></a>
+Two Modifiers</h3>
+<p><img src="./Images/AddBindingWithTwoModifiers.png" alt="Add Bindings With Two Modifiers" class="inline"/></p>
+<p><img src="./Images/TwoModifiersComposite.png" alt="Two Modifiers Composite" class="inline"/></p>
+<p>A Composite that requires the user to hold down two "modifier" buttons in addition to another control from which the actual value of the Binding is determined. This can be used, for example, for Bindings such as "SHIFT+CTRL+1". Implemented in the <a href="../api/UnityEngine.InputSystem.Composites.TwoModifiersComposite.html"><span class="tt">TwoModifiersComposite</span></a> class. The buttons can be on any Device, and can be toggle buttons or full-range buttons such as gamepad triggers.</p>
+<p>The result is a value of the same type as the controls bound to the <a href="../api/UnityEngine.InputSystem.Composites.TwoModifiersComposite.html#UnityEngine_InputSystem_Composites_TwoModifiersComposite_binding"><span class="tt">binding</span></a> part.</p>
+<div class="fragment"><div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;TwoModifiers&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Button&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/1&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Modifier1&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/leftCtrl&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Modifier1&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/rightCtrl&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Modifier2&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/leftShift&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Modifier2&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/rightShift&quot;</span>);</div>
+</div><!-- fragment --><p>The button with two modifiers Composite has three part Bindings.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Part  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.TwoModifiersComposite.html#UnityEngine_InputSystem_Composites_TwoModifiersComposite_modifier1"><span class="tt">modifier1</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">The first modifier the user must hold alongside <span class="tt">modifier2</span>, for <span class="tt">binding</span> to come through. If the user does not press any button bound to the <span class="tt">modifier1</span>, the Composite remains at default value.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.TwoModifiersComposite.html#UnityEngine_InputSystem_Composites_TwoModifiersComposite_modifier2"><span class="tt">modifier2</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">Button</span>  </td><td class="markdownTableBodyNone">The second modifier the user must hold alongside <span class="tt">modifier1</span>, for <span class="tt">binding</span> to come through. If the user does not press any button bound to the <span class="tt">modifier2</span>, the Composite remains at default value.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Composites.TwoModifiersComposite.html#UnityEngine_InputSystem_Composites_TwoModifiersComposite_binding"><span class="tt">binding</span></a>  </td><td class="markdownTableBodyNone">Any  </td><td class="markdownTableBodyNone">The control(s) whose value the Composite assumes while the user presses both <span class="tt">modifier1</span> and <span class="tt">modifier2</span> at the same time.  </td></tr>
+</table>
+<p>This Composite has no parameters.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1924"></a>
+Writing custom Composites</h3>
+<p>You can define new types of Composites, and register them with the API. <a class="el" href="namespace_unity.html">Unity</a> treats these the same as predefined types, which the Input System internally defines and registers in the same way.</p>
+<p>To define a new type of Composite, create a class based on <a href="../api/UnityEngine.InputSystem.InputBindingComposite-1.html"><span class="tt">InputBindingComposite&lt;TValue&gt;</span></a>.</p>
+<blockquote class="doxtable">
+<p><b>IMPORTANT</b>: Composites must be <b>stateless</b>. This means that you cannot store local state that changes depending on the input being processed. For <b>stateful</b> processing on Bindings, see <a href="./Interactions.md#writing-custom-interactions">interactions</a>. </p>
+</blockquote>
+<div class="fragment"><div class="line"><span class="comment">// Use InputBindingComposite&lt;TValue&gt; as a base class for a composite that returns</span></div>
+<div class="line"><span class="comment">// values of type TValue.</span></div>
+<div class="line"><span class="comment">// NOTE: It is possible to define a composite that returns different kinds of values</span></div>
+<div class="line"><span class="comment">//       but doing so requires deriving directly from InputBindingComposite.</span></div>
+<div class="line"><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line">[InitializeOnLoad] <span class="comment">// Automatically register in editor.</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="comment">// Determine how GetBindingDisplayString() formats the composite by applying</span></div>
+<div class="line"><span class="comment">// the  DisplayStringFormat attribute.</span></div>
+<div class="line">[DisplayStringFormat(<span class="stringliteral">&quot;{firstPart}+{secondPart}&quot;</span>)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_custom_composite.html">CustomComposite</a> : InputBindingComposite&lt;float&gt;</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Each part binding is represented as a field of type int and annotated with</span></div>
+<div class="line">    <span class="comment">// InputControlAttribute. Setting &quot;layout&quot; restricts the controls that</span></div>
+<div class="line">    <span class="comment">// are made available for picking in the UI.</span></div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    <span class="comment">// On creation, the int value is set to an integer identifier for the binding</span></div>
+<div class="line">    <span class="comment">// part. This identifier can read values from InputBindingCompositeContext.</span></div>
+<div class="line">    <span class="comment">// See ReadValue() below.</span></div>
+<div class="line">    [InputControl(layout = <span class="stringliteral">&quot;Button&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> firstPart;</div>
+<div class="line"> </div>
+<div class="line">    [InputControl(layout = <span class="stringliteral">&quot;Button&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> secondPart;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Any public field that is not annotated with InputControlAttribute is considered</span></div>
+<div class="line">    <span class="comment">// a parameter of the composite. This can be set graphically in the UI and also</span></div>
+<div class="line">    <span class="comment">// in the data (e.g. &quot;custom(floatParameter=2.0)&quot;).</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">float</span> floatParameter;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">bool</span> boolParameter;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// This method computes the resulting input value of the composite based</span></div>
+<div class="line">    <span class="comment">// on the input from its part bindings.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">float</span> ReadValue(ref InputBindingCompositeContext context)</div>
+<div class="line">    {</div>
+<div class="line">        var firstPartValue = context.ReadValue&lt;<span class="keywordtype">float</span>&gt;(firstPart);</div>
+<div class="line">        var secondPartValue = context.ReadValue&lt;<span class="keywordtype">float</span>&gt;(secondPart);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//... do some processing and return value</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// This method computes the current actuation of the binding as a whole.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_unity_engine_1_1_input_system_1_1_input_binding_composite.html#aef641ddda8f5c85b0e721a70f0723493">EvaluateMagnitude</a>(ref InputBindingCompositeContext context)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Compute normalized [0..1] magnitude value for current actuation level.</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">static</span> CustomComposite()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Can give custom name or use default (type name with &quot;Composite&quot; clipped off).</span></div>
+<div class="line">        <span class="comment">// Same composite can be registered multiple times with different names to introduce</span></div>
+<div class="line">        <span class="comment">// aliases.</span></div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        <span class="comment">// NOTE: Registering from the static constructor using InitializeOnLoad and</span></div>
+<div class="line">        <span class="comment">//       RuntimeInitializeOnLoadMethod is only one way. You can register the</span></div>
+<div class="line">        <span class="comment">//       composite from wherever it works best for you. Note, however, that</span></div>
+<div class="line">        <span class="comment">//       the registration has to take place before the composite is first used</span></div>
+<div class="line">        <span class="comment">//       in a binding. Also, for the composite to show in the editor, it has</span></div>
+<div class="line">        <span class="comment">//       to be registered from code that runs in edit mode.</span></div>
+<div class="line">        InputSystem.RegisterBindingComposite&lt;CustomComposite&gt;();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]</div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> Init() {} <span class="comment">// Trigger static constructor.</span></div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_custom_composite_html"><div class="ttname"><a href="class_custom_composite.html">CustomComposite</a></div><div class="ttdef"><b>Definition</b> CustomComposite.cs:52</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_binding_composite_html_aef641ddda8f5c85b0e721a70f0723493"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_binding_composite.html#aef641ddda8f5c85b0e721a70f0723493">UnityEngine.InputSystem.InputBindingComposite.EvaluateMagnitude</a></div><div class="ttdeci">virtual float EvaluateMagnitude(ref InputBindingCompositeContext context)</div><div class="ttdoc">Determine the current level of actuation of the composite.</div><div class="ttdef"><b>Definition</b> InputBindingComposite.cs:114</div></div>
+</div><!-- fragment --><p>The Composite should now appear in the editor UI when you add a Binding, and you can now use it in scripts.</p>
+<div class="fragment"><div class="line">myAction.AddCompositeBinding(<span class="stringliteral">&quot;custom(floatParameter=2.0)&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;firstpart&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/buttonSouth&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;secondpart&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/buttonNorth&quot;</span>);</div>
+</div><!-- fragment --><p>To define a custom parameter editor for the Composite, you can derive from <a href="../api/UnityEngine.InputSystem.Editor.InputParameterEditor-1.html"><span class="tt">InputParameterEditor&lt;TObject&gt;</span></a>.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>CustomParameterEditor : InputParameterEditor&lt;CustomComposite&gt;</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnGUI()</div>
+<div class="line">    {</div>
+<div class="line">        EditorGUILayout.Label(<span class="stringliteral">&quot;Custom stuff&quot;</span>);</div>
+<div class="line">        target.floatParameter = EditorGUILayout.FloatField(<span class="stringliteral">&quot;Some Parameter&quot;</span>, target.floatParameter);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md1925"></a>
+Working with Bindings</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1926"></a>
+Looking up Bindings</h2>
+<p>You can retrieve the bindings of an action using its <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_bindings"><span class="tt">InputAction.bindings</span></a> property which returns a read-only array of <a href="../api/UnityEngine.InputSystem.InputBinding.html"><span class="tt">InputBinding</span></a> structs.</p>
+<div class="fragment"><div class="line"><span class="comment">// Get bindings of &quot;fire&quot; action.</span></div>
+<div class="line">var fireBindings = playerInput.actions[<span class="stringliteral">&quot;fire&quot;</span>].bindings;</div>
+</div><!-- fragment --><p>Also, all the bindings for all actions in an <a href="../api/UnityEngine.InputSystem.InputActionMap.html"><span class="tt">InputActionMap</span></a> are made available through the <a href="../api/UnityEngine.InputSystem.InputActionMap.html#UnityEngine_InputSystem_InputActionMap_bindings"><span class="tt">InputActionMap.bindings</span></a> property. The bindings are associated with actions through an <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_id">action ID</a> or <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_name">action name</a> stored in the <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_action"><span class="tt">InputBinding.action</span></a> property.</p>
+<div class="fragment"><div class="line"><span class="comment">// Get all bindings in &quot;gameplay&quot; action map.</span></div>
+<div class="line">var gameplayBindings = playerInput.actions.FindActionMap(<span class="stringliteral">&quot;gameplay&quot;</span>).bindings;</div>
+</div><!-- fragment --><p>You can also look up specific the indices of specific bindings in <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_bindings"><span class="tt">InputAction.bindings</span></a> using the <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_GetBindingIndex_UnityEngine_InputSystem_InputAction_UnityEngine_InputSystem_InputBinding_"><span class="tt">InputActionRebindingExtensions.GetBindingIndex</span></a> method.</p>
+<div class="fragment"><div class="line"><span class="comment">// Find the binding in the &quot;Keyboard&quot; control scheme.</span></div>
+<div class="line">playerInput.actions[<span class="stringliteral">&quot;fire&quot;</span>].GetBindingIndex(group: <span class="stringliteral">&quot;Keyboard&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Find the first binding to the space key in the &quot;gameplay&quot; action map.</span></div>
+<div class="line">playerInput.FindActionMap(<span class="stringliteral">&quot;gameplay&quot;</span>).GetBindingIndex(</div>
+<div class="line">    <span class="keyword">new</span> InputBinding { path = <span class="stringliteral">&quot;&lt;Keyboard&gt;/space&quot;</span> });</div>
+</div><!-- fragment --><p>Finally, you can look up the binding that corresponds to a specific control through <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_GetBindingIndexForControl_"><span class="tt">GetBindingIndexForControl</span></a>. This way, you can, for example, map a control found in the <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_controls"><span class="tt">controls</span></a> array of an <a href="../api/UnityEngine.InputSystem.InputAction.html"><span class="tt">InputAction</span></a> back to an <a href="../api/UnityEngine.InputSystem.InputBinding.html"><span class="tt">InputBinding</span></a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// Find the binding that binds LMB to &quot;fire&quot;. If there is no such binding,</span></div>
+<div class="line"><span class="comment">// bindingIndex will be -1.</span></div>
+<div class="line">var fireAction = playerInput.actions[<span class="stringliteral">&quot;fire&quot;</span>];</div>
+<div class="line">var bindingIndex = fireAction.GetBindingIndexForControl(Mouse.current.leftButton);</div>
+<div class="line"><span class="keywordflow">if</span> (binding == -1)</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;Fire is not bound to LMB of the current mouse.&quot;</span>);</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md1927"></a>
+Changing Bindings</h2>
+<p>In general, you can change existing bindings via the <a href="../api/UnityEngine.InputSystem.InputActionSetupExtensions.html#UnityEngine_InputSystem_InputActionSetupExtensions_ChangeBinding_UnityEngine_InputSystem_InputAction_System_Int32_"><span class="tt">InputActionSetupExtensions.ChangeBinding</span></a> method. This returns an accessor that can be used to modify the properties of the targeted <a href="../api/UnityEngine.InputSystem.InputBinding.html"><span class="tt">InputBinding</span></a>. Note that most of the write operations of the accessor are destructive. For non-destructive changes to bindings, see Applying Overrides.</p>
+<div class="fragment"><div class="line"><span class="comment">// Get write access to the second binding of the &#39;fire&#39; action.</span></div>
+<div class="line">var accessor = playerInput.actions[<span class="stringliteral">&#39;fire&#39;</span>].ChangeBinding(1);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// You can also gain access through the InputActionMap. Each</span></div>
+<div class="line"><span class="comment">// map contains an array of all its bindings (see InputActionMap.bindings).</span></div>
+<div class="line"><span class="comment">// Here we gain access to the third binding in the map.</span></div>
+<div class="line">accessor = playerInput.actions.FindActionMap(<span class="stringliteral">&quot;gameplay&quot;</span>).ChangeBinding(2);</div>
+</div><!-- fragment --><p>You can use the resulting accessor to modify properties through methods such as <a href="../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html#UnityEngine_InputSystem_InputActionSetupExtensions_BindingSyntax_WithPath_"><span class="tt">WithPath</span></a> or <a href="../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html#UnityEngine_InputSystem_InputActionSetupExtensions_BindingSyntax_WithProcessors_"><span class="tt">WithProcessors</span></a>.</p>
+<div class="fragment"><div class="line">playerInput.actions[<span class="stringliteral">&quot;fire&quot;</span>].ChangeBinding(1)</div>
+<div class="line">    <span class="comment">// Change path to space key.</span></div>
+<div class="line">    .WithPath(<span class="stringliteral">&quot;&lt;Keyboard&gt;/space&quot;</span>);</div>
+</div><!-- fragment --><p>You can also use the accessor to iterate through bindings using <a href="../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html#UnityEngine_InputSystem_InputActionSetupExtensions_BindingSyntax_PreviousBinding_"><span class="tt">PreviousBinding</span></a> and <a href="../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html#UnityEngine_InputSystem_InputActionSetupExtensions_BindingSyntax_NextBinding_"><span class="tt">NextBinding</span></a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// Move accessor to previous binding.</span></div>
+<div class="line">accessor = accessor.PreviousBinding();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Move accessor to next binding.</span></div>
+<div class="line">accessor = accessor.NextBinding();</div>
+</div><!-- fragment --><p>If the given binding is a <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_isComposite">composite</a>, you can address it by its name rather than by index.</p>
+<div class="fragment"><div class="line"><span class="comment">// Change the 2DVector composite of the &quot;move&quot; action.</span></div>
+<div class="line">playerInput.actions[<span class="stringliteral">&quot;move&quot;</span>].ChangeCompositeBinding(<span class="stringliteral">&quot;2DVector&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line">playerInput.actions[<span class="stringliteral">&quot;move&quot;</span>].ChangeBinding(<span class="stringliteral">&quot;WASD&quot;</span>)</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md1928"></a>
+Applying overrides</h3>
+<p>You can override aspects of any Binding at run-time non-destructively. Specific properties of <a href="../api/UnityEngine.InputSystem.InputBinding.html"><span class="tt">InputBinding</span></a> have an <span class="tt">override</span> variant that, if set, will take precedent over the property that they shadow. All <span class="tt">override</span> properties are of type <span class="tt">String</span>.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Override  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_path"><span class="tt">path</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_overridePath"><span class="tt">overridePath</span></a>  </td><td class="markdownTableBodyNone">Replaces the <a href="./Controls.md#control-paths">Control path</a> that determines which Control(s) are referenced in the binding. If <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_overridePath"><span class="tt">overridePath</span></a> is set to an empty string, the binding is effectively disabled.<br  />
+<br  />
+Example: <span class="tt">"&lt;Gamepad&gt;/leftStick"</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_processors"><span class="tt">processors</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_overrideProcessors"><span class="tt">overrideProcessors</span></a>  </td><td class="markdownTableBodyNone">Replaces the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_processors.html">processors</a> applied to the binding.<br  />
+<br  />
+Example: <span class="tt">"invert,normalize(min=0,max=10)"</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_interactions"><span class="tt">interactions</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_overrideInteractions"><span class="tt">overrideInteractions</span></a>  </td><td class="markdownTableBodyNone">Replaces the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_interactions.html">interactions</a> applied to the binding.<br  />
+<br  />
+Example: <span class="tt">"tap(duration=0.5)"</span>  </td></tr>
+</table>
+<p>&gt;NOTE: The <span class="tt">override</span> property values will not be saved along with the Actions (for example, when calling <a href="../api/UnityEngine.InputSystem.InputActionAsset.html#UnityEngine_InputSystem_InputActionAsset_ToJson"><span class="tt">InputActionAsset.ToJson()</span></a>). See Saving and loading rebinds for details about how to persist user rebinds.</p>
+<p>To set the various <span class="tt">override</span> properties, you can use the <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_ApplyBindingOverride_UnityEngine_InputSystem_InputAction_UnityEngine_InputSystem_InputBinding_"><span class="tt">ApplyBindingOverride</span></a> APIs.</p>
+<div class="fragment"><div class="line"><span class="comment">// Rebind the &quot;fire&quot; action to the left trigger on the gamepad.</span></div>
+<div class="line">playerInput.actions[<span class="stringliteral">&quot;fire&quot;</span>].ApplyBindingOverride(<span class="stringliteral">&quot;&lt;Gamepad&gt;/leftTrigger&quot;</span>);</div>
+</div><!-- fragment --><p>In most cases, it is best to locate specific bindings using APIs such as <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_GetBindingIndexForControl_"><span class="tt">GetBindingIndexForControl</span></a> and to then apply the override to that specific binding.</p>
+<div class="fragment"><div class="line"><span class="comment">// Find the &quot;Jump&quot; binding for the space key.</span></div>
+<div class="line">var jumpAction = playerInput.actions[<span class="stringliteral">&quot;Jump&quot;</span>];</div>
+<div class="line">var bindingIndex = jumpAction.GetBindingIndexForControl(Keyboard.current.spaceKey);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// And change it to the enter key.</span></div>
+<div class="line">jumpAction.ApplyBindingOverride(bindingIndex, <span class="stringliteral">&quot;&lt;Keyboard&gt;/enter&quot;</span>);</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md1929"></a>
+Erasing Bindings</h3>
+<p>You can erase a binding by calling <a href="../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html#UnityEngine_InputSystem_InputActionSetupExtensions_BindingSyntax_Erase_"><span class="tt">Erase</span></a> on the <a href="../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html">binding accessor</a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// Erase first binding on &quot;fire&quot; action.</span></div>
+<div class="line">playerInput.actions[<span class="stringliteral">&quot;fire&quot;</span>].ChangeBinding(0).Erase();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Erase &quot;2DVector&quot; composite. This will also erase the part</span></div>
+<div class="line"><span class="comment">// bindings of the composite.</span></div>
+<div class="line">playerInput.actions[<span class="stringliteral">&quot;move&quot;</span>].ChangeCompositeBinding(<span class="stringliteral">&quot;2DVector&quot;</span>).Erase();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Can also do this by using the name given to the composite binding.</span></div>
+<div class="line">playerInput.actions[<span class="stringliteral">&quot;move&quot;</span>].ChangeCompositeBinding(<span class="stringliteral">&quot;WASD&quot;</span>).Erase();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Erase first binding in &quot;gameplay&quot; action map.</span></div>
+<div class="line">playerInput.actions.FindActionMap(<span class="stringliteral">&quot;gameplay&quot;</span>).ChangeBinding(0).Erase();</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md1930"></a>
+Adding Bindings</h3>
+<p>New bindings can be added to an Action using <a href="../api/UnityEngine.InputSystem.InputActionSetupExtensions.html#UnityEngine_InputSystem_InputActionSetupExtensions_AddBinding_UnityEngine_InputSystem_InputAction_System_String_System_String_System_String_System_String_"><span class="tt">AddAction</span></a> or <a href="../api/UnityEngine.InputSystem.InputActionSetupExtensions.html#UnityEngine_InputSystem_InputActionSetupExtensions_AddCompositeBinding_UnityEngine_InputSystem_InputAction_System_String_System_String_System_String_"><span class="tt">AddCompositeBinding</span></a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// Add a binding for the left mouse button to the &quot;fire&quot; action.</span></div>
+<div class="line">playerInput.actions[<span class="stringliteral">&quot;fire&quot;</span>].AddBinding(<span class="stringliteral">&quot;&lt;Mouse&gt;/leftButton&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Add a WASD composite binding to the &quot;move&quot; action.</span></div>
+<div class="line">playerInput.actions[<span class="stringliteral">&quot;move&quot;</span>]</div>
+<div class="line">    .AddCompositeBinding(<span class="stringliteral">&quot;2DVector&quot;</span>)</div>
+<div class="line">        .With(<span class="stringliteral">&quot;Up&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/w&quot;</span>)</div>
+<div class="line">        .With(<span class="stringliteral">&quot;Left&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/a&quot;</span>)</div>
+<div class="line">        .With(<span class="stringliteral">&quot;Down&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/s&quot;</span>)</div>
+<div class="line">        .With(<span class="stringliteral">&quot;Right&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/d&quot;</span>);</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md1931"></a>
+Setting parameters</h3>
+<p>A Binding may, either through itself or through its associated Action, lead to <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_processors.html">processor</a>, <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_interactions.html">interaction</a>, and/or composite objects being created. These objects can have parameters you can configure through in the <a href="ActionsEditor.md#bindings">Binding properties view</a> of the Action editor or through the API. This configuration will give parameters their default value.</p>
+<div class="fragment"><div class="line"><span class="comment">// Create an action with a &quot;Hold&quot; interaction on it.</span></div>
+<div class="line"><span class="comment">// Set the &quot;duration&quot; parameter to 4 seconds.</span></div>
+<div class="line">var action = <span class="keyword">new</span> InputAction(interactions: <span class="stringliteral">&quot;hold(duration=4)&quot;</span>);</div>
+</div><!-- fragment --><p>You can query the current value of any such parameter using the <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_GetParameterValue_UnityEngine_InputSystem_InputAction_System_String_UnityEngine_InputSystem_InputBinding_"><span class="tt">GetParameterValue</span></a> API.</p>
+<div class="fragment"><div class="line"><span class="comment">// This returns a PrimitiveValue?. It will be null if the</span></div>
+<div class="line"><span class="comment">// parameter is not found. Otherwise, it is a PrimitiveValue</span></div>
+<div class="line"><span class="comment">// which can be converted to a number or boolean.</span></div>
+<div class="line">var p = action.GetParameterValue(<span class="stringliteral">&quot;duration&quot;</span>);</div>
+<div class="line">Debug.Log(<span class="stringliteral">&quot;&#39;duration&#39; is set to: &quot;</span> + p.Value);</div>
+</div><!-- fragment --><p>The above looks for the parameter on any object found on any of the bindings on the action. You can restrict either or both to a more narrow set.</p>
+<div class="fragment"><div class="line"><span class="comment">// Retrieve the value of the &quot;duration&quot; parameter specifically of a</span></div>
+<div class="line"><span class="comment">// &quot;Hold&quot; interaction and only look on bindings in the &quot;Gamepad&quot; group.</span></div>
+<div class="line">action.GetParameterValue(<span class="stringliteral">&quot;hold:duration&quot;</span>, InputBinding.MaskByGroup(<span class="stringliteral">&quot;Gamepad&quot;</span>));</div>
+</div><!-- fragment --><p>Alternatively, you can use an expression parameter to encapsulate both the type and the name of the parameter you want to get the value of. This has the advantage of not needing a string parameter but rather references both the type and the name of the parameter in a typesafe way.</p>
+<div class="fragment"><div class="line"><span class="comment">// Retrieve the value of the &quot;duration&quot; parameter of TapInteraction.</span></div>
+<div class="line"><span class="comment">// This version returns a float? instead of a PrimitiveValue? as it</span></div>
+<div class="line"><span class="comment">// sees the type of &quot;duration&quot; at compile-time.</span></div>
+<div class="line">action.GetParameterValue((TapInteraction x) =&gt; x.duration);</div>
+</div><!-- fragment --><p>To alter the current value of a parameter, you can use what is referred to as a "parameter override". You can apply these at the level of an individual <a href="../api/UnityEngine.InputSystem.InputAction.html"><span class="tt">InputAction</span></a>, or at the level of an entire <a href="../api/UnityEngine.InputSystem.InputActionMap.html"><span class="tt">InputActionMap</span></a>, or even at the level of an entire <a href="../api/UnityEngine.InputSystem.InputActionAsset.html"><span class="tt">InputActionAsset</span></a>. Such overrides are stored internally and applied automatically even on bindings added later.</p>
+<p>To add an override, use the <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_ApplyParameterOverride_UnityEngine_InputSystem_InputAction_System_String_UnityEngine_InputSystem_Utilities_PrimitiveValue_UnityEngine_InputSystem_InputBinding_"><span class="tt">ApplyParameterOverride</span></a> API or any of its overloads.</p>
+<div class="fragment"><div class="line"><span class="comment">// Set the &quot;duration&quot; parameter on all bindings of the action to 4.</span></div>
+<div class="line">action.ApplyParameterOverride(<span class="stringliteral">&quot;duration&quot;</span>, 4f);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Set the &quot;duration&quot; parameter specifically for &quot;tap&quot; interactions only.</span></div>
+<div class="line">action.ApplyParameterOverride(<span class="stringliteral">&quot;tap:duration&quot;</span>, 0.5f);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Set the &quot;duration&quot; parameter on tap interactions but only for bindings</span></div>
+<div class="line"><span class="comment">// in the &quot;Gamepad&quot; group.</span></div>
+<div class="line">action.ApplyParameterOverride(<span class="stringliteral">&quot;tap:duration&quot;</span>, 0.5f, InputBinding.MaskByGroup(<span class="stringliteral">&quot;Gamepad&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Set tap duration for all bindings in an action map.</span></div>
+<div class="line">map.ApplyParameterOverride(<span class="stringliteral">&quot;tap:duration&quot;</span>, 0.5f);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Set tap duration for all bindings in an entire asset.</span></div>
+<div class="line">asset.ApplyParameterOverride(<span class="stringliteral">&quot;tap:duration&quot;</span>, 0.5f);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Like for GetParameterValue, overloads are available that take</span></div>
+<div class="line"><span class="comment">// an expression instead.</span></div>
+<div class="line">action.ApplyParameterOverride((TapInteraction x) =&gt; x.duration, 0.4f);</div>
+<div class="line">map.ApplyParameterOverride((TapInteraction x) =&gt; x.duration, 0.4f);</div>
+<div class="line">asset.ApplyParameterOverride((TapInteraction x) =&gt; x.duration, 0.4f);</div>
+</div><!-- fragment --><p>The new value will be applied immediately and affect all composites, processors, and interactions already in use and targeted by the override.</p>
+<p>Note that if multiple parameter overrides are applied &ndash; especially when applying some directly to actions and some to maps or assets &ndash;, there may be conflicts between which override to apply. In this case, an attempt is made to chose the "most specific" override to apply.</p>
+<div class="fragment"><div class="line"><span class="comment">// Let&#39;s say you have an InputAction `action` that is part of an InputActionAsset asset.</span></div>
+<div class="line">var map = action.actionMap;</div>
+<div class="line">var asset = map.asset;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// And you apply a &quot;tap:duration&quot; override to the action.</span></div>
+<div class="line">action.ApplyParameterOverride(<span class="stringliteral">&quot;tap:duration&quot;</span>, 0.6f);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// But also apply a &quot;tap:duration&quot; override to the action specifically</span></div>
+<div class="line"><span class="comment">// for bindings in the &quot;Gamepad&quot; group.</span></div>
+<div class="line">action.ApplyParameterOverride(<span class="stringliteral">&quot;tap:duration&quot;</span>, 1f, InputBinding.MaskByGroup(<span class="stringliteral">&quot;Gamepad&quot;</span>));</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// And finally also apply a &quot;tap:duration&quot; override to the entire asset.</span></div>
+<div class="line">asset.ApplyParameterOverride(<span class="stringliteral">&quot;tap:duration&quot;</span>, 0.3f);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Now, bindings on `action` in the &quot;Gamepad&quot; group will use a value of 1 for tap durations,</span></div>
+<div class="line"><span class="comment">// other bindings on `action` will use 0.6, and every other binding in the asset will use 0.3.</span></div>
+</div><!-- fragment --><p>You can use parameter overrides, for example, to scale mouse delta values on a "Look" action.</p>
+<div class="fragment"><div class="line"><span class="comment">// Set up an example &quot;Look&quot; action.</span></div>
+<div class="line">var look = <span class="keyword">new</span> InputAction(<span class="stringliteral">&quot;look&quot;</span>, type: InputActionType.Value);</div>
+<div class="line">look.AddBinding(<span class="stringliteral">&quot;&lt;Mouse&gt;/delta&quot;</span>, groups: <span class="stringliteral">&quot;KeyboardMouse&quot;</span>, processors: <span class="stringliteral">&quot;scaleVector2&quot;</span>);</div>
+<div class="line">look.AddBinding(<span class="stringliteral">&quot;&lt;Gamepad&gt;/rightStick&quot;</span>, groups: <span class="stringliteral">&quot;Gamepad&quot;</span>, processors: <span class="stringliteral">&quot;scaleVector2&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Now you can adjust stick sensitivity separately from mouse sensitivity.</span></div>
+<div class="line">look.ApplyParameterOverride(<span class="stringliteral">&quot;scaleVector2:x&quot;</span>, 0.5f, InputBinding.MaskByGroup(<span class="stringliteral">&quot;KeyboardMouse&quot;</span>));</div>
+<div class="line">look.ApplyParameterOverride(<span class="stringliteral">&quot;scaleVector2:y&quot;</span>, 0.5f, InputBinding.MaskByGroup(<span class="stringliteral">&quot;KeyboardMouse&quot;</span>));</div>
+<div class="line"> </div>
+<div class="line">look.ApplyParameterOverride(<span class="stringliteral">&quot;scaleVector2:x&quot;</span>, 2f, InputBinding.MaskByGroup(<span class="stringliteral">&quot;Gamepad&quot;</span>));</div>
+<div class="line">look.ApplyParameterOverride(<span class="stringliteral">&quot;scaleVector2:y&quot;</span>, 2f, InputBinding.MaskByGroup(<span class="stringliteral">&quot;Gamepad&quot;</span>));</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Alternative to using groups, you can also apply overrides directly to specific binding paths.</span></div>
+<div class="line">look.ApplyParameterOverride(<span class="stringliteral">&quot;scaleVector2:x&quot;</span>, 0.5f, <span class="keyword">new</span> InputBinding(<span class="stringliteral">&quot;&lt;Mouse&gt;/delta&quot;</span>));</div>
+<div class="line">look.ApplyParameterOverride(<span class="stringliteral">&quot;scaleVector2:y&quot;</span>, 0.5f, <span class="keyword">new</span> InputBinding(<span class="stringliteral">&quot;&lt;Mouse&gt;/delta&quot;</span>));</div>
+</div><!-- fragment --><p>&gt;NOTE: Parameter overrides are <em>not</em> persisted along with an asset.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1932"></a>
+Interactive rebinding</h2>
+<p>&gt;<b>Note:</b> To download a sample project which demonstrates how to set up a rebinding user interface with Input System APIs, open the Package Manager, select the Input System Package, and choose the sample project "Rebinding UI" to download.</p>
+<p>Runtime rebinding allows users of your application to set their own Bindings.</p>
+<p>To allow users to choose their own Bindings interactively, use the <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html"><span class="tt">InputActionRebindingExtensions.RebindingOperation</span></a> class. Call the <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_PerformInteractiveRebinding_UnityEngine_InputSystem_InputAction_System_Int32_"><span class="tt">PerformInteractiveRebinding()</span></a> method on an Action to create a rebinding operation. This operation waits for the Input System to register any input from any Device which matches the Action's expected Control type, then uses <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_overridePath"><span class="tt">InputBinding.overridePath</span></a> to assign the Control path for that Control to the Action's Bindings. If the user actuates multiple Controls, the rebinding operation chooses the Control with the highest <a href="Controls.md#control-actuation">magnitude</a>.</p>
+<p>&gt;IMPORTANT: You must dispose of <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html"><span class="tt">InputActionRebindingExtensions.RebindingOperation</span></a> instances via <span class="tt">Dispose()</span>, so that they don't leak memory on the unmanaged memory heap.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   <span class="keywordtype">void</span> RemapButtonClicked(InputAction actionToRebind)</div>
+<div class="line">   {</div>
+<div class="line">       var rebindOperation = actionToRebind</div>
+<div class="line">           .PerformInteractiveRebinding().Start();</div>
+<div class="line">   }</div>
+</div><!-- fragment --><p>The <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html"><span class="tt">InputActionRebindingExtensions.RebindingOperation</span></a> API is highly configurable to match your needs. For example, you can:</p>
+<ul>
+<li>Choose expected Control types (<a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithExpectedControlType_System_Type_"><span class="tt">WithExpectedControlType()</span></a>).</li>
+<li>Exclude certain Controls (<a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithControlsExcluding_System_String_"><span class="tt">WithControlsExcluding()</span></a>).</li>
+<li>Set a Control to cancel the operation (<a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithCancelingThrough_UnityEngine_InputSystem_InputControl_"><span class="tt">WithCancelingThrough()</span></a>).</li>
+<li>Choose which Bindings to apply the operation on if the Action has multiple Bindings (<a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithTargetBinding_System_Int32_"><span class="tt">WithTargetBinding()</span></a>, <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithBindingGroup_System_String_"><span class="tt">WithBindingGroup()</span></a>, <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithBindingMask_System_Nullable_UnityEngine_InputSystem_InputBinding__"><span class="tt">WithBindingMask()</span></a>).</li>
+</ul>
+<p>Refer to the scripting API reference for <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html"><span class="tt">InputActionRebindingExtensions.RebindingOperation</span></a> for a full overview.</p>
+<p>Note that <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_PerformInteractiveRebinding_UnityEngine_InputSystem_InputAction_System_Int32_"><span class="tt">PerformInteractiveRebinding()</span></a> automatically applies a set of default configurations based on the given action and targeted binding.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1933"></a>
+Saving and loading rebinds</h2>
+<p>You can serialize override properties of <a href="../api/UnityEngine.InputSystem.InputBinding.html">Bindings</a> by serializing them as JSON strings and restoring them from these. Use <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_SaveBindingOverridesAsJson_UnityEngine_InputSystem_IInputActionCollection2_"><span class="tt">SaveBindingOverridesAsJson</span></a> to create these strings and <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_LoadBindingOverridesFromJson_UnityEngine_InputSystem_IInputActionCollection2_System_String_System_Boolean_"><span class="tt">LoadBindingOverridesFromJson</span></a> to restore overrides from them.</p>
+<div class="fragment"><div class="line"><span class="comment">// Store player rebinds in PlayerPrefs.</span></div>
+<div class="line">var rebinds = playerInput.actions.SaveBindingOverridesAsJson();</div>
+<div class="line">PlayerPrefs.SetString(<span class="stringliteral">&quot;rebinds&quot;</span>, rebinds);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Restore player rebinds from PlayerPrefs (removes all existing</span></div>
+<div class="line"><span class="comment">// overrides on the actions; pass `false` for second argument</span></div>
+<div class="line"><span class="comment">// in case you want to prevent that).</span></div>
+<div class="line">var rebinds = PlayerPrefs.GetString(<span class="stringliteral">&quot;rebinds&quot;</span>);</div>
+<div class="line">playerInput.actions.LoadBindingOverridesFromJson(rebinds);</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md1934"></a>
+Restoring original Bindings</h3>
+<p>You can remove Binding overrides and thus restore defaults by using <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_RemoveBindingOverride_UnityEngine_InputSystem_InputAction_System_Int32_"><span class="tt">RemoveBindingOverride</span></a> or <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_RemoveAllBindingOverrides_UnityEngine_InputSystem_IInputActionCollection2_"><span class="tt">RemoveAllBindingOverrides</span></a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// Remove binding overrides from the first binding of the &quot;fire&quot; action.</span></div>
+<div class="line">playerInput.actions[<span class="stringliteral">&quot;fire&quot;</span>].RemoveBindingOverride(0);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Remove all binding overrides from the &quot;fire&quot; action.</span></div>
+<div class="line">playerInput.actions[<span class="stringliteral">&quot;fire&quot;</span>].RemoveAllBindingOverrides();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Remove all binding overrides from a player&#39;s actions.</span></div>
+<div class="line">playerInput.actions.RemoveAllBindingOverrides();</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md1935"></a>
+Displaying Bindings</h3>
+<p>It can be useful for the user to know what an Action is currently bound to (taking any potentially active rebindings into account) while rebinding UIs, and for on-screen hints while the app is running. You can use <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_effectivePath"><span class="tt">InputBinding.effectivePath</span></a> to get the currently active path for a Binding (which returns <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_overridePath"><span class="tt">overridePath</span></a> if set, or otherwise returns <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_path"><span class="tt">path</span></a>).</p>
+<p>The easiest way to retrieve a display string for an action is to call <a href="../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html#UnityEngine_InputSystem_InputActionRebindingExtensions_GetBindingDisplayString_"><span class="tt">InputActionRebindingExtensions.GetBindingDisplayString</span></a> which is an extension method for <a href="../api/UnityEngine.InputSystem.InputAction.html"><span class="tt">InputAction</span></a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// Get a binding string for the action as a whole. This takes into account which</span></div>
+<div class="line"><span class="comment">// bindings are currently active and the actual controls bound to the action.</span></div>
+<div class="line">m_RebindButton.GetComponentInChildren&lt;Text&gt;().text = action.GetBindingDisplayString();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Get a binding string for a specific binding on an action by index.</span></div>
+<div class="line">m_RebindButton.GetComponentInChildren&lt;Text&gt;().text = action.GetBindingDisplayString(1);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Look up binding indices with GetBindingIndex.</span></div>
+<div class="line">var bindingIndex = action.GetBindingIndex(InputBinding.MaskByGroup(<span class="stringliteral">&quot;Gamepad&quot;</span>));</div>
+<div class="line">m_RebindButton.GetComponentInChildren&lt;Text&gt;().text =</div>
+<div class="line">    action.GetBindingDisplayString(bindingIndex);</div>
+</div><!-- fragment --><p>You can also use this method to replace the text string with images.</p>
+<div class="fragment"><div class="line"><span class="comment">// Call GetBindingDisplayString() such that it also returns information about the</span></div>
+<div class="line"><span class="comment">// name of the device layout and path of the control on the device. This information</span></div>
+<div class="line"><span class="comment">// is useful for reliably associating imagery with individual controls.</span></div>
+<div class="line"><span class="comment">// NOTE: The first argument is the index of the binding within InputAction.bindings.</span></div>
+<div class="line">var bindingString = action.GetBindingDisplayString(0, out deviceLayout, out controlPath);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// If it&#39;s a gamepad, look up an icon for the control.</span></div>
+<div class="line">Sprite icon = <span class="keyword">null</span>;</div>
+<div class="line"><span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(deviceLayout)</div>
+<div class="line">    &amp;&amp; !<span class="keywordtype">string</span>.IsNullOrEmpty(controlPath)</div>
+<div class="line">    &amp;&amp; InputSystem.IsFirstLayoutBasedOnSecond(deviceLayout, <span class="stringliteral">&quot;Gamepad&quot;</span>))</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">switch</span> (controlPath)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">case</span> <span class="stringliteral">&quot;buttonSouth&quot;</span>: icon = aButtonIcon; <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> <span class="stringliteral">&quot;dpad/up&quot;</span>: icon = dpadUpIcon; <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="comment">//...</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// If you have an icon, display it instead of the text.</span></div>
+<div class="line">var text = m_RebindButton.GetComponentInChildren&lt;Text&gt;();</div>
+<div class="line">var image = m_RebindButton.GetComponentInChildren&lt;<a class="code hl_enumvalue" href="namespace_unity_engine_1_1_rendering.html#a42fac7aa61a542c480b54692c3ea9711abe53a0541a6d36f6ecb879fa2c584b08">Image</a>&gt;();</div>
+<div class="line"><span class="keywordflow">if</span> (icon != <span class="keyword">null</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Display icon.</span></div>
+<div class="line">    text.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line">    image.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line">    image.sprite = icon;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Display text.</span></div>
+<div class="line">    text.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line">    image.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line">    text.text = bindingString;</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_engine_1_1_rendering_html_a42fac7aa61a542c480b54692c3ea9711abe53a0541a6d36f6ecb879fa2c584b08"><div class="ttname"><a href="namespace_unity_engine_1_1_rendering.html#a42fac7aa61a542c480b54692c3ea9711abe53a0541a6d36f6ecb879fa2c584b08">UnityEngine.Rendering.SRPLensFlareType.Image</a></div><div class="ttdeci">@ Image</div><div class="ttdoc">Image from a file or a RenderTexture.</div><div class="ttdef"><b>Definition</b> LensFlareDataSRP.cs:65</div></div>
+</div><!-- fragment --><p>Additionally, each Binding has a <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_ToDisplayString_UnityEngine_InputSystem_InputBinding_DisplayStringOptions_UnityEngine_InputSystem_InputControl_"><span class="tt">ToDisplayString</span></a> method, which you can use to turn individual Bindings into display strings. There is also a generic formatting method for Control paths, <a href="../api/UnityEngine.InputSystem.InputControlPath.html#UnityEngine_InputSystem_InputControlPath_ToHumanReadableString_System_String_UnityEngine_InputSystem_InputControlPath_HumanReadableStringOptions_UnityEngine_InputSystem_InputControl_"><span class="tt">InputControlPath.ToHumanReadableString</span></a>, which you can use with arbitrary Control path strings.</p>
+<p>Note that the Controls a Binding resolves to can change at any time, and the display strings for controls might change dynamically. For example, if the user switches the currently active keyboard layout, the display string for each individual key on the <a href="../api/UnityEngine.InputSystem.Keyboard.html"><span class="tt">Keyboard</span></a> might change.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1936"></a>
+Control Schemes</h2>
+<p>A Binding can belong to any number of Binding groups. <a class="el" href="namespace_unity.html">Unity</a> stores these on the <a href="../api/UnityEngine.InputSystem.InputBinding.html"><span class="tt">InputBinding</span></a> class as a semicolon-separated string in the <a href="../api/UnityEngine.InputSystem.InputBinding.html#UnityEngine_InputSystem_InputBinding_groups"><span class="tt">InputBinding.groups</span></a> property, and you can use them for any arbitrary grouping of bindings. To enable different sets of binding groups for an <a href="../api/UnityEngine.InputSystem.InputActionMap.html"><span class="tt">InputActionMap</span></a> or <a href="../api/UnityEngine.InputSystem.InputActionAsset.html"><span class="tt">InputActionAsset</span></a>, you can use the <a href="../api/UnityEngine.InputSystem.InputActionMap.html#UnityEngine_InputSystem_InputActionMap_bindingMask"><span class="tt">InputActionMap.bindingMask</span></a>/<a href="../api/UnityEngine.InputSystem.InputActionAsset.html#UnityEngine_InputSystem_InputActionAsset_bindingMask"><span class="tt">InputActionAsset.bindingMask</span></a> property. The Input System uses this to implement the concept of grouping Bindings into different <a href="../api/UnityEngine.InputSystem.InputControlScheme.html"><span class="tt">InputControlSchemes</span></a>.</p>
+<p>Control Schemes use Binding groups to map Bindings in an <a href="../api/UnityEngine.InputSystem.InputActionMap.html"><span class="tt">InputActionMap</span></a> or <a href="../api/UnityEngine.InputSystem.InputActionAsset.html"><span class="tt">InputActionAsset</span></a> to different types of Devices. The <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input.html"><span class="tt">PlayerInput</span></a> class uses these to enable a matching Control Scheme for a new <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_user_management.html">user</a> joining the game, based on the Device they are playing on.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1937"></a>
+Details</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1938"></a>
+Binding resolution</h3>
+<p>When the Input System accesses the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_controls.html">Controls</a> bound to an Action for the first time, the Action resolves its Bindings to match them to existing Controls on existing Devices. In this process, the Action calls <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_FindControls__1_System_String_UnityEngine_InputSystem_InputControlList___0___"><span class="tt">InputSystem.FindControls&lt;&gt;()</span></a> (filtering for devices assigned to the InputActionMap, if there are any) for the Binding path of each of the Action's bindings. This creates a list of resolved Controls that are now bound to the Action.</p>
+<p>Note that a single <a href="Controls.md#control-paths">Binding path</a> can match multiple Controls:</p>
+<ul>
+<li>A specific Device path such as <span class="tt">&lt;DualShockGamepad&gt;/buttonEast</span> matches the "Circle" button on a <a href="Gamepad.md#playstation-controllers">PlayStation controller</a>. If you have multiple PlayStation controllers connected, it resolves to the "Circle" button on each of these controllers.</li>
+<li>An abstract Device path such as <span class="tt">&lt;Gamepad&gt;/buttonEast</span> matches the right action button on any connected gamepad. If you have a PlayStation controller and an <a href="Gamepad.md#xbox-controllers">Xbox controller</a> connected, it resolves to the "Circle" button on the PlayStation controller, and to the "B" button on the Xbox controller.</li>
+<li>A Binding path can also contain wildcards, such as <span class="tt">&lt;Gamepad&gt;/button*</span>. This matches any Control on any gamepad with a name starting with "button", which matches all the four action buttons on any connected gamepad. A different example: <span class="tt">*/{Submit}</span> matches any Control tagged with the "Submit" <a href="Controls.md#control-usages">usage</a> on any Device.</li>
+</ul>
+<p>If there are multiple Bindings on the same Action that all reference the same Control(s), the Control will effectively feed into the Action multiple times. This is to allow, for example, a single Control to produce different input on the same Action by virtue of being bound in a different fashion (composites, processors, interactions, etc). However, regardless of how many times a Control is bound on any given action, it will only be mentioned once in the Action's <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_controls">array of <span class="tt">controls</span></a>.</p>
+<p>To query the Controls that an Action resolves to, you can use <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_controls"><span class="tt">InputAction.controls</span></a>. You can also run this query if the Action is disabled.</p>
+<p>To be notified when binding resolution happens, you can listen to <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_onActionChange"><span class="tt">InputSystem.onActionChange</span></a> which triggers <a href="../api/UnityEngine.InputSystem.InputActionChange.html#UnityEngine_InputSystem_InputActionChange_BoundControlsAboutToChange"><span class="tt">InputActionChange.BoundControlsAboutToChange</span></a> before modifying Control lists and triggers <a href="../api/UnityEngine.InputSystem.InputActionChange.html#UnityEngine_InputSystem_InputActionChange_BoundControlsChanged"><span class="tt">InputActionChange.BoundControlsChanged</span></a> after having updated them.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md1939"></a>
+Binding resolution while Actions are enabled</h4>
+<p>In certain situations, the <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_controls">Controls</a> bound to an Action have to be updated more than once. For example, if a new <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_devices.html">Device</a> becomes usable with an Action, the Action may now pick up input from additional controls. Also, if Bindings are added, removed, or modified, Control lists will need to be updated.</p>
+<p>This updating of Controls usually happens transparently in the background. However, when an Action is <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_enabled">enabled</a> and especially when it is <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_IsInProgress_">in progress</a>, there may be a noticeable effect on the Action.</p>
+<p>Adding or removing a device &ndash; either <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_devices">globally</a> or to/from the <a href="../api/UnityEngine.InputSystem.InputActionAsset.html#UnityEngine_InputSystem_InputActionAsset_devices">device list</a> of an Action &ndash; will remain transparent <b>except</b> if an Action is in progress and it is the device of its <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_activeControl">active Control</a> that is being removed. In this case, the Action will automatically be <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_canceled">cancelled</a>.</p>
+<p>Modifying the <a href="../api/UnityEngine.InputSystem.InputActionAsset.html#UnityEngine_InputSystem_InputActionAsset_bindingMask">binding mask</a> or modifying any of the Bindings (such as through rebinding or by adding or removing bindings) will, however, lead to all enabled Actions being temporarily disabled and then re-enabled and resumed.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md1940"></a>
+Choosing which Devices to use</h4>
+<p>&gt;<b>Note</b>: <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_user_management.html"><span class="tt">InputUser</span></a> and <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input.html"><span class="tt">PlayerInput</span></a> make use of this facility automatically. They set <a href="../api/UnityEngine.InputSystem.InputActionMap.html#UnityEngine_InputSystem_InputActionMap_devices"><span class="tt">InputActionMap.devices</span></a> automatically based on the Devices that are paired to the user.</p>
+<p>By default, Actions resolve their Bindings against all Devices present in the Input System (that is, <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_devices"><span class="tt">InputSystem.devices</span></a>). For example, if there are two gamepads present in the system, a Binding to <span class="tt">&lt;Gamepad&gt;/buttonSouth</span> picks up both gamepads and allows the Action to be used from either.</p>
+<p>You can override this behavior by restricting <a href="../api/UnityEngine.InputSystem.InputActionAsset.html"><span class="tt">InputActionAssets</span></a> or individual <a href="../api/UnityEngine.InputSystem.InputActionMap.html"><span class="tt">InputActionMaps</span></a> to a specific set of Devices. If you do this, Binding resolution only takes the Controls of the given Devices into account.</p>
+<div class="fragment"><div class="line">var actionMap = new InputActionMap();</div>
+<div class="line"> </div>
+<div class="line">// Restrict the action map to just the first gamepad.</div>
+<div class="line">actionMap.devices = new[] { Gamepad.all[0] };</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md1941"></a>
+Conflicting inputs</h3>
+<p>There are two situations where a given input may lead to ambiguity:</p>
+<ol type="1">
+<li>Several Controls are bound to the same Action and more than one is feeding input into the Action at the same time. Example: an Action that is bound to both the left and right trigger on a Gamepad and both triggers are pressed.</li>
+<li>The input is part of a sequence of inputs and there are several possible such sequences. Example: one Action is bound to the <span class="tt">B</span> key and another Action is bound to <span class="tt">Shift-B</span>.</li>
+</ol>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md1942"></a>
+Multiple, concurrently used Controls</h4>
+<p>&gt;<b>Note:</b> This section does not apply to <a href="RespondingToActions.md#pass-through"><span class="tt">PassThrough</span></a> Actions as they are by design meant to allow multiple concurrent inputs.</p>
+<p>For a <a href="RespondingToActions.md#button"><span class="tt">Button</span></a> or <a href="RespondingToActions.md#value"><span class="tt">Value</span></a> Action, there can only be one Control at any time that is "driving" the Action. This Control is considered the <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_activeControl"><span class="tt">activeControl</span></a>.</p>
+<p>When an Action is bound to multiple Controls, the <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_activeControl"><span class="tt">activeControl</span></a> at any point is the one with the greatest level of <a href="Controls.md#control-actuation">"actuation"</a>, that is, the largest value returned from <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_EvaluateMagnitude_"><span class="tt">EvaluateMagnitude</span></a>. If a Control exceeds the actuation level of the current <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_activeControl"><span class="tt">activeControl</span></a>, it will itself become the active Control.</p>
+<p>The following example demonstrates this mechanism with a <a href="RespondingToActions.md#button"><span class="tt">Button</span></a> Action and also demonstrates the difference to a <a href="RespondingToActions.md#pass-through"><span class="tt">PassThrough</span></a> Action.</p>
+<div class="fragment"><div class="line"><span class="comment">// Create a button and a pass-through action and bind each of them</span></div>
+<div class="line"><span class="comment">// to both triggers on the gamepad.</span></div>
+<div class="line">var buttonAction = <span class="keyword">new</span> InputAction(type: InputActionType.Button,</div>
+<div class="line">    binding: <span class="stringliteral">&quot;&lt;Gamepad&gt;/*Trigger&quot;</span>);</div>
+<div class="line">var passThroughAction = <span class="keyword">new</span> InputAction(type: InputActionType.PassThrough,</div>
+<div class="line">    binding: <span class="stringliteral">&quot;&lt;Gamepad&gt;/*Trigger&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">buttonAction.performed += c =&gt; Debug.Log(<span class="stringliteral">&quot;${c.control.name} pressed (Button)&quot;</span>);</div>
+<div class="line">passThroughAction.performed += c =&gt; Debug.Log(<span class="stringliteral">&quot;${c.control.name} changed (Pass-Through)&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">buttonAction.Enable();</div>
+<div class="line">passThroughAction.Enable();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Press the left trigger all the way down.</span></div>
+<div class="line"><span class="comment">// This will trigger both buttonAction and passThroughAction. Both will</span></div>
+<div class="line"><span class="comment">// see leftTrigger becoming the activeControl.</span></div>
+<div class="line">Set(gamepad.leftTrigger, 1f);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Will log</span></div>
+<div class="line"><span class="comment">//   &quot;leftTrigger pressed (Button)&quot; and</span></div>
+<div class="line"><span class="comment">//   &quot;leftTrigger changed (Pass-Through)&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Press the right trigger halfway down.</span></div>
+<div class="line"><span class="comment">// This will *not* trigger or otherwise change buttonAction as the right trigger</span></div>
+<div class="line"><span class="comment">// is actuated *less* than the left one that is already driving action.</span></div>
+<div class="line"><span class="comment">// However, passThrough action is not performing such tracking and will thus respond</span></div>
+<div class="line"><span class="comment">// directly to the value change. It will perform and make rightTrigger its activeControl.</span></div>
+<div class="line">Set(gamepad.rightTrigger, 0.5f);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Will log</span></div>
+<div class="line"><span class="comment">//   &quot;rightTrigger changed (Pass-Through)&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Release the left trigger.</span></div>
+<div class="line"><span class="comment">// For buttonAction, this will mean that now all controls feeding into the action have</span></div>
+<div class="line"><span class="comment">// been released and thus the button releases. activeControl will go back to null.</span></div>
+<div class="line"><span class="comment">// For passThrough action, this is just another value change. So, the action performs</span></div>
+<div class="line"><span class="comment">// and its active control changes to leftTrigger.</span></div>
+<div class="line">Set(gamepad.leftTrigger,  0f);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Will log</span></div>
+<div class="line"><span class="comment">//   &quot;leftTrigger changed (Pass-Through)&quot;</span></div>
+</div><!-- fragment --><p>For composite bindings, magnitudes of the composite as a whole rather than for individual Controls are tracked. However, <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_activeControl"><span class="tt">activeControl</span></a> will stick track individual Controls from the composite.</p>
+<h5 class="doxsection"><a class="anchor" id="autotoc_md1943"></a>
+Disabling Conflict Resolution</h5>
+<p>Conflict resolution is always applied to <a href="RespondingToActions.md#button">Button</a> and <a href="RespondingToActions.md#value">Value</a> type Actions. However, it can be undesirable in situations when an Action is simply used to gather any and all inputs from bound Controls. For example, the following Action would monitor the A button of all available gamepads:</p>
+<div class="fragment"><div class="line">var action = <span class="keyword">new</span> InputAction(type: InputActionType.PassThrough, binding: <span class="stringliteral">&quot;&lt;Gamepad&gt;/buttonSouth&quot;</span>);</div>
+<div class="line">action.Enable();</div>
+</div><!-- fragment --><p>By using the <a href="RespondingToActions.md#pass-through">Pass-Through</a> Action type, conflict resolution is bypassed and thus, pressing the A button on one gamepad will not result in a press on a different gamepad being ignored.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md1944"></a>
+Multiple input sequences (such as keyboard shortcuts)</h4>
+<p>&gt;<b>Note</b>: The mechanism described here only applies to Actions that are part of the same <a href="../api/UnityEngine.InputSystem.InputActionMap.html"><span class="tt">InputActionMap</span></a> or <a href="../api/UnityEngine.InputSystem.InputActionAsset.html"><span class="tt">InputActionAsset</span></a>.</p>
+<p>Inputs that are used in combinations with other inputs may also lead to ambiguities. If, for example, the <span class="tt">b</span> key on the Keyboard is bound both on its own as well as in combination with the <span class="tt">shift</span> key, then if you first press <span class="tt">shift</span> and then <span class="tt">b</span>, the latter key press would be a valid input for either of the Actions.</p>
+<p>The way this is handled is that Bindings will be processed in the order of decreasing "complexity". This metric is derived automatically from the Binding:</p>
+<ul>
+<li>A binding that is <em>not</em> part of a composite is assigned a complexity of 1.</li>
+<li>A binding that <em>is</em> part of a composite is assigned a complexity equal to the number of part bindings in the composite.</li>
+</ul>
+<p>In our example, this means that a `OneModifier` composite Binding to <span class="tt">Shift+B</span> has a higher "complexity" than a Binding to <span class="tt">B</span> and thus is processed first.</p>
+<p>Additionally, the first Binding that results in the Action changing <a href="RespondingToActions.md#action-callbacks">phase</a> will "consume" the input. This consuming will result in other Bindings to the same input not being processed. So in our example, when <span class="tt">Shift+B</span> "consumes" the <span class="tt">B</span> input, the Binding to <span class="tt">B</span> will be skipped.</p>
+<p>The following example illustrates how this works at the API level.</p>
+<div class="fragment"><div class="line"><span class="comment">// Create two actions in the same map.</span></div>
+<div class="line">var map = <span class="keyword">new</span> InputActionMap();</div>
+<div class="line">var bAction = map.AddAction(<span class="stringliteral">&quot;B&quot;</span>);</div>
+<div class="line">var shiftbAction = map.AddAction(<span class="stringliteral">&quot;ShiftB&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Bind one of the actions to &#39;B&#39; and the other to &#39;SHIFT+B&#39;.</span></div>
+<div class="line">bAction.AddBinding(<span class="stringliteral">&quot;&lt;Keyboard&gt;/b&quot;</span>);</div>
+<div class="line">shiftbAction.AddCompositeBinding(<span class="stringliteral">&quot;OneModifier&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Modifier&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/shift&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Binding&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/b&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Print something to the console when the actions are triggered.</span></div>
+<div class="line">bAction.performed += _ =&gt; Debug.Log(<span class="stringliteral">&quot;B action performed&quot;</span>);</div>
+<div class="line">shiftbAction.performed += _ =&gt; Debug.Log(<span class="stringliteral">&quot;SHIFT+B action performed&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Start listening to input.</span></div>
+<div class="line">map.Enable();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Now, let&#39;s assume the left shift key on the keyboard is pressed (here, we manually</span></div>
+<div class="line"><span class="comment">// press it with the InputTestFixture API).</span></div>
+<div class="line">Press(Keyboard.current.leftShiftKey);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// And then the B is pressed. This is a valid input for both</span></div>
+<div class="line"><span class="comment">// bAction as well as shiftbAction.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// What will happen now is that shiftbAction will do its processing first. In response,</span></div>
+<div class="line"><span class="comment">// it will *perform* the action (i.e. we see the `performed` callback being invoked) and</span></div>
+<div class="line"><span class="comment">// thus &quot;consume&quot; the input. bAction will stay silent as it will in turn be skipped over.</span></div>
+<div class="line">Press(keyboard.bKey);</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md1945"></a>
+Initial state check</h3>
+<p>After an Action is <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_enabled">enabled</a>, it will start reacting to input as it comes in. However, at the time the Action is enabled, one or more of the Controls that are <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_controls">bound</a> to an action may already have a non-default state at that point. x Using what is referred to as an "initial state check", an Action can be made to respond to such a non-default state as if the state change happened <em>after</em> the Action was enabled. The way this works is that in the first input <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_Update_">update</a> after the Action was enabled, all its bound controls are checked in turn. If any of them has a non-default state, the Action responds right away.</p>
+<p>This check is implicitly enabled for <a href="RespondingToActions.md#value">Value</a> actions. If, for example, you have a <span class="tt">Move</span> Action bound to the left stick on the gamepad and the stick is already pushed in a direction when <span class="tt">Move</span> is enabled, the character will immediately start walking.</p>
+<p>By default, <a href="RespondingToActions.md#button">Button</a> and <a href="RespondingToActions.md#pass-through">Pass-Through</a> type Actions, do not perform this check. A button that is pressed when its respective Action is enabled first needs to be released and then pressed again for it to trigger the Action.</p>
+<p>However, you can manually enable initial state checks on these types of Actions using the checkbox in the editor:</p>
+<p><img src="./Images/InitialStateCheck.png" alt="Initial State Check" class="inline"/> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

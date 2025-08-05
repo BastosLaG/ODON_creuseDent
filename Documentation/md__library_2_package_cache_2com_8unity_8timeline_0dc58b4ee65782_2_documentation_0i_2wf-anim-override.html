@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Override upper-body animation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-anim-override.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Override upper-body animation </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6073"></a></p>
+<p>This workflow demonstrates how to use an Animation Override track and an Avatar Mask to replace the upper-body animation of an Animation track. For example, you can use this technique to animate a humanoid to walk while celebrating a victory.</p>
+<p>This workflow uses the humanoid model named <span class="tt">DefaultMale</span> and animation source assets from the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2samp-gameplay-demo.html">Gameplay Sequence sample</a> for its examples. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2samp-overview.html">Timeline Samples</a> for information on the samples available from the <a class="el" href="namespace_timeline.html">Timeline</a> package and how to import these samples into your projects.</p>
+<p>This workflow starts with a <a class="el" href="namespace_timeline.html">Timeline</a> instance that has an Animation track bound to the <span class="tt">DefaultMale</span> humanoid model. The Animation track has a single Animation clip that starts at frame 0 and loops twice for a duration of 216 frames.</p>
+<p><img src="images/tl-mask-start.png" alt="" class="inline"/></p>
+<p><em>The <span class="tt">DefaultMale</span> humanoid model linked to a <a class="el" href="namespace_timeline.html">Timeline</a> instance (<span class="tt">OverrideTL</span>) with an Animation track bound to the same model (<span class="tt">DefaultMale</span>) with a Walk Animation clip that loops twice.</em></p>
+<p>In this workflow, to add an Animation Override track and override the upper-body animation, follow these steps:</p>
+<ol type="1">
+<li>In the Track Header for the Animation track, click the <b>More</b> (<b>⋮</b>) menu and choose <b>Add Override Track</b>. An Animation Override track, named <span class="tt">Override 0</span>, is linked to the selected Animation track.</li>
+</ol>
+<p>Notice that the Animation Override track is not bound to a GameObject. Because the Animation Override track is linked to the Animation track above, the Override track is bound to the same GameObject: the <span class="tt">DefaultMale</span> humanoid.</p>
+<p><img src="images/tl-mask-override.png" alt="" class="inline"/></p>
+<p><em>Animation track with an Animation Override track. The More (⋮) menu icon is indicated in red.</em></p>
+<ol type="1">
+<li>From your Project, drag an animation source asset with upper-body animation into the Override track. This workflow uses the <span class="tt">Vct_Dnc_anim1</span> animation source asset from the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2samp-gameplay-demo.html">Gameplay Sequence sample</a>.</li>
+<li>Position and resize the clip to choose the upper-body animation to combine with the Walk clip. The Animation clip on the Override track should also match the size of Walk clip.</li>
+</ol>
+<p><img src="images/tl-celebrate-clip.png" alt="" class="inline"/></p>
+<p><em>The Animation Override track contains a trimmed part of the full <span class="tt">Vct_Dnc_anim1</span> animation source asset (frames 630 to 846). This clip was also positioned and resized to match the Animation clip (<span class="tt">Walk</span>) on the parent Animation track.</em></p>
+<ol type="1">
+<li>Play the <a class="el" href="namespace_timeline.html">Timeline</a> instance. The victory dance clip, <span class="tt">Vct_Dnc_anim1</span>, completely overrides the <span class="tt">Walk</span> clip. To combine the lower-body animation from one Animation clip with the upper-body animation from the Animation Override clip, you must specify an Avatar Mask for the Animation Override track.</li>
+<li>To specify an Avatar Mask, select the Override track to view its <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-trk-anim.html">track properties in the Inspector window</a>.</li>
+</ol>
+<p><img src="images/insp-override-track-props.png" alt="" class="inline"/></p>
+<p><em>The track properties for an Animation Override track are the same as an Animation track</em></p>
+<ol type="1">
+<li>In the Inspector window, specify an Avatar Mask that masks the lower body animation for the Avatar Mask property. If you do not have an Avatar Mask that masks the lower body, consult <a href="https://docs.unity3d.com/Manual/class-AvatarMask.html">Avatar Mask window</a> for information on how to create one.</li>
+</ol>
+<p>Once you have specified a lower body Avatar Mask, select the mask and enable the <b>Apply Avatar Mask</b> checkbox. An Avatar Mask toggle appears beside the Override track name.</p>
+<p><img src="images/tl-avatar-mask-icon.png" alt="" class="inline"/></p>
+<p><em>In the track header, the enabled Avatar Mask indicates that the Animation Override track uses an Avatar Mask.</em></p>
+<ol type="1">
+<li>Play the <a class="el" href="namespace_timeline.html">Timeline</a> instance. In this example, the <span class="tt">DefaultMale</span> humanoid uses upper-body animation from the <span class="tt">Vct_Dnc_anim1</span> clip and the lower body animation from the Walk clip.</li>
+</ol>
+<p>To temporarily disable the Avatar Mask, toggle the Avatar Mask toggle off. This is the same as disabling the <b>Apply Avatar Mask</b> checkbox in the Inspector window. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

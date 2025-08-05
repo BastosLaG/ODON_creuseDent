@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Répertoire de référence de Library/PackageCache/com.unity.collections@56bff8827a7e/Unity.Collections.PerformanceTests/Unity.PerformanceTesting.Benchmark</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('dir_3a2fcd12312d399ccd261d4944e2b691.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Répertoire de référence de Unity.PerformanceTesting.Benchmark</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1474"></a>
+Benchmark Framework</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1475"></a>
+Table of Contents</h1>
+<ul>
+<li>Overview and Features</li>
+<li>Using the Framework<ul>
+<li>Attribute Summary</li>
+</ul>
+</li>
+<li>Example<ul>
+<li>Glue Layer - Native Containers</li>
+<li>Performance and Benchmark Tests - Native Containers</li>
+<li>Results</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1476"></a>
+Overview and Features</h1>
+<p>The Benchmark Framework is a complimentary framework to the Performance Test Framework. It provides a means to write a code for performance tests <em>one time</em> for a given type while providing the following benefits:</p>
+<ul>
+<li>Both benchmarks comparisons and performance/regression testing from a single implementation<ul>
+<li>A managed execution path (JIT) from the same single implementation</li>
+<li>A <a class="el" href="namespace_burst.html">Burst</a> compiled <em>with safety</em> path from the same single implementation</li>
+<li>A <a class="el" href="namespace_burst.html">Burst</a> compiled <em>without safety</em> path from the same single implementation</li>
+</ul>
+</li>
+<li>Automatically generate markdown formatted documentation for the Benchmark results</li>
+<li>Provide a simple means for running benchmarks through custom menu items with easily trackable progress and ability to cancel at any time</li>
+</ul>
+<p>For the Benchmark Framework itself, tests can be designed to easily group together multiple variations for comparison. For example, the list above may apply to:</p><ul>
+<li>An implementation for Native containers</li>
+<li>Another implementation for Unsafe containers</li>
+<li>And yet another implementation for the container types included in .NET/Mono/IL2CPP Base Class Libraries</li>
+</ul>
+<p>Finally, test implementations may be classified such as:</p><ul>
+<li>Only test for benchmarking, but not for performance/regression testing (such as managed BCL containers)</li>
+<li>Consider an implementation variation as the baseline, and compare all other implementation variations against it</li>
+<li>Include only a subset of implementation in case there is a gap in functionality (intentional or not) at this time</li>
+</ul>
+<p><br  />
+</p>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="autotoc_md1478"></a>
+Using the Framework</h1>
+<p>To take advantage of the features above and write tests for the Benchmark Framework, three components are required:</p><ol type="1">
+<li>The Benchmark Framework itself which works alongside the Performance Test Framework</li>
+<li>An intermediate 'glue' layer for a given benchmark comparison type i.e. BenchmarkContainer, BenchmarkAllocator</li>
+<li>The Performance <a class="el" href="class_tests.html">Tests</a> themselves, using the intermediate layer from #2 above</li>
+</ol>
+<p>Because #1 is provided by the Framework here, the rest of this documentation will give an example of using it to create a 'glue' layer and then a performance test which makes use of this example 'glue' layer.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1479"></a>
+Attribute Summary</h2>
+<p>Most (but not <em>quite</em> all) interaction with the Benchmark Framework will occur through its attributes. These are all defined in the <span class="tt"><a class="el" href="namespace_unity_1_1_performance_testing_1_1_benchmark.html">Unity.PerformanceTesting.Benchmark</a></span> namespace. A summary will be given here, but further details can be found in the inline code documentation. As mentioned, a small example demonstrating their use will follow.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Attribute  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">[Benchmark]</span></b>  </td><td class="markdownTableBodyNone">This marks a class containing performance tests to be used in Benchmark Comparison report generation.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">[BenchmarkComparison]</span></b>  </td><td class="markdownTableBodyNone">This marks an enum as defining the variants that will be generated and simultaneously covers both the Performance Test Framework tests as well as Benchmark Framework tests. <em>Optionally, this can define the Benchmark baseline if it is also a Performance Test Framework measurement.</em>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">[BenchmarkComparisonExternal]</span></b>  </td><td class="markdownTableBodyNone">Used on the same enum definition, this associates non-enum values with the enum for Benchmark Framework tests which <em>are not</em> to be included in Performance Test Framework tests. <em>Optionally, this can define the Benchmark baseline if it is not a Performance Test Framework measurement.</em>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">[BenchmarkComparisonDisplay]</span></b>  </td><td class="markdownTableBodyNone">Also used on the same enum definition, this overrides the default measurement sample unit (millisecond, microsecond, etc.), the decimal places for Benchmark report generation, and the ranking statistic for Benchmark report generation (median, minimum, etc.).  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">[BenchmarkName]</span></b>  </td><td class="markdownTableBodyNone">Required with each enum value, this describes a formatting string for naming Benchmark result variations when a report is generated, such as <span class="tt">[BenchmarkName("Native{0}")]</span>, which when used with a <span class="tt">[Benchmark]</span> attributed class such as <span class="tt">HashSet</span>, would generate a the name "NativeHashSet"  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">[BenchmarkNameOverride]</span></b>  </td><td class="markdownTableBodyNone">Override the formatted name in case the class doesn't precisely represent the name that should appear in reports.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">[BenchmarkTestFootnote]</span></b>  </td><td class="markdownTableBodyNone">Generate a footnote in the Benchmark Comparison report for a given Performance Test method. When used, the footnote will always include a description of the method and its parameters. Optionally, user-defined footnote text may be specified as well.  </td></tr>
+</table>
+<p>Generally, <span class="tt">[Benchmark]</span>, <span class="tt">[BenchmarkNameOverride]</span>, and <span class="tt">[BenchmarkTestFootnote]</span> will be used while writing tests. The rest are used solely in the 'glue' layer, so if you are writing tests on top of a pre-existing 'glue' layer, you will be unlikely to need or use them.</p>
+<p><br  />
+</p>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="autotoc_md1481"></a>
+Example</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1482"></a>
+Glue Layer - Native Containers</h2>
+<p>This will illustrate a simplified version of the com.unity.collections <span class="tt">BenchmarkContainer</span> implementation as an example of creating an intermediate 'glue' layer between the Benchmark Framework and user-defined performance tests.</p>
+<ol type="1">
+<li>The first requirement is an <span class="tt">enum</span> type which defines the test variations that will be benchmarked. Values defined in the enum will also generate Performance Test Framework tests used in regression testing and performance analysis. Values defined through the <span class="tt">[BenchmarkComparison]</span> attribute will only appear in Benchmark reports.<br  />
+<br  />
+ You'll notice two attributes used. <span class="tt">[BenchmarkComparison]</span> denotes this <span class="tt">enum</span> will be used for benchmarking as well as indicates an externally defined comparison type (BCL) as the baseline to benchmark against, and <span class="tt">[BenchmarkComparisonDisplay]</span> overrides the default format for report generation and the statistic used for comparison.<br  />
+<br  />
+ It's worth pointing out that the <span class="tt">{0}</span> in the name strings will be replaced with the name of the test group, such as <span class="tt">HashSet</span> or <span class="tt">List</span>. This also references a <span class="tt">MyExampleConfig</span> for convenience and consistency which will be defined next. <div class="fragment"></div><!-- fragment --></li>
+<li>The configuration class is not a requirement, but rather it is a recommended pattern for storing common data for all tests as well as the interface (in this case a menu item) for running benchmarks and generating the resulting markdown file.<br  />
+<br  />
+ The main takeaway here is the call to <span class="tt">GenerateMarkdown</span> which also runs the benchmark tests. Specifically, the argument <span class="tt">typeof(MyExampleType)</span> refers to the above defined comparison <span class="tt">enum</span>, and this call will find all the types with a <span class="tt">[Benchmark(typeof(MyExampleType))]</span> attribute and their methods with the combined <span class="tt">[Test]</span> and <span class="tt">[Performance]</span> attributes discover and run benchmark tests. More on this later with the example performance tests which will be benchmarked. <div class="fragment"></div><!-- fragment --></li>
+<li>A <span class="tt">glue</span> layer should define an <span class="tt">interface</span> which specifies any test setup, teardown, and measurement for each unique type that will be measured. For the sake of this example, a NativeContainer will be measured, and a managed C# base class library container will be used as a baseline.<br  />
+<br  />
+ <b>Notice</b> there is not a separate interface definition for the NativeContainer's managed code path versus <a class="el" href="namespace_burst.html">Burst</a> compiled code path. This can be handled automatically by the final piece of the 'glue' layer, defined next. <div class="fragment"></div><!-- fragment --></li>
+<li>Finally, this brings all the individual 'glue' pieces together. Calling this method from a performance framework test implementation (with <span class="tt">[Test]</span> and <span class="tt">[Performance]</span> attributes) will ensure the proper code path is executed and measured. Some details worth noting:<ul>
+<li><span class="tt">BenchmarkMeasure.Measure</span> handles selecting the code path for either the Performance Test Framework (run through the Test Runner in <a class="el" href="namespace_unity.html">Unity</a>) or the Benchmark Framework (run through the above defined menu option, for instance).</li>
+<li>Setup and Teardown calls are <em>not</em> timed and measured.</li>
+<li><a class="el" href="namespace_burst.html">Burst</a> compiled (and any other) variants of a single test implementation isn't <em>entirely</em> automatic - rather it is defined by the 'glue' layer and specified through the comparison <span class="tt">enum</span> value.</li>
+<li>External comparison values such as <span class="tt">MyExampleConfig.BCL</span> will never be called by the Performance Test Framework. Only the Benchmark Framework will automatically generation measurement invocations with this value.</li>
+</ul>
+</li>
+</ol>
+<div class="fragment"></div><!-- fragment --><p> With these 4 ingredients to the 'glue' layer, writing flexible multipurpose performance and benchmark tests which cover any number of combinations through the minimum amount of code possible - meaning little to no code duplication - is quite easy to do.</p>
+<p>There will still be <em>some</em> boiler-plate involved, as we do need to adhere to the contract set by the <span class="tt">IMyExampleBenchmark</span> interface, but the amount of code required to do this for 10s or 100s of performance tests is reduced by about an order of a magnitude compared to doing this manually, and <em>that</em> is without consideration even for generating benchmark comparisons and reports.</p>
+<p><br  />
+</p>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="autotoc_md1484"></a>
+Example</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1485"></a>
+Performance and Benchmark Tests - Native Containers</h2>
+<p>Now that we have a 'glue' layer, it should be straightforward to define as many performance and benchmark tests for the comparison types provided by that layer as we can imagine.</p>
+<ol type="1">
+<li>First let's define a simple utility class to reduce boiler plate in each test. This simply commonizes the setup and teardown, as we can not use inheritance due to needing the implementations to be <span class="tt">unmanaged structs</span> to satisfy the generic constraint of our <span class="tt">MyExampleRunner</span> in the 'glue' layer. <div class="fragment"></div><!-- fragment --></li>
+<li>Now we'll create an implementation of <span class="tt">IMyExampleBenchmark</span> provided by the 'glue' layer to grow a list. The code should be straightforward, and each type of container has its code implemented only once. Additionally, the measurement code really is just "the thing we want to measure". <div class="fragment"></div><!-- fragment --></li>
+<li>Let's make another implementation of <span class="tt">IMyExampleBenchmark</span>, this time testing the performance of a <span class="tt">foreach</span> over the list container types.<br  />
+<br  />
+ Take special note of the <span class="tt">Volatile.Write</span> used to ensure optimizations don't throw away the value, thus rendering the loop unnecessary and optimizing it out altogether. <div class="fragment"></div><!-- fragment --></li>
+<li>As a final example, we'll implement a performance test for checking if a list container is empty.<br  />
+<br  />
+ <em>This time</em>, neither <span class="tt">Volatile.Read</span> nor <span class="tt">Volatile.Write</span> would help much because optimization passes can determine the result of checking for empty is constant through each loop iteration, i.e. there is no dependency within the loop itself when making this calculation. Due to this, we must turn off optimizations altogether with <span class="tt">[MethodImpl(MethodImplOptions.NoOptimization)]</span>.<br  />
+<br  />
+ The best that could happen otherwise would be with a <span class="tt">Volatile.Write</span>. Then, the optimizer would extract the <span class="tt">IsEmpty</span> or <span class="tt">Count</span> to outside the loop, calling these only once, and then assign this pre-calculated value to the output of <span class="tt">Volatile.Write</span> <span class="tt">kIterations</span> times within a loop. Naturally, this doesn't tell us much about the code we want to measure. <div class="fragment"></div><!-- fragment --></li>
+<li>Now, take our measurement code, and simply pass the <span class="tt">IMyExampleBenchmark</span> implementations into the <span class="tt">MyExampleRunner&lt;T&gt;</span> runner provided by the 'glue' layer. See the next section for the results of this work.<br  />
+<br  />
+ Note <span class="tt">[BenchmarkNameOverride]</span> is used so that name formatting will look like "NativeList" rather than "NativeMyListMeasurements" in benchmark reports.<br  />
+<br  />
+ That may have seemed like a lot of code to get to this point, but keep in mind in that once a 'glue' layer exists, it can be used for as many cases as fit. <span class="tt">com.unity.collections</span> has many, many performance and benchmarks tests built around a single (albeit more involved) intermediate 'glue' layer. <div class="fragment"></div><!-- fragment --></li>
+</ol>
+<p><br  />
+</p>
+<hr  />
+ <h1 class="doxsection"><a class="anchor" id="autotoc_md1487"></a>
+Example</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1488"></a>
+Results</h2>
+<p>There are two clear results of the List performance tests implemented above</p><ol type="1">
+<li>The Test Runner in the <a class="el" href="namespace_unity.html">Unity</a> Editor will display the following Performance Test Framework tests. Note that with one implementation per type, there is both a burst compiled path and non-burst compiled path being measured. One could easily add others (such as burst compiled while safety on or off, or an UnsafeContainer variation of the same tests, though this would require a bit more 'glue' to integrate). Here is an example of the output:</li>
+</ol>
+<p><img src="PerformanceTestFrameworkOutput.png" alt="Performance Test Framework example" class="inline"/></p>
+<ol type="1">
+<li>Running the <span class="tt">Benchmark Example/Generate My Benchmarks</span> menu item implemented above will generate a markdown report, again running the same single code path per type. Here is the output:</li>
+</ol>
+<blockquote class="doxtable">
+<p># Performance Comparison: Containers Example</p>
+<blockquote class="doxtable">
+<p>**<span style="color:red">This file is auto-generated</span>**</p>
+<p>All measurments were taken on 12th Gen Intel(R) <a class="el" href="namespace_core.html">Core(TM)</a> i9-12900K with 24 logical cores.<br  />
+ To regenerate this file locally use: <b>DOTS -&gt; <a class="el" href="namespace_unity_1_1_collections.html">Unity.Collections</a> -&gt; Generate &amp;ast;&amp;ast;&amp;ast;</b> menu.<br  />
+ </p>
+</blockquote>
+<p></p>
+</blockquote>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1489"></a>
+Table of Contents</h1>
+<ul>
+<li>Benchmark Results<ul>
+<li>List</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1490"></a>
+Benchmark Results</h1>
+<p>Example benchmark - 10 runs after 5 warmup runs<br  />
+ <br  />
+</p>
+<blockquote class="doxtable">
+<p><b>Legend</b></p>
+<p><span class="tt">(B)</span> = <a class="el" href="namespace_burst.html">Burst</a> Compiled<br  />
+ <span class="tt">(BCL)</span> = Base Class Library implementation (such as provided by <a class="el" href="namespace_mono.html">Mono</a> or .NET)<br  />
+ </p>
+</blockquote>
+<p><br  />
+</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1491"></a>
+<em>List</em></h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Functionality  </th><th class="markdownTableHeadRight">NativeList  </th><th class="markdownTableHeadRight">NativeList (B)  </th><th class="markdownTableHeadRight"><em>List (BCL)</em>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">IsEmpty_x_100k(0)</span>*¹*  </td><td class="markdownTableBodyRight">0.373ms <span style="color:red">(0.3x)</span>&#160;🟠  </td><td class="markdownTableBodyRight">0.089ms <span style="color:green">(1.1x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*0.098ms <span style="color:grey">(1.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">IsEmpty_x_100k(100)</span>*¹*  </td><td class="markdownTableBodyRight">0.334ms <span style="color:red">(0.3x)</span>&#160;🟠  </td><td class="markdownTableBodyRight">0.089ms <span style="color:green">(1.1x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*0.098ms <span style="color:grey">(1.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">AddGrow(65536)</span>*³*  </td><td class="markdownTableBodyRight">1.281ms <span style="color:red">(0.1x)</span>&#160;🟠  </td><td class="markdownTableBodyRight">0.427ms <span style="color:red">(0.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*0.144ms <span style="color:grey">(1.0x)</span>*&#160;🟢  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">AddGrow(1048576)</span>*³*  </td><td class="markdownTableBodyRight">21.435ms <span style="color:red">(0.1x)</span>&#160;🟠  </td><td class="markdownTableBodyRight">7.471ms <span style="color:red">(0.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*2.274ms <span style="color:grey">(1.0x)</span>*&#160;🟢  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Foreach(10000)</span>  </td><td class="markdownTableBodyRight">0.042ms <span style="color:red">(0.4x)</span>&#160;🟠  </td><td class="markdownTableBodyRight">0.003ms <span style="color:green">(6.6x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*0.018ms <span style="color:grey">(1.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Foreach(100000)</span>  </td><td class="markdownTableBodyRight">0.452ms <span style="color:red">(0.4x)</span>&#160;🟠  </td><td class="markdownTableBodyRight">0.025ms <span style="color:green">(7.4x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*0.184ms <span style="color:grey">(1.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Foreach(1000000)</span>  </td><td class="markdownTableBodyRight">4.500ms <span style="color:red">(0.4x)</span>&#160;🟠  </td><td class="markdownTableBodyRight">0.250ms <span style="color:green">(7.5x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*1.877ms <span style="color:grey">(1.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td></tr>
+</table>
+<p><em>¹</em> Optimizations were disabled to perform this benchmark<br  />
+ <em>³</em> AddGrow(growTo) &ndash; Incrementally reaching size of <span class="tt">growTo</span><br  />
+ </p>
+<p><em>Happy Benchmarking!</em> </p>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a href="dir_7fdff995cf1015167fb26c7d7cfc56bd.html">com.unity.collections@56bff8827a7e</a></li><li class="navelem"><a href="dir_c7cafb03425dcef35f960396135bcdd7.html">Unity.Collections.PerformanceTests</a></li><li class="navelem"><a href="dir_3a2fcd12312d399ccd261d4944e2b691.html">Unity.PerformanceTesting.Benchmark</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

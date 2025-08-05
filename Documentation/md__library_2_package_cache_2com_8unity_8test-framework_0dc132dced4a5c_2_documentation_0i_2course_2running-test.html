@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: 1\. Running a test in a Unity project</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2course_2running-test.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">1. Running a test in a Unity project </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5351"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5352"></a>
+Learning objectives</h1>
+<p>This exercise will teach you how to set up a simple <a class="el" href="namespace_unity.html">Unity</a> project with a test assembly and tests. It will also introduce the structure of unit tests based on NUnit.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5353"></a>
+Intro and motivation</h1>
+<p>At <a class="el" href="namespace_unity.html">Unity</a>, our main way of testing content is using the <a class="el" href="namespace_unity.html">Unity</a> Test Framework, which comes as a default package in the <a class="el" href="namespace_unity.html">Unity</a> Editor. Knowing how to set up a basic project with tests can help you get started on your journey.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5354"></a>
+Exercise</h1>
+<p>Import the <a href="./welcome.md#import-samples">sample</a> <span class="tt">1_RunningTest_Project</span> into your <a class="el" href="namespace_unity.html">Unity</a> Editor (version 2019.2 or newer) from the Package Manager window. <br  />
+</p>
+<p><b>Note:</b> The project contains one <span class="tt">.cs</span> file (<span class="tt">MyMath.cs</span>), which is a simple math implementation. The exercise is to create unit tests for this class. <br  />
+</p>
+<p>Open up the Test Runner UI (<b>Window &gt; General &gt; <a class="el" href="namespace_test_runner.html">TestRunner</a></b>) and set up a new EditMode test assembly alongside the MyExercise folder. Detailed instructions are available in the <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2workflow-create-test-assembly.html">Getting started section</a>. Create a new test inside the new test assembly folder (default name is <span class="tt"><a class="el" href="class_tests.html">Tests</a></span>) either from the Test Runner UI or by right-clicking in the Project window and selecting <b>Create &gt; Testing &gt; C# test script</b>. Before we do the test, it is also necessary to link up our test assembly with the existing code assembly. Click on the test assembly you created in the Project window to see it in the <b>Inspector</b> (Click on the <a class="el" href="class_tests.html">Tests</a> folder &gt; <a class="el" href="class_tests.html">Tests</a>). <br  />
+</p>
+<p>In the Assembly Definition References, you will see that <span class="tt"><a class="el" href="namespace_unity_engine_1_1_test_runner.html">UnityEngine.TestRunner</a></span> and <span class="tt"><a class="el" href="namespace_unity_editor_1_1_test_runner.html">UnityEditor.TestRunner</a></span> are already referenced, along with an assembly reference to NUnit. Click the `+` button in the Assembly Definition Reference part to add a new reference. Click on the little circle and select <span class="tt">MyExercise</span> and click <b>Apply</b> in the bottom of the inspector (you might need to scroll down). <br  />
+</p>
+<p>Open up the C# solution with your IDE (Visual Studio or <a class="el" href="namespace_rider.html">Rider</a>) and open up the test file you created. You can delete the method with the <span class="tt">[UnityTest]</span> attribute, as you won't be needing that. In the method with <span class="tt">[Test]</span> attribute, you can add an assert statement, to verify that <span class="tt">MyMath.Add</span> works correctly. E.g. using <span class="tt">Assert.AreEqual</span>. Rename the method to be something more descriptive. A good practice is that the method name should describe what is being tested. For example, the class name could be <span class="tt">MyMathTests</span> and the first test could then be <span class="tt">AddsTwoPositiveIntegers</span>. If you want to, you can add additional methods that test other number combinations. It is a best practice that each test should have just one check. <br  />
+</p>
+<p>Switch back to <a class="el" href="namespace_unity.html">Unity</a> and go to the Test Runner UI. Here you should now see a tree structure which includes your test assembly name, the class name and method name. This reflects the general structure of tests with NUnit, which is the framework that <a class="el" href="namespace_unity.html">Unity</a> Test Framework is built on top of. Each class can have multiple tests and there can be multiple test classes in a namespace / assembly. You can double click on your test name or any of its parents to run the test. You will see a green checkmark if your test code passes and a red cross if your test code failed. Note that if you do not see any tests, remember to check your console log. Any compile error would block all tests from being shown. <br  />
+</p>
+<p>You can now go back to your test code and add tests for the <span class="tt">Subtract</span> method. Note that you will likely see the tests fail, as there is a bug in our <span class="tt">Subtract</span> method. After you have seen your test fail with a meaningful error (e.g. <span class="tt">Expected 2, but got 6</span>), you can go to <span class="tt">MyMath.cs</span> and fix the return value to be just <span class="tt">return a - b;</span>. Then rerun the test to verify that you fixed the error.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5355"></a>
+Hints</h1>
+<ul>
+<li>Sometimes the UI for creating a test assembly and creating your first test file can be a bit hard to use. If the Test Runner UI does not register your assembly, try clicking on the folder in the project window or navigate to the folder with the asmdef.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5356"></a>
+Solution</h1>
+<p>A solution for this exercise can be found in the sample <span class="tt">1_RunningTest_Project_Solution</span>. The solution contains a <span class="tt"><a class="el" href="class_tests.html">Tests</a></span> folder with an <span class="tt">asmdef</span> file and and one <span class="tt">.cs</span> file, containing the tests.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5357"></a>
+Further reading and resources</h1>
+<p>Read more about <a href="https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html">Assembly Definitions in the Unity manual.</a> <br  />
+ You can read more about unit tests in general at <a href="https://www.raywenderlich.com/9454-introduction-to-unity-unit-testing">Introduction To Unity Unit Testing</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

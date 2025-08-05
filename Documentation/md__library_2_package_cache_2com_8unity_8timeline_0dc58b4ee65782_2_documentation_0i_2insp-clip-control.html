@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Control clip properties</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-clip-control.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Control clip properties </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5974"></a></p>
+<p>Use the Inspector window to change the properties of a Control clip. A Control clip has two sets of properties:</p><ul>
+<li><a class="el" href="#ctrlcommon">Common properties</a></li>
+<li><a class="el" href="#ctrlplayable">Control Playable Asset properties</a></li>
+</ul>
+<p><a class="anchor" id="aboutctrlclips"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5975"></a>
+About Control clips</h1>
+<p>A Control clip is a special clip that controls a Sub-Timeline instance, a Particle System, a Prefab instance, or a ITimeControl Script. What a Control clip controls depends on how you create the Control clip:</p><ul>
+<li>If you create a Control clip from a GameObject with a Playable Director component associated with a <a class="el" href="namespace_timeline.html">Timeline</a> asset, then the Control clip controls a Sub-Timeline instance. If the GameObject parents other GameObjects associated with many <a class="el" href="namespace_timeline.html">Timeline</a> assets, then the Control clip controls multiple <a class="el" href="namespace_timeline.html">Timeline</a> instances.</li>
+<li>If you create a Control clip from a GameObject with a Particle System component, then the Control clip controls a Particle System.</li>
+<li>If you create a Control clip from a GameObject linked to a Prefab, then the Control clip controls a Prefab instance.</li>
+<li>If you create a Control clip from a GameObject with a script that implements the ITimeControl interface, then the Control clip controls an ITimeControl Script.</li>
+</ul>
+<p><a class="anchor" id="ctrlcommon"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5976"></a>
+Common properties</h1>
+<p>The common properties of a Control clip include its name and Clip Timing properties. Not all common properties apply to all types of Control clips.</p>
+<p><img src="images/insp-clip-control-common.png" alt="" class="inline"/></p>
+<p><em>Inspector window when selecting a Control clip in the <a class="el" href="namespace_timeline.html">Timeline</a> window</em></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5977"></a>
+Display Name</h1>
+<p>The name of the Control clip displayed in the <a class="el" href="namespace_timeline.html">Timeline</a> window.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5978"></a>
+Clip Timing properties</h1>
+<p>Use the <b>Clip Timing</b> properties to position and change the duration of the Control clip.</p>
+<p>Most timing properties are expressed in both seconds (<b>s</b>) and frames (<b>f</b>). When specifying seconds, a <b>Clip Timing</b> property accepts decimal values. When specifying frames, a property only accepts integer values. For example, if you attempt to enter 12.5 in a frames (f) field, the Inspector window sets the value to 12 frames.</p>
+<p>Depending on the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-overview.html">selected Edit mode</a>, changing the <b>Start</b>, <b>End</b>, or <b>Duration</b> of a Control clip may insert or replace clips on the same track. You cannot create a blend between Control clips.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Description:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Start</b>  </td><td class="markdownTableBodyLeft">The frame or time (in seconds) when the Control clip starts. Changing the Start changes the position of the Control clip on its track in the <a class="el" href="namespace_timeline.html">Timeline</a> asset.<br  />
+Changing the Start also affects the End. Changing the Start sets the End to the new Start value plus the Duration.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>End</b>  </td><td class="markdownTableBodyLeft">The frame or time (in seconds) when the Control clip ends.<br  />
+Changing the End also affects the Start. Changing the End sets the Start to the new End value minus the Duration.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Duration</b>  </td><td class="markdownTableBodyLeft">The duration of the clip in frames or seconds.<br  />
+Changing the Duration also affects the End. Changing the Duration sets the End to the Start value plus the new Duration.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Clip In</b>  </td><td class="markdownTableBodyLeft">Sets the offset of when the Control clip starts playing. The Clip In property only affects Particle Systems and Sub-Timeline instances.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Speed Multiplier</b>  </td><td class="markdownTableBodyLeft">A speed multiplier that affects the playback speed of the Control clip. This value must be greater than 0. The Speed Multiplier property only affects Particle Systems and Sub-Timeline instances.  </td></tr>
+</table>
+<p><a class="anchor" id="ctrlplayable"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5979"></a>
+Control Playable Asset properties</h1>
+<p>Use the Inspector window to change the playable asset properties of a Control clip. To view the playable asset properties for a Control clip, select a Control clip in the <a class="el" href="namespace_timeline.html">Timeline</a> window and expand <b>Control Playable Asset</b> in the Inspector window.</p>
+<p><img src="images/insp-clip-control-playable.png" alt="" class="inline"/></p>
+<p><em>Inspector window with the <b>Control Playable Asset</b> properties for the selected Control clip</em></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5980"></a>
+Source Game Object</h2>
+<p>Use <b>Source Game Object</b> to select the GameObject with the Particle System, Sub-Timeline instance, or ITimeControl Script for the selected Control clip. Changing the <b>Source Game Object</b> changes what the Control clip controls.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5981"></a>
+Prefab</h2>
+<p>Use <b>Prefab</b> to select a Prefab to instantiate when the <a class="el" href="namespace_timeline.html">Timeline</a> instance plays in Play mode. When a Prefab is selected, the label of the <b>Source Game Object</b> property changes to <b>Parent Object</b>.</p>
+<p>When in Play mode, the Prefab is instantiated as a child of the <b>Parent Object</b>. Although the Prefab is instantiated at the start of the <a class="el" href="namespace_timeline.html">Timeline</a> instance, the Prefab is only activated during the Control clip. When the Control clip ends, the Prefab instance is deactivated.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5982"></a>
+Control Activation</h2>
+<p>Enable <b>Control Activation</b> to activate the <b>Source Game Object</b> while the Control clip plays. Disable this property to activate the <b>Source Game Object</b> during the entire <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+<p>The <b>Control Activation</b> property only affects Control clips that control a Sub-Timeline instance or a Particle System.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5983"></a>
+Post Playback</h2>
+<p>When <b>Control Activation</b> is enabled, use the <b>Post Playback</b> property to set the activation state for the Sub-Timeline instance when the main <a class="el" href="namespace_timeline.html">Timeline</a> stops playing. The <b>Post Playback</b> property only affects Sub-Timeline instances.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Post-Playback State</b>  </th><th class="markdownTableHeadLeft"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Active</b>  </td><td class="markdownTableBodyLeft">Activates the Source Game Object after the Sub-Timeline instance finishes playing.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Inactive</b>  </td><td class="markdownTableBodyLeft">Deactivates the Source Game Object after the Sub-Timeline instance finishes playing.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Revert</b>  </td><td class="markdownTableBodyLeft">Reverts the Source Game Object to its activation state before the Sub-Timeline instance began playing.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5984"></a>
+Advanced properties</h2>
+<p>Use the Advanced properties to select additional functionality based on whether the Control clip controls a Playable Director, Particle System, or ITimeControl Script. The Advanced properties do not apply to all Control clips.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property</b>  </th><th class="markdownTableHeadLeft"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Control Playable Directors</b>  </td><td class="markdownTableBodyLeft">Enable this property if the Source Game Object is attached to a Playable Director and you want the Control clip to control the Sub-Timeline instance associated with this Playable Director.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>On Clip End</b>  </td><td class="markdownTableBodyLeft">Use this property in conjunction with <b>Control Playable Directors</b> to set the state of the controlled Playable Director at the end of a clip. <br  />
+<br  />
+<b>Stop Director</b> stops the Playable Director and destroys the Playable Director graph at the end of a clip, releasing allocated resources.<br  />
+<br  />
+<b>Pause Director</b> pauses the Playable Director and reuses the Playable Director graph, preserving allocated resources. Select <b>Pause Director</b> to improve performance when a Control track has multiple clips using the same Sub-Timeline instance.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Control Particle Systems</b>  </td><td class="markdownTableBodyLeft">Enable this property when the Control clip includes a Particle System. Set the value of the Random Seed property to create a unique, repeatable effect.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Control ITimeControl</b>  </td><td class="markdownTableBodyLeft">Enable this property to control ITimeControl scripts on the Source GameObject. To use this feature, the Source GameObject must have a script that implements the ITimeControl interface.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Control Children</b>  </td><td class="markdownTableBodyLeft">Enable this property if the Source Game Object has a child GameObject with either a Playable Director, Particle System, or ITimeControl Script, and you want the Control clip to control this child component.<br  />
+<br  />
+For example, if the Source Game Object is a GameObject that parents another GameObject with a Particle System, enable this property to make the Control clip control the Particle system on the child GameObject.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

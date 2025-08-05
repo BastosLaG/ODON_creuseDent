@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Use Visual Scripting with Unity Cloud Build</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-aot.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Use Visual Scripting with Unity Cloud Build </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6978"></a></p>
+<p>At build time, <a class="el" href="namespace_unity.html">Unity</a> removes any code that isn't used by a project to reduce build size. This can cause problems with Visual Scripting because <a class="el" href="namespace_unity.html">Unity</a> can remove code that's necessary for Script Graphs to run in a project.</p>
+<p>For versions 1.7.x, Visual Scripting generates an <span class="tt">AotStubs.cs</span> file, which stores the <a class="el" href="namespace_unity.html">Unity</a> APIs that graphs use. With the <span class="tt">AotStubs.cs</span> file, <a class="el" href="namespace_unity.html">Unity</a> doesn't remove any <a class="el" href="namespace_unity.html">Unity</a> APIs used in a graph from a build. You can generate this file when you create a build of a project.</p>
+<p>Builds through <a class="el" href="namespace_unity.html">Unity</a> Cloud Build can fail because Cloud Build prevents domain reload between the prebuild and build phases of the project. Without a domain reload, the build doesn't include the generated <span class="tt">AotStubs.cs</span> file. For more information about domain reload, see <a href="https://docs.unity3d.com/Manual/DomainReloading.html">Domain Reloading</a> in the <a class="el" href="namespace_unity.html">Unity</a> User Manual.</p>
+<p>To build a Visual Scripting project with Cloud Build, do the following:</p>
+<ol type="1">
+<li>Build the project locally for your desired platform. <br  />
+For more information on how to build a project, see the relevant section for each platform in <a href="https://docs.unity3d.com/Documentation/Manual/PlatformSpecific.html">Platform development</a> in the User Manual.</li>
+<li>After the build, do one of the following:<ul>
+<li>Open the project files in the system file explorer.</li>
+<li>Open the <a href="https://docs.unity3d.com/Manual/ProjectView.html">Project window</a> in the <a class="el" href="namespace_unity.html">Unity</a> Editor.</li>
+</ul>
+</li>
+<li>In the project files, go to <b>Assets</b> &gt; <b>Unity.VisualScripting.Generated</b> &gt; <b>VisualScripting.Core</b>.</li>
+<li>Locate the <span class="tt">AotStubs.cs</span> file.</li>
+<li>Add the <span class="tt">AotStubs.cs</span> file to your source control system.</li>
+</ol>
+<p>Your Cloud Build settings might automatically trigger a new build of the project after you commit the <span class="tt">AotStubs.cs</span> file. For more information about version control systems and Cloud Build, see <a href="https://docs.unity3d.com/Manual/UnityCloudBuild.html">Unity Cloud Build</a> in the User Manual. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['langauge_0',['langauge',['../class_student_record_1_1_learner_preference.html#aa3832e658a39ed1939e42bee484e00cb',1,'StudentRecord::LearnerPreference']]],
+  ['latency_1',['latency',['../class_student_record_1_1_learner_interaction_record.html#a156070b21fc66308bf990f3071392488',1,'StudentRecord::LearnerInteractionRecord']]],
+  ['lateupdate_2',['LateUpdate',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_x_r_poke_follow_affordance.html#a6f6d0f6f6c6f405e1882d6d71c916574',1,'UnityEngine::XR::Interaction::Toolkit::Samples::StarterAssets::XRPokeFollowAffordance']]],
+  ['launchdata_3',['launchData',['../class_student_record.html#a9e4340f0630e4c7ed8eba387572cd9bc',1,'StudentRecord']]],
+  ['learnerid_4',['learnerID',['../class_student_record.html#a172ec1de5255a391e2e391011d593087',1,'StudentRecord']]],
+  ['learnerinteractioncorrectresponse_5',['LearnerInteractionCorrectResponse',['../class_student_record_1_1_learner_interaction_correct_response.html',1,'StudentRecord']]],
+  ['learnerinteractionobjective_6',['LearnerInteractionObjective',['../class_student_record_1_1_learner_interaction_objective.html',1,'StudentRecord']]],
+  ['learnerinteractionrecord_7',['LearnerInteractionRecord',['../class_student_record_1_1_learner_interaction_record.html',1,'StudentRecord']]],
+  ['learnername_8',['learnerName',['../class_student_record.html#a00c5bf80a42026f0d42c653c3edeb4fd',1,'StudentRecord']]],
+  ['learnerpreference_9',['LearnerPreference',['../class_student_record_1_1_learner_preference.html',1,'StudentRecord']]],
+  ['learnerpreference_10',['learnerPreference',['../class_student_record.html#aeca70f90c0a72ded4c327d203a7cc8a6',1,'StudentRecord']]],
+  ['learnerscore_11',['LearnerScore',['../class_student_record_1_1_learner_score.html',1,'StudentRecord']]],
+  ['learnerscore_12',['learnerScore',['../class_student_record.html#ac0697b6142b947f78f45dfd6e283770b',1,'StudentRecord']]],
+  ['leftcontrollertransform_13',['leftControllerTransform',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_dynamic_move_provider.html#afca71d4e67383d39c74c2df3676e034c',1,'UnityEngine::XR::Interaction::Toolkit::Samples::StarterAssets::DynamicMoveProvider']]],
+  ['lefthandmovementdirection_14',['leftHandMovementDirection',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_dynamic_move_provider.html#a0b147ce6f6e93b5e1677d220d3bb48f9',1,'UnityEngine::XR::Interaction::Toolkit::Samples::StarterAssets::DynamicMoveProvider']]],
+  ['lifetime_15',['lifetime',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_destroy_self.html#ab13734a91c99b83d271d31a2acc4f36d',1,'UnityEngine::XR::Interaction::Toolkit::Samples::StarterAssets::DestroySelf']]],
+  ['linear_16',['Linear',['../class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_visualizer_sample_1_1_hand_visualizer.html#aca59c8b71dd1f9e1f133d511d2c24cb1a32a843da6ea40ab3b17a3421ccdf671b',1,'UnityEngine::XR::Hands::Samples::VisualizerSample::HandVisualizer']]],
+  ['loadcommentfromlearnerlist_17',['LoadCommentFromLearnerList',['../class_controller_main.html#a118a435f6aa0f264d6a04581644569de',1,'ControllerMain']]],
+  ['loadcommentfromlmslist_18',['LoadCommentFromLMSList',['../class_controller_main.html#a364383436d95f66f51b8136cbd07c262',1,'ControllerMain']]],
+  ['loadlearnerinteractions_19',['LoadLearnerInteractions',['../class_controller_main.html#ae84ec759c26d2a147f91eea1cfe2a715',1,'ControllerMain']]],
+  ['localpositionoffsetaffordancereceiver_20',['LocalPositionOffsetAffordanceReceiver',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_local_position_offset_affordance_receiver.html',1,'UnityEngine::XR::Interaction::Toolkit::Samples::Hands']]],
+  ['location_21',['location',['../class_student_record_1_1_comments_from_learner.html#a31935c7154a8025ff850f353047200fb',1,'StudentRecord.CommentsFromLearner.location'],['../class_student_record_1_1_comments_from_l_m_s.html#abf6841476075887d8ac5067f9e6247b9',1,'StudentRecord.CommentsFromLMS.location'],['../class_student_record.html#a253332cf90d34d371dd33f0b0fdc58b0',1,'StudentRecord.location']]],
+  ['log_22',['Log',['../class_controller_main.html#a124a5e346eec81bc1fac895a64ba2472',1,'ControllerMain.Log()'],['../class_scorm_a_p_i_wrapper.html#a9bd4245d63f38158a7d63be15efa7cf3',1,'ScormAPIWrapper.Log()']]],
+  ['logmessage_23',['LogMessage',['../class_scorm_manager.html#a64e2bd18b19eef706f3921f18546a66a',1,'ScormManager']]]
+];

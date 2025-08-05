@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: input</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2input.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">input </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md9484"></a>
+autotoc_md9484</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9485"></a>
+uid: openxr-input</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9486"></a>
+Input in Unity OpenXR</h1>
+<p>This page details how to use and configure OpenXR input within unity.</p>
+<p>For information on how to configure <a class="el" href="namespace_unity.html">Unity</a> to use OpenXR input, see the Getting Started section of this document.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9487"></a>
+Overview</h2>
+<p>Initially, <a class="el" href="namespace_unity.html">Unity</a> will provide a controller-based approach to interfacing with OpenXR. This will allow existing games and applications that are using <a class="el" href="namespace_unity.html">Unity</a>'s <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/">Input System</a> or the <a href="https://docs.unity3d.com/Manual/xr_input.html">Feature API</a> to continue to use their existing input mechanisms.</p>
+<p>The <a class="el" href="namespace_unity.html">Unity</a> OpenXR package provides a set of controller layouts for various devices that you can bind to your actions when using the <a class="el" href="namespace_unity.html">Unity</a> Input System. For more information, see the <a href="./index.md#interaction-profile-features">Interaction profile features</a> section.</p>
+<p>To use OpenXR Input, you must select the correct interaction profiles features to send to OpenXR. To learn more about OpenXR features in <a class="el" href="namespace_unity.html">Unity</a>, see the <a href="./index.md#interaction-profile-features">Interaction profile features</a> page.</p>
+<p>Future versions of the <a class="el" href="namespace_unity.html">Unity</a> OpenXR Package will provide further integration with the OpenXR Input system. For smooth upgrading, <a class="el" href="namespace_unity.html">Unity</a> recommends that you use the device layouts included with the OpenXR package. These have the '(OpenXR)' suffix in the <a class="el" href="namespace_unity.html">Unity</a> Input System binding window.</p>
+<p><a class="el" href="namespace_unity.html">Unity</a> will provide documentation on these features when they become available.</p>
+<p>Interaction profiles manifest themselves as device layouts in the <a class="el" href="namespace_unity.html">Unity</a> <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@latest/">Input System</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9488"></a>
+Getting Started</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9489"></a>
+Run the sample</h3>
+<p>The Open XR package contains a sample named <span class="tt">Controller</span> that will help you get started using input in OpenXR. To install the <span class="tt">Controller</span> sample, follow these steps:</p>
+<ol type="1">
+<li>Open the <b>Package Manager</b> window (menu: <b>Window &gt; Package Manager</b>).</li>
+<li>Select the OpenXR package in the list.</li>
+<li>Expand the <b><a class="el" href="class_samples.html">Samples</a></b> list on the right.</li>
+<li>Click the <b>Import</b> button next to the <span class="tt">Controller</span> sample.</li>
+</ol>
+<p>This adds a <span class="tt"><a class="el" href="class_samples.html">Samples</a></span> folder to your project with a Scene named <span class="tt">ControllerSample</span> that you can run.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9490"></a>
+Locking input to the game window</h3>
+<p>Versions V1.0.0 to V1.1.0 of the <a class="el" href="namespace_unity.html">Unity</a> Input System only route data to or from XR devices to the <a class="el" href="namespace_unity.html">Unity</a> Editor while the Editor is in the <b>Game</b> view. To work around this issue, use the <a href="xref:openxr-project-config#project-validation">Unity OpenXR Project Validator</a> or follow these steps:</p>
+<ul>
+<li>Access the Input System Debugger window (menu: <b>Window &gt; Analysis &gt; Input Debugger</b>).</li>
+<li>In the <b>Options</b> section, enable the <b>Lock Input to the Game Window</b> option.</li>
+</ul>
+<p><a class="el" href="namespace_unity.html">Unity</a> recommends that you enable the <b>Lock Input to the Game Window</b> option from either the <a href="xref:openxr-project-config#project-validation">Unity OpenXR Project Validator</a> or the Input System Debugger window</p>
+<p><img src="images/lock-input-to-game-view.png" alt="lock-input-to-game-view" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9491"></a>
+Recommendations</h3>
+<p>To set up input in your project, follow these recommendations:</p>
+<ul>
+<li>Bind to the OpenXR layouts wherever possible.</li>
+<li>Use specific control bindings over usages.</li>
+<li>Avoid generic "any controller" bindings if possible (for example, bindings to <span class="tt">&lt;XRController&gt;</span>).</li>
+<li>Use action references and avoid inline action definitions.</li>
+</ul>
+<p>OpenXR Requires that all bindings be attached only once at application startup. <a class="el" href="namespace_unity.html">Unity</a> recommends the use of Input Action Assets, and Input Action References to Actions within those assets so that <a class="el" href="namespace_unity.html">Unity</a> can present those bindings to OpenXR at applications startup.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9492"></a>
+Using OpenXR input with Unity</h2>
+<p>Using OpenXR with <a class="el" href="namespace_unity.html">Unity</a> is the same as configuring any other input device using the <a class="el" href="namespace_unity.html">Unity</a> Input System:</p>
+<ol type="1">
+<li>Decide on what actions and action maps you want to use to describe your gameplay, experience or menu operations</li>
+<li>Create an <span class="tt">Input Action</span> Asset, or use the one included with the Sample.</li>
+<li>Add the actions and action maps you defined in step 1 in the <span class="tt">Input Action</span> Asset you decided to use in step 2.</li>
+<li><p class="startli">Create bindings for each action.</p>
+<p class="startli">When using OpenXR, you must either create a "Generic" binding, or use a binding to a device that <a class="el" href="namespace_unity.html">Unity</a>'s OpenXR implementation specifically supports. For a list of these specific devices, see the Interaction bindings section.</p>
+</li>
+<li>Save your <span class="tt">Input Action</span> Asset.</li>
+<li><p class="startli">Ensure your actions and action maps are enabled at runtime.</p>
+<p class="startli">The Sample contains a helper script called <span class="tt">Action Asset Enabler</span> which enables every action within an <span class="tt">Input Action</span> Asset. If you want to enable or disable specific actions and action maps, you can manage this process yourself.</p>
+</li>
+<li><p class="startli">Write code that reads data from your actions.</p>
+<p class="startli">For more information, see the <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/">Input System</a> package documentation, or consult the Sample to see how it reads input from various actions.</p>
+</li>
+<li><p class="startli">Enable the set of Interaction Features that your application uses.</p>
+<p class="startli">If you want to receive input from OpenXR, the Interaction Features you enable must contain the devices you've created bindings with. For example, a binding to <span class="tt">&lt;WMRSpatialController&gt;{leftHand}/trigger</span> requires the <a class="el" href="namespace_microsoft.html">Microsoft</a> Motion Controller feature to be enabled in order for that binding to receive input. For more information on Interaction Features, see the <a href="./index.md#interaction-profile-features">Interaction profile features</a> section.</p>
+</li>
+<li>Run your application!</li>
+</ol>
+<p>You can use the <a class="el" href="namespace_unity.html">Unity</a> Input System Debugger (menu: <b>Window &gt; Analysis &gt; Input Debugger</b>) to troubleshoot any problems with input and actions. The Input System Debugger can be found under <b>Window &gt; Analysis &gt; Input Debugger</b></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9493"></a>
+Detailed information</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9494"></a>
+Unity Input System</h3>
+<p><a class="el" href="namespace_unity.html">Unity</a> requires the use of the Input System package when using OpenXR. <a class="el" href="namespace_unity.html">Unity</a> automatically installs this package when you install <a class="el" href="namespace_unity.html">Unity</a> OpenXR Support. For more information, see the Input System package <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/Installation.html">documentation</a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9495"></a>
+Interaction Profile Features</h3>
+<p>Each Interaction Profile Feature contains both the device layout for creating bindings in the <a class="el" href="namespace_unity.html">Unity</a> Input System and a set of bindings that we send to OpenXR. The OpenXR Runtime will determine which bindings to use based on the set of Interaction Profiles that we send to it.</p>
+<p><a class="el" href="namespace_unity.html">Unity</a> Recommends that Developers select only the Interaction Profiles that they are able to test their experience with.</p>
+<p>Selecting an Interaction Profile from the features menu will add that device to the bindable devices in the <a class="el" href="namespace_unity.html">Unity</a> Input System. They will be selectable from under the <b>XR Controller</b> section of the binding options.</p>
+<p><img src="images/xr-controller-input-menu.png" alt="XR Controller Menu" class="inline"/></p>
+<p>See <a href="xref:openxr-project-config#interaction-profile">Set the interaction profile</a> for instructions on setting a profile.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9496"></a>
+Mapping between OpenXR paths and Unity bindings</h3>
+<p>The OpenXR specification details a number of <span class="tt">Interaction Profiles</span> that you can use to suggest bindings to the OpenXR runtime. <a class="el" href="namespace_unity.html">Unity</a> uses its own existing XRSDK naming scheme to identify controls and devices and map OpenXR action data to them.</p>
+<p>The table below outlines the common mappings between OpenXR paths and <a class="el" href="namespace_unity.html">Unity</a> XRSDK Control names. Which controls are available on which devices is covered in the specific device documentation.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">OpenXR Path  </th><th class="markdownTableHeadNone"><a class="el" href="namespace_unity.html">Unity</a> Control Name  </th><th class="markdownTableHeadNone">Type  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/system/click</span>  </td><td class="markdownTableBodyNone">system  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/system/touch</span>  </td><td class="markdownTableBodyNone">systemTouched  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/select/click</span>  </td><td class="markdownTableBodyNone">select  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/menu/click</span>  </td><td class="markdownTableBodyNone">menu  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/squeeze/value</span>  </td><td class="markdownTableBodyNone">grip  </td><td class="markdownTableBodyNone">Float  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/squeeze/click</span>  </td><td class="markdownTableBodyNone">gripPressed  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/squeeze/force</span>  </td><td class="markdownTableBodyNone">gripForce  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/trigger/value</span>  </td><td class="markdownTableBodyNone">trigger  </td><td class="markdownTableBodyNone">Float  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/trigger/squeeze</span>  </td><td class="markdownTableBodyNone">triggerPressed  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/trigger/touch</span>  </td><td class="markdownTableBodyNone">triggerTouched  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/thumbstick</span>  </td><td class="markdownTableBodyNone">joystick  </td><td class="markdownTableBodyNone">Vector2  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/thumbstick/touch</span>  </td><td class="markdownTableBodyNone">joystickTouched  </td><td class="markdownTableBodyNone">Vector2  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/thumbstick/clicked</span>  </td><td class="markdownTableBodyNone">joystickClicked  </td><td class="markdownTableBodyNone">Vector2  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/trackpad</span>  </td><td class="markdownTableBodyNone">touchpad  </td><td class="markdownTableBodyNone">Vector2  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/trackpad/touch</span>  </td><td class="markdownTableBodyNone">touchpadTouched  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/trackpad/clicked</span>  </td><td class="markdownTableBodyNone">touchpadClicked  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/a/click</span>  </td><td class="markdownTableBodyNone">primaryButton  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/a/touch</span>  </td><td class="markdownTableBodyNone">primaryTouched  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/b/click</span>  </td><td class="markdownTableBodyNone">secondaryButton  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/b/touch</span>  </td><td class="markdownTableBodyNone">secondaryTouched  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/x/click</span>  </td><td class="markdownTableBodyNone">primaryButton  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/x/touch</span>  </td><td class="markdownTableBodyNone">primaryTouched  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/y/click</span>  </td><td class="markdownTableBodyNone">secondaryButton  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/y/touch</span>  </td><td class="markdownTableBodyNone">secondaryTouched  </td><td class="markdownTableBodyNone">Boolean  </td></tr>
+</table>
+<p>the <a class="el" href="namespace_unity.html">Unity</a> control <span class="tt">touchpad</span> and <span class="tt">trackpad</span> are used interchangeably, as are <span class="tt">joystick</span> and <span class="tt">thumbstick</span>.</p>
+<p><a class="anchor" id="pose-data"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9497"></a>
+Pose data</h3>
+<p><a class="el" href="namespace_unity.html">Unity</a> expresses Pose data as individual elements (for example, position, rotation, velocity, and so on). OpenXR expresses poses as a group of data. <a class="el" href="namespace_unity.html">Unity</a> has introduced a new type to the Input System called a <span class="tt">Pose</span> that is used to represent OpenXR poses. The available poses and their OpenXR paths are listed below:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Pose Mapping  </th><th class="markdownTableHeadNone"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/grip/pose</span>  </td><td class="markdownTableBodyNone">devicePose  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/aim/pose</span>  </td><td class="markdownTableBodyNone">pointerPose  </td></tr>
+</table>
+<p>For backwards compatibility, the existing individual controls will continue to be supported when using OpenXR. The mapping between OpenXR pose data and <a class="el" href="namespace_unity.html">Unity</a> Input System pose data is found below.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Pose  </th><th class="markdownTableHeadNone">Pose Element  </th><th class="markdownTableHeadNone">Binding  </th><th class="markdownTableHeadNone">Type  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/grip/pose</span>  </td><td class="markdownTableBodyNone">position  </td><td class="markdownTableBodyNone">devicePosition  </td><td class="markdownTableBodyNone">Vector3  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/grip/pose</span>  </td><td class="markdownTableBodyNone">orientation  </td><td class="markdownTableBodyNone">deviceRotation  </td><td class="markdownTableBodyNone">Quaternion  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">/input/aim/pose</span>  </td><td class="markdownTableBodyNone">position  </td><td class="markdownTableBodyNone">pointerPosition  </td><td class="markdownTableBodyNone">Vector3  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">/input/aim/pose</span>  </td><td class="markdownTableBodyNone">orientation  </td><td class="markdownTableBodyNone">pointerRotation  </td><td class="markdownTableBodyNone">Quaternion  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9498"></a>
+HMD bindings</h3>
+<p>To read HMD data from OpenXR, use the existing HMD bindings available in the <a class="el" href="namespace_unity.html">Unity</a> Input System. <a class="el" href="namespace_unity.html">Unity</a> recommends binding the <span class="tt">centerEye</span> action of the <span class="tt">XR HMD</span> device for HMD tracking. The following image shows the use of <span class="tt">centerEye</span> bindings with the <span class="tt">Tracked Pose Driver</span>.</p>
+<p><img src="images/hmd-config-tpd.png" alt="hmd-config-tpd" class="inline"/></p>
+<p>OpenXR HMD Data contains the following elements.</p><ul>
+<li>Center Eye</li>
+<li>Device</li>
+<li>Left Eye</li>
+<li>Right Eye</li>
+</ul>
+<p>All of the elements expose the following controls:</p><ul>
+<li>position</li>
+<li>rotation</li>
+<li>velocity</li>
+<li>angularVelocity</li>
+</ul>
+<p>These are exposed in the <a class="el" href="namespace_unity.html">Unity</a> Input System through the following bindings. These bindings can be found under the XR HMD menu option when binding actions within the Input System.</p>
+<ul>
+<li><span class="tt">&lt;XRHMD&gt;/centerEyePosition</span></li>
+<li><span class="tt">&lt;XRHMD&gt;/centerEyeRotation</span></li>
+<li><span class="tt">&lt;XRHMD&gt;/devicePosition</span></li>
+<li><span class="tt">&lt;XRHMD&gt;/deviceRotation</span></li>
+<li><span class="tt">&lt;XRHMD&gt;/leftEyePosition</span></li>
+<li><span class="tt">&lt;XRHMD&gt;/leftEyeRotation</span></li>
+<li><span class="tt">&lt;XRHMD&gt;/rightEyePosition</span></li>
+<li><span class="tt">&lt;XRHMD&gt;/rightEyePosition</span></li>
+</ul>
+<p>When using OpenXR the <span class="tt">centerEye</span> and <span class="tt">device</span> values are identical.</p>
+<p>The HMD position reported by <a class="el" href="namespace_unity.html">Unity</a> when using OpenXR is calculated from the currently selected Tracking Origin space within OpenXR.</p>
+<p>The <a class="el" href="namespace_unity.html">Unity</a> <span class="tt">Device Tracking Origin</span> is mapped to <span class="tt">Local Space</span>. The <a class="el" href="namespace_unity.html">Unity</a> <span class="tt">Floor Tracking Origin</span> is mapped to <span class="tt">Stage Space</span>.</p>
+<p>By default, <a class="el" href="namespace_unity.html">Unity</a> attempts to attach the <span class="tt">Stage Space</span> where possible. To help manage the different tracking origins, use the <span class="tt">XR Origin</span> from the XR Interaction Package, or the <span class="tt">Camera Offset</span> component from the Legacy Input Helpers package.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9499"></a>
+Interaction bindings</h3>
+<p>If you use OpenXR input with controllers or interactions such as eye gaze, <a class="el" href="namespace_unity.html">Unity</a> recommends that you use bindings from the Device Layouts available with the <a class="el" href="namespace_unity.html">Unity</a> OpenXR package. The <a class="el" href="namespace_unity.html">Unity</a> OpenXR package provides the following Layouts via features:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Device  </th><th class="markdownTableHeadNone">Layout  </th><th class="markdownTableHeadNone">Feature  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Generic XR controller  </td><td class="markdownTableBodyNone"><span class="tt">&lt;XRController&gt;</span>  </td><td class="markdownTableBodyNone">n/a  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Generic XR controller w/ rumble support  </td><td class="markdownTableBodyNone"><span class="tt">&lt;XRControllerWithRumble&gt;</span>  </td><td class="markdownTableBodyNone">n/a  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Windows Mixed Reality controller  </td><td class="markdownTableBodyNone"><span class="tt">&lt;WMRSpatialController&gt;</span>  </td><td class="markdownTableBodyNone"><a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_53518d17685174969baf54b6e8d96b45.html">MicrosoftMotionControllerProfile</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Oculus Touch (Quest,Rift)  </td><td class="markdownTableBodyNone"><span class="tt">&lt;OculusTouchController&gt;</span>  </td><td class="markdownTableBodyNone"><a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_2oculustouchcontrollerprofile.html">OculusTouchControllerProfile</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">HTC Vive controller  </td><td class="markdownTableBodyNone"><span class="tt">&lt;ViveController&gt;</span>  </td><td class="markdownTableBodyNone"><a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_2htcvivecontrollerprofile.html">HTC Vive Controller Profile</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Valve Index controller  </td><td class="markdownTableBodyNone"><span class="tt">&lt;ValveIndexController&gt;</span>  </td><td class="markdownTableBodyNone"><a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_2valveindexcontrollerprofile.html">ValveIndexControllerProfile</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Khronos Simple Controller  </td><td class="markdownTableBodyNone"><span class="tt">&lt;KHRSimpleController&gt;</span>  </td><td class="markdownTableBodyNone"><a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_2khrsimplecontrollerprofile.html">KHRSimpleControllerProfile</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Eye Gaze Interaction  </td><td class="markdownTableBodyNone"><span class="tt">&lt;EyeGaze&gt;</span>  </td><td class="markdownTableBodyNone"><a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_2eyegazeinteraction.html">EyeGazeInteraction</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="namespace_microsoft.html">Microsoft</a> Hand Interaction  </td><td class="markdownTableBodyNone"><span class="tt">&lt;HololensHand&gt;</span>  </td><td class="markdownTableBodyNone"><a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_2microsofthandinteraction.html">MicrosoftHandInteraction</a>  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9500"></a>
+Haptics</h2>
+<p>OpenXR Controllers that support haptics contain a Haptic control that you can bind to an action in the <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@latest">Unity Input System</a>. Set the action type to Haptic when binding an InputAction to a haptic. To send a haptic impulse, call the <a href="xref:UnityEngine.XR.OpenXR.Input.OpenXRInput.SendHapticImpulse*">OpenXRInput.SendHapticImpulse</a> method and specify the InputAction that you bound to the Haptic control. You can cancel the haptic impulse by calling the <a href="UnityEngine.XR.OpenXR.Input.OpenXRInput.StopHaptics*">OpenXRInput.StopHaptics</a> method.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9501"></a>
+Debugging</h2>
+<p>For more information on debugging OpenXR input, see the <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/Debugging.html">Input System Debugging</a> documentation.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9502"></a>
+Future plans</h2>
+<p>Looking ahead, we will work towards allowing <a class="el" href="namespace_unity.html">Unity</a> users to leverage more functionality of OpenXR's input stack, allowing the runtime to bind <a class="el" href="namespace_unity.html">Unity</a> Actions to OpenXR Actions. This will allow OpenXR Runtimes to perform much more complex binding scenarios than currently possible. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

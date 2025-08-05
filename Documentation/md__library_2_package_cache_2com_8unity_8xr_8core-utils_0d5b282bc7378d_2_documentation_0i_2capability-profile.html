@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: capability-profile</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8core-utils_0d5b282bc7378d_2_documentation_0i_2capability-profile.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">capability-profile </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md7560"></a>
+autotoc_md7560</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7561"></a>
+uid: xr-core-utils-capability-profile</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7562"></a>
+Capability</h1>
+<p>The Capability system abstracts the current capabilities of the application. A capability is a key-value pair consisting of a <span class="tt">string</span> key and a <span class="tt">boolean</span> value. When not defined, the capability has the <span class="tt">Undefined</span> value. These capabilities can represent input capabilities (such as Controllers or Hands Input), OS permission flags, rendering capability settings (can render particles, text, etc) or any other system capabilities or flags.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7563"></a>
+Capability Profile</h2>
+<p><img src="images/capability-profile.png" alt="" class="inline"/><br  />
+<em>A custom Capability Profile asset</em></p>
+<p>The capability profile is an asset in the project that abstracts the capabilities of a system, such as a device, a platform, an OS or a combination of them. These capabilities can change during authoring or/and runtime.</p>
+<dl class="section note"><dt>Note</dt><dd>A capability should only be set to <span class="tt">false</span> if it's prohibited to be used. If the capability is just unsupported it should have the <span class="tt">Undefined</span> value. For example, if a device has no support for hand tracking, its capability profile should set the <span class="tt">Hands Input</span> to <span class="tt">Undefined</span>, rather than explicitly <span class="tt">false</span>. Usually OS or platform (and similar system) capability profiles are the ones that set a capability to <span class="tt">false</span>.</dd></dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7564"></a>
+Custom Capability Profile</h3>
+<p>You can create a custom capability profile by inheriting from the <a href="xref:Unity.XR.CoreUtils.Capabilities.CapabilityProfile">CapabilityProfile</a> class (a <a href="xref:UnityEngine.ScriptableObject">ScriptableObject</a>) and implementing the interface <a href="xref:Unity.XR.CoreUtils.Capabilities.ICapabilityModifier">ICapabilityModifier</a>.</p>
+<p>[!code-cs<a href="../Tests/Editor/CodeSamples/ScriptedCapabilityProfileSamples.cs#custom_capability_sample">custom_capability_sample</a>]</p>
+<dl class="section note"><dt>Note</dt><dd>The <a href="xref:Unity.XR.CoreUtils.Capabilities.CapabilityDictionary">CapabilityDictionary</a> is a dictionary to store a set of capabilities, and uses a custom UI drawer to display these capabilities in the Inspector.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7565"></a>
+Custom Capability</h2>
+<p><img src="images/custom-capability-key.png" alt="" class="inline"/><br  />
+<em>A custom capability key in a <span class="tt">CapabilityDictionary</span></em></p>
+<p>You can add a new capability key by tagging a <span class="tt">const string</span> definition with the <a href="xref:Unity.XR.CoreUtils.Capabilities.CustomCapabilityKeyAttribute">CustomCapabilityKey</a> attribute. Custom capability keys tagged with this attribute will showup in the Inspectors of a <span class="tt">CapabilityDictionary</span>. You can specify the order that your custom capability key will be displayed in the context menu by passing an <span class="tt">int</span> value to the attribute constructor, high values are displayed later.</p>
+<p>[!code-cs<a href="../Tests/Editor/CodeSamples/ScriptedCapabilityProfileSamples.cs#custom_capability_key_sample">custom_capability_key_sample</a>]</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7566"></a>
+Custom Capability with non Boolean Value</h3>
+<p>It's possible to define a capability that has a different value type than boolean (for example, a screen width and height maximum size). In this case it's recommended to define an interface as the capability key and query for the values using this interface. The code below has an example for this situation:</p>
+<p>[!code-cs<a href="../Tests/Editor/CodeSamples/ScriptedCapabilityProfileSamples.cs#custom_capability_type_sample">custom_capability_type_sample</a>] </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

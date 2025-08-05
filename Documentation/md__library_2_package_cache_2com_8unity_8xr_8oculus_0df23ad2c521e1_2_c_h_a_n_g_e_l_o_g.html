@@ -1,0 +1,995 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Changelog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8oculus_0df23ad2c521e1_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Changelog </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md9017"></a></p>
+<p>All notable changes to this package will be documented in this file.</p>
+<p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a> and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9018"></a>
+[4.5.1] - 2025-03-03</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9019"></a>
+Fixed</h2>
+<ul>
+<li>Fixed warnings and errors related to using Direct3D 12</li>
+<li>Automatically disable Direct3D 12 when the Oculus XR Plugin is enabled on Windows in <a class="el" href="namespace_unity.html">Unity</a> 6.1 and higher</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9020"></a>
+Known Issues</h2>
+<ul>
+<li><span class="tt">Unity.XR.Oculus.Stats.PerfMetrics</span> entries currently return <span class="tt">0</span> when using the OpenXR runtime</li>
+<li><span class="tt">Unity.XR.Oculus.Stats.AppMetrics</span> entries return <span class="tt">0</span> on all Oculus runtimes</li>
+<li>For both of the above, the suggested replacement is to use the profiling tools available via the Oculus Developer Hub: <a href="https://developer.oculus.com/documentation/unity/ts-odh-logs-metrics/">https://developer.oculus.com/documentation/unity/ts-odh-logs-metrics/</a></li>
+<li><span class="tt">Acceleration</span> and <span class="tt">AngularAcceleration</span> values on tracked poses currently return <span class="tt">0</span> when using the OpenXR runtime. This is a limitation of the OpenXR API</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9021"></a>
+[4.5.0] - 2024-12-11</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9022"></a>
+Added</h2>
+<ul>
+<li>Added Optimize Multiview Render Regions setting for Meta Quest devices. Multiview Render Regions enables the GPU to skip shader invocations (and rendering work) for screen areas outside of the user's view. Requires Vulkan and Multiview</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9023"></a>
+Changed</h2>
+<ul>
+<li>Reorient position delta of SpaceWarp's app space delta position to be relative to the current view space</li>
+<li>Changed build process to keep Bluetooth permissions tag if present in the manifest</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9024"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an issue where headtracking would get desynced after switching from Game view to Scene view when using Meta Quest Link</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9025"></a>
+[4.4.0] - 2024-09-26</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9026"></a>
+Added</h2>
+<ul>
+<li>Added Quest 3S target device checkbox</li>
+<li>Updated the <span class="tt">SystemHeadset</span> enum to include <span class="tt">Meta_Quest_3S</span> and <span class="tt">Meta_Link_Quest_3S</span> entries</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9027"></a>
+[4.3.0] - 2024-07-30</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9028"></a>
+Added</h2>
+<ul>
+<li>Added support for <a class="el" href="namespace_unity.html">Unity</a>'s new common Foveated Rendering API, with improved URP support</li>
+<li>Added option to Oculus settings to activate support for Stick Control thumbsticks instead of Vector2 Control, which allows a greater range of usages, such as a D-Pad and independent buttons. When activating this feature, the define <span class="tt">META_USE_STICK_CONTROL_THUMBSTICKS</span> will be added in Scripting Define Symbols under Player Settings. Note that this feature requires at minimum the Input System package version 1.6.2 included in the project</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9029"></a>
+Changed</h2>
+<ul>
+<li>Improved Symmetric Projection texture resolution calculations</li>
+<li>Removed legacy code no longer needed in currently supported versions of <a class="el" href="namespace_unity.html">Unity</a></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9030"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an issue with eye poses being incorrect in certain situations</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9031"></a>
+[4.2.0] - 2024-01-18</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9032"></a>
+Added</h2>
+<ul>
+<li>Environment Depth APIs to allow for real world depth to be sampled from a depth texture</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9033"></a>
+Changed</h2>
+<ul>
+<li>Updated <span class="tt">GetConnectedControllers</span> to match the Oculus Integration Package's implementation</li>
+<li>Removed PhaseSync setting since it is now always active</li>
+<li>Updated Oculus plugins to v60</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9034"></a>
+Fixed</h2>
+<ul>
+<li>Fixed issues with play in editor on ARM64 Windows devices</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9035"></a>
+[4.1.2] - 2023-11-06</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9036"></a>
+Fixed</h2>
+<ul>
+<li>Some configuration flags weren't being set in 4.1.1 for 2022.3 only, causing some runtime features to not be enabled correctly. This has been fixed and only affected that specific version combination</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9037"></a>
+[4.1.1] - 2023-09-05</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9038"></a>
+Added</h2>
+<ul>
+<li>Added Quest 3 target device checkbox</li>
+<li>Updated the <span class="tt">SystemHeadset</span> enum to include <span class="tt">Meta_Quest_3</span> and <span class="tt">Meta_Link_Quest_3</span> entries</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9039"></a>
+Changed</h2>
+<ul>
+<li>Added project validation rule and soft dependency to xr.core.utils package</li>
+<li>Bumped up required XR Management version to 4.4.0 to fix issues with Android Manifest cleanup</li>
+<li>Updated Oculus plugins to v56</li>
+<li>Updated documentation to inform users that Phase Sync is always active when using the Oculus OpenXR Runtime</li>
+<li>Bumped minimum <a class="el" href="namespace_unity.html">Unity</a> version from 2022.2 to 2022.3</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9040"></a>
+Fixed</h2>
+<ul>
+<li>Removed Android manifest cleanup that removed the manifest file, existing projects need to do a clean build to completely remove the issue</li>
+<li>Fixed Android app issues that arise when setting the entry point to GameActivity</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9041"></a>
+[4.0.0] - 2023-04-24</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9042"></a>
+Changed</h2>
+<ul>
+<li>Updated Oculus plugins to v51. V51 plugins no longer provide support for Quest 1 devices or 32-bit Windows builds</li>
+<li>Moved Late Latching settings out of the Experimental section</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9043"></a>
+Removed</h2>
+<ul>
+<li>Removed Quest 1 as a target device in the Oculus XR Plugin settings and manifest entries</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9044"></a>
+[3.3.0] - 2023-03-13</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9045"></a>
+Added</h2>
+<ul>
+<li>Updated the <span class="tt">SystemHeadset</span> enum to include <span class="tt">Meta_Quest_Pro</span> and <span class="tt">Meta_Link_Quest_Pro</span> entries</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9046"></a>
+Changed</h2>
+<ul>
+<li>Modified how foveated rendering (ETFR and FFR) is enabled and configured from script to make it more consistent</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9047"></a>
+Fixed</h2>
+<ul>
+<li>Reverted deferred eye texture deletion as we only needed to defer layer deletion</li>
+<li>Fixed a GLES2 script deprecation warning in <a class="el" href="namespace_unity.html">Unity</a> 2023.1+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9048"></a>
+[3.2.3] - 2023-02-16</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9049"></a>
+Changed</h2>
+<ul>
+<li>No changes from 3.2.3-pre.1 other than removing the Pre-release version tag</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9050"></a>
+[3.2.3-pre.1] - 2023-02-08</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9051"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a potential memory corruption issue on Rift when calculating mirror view rects</li>
+<li>Issue where enabling mobile Depth Submission could cause crashes on application startup if MSAA was disabled. The problem was fixed in <a class="el" href="namespace_unity.html">Unity</a> 2020.3 and above. To get the fix, install the latest patch release of whichever <a class="el" href="namespace_unity.html">Unity</a> version you are using</li>
+<li>Resolved an issue where disconnecting a Link device then reconnecting it could result in a black screen with no input</li>
+<li>Resolved a potential issue where read-only System Splash Screen images could cause build failures</li>
+<li>Fixed a potential startup crash on Quest when app initialization is interrupted and then resumed</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9052"></a>
+[3.2.2] - 2022-11-06</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9053"></a>
+Changed</h2>
+<ul>
+<li>No changes from 3.2.2-pre.2 other than removing the Pre-release version tag</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9054"></a>
+[3.2.2-pre.2] - 2022-11-03</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9055"></a>
+Fixed</h2>
+<ul>
+<li>Resolved an issue where Eye Tracked Foveated Rendering settings may conflict with settings provided by the Oculus Integration asset</li>
+<li><span class="tt">Shared Depth Buffer</span> on PC should now work correctly when using <span class="tt">Single Pass Instanced</span> rendering</li>
+<li>Fixed potential jittering and one frame delay when using dynamic render viewports</li>
+<li>Fixed incorrect vertical placement of viewports when using Vulkan</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9056"></a>
+[3.2.2-pre.1] - 2022-10-24</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9057"></a>
+Fixed</h2>
+<ul>
+<li>Resolved an issue where <span class="tt">OnPostprocessBuild()</span> could log warnings in situations where the Oculus Android provider wasn't enabled in XR Management</li>
+<li>Resolved an issue where eye textures and layers were being destroyed too early when being reallocated, potentially resulting in GPU hangs/faults</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9058"></a>
+[3.2.1] - 2022-10-04</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9059"></a>
+Added</h2>
+<ul>
+<li>Eye Tracked Foveated Rendering for Quest Pro. Requires Vulkan and Multiview</li>
+<li>Depth submission for mobile Oculus platforms. Allows for depth testing between layers</li>
+<li>Added a setting to add Quest Pro support to the Android manifest</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9060"></a>
+Changed</h2>
+<ul>
+<li>Updated Oculus plugins to v46 with the OpenXR backend</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9061"></a>
+[3.1.1] - 2022-08-24</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9062"></a>
+Changed</h2>
+<ul>
+<li>Bumped minimum <a class="el" href="namespace_unity.html">Unity</a> version to 2021.3.4f1</li>
+<li>Added version detection checks to validate compatibility with specific <a class="el" href="namespace_unity.html">Unity</a> versions</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9063"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an issue where an XR Rig could cause constant attempts to set the tracking origin when using the OpenXR backend, causing potential visual issues and/or crashes. <b>Note:</b> This fix will cause <span class="tt">TryRecenter()</span> to always return <span class="tt">true</span>. If you have an application that depends on the results of <span class="tt">TryRecenter()</span>, please note this behavior change. <span class="tt">TryRecenter()</span> would only work correctly on PC non-OpenXR builds in previous versions, and would return <span class="tt">false</span> in all other situations</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9064"></a>
+[3.1.0-pre.1] - 2022-06-23</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9065"></a>
+Added</h2>
+<ul>
+<li>Added the <span class="tt">Enable TrackingOrigin Stage Mode</span> option to mobile settings. When enabled, if the Tracking Origin Mode is set to Floor, the tracking origin won't change with a system recenter</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9066"></a>
+Changed</h2>
+<ul>
+<li>Updated Oculus plugins to v41 with the OpenXR backend (Mac spatializer plugin is still on v34)</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9067"></a>
+Fixed</h2>
+<ul>
+<li>A few refresh rate issues with Rift and available refresh rate reporting on Quest have been resolved with the v41 plugin update</li>
+<li>Fixed an issue where playing in editor via Link was not functioning correctly when Application SpaceWarp was enabled</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9068"></a>
+[3.0.2] - 2022-06-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9069"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an incorrect depth texture format being requested on mobile</li>
+<li>Fixed compilation errors on platforms where <span class="tt">ENABLE_VR</span> is not currently defined</li>
+<li>Fixed an issue where the mirror view blit was using an incorrect source rect</li>
+<li>Early engine init on mobile now looks for a boot.config entry rather than using an intent filter query, resolving potential Android app store issues</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9070"></a>
+[3.0.1] - 2022-03-30</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9071"></a>
+Fixed</h2>
+<ul>
+<li>Resolved an issue where Symmetric Projection was defaulting to off, not taking advantage of potential GPU perf gains</li>
+<li>Changed Symmetric Projection and Subsampled Layout settings incompatibilities to be build warnings rather than errors since these aren't fatal settings issues</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9072"></a>
+[3.0.0] - 2022-03-02</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9073"></a>
+Added</h2>
+<ul>
+<li>Added a Late Latching Debug Mode option under the Experimental section of the Oculus Android settings. This can be used to verify that Late Latching is working as intended via log entries in Development builds. Currently requires <a class="el" href="namespace_unity.html">Unity</a> 2020.3.28f1 or higher, and will be available in a future release of 2021.2+</li>
+<li>Add optional support for Symmetric Projection on Quest 2 when using Vulkan and Multiview. This can improve GPU performance when using Multiview due to more common workloads between the left and right eye</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9074"></a>
+Changed</h2>
+<ul>
+<li>Multiview (Quest), and Single Pass Instanced (PC) are now the default stereo rendering modes in <a class="el" href="namespace_unity.html">Unity</a> 2021.2 and higher</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9075"></a>
+Fixed</h2>
+<ul>
+<li>Android Minimum API Level was always being forced to 23 when Oculus Android was enabled. Now it's only set to 23 if it's currently less than 23</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9076"></a>
+[3.0.0-pre.4] - 2022-01-24</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9077"></a>
+Fixed</h2>
+<ul>
+<li>Resolved a package manifest issue that was causing the Oculus subsystems to fail to load correctly</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9078"></a>
+[3.0.0-pre.2] - 2022-01-14</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9079"></a>
+Changed</h2>
+<ul>
+<li>Updated Oculus plugins to v34 with the OpenXR backend</li>
+<li>Modified Oculus plugin initialization on D3D11</li>
+<li>Updated XR Management dependency to 4.2.0</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9080"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a potential thread safety issue with ASW</li>
+<li>Changed how init code finds the <a class="el" href="namespace_unity.html">Unity</a> Surface View to fix an issue related to recent core engine changes</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9081"></a>
+[3.0.0-pre.1] - 2021-10-22</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9082"></a>
+Added</h2>
+<ul>
+<li>Added support for Application SpaceWarp to enable smoother experiences at lower framerates. <b>Note:</b> This feature currently requires a customized version of the URP package that is provided by Oculus. You shouldn't enable this feature if you aren't using that custom URP package</li>
+<li>Added experimental support for Late Latching when using Vulkan on Quest devices</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9083"></a>
+Changed</h2>
+<ul>
+<li>Updated Oculus plugins to v33 with the OpenXR backend. <b>Note:</b> Gamma color space is no longer supported with GLES with the OpenXR backend, so projects need to use linear color space, or switch to Vulkan. Users on 2020.3 can continue to use the verified 1.x.y versions of this package if they don't wish to update to the OpenXR backend</li>
+<li>Bumped minimum <a class="el" href="namespace_unity.html">Unity</a> version to 2021.2.0b17</li>
+<li>Changed <span class="tt">SetFoveationLevel(int level)</span> to return a bool. FFR APIs should succeed on mobile and fail on desktop</li>
+<li>Removed package dependency on <span class="tt">com.unity.ugui</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9084"></a>
+Removed</h2>
+<ul>
+<li>Removed unsupported <span class="tt">InputFeatureUsage&lt;bool&gt; volumeUp</span> and <span class="tt">InputFeatureUsage&lt;bool&gt; volumeDown</span> from OculusUsages</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9085"></a>
+[1.11.0] - 2021-10-05</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9086"></a>
+Changed</h2>
+<ul>
+<li>Vulkan is no longer experimental for Oculus on Android in <a class="el" href="namespace_unity.html">Unity</a> 2021.2 and higher, and will no longer be removed from your graphics settings in those versions</li>
+<li>Updated Vulkan docs to reflect the above</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9087"></a>
+[1.10.1-preview.3] - 2021-09-29</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9088"></a>
+Changed</h2>
+<ul>
+<li>Updated Oculus plugins to v33 non-OpenXR</li>
+<li>Updated AudioSpatializer plugins to v33</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9089"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an issue where eye textures were the incorrect resolution on Rift</li>
+<li>Resolved an issue with configuring FFR when using the OpenXR backend</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9090"></a>
+[1.10.0] - 2021-07-08</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9091"></a>
+Changed</h2>
+<p>No changes since 1.10.0-preview.2</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9092"></a>
+[1.10.0-preview.2] - 2021-07-08</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9093"></a>
+Added</h2>
+<ul>
+<li>Added <span class="tt">SystemHeadset GetSystemHeadsetType()</span> to query the active headset type at runtime</li>
+<li>Added the Subsampled Layout option for Vulkan on Quest 2. Requires <a class="el" href="namespace_unity.html">Unity</a> 2020.3.11f1 or 2021.1.9f1 or higher, and will result in a black screen if enabled on earlier versions of <a class="el" href="namespace_unity.html">Unity</a></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9094"></a>
+Changed</h2>
+<ul>
+<li>Added the Mac audio spatializer plugin back in now that it no longer crashes on M1 based Macs</li>
+<li>Updated Oculus plugins to 1.57.0</li>
+<li>Updated AudioSpatializer plugins to 1.57.0</li>
+<li>Moved updated Oculus library licensing information into <span class="tt">Third Party Notices.md</span></li>
+<li>Updated <span class="tt">LICENSE.md</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9095"></a>
+Fixed</h2>
+<ul>
+<li>Fixed issue when Link disconnected and reconnected while in play mode, a black screen in headset occurred when reentering play mode</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9096"></a>
+[1.10.0-preview.1] - 2021-05-19</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9097"></a>
+Added</h2>
+<ul>
+<li>Added <span class="tt">event Action InputFocusAcquired</span> and <span class="tt">event Action InputFocusLost</span> in <span class="tt">class InputFocus</span> to detect Oculus input focus when the Universal menu is open or closed</li>
+<li>Added system splash screen support for Quest. Oculus OS will display the system splash screen as a high quality compositor layer as soon as the app is starting to launch until the app submits the first frame</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9098"></a>
+Fixed</h2>
+<ul>
+<li>Fixed issue #1325113, where hand tracking was not working on Quest/Quest 2 when the <a class="el" href="namespace_unity.html">Unity</a> splash screen was disabled</li>
+<li>Fixed related script initialization timing issues where some calls failed on the first frame but would succeed later</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9099"></a>
+[1.9.1] - 2021-04-23</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9100"></a>
+Changed</h2>
+<p>No changes since 1.9.1-preview.2</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9101"></a>
+[1.9.1-preview.2] - 2021-04-15</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9102"></a>
+Fixed</h2>
+<ul>
+<li>Fixed issue #1324560, a potential PC crash with certain audio input and/or output device configurations</li>
+<li>Fixed DllNotFoundException error when running standalone players with the Oculus XR Plugin installed but disabled in the loader list</li>
+<li>Fixed an OculusUnity.java compile error when targeting Android API lower than 26</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9103"></a>
+[1.9.0] - 2021-03-18</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9104"></a>
+Changed</h2>
+<p>No changes since 1.9.0-preview.1</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9105"></a>
+[1.9.0-preview.1] - 2021-03-15</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9106"></a>
+Added</h2>
+<ul>
+<li>Added <span class="tt">bool EnableDynamicFFR(bool enable)</span> to enable dynamic FFR. This should be combined with <span class="tt">SetFoveationLevel()</span> to enable dynamic FFR</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9107"></a>
+Changed</h2>
+<ul>
+<li>FFR APIs still log when called on desktop, but it is now a warning rather than an error. Conditionally compile out FFR code on non-Android to avoid the messages</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9108"></a>
+Fixed</h2>
+<ul>
+<li>Fixed issue #1300651, where the Oculus XR Plugin would crash with apps built into folders with non-ASCII characters in the path</li>
+<li>Fixed an editor crash when entering playmode with a non-DX11 graphics device</li>
+<li>Fixed <span class="tt">[XR] Error determining if we should quit: Not Initialized</span> log spam when the runtime fails to initialize</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9109"></a>
+[1.8.1] - 2021-02-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9110"></a>
+Changed</h2>
+<ul>
+<li>Enabling the Oculus Android loader will automatically set the Minimum API Level setting to 23</li>
+<li>Updated XR Management dependency to 4.0.1</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9111"></a>
+[1.7.0] - 2020-12-10</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9112"></a>
+Changed</h2>
+<p>No changes since 1.7.0-preview.2</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9113"></a>
+[1.7.0-preview.2] - 2020-12-09</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9114"></a>
+Added</h2>
+<ul>
+<li>Added target devices to the Android settings. These are used to configure the supported devices list in the Android manifest. For example, enabling Quest 2 will allow 80/90Hz refresh rates on Quest 2</li>
+<li>Added <span class="tt">bool TryGetAvailableDisplayRefreshRates(out float[] refreshRates)</span></li>
+<li>Added <span class="tt">bool TrySetDisplayRefreshRate(float refreshRate)</span></li>
+<li>Added <span class="tt">bool TryGetDisplayRefreshRate(out float refreshRate)</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9115"></a>
+Fixed</h2>
+<ul>
+<li>Fixed <span class="tt">XRDevice.refreshRate</span> not updating correctly</li>
+<li>Fixed <span class="tt">indexTouch</span> and <span class="tt">thumbTouch</span> usages always returning false</li>
+<li>Removed the Mac audio spatializer plugin to work around a crash on startup on M1 based Macs</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9116"></a>
+[1.7.0-preview.1] - 2020-11-30</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9117"></a>
+Added</h2>
+<ul>
+<li>Added <span class="tt">Phase Sync</span> option on Android. This enables a latency optimization technique which can reduce simulation latency by several ms, depending on application workload. This is currently disabled by default, but we encourage trying it with your projects</li>
+<li>Added <a class="el" href="namespace_unity.html">Unity</a> Profiler marker for <span class="tt">OculusRuntime.WaitToBeginFrame</span> to clarify time spent waiting for frame sync. Note that this marker is only visible in <a class="el" href="namespace_unity.html">Unity</a> 2020.1+ since the profiler plugin interface is not available in 2019.4</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9118"></a>
+Changed</h2>
+<ul>
+<li>Updated to Oculus plugin 1.55.0</li>
+<li>Updated AudioSpatializer plugins to 1.55.0</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9119"></a>
+Removed</h2>
+<ul>
+<li>Removed <span class="tt">Focus Aware</span> option since it's now always on by default</li>
+<li>Removed <span class="tt">Protected Context</span> option since it only applied to Go</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9120"></a>
+[1.6.1] - 2020-11-09</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9121"></a>
+Changed</h2>
+<ul>
+<li>XR Management dependency changed to 3.2.16</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9122"></a>
+[1.6.0-preview.2] - 2020-10-29</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9123"></a>
+Changed</h2>
+<ul>
+<li>Updated AudioSpatializer plugins to 1.52.0</li>
+<li>Added more clarifying text if the Oculus XR Plugin fails to initialize on Windows</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9124"></a>
+Fixed</h2>
+<ul>
+<li>Fixed various AudioSpatializer .meta settings and Mac editor support</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9125"></a>
+[1.6.0-preview.1] - 2020-10-23</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9126"></a>
+Added</h2>
+<ul>
+<li>Added <span class="tt">bool Unity.XR.Oculus.Boundary.GetBoundaryConfigured()</span></li>
+<li>Added <span class="tt">bool Unity.XR.Oculus.Boundary.GetBoundaryDimensions(BoundaryType boundaryType, out Vector3 dimensions)</span></li>
+<li>Added <span class="tt">bool Unity.XR.Oculus.Boundary.GetBoundaryVisible()</span></li>
+<li>Added <span class="tt">void Unity.XR.Oculus.Boundary.SetBoundaryVisible(bool boundaryVisible)</span></li>
+<li>Added <span class="tt">void Unity.XR.Oculus.Development.TrySetDeveloperMode(bool enable)</span> to enable extra Oculus runtime stats. This is enabled by default in development builds</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9127"></a>
+Changed</h2>
+<ul>
+<li>Updated to Oculus plugin 1.52.0. Note that this removes support for Go. If you still need to support Go, please use the integrated VR support in 2019.4 LTS, or use package version 1.5.0</li>
+<li>Removed the Android V2 signing setting</li>
+<li>If the Oculus provider is enabled for Android, generated .apk files will no longer attempt to run on non-Oculus Android devices. If you need this to work, consider scripting general Android builds to disable Oculus for that build</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9128"></a>
+Fixed</h2>
+<ul>
+<li>Important classes are no longer stripped from Android builds if Minify is set to Proguard in the Android player settings</li>
+<li>Fixed DllImport errors by guarding dllimport calls on unsupported platforms</li>
+<li>Fixed Quest haptics not lasting for their intended duration</li>
+<li>Made the Oculus Dash app termination code more cross platform friendly</li>
+<li>Fixed the build processor to handle scripted build targets correctly</li>
+<li>Fixed <span class="tt">GetLocalTrackingSpaceRecenterCount</span> log spam</li>
+<li>Fixed incorrect check for DX11 setting when building Mac standalone</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9129"></a>
+[1.5.0] - 2020-09-23</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9130"></a>
+Added</h2>
+<ul>
+<li>Added <b>Optimize Buffer Discards</b> setting for Vulkan. This prevents depth and MSAA buffers from being resolved, improving GPU performance</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9131"></a>
+Changed</h2>
+<ul>
+<li>Added support for detecting if the application has been closed via the Oculus Dash</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9132"></a>
+Fixed</h2>
+<ul>
+<li>Oculus libraries are no longer added to player builds when Oculus loader isn't enabled for the target</li>
+<li>The BLUETOOTH permission is no longer added to the Android manifest when the Microphone class is used in a project</li>
+<li>The plugin no longer attempts to initialize when playing in editor on unsupported platforms (Mac/Linux)</li>
+<li>User audio configuration changes at runtime on PC are now respected</li>
+<li>Fixed incorrect manufacturer and removed placeholder serial number information on tracked devices</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9133"></a>
+[1.4.3] - 2020-08-07</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9134"></a>
+Changed</h2>
+<ul>
+<li>Updated to Oculus plugin 1.51.1</li>
+<li>Changed the timing of loading and initializing the Oculus plugin</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9135"></a>
+Fixed</h2>
+<ul>
+<li>Fixed <span class="tt">ScreenCapture.CaptureScreenshot()</span></li>
+<li>Fixed a potential crash in eye texture creation</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9136"></a>
+[1.4.0] - 2020-07-07</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9137"></a>
+Added</h2>
+<ul>
+<li>Added Oculus intent filter to the Android manifest</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9138"></a>
+Changed</h2>
+<ul>
+<li>Bumped the Minimum API Level check up to 23</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9139"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a crash when initializing/deinitializing the loader multiple times at runtime</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9140"></a>
+[1.4.0-preview.2] - 2020-07-02</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9141"></a>
+Added</h2>
+<ul>
+<li>Mobile settings now support Focus Aware mode, which is enabled by default</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9142"></a>
+Changed</h2>
+<ul>
+<li>Updated to Oculus plugin 1.49</li>
+<li>Oculus plugin is now dynamically loaded</li>
+<li>Vulkan swapchain improvements</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9143"></a>
+Fixed</h2>
+<ul>
+<li>Go controller mappings weren't displaying correctly when using the Input System</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9144"></a>
+[1.4.0-preview.1] - 2020-06-05</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9145"></a>
+Added</h2>
+<ul>
+<li>Added <span class="tt">int Unity.XR.Oculus.Utils.GetFoveationLevel</span> to retrieve the current FFR setting for mobile</li>
+<li>Added <span class="tt">bool Unity.XR.Oculus.Performance.TrySetCPULevel(int level)</span> for mobile</li>
+<li>Added <span class="tt">bool Unity.XR.Oculus.Performance.TrySetGPULevel(int level)</span> for mobile</li>
+<li>Added <b>Low Overhead Mode</b> setting for mobile</li>
+<li>Added <b>Protected Context</b> setting for mobile</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9146"></a>
+Changed</h2>
+<ul>
+<li>Consolidated changelog to remove versions that were never publicly released</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9147"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an extraneous blit on mobile</li>
+<li>Added correct display names for Oculus devices in the Input System</li>
+<li>Fixed compiler warnings in DeviceLayouts.cs when using Input System 1.0.0+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9148"></a>
+[1.3.4] - 2020-05-12</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9149"></a>
+Changed</h2>
+<ul>
+<li>When Oculus Android is enabled in XR Management, Vulkan is removed from the Android graphics API list. It can manually be added back in to the list</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9150"></a>
+Fixed</h2>
+<ul>
+<li>Stats.PluginVersion wasn't properly null terminating the version string. It is now the correct length</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9151"></a>
+[1.3.3] - 2020-04-08</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9152"></a>
+Changed</h2>
+<ul>
+<li>Change XR Management dependency to 3.0.6 to resolve a package manager issue</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9153"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a breaking change involving an incompatibility with versions of XR Management earlier than 3.2.4</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9154"></a>
+[1.3.1] - 2020-04-03</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9155"></a>
+Changed</h2>
+<ul>
+<li>Updated XR Management dependency to 3.2.4</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9156"></a>
+[1.3.0] - 2020-03-16</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9157"></a>
+Changed</h2>
+<ul>
+<li>Minor version bump to add a loader callback API method</li>
+<li>Updated XR Management dependency to 3.2.0</li>
+<li>Renamed Oculus loader</li>
+<li>Implement XR Management Metadata interfaces</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9158"></a>
+[1.2.0] - 2020-02-25</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9159"></a>
+Changed</h2>
+<ul>
+<li>Remove preview tag</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9160"></a>
+Fixed</h2>
+<ul>
+<li>Add missing release notes for 1.1.5</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9161"></a>
+[1.2.0-preview.1] - 2020-02-14</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9162"></a>
+Added</h2>
+<ul>
+<li>Public foveation setting API</li>
+<li>Public Oculus statistics APIs</li>
+<li>Improved recentering support</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9163"></a>
+Changed</h2>
+<ul>
+<li>Cleans up plugin graphics thread lifecylce</li>
+<li>Cleans up documentation</li>
+<li>Updated to Oculus plugin 1.44</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9164"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a crash on exit when using single threaded rendering</li>
+<li>Fixed BeginFrame log spew</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9165"></a>
+[1.1.5] - 2019-12-20</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9166"></a>
+Changed</h2>
+<ul>
+<li>Cleans up documentation</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9167"></a>
+[1.1.5-preview] - 2019-12-19</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9168"></a>
+Changed</h2>
+<ul>
+<li>Cleans up plugin graphics thread lifecylce</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9169"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a manifest merging issue with the 1.44 Oculus Integration assets</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9170"></a>
+[1.1.4] - 2019-12-13</h1>
+<ul>
+<li>No changes, version rev only</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9171"></a>
+[1.1.4-preview.1] - 2019-12-12</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9172"></a>
+Changed</h2>
+<ul>
+<li>Expands internal performance profiling tooling</li>
+<li>Re-enables GLES2</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9173"></a>
+Fixed</h2>
+<ul>
+<li>[Quest] Fixes an issue where resting then waking the device with the power button caused a black screen in the application (v12 Quest runtime and up)</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9174"></a>
+[1.1.4-preview] - 2019-12-03</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9175"></a>
+Fixed</h2>
+<ul>
+<li>Occlusion mesh no longer renders in the preview view unless requested by the user</li>
+<li>Fixed an issue where some entries in a custom AndroidManifest.xml were getting removed when V2 signing was enabled</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9176"></a>
+[1.1.3-preview.1] - 2019-11-27</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9177"></a>
+Fixed</h2>
+<ul>
+<li>Fixes a crash that occured when building an app without the Android loader in the XR Management list</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9178"></a>
+[1.1.3-preview] - 2019-11-27</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9179"></a>
+Added</h2>
+<ul>
+<li>Adds FFR hookup for Quest with Vulkan</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9180"></a>
+[1.1.2] - 2019-11-25</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9181"></a>
+Changed</h2>
+<ul>
+<li>Updated documentation</li>
+<li>Updated minimum <a class="el" href="namespace_unity.html">Unity</a> version required (for Vulkan support)</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9182"></a>
+[1.1.2-preview] - 2019-11-25</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9183"></a>
+Added</h2>
+<ul>
+<li>Enables Vulkan support on Quest and Go</li>
+<li>Provider now uses correct occlusion mesh</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9184"></a>
+Known Issues</h2>
+<ul>
+<li>Vulkan on Quest does not currently support Multiview, this will be supported in a later release of the <a class="el" href="namespace_unity.html">Unity</a> Editor</li>
+<li>FFR on Vulkan on Quest is not currently supported, this feature will be supported in a later release of the <a class="el" href="namespace_unity.html">Unity</a> Editor</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9185"></a>
+[1.1.1] - 2019-11-21</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9186"></a>
+Changed</h2>
+<ul>
+<li>Updated XR Management dependency to 3.0.4</li>
+<li>Updated to Oculus plugin 1.41</li>
+<li>Increased the callbackOrder on the Android build processor script so that other scripts can execute first if need be</li>
+<li>Renamed plugin libraries and cleaned up various error messages</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9187"></a>
+Fixed</h2>
+<ul>
+<li>Viewport scale in the mirror view now uses scaled UVs</li>
+<li>Fixed a potential manifest collision issue when using v2 signing</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9188"></a>
+[1.1.0] - 2019-10-17</h1>
+<ul>
+<li>Version bump to 1.1.0, no changes</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9189"></a>
+[1.1.0-preview] - 2019-10-17</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9190"></a>
+Changed</h2>
+<ul>
+<li>Minor version bump for new backwards compatible functionality (color scale API, input subsystem layouts)</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9191"></a>
+[1.0.3-preview.1] - 2019-10-15</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9192"></a>
+Fixed</h2>
+<ul>
+<li>Thread safe color scale</li>
+<li>Screenshot artifacts with SPI</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9193"></a>
+[1.0.3-preview] - 2019-09-27</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9194"></a>
+Added</h2>
+<ul>
+<li>Color scale and offset api and helper class</li>
+<li>More Oculus statistics (accessible via display subsystem api)</li>
+<li>User presence usage when using new input system</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9195"></a>
+Changed</h2>
+<ul>
+<li>Disables main framebuffer flag to save memory (~36MB on Quest)</li>
+<li>Input subsystem layouts to package</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9196"></a>
+Fixed</h2>
+<ul>
+<li>Fixed MSAA issues on Quest</li>
+<li>Fixed side-by-side screenshot functionality</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9197"></a>
+[1.0.2] - 2019-09-03</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9198"></a>
+Added</h2>
+<ul>
+<li>V2 signing checkbox for properly signed APKs on Quest</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9199"></a>
+Changed</h2>
+<ul>
+<li>XR Plugin Management dependency</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9200"></a>
+Fixed</h2>
+<ul>
+<li>Input bugs<ul>
+<li>Go reported sceondary button when it should have reported a menu button</li>
+<li>Quest and Rift S reported a thumbrest when they did not have one</li>
+<li>Oculus Remote would never connect</li>
+</ul>
+</li>
+<li>Timing issues upon pausing/resuming app on standalone HMDs</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9201"></a>
+[1.0.0] - 2019-07-10</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9202"></a>
+Added</h2>
+<ul>
+<li>Oculus audio spatializer plugin</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9203"></a>
+Changed</h2>
+<ul>
+<li>Removed preview tag</li>
+<li>Update XR Management dependency version</li>
+<li>Migrate away from the Experience subsystem</li>
+<li>Update Boundary Points when recentering and changing the tracking space origin mode</li>
+<li>Fixed spatializer .meta files</li>
+<li>Updated to Oculus plugin 1.37</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9204"></a>
+[0.8.4-preview] - 2019-06-10</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9205"></a>
+Added</h2>
+<ul>
+<li>Single Pass Instancing support for PC DX11</li>
+<li>Rendering and input support</li>
+<li>Arm64 support for mobile builds</li>
+<li>Depth support</li>
+<li>Render viewport scale</li>
+<li>Eye texture resolution scale</li>
+<li>Culling pose pullback</li>
+<li>Win32 compatibility</li>
+<li>Updates minimum unity version to 2019.2</li>
+<li>Input tracking reference node reporting</li>
+<li>Updates to Oculus plugin 1.34</li>
+<li>XRStats support</li>
+<li>Device relative eye positions</li>
+<li>Recenter functionality</li>
+<li>Registration of tracking references</li>
+<li>Moved tests to a package</li>
+<li>Haptics Functionality </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

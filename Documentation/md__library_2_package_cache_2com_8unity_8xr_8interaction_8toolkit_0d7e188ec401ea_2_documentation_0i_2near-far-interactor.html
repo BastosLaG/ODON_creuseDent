@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: near-far-interactor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2near-far-interactor.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">near-far-interactor </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8364"></a>
+autotoc_md8364</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8365"></a>
+uid: xri-near-far-interactor</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8366"></a>
+Near-Far Interactor</h1>
+<p>Interactor that utilizes both near and far interaction casters, allowing seamless transitions between different interaction types, while also using the far interaction caster's data to interact with UGUI.</p>
+<p>This interactor is designed with modularity and extensibility in mind, allowing advanced developers to implement custom near and far casters that adhere to the <span class="tt">IInteractionCaster</span> and <span class="tt">ICurveInteractionCaster</span> interfaces, respectively.</p>
+<p>The <span class="tt">IInteractionAttachController</span> interface allows developers to implement custom attach controllers that can be used to control the attach transform for translation and rotation. The default implementation for this enables distance-based velocity scaling on motion to pull objects to the user from afar, with hand tracking and controller tracking support.</p>
+<p>To complement this interactor, a visual controller component called <span class="tt">CurveVisualController</span> leverages the <span class="tt">ICurveInteractionDataProvider</span> interface to provide all the data required of the curve in a streamlined interface to allow for a flexible visual representation of the curve.</p>
+<p>This interactor is designed to integrate the functionality of both <span class="tt">XRDirectInteractor</span> and <span class="tt">XRRayInteractor</span>, though there are two notable gaps to keep in mind.</p><ul>
+<li>For mobile AR devices, the ray interactor is still required for raycasting AR data, as this <span class="tt">NearFarInteractor</span> does not yet support this use case.</li>
+<li>The <span class="tt">NearFarInteractor</span> does not yet support using the joystick to control the attach transform for translation, rotation and scaling, as the <span class="tt">XRRayInteractor</span> does.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8367"></a>
+Properties</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Interaction Manager</b>  </td><td class="markdownTableBodyNone">The XR Interaction Manager that this Interactor will communicate with. Will find one if None is set.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Interaction Layer Mask</b>  </td><td class="markdownTableBodyNone">Allows interaction with Interactables whose Interaction Layer Mask overlaps with any Layer in this Interaction Layer Mask.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Select Action Trigger</b>  </td><td class="markdownTableBodyNone">Choose how the select state is triggered from input, options include holding the button, pressing while hovered, toggling select on/off, or sticky toggle.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Keep Selected Target Valid</b>  </td><td class="markdownTableBodyNone">Keeps selecting the target when not touching or pointing to it after initially selecting it. Recommended to be true for grabbing objects, false for teleportation.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Allow Hovered Activate</b>  </td><td class="markdownTableBodyNone">Send activate and deactivate events to interactables hovered over but not selected when there is no current selection.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Interaction Attach Controller</b>  </td><td class="markdownTableBodyNone">Reference to the attach controller used to control the attach transform.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Enable Near Casting</b>  </td><td class="markdownTableBodyNone">Determines if the near interaction caster is activated to find valid nearby targets. Default is <span class="tt">true</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Near Caster</b>  </td><td class="markdownTableBodyNone">Reference to the near interaction caster component used for near interactions. Must implement <span class="tt">IInteractionCaster</span>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Sorting Strategy</b>  </td><td class="markdownTableBodyNone">Strategy for sorting targets detected by the near interaction caster. Options are <span class="tt">None</span>, <span class="tt">SquareDistance</span>, <span class="tt">InteractableBased</span>, and <span class="tt">ClosestPointOnCollider</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Sort Near Targets After Target Filter</b>  </td><td class="markdownTableBodyNone">Determines if the near targets should be sorted after the target filter is applied. Should be true only if filter does not sort targets. Not used if no target filter is set.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Enable Far Casting</b>  </td><td class="markdownTableBodyNone">Determines if the far interaction caster is activated to find valid distant targets. Default is <span class="tt">true</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Far Caster</b>  </td><td class="markdownTableBodyNone">Reference to the far interaction caster component used for far interactions. Must implement <span class="tt">ICurveInteractionCaster</span>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Far Attach Mode</b>  </td><td class="markdownTableBodyNone">Determines how the attachment point is adjusted on far select. This typically results in whether the interactable stays distant at the far hit point or moves to the near hand.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>UI Interaction</b>  </td><td class="markdownTableBodyNone">Allows the Interactor to interact with UI elements. Default is <span class="tt">true</span>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Block UI On Interactable Selection</b>  </td><td class="markdownTableBodyNone">Blocks UI interaction when an interactable is selected. Default is <span class="tt">true</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>UI Press Input</b>  </td><td class="markdownTableBodyNone">Defines the input used for pressing UI elements, functioning like a mouse button when pointing over UI. Implemented as an <span class="tt">XRInputButtonReader</span>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>UI Scroll Input</b>  </td><td class="markdownTableBodyNone">Defines the input used for scrolling UI elements, functioning like a mouse scroll wheel when pointing over UI. Implemented as an <span class="tt">XRInputValueReader&lt;Vector2&gt;</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Select Input</b>  </td><td class="markdownTableBodyNone">Input to use for selecting an interactable.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Activate Input</b>  </td><td class="markdownTableBodyNone">Input to use for activating an interactable. This can trigger a secondary action on an interactable object.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Interactor Filters</b>  </td><td class="markdownTableBodyNone">Add filters to extend this Interactor without needing to create a derived behavior.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Starting Target Filter</b>  </td><td class="markdownTableBodyNone">The target filter that this Interactor will automatically link at startup (optional).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Starting Hover Filters</b>  </td><td class="markdownTableBodyNone">The hover filters that this Interactor will automatically link at startup (optional). Used as additional hover validations.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Starting Select Filters</b>  </td><td class="markdownTableBodyNone">The select filters that this Interactor will automatically link at startup (optional). Used as additional select validations.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>UI Hover Entered Event</b>  </td><td class="markdownTableBodyNone">Event triggered when a UI element is hovered over by this interactor.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>UI Hover Exited Event</b>  </td><td class="markdownTableBodyNone">Event triggered when a UI element is no longer hovered over by this interactor.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8368"></a>
+Enums</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8369"></a>
+Region</h3>
+<p>Used by the <span class="tt">selectionRegion</span> property to indicate whether the selection is currently occurring in the near-field or far-field region.</p>
+<ul>
+<li><b>None</b>: No selection is occurring.</li>
+<li><b>Near</b>: Selection is occurring with near-field interaction.</li>
+<li><b>Far</b>: Selection is occurring with far-field interaction.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8370"></a>
+NearCasterSortingStrategy</h3>
+<p>Determines the strategy for sorting valid targets discovered by the near interaction caster.</p>
+<ul>
+<li><b>None</b>: No sorting is performed.</li>
+<li><b>SquareDistance</b>: Sorting based on the square distance between the interactor and interactable attach transform world positions. Most efficient.</li>
+<li><b>InteractableBased</b>: Sorting based on the interactable's defined sorting strategy, usually collider based.</li>
+<li><b>ClosestPointOnCollider</b>: Sorting based on the square distance between the interactor's attach transform world position and the closest point on the interactable's collider. Used for high fidelity disambiguation.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8371"></a>
+InteractorFarAttachMode</h3>
+<p>Controls the interactor's default behavior for how to adjust its attach transform on far select.</p>
+<ul>
+<li><b>Near</b>: The interactor should reset its attach transform to the near point on far select. This will typically result in the interactable object moving to the hand.</li>
+<li><b>Far</b>: The interactor should always move its attach transform to the far hit point on far select. This will typically result in the interactable object staying distant at the far hit point.</li>
+</ul>
+<p>This behavior may be overridden by interactables, such as XR Grab Interactable, which implement the <span class="tt">IFarAttachProvider</span> interface. Those interactables default to using the interactor's preferred value, but the interactables can choose to force either Near or Far when selected as a result of being hit by the far interaction caster.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8372"></a>
+Usage</h2>
+<p>This component should be attached to a GameObject that acts as an interactor in an interaction system. It requires components implementing <span class="tt">IInteractionAttachController</span>, <span class="tt">IInteractionCaster</span> for near casting, and <span class="tt">ICurveInteractionCaster</span> for far casting for full functionality. Default components implementing those interfaces will automatically be added at runtime if the Interaction Attach Controller, Near Caster, or Far Caster references are missing. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

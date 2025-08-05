@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Content view and Edit modes</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-overview.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Content view and Edit modes </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5907"></a></p>
+<p>Use the Content view to add, position, and manage the clips and markers on each track in the <a class="el" href="namespace_timeline.html">Timeline</a> asset or <a class="el" href="namespace_timeline.html">Timeline</a> instance. The selected Edit mode determines how clips and markers interact with each other when you add, position, trim, resize, or delete them.</p>
+<p><img src="images/tl-edit-mode-clips-view.png" alt="" class="inline"/></p>
+<p><b>(A)</b> Edit modes<br  />
+ <b>(B)</b> Content view<br  />
+</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5908"></a>
+Clips and the Content view</h1>
+<p>In the Content view, each clip has a colored accent line that identifies the type of clip:</p>
+<ul>
+<li>Activation clips are green.</li>
+<li>Animation clips are blue.</li>
+<li>Audio clips are orange.</li>
+<li>Control clips are turquoise.</li>
+<li>Playable clips are white.</li>
+</ul>
+<p>A clip with a source asset, such as an Animation clip or an Audio clip, displays arrows that indicate when the clip excludes part of its source animation, audio waveform, or other source content.</p>
+<p>For example, if an Animation clip uses only part of its full animation, white arrows indicate that keyframes exists before the start or after the end of the clip.</p>
+<p><img src="images/tl-clip-arrows.png" alt="" class="inline"/></p>
+<p><em>Small arrows (red) indicate that data exists before the start or after the end of the area defined by the clip</em></p>
+<p>There are many ways to resize a clip and view its hidden source data:</p><ul>
+<li>Drag the start or end of the clip to <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-trim.html">trim its start or end</a>.</li>
+<li>Select the clip and modify its clip timing properties in the Inspector window.</li>
+<li>Right-click the clip and choose <b>Match Content</b> from the context menu.</li>
+</ul>
+<p>When you resize a clip, the selected Edit mode determines how the surrounding clips are affected.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5909"></a>
+Clips and Edit modes</h1>
+<p>Select an Edit mode to choose how clips are added, positioned, and trimmed in the Content view. The Edit mode is also used when you modify clip timing properties in the Inspector window. There are three Edit modes that affect most clip editing features.</p>
+<p><img src="images/anno-clip-modes-all.png" alt="" class="inline"/></p>
+<p><em>Edit modes are <a class="el" href="#mixmode">Mix mode</a> (default and selected), <a class="el" href="#ripplemode">Ripple mode</a>, and <a class="el" href="#replacemode">Replace mode</a></em></p>
+<p>You can temporarily switch between Edit modes. This is useful if, for example, you want to temporarily use Ripple mode to offset the content of a track while you position clips. To temporarily switch between Edit modes, hold down the following keyboard keys:</p>
+<ul>
+<li>Hold down 1 to temporarily switch to Mix mode.</li>
+<li>Hold down 2 to temporarily switch to Ripple mode.</li>
+<li>Hold down 3 to temporarily switch to Replace mode.</li>
+</ul>
+<p><a class="anchor" id="mixmode"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5910"></a>
+Mix mode</h2>
+<p>Use Mix mode to add, position, and trim clips without moving or replacing adjacent clips. Mix mode creates blends between intersecting clips. Mix mode is the default Edit mode.</p>
+<p><img src="images/anno-clip-modes-mix.png" alt="" class="inline"/></p>
+<p><em><a class="el" href="namespace_timeline.html">Timeline</a> window with Mix mode as the selected Edit mode.</em></p>
+<p>In Mix mode, when you hover over a clip in the Content view, the cursor changes to indicate the action that you can perform. The action depends on the part of the clip that you hover over:</p>
+<ul>
+<li>When you hover over the start of a clip, the cursor changes to a trim cursor. The trim cursor indicates the area to drag to trim the start of the clip.</li>
+<li>When you hover over the middle of a clip, the cursor changes to a position cursor. The position cursor indicates the area to drag to position the clip.</li>
+<li>When you hover over the end of a selected clip, the cursor changes to a trim cursor. The trim cursor indicates the area to drag to trim the end of the clip.</li>
+</ul>
+<p>In Mix mode, if you drag to trim or position a clip and it intersects another clip, the cursor changes to a white arrow that points towards the blend being created. There are three possible cursors depending on whether the blend is created at the beginning of the clip, at the end of the clip, or at both the beginning and end of the clip. The clip and the blend are also outlined in white.</p>
+<p><img src="images/tl-drag-create-blend.png" alt="" class="inline"/></p>
+<p><em>For example, the white arrow cursor and white outline indicates that dragging Clip <span class="tt">2A</span> to the right creates a blend, at the end of the clip, between Clip <span class="tt">2A</span> and Clip <span class="tt">2B</span>.</em></p>
+<p><a class="anchor" id="ripplemode"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5911"></a>
+Ripple mode</h2>
+<p>Use Ripple mode to add, position, and trim a clip while affecting the subsequent clips on the same track. Positioning or trimming clips in Ripple mode preserves the gaps between subsequent clips.</p>
+<p><img src="images/anno-clip-modes-ripple.png" alt="" class="inline"/></p>
+<p><em><a class="el" href="namespace_timeline.html">Timeline</a> window with Ripple mode as the selected Edit mode.</em></p>
+<p>In Ripple mode, when you hover over a clip in the Content view, the cursor changes to indicate the action that you can perform. The actions and areas are similar to Mix mode:</p>
+<ul>
+<li>When you hover over the start of a clip, the cursor changes to a trim cursor. The trim cursor indicates the area to drag to trim the clip relative to its start.</li>
+<li>When you hover over the middle of a clip, the cursor changes to a position cursor. The position cursor indicates the area to drag to position the clip.</li>
+<li>When you hover over the end of a clip, the cursor changes to a trim cursor. The trim cursor indicates the area to drag to trim the clip relative to its end.</li>
+</ul>
+<p>In Ripple mode, when you drag to trim or position a clip, the cursor switches to a yellow arrow that points towards the affected clips and gaps. A yellow line indicates the ripple point. When you drag to trim a clip, dragging left and right changes the duration of the selected clip and repositions subsequent clips and gaps after the ripple point.</p>
+<p><img src="images/tl-drag-start-ripple.png" alt="" class="inline"/></p>
+<p><em>For example, the yellow arrow cursor indicates that dragging Clip <span class="tt">2A</span> affects the clips and gaps to the right, after the ripple point.</em></p>
+<p><a class="anchor" id="replacemode"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5912"></a>
+Replace mode</h2>
+<p>Use Replace mode to add, position, and trim a clip while cutting or replacing intersecting clips.</p>
+<p><img src="images/anno-clip-modes-replace.png" alt="" class="inline"/></p>
+<p><em><a class="el" href="namespace_timeline.html">Timeline</a> window with Replace mode as the selected Edit mode.</em></p>
+<p>In Replace mode, when you hover over a clip in the Content view, the cursor changes to indicate the action that you can perform. The actions and areas are similar to Mix mode:</p>
+<ul>
+<li>When you hover over the start of a selected clip, the cursor changes to a trim cursor. The trim cursor indicates the area to drag to trim the clip relative to its start.</li>
+<li>When you hover over the middle of a clip, the cursor changes to a position cursor. The position cursor indicates the area to drag to position the clip.</li>
+<li>When you hover over the end of a clip, the cursor changes to a trim cursor. The trim cursor indicates the area to drag to trim the clip relative to its end.</li>
+</ul>
+<p>In Replace mode, when you drag to position a clip, the clip becomes transparent so that you can view overlapping clips. If the clip being positioned overlaps other clips, releasing the clip cuts the underlying clip at each overlap.</p>
+<p>In Replace mode, when you drag to trim a clip and it intersects another clip, the cursor changes to a red arrow and a red replacement line indicates where clips overlap. Releasing the trim cuts the overlapping clip at the red replacement line. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

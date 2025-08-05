@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Couple Animation and Navigation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_coupling_animation_and_navigation.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Couple Animation and Navigation </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md259"></a></p>
+<p>The goal of this document is to guide you to setup navigating humanoid characters to move using the navigation system.</p>
+<p>We’ll be using Unity’s built-in systems for animation and navigation along with custom scripting to achieve this.</p>
+<p>It’s assumed you’re familiar with the basics of <a class="el" href="namespace_unity.html">Unity</a> and the Mecanim animation system.</p>
+<p>An example project is available — so you don’t have to add <a href="./Glossary.md#scripts" title="A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like."><b>scripts</b></a> or set up animations and animation controller from scratch:</p>
+<ul>
+<li><a href="https://docs.unity3d.com/2021.3/Documentation/uploads/Examples/NavigationAnimation_53.zip">NavigationAnimation_53.zip</a> <em>Works with <a class="el" href="namespace_unity.html">Unity</a> 5.3+</em></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md260"></a>
+Creating the Animation Controller</h1>
+<p>To get a responsive and versatile animation controller — covering a wide range of movements — we need a set of animations moving in different directions. This is sometimes referred to as a strafe-set.</p>
+<p>In addition to the move animations we need an animation for the standing character.</p>
+<p>We proceed by arranging the strafe-set in a 2D blend tree — choose blend type: <b>2D Simple Directional</b> and place animations using <b>Compute Positions &gt; Velocity XZ</b></p>
+<p>For blending control we add two float parameters <b>velx</b> and <b>vely</b>, and assign them to the blend tree.</p>
+<p>Here we’ll be placing 7 run animations — each with a different velocity. In addition to the forwards (+ left/right) and backwards (+ left/right) we also use an <a href="./Glossary.md#animation-clip" title="Animation data that can be used for animated characters or simple animations. It is a simple “unit” piece of motion, such as (one specific instance of) “Idle”, “Walk” or “Run”."><b>animation clip</b></a> for running on the spot. The latter is highlighted in the center of the 2D blend map below. The reason for having an animation running on the spot is two-fold, firstly it preserves the style of running when blended with the other animations. Secondly the animation prevents foot-sliding when blending.</p>
+<p><img src="./Images/NavAnimBlend2d.png" alt="A 2D blend tree with seven run animations, including an animation for running on the spot." class="inline"/></p>
+<p>Then we add the idle animation clip in its own node (<b>Idle</b>). We now have two discrete animation states that we couple with 2 transitions.</p>
+<p><img src="./Images/NavAnimStates.png" alt="The idle animation clip has its own node, with a transition to and from moving animations." class="inline"/></p>
+<p>To control the switch between the moving and idle states we add a boolean control parameter <b>move</b>. Then disable the <b>Has Exit Time</b> property on the transitions. This allows the transition to trigger at any time during the animation. Transition time should be set to around 0.10 second to get a responsive transition.</p>
+<p><img src="./Images/NavAnimTransition.png" alt="The transition from the idle state to moving, without an exit time, and with a move condition." class="inline"/></p>
+<p>Now place the new created animation controller on the character you want to move.</p>
+<p>Press play and select the character in the <b>Hierarchy window</b>. You can now manually control the animation values in the <a href="./Glossary.md#animator-window" title="The window where the Animator Controller is visualized and edited."><b>Animator window</b></a> and change the move state and velocity.</p>
+<p>The next step is to create other means of controlling the <a href="./Glossary.md#animation-parameters" title="Used to communicate between scripting and the Animator Controller. Some parameters can be set in scripting and used by the controller, while other parameters are based on Custom Curves in Animation Clips and can be sampled using the scripting API."><b>animation parameters</b></a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md261"></a>
+Navigation Control</h1>
+<p>Place a <b>NavMeshAgent</b> component on the character and adjust the radius, height and to match the character - additionally change the speed property to match the maximum speed in the <a href="./Glossary.md#navmesh" title="A mesh that Unity generates to approximate the walkable areas and obstacles in your environment for path finding and AI-controlled navigation."><b>animation blend tree</b></a>.</p>
+<p>Create a <a href="./Glossary.md#navmesh" title="A mesh that Unity generates to approximate the walkable areas and obstacles in your environment for path finding and AI-controlled navigation."><b>NavMesh</b></a> for the <a href="./Glossary.md#scene" title="A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces."><b>Scene</b></a> you’ve placed the character in.</p>
+<p>Next we need to tell the character where to navigate to. This typically is very specific to the application. Here we choose a click to move behavior — the character moved to the point in the world where the user has clicked on the screen.</p>
+<div class="fragment"><div class="line"> C#</div>
+<div class="line">// ClickToMove.cs</div>
+<div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.AI;</div>
+<div class="line"> </div>
+<div class="line">[RequireComponent (typeof (NavMeshAgent))]</div>
+<div class="line">public class ClickToMove : MonoBehaviour {</div>
+<div class="line">    RaycastHit hitInfo = new RaycastHit();</div>
+<div class="line">    NavMeshAgent agent;</div>
+<div class="line"> </div>
+<div class="line">    void Start () {</div>
+<div class="line">        agent = GetComponent&lt;NavMeshAgent&gt; ();</div>
+<div class="line">    }</div>
+<div class="line">    void Update () {</div>
+<div class="line">        if(Input.GetMouseButtonDown(0)) {</div>
+<div class="line">            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);</div>
+<div class="line">            if (Physics.Raycast(ray.origin, ray.direction, out hitInfo))</div>
+<div class="line">                agent.destination = hitInfo.point;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Pressing play now — and clicking around in the scene — you’ll see the character move around in the scene. However — the animations don’t match the movement at all. We need to communicate the state and velocity of the agent to the animation controller.</p>
+<p>To transfer the velocity and state info from the agent to the animation controller we will add another script.</p>
+<div class="fragment"><div class="line"> C#</div>
+<div class="line">// LocomotionSimpleAgent.cs</div>
+<div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.AI;</div>
+<div class="line"> </div>
+<div class="line">[RequireComponent (typeof (NavMeshAgent))]</div>
+<div class="line">[RequireComponent (typeof (Animator))]</div>
+<div class="line">public class LocomotionSimpleAgent : MonoBehaviour {</div>
+<div class="line">    Animator anim;</div>
+<div class="line">    NavMeshAgent agent;</div>
+<div class="line">    Vector2 smoothDeltaPosition = Vector2.zero;</div>
+<div class="line">    Vector2 velocity = Vector2.zero;</div>
+<div class="line"> </div>
+<div class="line">    void Start ()</div>
+<div class="line">    {</div>
+<div class="line">        anim = GetComponent&lt;Animator&gt; ();</div>
+<div class="line">        agent = GetComponent&lt;NavMeshAgent&gt; ();</div>
+<div class="line">        // Don’t update position automatically</div>
+<div class="line">        agent.updatePosition = false;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    void Update ()</div>
+<div class="line">    {</div>
+<div class="line">        Vector3 worldDeltaPosition = agent.nextPosition - transform.position;</div>
+<div class="line"> </div>
+<div class="line">        // Map &#39;worldDeltaPosition&#39; to local space</div>
+<div class="line">        float dx = Vector3.Dot (transform.right, worldDeltaPosition);</div>
+<div class="line">        float dy = Vector3.Dot (transform.forward, worldDeltaPosition);</div>
+<div class="line">        Vector2 deltaPosition = new Vector2 (dx, dy);</div>
+<div class="line"> </div>
+<div class="line">        // Low-pass filter the deltaMove</div>
+<div class="line">        float smooth = Mathf.Min(1.0f, Time.deltaTime/0.15f);</div>
+<div class="line">        smoothDeltaPosition = Vector2.Lerp (smoothDeltaPosition, deltaPosition, smooth);</div>
+<div class="line"> </div>
+<div class="line">        // Update velocity if time advances</div>
+<div class="line">        if (Time.deltaTime &gt; 1e-5f)</div>
+<div class="line">            velocity = smoothDeltaPosition / Time.deltaTime;</div>
+<div class="line"> </div>
+<div class="line">        bool shouldMove = velocity.magnitude &gt; 0.5f &amp;&amp; agent.remainingDistance &gt; agent.radius;</div>
+<div class="line"> </div>
+<div class="line">        // Update animation parameters</div>
+<div class="line">        anim.SetBool(&quot;move&quot;, shouldMove);</div>
+<div class="line">        anim.SetFloat (&quot;velx&quot;, velocity.x);</div>
+<div class="line">        anim.SetFloat (&quot;vely&quot;, velocity.y);</div>
+<div class="line"> </div>
+<div class="line">        GetComponent&lt;LookAt&gt;().lookAtTargetPosition = agent.steeringTarget + transform.forward;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    void OnAnimatorMove ()</div>
+<div class="line">    {</div>
+<div class="line">        // Update position to agent position</div>
+<div class="line">        transform.position = agent.nextPosition;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This script deserves a little explanation. It’s placed on the character — which has an <b>Animator</b> and a <b>NavMeshAgent</b> component attached — as well as the click to move script above.</p>
+<p>First the script tells the agent not to update the character position automatically. We handle the position update that last in the script. The orientation is updated by the agent.</p>
+<p>The animation blend is controlled by reading the agent velocity. It is transformed into a relative velocity (based on character orientation) — and then smoothed. The transformed horizontal velocity components are then passed to the <b>Animator</b> and additionally the state switching between idle and moving is controlled by the speed (i.e. velocity magnitude).</p>
+<p>In the <span class="tt">OnAnimatorMove()</span> callback we update the position of the character to match the <b>NavMeshAgent</b>.</p>
+<p>Playing the scene again gives show that animation matches the movement to as close as possible.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md262"></a>
+Improving the Quality of the Navigating Character</h1>
+<p>To improve the quality of the animated and navigating character we will explore a couple of options.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md263"></a>
+Looking</h2>
+<p>Having the character to look and turn towards points of interest is important to convey attention and anticipation. We’ll use the animation systems <span class="tt">LookAt</span> API. This calls for another script.</p>
+<div class="fragment"><div class="line"> C#</div>
+<div class="line">// LookAt.cs</div>
+<div class="line">using UnityEngine;</div>
+<div class="line">using System.Collections;</div>
+<div class="line"> </div>
+<div class="line">[RequireComponent (typeof (Animator))]</div>
+<div class="line">public class LookAt : MonoBehaviour {</div>
+<div class="line">    public Transform head = null;</div>
+<div class="line">    public Vector3 lookAtTargetPosition;</div>
+<div class="line">    public float lookAtCoolTime = 0.2f;</div>
+<div class="line">    public float lookAtHeatTime = 0.2f;</div>
+<div class="line">    public bool looking = true;</div>
+<div class="line"> </div>
+<div class="line">    private Vector3 lookAtPosition;</div>
+<div class="line">    private Animator animator;</div>
+<div class="line">    private float lookAtWeight = 0.0f;</div>
+<div class="line"> </div>
+<div class="line">    void Start ()</div>
+<div class="line">    {</div>
+<div class="line">        if (!head)</div>
+<div class="line">        {</div>
+<div class="line">            Debug.LogError(&quot;No head transform - LookAt disabled&quot;);</div>
+<div class="line">            enabled = false;</div>
+<div class="line">            return;</div>
+<div class="line">        }</div>
+<div class="line">        animator = GetComponent&lt;Animator&gt; ();</div>
+<div class="line">        lookAtTargetPosition = head.position + transform.forward;</div>
+<div class="line">        lookAtPosition = lookAtTargetPosition;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    void OnAnimatorIK ()</div>
+<div class="line">    {</div>
+<div class="line">        lookAtTargetPosition.y = head.position.y;</div>
+<div class="line">        float lookAtTargetWeight = looking ? 1.0f : 0.0f;</div>
+<div class="line"> </div>
+<div class="line">        Vector3 curDir = lookAtPosition - head.position;</div>
+<div class="line">        Vector3 futDir = lookAtTargetPosition - head.position;</div>
+<div class="line"> </div>
+<div class="line">        curDir = Vector3.RotateTowards(curDir, futDir, 6.28f * Time.deltaTime, float.PositiveInfinity);</div>
+<div class="line">        lookAtPosition = head.position + curDir;</div>
+<div class="line"> </div>
+<div class="line">        float blendTime = lookAtTargetWeight &gt; lookAtWeight ? lookAtHeatTime : lookAtCoolTime;</div>
+<div class="line">        lookAtWeight = Mathf.MoveTowards (lookAtWeight, lookAtTargetWeight, Time.deltaTime / blendTime);</div>
+<div class="line">        animator.SetLookAtWeight (lookAtWeight, 0.2f, 0.5f, 0.7f, 0.5f);</div>
+<div class="line">        animator.SetLookAtPosition (lookAtPosition);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Add the script to the character and assign the head property to the head transform in your characters transform hierarchy. The LookAt script has no notion of navigation control — so to control where to look we go back to the <b>LocomotionSimpleAgent.cs</b> script and add a couple of lines to control the looking. Add the end of <span class="tt">Update()</span> add:</p>
+<div class="fragment"><div class="line">C#</div>
+<div class="line">       LookAt lookAt = GetComponent&lt;LookAt&gt; ();</div>
+<div class="line">       if (lookAt)</div>
+<div class="line">           lookAt.lookAtTargetPosition = agent.steeringTarget + transform.forward;</div>
+</div><!-- fragment --><p>This will tell the <b>LookAt</b> script to set the point of interest to approximately the next corner along the path or — if no corners — to the end of the path.</p>
+<p>Try it out.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md264"></a>
+Animation Driven Character using Navigation</h2>
+<p>The character has so far been controlled completely by the position dictated by the agent. This ensures that the avoidance of other characters and obstacles translates directly to the character position. However it may lead to foot-sliding if the animation doesn’t cover the proposed velocity. Here we’ll relax the constraint of the character a bit. Basically we’ll be trading the avoidance quality for animation quality.</p>
+<p>Replace the <span class="tt">OnAnimatorMove()</span> callback on the <b>LocomotionSimpleAgent.cs</b> script replace the line with the following</p>
+<div class="fragment"><div class="line">C#</div>
+<div class="line">   void OnAnimatorMove ()</div>
+<div class="line">   {</div>
+<div class="line">       // Update position based on animation movement using navigation surface height</div>
+<div class="line">       Vector3 position = anim.rootPosition;</div>
+<div class="line">       position.y = agent.nextPosition.y;</div>
+<div class="line">       transform.position = position;</div>
+<div class="line">   }</div>
+</div><!-- fragment --><p>When trying this out you may notice the that character can now drift away from the agent position (green wireframe cylinder) . You may need to limit that character animation drift. This can be done either by pulling the agent towards the character — or pull the character towards the agent position. Add the following at the end of the <span class="tt">Update()</span> method on the script <b>LocomotionSimpleAgent.cs</b>.</p>
+<div class="fragment"><div class="line">C#</div>
+<div class="line">       // Pull character towards agent</div>
+<div class="line">       if (worldDeltaPosition.magnitude &gt; agent.radius)</div>
+<div class="line">           transform.position = agent.nextPosition - 0.9f * worldDeltaPosition;</div>
+</div><!-- fragment --><p>Or — if you want the agent to follow the character.</p>
+<div class="fragment"><div class="line">C#</div>
+<div class="line">       // Pull agent towards character</div>
+<div class="line">       if (worldDeltaPosition.magnitude &gt; agent.radius)</div>
+<div class="line">           agent.nextPosition = transform.position + 0.9f * worldDeltaPosition;</div>
+</div><!-- fragment --><p>What works best very much depends on the specific use-case.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md265"></a>
+Conclusion</h1>
+<p>We have set up a character that moves using the navigation system and animates accordingly. Tweaking the numbers of blend time, look-at weights etc. can improve the looks — and is a good way to further explore this setup. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

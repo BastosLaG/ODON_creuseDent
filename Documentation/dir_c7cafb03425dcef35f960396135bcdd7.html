@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Répertoire de référence de Library/PackageCache/com.unity.collections@56bff8827a7e/Unity.Collections.PerformanceTests</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('dir_c7cafb03425dcef35f960396135bcdd7.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Répertoire de référence de Unity.Collections.PerformanceTests</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-subdirs" class="groupheader"><a id="subdirs" name="subdirs"></a>
+Répertoires</h2></td></tr>
+<tr class="memitem:Unity_2EPerformanceTesting_2EBenchmark" id="r_Unity_2EPerformanceTesting_2EBenchmark"><td class="memItemLeft" align="right" valign="top"><span class="iconfolder"><div class="folder-icon"></div></span>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dir_3a2fcd12312d399ccd261d4944e2b691.html">Unity.PerformanceTesting.Benchmark</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1457"></a>
+Collections Benchmarking and Performance Tests</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1458"></a>
+Table of Contents</h1>
+<ul>
+<li>Overview<ul>
+<li>Containers</li>
+<li>Allocators</li>
+</ul>
+</li>
+<li>Container Benchmarking and Performance Tests<ul>
+<li>Example Code - List.Add</li>
+<li>Results - List.Add</li>
+</ul>
+</li>
+<li>Allocator Benchmarking and Performance Tests<ul>
+<li>Example Code - RewindableAllocator.FixedSize</li>
+<li>Results - RewindableAllocator.FixedSize</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1459"></a>
+Overview</h1>
+<p><span class="tt">com.unity.collections</span> provides pre-defined intermediate 'glue' layers on top of the Benchmark Framework to enable relatively simple creation of performance and benchmark testing for a wide variety of code paths which may be taken when using the collections package.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1460"></a>
+Containers</h2>
+<p>Examples of provided benchmarking and performance testing include:</p><ul>
+<li>NativeContainer code</li>
+<li><a class="el" href="namespace_burst.html">Burst</a> compiled NativeContainer code with safety enabled</li>
+<li><a class="el" href="namespace_burst.html">Burst</a> compiled NativeContainer code with safety disabled</li>
+<li>UnsafeContainer code</li>
+<li><a class="el" href="namespace_burst.html">Burst</a> compiled UnsafeContainer code with safety enabled</li>
+<li><a class="el" href="namespace_burst.html">Burst</a> compiled UnsafeContainer code with safety disabled</li>
+</ul>
+<p>Combine those with:</p><ul>
+<li>Container.ParallelWriter code going wide in any of the above mentioned situations</li>
+<li>Container.ReadOnly code going wide</li>
+</ul>
+<p>and it is easy to visualize the vast number of possibilities which we want to monitor and generate concrete performance data <em>and comparisons</em> on.</p>
+<p>Regarding comparisons, we also want to ensure that these burst compatible containers are competitive or better with a similar container in .NET/IL2CPP/Mono's base class library, and have a way to validate and track improvements there as well, such as those found in:</p><ul>
+<li>System.Collections.Generic</li>
+<li>System.Collections.Concurrent</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1461"></a>
+Allocators</h2>
+<p>Naturally, there is a similar story with the custom allocator types provided by the collections package. In this case we want to be able to compare:</p><ul>
+<li>A provided IAllocator implementation in a managed code path</li>
+<li>The same in a <a class="el" href="namespace_burst.html">Burst</a> compiled code path with safety enabled</li>
+<li>Again the same in a <a class="el" href="namespace_burst.html">Burst</a> compiled code path with safety disabled</li>
+</ul>
+<p>against:</p><ul>
+<li>The <a class="el" href="namespace_unity_engine.html">UnityEngine</a> built-in Allocator.Temp</li>
+<li>The <a class="el" href="namespace_unity_engine.html">UnityEngine</a> built-in Allocator.TempJob</li>
+<li>The <a class="el" href="namespace_unity_engine.html">UnityEngine</a> built-in Allocator.Persistent</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1463"></a>
+Container Benchmarking and Performance Tests</h1>
+<p>Container performance testing and benchmarks are built around a small handful of types. </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">BenchmarkContainerType</span>  </td><td class="markdownTableBodyNone">This enum defines variations for Native and Unsafe containers with and without burst compilation - with and without safety enabled. See the inline documentation for full details.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">IBenchmarkContainer</span>  </td><td class="markdownTableBodyNone"><a class="el" href="class_tests.html">Tests</a> are written as implementations of this interface. It provides means for generic int parameters, allocation and disposal of Native, Unsafe, and C# Base Class Library containers, and measurement of the same.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">BenchmarkContainerRunner</span>  </td><td class="markdownTableBodyNone">Easy-to-use API for running measurements in a single call. See inline documentation for full details, and see below for example usage.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">IBenchmarkContainerParallel</span>  </td><td class="markdownTableBodyNone">Similar to <span class="tt">IBenchmarkContainer</span>, but designed to support tightly designed measurement code with <a class="el" href="namespace_unity.html">Unity</a> Job system workers in mind  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">BenchmarkContainerRunnerParallel</span>  </td><td class="markdownTableBodyNone">Similar to <span class="tt">BenchmarkContainerRunner</span>, but designed to parameterize worker thread counts for performance testing and benchmarking parallel container implementations  </td></tr>
+</table>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1465"></a>
+Example Code - List.Add</h2>
+<p>Here is a real-world basic example of implementing a performance and test and benchmark comparison for lists. This measures the cost of simply adding elements to a list with the expected capacity pre-allocated.</p>
+<div class="fragment"></div><!-- fragment --><p> To run these measurements, the calling code is quite simple, and generates a multitude of Performance Test Framework tests which can be run from the <a class="el" href="namespace_unity.html">Unity</a> Test Runner as well as through CI regression checks, and it also supports the necessary code paths for Benchmarking to make performance comparisons on all the variations <em>including</em> the BCL variation. Note the BCL variation of <span class="tt">System.Collections.Generic.List</span> will not appear as a Performance Test Framework test - it is considered for benchmarking only. </p><div class="fragment"></div><!-- fragment --><hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1467"></a>
+Results - List.Add</h2>
+<p>This above two code snippets generate something like the following (notice the BCL tests aren't generated):</p>
+<p><img src="PerformanceTestFrameworkOutputListAdd.png" alt="Performance Test Framework example" class="inline"/></p>
+<p>Running the <span class="tt">DOTS/Unity.Collections/Generate Container Benchmarks</span> menu item will generate a markdown report, again running the same single code path per type. Here is a snippet of the full results showing only the output for <span class="tt">List.Add</span>:</p>
+<blockquote class="doxtable">
+<p>### <em>List</em></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Functionality  </th><th class="markdownTableHeadRight">NativeList (S)  </th><th class="markdownTableHeadRight">NativeList (S+B)  </th><th class="markdownTableHeadRight">NativeList (B)  </th><th class="markdownTableHeadRight">UnsafeList (S)  </th><th class="markdownTableHeadRight">UnsafeList (S+B)  </th><th class="markdownTableHeadRight">UnsafeList (B)  </th><th class="markdownTableHeadRight"><em>List (BCL)</em>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Add(10000)</span>  </td><td class="markdownTableBodyRight">0.178ms <span style="color:red">(0.1x)</span>&#160;🟠  </td><td class="markdownTableBodyRight">0.057ms  <span style="color:red">(0.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">0.018ms  <span style="color:red">(0.8x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">0.041ms <span style="color:red">(0.4x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">0.006ms  <span style="color:green">(2.3x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">0.014ms  <span style="color:green">(1.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*0.015ms <span style="color:grey">(1.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Add(100000)</span>  </td><td class="markdownTableBodyRight">1.827ms <span style="color:red">(0.1x)</span>&#160;🟠  </td><td class="markdownTableBodyRight">0.622ms  <span style="color:red">(0.2x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">0.180ms  <span style="color:red">(0.8x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">0.432ms <span style="color:red">(0.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">0.061ms  <span style="color:green">(2.4x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">0.139ms  <span style="color:green">(1.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*0.146ms <span style="color:grey">(1.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Add(1000000)</span>  </td><td class="markdownTableBodyRight">18.910ms <span style="color:red">(0.1x)</span>&#160;🟠  </td><td class="markdownTableBodyRight">6.443ms  <span style="color:red">(0.2x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">1.814ms  <span style="color:red">(0.8x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.136ms <span style="color:red">(0.4x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">0.586ms  <span style="color:green">(2.5x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">1.482ms  <span style="color:grey">(1.0x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*1.468ms <span style="color:grey">(1.0x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td></tr>
+</table>
+</blockquote>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1469"></a>
+Allocator Benchmarking and Performance Tests</h1>
+<p>Allocator performance testing and benchmarks are built around a small handful of types. </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">BenchmarkAllocatorType</span>  </td><td class="markdownTableBodyNone">This enum defines variations for allocators with and without burst compilation - with and without safety enabled. See the inline documentation for full details.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">IBenchmarkAllocator</span>  </td><td class="markdownTableBodyNone"><a class="el" href="class_tests.html">Tests</a> are written as implementations of this interface. It provides means for generic int parameters, creation and destruction of allocators, allocation and freeing of memory using these allocators as well as using <a class="el" href="namespace_unity.html">Unity</a> Engine's built-in allocators <span class="tt">Temp</span>, <span class="tt">TempJob</span>, and <span class="tt">Persistent</span>, and measurement of the same.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">BenchmarkAllocatorRunner</span>  </td><td class="markdownTableBodyNone">Easy-to-use API for running measurements in a single call. See inline documentation for full details, and see below for example usage.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">BenchmarkAllocatorUtil</span>  </td><td class="markdownTableBodyNone">Generalized API for simplifying common Setup and Teardown implementations of <span class="tt">IBenchmarkAllocator</span> derived test types  </td></tr>
+</table>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1471"></a>
+Example Code - RewindableAllocator.FixedSize</h2>
+<p>The following example will omit another utility type designed for RewindableAllocator. The type is designed to simplify setup, teardown, and <span class="tt">Rewind</span> functionality necessary on a per-test-run basis. See <a href="RewindableAllocatorPerformanceTests.cs">RewindableAllocatorPerformanceTests.cs</a> for reference.</p>
+<div class="fragment"></div><!-- fragment --><p> To run these measurements, the calling code is quite simple, and generates a multitude of Performance Test Framework tests which can be run from the <a class="el" href="namespace_unity.html">Unity</a> Test Runner as well as through CI regression checks, and it also supports the necessary code paths for Benchmarking to make performance comparisons on all the variations <em>including</em> the <span class="tt">Temp</span>, <span class="tt">TempJob</span>, and <span class="tt">Persistent</span> variations. Note these <a class="el" href="namespace_unity.html">Unity</a> Engine built-in allocator variations will not appear as a Performance Test Framework test - it is considered for benchmarking only. </p><div class="fragment"></div><!-- fragment --><hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1473"></a>
+Results - RewindableAllocator.FixedSize</h2>
+<p>This above two code snippets generate something like the following (notice the BCL tests aren't generated):</p>
+<p><img src="PerformanceTestFrameworkOutputFixedSize.png" alt="Performance Test Framework example" class="inline"/></p>
+<p>Running the <span class="tt">DOTS/Unity.Collections/Generate Allocator Benchmarks</span> menu item will generate a markdown report, again running the same single code path per type. Here is a snippet of the full results showing only the output for <span class="tt">RewindableAllocator.FixedSize</span>:</p>
+<blockquote class="doxtable">
+<p>### <em>RewindableAllocator</em></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Functionality  </th><th class="markdownTableHeadRight">RewindableAllocator (S)  </th><th class="markdownTableHeadRight">RewindableAllocator (S+B)  </th><th class="markdownTableHeadRight">RewindableAllocator (B)  </th><th class="markdownTableHeadRight"><em>TempJob (E)</em>  </th><th class="markdownTableHeadRight"><em>Temp (E)</em>  </th><th class="markdownTableHeadRight"><em>Persistent (E)</em>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(1, 1024)</span>*³*  </td><td class="markdownTableBodyRight">11.4µs  <span style="color:green">(2.5x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">3.9µs   <span style="color:green">(7.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">3.6µs   <span style="color:green">(7.9x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*13.6µs  <span style="color:green">(2.1x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*10.2µs   <span style="color:green">(2.8x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*28.6µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(2, 1024)</span>*²˒³*  </td><td class="markdownTableBodyRight">27.8µs  <span style="color:green">(2.5x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">17.7µs   <span style="color:green">(3.9x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">8.8µs   <span style="color:green">(7.9x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*19.3µs  <span style="color:green">(3.6x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*10.6µs   <span style="color:green">(6.5x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*69.1µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(4, 1024)</span>*²˒³*  </td><td class="markdownTableBodyRight">65.3µs  <span style="color:green">(1.9x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">73.1µs   <span style="color:green">(1.7x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">66.8µs   <span style="color:green">(1.8x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*28.2µs  <span style="color:green">(4.3x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.8µs  <span style="color:green">(10.3x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*121.8µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(8, 1024)</span>*²˒³*  </td><td class="markdownTableBodyRight">141.5µs  <span style="color:green">(2.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">133.3µs   <span style="color:green">(2.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">158.5µs   <span style="color:green">(1.9x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*46.0µs  <span style="color:green">(6.6x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.6µs  <span style="color:green">(26.2x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*303.9µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(1, 1048576)</span>*³*  </td><td class="markdownTableBodyRight">12.3µs <span style="color:green">(16.5x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.6µs  <span style="color:green">(44.2x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">4.2µs  <span style="color:green">(48.4x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*17.3µs <span style="color:green">(11.8x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*10.5µs  <span style="color:green">(19.4x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*203.3µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(2, 1048576)</span>*²˒³*  </td><td class="markdownTableBodyRight">24.7µs <span style="color:green">(12.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">14.9µs  <span style="color:green">(20.0x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">10.4µs  <span style="color:green">(28.7x)</span>&#160;🟢  </td><td class="markdownTableBodyRight">*27.7µs <span style="color:green">(10.8x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*11.3µs  <span style="color:green">(26.4x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*298.4µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(4, 1048576)</span>*²˒³*  </td><td class="markdownTableBodyRight">70.8µs <span style="color:green">(12.4x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">77.5µs  <span style="color:green">(11.3x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">72.5µs  <span style="color:green">(12.1x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*199.5µs  <span style="color:green">(4.4x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*12.5µs  <span style="color:green">(70.2x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*877.7µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">FixedSize(8, 1048576)</span>*²˒³*  </td><td class="markdownTableBodyRight">152.0µs <span style="color:green">(14.5x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">155.2µs  <span style="color:green">(14.2x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">160.9µs  <span style="color:green">(13.7x)</span>&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*1010.8µs  <span style="color:green">(2.2x)</span>*&#160;&#160;&#160;&#160;&#160;&#160;  </td><td class="markdownTableBodyRight">*12.4µs <span style="color:green">(177.2x)</span>*&#160;🟢  </td><td class="markdownTableBodyRight">*2197.7µs <span style="color:grey">(1.0x)</span>*&#160;🟠  </td></tr>
+</table>
+<p><em>²</em> Benchmark run on parallel job workers - results may vary<br  />
+ <em>³</em> FixedSize(workerThreads, allocSize)<br  />
+ </p>
+</blockquote>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a href="dir_7fdff995cf1015167fb26c7d7cfc56bd.html">com.unity.collections@56bff8827a7e</a></li><li class="navelem"><a href="dir_c7cafb03425dcef35f960396135bcdd7.html">Unity.Collections.PerformanceTests</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

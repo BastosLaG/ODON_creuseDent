@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: xr-hand-visuals</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8hands_0d9174aa07765b_2_documentation_0i_2hand-data_2xr-hand-visuals.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">xr-hand-visuals </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md7727"></a>
+autotoc_md7727</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7728"></a>
+uid: xrhands-visuals</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7729"></a>
+XR Hand Skeleton Driver</h1>
+<p>The <a href="xref:UnityEngine.XR.Hands.XRHandSkeletonDriver">XRHandSkeletonDriver</a> component manages the Transform components of each joint in the hand skeleton. The component subscribes to events from a <a href="xref:UnityEngine.XR.Hands.XRHandTrackingEvents">XRHandTrackingEvents</a> component and updates the joint transforms when the joints and root pose are updated.</p>
+<p>To set up the joints for a standard hand skeleton, you can assign the Root Transform and then select the <b>Find Joints</b> button in the Inspector window to automatically find the joints in the hierarchy. The Find Joints button will use the name of the child GameObjects of the Root Transform and match the joint name with the end of the GameObject name</p>
+<p><img src="../images/xrhand-skeleton-joint-hierarchy.png" alt="Hand skeleton joint hierarchy" class="inline"/><br  />
+<em>The standard hierarchy of named joints in a right hand skeleton.</em></p>
+<p>The skeleton driver will work for any hierarchy of joints that matches the following structure:</p><ul>
+<li>The top joint is the <span class="tt">Wrist</span></li>
+<li>The direct child GameObjects of the <span class="tt">Wrist</span> contains the <span class="tt">Palm</span>, and the first joint of all fingers.</li>
+<li>The <span class="tt">Index</span>, <span class="tt">Middle</span>, <span class="tt">Ring</span>, and <span class="tt">Little</span> fingers each have a chain of successive joints for <span class="tt">Metacarpal</span>, <span class="tt">Proximal</span>, <span class="tt">Intermediate</span>, <span class="tt">Distal</span>, and <span class="tt">Tip</span>.</li>
+<li>The <span class="tt">Thumb</span> finger has the same joints as the other fingers except it has no <span class="tt">Intermediate</span> joint.</li>
+</ul>
+<p>The parent structure is important to the skeleton driver because the pose for each joint is relative to the parent joint.</p>
+<p>Not every joint is required to be included, but if a joint is included, it should also include all its parents. For example, you can ignore an entire finger by not including the <span class="tt">Metacarpal</span> joint and its child GameObjects, but if you include the <span class="tt">Proximal</span> joint, you must also include the <span class="tt">Metacarpal</span> joint as its parent.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7730"></a>
+XR Hand Mesh Controller</h1>
+<p>The <a href="xref:UnityEngine.XR.Hands.XRHandMeshController">XRHandMeshController</a> component subscribes to events from a <a href="xref:UnityEngine.XR.Hands.XRHandTrackingEvents">XRHandTrackingEvents</a> component and can enable and disable a Mesh Renderer component for the hand when tracking is acquired and lost. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

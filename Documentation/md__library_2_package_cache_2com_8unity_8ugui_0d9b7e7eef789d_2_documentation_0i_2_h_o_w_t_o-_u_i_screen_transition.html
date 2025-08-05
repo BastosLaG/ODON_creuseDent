@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Creating Screen Transitions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Creating Screen Transitions </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6163"></a></p>
+<p>The need to transition between multiple UI screens is fairly common. In this page we will explore a simple way to create and manage those transitions using animation and State Machines to drive and control each screen.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6164"></a>
+Overview</h1>
+<p>The high-level idea is that each of our screens will have an <a href="https://docs.unity3d.com/Manual/class-AnimatorController.html">Animator Controller</a> with two <a href="https://docs.unity3d.com/Manual/class-State.html">states</a> (Open and Closed) and a boolean <a href="https://docs.unity3d.com/Manual/AnimationParameters.html">Parameter</a> (Open). To transition between screens you will only need to close the currently open Screen and open the desired one. To make this process easier we will create a small Class ScreenManager that will keep track and take care of closing any already open Screen for us. The button that triggers the transition will only have to ask the ScreenManager to open the desired screen.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6165"></a>
+Thinking about Navigation</h2>
+<p>If you plan to support controller/keyboard navigation of UI elements, then it's important to have a few things in mind. It's important to avoid having Selectable elements outside the screen since that would enable players to select offscreen elements, we can do that by deactivating any off-screen hierarchy. We also need to make sure when a new screen is shown we set a element from it as selected, otherwise the player would not be able to navigate to the new screen. We will take care of all that in the ScreenManager class below.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6166"></a>
+Setting up the Animator Controller</h1>
+<p>Let's take a look at the most common and minimal setup for the Animation Controller to do a Screen transition. The controller will need a boolean parameter (Open) and two states (Open and Closed), each state should have an animation with only one keyframe, this way we let the State Machine do the transition blending for us.</p>
+<p><img src="images/UI_ScreenTransitionAnimatorOpen.png" alt="The Open state and animation" class="inline"/></p>
+<p><img src="images/UI_ScreenTransitionAnimatorClosed.png" alt="The Closed state and animation" class="inline"/></p>
+<p>Now we need to create the <a href="https://docs.unity3d.com/Manual/class-Transition.html">transition</a> between both states, let's start with the transition from Open to Closed and let's set the condition properly, we want to go from Open to Closed when the parameter Open is set to false. Now we create the transition from Closed to Open and set the condition to go from Closed to Open when the parameter Open is true.</p>
+<p><img src="images/UI_ScreenTransitionAnimatorTransitionToOpen.png" alt="The Transition from Closed to Open" class="inline"/></p>
+<p><img src="images/UI_ScreenTransitionAnimatorTransitionToClosed.png" alt="The Transition from Open to Closed" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6167"></a>
+Managing the screens</h1>
+<p>With all the above set up, the only thing missing is for us to set the parameter Open to true on the screens Animator we want to transition to and Open to false on the currently open screens Animator. To do that, we will create a small script:</p>
+<div class="fragment"><div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.UI;</div>
+<div class="line">using UnityEngine.EventSystems;</div>
+<div class="line">using System.Collections;</div>
+<div class="line">using System.Collections.Generic;</div>
+<div class="line"> </div>
+<div class="line">public class ScreenManager : MonoBehaviour {</div>
+<div class="line"> </div>
+<div class="line">    //Screen to open automatically at the start of the Scene</div>
+<div class="line">    public Animator initiallyOpen;</div>
+<div class="line"> </div>
+<div class="line">    //Currently Open Screen</div>
+<div class="line">    private Animator m_Open;</div>
+<div class="line"> </div>
+<div class="line">    //Hash of the parameter we use to control the transitions.</div>
+<div class="line">    private int m_OpenParameterId;</div>
+<div class="line"> </div>
+<div class="line">    //The GameObject Selected before we opened the current Screen.</div>
+<div class="line">    //Used when closing a Screen, so we can go back to the button that opened it.</div>
+<div class="line">    private GameObject m_PreviouslySelected;</div>
+<div class="line"> </div>
+<div class="line">    //Animator State and Transition names we need to check against.</div>
+<div class="line">    const string k_OpenTransitionName = &quot;Open&quot;;</div>
+<div class="line">    const string k_ClosedStateName = &quot;Closed&quot;;</div>
+<div class="line"> </div>
+<div class="line">    public void OnEnable()</div>
+<div class="line">    {</div>
+<div class="line">        //We cache the Hash to the &quot;Open&quot; Parameter, so we can feed to Animator.SetBool.</div>
+<div class="line">        m_OpenParameterId = Animator.StringToHash (k_OpenTransitionName);</div>
+<div class="line"> </div>
+<div class="line">        //If set, open the initial Screen now.</div>
+<div class="line">        if (initiallyOpen == null)</div>
+<div class="line">            return;</div>
+<div class="line">        OpenPanel(initiallyOpen);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    //Closes the currently open panel and opens the provided one.</div>
+<div class="line">    //It also takes care of handling the navigation, setting the new Selected element.</div>
+<div class="line">    public void OpenPanel (Animator anim)</div>
+<div class="line">    {</div>
+<div class="line">        if (m_Open == anim)</div>
+<div class="line">            return;</div>
+<div class="line"> </div>
+<div class="line">        //Activate the new Screen hierarchy so we can animate it.</div>
+<div class="line">        anim.gameObject.SetActive(true);</div>
+<div class="line">        //Save the currently selected button that was used to open this Screen. (CloseCurrent will modify it)</div>
+<div class="line">        var newPreviouslySelected = EventSystem.current.currentSelectedGameObject;</div>
+<div class="line">        //Move the Screen to front.</div>
+<div class="line">        anim.transform.SetAsLastSibling();</div>
+<div class="line"> </div>
+<div class="line">        CloseCurrent();</div>
+<div class="line"> </div>
+<div class="line">        m_PreviouslySelected = newPreviouslySelected;</div>
+<div class="line"> </div>
+<div class="line">        //Set the new Screen as then open one.</div>
+<div class="line">        m_Open = anim;</div>
+<div class="line">        //Start the open animation</div>
+<div class="line">        m_Open.SetBool(m_OpenParameterId, true);</div>
+<div class="line"> </div>
+<div class="line">        //Set an element in the new screen as the new Selected one.</div>
+<div class="line">        GameObject go = FindFirstEnabledSelectable(anim.gameObject);</div>
+<div class="line">        SetSelected(go);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    //Finds the first Selectable element in the providade hierarchy.</div>
+<div class="line">    static GameObject FindFirstEnabledSelectable (GameObject gameObject)</div>
+<div class="line">    {</div>
+<div class="line">        GameObject go = null;</div>
+<div class="line">        var selectables = gameObject.GetComponentsInChildren&lt;Selectable&gt; (true);</div>
+<div class="line">        foreach (var selectable in selectables) {</div>
+<div class="line">            if (selectable.IsActive () &amp;&amp; selectable.IsInteractable ()) {</div>
+<div class="line">                go = selectable.gameObject;</div>
+<div class="line">                break;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        return go;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    //Closes the currently open Screen</div>
+<div class="line">    //It also takes care of navigation.</div>
+<div class="line">    //Reverting selection to the Selectable used before opening the current screen.</div>
+<div class="line">    public void CloseCurrent()</div>
+<div class="line">    {</div>
+<div class="line">        if (m_Open == null)</div>
+<div class="line">            return;</div>
+<div class="line"> </div>
+<div class="line">        //Start the close animation.</div>
+<div class="line">        m_Open.SetBool(m_OpenParameterId, false);</div>
+<div class="line"> </div>
+<div class="line">        //Reverting selection to the Selectable used before opening the current screen.</div>
+<div class="line">        SetSelected(m_PreviouslySelected);</div>
+<div class="line">        //Start Coroutine to disable the hierarchy when closing animation finishes.</div>
+<div class="line">        StartCoroutine(DisablePanelDeleyed(m_Open));</div>
+<div class="line">        //No screen open.</div>
+<div class="line">        m_Open = null;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    //Coroutine that will detect when the Closing animation is finished and it will deactivate the</div>
+<div class="line">    //hierarchy.</div>
+<div class="line">    IEnumerator DisablePanelDeleyed(Animator anim)</div>
+<div class="line">    {</div>
+<div class="line">        bool closedStateReached = false;</div>
+<div class="line">        bool wantToClose = true;</div>
+<div class="line">        while (!closedStateReached &amp;&amp; wantToClose)</div>
+<div class="line">        {</div>
+<div class="line">            if (!anim.IsInTransition(0))</div>
+<div class="line">                closedStateReached = anim.GetCurrentAnimatorStateInfo(0).IsName(k_ClosedStateName);</div>
+<div class="line"> </div>
+<div class="line">            wantToClose = !anim.GetBool(m_OpenParameterId);</div>
+<div class="line"> </div>
+<div class="line">            yield return new WaitForEndOfFrame();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        if (wantToClose)</div>
+<div class="line">            anim.gameObject.SetActive(false);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    //Make the provided GameObject selected</div>
+<div class="line">    //When using the mouse/touch we actually want to set it as the previously selected and</div>
+<div class="line">    //set nothing as selected for now.</div>
+<div class="line">    private void SetSelected(GameObject go)</div>
+<div class="line">    {</div>
+<div class="line">        //Select the GameObject.</div>
+<div class="line">        EventSystem.current.SetSelectedGameObject(go);</div>
+<div class="line"> </div>
+<div class="line">        //If we are using the keyboard right now, that&#39;s all we need to do.</div>
+<div class="line">        var standaloneInputModule = EventSystem.current.currentInputModule as StandaloneInputModule;</div>
+<div class="line">        if (standaloneInputModule != null)</div>
+<div class="line">            return;</div>
+<div class="line"> </div>
+<div class="line">        //Since we are using a pointer device, we don&#39;t want anything selected.</div>
+<div class="line">        //But if the user switches to the keyboard, we want to start the navigation from the provided game object.</div>
+<div class="line">        //So here we set the current Selected to null, so the provided gameObject becomes the Last Selected in the EventSystem.</div>
+<div class="line">        EventSystem.current.SetSelectedGameObject(null);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Let's hook up this script, we do this by creating a new GameObject, we can rename it "ScreenManager" for instance, and add the component above to it. You can assign an initial screen to it, this screen will be open at the start of your scene.</p>
+<p>Now for the final part, let's make the <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_button.html">UI buttons</a> work. Select the button that should trigger the screen transition and add a new action under the <b>On Click ()</b> list in the Inspector. Drag the ScreenManager GameObject we just created to the ObjectField, on the dropdown select <b>ScreenManager-&gt;OpenPanel (Animator)</b> and drag and drop the panel you want to open when the user clicks the button to the las ObjectField.</p>
+<p><img src="images/UI_ScreenTransitionButtonInspector.png" alt="Button Inspector" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6168"></a>
+Notes</h1>
+<p>This technique only requires each screen to have an AnimatorController with an Open parameter and a Closed state to work - it doesn't matter how your screen or State Machine are constructed. This technique also works well with nested screens, meaning you only need one ScreenManager for each nested level.</p>
+<p>The State Machine we set up above has the default state of Closed, so all of the screens that use this controller start as closed. The ScreenManager provides an initiallyOpen property so you can specify which screen is shown first. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

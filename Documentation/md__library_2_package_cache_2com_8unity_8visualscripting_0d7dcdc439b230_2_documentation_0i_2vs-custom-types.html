@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Custom types</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-custom-types.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Custom types </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7120"></a></p>
+<p>Use a C# script file to create your own object types in <a class="el" href="namespace_unity.html">Unity</a>. These types are called classes.</p>
+<p>Classes are a blueprint for objects in your code. They decide what kind of data an object holds and what your code can do with that object. A class can hold multiple variables with different data types in a single object.</p>
+<p>Create a custom class to use it as a type for variables and other objects in a Visual Scripting Script graph. For more information on how to add and use your own custom types in Visual Scripting, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-using-custom-types.html">Use a custom type</a>. The code you include in a C# script can also create new nodes to manipulate the data in your class.</p>
+<p>For example, you might write code to keep track of the characteristics of different player characters in your application. You can create a class, <span class="tt">Player</span>, and have different variables in that class for name, character type, favorite color, or player level:</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_1_1_visual_scripting.html">Unity.VisualScripting</a>;</div>
+<div class="line"> </div>
+<div class="line">[Serializable, Inspectable]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>PlayerCharacter</div>
+<div class="line">{</div>
+<div class="line">    [Inspectable]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">string</span> name; </div>
+<div class="line">    [Inspectable]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">string</span> type;</div>
+<div class="line">    [Inspectable]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">string</span> color;</div>
+<div class="line">    [Inspectable]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> level;</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_1_1_visual_scripting_html"><div class="ttname"><a href="namespace_unity_1_1_visual_scripting.html">Unity.VisualScripting</a></div><div class="ttdef"><b>Definition</b> EditorPreferencesProvider.cs:4</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --> <dl class="section remark"><dt>Remarques</dt><dd>The variables in the example script above use the <span class="tt">[Inspectable]</span> attribute so they can display in <a class="el" href="namespace_unity.html">Unity</a>'s <a href="https://docs.unity3d.com/Manual/UsingTheInspector.html">Inspector window</a> and the Visual Scripting <a href="vs-interface-overview.md#the-graph-inspector">Graph Inspector</a>. Without the attribute, you can't assign a value to any variables that use the <span class="tt">PlayerCharacter</span> class in a Script Graph. For more information about the <span class="tt">[Inspectable]</span> attribute, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-using-custom-types.html">Use a custom type</a>.</dd></dl>
+<p>These values can be different across different instances of <span class="tt">Player</span> objects in your code. <span class="tt">Player1</span> can be Erin, a bard, who loves green and is level 5, and <span class="tt">Player2</span> can be Sam, a mage, who loves black and is level 15.</p>
+<p><img src="images/vs-custom-class-example-players.png" alt="An image of the Graph window with the Blackboard open. The Blackboard displays two variables created with a custom class to represent two different characters." class="inline"/></p>
+<p>If you tried to represent the same data with basic variables, you must create a lot of nodes, as in the following example. With a custom class, you can create a single node to represent a player character's information, instead of four separate nodes.</p>
+<p><img src="images/vs-custom-class-example.png" alt="An image of the Graph Editor. A Get Variable node set to get the value of Player1 is compared to a group of four nodes that represent the same information captured in the single variable node: Player1Name, Player1Color, Player1Type, and Player1Level. A second Get Variable node set to get the value of Player2 is compared to another group of four nodes. " class="inline"/> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

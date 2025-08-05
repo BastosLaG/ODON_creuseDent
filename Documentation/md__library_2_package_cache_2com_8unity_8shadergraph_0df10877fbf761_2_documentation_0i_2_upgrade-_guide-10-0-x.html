@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Upgrade to version 10.0.x of Shader Graph</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_upgrade-_guide-10-0-x.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Upgrade to version 10.0.x of Shader Graph </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4836"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4837"></a>
+Renamed Vector 1 property and Float precision</h1>
+<p>Shader Graph has renamed the <b>Vector 1</b> property as <b>Float</b> in both the Vector 1 node and the exposed parameter list. The <b>Float</b> precision was also renamed as <b>Single</b>. Behavior is exactly the same, and only the names have changed.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4838"></a>
+Renamed Sample Cubemap Node</h1>
+<p>Shader Graph has renamed the previous <a class="el" href="class_sample.html">Sample</a> Cubemap Node to <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_sample-_reflected-_cubemap-_node.html">Sample Reflected Cubemap Node</a>, and has added a new <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_sample-_cubemap-_node.html">Sample Cubemap Node</a>, which uses world space direction.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4839"></a>
+Master Stack graph output</h1>
+<p>Shader Graph has removed the Master Nodes and introduced a more flexible <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_master-_stack.html">Master Stack</a> solution for defining graph output in 10.0. You can still open all graphs created in previous versions, because Shader Graph automatically upgrades them. This page describes the expected behavior and explains when you might need to perform manual upgrade steps. <a class="anchor" id="AutomaticUpgrade"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4840"></a>
+Automatic upgrade from Master Nodes</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4841"></a>
+Upgrade one Master Node to the Master Stack</h2>
+<p>If your graph only has one Master Node, Shader Graph automatically upgrades all of the data from that Master Node to a Master Stack output, as described in this section.</p>
+<p>Shader Graph automatically adds the correct <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_graph-_target.html">Targets</a> to the <b>Graph Settings</b> tab of the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_internal-_inspector.html"><b>Graph Inspector</b></a>. It also copies all settings from the Master Node settings menu (gear icon) that describe surface options from the Master Node to the <b>Target Settings</b>.</p>
+<p>Shader Graph then adds a <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_block-_node.html">Block</a> node for each port on the Master Node to the Master Stack. It connects any nodes that you connected to the Master Node ports to the corresponding Block node. Also, Shader Graph copies any values that you entered into the default value inputs of the Master Node ports to the corresponding Block node.</p>
+<p>After this upgrade process, the final shader is identical in appearance.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4842"></a>
+Upgrade multiple Master Nodes to the Master Stack</h2>
+<p>If your graph has more than one Master Node, Shader Graph applies the above process for automatically upgrading one Master Node to the currently selected Active Master Node.</p>
+<p>When you upgrade to the Master Stack format, Shader Graph removes any inactive Master Nodes from your graph, and you might lose this data. If you plan to upgrade a graph with multiple Master Nodes, it's best practice to keep a record of the ports, connected nodes, and any non-default settings in the settings menu (gear icon) of inactive Master Nodes.</p>
+<p>After the upgrade, you can add any required Block nodes that went missing, and reconnect the nodes to the Master Stack. You also need to go to the <b>Graph Inspector</b> &gt; <b>Graph Settings</b> tab &gt; settings menu (gear icon), and manually enter the settings for inactive Master Nodes in the corresponding Target Setting.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4843"></a>
+Upgrade cross-pipeline Master Nodes to the Master Stack</h2>
+<p>If your graph contains PBR or Unlit Master Nodes that are compatible with both the <a href="https://docs.unity3d.com/Manual/urp/urp-introduction.html">Universal Render Pipeline</a> (URP) and the <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest">High Definition Render Pipeline</a> (HDRP), Shader Graph automatically upgrades them to the Master Stack based on the render pipeline currently available in your project. With Master Stacks, when you switch from one render pipeline to another, you must reimport your Shader Graph assets to update the Material Inspector for any Materials in your project.</p>
+<p>In URP, you can now find all PBR Master Node settings in the URP Lit Target. The Unlit Master Node settings are in the URP Unlit Target. These settings are the same, and the final shader should appear the same as before the upgrade.</p>
+<p>In HDRP, settings from the PBR and Unlit Master Nodes are not the same as the HDRP Lit and Unlit Targets. Thus, there might be unexpected behavior when you upgrade PBR or Unlit Master Nodes to HDRP Lit and Unlit Master Stacks. The final shader might not appear the same as before the upgrade. When this happens, you can use the <b>Bug Reporter</b> to submit your upgrade issue, but keep in mind that some upgrade paths don't have immediate automated solutions and will require manual adjustments.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4844"></a>
+"View Generated Shader" has moved</h2>
+<p>Previously, you could right-click the Master Node to bring up a context menu, and select <b>View Generated Shader</b> to preview the generated shader. In 10.0, you must now use the <a class="el" href="namespace_unity.html">Unity</a> Inspector, and click the <b>View Generated Shader</b> button on the Shader Graph asset.</p>
+<p><img src="images/GeneratedShaderButton.png" alt="image" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4845"></a>
+Settings in Graph Inspector</h1>
+<p>Shader Graph introduced an internal <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_internal-_inspector.html">Graph Inspector</a> in version 10.0. The Graph Inspector is a floating window that displays settings related to objects you select in the graph.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4846"></a>
+Graph settings</h2>
+<p>Graph-wide settings are now available only in the Graph Inspector's <b>Graph Settings</b> tab. Most notably, you can now go to the <b>Graph Settings</b> tab to access the <b>Precision</b> toggle, which was previously located on the Shader Graph Toolbar. There were no changes to data, and things like the <b>Precision</b> setting of the graph remain the same.</p>
+<p>In the <b>Graph Settings</b> tab, you can also find settings that describe surface options for each Target, which were previously located in the Master Node cog menu. For more information about how Shader Graph automatically upgrades this data, see <a class="el" href="#AutomaticUpgrade">Automatic upgrade from Master Nodes</a> above.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4847"></a>
+Property settings</h2>
+<p>Property settings that were previously in Blackboard foldouts are now available in the Graph Inspector. You can now select multiple properties from the Blackboard and edit them all at the same time. There were no changes to data, and all settings you made on properties of the graph remain the same.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4848"></a>
+Per-Node settings</h2>
+<p>All per-node settings that you previously managed by opening a settings (gear icon) sub-menu are now accessible through the Graph Inspector. There were no changes to data, and all settings you previously set on nodes, such as precision settings and Custom Function Node settings, remain the same.</p>
+<p>Any settings on the Master Node that define surface options are now located in the Graph Inspector’s Graph Settings tab. For more information, see <a class="el" href="#AutomaticUpgrade">Automatic upgrade from Master Nodes</a> above.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4849"></a>
+Custom Function Nodes and Shader Graph Preview</h1>
+<p>To avoid errors in the preview shader compilation for Custom Function Nodes, you might need to use keywords for the in-graph preview rendering.</p>
+<p>If you have any Custom Function Nodes with custom Shader Graph Preview code that uses <span class="tt">#if SHADERGAPH_PREVIEW</span>, you need to upgrade it to an <span class="tt">#ifdef</span> declaration, as follows.</p>
+<div class="fragment"><div class="line">#ifdef SHADERGAPH_PREVIEW</div>
+<div class="line">    Out = 1;</div>
+<div class="line">#else</div>
+<div class="line">    Out = MainLight;</div>
+<div class="line">#endif</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4850"></a>
+Deprecated node and property behaviors</h1>
+<p>Previously, some nodes and properties such as the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_color-_node.html">Color Node</a> didn't behave as intended, but they now work correctly in Shader Graph version 10.0. Older graphs that rely on the incorrect behavior still function the same as before, and you can choose to individually upgrade any deprecated nodes and properties. If you don't enable <b>Allow Deprecated Behaviors</b> in <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-_graph-_preferences.html">Shader Graph Preferences</a>, newly-created nodes and properties use the latest version node and property behaviors.</p>
+<p>For deprecated nodes, <b>(Deprecated)</b> appears after the node title in the main graph view.</p>
+<p><img src="images/DeprecatedColorNode.png" alt="image" class="inline"/></p>
+<p>For deprecated properties, <b>(Deprecated)</b> appears after the property name in the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_blackboard.html">Blackboard</a>.</p>
+<p><img src="images/DeprecatedColorProperty.png" alt="image" class="inline"/></p>
+<p>When you select a deprecated node or property, a warning appears in the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_internal-_inspector.html">Internal Inspector</a> along with an <b>Update</b> button that allows you to upgrade the selection. You can use undo/redo to reverse this upgrade process.</p>
+<p><img src="images/DeprecatedWarning.png" alt="image" class="inline"/></p>
+<p>If you enable <b>Allow Deprecated Behaviors</b> in <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-_graph-_preferences.html">Shader Graph Preferences</a>, Shader Graph displays the version of the deprecated node or property, and doesn't display any warnings even though the <b>Update</b> button appears. You can also use the Blackboard or Searcher to create deprecated nodes and properties. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

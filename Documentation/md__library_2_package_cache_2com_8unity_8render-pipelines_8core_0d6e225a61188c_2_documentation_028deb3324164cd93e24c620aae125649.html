@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: srp-creating-render-pipeline-asset-and-render-pipeline-instance</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_028deb3324164cd93e24c620aae125649.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">srp-creating-render-pipeline-asset-and-render-pipeline-instance </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2875"></a>
+autotoc_md2875</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2876"></a>
+uid: um-srp-creating-render-pipeline-asset-and-render-pipeline-instance</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2877"></a>
+Create a Render Pipeline Asset and Render Pipeline Instance in a custom render pipeline</h1>
+<p>If you are creating your own render pipeline based on the Scriptable Render Pipeline (SRP), your Project must contain:</p>
+<ul>
+<li>A script that inherits from <a href="xref:UnityEngine.Rendering.RenderPipelineAsset">RenderPipelineAsset</a> and overrides its <span class="tt">CreatePipeline()</span> method. This script defines your Render Pipeline Asset.</li>
+<li>A script that inherits from <a href="xref:UnityEngine.Rendering.RenderPipeline">RenderPipeline</a>, and overrides its <span class="tt">Render()</span> method. This script defines your Render Pipeline Instance, and is where you write your custom rendering code.</li>
+<li>A Render Pipeline Asset that you have created from your <a href="xref:UnityEngine.Rendering.RenderPipelineAsset">RenderPipelineAsset</a> script. This asset acts as a factory class for your Render Pipeline Instance.</li>
+</ul>
+<p>Because these elements are so closely related, you should create them at the same time.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2878"></a>
+Creating a basic Render Pipeline Asset and Render Pipeline Instance</h2>
+<p>The following example shows how to create a script for a basic custom Render Pipeline Asset that instantiates the Render Pipeline Instance, a script that defines the Render Pipeline Instance, and the Render Pipeline Asset itself.</p>
+<ol type="1">
+<li>Create a C# script called <em>ExampleRenderPipelineAsset.cs</em>.</li>
+<li><p class="startli">Copy and paste the following code into the new script:</p>
+<div class="fragment"><div class="line">-csharp</div>
+<div class="line">   using UnityEngine;</div>
+<div class="line">   using UnityEngine.Rendering;</div>
+<div class="line">   </div>
+<div class="line">   // The CreateAssetMenu attribute lets you create instances of this class in the Unity Editor.</div>
+<div class="line">   [CreateAssetMenu(menuName = &quot;Rendering/ExampleRenderPipelineAsset&quot;)]</div>
+<div class="line">   public class ExampleRenderPipelineAsset : RenderPipelineAsset</div>
+<div class="line">   {</div>
+<div class="line">       // Unity calls this method before rendering the first frame.</div>
+<div class="line">       // If a setting on the Render Pipeline Asset changes, Unity destroys the current Render Pipeline Instance and calls this method again before rendering the next frame.</div>
+<div class="line">       protected override RenderPipeline CreatePipeline() {</div>
+<div class="line">           // Instantiate the Render Pipeline that this custom SRP uses for rendering.</div>
+<div class="line">           return new ExampleRenderPipelineInstance();</div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+</div><!-- fragment --></li>
+<li>Create a C# script called <em>ExampleRenderPipelineInstance.cs</em>.</li>
+<li>Copy and paste the following code into the new script:</li>
+</ol>
+<pre class="fragment">```lang-csharp
+using UnityEngine;
+using UnityEngine.Rendering;
+
+public class ExampleRenderPipelineInstance : RenderPipeline
+{
+    public ExampleRenderPipelineInstance() {
+    }
+
+    protected override void Render (ScriptableRenderContext context, Camera[] cameras) {
+        // This is where you can write custom rendering code. Customize this method to customize your SRP.
+    }
+}
+```
+</pre><ol type="1">
+<li>In the Project view, either click the add (+) button, or open the context menu and navigate to <b>Create</b>, and then choose <b>Rendering</b> &gt; <b>Example Render Pipeline Asset</b>. <a class="el" href="namespace_unity.html">Unity</a> creates a new Render Pipeline Asset in the Project view.</li>
+</ol>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2879"></a>
+Creating a configurable Render Pipeline Asset and Render Pipeline Instance</h2>
+<p>By default, a Render Pipeline Asset stores information about which Render Pipeline Instance to use for rendering, and the default Materials and Shaders to use in the Editor. In your <span class="tt">RenderPipelineAsset</span> script, you can extend your Render Pipeline Asset so that it stores additional data, and you can have multiple different Render Pipeline Assets with different configurations in your Project. For example, you might use a Render Pipeline Asset to hold configuration data for each different tier of hardware. The High Definition Render Pipeline (HDRP) and the Universal Render Pipeline (URP) include examples of this.</p>
+<p>The following example shows how to create a <span class="tt">RenderPipelineAsset</span> script that defines a Render Pipeline Asset with public data that you can set for each instance using the Inspector, and a Render Pipeline Instance that receives a Render Pipeline Asset in its constructor and uses data from that Render Pipeline Asset.</p>
+<ol type="1">
+<li>Create a C# script called <em>ExampleRenderPipelineAsset.cs</em>.</li>
+<li><p class="startli">Copy and paste the following code into the new script:</p>
+<div class="fragment"><div class="line">-csharp</div>
+<div class="line">   using UnityEngine;</div>
+<div class="line">   using UnityEngine.Rendering;</div>
+<div class="line">   </div>
+<div class="line">   // The CreateAssetMenu attribute lets you create instances of this class in the Unity Editor.</div>
+<div class="line">   [CreateAssetMenu(menuName = &quot;Rendering/ExampleRenderPipelineAsset&quot;)]</div>
+<div class="line">   public class ExampleRenderPipelineAsset : RenderPipelineAsset</div>
+<div class="line">   {</div>
+<div class="line">       // This data can be defined in the Inspector for each Render Pipeline Asset</div>
+<div class="line">       public Color exampleColor;</div>
+<div class="line">       public string exampleString;</div>
+<div class="line">   </div>
+<div class="line">           // Unity calls this method before rendering the first frame.</div>
+<div class="line">          // If a setting on the Render Pipeline Asset changes, Unity destroys the current Render Pipeline Instance and calls this method again before rendering the next frame.</div>
+<div class="line">       protected override RenderPipeline CreatePipeline() {</div>
+<div class="line">           // Instantiate the Render Pipeline that this custom SRP uses for rendering, and pass a reference to this Render Pipeline Asset.</div>
+<div class="line">           // The Render Pipeline Instance can then access the configuration data defined above.</div>
+<div class="line">           return new ExampleRenderPipelineInstance(this);</div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+</div><!-- fragment --></li>
+<li>Create a C# script called <em>ExampleRenderPipelineInstance.cs</em>.</li>
+<li><p class="startli">Copy and paste the following code into the new script:</p>
+<div class="fragment"><div class="line">-csharp</div>
+<div class="line">   using UnityEngine;</div>
+<div class="line">   using UnityEngine.Rendering;</div>
+<div class="line">   </div>
+<div class="line">   public class ExampleRenderPipelineInstance : RenderPipeline</div>
+<div class="line">   {</div>
+<div class="line">       // Use this variable to a reference to the Render Pipeline Asset that was passed to the constructor</div>
+<div class="line">       private ExampleRenderPipelineAsset renderPipelineAsset;</div>
+<div class="line">   </div>
+<div class="line">       // The constructor has an instance of the ExampleRenderPipelineAsset class as its parameter.</div>
+<div class="line">       public ExampleRenderPipelineInstance(ExampleRenderPipelineAsset asset) {</div>
+<div class="line">           renderPipelineAsset = asset;</div>
+<div class="line">       }</div>
+<div class="line">   </div>
+<div class="line">       protected override void Render(ScriptableRenderContext context, Camera[] cameras) {</div>
+<div class="line">           // This is an example of using the data from the Render Pipeline Asset.</div>
+<div class="line">           Debug.Log(renderPipelineAsset.exampleString);</div>
+<div class="line">           </div>
+<div class="line">           // This is where you can write custom rendering code. Customize this method to customize your SRP.</div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+</div><!-- fragment --></li>
+<li>In the Project view, either click the add (+) button, or open the context menu and navigate to <b>Create</b>, and then choose <b>Rendering</b> &gt; <b>Example Render Pipeline Asset</b>. <a class="el" href="namespace_unity.html">Unity</a> creates a new Render Pipeline Asset in the Project view. </li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

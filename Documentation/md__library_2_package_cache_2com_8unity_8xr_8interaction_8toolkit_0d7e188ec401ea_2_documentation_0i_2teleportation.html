@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: teleportation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2teleportation.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">teleportation </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8486"></a>
+autotoc_md8486</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8487"></a>
+uid: xri-teleportation</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8488"></a>
+Teleportation</h1>
+<p>The package provides a simple implementation of teleportation that also demonstrates how to implement complex locomotion scenarios using the <span class="tt">LocomotionProvider</span>.</p>
+<p>The Teleportation Provider inherits from the <span class="tt">LocomotionProvider</span> abstract class. The Teleportation Provider is responsible for moving the XR Origin to the desired location on the user's request.</p>
+<p>This implementation has several types of teleportation destinations: a Teleportation Area, a Teleportation Anchor, and a Teleportation Multi-Anchor Volume. These are discussed in more detail below. In short:</p>
+<ul>
+<li>Teleportation Areas allow the user to choose a location on a surface that they wish to teleport to.</li>
+<li>Teleportation Anchors teleport the user to a pre-determined specific position and/or rotation that they specify. Technically, it functions like the Teleportation Area but has the additional anchor functionality.</li>
+<li>Teleportation Multi-Anchor Volumes allow the user to target a volume of space to teleport to one of several anchor locations, based on custom filtering logic.</li>
+</ul>
+<p>All types of teleportation destinations are implemented on top of the XR Interaction system using the <span class="tt">BaseTeleportationInteractable</span> as the starting point for shared code.</p>
+<p>The XR Interaction system also provides various line rendering options. For more information, see documentation for the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-interactor-line-visual.html">XR Interactor Line Visual</a> and the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation06575da75c5fab59f5c1c45edb940f6f.html">XR Interactor Reticle Visual</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8489"></a>
+Teleportation Provider</h2>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2teleportation-provider.html">Teleportation Provider</a> component implements the <span class="tt">LocomotionProvider</span> abstract class. You can have as many instances of the Teleportation Provider component in your scene as you need. However, in most cases, a single instance is enough.</p>
+<p>The <b>Mediator</b> field should reference the Locomotion Mediator MonoBehaviour that you want the teleportation provider to interact with. If you don't specify a Locomotion Mediator, the provider attempts to find one in the current scene.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8490"></a>
+Teleportation Area Interactable</h2>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2teleportation-area.html">Teleportation Area</a> component is a specialization of the <span class="tt">BaseTeleportationInteractable</span> class. It allows the user to select any location on the surface as their destination.</p>
+<p>The Teleportation Area Interactable is intended to be used by the XR Ray Interactor or any of its specializations. It uses the intersection point of the ray and the area's collision volume to determine the location that the user wants to teleport to. It can also optionally match the user's rotation to the forward direction of the attach transform of the selecting Interactor. The Teleportation Area Interactable has a specialized implementation of the <span class="tt">GenerateTeleportRequest</span> method, which generates a teleportation request that is queued with the Teleportation Provider.</p>
+<p><b>Match Orientation</b> is used to specify how the rotation of the XR Origin changes when teleporting.</p><ul>
+<li>If your application does not rotate the XR Origin in any way, and you always want the XR Origin's up vector to match World Space's Up vector, use the <b>World Space Up</b> option.</li>
+<li>If you want the user to be able to stand on a ceiling, wall, or other tilted surface, and have them rotate to match so that the ceiling or wall feels like their new floor, select <b>Target Up</b> instead. The XR Origin will match the up vector of the Transform that the Teleportation Area component is attached to.</li>
+<li>If you want to point the user in a very specific direction when they arrive at a target, select <b>Target Up And Forward</b>. This will match the XR Origin's rotation to the exact rotation of the Transform that a Teleportation Area is attached to.</li>
+<li>If you do not want a teleport to change the rotation in any way, and you want the user to retain the same rotation before and after a teleport, select <b>None</b>. If your entire application is oriented at a 45 degree angle, for instance, you can rotate the XR Origin's root Transform and set all teleport targets to <span class="tt">MatchOrientation.None</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8491"></a>
+Teleportation Anchor Interactable</h2>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2teleportation-anchor.html">Teleportation Anchor</a> component is a specialization of the <span class="tt">BaseTeleportationInteractable</span> class that allows the user to teleport to an anchor location by selecting the anchor or an area around it.</p>
+<p>The Teleportation Anchor Interactable is intended to be used by the XR Ray Interactor or any of its specializations. It uses the intersection point of the ray and the area's collision volume to determine the location that the user wants to teleport to. It can also optionally match the user's rotation to the forward direction of the attach transform of the selecting Interactor. The Teleportation Anchor Interactable has a specialized implementation of the <span class="tt">GenerateTeleportRequest</span> method, which generates a teleportation request that is queued with the Teleportation Provider.</p>
+<p>The <b>Teleport Anchor Transform</b> field defines the transform that the XR Origin teleports to when the user teleports to this anchor. It uses both the position and the rotation of the anchor, depending on which <b>Match Orientation</b> is selected.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8492"></a>
+Teleportation Multi-Anchor Volume Interactable</h2>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentationf2730844a3e220393539a1de957d9613.html">Teleportation Multi-Anchor Volume</a> component is a specialization of the <span class="tt">BaseTeleportationInteractable</span> class that allows the user to teleport to one of several anchor locations by selecting the entire volume.</p>
+<p>The volume uses custom filtering logic to choose the best destination anchor. By default it uses whichever anchor is furthest from the user, which is useful for easily getting to either end of a climbable object like a ladder. To change the filtering logic, you can assign any instance of an implementation of the <span class="tt">ITeleportationVolumeAnchorFilter</span> interface to the volume.</p>
+<p>Note that Teleportation Multi-Anchor Volume uses pure transforms to define its anchors. It does not use Teleportation Anchor interactables at all. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

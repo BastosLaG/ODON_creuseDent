@@ -1,0 +1,6 @@
+var struct_unity_1_1_performance_testing_1_1_measurements_1_1_frames_measurement_1_1_scoped_frame_time_measurement =
+[
+    [ "ScopedFrameTimeMeasurement", "struct_unity_1_1_performance_testing_1_1_measurements_1_1_frames_measurement_1_1_scoped_frame_time_measurement.html#a4f8f6bf30b7e1f78f0173f780bcc2be5", null ],
+    [ "ScopedFrameTimeMeasurement", "struct_unity_1_1_performance_testing_1_1_measurements_1_1_frames_measurement_1_1_scoped_frame_time_measurement.html#ae78cd084899b353154bfba8b7452ab08", null ],
+    [ "Dispose", "struct_unity_1_1_performance_testing_1_1_measurements_1_1_frames_measurement_1_1_scoped_frame_time_measurement.html#a9f26ccf32242191cb4ed873fb02d43ed", null ]
+];

@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Testing</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_testing.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Testing </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2307"></a>
+autotoc_md2307</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2308"></a>
+uid: input-system-testing</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2309"></a>
+Input testing</h1>
+<p>The Input System has built-in support for writing automated input tests. You can drive input entirely from code, without any dependencies on platform backends and physical hardware devices. The automated input tests you write consider the generated input to be the same as input generated at runtime by actual platform code.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2310"></a>
+Setting up test assemblies</h2>
+<p>To set up a test assembly that uses the Input System's automation framework, follow these steps:</p>
+<ol type="1">
+<li>In the <span class="tt">Packages/manifest.json</span> file of your project, <span class="tt">com.unity.inputsystem</span> must be listed in <span class="tt">testables</span>. This is necessary for test code that comes with the package to be included with test builds of your project.<br  />
+<br  />
+You can, for example, add this after the <span class="tt">dependencies</span> property like so: <div class="fragment"><div class="line">},</div>
+<div class="line">&quot;testables&quot; : [</div>
+<div class="line">    &quot;com.unity.inputsystem&quot;</div>
+<div class="line">]</div>
+</div><!-- fragment --></li>
+<li>Create a new assembly definition (menu: <b>Create &gt; Assembly Definition</b>) or go to an assembly definition for a test assembly that you have already created.</li>
+<li>Add references to <span class="tt">nunit.framework.dll</span>, <span class="tt"><a class="el" href="namespace_unity_engine_1_1_test_runner.html">UnityEngine.TestRunner</a></span>, and <span class="tt"><a class="el" href="namespace_unity_editor_1_1_test_runner.html">UnityEditor.TestRunner</a></span> (as described in <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@1.0/manual/workflow-create-test-assembly.html">How to create a new test assembly</a>), as well as <span class="tt">Unity.InputSystem</span> and <span class="tt">Unity.InputSystem.TestFramework</span> for the Input System.</li>
+</ol>
+<p><img src="Images/TestAssemblySetup.png" alt="Test Assembly Setup" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2311"></a>
+Setting up test fixtures</h2>
+<p>Use <a href="../api/UnityEngine.InputSystem.InputTestFixture.html"><span class="tt">InputTestFixture</span></a> to create an isolated version of the Input System for tests. The fixture sets up a blank, default-initialized version of the Input System for each test, and restores the Input System to its original state after the test completes. The default-initialized version has all built-in registrations (such as layout and processors), but doesn't have any pre-existing Input Devices.</p>
+<p>&gt;<b>NOTE:</b> <a href="../api/UnityEngine.InputSystem.InputTestFixture.html"><span class="tt">InputTestFixture</span></a> will not have custom registrations performed from <a class="el" href="namespace_unity.html">Unity</a> startup code such as <span class="tt">[InitializeOnLoad]</span> or <span class="tt">[RuntimeInitializeOnLoadMethod]</span>. Layouts needed during tests have to be manually registered as part of the test setup.</p>
+<p>You can use the fixture as a base class for your own fixture:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyTests : InputTestFixture</div>
+<div class="line">{</div>
+<div class="line">    [Test]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> CanPressButtonOnGamepad()</div>
+<div class="line">    {</div>
+<div class="line">        var gamepad = InputSystem.AddDevice&lt;Gamepad&gt;();</div>
+<div class="line">        Press(gamepad.buttonSouth);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// If you need custom setup and tear-down logic, override the methods inherited</span></div>
+<div class="line">    <span class="comment">// from InputTestFixture.</span></div>
+<div class="line">    <span class="comment">// IMPORTANT: If you use NUnit&#39;s [Setup] and [TearDown] attributes on methods in your</span></div>
+<div class="line">    <span class="comment">//            test fixture, this will *override* the methods inherited from</span></div>
+<div class="line">    <span class="comment">//            InputTestFixture and thus cause them to not get executed. Either</span></div>
+<div class="line">    <span class="comment">//            override the methods as illustrated here or call the Setup() and</span></div>
+<div class="line">    <span class="comment">//            TearDown() methods of InputTestFixture explicitly.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Setup()</div>
+<div class="line">    {</div>
+<div class="line">        base.Setup();</div>
+<div class="line">        <span class="comment">// Add setup code here.</span></div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> TearDown()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Add teardown code here.</span></div>
+<div class="line">        base.TearDown();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>&gt;<b>IMPORTANT:</b> If you do this, do <b>not</b> add a <span class="tt">[SetUp]</span> or <span class="tt">[TearDown]</span> method. Doing so will cause the methods in <a href="../api/UnityEngine.InputSystem.InputTestFixture.html"><span class="tt">InputTestFixture</span></a> to not be called, thus leading to the test fixture not properly initializing or shutting down. Instead, override the <span class="tt">Setup</span> and/or <span class="tt">TearDown</span> method inherited from <span class="tt">InputTestFixture</span>.</p>
+<p>Alternatively, you can instantiate it in your fixture:</p>
+<div class="fragment"><div class="line">[TestFixture]</div>
+<div class="line"><span class="keyword">class </span>MyTestFixture</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">private</span> InputTestFixture input = <span class="keyword">new</span> InputTestFixture();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// NOTE: You have to manually call Setup() and TearDown() in this scenario.</span></div>
+<div class="line"> </div>
+<div class="line">    [SetUp]</div>
+<div class="line">    <span class="keywordtype">void</span> Setup()</div>
+<div class="line">    {</div>
+<div class="line">        input.Setup();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    [TearDown]</div>
+<div class="line">    <span class="keywordtype">void</span> TearDown()</div>
+<div class="line">    {</div>
+<div class="line">        input.TearDown();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This is especially useful when creating a larger setup for game testing using <span class="tt">PrebuiltSetup</span>.</p>
+<div class="fragment"><div class="line">[PrebuildSetup(<span class="stringliteral">&quot;GameTestPrebuildSetup&quot;</span>)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>GameTestFixture</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> Game game { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">    <span class="keyword">public</span> InputTestFixture input { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> Mouse mouse { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">    <span class="keyword">public</span> Keyboard keyboard { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">    <span class="keyword">public</span> Touchscreen touchscreen { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">    <span class="keyword">public</span> Gamepad gamepad { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//...</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>GameTestPrebuildSetup : IPrebuildSetup</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> Setup()</div>
+<div class="line">    {</div>
+<div class="line">        UnityEditor.EditorBuildSettings.scenes = <span class="keyword">new</span>[]</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keyword">new</span> UnityEditor.EditorBuildSettingsScene(<span class="stringliteral">&quot;Assets/Scenes/Main.unity&quot;</span>, <span class="keyword">true</span>)</div>
+<div class="line">        };</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --><p>Note that you do <b>not</b> generally need to clean up any input-related data you set up. This includes devices you add, layouts you registered, <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_settings"><span class="tt">InputSettings</span></a> you modify, and any other alteration to the state of <a href="../api/UnityEngine.InputSystem.InputSystem.html"><span class="tt">InputSystem</span></a>. <a href="../api/UnityEngine.InputSystem.InputTestFixture.html"><span class="tt">InputTestFixture</span></a> will automatically throw away the current state of the Input System and restore the state from before the test was started.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2312"></a>
+Writing tests</h2>
+<p>When writing a test, use <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_AddDevice__1_System_String_"><span class="tt">InputSystem.AddDevice&lt;T&gt;()</span></a> to add new Devices.</p>
+<div class="fragment"><div class="line">[Test]</div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> PlayerInput_CanInstantiatePlayer_WithSpecificControlScheme()</div>
+<div class="line">{</div>
+<div class="line">    InputSystem.AddDevice&lt;Gamepad&gt;();</div>
+<div class="line">    var keyboard = InputSystem.AddDevice&lt;Keyboard&gt;();</div>
+<div class="line">    var mouse = InputSystem.AddDevice&lt;Mouse&gt;();</div>
+<div class="line"> </div>
+<div class="line">    var prefab = <span class="keyword">new</span> GameObject();</div>
+<div class="line">    prefab.SetActive(<span class="keyword">false</span>);</div>
+<div class="line">    var prefabPlayerInput = prefab.AddComponent&lt;PlayerInput&gt;();</div>
+<div class="line">    prefabPlayerInput.actions = InputActionAsset.FromJson(kActions);</div>
+<div class="line"> </div>
+<div class="line">    var player = PlayerInput.Instantiate(prefab, controlScheme: <span class="stringliteral">&quot;Keyboard&amp;Mouse&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    Assert.That(player.devices, Is.EquivalentTo(<span class="keyword">new</span> InputDevice[] { keyboard, mouse }));</div>
+<div class="line">    Assert.That(player.controlScheme, Is.EqualTo(<span class="stringliteral">&quot;Keyboard&amp;Mouse&quot;</span>));</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>To feed input, the easiest way is to use the <a href="../api/UnityEngine.InputSystem.InputTestFixture.html#UnityEngine_InputSystem_InputTestFixture_Press_UnityEngine_InputSystem_Controls_ButtonControl_System_Double_System_Double_System_Boolean_"><span class="tt">Press(button)</span></a>, <a href="../api/UnityEngine.InputSystem.InputTestFixture.html#UnityEngine_InputSystem_InputTestFixture_Release_UnityEngine_InputSystem_Controls_ButtonControl_System_Double_System_Double_System_Boolean_"><span class="tt">Release(button)</span></a>, <a href="../api/UnityEngine.InputSystem.InputTestFixture.html#UnityEngine_InputSystem_InputTestFixture_PressAndRelease_UnityEngine_InputSystem_Controls_ButtonControl_System_Double_System_Double_System_Boolean_"><span class="tt">PressAndRelease(button)</span></a>, <span class="tt">Set(control,value)</span>, and <a href="../api/UnityEngine.InputSystem.InputTestFixture.html#UnityEngine_InputSystem_InputTestFixture_Trigger_UnityEngine_InputSystem_InputAction_"><span class="tt">Trigger(action)</span></a> helper methods provided by <a href="../api/UnityEngine.InputSystem.InputTestFixture.html"><span class="tt">InputTestFixture</span></a>.</p>
+<div class="fragment"><div class="line">[Test]</div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> Actions_WhenDisabled_CancelAllStartedInteractions()</div>
+<div class="line">{</div>
+<div class="line">    var gamepad = InputSystem.AddDevice&lt;Gamepad&gt;();</div>
+<div class="line"> </div>
+<div class="line">    var action1 = <span class="keyword">new</span> InputAction(<span class="stringliteral">&quot;action1&quot;</span>, binding: <span class="stringliteral">&quot;&lt;Gamepad&gt;/buttonSouth&quot;</span>, interactions: <span class="stringliteral">&quot;Hold&quot;</span>);</div>
+<div class="line">    var action2 = <span class="keyword">new</span> InputAction(<span class="stringliteral">&quot;action2&quot;</span>, binding: <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    action1.Enable();</div>
+<div class="line">    action2.Enable();</div>
+<div class="line"> </div>
+<div class="line">    Press(gamepad.buttonSouth);</div>
+<div class="line">    Set(gamepad.leftStick, <span class="keyword">new</span> Vector2(0.123f, 0.234f));</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">using</span> (var trace = <span class="keyword">new</span> InputActionTrace())</div>
+<div class="line">    {</div>
+<div class="line">        trace.SubscribeTo(action1);</div>
+<div class="line">        trace.SubscribeTo(action2);</div>
+<div class="line"> </div>
+<div class="line">        runtime.currentTime = 0.234f;</div>
+<div class="line">        runtime.advanceTimeEachDynamicUpdate = 0;</div>
+<div class="line"> </div>
+<div class="line">        action1.Disable();</div>
+<div class="line">        action2.Disable();</div>
+<div class="line"> </div>
+<div class="line">        var actions = trace.ToArray();</div>
+<div class="line"> </div>
+<div class="line">        Assert.That(actions.Length, Is.EqualTo(2));</div>
+<div class="line">        <span class="comment">//...</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Alternatively, you can use code to feed arbitrary input events into the system, and run arbitrary input updates:</p>
+<div class="fragment"><div class="line">[Test]</div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> PlayerInput_JoiningPlayerThroughButtonPress_WillFailIfDeviceIsNotUsableWithPlayerActions()</div>
+<div class="line">{</div>
+<div class="line">    var playerPrefab = <span class="keyword">new</span> GameObject();</div>
+<div class="line">    playerPrefab.SetActive(<span class="keyword">false</span>);</div>
+<div class="line">    playerPrefab.AddComponent&lt;PlayerInput&gt;();</div>
+<div class="line">    playerPrefab.GetComponent&lt;PlayerInput&gt;().actions = InputActionAsset.FromJson(kActions);</div>
+<div class="line"> </div>
+<div class="line">    var manager = <span class="keyword">new</span> GameObject();</div>
+<div class="line">    var listener = manager.AddComponent&lt;MessageListener&gt;();</div>
+<div class="line">    var managerComponent = manager.AddComponent&lt;PlayerInputManager&gt;();</div>
+<div class="line">    managerComponent.joinBehavior = PlayerJoinBehavior.JoinPlayersWhenButtonIsPressed;</div>
+<div class="line">    managerComponent.playerPrefab = playerPrefab;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create a Device based on the HID layout with a single button control.</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">string</span> kLayout = <span class="stringliteral">@&quot;</span></div>
+<div class="line"><span class="stringliteral">        {</span></div>
+<div class="line"><span class="stringliteral">            &quot;&quot;name&quot;&quot; : &quot;&quot;TestDevice&quot;&quot;,</span></div>
+<div class="line"><span class="stringliteral">            &quot;&quot;extend&quot;&quot; : &quot;&quot;HID&quot;&quot;,</span></div>
+<div class="line"><span class="stringliteral">            &quot;&quot;controls&quot;&quot; : [</span></div>
+<div class="line"><span class="stringliteral">                { &quot;&quot;name&quot;&quot; : &quot;&quot;button&quot;&quot;, &quot;&quot;layout&quot;&quot; : &quot;&quot;Button&quot;&quot; }</span></div>
+<div class="line"><span class="stringliteral">            ]</span></div>
+<div class="line"><span class="stringliteral">        }</span></div>
+<div class="line"><span class="stringliteral">    &quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    InputSystem.RegisterLayout(kLayout);</div>
+<div class="line">    var device = InputSystem.AddDevice(<span class="stringliteral">&quot;TestDevice&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">using</span> (StateEvent.From(device, out var eventPtr))</div>
+<div class="line">    {</div>
+<div class="line">        ((ButtonControl)device[<span class="stringliteral">&quot;button&quot;</span>]).WriteValueIntoEvent(1f, eventPtr);</div>
+<div class="line">        InputSystem.QueueEvent(eventPtr);</div>
+<div class="line">        InputSystem.Update();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    Assert.That(listener.messages, Is.Empty);</div>
+<div class="line">    Assert.That(PlayerInput.all, Is.Empty);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>&gt;<b>Note</b>: For reference, you can find the tests for the Input System itself in its <a href="https://github.com/Unity-Technologies/InputSystem/tree/stable/Assets/Tests/InputSystem">GitHub repository</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

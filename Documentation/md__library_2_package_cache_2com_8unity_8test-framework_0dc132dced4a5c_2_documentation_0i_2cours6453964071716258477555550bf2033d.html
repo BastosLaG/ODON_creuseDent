@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: 6\. Asset Change Test</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2cours6453964071716258477555550bf2033d.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">6. Asset Change Test </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5290"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5291"></a>
+Learning Objectives</h1>
+<p>This exercise will teach you a popular pattern in Game <a class="el" href="class_tests.html">Tests</a> to verify if Assets change over time.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5292"></a>
+Exercise</h1>
+<p>As you noticed inside LostCrypt, when you pick up the Wand, your character equips armor. <br  />
+ Write a test that checks that after Sara picks up the wand, armor is equipped. <br  />
+</p>
+<ol type="1">
+<li>Create a <span class="tt">WandTests.cs</span> class and implement <span class="tt">MainScene\_CharacterReachesWandAndEquipsArmor</span> test.</li>
+<li>Try to observe how <span class="tt">Sara Variant</span> or more specifically <span class="tt">puppet_sara</span> GameObject changes the moment you pick up the wand.</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5293"></a>
+Hints</h1>
+<ul>
+<li>You can reuse code from <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2course_2_lost_crypt_2reach-wand-test.html">Reach Wand Test</a> for the logic of the character picking up the wand. Or you can try to trigger this action programmatically.</li>
+<li>Remember that if some <a class="el" href="namespace_unity.html">Unity</a> internal APIs are not accessible for your test you might need to add a new reference inside the <span class="tt">PlayModeTests</span> assembly definition.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5294"></a>
+Solution</h1>
+<p>PlayModeTests.asmdef <br  />
+ </p><div class="fragment"><div class="line">{</div>
+<div class="line">    &quot;name&quot;: &quot;PlayModeTests&quot;,</div>
+<div class="line">    &quot;rootNamespace&quot;: &quot;&quot;,</div>
+<div class="line">    &quot;references&quot;: [</div>
+<div class="line">        &quot;Unity.InputSystem&quot;,</div>
+<div class="line">        &quot;Unity.InputSystem.TestFramework&quot;,</div>
+<div class="line">        &quot;TestInputControl&quot;,</div>
+<div class="line">        &quot;UnityEngine.TestRunner&quot;,</div>
+<div class="line">        &quot;Unity.2D.Animation.Runtime&quot;</div>
+<div class="line">    ],</div>
+<div class="line">    &quot;includePlatforms&quot;: [],</div>
+<div class="line">    &quot;excludePlatforms&quot;: [],</div>
+<div class="line">    &quot;allowUnsafeCode&quot;: false,</div>
+<div class="line">    &quot;overrideReferences&quot;: true,</div>
+<div class="line">    &quot;precompiledReferences&quot;: [</div>
+<div class="line">        &quot;nunit.framework.dll&quot;</div>
+<div class="line">    ],</div>
+<div class="line">    &quot;autoReferenced&quot;: false,</div>
+<div class="line">    &quot;defineConstraints&quot;: [</div>
+<div class="line">        &quot;UNITY_INCLUDE_TESTS&quot;</div>
+<div class="line">    ],</div>
+<div class="line">    &quot;versionDefines&quot;: [],</div>
+<div class="line">    &quot;noEngineReferences&quot;: false</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>WandTests.cs <br  />
+ </p><div class="fragment"><div class="line">using System.Collections;</div>
+<div class="line">using NUnit.Framework;</div>
+<div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.TestTools;</div>
+<div class="line">using UnityEngine.SceneManagement;</div>
+<div class="line">using UnityEngine.Experimental.U2D.Animation;</div>
+<div class="line"> </div>
+<div class="line">public class WandTests</div>
+<div class="line">{</div>
+<div class="line">    private Transform _characterTransform;</div>
+<div class="line">    private float _testTimeout = 25.0f;</div>
+<div class="line">    private float _wandLocation = 21.080f;</div>
+<div class="line"> </div>
+<div class="line">    [UnityTest]</div>
+<div class="line">    public IEnumerator MainScene_CharacterReachesWandAndEquipsArmor()</div>
+<div class="line">    {</div>
+<div class="line">        SceneManager.LoadScene(&quot;Assets/Scenes/Main.unity&quot;, LoadSceneMode.Single);</div>
+<div class="line">        </div>
+<div class="line">        // Skip first frame so Sara have a chance to appear on the screen</div>
+<div class="line">        yield return null;</div>
+<div class="line">        var puppet = GameObject.Find(&quot;puppet_sara&quot;);</div>
+<div class="line">        var spriteLibrary = puppet.GetComponent&lt;SpriteLibrary&gt;();</div>
+<div class="line">        </div>
+<div class="line">        Assert.AreEqual(spriteLibrary.spriteLibraryAsset.name, &quot;Sara&quot;);</div>
+<div class="line"> </div>
+<div class="line">        var elapsedTime = 0.0f;</div>
+<div class="line">        yield return GoRight();</div>
+<div class="line">        while (GetCurrentCharacterPosition() &lt;= _wandLocation)</div>
+<div class="line">        {</div>
+<div class="line">            yield return null;</div>
+<div class="line">            elapsedTime += Time.deltaTime;</div>
+<div class="line">            if (elapsedTime &gt; _testTimeout)</div>
+<div class="line">            {</div>
+<div class="line">                Assert.Fail($&quot;Character did not reach location position in {_testTimeout} seconds.&quot;);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        // Wait for Wand pickup animation to be over.</div>
+<div class="line">        yield return new WaitForSeconds(12);</div>
+<div class="line"> </div>
+<div class="line">        Assert.AreEqual(spriteLibrary.spriteLibraryAsset.name, &quot;Sara_var01&quot;);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private float GetCurrentCharacterPosition()</div>
+<div class="line">    {</div>
+<div class="line">        // Get Main character&#39;s Transform which is used to manipulate position.</div>
+<div class="line">        if (_characterTransform == null)</div>
+<div class="line">        {</div>
+<div class="line">            _characterTransform = GameObject.Find(&quot;Sara Variant&quot;).transform;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        return _characterTransform.position.x;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private IEnumerator GoRight()</div>
+<div class="line">    {</div>
+<div class="line">        TestInputControl.MoveLeft = false;</div>
+<div class="line">        yield return null;</div>
+<div class="line">        TestInputControl.MoveRight = true;</div>
+<div class="line">    } </div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: process-joints</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8hands_0d9174aa07765b_2_documentation_0i_2process-joints.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">process-joints </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md7751"></a>
+autotoc_md7751</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7752"></a>
+uid: xrhands-process-joints</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7753"></a>
+Process joints</h1>
+<p>If you wish to process or filter joint data before it's returned to the subsystem caller, derive a <span class="tt">class</span> from <span class="tt">IXRHandProcessor</span> and register it with <span class="tt">XRHandSubsystem.RegisterProcessor</span> in a static method decorated with <span class="tt">[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]</span>. <span class="tt">IXRHandProcessor</span>s with a lower <span class="tt">callbackOrder</span> value will be called sooner than this with higher values for their <span class="tt">callbackOrder</span>.</p>
+<p>If you wish to access the joint data before anyone has had a chance to process the joints, you can use <span class="tt">XRHandSubsystem.preprocessJoints</span>.</p>
+<dl class="section note"><dt>Note</dt><dd>This is an advanced use case. Typically, you should use the <span class="tt">XRHandSubsystem</span>'s <span class="tt">updatedHands</span> callback and just consume the data instead of altering it in any way.</dd></dl>
+<p>Use extension methods in <span class="tt">UnityEngine.XR.Hands.Processing.XRHandProcessingUtility</span>. The below sample code demonstrates how to set pose data before it's returned to the subsystem.</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_hands_1_1_processing.html">UnityEngine.XR.Hands.Processing</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyHandProcessor : MonoBehaviour, <a class="code hl_interface" href="interface_unity_engine_1_1_x_r_1_1_hands_1_1_processing_1_1_i_x_r_hand_processor.html">IXRHandProcessor</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> callbackOrder =&gt; 0;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> ProcessJoints(<a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html">XRHandSubsystem</a> subsystem, <a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html">XRHandSubsystem</a>.<a class="code hl_enumeration" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html#ad3e63e758479ee99cd8906f56622776c">UpdateSuccessFlags</a> successFlags, <a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html">XRHandSubsystem</a>.<a class="code hl_enumeration" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html#ad871be92e0dee1f3a2f48a10d9f03bc7">UpdateType</a> updateType)</div>
+<div class="line">    {</div>
+<div class="line">        var leftHand = subsystem.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html#a06d1636c8524983cc0f80e91bcc557ca">leftHand</a>;</div>
+<div class="line">        leftHand.SetRootPose(<a class="code hl_enumvalue" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a57673a664482a97b3555977140c8316aa8109c9c9d6a2ca3bec3e006fe51a5f3e">Pose</a>.identity);</div>
+<div class="line">        subsystem.SetCorrespondingHand(leftHand);</div>
+<div class="line"> </div>
+<div class="line">        var rightHand = subsystem.<a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html#a54cd6fca6284f6b8bbd63920a6e657a0">rightHand</a>;</div>
+<div class="line">        rightHand.SetRootPose(<a class="code hl_enumvalue" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a57673a664482a97b3555977140c8316aa8109c9c9d6a2ca3bec3e006fe51a5f3e">Pose</a>.identity);</div>
+<div class="line">        subsystem.SetCorrespondingHand(rightHand);</div>
+<div class="line"> </div>
+<div class="line">        var leftJoints = leftHand.GetRawJointArray();</div>
+<div class="line">        var rightJoints = rightHand.GetRawJointArray();</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> jointIndex = 0; jointIndex &lt; leftJoints.Length; ++jointIndex)</div>
+<div class="line">        {</div>
+<div class="line">            var leftJoint = leftJoints[jointIndex];</div>
+<div class="line">            leftJoint.SetPose(<a class="code hl_enumvalue" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a57673a664482a97b3555977140c8316aa8109c9c9d6a2ca3bec3e006fe51a5f3e">Pose</a>.identity);</div>
+<div class="line">            leftJoints[jointIndex] = leftJoint;</div>
+<div class="line"> </div>
+<div class="line">            var rightJoint = rightJoints[jointIndex];</div>
+<div class="line">            rightJoint.SetPose(<a class="code hl_enumvalue" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a57673a664482a97b3555977140c8316aa8109c9c9d6a2ca3bec3e006fe51a5f3e">Pose</a>.identity);</div>
+<div class="line">            rightJoints[jointIndex] = rightJoint;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> Update()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (m_Registered)</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">        SubsystemManager.GetSubsystems(s_SubsystemsReuse);</div>
+<div class="line">        <span class="keywordflow">if</span> (s_SubsystemsReuse.Count == 0)</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">        m_Subsystem = s_SubsystemsReuse[0];</div>
+<div class="line">        m_Subsystem.RegisterProcessor(<span class="keyword">this</span>);</div>
+<div class="line">        m_Registered = <span class="keyword">true</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> OnDisable()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (m_Subsystem != <span class="keyword">null</span>)</div>
+<div class="line">        {</div>
+<div class="line">            m_Subsystem.UnregisterProcessor(<span class="keyword">this</span>);</div>
+<div class="line">            m_Subsystem = <span class="keyword">null</span>;</div>
+<div class="line">            m_Registered = <span class="keyword">false</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> m_Registered;</div>
+<div class="line">    XRHandSubsystem m_Subsystem;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">static</span> List&lt;XRHandSubsystem&gt; s_SubsystemsReuse = <span class="keyword">new</span> List&lt;XRHandSubsystem&gt;();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem_html"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html">UnityEngine.XR.Hands.XRHandSubsystem</a></div><div class="ttdoc">A subsystem for detecting and tracking hands and their corresponding joint pose data.</div><div class="ttdef"><b>Definition</b> XRHandSubsystem.cs:42</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem_html_a06d1636c8524983cc0f80e91bcc557ca"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html#a06d1636c8524983cc0f80e91bcc557ca">UnityEngine.XR.Hands.XRHandSubsystem.leftHand</a></div><div class="ttdeci">XRHand leftHand</div><div class="ttdoc">Gets the left XRHand that is being tracked by this subsystem.</div><div class="ttdef"><b>Definition</b> XRHandSubsystem.cs:73</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem_html_a54cd6fca6284f6b8bbd63920a6e657a0"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html#a54cd6fca6284f6b8bbd63920a6e657a0">UnityEngine.XR.Hands.XRHandSubsystem.rightHand</a></div><div class="ttdeci">XRHand rightHand</div><div class="ttdoc">Gets the right XRHand that is being tracked by this subsystem.</div><div class="ttdef"><b>Definition</b> XRHandSubsystem.cs:96</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem_html_ad3e63e758479ee99cd8906f56622776c"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html#ad3e63e758479ee99cd8906f56622776c">UnityEngine.XR.Hands.XRHandSubsystem.UpdateSuccessFlags</a></div><div class="ttdeci">UpdateSuccessFlags</div><div class="ttdoc">Describes what data on either hand was updated during the call.</div><div class="ttdef"><b>Definition</b> XRHandSubsystem.cs:150</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem_html_ad871be92e0dee1f3a2f48a10d9f03bc7"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html#ad871be92e0dee1f3a2f48a10d9f03bc7">UnityEngine.XR.Hands.XRHandSubsystem.UpdateType</a></div><div class="ttdeci">UpdateType</div><div class="ttdoc">The timing of a hand update during a frame.</div><div class="ttdef"><b>Definition</b> XRHandSubsystem.cs:188</div></div>
+<div class="ttc" id="ainterface_unity_engine_1_1_x_r_1_1_hands_1_1_processing_1_1_i_x_r_hand_processor_html"><div class="ttname"><a href="interface_unity_engine_1_1_x_r_1_1_hands_1_1_processing_1_1_i_x_r_hand_processor.html">UnityEngine.XR.Hands.Processing.IXRHandProcessor</a></div><div class="ttdoc">Derive from this interface with a class to intercept and alter hand and joint data....</div><div class="ttdef"><b>Definition</b> IXRHandProcessor.cs:9</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_x_r_1_1_hands_1_1_processing_html"><div class="ttname"><a href="namespace_unity_engine_1_1_x_r_1_1_hands_1_1_processing.html">UnityEngine.XR.Hands.Processing</a></div><div class="ttdef"><b>Definition</b> IXRHandProcessor.cs:2</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_x_r_1_1_hands_html_a57673a664482a97b3555977140c8316aa8109c9c9d6a2ca3bec3e006fe51a5f3e"><div class="ttname"><a href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a57673a664482a97b3555977140c8316aa8109c9c9d6a2ca3bec3e006fe51a5f3e">UnityEngine.XR.Hands.XRHandJointTrackingState.Pose</a></div><div class="ttdeci">@ Pose</div><div class="ttdoc">Pose of current joint.</div><div class="ttdef"><b>Definition</b> Enums.cs:24</div></div>
+</div><!-- fragment --><p>See sample <span class="tt">HandProcessor</span> script in the <span class="tt">HandVisualizer</span> sample for a more useful example of how to use this functionality. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

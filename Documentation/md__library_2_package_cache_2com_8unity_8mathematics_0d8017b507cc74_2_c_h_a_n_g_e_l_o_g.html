@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Changelog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8mathematics_0d8017b507cc74_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Changelog </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2412"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2413"></a>
+[1.3.2] - 2024-01-11</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2414"></a>
+Fixed</h2>
+<ul>
+<li>Fixed <span class="tt">math.hash</span> crash when using IL2CPP builds on Arm 32 bit devices.</li>
+<li>Fixed obsolete method usage warnings for <span class="tt">MatrixDrawer.CanCacheInspectorGUI</span> and <span class="tt">PrimitiveVectorDrawer.CanCacheInspectorGUI</span> in UNITY_2023_2_OR_NEWER.</li>
+<li>Updated minimum editor version to 2021.3</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2415"></a>
+[1.3.1] - 2023-07-12</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2416"></a>
+Added</h2>
+<ul>
+<li>Added <span class="tt">math.square</span> to compute the square (x * x).</li>
+<li>Added <span class="tt">math.orthonormal_basis</span> to compute an orthonormal basis from a single unit length vector.</li>
+<li>Added <span class="tt">math.sign</span> for int, int2, int3 and int4.</li>
+<li>Added <span class="tt">math.chgsign</span> for float, float2, float3, and float4.</li>
+<li>Added <span class="tt">math.Euler</span> to convert a quaternion to Euler angles.</li>
+<li>Added <span class="tt">math.angle</span> to compute the angle between two unit quaternions.</li>
+<li>Added <span class="tt">math.rotation</span> to extract a quaternion rotation from a float3x3 (that may have scale).</li>
+<li>Added <span class="tt">math.mulScale</span> to scale columns of a float3x3 with scaling coefficients in a float3.</li>
+<li>Added <span class="tt">math.scaleMul</span> to scale rows of a float3x3 with scaling coefficients in a float3.</li>
+<li>Added <span class="tt">AffineTransform</span> type.</li>
+<li>Added <span class="tt">PI2</span>, <span class="tt">PIHALF</span>, <span class="tt">TAU</span>, <span class="tt">TODEGREES</span> and <span class="tt">TORADIANS</span> constants.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2417"></a>
+Changed</h2>
+<ul>
+<li><span class="tt">asfloat(uint)</span>, <span class="tt">asuint(float)</span>, <span class="tt">asint(float)</span> and other related methods are now faster in mono without <a class="el" href="namespace_burst.html">Burst</a>. Other methods which use these will see a performance improvement.</li>
+<li>Modified <span class="tt">quaternion.nlerp</span> to be branchless.</li>
+<li>More descriptive parameter names for many methods in <span class="tt">math</span> class.</li>
+<li>Made <span class="tt">Il2CppEagerStaticClassConstructionAttribute</span> internal to avoid conflicts with other definitions outside of the package.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2418"></a>
+[1.2.6] - 2022-02-11</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2419"></a>
+Changed</h2>
+<ul>
+<li>Made Il2CppEagerStaticClassConstructionAttribute internal to avoid conflicts with other definitions outside of the package.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2420"></a>
+[1.2.5] - 2021-11-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2421"></a>
+Fixed</h2>
+<ul>
+<li>Fixed property drawing when manually drawing a property that was hidden with [HideInInspector].</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2422"></a>
+[1.2.4] - 2021-09-22</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2423"></a>
+Added</h2>
+<ul>
+<li>Added <span class="tt">[Il2CppEagerStaticClassConstruction]</span> to <a class="el" href="namespace_unity_1_1_mathematics.html">Unity.Mathematics</a> types to run static constructors at startup. This improves IL2CPP performance slightly for types that have static constructors.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2424"></a>
+Changed</h2>
+<ul>
+<li>License file updated to satisfy <a class="el" href="namespace_unity.html">Unity</a>'s package validation tests.</li>
+<li>Changed noise documentation in comments to xmldoc comments.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2425"></a>
+Fixed</h2>
+<ul>
+<li>Fixed Equals(object) override which did not check type before casting. This could cause exceptions to be thrown when the object did not match the expected type.</li>
+<li>Fixed incorrect <span class="tt">math.tzcnt</span> documentation which mentioned leading zero counts instead of trailing zero counts.</li>
+<li>Fixed <span class="tt">float2x2.Rotate</span> documentation to mention radians instead of degrees.</li>
+<li>Fixed documentation for methods and properties that were previously undocumented.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2426"></a>
+[1.2.1] - 2020-08-06</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2427"></a>
+Fixed</h2>
+<ul>
+<li>Fixed warnings for meta files existing even though the files they represent did not exist.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2428"></a>
+Internal (Not ready for production)</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2429"></a>
+[1.2.0] - 2020-08-03</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2430"></a>
+Added</h2>
+<ul>
+<li>Added <span class="tt">[MethodImpl(MethodImplOptions.AggressiveInlining)]</span> to many static functions to improve IL2CPP performance.</li>
+<li>Added <span class="tt">compress()</span> that accepts a <span class="tt">float4</span> and <span class="tt">uint4</span>.</li>
+<li>Added <span class="tt">math.project()</span> and <span class="tt">math.projectsafe()</span> for vector projection.</li>
+<li>Added <span class="tt">math.EPSILON</span>, <span class="tt">math.INFINITY</span>, <span class="tt">math.NAN</span> and their double counterparts.</li>
+<li>Added <span class="tt">[Serializable]</span> to <span class="tt">RigidTransform</span>.</li>
+<li>Added <span class="tt">math.ceillog2()</span>.</li>
+<li>Added <span class="tt">math.floorlog2()</span>.</li>
+<li>Added <span class="tt">math.down()</span>, <span class="tt">math.forward()</span>, etc for Cartesian coordinate axes that match <a class="el" href="namespace_unity_engine.html">UnityEngine</a> Vector3 equivalents.</li>
+<li>Added <span class="tt">math.ispow2()</span>.</li>
+<li>Added <span class="tt">half.MinValueAsHalf</span> and <span class="tt">half.MaxValueAsHalf</span> to avoid having to explicitly convert from float.</li>
+<li>Added a <span class="tt">float3x3</span> constructor which takes a <span class="tt">float4x4</span> as input.</li>
+<li>Added <span class="tt">[Serializable]</span> to half types.</li>
+<li>Added some performance tests which can be run from the <a class="el" href="namespace_unity.html">Unity</a> test project.</li>
+<li>Added <span class="tt">Random.CreateFromIndex()</span> to assist in creating Random instances from loop indices.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2431"></a>
+Fixed</h2>
+<ul>
+<li>Fixed documentation bug where <span class="tt">quaternion.RotateX/Y/Z</span> referred to a <span class="tt">float4x4</span> instead of quaternion.</li>
+<li>Fixed code generation bugs which could cause Windows and Mac to generate different test code.</li>
+<li>Fixed some test asserts which used NaNs and signed zeros which failed in IL2CPP builds.</li>
+<li>Updated documentation for <span class="tt">math.countbits()</span> to include equivalent names on Intel and ARM architectures to aid in discoverability.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2432"></a>
+Internal (Not ready for production)</h2>
+<ul>
+<li>Added <span class="tt"><a class="el" href="struct_unity_1_1_mathematics_1_1_geometry_1_1_plane.html" title="A plane represented by a normal vector and a distance along the normal from the origin.">Unity.Mathematics.Geometry.Plane</a></span> to represent planes in 3D space.</li>
+<li>Added more <span class="tt">MinMaxAABB</span> functionality from <span class="tt">Unity.Physics.Aabb</span>.</li>
+<li>Added <span class="tt">Unity.Mathematics.Geometry.Math</span> to hold static functions like AABB transformations.</li>
+<li>Added <span class="tt">MinMaxAABB</span>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2433"></a>
+[1.1.0] - 2019-07-08</h1>
+<ul>
+<li>Release stable version</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2434"></a>
+[1.1.0-preview.1] - 2019-06-27</h1>
+<ul>
+<li>Add new math.bitmask to return a bit mask from a bool4</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2435"></a>
+[1.0.1] - 2019-04-15</h1>
+<ul>
+<li>Release stable version</li>
+<li>Modify all math constants (e.g <span class="tt">math.PI</span>) to provide float constant by default instead of double. Use for example <span class="tt">math.PI_DBL</span> to get the previous double constant.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2436"></a>
+[1.0.0-preview.1] - 2019-02-28</h1>
+<ul>
+<li>Fixed bug where modifications on prefabs could not be reverted for vector properties when using context menu in Inspector.</li>
+<li>Fixed structure of the package for internal validation </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: C#/.NET type support</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-type-support.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">C#/.NET type support </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md885"></a></p>
+<p><a class="el" href="namespace_burst.html">Burst</a> works on a subset of .NET that doesn't let you use any managed objects or reference types in your code (classes in C#).</p>
+<p>The following sections gives more details about the constructs that <a class="el" href="namespace_burst.html">Burst</a> supports, and any limitations they have.</p>
+<ul>
+<li><a class="el" href="#built-in">Built-in types</a></li>
+<li><a class="el" href="#arrays">Array types</a></li>
+<li><a class="el" href="#structs">Struct types</a></li>
+<li><a class="el" href="#generics">Generic types</a></li>
+<li><a class="el" href="#vectors">Vector types</a></li>
+<li><a class="el" href="#enums">Enum types</a></li>
+<li><a class="el" href="#pointers">Pointer types</a></li>
+<li><a class="el" href="#spans">Span types</a></li>
+<li><a class="el" href="#tuples">Tuple types</a></li>
+</ul>
+<p><a class="anchor" id="built-in"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md886"></a>
+Built-in types</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md887"></a>
+Supported built-in types</h2>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports the following built-in types:</p>
+<ul>
+<li><span class="tt">bool</span></li>
+<li><span class="tt">byte</span>/<span class="tt">sbyte</span></li>
+<li><span class="tt">double</span></li>
+<li><span class="tt">float</span></li>
+<li><span class="tt">int</span>/<span class="tt">uint</span></li>
+<li><span class="tt">long</span>/<span class="tt">ulong</span></li>
+<li><span class="tt">short</span>/<span class="tt">ushort</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md888"></a>
+Unsupported built-in types</h2>
+<p><a class="el" href="namespace_burst.html">Burst</a> doesn't support the following built-in types:</p>
+<ul>
+<li><span class="tt">char</span></li>
+<li><span class="tt">decimal</span></li>
+<li><span class="tt">string</span> because this is a managed type</li>
+</ul>
+<p><a class="anchor" id="arrays"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md889"></a>
+Array types</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md890"></a>
+Supported array types</h2>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports read-only managed arrays loaded from static read-only fields:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">struct </span>MyJob : IJob {</div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> readonly <span class="keywordtype">int</span>[] _preComputeTable = <span class="keyword">new</span> <span class="keywordtype">int</span>[] { 1, 2, 3, 4 };</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> Index { get; set; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> Execute()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordtype">int</span> x = _preComputeTable[0];</div>
+<div class="line">        <span class="keywordtype">int</span> z = _preComputeTable[<a class="code hl_enumvalue" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a74c845b19d5cee9254c900ec917bdceca88fa71f0a6e0dfedbb46d91cc0b37a50">Index</a>];</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_engine_1_1_x_r_1_1_hands_html_a74c845b19d5cee9254c900ec917bdceca88fa71f0a6e0dfedbb46d91cc0b37a50"><div class="ttname"><a href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a74c845b19d5cee9254c900ec917bdceca88fa71f0a6e0dfedbb46d91cc0b37a50">UnityEngine.XR.Hands.XRHandFingerID.Index</a></div><div class="ttdeci">@ Index</div><div class="ttdoc">Represents the index finger.</div><div class="ttdef"><b>Definition</b> Enums.cs:240</div></div>
+</div><!-- fragment --><p>However, accessing a static read-only managed array has the following restrictions:</p>
+<ul>
+<li>You can only use the read-only static managed array directly and can't pass it around, for example as a method argument.</li>
+<li>C# code that doesn't use jobs shouldn't modify the read-only static array's elements. This is because the <a class="el" href="namespace_burst.html">Burst</a> compiler makes a read-only copy of the data at compilation time.</li>
+<li>Multi-dimensional arrays aren't supported.</li>
+</ul>
+<p>If you've used an unsupported static constructor, <a class="el" href="namespace_burst.html">Burst</a> produces the error <span class="tt">BC1361</span>.</p>
+<p>For more information on how <a class="el" href="namespace_burst.html">Burst</a> initializes arrays, see <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-static-read-only-support.html">Static readonly fields and static constructors</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md891"></a>
+Unsupported array types</h2>
+<p><a class="el" href="namespace_burst.html">Burst</a> doesn't support managed arrays. Instead, use a native container such as <a href="https://docs.unity3d.com/ScriptReference/Unity.Collections.NativeArray_1.html">NativeArray&lt;T&gt;</a>.</p>
+<p><a class="anchor" id="structs"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md892"></a>
+Struct types</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md893"></a>
+Supported structs</h2>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports the following structs:</p>
+<ul>
+<li>Regular structs with any field with supported types</li>
+<li>Structs with fixed array fields</li>
+</ul>
+<p>&gt;[!NOTE] &gt;Structs with an explicit layout might generate non-optimal native code.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md894"></a>
+Supported struct layout</h2>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports the following struct layouts:</p>
+<ul>
+<li><span class="tt">LayoutKind.Sequential</span></li>
+<li><span class="tt">LayoutKind.Explicit</span></li>
+<li><span class="tt">StructLayoutAttribute.Pack</span></li>
+<li><span class="tt">StructLayoutAttribute.Size</span></li>
+</ul>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports <span class="tt">System.IntPtr</span> and <span class="tt">System.UIntPtr</span> natively as intrinsic structs that directly represent pointers.</p>
+<p><a class="anchor" id="generics"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md895"></a>
+Generic types</h1>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports generic types used with structs. It supports full instantiation of generic calls for generic types that have interface constraints, for example when a struct with a generic parameter needs to implement an interface.</p>
+<p>&gt;[!NOTE] </p><blockquote class="doxtable">
+<p>There are restrictions if you use <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2compilation-generic-jobs.html">generic jobs</a>. </p>
+</blockquote>
+<p><a class="anchor" id="vectors"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md896"></a>
+Vector types</h1>
+<p><a class="el" href="namespace_burst.html">Burst</a> can translate vector types from <a href="https://docs.unity3d.com/Packages/com.unity.mathematics@latest"><span class="tt">Unity.Mathematics</span></a> to native SIMD vector types with the following first class support for optimizations:</p>
+<ul>
+<li><span class="tt">bool2</span>/<span class="tt">bool3</span>/<span class="tt">bool4</span></li>
+<li><span class="tt">uint2</span>/<span class="tt">uint3</span>/<span class="tt">uint4</span></li>
+<li><span class="tt">int2</span>/<span class="tt">int3</span>/<span class="tt">int4</span></li>
+<li><span class="tt">float2</span>/<span class="tt">float3</span>/<span class="tt">float4</span></li>
+</ul>
+<p>&gt;[!TIP] </p><blockquote class="doxtable">
+<p>For performance reasons, use the 4 wide types (<span class="tt">bool4</span>, <span class="tt">uint4</span>, <span class="tt">float4</span>, <span class="tt">int4</span>, ) over the other types. </p>
+</blockquote>
+<p><a class="anchor" id="enums"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md897"></a>
+Enum types</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md898"></a>
+Supported enum types</h2>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports all enums including enums that have a specific storage type, for example, <span class="tt">public enum MyEnum : short</span>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md899"></a>
+Unsupported enums</h2>
+<p><a class="el" href="namespace_burst.html">Burst</a> doesn't support <span class="tt">Enum</span> methods, for example <a href="https://docs.microsoft.com/en-us/dotnet/api/system.enum.hasflag?view=net-6.0"><span class="tt">Enum.HasFlag</span></a>.</p>
+<p><a class="anchor" id="pointers"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md900"></a>
+Pointer types</h1>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports any pointer types to any <a class="el" href="namespace_burst.html">Burst</a> supported types</p>
+<p><a class="anchor" id="spans"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md901"></a>
+Span types</h1>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports <a href="https://docs.microsoft.com/en-us/dotnet/api/system.span-1?view=net-6.0"><span class="tt">Span&lt;T&gt;</span></a> and <a href="https://docs.microsoft.com/en-us/dotnet/api/system.readonlyspan-1?view=net-6.0"><span class="tt">ReadOnlySpan&lt;T&gt;</span></a> types in the <a class="el" href="namespace_unity.html">Unity</a> Editors that support them.</p>
+<p>You can only use span types in <a class="el" href="namespace_burst.html">Burst</a> jobs or function-pointers, but not across the interface to them. This is because in C#'s implementation of the span types it supports taking spans into managed data types (like a managed array). For example, the following code is invalid:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SomeFunctionPointer(Span&lt;int&gt; span) {}</div>
+</div><!-- fragment --><p>This is because <span class="tt">Span</span> is used across the managed and <a class="el" href="namespace_burst.html">Burst</a> boundary. In <a class="el" href="namespace_burst.html">Burst</a>, span types respect any safety check setting, and only perform performance-intensive checks when safety checks are enabled.</p>
+<p><a class="anchor" id="tuples"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md902"></a>
+Tuple types</h1>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports value tuples <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-tuples"><span class="tt">ValueTuple&lt;T1,T2&gt;</span></a> in Burst-compiled jobs or static methods, but not across the interface to them. This is because value tuples are of struct layout <a href="https://learn.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.layoutkind?view=net-7.0">LayoutKind.Auto</a>. <a class="el" href="namespace_burst.html">Burst</a> does not support <a href="https://learn.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.layoutkind?view=net-7.0">LayoutKind.Auto</a> (to see a list of struct layouts <a class="el" href="namespace_burst.html">Burst</a> supports see the section <a class="el" href="#structs">Struct types</a>). However, one can use a regular struct to emulate a tuple like so:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">[BurstCompile]</div>
+<div class="line"><span class="keyword">private</span> <span class="keyword">struct </span>MyTuple</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> item1;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">float</span> item2;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md903"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-hpc-overview.html">HPC# overview</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-string-support.html">String support</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-system-support.html">C#/.NET System namespace support</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

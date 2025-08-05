@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Capture input with the Input System package</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-capturing-player-inputs-new.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Capture input with the Input System package </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7000"></a></p>
+<dl class="section important"><dt>Important</dt><dd>If you don't complete the prerequisite configuration for your project, you can't use the Input System package with Visual Scripting. For more information, see <a href="vs-capture-player-input.md#input-system-package-prerequisites">Input System package prerequisites</a>.</dd></dl>
+<p>To use the Input System package with Visual Scripting to capture input in your project:</p>
+<ol type="1">
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-open-graph-edit.html">Open</a> or <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-graph.html">create</a> a Script Graph attached to the GameObject that you want your users to move.</li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-fuzzy-finder.html">vs-open-fuzzy-finder</a>]</li>
+<li>Go to <b>Events</b> &gt; <b>Input</b> or search for <b>On Input System Event</b>.</li>
+<li>Select an Input System Event node. In this example, select the <b>On Input System Event Vector 2</b> node to add it to the graph.</li>
+<li><p class="startli">Set the <b>On Input System Event Vector 2</b> node's <b>Input Action Change Type</b> control to <b>On Hold</b>:</p>
+<p class="startli"><img src="images/vs-input-new-system-v2-node-set.png" alt="An image of the Graph window, that displays an On Input System Event Vector 2 node. The Input Action Change Type control is open and being set to On Hold." class="inline"/></p>
+</li>
+<li>In the <b>Input Action</b> list on the <b>On Input System Event Vector 2</b> node, select an Input Action to trigger the node. In this example, select <b>Move</b>.</li>
+</ol>
+<dl class="section note"><dt>Note</dt><dd>By default, Visual Scripting displays all Input Actions from the Input Action asset attached to your current GameObject's Player Input component.</dd></dl>
+<ol type="1">
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-fuzzy-finder.html">vs-open-fuzzy-finder</a>]</li>
+</ol>
+<dl class="section remark"><dt>Remarques</dt><dd>If a context menu appears when you right-click, select <b>Add Node</b> to open the fuzzy finder.</dd></dl>
+<ol type="1">
+<li>Go to <b>Codebase</b> &gt; <b><a class="el" href="namespace_unity.html">Unity</a> Engine</b> &gt; <b>Vector 3</b> or search for <b>Vector 3 Get X</b>.</li>
+<li>Select <b>Get X</b> to add the <b>Vector 3 Get X</b> node to the graph. <br  />
+</li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-fuzzy-finder.html">vs-open-fuzzy-finder</a>]</li>
+<li>Go to <b>Codebase</b> &gt; <b><a class="el" href="namespace_unity.html">Unity</a> Engine</b> &gt; <b>Vector 3</b> or search for <b>Vector 3 Get Z</b>.</li>
+<li>Select <b>Get Z</b> to add the <b>Vector 3 Get Z</b> node to the graph.</li>
+<li>Select the <b>Vector 2 Value</b> output port on the <b>On Input System Event Vector 2</b> node.</li>
+<li><p class="startli"><a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-creating-connections.html">Make a connection</a> to the <b>Target</b> input port on the <b>Vector 3 Get X</b> node:</p>
+<p class="startli"><img src="images/vs-input-new-system-connect-nodes-example.png" alt="An image of the Graph window, that displays the On Input System Event Vector 2 node, the Vector 3 Get X, and Vector 3 Get Z nodes. A connection is being made from the Vector 2 Value port on the On Input System Event Vector 2 node and the Target port on the Vector 3 Get X node." class="inline"/></p>
+</li>
+<li>Select the <b>Vector 2 Value</b> output port.</li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-creating-connections.html">Make a connection</a> to the <b>Target</b> port on the <b>Vector 3 Get Z</b> node.</li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-fuzzy-finder.html">vs-open-fuzzy-finder</a>]</li>
+<li>Go to <b>Codebase</b> &gt; <b><a class="el" href="namespace_unity.html">Unity</a> Engine</b> &gt; <b>Transform</b> or search for <b>Translate</b>.</li>
+<li>Select <b>Transform: Translate (X, Y, Z)</b> to add the Translate node to the graph.</li>
+<li>Select the <b>Value: Float</b> output port on the <b>Vector 3 Get X</b> node.</li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-creating-connections.html">Make a connection</a> to the <b>X</b> float input port on the <b>Translate</b> node.</li>
+<li>Select the <b>Value: Float</b> output port on the <b>Vector 3 Get X</b> node.</li>
+<li><p class="startli"><a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-creating-connections.html">Make a connection</a> to the <b>Z</b> float input port on the <b>Translate</b> node.</p>
+<p class="startli">The finished graph looks similar to the following image:</p>
+<p class="startli"><img src="images/vs-input-new-system-example.png" alt="An image of the Graph window, that displays the final result of a simple input capture graph with the Input System package. An On Input System Event Vector 2 node connects its output trigger port to the input trigger port on a Transform Translate node. The On Input System Event Vector 2 node's Vector 2 output port connects to the Vector 3 input on a Vector 3 Get X node and a Vector 3 Get Z node. The Vector 3 Get X node connects its Float result port to the X input port on the Translate node. The Vector 3 Get Z node connects its Float result port to the Z input port on the Translate node." class="inline"/></p>
+</li>
+<li>To enter Play mode, select <b>Play</b> from <a href="https://docs.unity3d.com/Manual/Toolbar.html">the Unity Editor's Toolbar</a>.</li>
+<li>While in the <a href="https://docs.unity3d.com/Manual/GameView.html">Game view</a>, press a key defined under the Input Actions asset for <b>Move</b> in the <b>Player</b> Action Map.</li>
+</ol>
+<p>The GameObject moves along the X or Z axis in the Game view, based on the key pressed and the Input Actions asset.</p>
+<p>For more information on how to define Input Actions, see <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@latest/index.html?subfolder=/manual/ActionAssets.html">Input Action Assets</a> in the Input System package documentation.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7001"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-capture-player-input.html">Capture user input in an application</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-c1c1d430cc6b9faed272f458a8efc60bb.html">Add and configure a Player Input component</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-nodes-events-input-system-button.html">On Input System Event Button node</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-nodes-events-input-system-float.html">On Input System Event Float node</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-ndb130bba5b6b35b035cfd6b2d4c5bb0b.html">On Input System Event Vector 2 node</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

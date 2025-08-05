@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: upgrade-guide-3.0</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2upgrade-guide-3_80.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">upgrade-guide-3.0 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8523"></a>
+autotoc_md8523</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8524"></a>
+uid: xri-upgrade-guide-3-0</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8525"></a>
+XRI 3.0 upgrade guide</h1>
+<p>This guide is intended for users upgrading from a previous 2.x version of XRI to help integrate XRI 3.0 into existing projects by highlighting new features, potential issues, and offering solutions and guidance when upgrading.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8526"></a>
+XRI 3.0 context</h2>
+<p>XRI 3.0 offers a variety of new features, architecture enhancements, and other various improvements to previous versions of XRI. Some of the main additions include the new Input Reader architecture, a new Near-Far interactor and multi-casting, new XR Body Transformers and Locomotion Mediators, as well as improvements to Climb teleportation.</p>
+<p>For a detailed summary of what’s new in XRI 3.0, please refer to the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2whats-new-3_80.html">What's new in version 3.0</a> page in the manual.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8527"></a>
+How to upgrade</h2>
+<dl class="section note"><dt>Note</dt><dd>Before upgrading, please review this upgrade guide in full. It may be recommended to update to the latest 2.x version of the package.</dd></dl>
+<p>In <a class="el" href="namespace_unity.html">Unity</a> 6, XRI 3.x is the recommended version. To upgrade an existing project in <a class="el" href="namespace_unity.html">Unity</a> 6, navigate to <b>Window</b> &gt; <b>Package Manager</b> and select the XR Interaction Toolkit Package in the list of project packages. In the XR Interaction Toolkit details, select the <b>Version History</b> tab. In the list of versions, press the <b>Update</b> button next to version 3.x.</p>
+<p><img src="images/upgrade-guide/package-manager-upgrade.png" alt="input-actions-import-error" class="inline"/></p>
+<p>In older <a class="el" href="namespace_unity.html">Unity</a> Editor versions, the version of the package can be upgraded using the <b>Add package by name</b> window in Package Manager and specifying a version before clicking <b>Add</b>. See <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2installation.html">Installation</a> for further instructions. Alternatively, the <span class="tt"><a class="el" href="namespace_packages.html">Packages</a>\manifest.json</span> file in your <a class="el" href="namespace_unity.html">Unity</a> project can be manually edited to change the version number to the desired version.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8528"></a>
+Namespace changes</h2>
+<p>XRI 3.0 changes the namespaces of various interactable, interactor, interaction attachment, and locomotion classes, enums, structs, and interfaces. This is to better reflect their use and the organizational structure they reside in. For a full list of namespace changes, please refer to the <a href="../changelog/CHANGELOG.html">Changelog</a>. Most of the namespace changes can be found in the Changed section under the <a href="../changelog/CHANGELOG.html#300---2024-03-18">3.0.0 Changelog</a>.</p>
+<p><img src="images/upgrade-guide/namespace-updater.png" alt="namespace-updater" class="inline"/></p>
+<p>When upgrading, the Editor will provide a prompt to help with these namespace changes. The prompt will provide options to have these namespace changes be automatically updated. If the prompt is used to automatically update the namespaces, the full namespace path will be placed inline. For example <span class="tt">XRBaseInteractable</span> has been moved from <span class="tt"><a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit.html">UnityEngine.XR.Interaction.Toolkit</a></span> to <span class="tt"><a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables.html">UnityEngine.XR.Interaction.Toolkit.Interactables</a></span>. The automatic namespace changed would change:</p>
+<div class="fragment"><div class="line">XRBaseInteractable m_Interactable;</div>
+</div><!-- fragment --><p>to:</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_x_r_base_interactable.html">UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable</a> m_Interactable;</div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_x_r_base_interactable_html"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_x_r_base_interactable.html">UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable</a></div><div class="ttdoc">Abstract base class from which all interactable behaviors derive. This class hooks into the interacti...</div><div class="ttdef"><b>Definition</b> XRBaseInteractable.cs:28</div></div>
+</div><!-- fragment --><p>This can result in lengthy namespace paths in existing scripts which may not be desired. To address this, some manual modification of the script would be necessary. Manually inserting <span class="tt">using</span> statements that reference the new namespace would allow for the class in the new namespace to be used as expected.</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables.html">UnityEngine.XR.Interaction.Toolkit.Interactables</a>;</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_x_r_base_interactable.html">XRBaseInteractable</a> m_Interactable;</div>
+<div class="ttc" id="anamespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_html"><div class="ttname"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables.html">UnityEngine.XR.Interaction.Toolkit.Interactables</a></div><div class="ttdef"><b>Definition</b> DistanceInfo.cs:5</div></div>
+</div><!-- fragment --><p>If the prompt to automatically update the namespaces is not used, the errors in the console should provide insight into the scripts that require the manual addition of the <span class="tt">using</span> statements of the new namespace or the inline addition of the new namespaces.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8529"></a>
+XR Origin (XR Rig) changes</h2>
+<p>The XR Origin prefab in the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-starter-assets.html">Starter Assets</a> sample has been updated with the new <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2near-far-interactor.html">Near-Far Interactor</a> and the hierarchy has been updated. Prefab variants based on a 2.x version Starter Assets XR Origin will cause warnings of missing GUIDs and potentially missing scripts. These prefab variants should be updated with the new XR Origin GUID, or a new variant should be created from the XRI 3.0 XR Origin prefab.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8530"></a>
+Tunneling vignette</h3>
+<p>In XRI 2.5.0, the Tunneling Vignette sample was moved into the Starter Assets sample. However, the XR Origin prefab does not contain the Tunneling Vignette prefab. If an existing XR Origin prefab variant utilized the Tunneling Vignette prefab, the <span class="tt">Locomotion Vignette Providers</span> on the <span class="tt">Tunneling Vignette Controller</span> will need to be reconnected to the locomotion providers on the newly imported XR Rig. These can be found at <b>XR Origin</b> / <b>Locomotion</b> in the GameObject hierarchy.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8531"></a>
+Deprecation</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8532"></a>
+Errors and warnings</h3>
+<p>In XRI 3.0, deprecated code from XRI 2.x is deprecated with warnings and deprecated code and serialized fields from XRI 1.x are now treated as errors. As a result, projects using this deprecated code will be notified of these warnings and errors via the console.</p>
+<p>Additionally, some serialized fields used by deprecated code were removed in XRI 3.0. To avoid potential data loss, especially if projects had warnings about using deprecated functionality, update the project to the latest 2.x version of this package (for example, 2.5.2) before updating the project to version 3.0.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8533"></a>
+Deprecated classes</h3>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md8534"></a>
+Controller-based classes</h4>
+<p>The controller-based classes are now obsolete and have been deprecated to reflect the new input changes. The functionality of the controller classes can be found in a combination of the standard Tracked Pose Driver component as well the input properties on the individual interactors where that input makes sense.</p>
+<ul>
+<li><span class="tt">XRBaseControllerInteractor</span> replaced with <span class="tt">XRBaseInputInteractor</span></li>
+<li><span class="tt">XRBaseControllerInteractorEditor</span> replaced with <span class="tt">XRBaseInputInteractorEditor</span></li>
+<li><span class="tt">XRBaseControllerInteractorEditor.BaseControllerContents</span> replaced with <span class="tt">XRBaseInputInteractorEditor.BaseInputContents</span></li>
+</ul>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md8535"></a>
+AR interactables and gesture interactor</h4>
+<p>With the introduction of <span class="tt">ARTransformer</span>, <span class="tt">ScreenSpaceRayInteractor</span>, and the associated input components for screen space interaction, the individual AR interactable classes and the <span class="tt">ARGestureInteractor</span> have been deprecated.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md8536"></a>
+Locomotion system and controller-based providers</h4>
+<p>The <span class="tt">LocomotionSystem</span> has been deprecated and replaced by the <span class="tt">LocomotionMediator</span> component. Due to the input changes in XRI 3.0, the locomotion providers that depended on the previous input handling architecture have been deprecated and replaced with a simplified streamlined variant of each.</p>
+<ul>
+<li><span class="tt">LocomotionSystem</span> replaced with <span class="tt">LocomotionMediator</span></li>
+<li><span class="tt">LocomotionPhase</span> replaced with <span class="tt">LocomotionState</span></li>
+<li><span class="tt">ActionBasedContinuousMoveProvider</span> and <span class="tt">DeviceBasedContinuousMoveProvider</span> replaced with <span class="tt">ContinuousMoveProvider</span></li>
+<li><span class="tt">ActionBasedContinuousTurnProvider</span> and <span class="tt">DeviceBasedContinuousTurnProvider</span> replaced with <span class="tt">ContinuousTurnProvider</span></li>
+<li><span class="tt">ActionBasedSnapTurnProvider</span> and <span class="tt">DeviceBasedSnapTurnProvider</span> replaced with <span class="tt">SnapTurnProvider</span></li>
+<li><span class="tt">GrabMoveProvider.grabMoveAction</span> replaced with <span class="tt">GrabMoveProvider.grabMoveInput</span></li>
+</ul>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md8537"></a>
+Affordance system</h4>
+<p>The affordance system has also been deprecated in XRI 3.0. A new feedback system to handle visuals, audio, haptics and more will be coming in a future release of XRI.</p>
+<dl class="section note"><dt>Note</dt><dd>For a full list of what has been deprecated in XRI 3.0 please refer to the Deprecated section in the <a href="../changelog/CHANGELOG.html#300-pre1---2023-12-14">3.0.0-pre.1 Changelog</a>.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8538"></a>
+Input actions</h2>
+<p>When importing or upgrading the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-starter-assets.html">Starter Assets</a> sample, the XRI Default Input Actions may fail to import due to a JSON parsing error. The console will display the following error: <span class="tt">Could not parse input action in JSON format</span>.</p>
+<p><img src="images/upgrade-guide/input-actions-import-error.png" alt="input-actions-import-error" class="inline"/></p>
+<p>To resolve this, select the XRI Default Input Actions asset, and in the Inspector window enable the <b>Generate C# Class</b> checkbox and click <b>Apply</b>. After this error is resolved, the generated C# class can be safely deleted and the <b>Generate C# Class</b> checkbox can be disabled.</p>
+<p><img src="images/upgrade-guide/input-actions-import-error-fix.png" alt="input-actions-import-fix" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8539"></a>
+Missing scripts</h2>
+<p>Depending on the version of XRI 2.x a project is upgrading from, there may be some warnings regarding missing scripts. This is likely due to the removal or migration of the script in the Starter Assets sample. If this warning is on a prefab, make sure the prefab is the latest XRI 3.0 Starter Asset prefab. If the missing script has been removed from the Starter Assets sample but is still needed in the project, the script can be manually migrated out of the Starter Assets sample directory. Note, this migration needs to be done before the Starter Assets sample is upgraded to XRI 3.0 as the upgrade will completely override any existing Starter Assets sample.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8540"></a>
+Serialized property name changes</h2>
+<p>There may be cases where serialized properties names have changed and errors may be thrown that don’t show up immediately upon upgrade in the console. This is most likely to occur with custom Editors for extended XRI classes where Serialized Properties are referenced by strings (in this example it’s likely <span class="tt">serializedObject.FindProperty(“propertyName")</span>). If this is the case, the property is likely deprecated and should be documented with the new property that should be accessed instead. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

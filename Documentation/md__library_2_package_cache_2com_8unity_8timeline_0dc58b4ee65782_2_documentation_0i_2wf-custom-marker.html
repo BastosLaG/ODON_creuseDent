@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Create a custom marker</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-custom-marker.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Create a custom marker </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6076"></a></p>
+<p>This workflow demonstrates how to create a custom marker that you can use to add notes to your <a class="el" href="namespace_timeline.html">Timeline</a> instance. This workflow also demonstrates how to change the default appearance of a custom marker with scripting and a <a class="el" href="namespace_unity.html">Unity</a> Style Sheet (USS).</p>
+<p>If you are unfamiliar with markers and signals, it is recommended that you follow <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-signals.html">the markers and signals workflow</a> before this workflow.</p>
+<p>The custom marker created in this workflow is a simplified version of the custom Annotation marker found in the <a href="samp-custom-samples.md#annosamp">Customization Samples sample</a>. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2samp-overview.html">Timeline Samples</a> for information on the available <a class="el" href="namespace_timeline.html">Timeline</a> samples and how to import them into your projects.</p>
+<p>To demonstrate how to create a custom marker, this workflow is divided into the following main tasks:</p><ol type="1">
+<li><a class="el" href="#setup-instance">Set up the Timeline instance</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#add-files">Add folders for scripts and files</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#note-marker">Create a Notes marker with custom properties</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#line-overlay">Add a line overlay</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#marker-uss">Customize the marker's appearance with USS</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#marker-overlay">Add a marker overlay</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#tooltip">Override the default tooltip</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#fullsrc">Check your scripts</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#more">Add more features</a>.</li>
+</ol>
+<p><a class="anchor" id="setup-instance"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6077"></a>
+Set up the Timeline instance</h1>
+<p>The examples in this workflow use the <a class="el" href="namespace_timeline.html">Timeline</a> instance named <span class="tt">NotesTL</span> which has a single Animation track bound to the <span class="tt">DefaultMale</span> model. The content of this Animation track is the result of following the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-anim-human.html">Animate a humanoid</a> workflow.</p>
+<p><img src="images/tl-custom-start.png" alt="" class="inline"/> <em>The NotesTL <a class="el" href="namespace_timeline.html">Timeline</a> instance before creating a custom marker</em></p>
+<p>It is not necessary to create the same <a class="el" href="namespace_timeline.html">Timeline</a> instance shown in this workflow. You can use any <a class="el" href="namespace_timeline.html">Timeline</a> instance to follow this workflow.</p>
+<p><a class="anchor" id="add-files"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6078"></a>
+Add folders for scripts and files</h1>
+<p>In a <a class="el" href="namespace_unity.html">Unity</a> project, you store scripts, images, and other supporting files in the <span class="tt">Assets</span> folder. You can keep the <span class="tt">Assets</span> folder organized by adding additional folders and sub-folders. To ensure that some scripts, images, and assets are recognized by the <a class="el" href="namespace_unity.html">Unity</a> Editor, some folders must have specific names, be placed in a specific folder structure, or both.</p>
+<p>To organize the <span class="tt">Assets</span> folder and create a recognized folder structure, follow these steps:</p>
+<ol type="1">
+<li>In the Project view, right-click the <span class="tt">Assets</span> folder and choose <b>Create</b> &gt; <b>Folder</b> from the context menu.</li>
+</ol>
+<ol type="1">
+<li>Name this new folder <span class="tt">Notes</span>. This folder will store the scripts, assets, and images for overriding the default marker behavior and appearance.</li>
+</ol>
+<ol type="1">
+<li>In the <span class="tt">Notes</span> folder, add a new folder and name it <span class="tt">Editor</span>. This folder will store a custom script that overrides the default marker behavior and creates a custom editor. This folder must be named <span class="tt">Editor</span>.</li>
+</ol>
+<ol type="1">
+<li>In the <span class="tt">Editor</span> folder, add a new folder and name it <span class="tt">Stylesheets</span>.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">In the <span class="tt">Stylesheets</span> folder, add two new folders. Name one folder <span class="tt">Extensions</span> and the other <span class="tt">Resources</span>. The <span class="tt">Extensions</span> folder will store a <a class="el" href="namespace_unity.html">Unity</a> Style Sheet. This file must be in the path <span class="tt">Editor/Stylesheets/Extensions</span> to be recognized. The <span class="tt">Resources</span> folder will store the image resource files used by the <a class="el" href="namespace_unity.html">Unity</a> Style Sheet. Resource images must be in the path <span class="tt">Editor/Stylesheets/Resources</span> to be recognized.</p>
+<p class="startli"><img src="images/proj-notes-folders.png" alt="" class="inline"/></p>
+<p class="startli"><em>Project window with the <span class="tt">Notes</span> folder and its paths expanded.</em></p>
+</li>
+</ol>
+<p><a class="anchor" id="note-marker"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6079"></a>
+Create a Notes marker with custom properties</h1>
+<p>To create a custom Notes marker with custom properties, you must write a script with a class that inherits from the <span class="tt">Marker</span> class. To do this, follow these steps:</p>
+<ol type="1">
+<li>In the Project window, right-click the <span class="tt">Notes</span> folder and choose <b>Create</b> &gt; <b>C# Script</b> from the context menu. This adds a <span class="tt">NewBehaviourScript</span> file to the <span class="tt">Notes</span> folder.</li>
+</ol>
+<ol type="1">
+<li>Rename the file <span class="tt">NotesMarker.cs</span>. For <a class="el" href="namespace_unity.html">Unity</a> to recognize this script, the file name must match the class name.</li>
+</ol>
+<ol type="1">
+<li>Select the <span class="tt">NotesMarker</span> file in the <span class="tt">Notes</span> folder and choose <b>Open</b> in the Inspector window. The <span class="tt">NotesMarker</span> script opens for editing in your <a href="https://docs.unity3d.com/Manual/Preferences.html#external-tools">External Script Editor</a>.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">In your script editor, replace the contents of the <span class="tt">NotesMarker</span> file with the following:</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span>System.ComponentModel;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>NotesMarker : <a class="code hl_class" href="class_unity_engine_1_1_timeline_1_1_marker.html">Marker</a></div>
+<div class="line">{</div>
+<div class="line">   <span class="keyword">public</span> <span class="keywordtype">string</span> title = <span class="stringliteral">&quot;empty&quot;</span>;</div>
+<div class="line">   <span class="keyword">public</span> Color color = <span class="keyword">new</span> Color(1.0f, 1.0f, 1.0f, 0.5f);</div>
+<div class="line">   <span class="keyword">public</span> <span class="keywordtype">bool</span> showLineOverlay = <span class="keyword">false</span>;</div>
+<div class="line">   [TextArea(10, 15)] <span class="keyword">public</span> <span class="keywordtype">string</span> note;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_marker_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_marker.html">UnityEngine.Timeline.Marker</a></div><div class="ttdoc">Use Marker as a base class when creating a custom marker.</div><div class="ttdef"><b>Definition</b> Marker.cs:12</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition</b> AudioClipPropertiesDrawer.cs:13</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --></li>
+</ol>
+<ol type="1">
+<li>Save the script and switch to the <a class="el" href="namespace_unity.html">Unity</a> Editor. When you save a script and switch to the <a class="el" href="namespace_unity.html">Unity</a> Editor, it recompiles the script and checks for errors or warnings. If found, errors and warnings are written to the Console window. To view the Console window, select <b>Window</b> &gt; <b>General</b> &gt; <b>Console</b>.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">When the script is corrected and recompiled, you can add the Notes marker to your <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+<p class="startli">For example, to add the custom Notes marker to the expanded <a class="el" href="namespace_timeline.html">Timeline</a> Marker track, right-click on the Marker track and select <b>Add Notes Marker</b> from the context menu.</p>
+<p class="startli"><img src="images/tl-custom-first.png" alt="" class="inline"/> <em>Notes marker added to the Marker track. The Notes marker has the same appearance as the default marker.</em></p>
+<p class="startli">The added marker is selected and its custom properties display in the Inspector window. Modifying the custom properties does not affect the selected marker.</p>
+<p class="startli"><img src="images/insp-custom-first.png" alt="" class="inline"/> <em>Except for the Time property, the Notes marker properties are not connected to the selected marker</em></p>
+<p class="startli">For example, if you enable <b>Show Line Overlay</b>, a line overlay is not drawn. If you change the <b>Color</b> property, the color of the selected Notes marker does not change. More scripting is necessary before modifying a custom property in the Inspector window affects the selected Notes marker.</p>
+</li>
+</ol>
+<p><a class="anchor" id="line-overlay"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6080"></a>
+Add a line overlay</h1>
+<p>For the custom properties in the Inspector window to affect the selected Notes marker, you must write a script with a class that inherits from the <span class="tt">MarkerEditor</span> class.</p>
+<p>The <span class="tt">MarkerEditor</span> class is similar to a <a href="https://docs.unity3d.com/ScriptReference/CustomEditor.html">custom Inspector</a>. You override methods in the <span class="tt">MarkerEditor</span> class to perform actions such as drawing a colored line overlay.</p>
+<p>To do this, follow these steps:</p>
+<ol type="1">
+<li>In the Project window, right-click the <span class="tt">Editor</span> folder and choose <b>Create</b> &gt; <b>C# Script</b> from the context menu.</li>
+</ol>
+<ol type="1">
+<li>Name the script <span class="tt">NotesMarkerEditor.cs</span>.</li>
+</ol>
+<ol type="1">
+<li>Select the <span class="tt">NotesMarkerEditor</span> file in the <span class="tt">Editor</span> folder and choose <b>Open</b> in the Inspector window to open this file for editing.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">In the script editor, replace the contents of the <span class="tt">NotesMarkerEditor.cs</span> file with the following code snippet:</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_editor_1_1_timeline.html">UnityEditor.Timeline</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Editor used by the Timeline window to customize the appearance of a NotesMarker</span></div>
+<div class="line"> </div>
+<div class="line">[CustomTimelineEditor(typeof(NotesMarker))]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>NotesMarkerEditor : <a class="code hl_class" href="class_unity_editor_1_1_timeline_1_1_marker_editor.html">MarkerEditor</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Set a constant for the transparency of overlays</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> k_OverlayAlpha = 0.5f;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Override this method to draw a vertical line over the Timeline window&#39;s contents.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> DrawOverlay(<a class="code hl_interface" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a> marker, <a class="code hl_enumeration" href="namespace_unity_editor_1_1_timeline.html#aa1815b2a771f9839fb1df5fc94d1e41a">MarkerUIStates</a> uiState, <a class="code hl_struct" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html">MarkerOverlayRegion</a> region)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Check if marker is not NotesMarker. Set notes as local variable.</span></div>
+<div class="line">        <span class="keywordflow">if</span> (marker is not NotesMarker notes)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span>; <span class="comment">// If not, return without drawing an overlay</span></div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// If NotesMarker, check if Show Line Overlay property is true</span></div>
+<div class="line">        <span class="keywordflow">if</span> (notes.showLineOverlay)</div>
+<div class="line">        {</div>
+<div class="line">            DrawLineOverlay(notes.color, region); <span class="comment">// if Show Line Overlay is true, call function to draw vertical line</span></div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> DrawLineOverlay(Color color, MarkerOverlayRegion region)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Calculate a rectangle that uses the full timeline region&#39;s height and marker width</span></div>
+<div class="line">        Rect overlayLineRect = <span class="keyword">new</span> Rect(region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.x,</div>
+<div class="line">            region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#ac37ddc09463a450d3fa36bba885d50a8">timelineRegion</a>.y,</div>
+<div class="line">            region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.width,</div>
+<div class="line">            region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#ac37ddc09463a450d3fa36bba885d50a8">timelineRegion</a>.height);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Set the color with an extra alpha value adjustment, then draw the rectangle</span></div>
+<div class="line">        Color overlayLineColor = <span class="keyword">new</span> Color(color.r, color.g, color.b, color.a * k_OverlayAlpha);</div>
+<div class="line">        EditorGUI.DrawRect(overlayLineRect, overlayLineColor);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_editor_1_1_timeline_1_1_marker_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_marker_editor.html">UnityEditor.Timeline.MarkerEditor</a></div><div class="ttdoc">Use this class to customize marker types in the TimelineEditor.</div><div class="ttdef"><b>Definition</b> MarkerEditor.cs:240</div></div>
+<div class="ttc" id="ainterface_unity_engine_1_1_timeline_1_1_i_marker_html"><div class="ttname"><a href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">UnityEngine.Timeline.IMarker</a></div><div class="ttdoc">Interface implemented by markers.</div><div class="ttdef"><b>Definition</b> IMarker.cs:11</div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html">UnityEditor.Timeline</a></div><div class="ttdef"><b>Definition</b> ActionContext.cs:8</div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_timeline_html_aa1815b2a771f9839fb1df5fc94d1e41a"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#aa1815b2a771f9839fb1df5fc94d1e41a">UnityEditor.Timeline.MarkerUIStates</a></div><div class="ttdeci">MarkerUIStates</div><div class="ttdoc">The flags that indicate the view status of a marker.</div><div class="ttdef"><b>Definition</b> MarkerEditor.cs:11</div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition</b> HandsSampleProjectValidation.cs:12</div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_timeline_1_1_marker_overlay_region_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html">UnityEditor.Timeline.MarkerOverlayRegion</a></div><div class="ttdoc">The description of the on-screen area where the marker is drawn.</div><div class="ttdef"><b>Definition</b> MarkerEditor.cs:110</div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_timeline_1_1_marker_overlay_region_html_a867b52fc4d7c919003af9a8524a3e99e"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">UnityEditor.Timeline.MarkerOverlayRegion.markerRegion</a></div><div class="ttdeci">Rect markerRegion</div><div class="ttdoc">The area where the marker is being drawn.</div><div class="ttdef"><b>Definition</b> MarkerEditor.cs:114</div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_timeline_1_1_marker_overlay_region_html_ac37ddc09463a450d3fa36bba885d50a8"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#ac37ddc09463a450d3fa36bba885d50a8">UnityEditor.Timeline.MarkerOverlayRegion.timelineRegion</a></div><div class="ttdeci">Rect timelineRegion</div><div class="ttdoc">The area where the overlay is being drawn.</div><div class="ttdef"><b>Definition</b> MarkerEditor.cs:121</div></div>
+</div><!-- fragment --><p class="startli">In the <span class="tt">NotesMarkerEditor</span> script, the <a href="xref:UnityEditor.Timeline.CustomTimelineEditorAttribute">CustomTimelineEditor attribute</a> associates <span class="tt">NotesMarker</span> with the <span class="tt">NotesMarkerEditor</span>.</p>
+<p class="startli">The <span class="tt">NotesMarkerEditor</span> script overrides the <a href="xref:UnityEditor.Timeline.MarkerEditor#UnityEditor_Timeline_MarkerEditor_DrawOverlay_UnityEngine_Timeline_IMarker_UnityEditor_Timeline_MarkerUIStates_UnityEditor_Timeline_MarkerOverlayRegion_">DrawOverlay</a> method. This overridden method checks the type of marker. If the marker is not a <span class="tt">NotesMarker</span>, the method returns without drawing an overlay.</p>
+<p class="startli">If the marker is a <span class="tt">NotesMarker</span> and the <span class="tt">notes.showLineOverlay</span> property is true, the <span class="tt">DrawOverlay</span> method calls the <span class="tt">DrawLineOverlay</span> method. The <span class="tt">DrawLineOverlay</span> method draws a colored line overlay based on the <span class="tt">notes.color</span> property and <a href="xref:UnityEditor.Timeline.MarkerOverlayRegion">MarkerOverlayRegion</a>. This region includes two sub-regions that you can use to calculate the rectangle for the line overlay:</p><ul>
+<li><span class="tt">markerRegion</span>: The region of the marker. You can use this rectangle to draw directly on the marker itself.</li>
+<li><span class="tt">timelineRegion</span>: The region of <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2tl-window.html">the Content view in the Timeline window</a>. The height of the <a class="el" href="namespace_timeline.html">Timeline</a> window is derived from <span class="tt">region.timelineRegion.y</span>.</li>
+</ul>
+</li>
+</ol>
+<ol type="1">
+<li>Save the script, switch to the <a class="el" href="namespace_unity.html">Unity</a> Editor, and correct any errors or warnings. Errors and warnings are written to the Console window. To view the Console window, select <b>Window</b> &gt; <b>General</b> &gt; <b>Console</b>.</li>
+</ol>
+<ol type="1">
+<li>In the <a class="el" href="namespace_timeline.html">Timeline</a> window, select the Notes marker on frame 30.</li>
+</ol>
+<ol type="1">
+<li>In the Inspector window, enable <b>Show Line Overlay</b> and modify the <b>Color</b> property to change the color overlay from white to red.</li>
+</ol>
+<p><img src="images/tl-custom-red-overlay.png" alt="" class="inline"/> <em>Notes marker at frame 30 is drawn with a red line overlay.</em></p>
+<p><a class="anchor" id="marker-uss"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6081"></a>
+Customize the marker's appearance with USS</h1>
+<p>When you create a custom marker, it uses the same images as the default Signal Emitter marker. This makes it difficult to visually distinguish a custom marker from a default marker.</p>
+<p>In this workflow, the Notes marker uses the same images as the default Signal Emitter marker. To change the appearance of the Notes marker, you can use a <a class="el" href="namespace_unity.html">Unity</a> Stylesheet (USS).</p>
+<p>Before creating the USS file, you should have an image for each state of the Notes marker. This workflow uses three states: collapsed, expanded, and selected. The following table provides an image for each Notes marker state:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Image/State</b>  </th><th class="markdownTableHeadLeft"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><img src="images/notes_collapsed.png" alt="" class="inline"/>collapsed  </td><td class="markdownTableBodyLeft">The <span class="tt">notes_collapsed.png</span> image displays when the Notes marker is collapsed.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><img src="images/notes_expanded.png" alt="" class="inline"/>expanded  </td><td class="markdownTableBodyLeft">The <span class="tt">notes_expanded.png</span> image displays when the Notes marker is expanded but not selected.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><img src="images/notes_selected.png" alt="" class="inline"/>selected  </td><td class="markdownTableBodyLeft">The <span class="tt">notes_selected.png</span> image displays when the Notes marker is expanded and selected.  </td></tr>
+</table>
+<p>To modify the Notes marker to use these images, follow these steps:</p>
+<ol type="1">
+<li>Copy the three images from the table above to the <span class="tt">Assets/Notes/Editor/Stylesheets/Resources</span> folder. These images must be located in the <span class="tt">Resources</span> folder to be recognized by the USS file.</li>
+</ol>
+<ol type="1">
+<li>In the Project window, right-click the <span class="tt">Extensions</span> folder in the <span class="tt">Assets/Notes/Editor/Stylesheets</span> path and choose <b>Create</b> &gt; <b>UI Toolkit</b> &gt; <b>Style Sheet</b> from the context menu. A <span class="tt">NewUSSFile.uss</span> is created in the <span class="tt">Extensions</span> folder.</li>
+</ol>
+<ol type="1">
+<li>Rename the <span class="tt">NewUSSFile</span> file as <span class="tt">common</span>. This USS file must be named <span class="tt">common.uss</span> and must be saved in the <span class="tt">Editor/Stylesheets/Extensions</span> path for it to be recognized by <a class="el" href="namespace_unity.html">Unity</a>.</li>
+</ol>
+<ol type="1">
+<li>Select the <span class="tt">common</span> USS file in the <span class="tt">Extensions</span> folder and choose <b>Open</b> in the Inspector window. The <span class="tt">common.uss</span> file opens for editing in your <a href="https://docs.unity3d.com/Manual/Preferences.html#external-tools">External Script Editor</a>.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">In the script editor, replace the contents of the <span class="tt">common.uss</span> file with the following:</p>
+<div class="fragment"><div class="line">/* Custom USS stylesheet. */</div>
+<div class="line"> </div>
+<div class="line">/* NotesMarker uses this style and image when marker is collapsed.*/</div>
+<div class="line">.NotesStyle</div>
+<div class="line">{</div>
+<div class="line">    width:16px;</div>
+<div class="line">    height:16px;</div>
+<div class="line">    background-image: resource(&quot;notes_collapsed&quot;);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">/* NotesMarker uses this style and image when the marker is selected.*/</div>
+<div class="line">.NotesStyle:hover:focus:checked</div>
+<div class="line">{</div>
+<div class="line">    background-image: resource(&quot;notes_selected&quot;);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">/* NotesMarker uses this style and image when the marker is not selected.*/</div>
+<div class="line">.NotesStyle:checked</div>
+<div class="line">{</div>
+<div class="line">    background-image: resource(&quot;notes_expanded&quot;);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> USS styles support <a href="https://docs.unity3d.com/Manual/UIE-USS-Selectors.html">pseudo-states</a>, which are similar to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes in CSS</a>. <a class="el" href="namespace_timeline.html">Timeline</a> markers use pseudo-states to set its image depending on whether the marker is collapsed, expanded, or selected:</p><ul>
+<li>Collapsed: no pseudo-state</li>
+<li>Expanded: <span class="tt">checked</span> pseudo-state</li>
+<li><p class="startli">Selected: combination <span class="tt">hover:focus:checked</span> pseudo-states</p>
+<p class="startli">The <span class="tt">common.uss</span> file defines USS styles for both the light and dark <a href="https://docs.unity3d.com/Manual/Preferences.html#external-tools">Editor Theme</a>.</p>
+<p class="startli">If you want to define specific styles for the <a class="el" href="namespace_unity.html">Unity</a> light and dark themes, in the same folder as the <span class="tt">common.uss</span> file, add the <span class="tt">light.uss</span> and <span class="tt">dark.uss</span> style sheets. The styles defined in these USS files will override styles in the <span class="tt">common.uss</span> file.</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">To associate the Notes marker with the custom <span class="tt">NotesStyle</span> style, add the <span class="tt">CustomStyle</span> attribute to the <span class="tt">NotesMaker</span> script. Add the attribute to the script before the class definition:</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">[CustomStyle(<span class="stringliteral">&quot;NotesStyle&quot;</span>)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>NotesMarker : <a class="code hl_class" href="class_unity_engine_1_1_timeline_1_1_marker.html">Marker</a></div>
+<div class="line">{</div>
+<div class="line">...</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+</ol>
+<ol type="1">
+<li>Save the <span class="tt">NotesMarker</span> script, switch to the <a class="el" href="namespace_unity.html">Unity</a> Editor, and correct any errors or warnings. Errors and warnings are written to the Console window. To view the Console window, select <b>Window</b> &gt; <b>General</b> &gt; <b>Console</b>.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">When the script is corrected and recompiled, the appearance of each Notes marker changes depending on whether the marker is selected, not selected, or collapsed:</p>
+<p class="startli"><img src="images/tl-custom-states.png" alt="" class="inline"/> <b>(A)</b> The Notes marker at frame 30 is selected. <b>(B)</b> The Notes marker at frame 60 is not selected. <b>(C)</b> The Notes markers at frames 90 and 150, on the Animation track, are collapsed.</p>
+</li>
+</ol>
+<p><a class="anchor" id="marker-overlay"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6082"></a>
+Add a marker overlay</h1>
+<p>At this point in the workflow, the Notes marker uses custom images and uses the Color property when the Show Line Overlay property is enabled. The Color property is not used when the Show Line Overlay is disabled.</p>
+<p>To use the Color property to add color to the Notes marker in all states, expand the conditional statement for the Show Line Overlay property to include a draw marker overlay method. This method draws an overlay for the size of the Notes marker.</p>
+<p>To do this, follow these steps:</p>
+<ol type="1">
+<li>Select the <span class="tt">NotesMarkerEditor</span> script in the <span class="tt">Assets/Notes/Editor</span> folder and choose <b>Open</b> in the Inspector window. This script opens for editing in your <a href="https://docs.unity3d.com/Manual/Preferences.html#external-tools">External Script Editor</a>.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">In the <span class="tt">NotesMarkerEditor</span> script, expand the <span class="tt">if</span> statement to include an <span class="tt">else</span> statement which calls a new function named <span class="tt">DrawMarkerOverlay</span>:</p>
+<div class="fragment"><div class="line"><span class="comment">// If NotesMarker, check if Show Line Overlay is true</span></div>
+<div class="line"><span class="keywordflow">if</span> (notes.showLineOverlay)</div>
+<div class="line">{</div>
+<div class="line">    DrawLineOverlay(notes.color, region); <span class="comment">// if Show Line Overlay is true, draw vertical line</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> <span class="comment">// If NotesMarker and Show Line Overlay is false, draw marker overlay</span></div>
+<div class="line">{</div>
+<div class="line">    DrawMarkerOverlay(notes.color, region, uiState);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> If the marker is a <span class="tt">NotesMarker</span> and the <span class="tt">notes.showLineOverlay</span> property is false, the <span class="tt">DrawOverlay</span> method calls the <span class="tt">DrawMarkerOverlay</span> function. The <span class="tt">DrawMarkerOverlay</span> function is similar to <span class="tt">DrawLineOverlay</span> except an additional parameter is included to check the UI state of the Notes marker.</p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">In the <span class="tt">NotesMarkerEditor</span> script, after the <span class="tt">DrawLineOverlay</span> function, add the new <span class="tt">DrawMarkerOverlay</span> function:</p>
+<div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> DrawMarkerOverlay(Color color, <a class="code hl_struct" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html">MarkerOverlayRegion</a> region, <a class="code hl_enumeration" href="namespace_unity_editor_1_1_timeline.html#aa1815b2a771f9839fb1df5fc94d1e41a">MarkerUIStates</a> state)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// By default, set the height to the markerRegion&#39;s height</span></div>
+<div class="line">    <span class="keywordtype">float</span> markerHeight = region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.height;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// If marker is collapsed, set the height to 2/3 the markerRegion&#39;s height</span></div>
+<div class="line">    <span class="keywordflow">if</span> (state.HasFlag(<a class="code hl_enumeration" href="namespace_unity_editor_1_1_timeline.html#aa1815b2a771f9839fb1df5fc94d1e41a">MarkerUIStates</a>.Collapsed))</div>
+<div class="line">    {</div>
+<div class="line">        markerHeight = region.markerRegion.height / 1.5f;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Calculate a rectangle that uses the marker region and variable markerHeight</span></div>
+<div class="line">    Rect overlayMarkerRect = <span class="keyword">new</span> Rect(region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.x,</div>
+<div class="line">        region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.y,</div>
+<div class="line">        region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.width,</div>
+<div class="line">        markerHeight);</div>
+<div class="line"> </div>
+<div class="line">    Color overlayMarkerColor = <span class="keyword">new</span> Color(color.r, color.g, color.b, color.a * k_OverlayAlpha);</div>
+<div class="line">    EditorGUI.DrawRect(overlayMarkerRect, overlayMarkerColor);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p class="startli">The <span class="tt">DrawMarkerOverlay</span> function draws a colored rectangle based on the <span class="tt">notes.color</span> property and the <a href="xref:UnityEditor.Timeline.MarkerOverlayRegion">MarkerOverlayRegion</a>. The function uses the <span class="tt">markerRegion</span> region and the UI state to calculate the size of the overlay.</p>
+<p class="startli">For example, if the Notes marker is collapsed (<span class="tt">state.HasFlag(MarkerUIStates.Collapsed)</span>) then the rectangle is set to two-thirds the height of the marker region. This matches the height of the <span class="tt">notes_collapsed.png</span> file. When the Notes marker is not collapsed, the marker overlay uses the full height of the Notes marker.</p>
+</li>
+</ol>
+<ol type="1">
+<li>Save the <span class="tt">NotesMarkerEditor</span> script, switch to the <a class="el" href="namespace_unity.html">Unity</a> Editor, and correct any errors or warnings. Errors and warnings are written to the Console window. To view the Console window, select <b>Window</b> &gt; <b>General</b> &gt; <b>Console</b>.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">After the script is corrected and recompiled, each Notes marker is drawn using its Color property. For example, if</p>
+<p class="startli"><img src="images/tl-custom-colors.png" alt="" class="inline"/> <b>(A)</b> The Notes marker at frame 30 is red. <b>(B)</b> The Notes marker at frame 60 is green. <b>(C)</b> The Notes markers at frames 90 and 150, on the Animation track, are collapsed and blue.</p>
+</li>
+</ol>
+<p><a class="anchor" id="tooltip"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6083"></a>
+Override the default tooltip</h1>
+<p>A tooltip is a brief two or three sentence description that displays when you hover the cursor over an interface element such as a property name, a button, or an option.</p>
+<p>If you hover the cursor over the default <a class="el" href="namespace_timeline.html">Timeline</a> marker, the tooltip displays the name of its Signal asset. Because the custom Notes marker does not emit a signal, when you hover over the Notes marker, nothing displays.</p>
+<p>You can override the <span class="tt">MarkerDrawOptions</span> function in the <span class="tt">NotesMarkerEditor</span> script to use the tooltip to display the title of the Notes marker. To do this, follow these steps:</p>
+<ol type="1">
+<li>In the Project window, select the <span class="tt">NotesMarkerEditor</span> script in the <span class="tt">Assets/Notes/Editor</span> folder and choose <b>Open</b> in the Inspector window. The script opens for editing in your <a href="https://docs.unity3d.com/Manual/Preferences.html#external-tools">External Script Editor</a>.</li>
+</ol>
+<ol type="1">
+<li>Override the <span class="tt">GetMarkerOptions</span> method by inserting the following code snippet after the <span class="tt">const float k_OverlayAlpha = 0.5f</span> assignment: <div class="fragment"><div class="line"><span class="comment">// Use MarkerDrawOptions to override the marker&#39;s tooltip if the marker is of type NotesMarker.</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_struct" href="struct_unity_editor_1_1_timeline_1_1_marker_draw_options.html">MarkerDrawOptions</a> GetMarkerOptions(<a class="code hl_interface" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a> marker)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Check if marker is not NotesMarker and assign it to notes</span></div>
+<div class="line">    <span class="keywordflow">if</span> (marker is not NotesMarker notes)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> base.GetMarkerOptions(marker); <span class="comment">// If not, return with no tooltip override</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_struct" href="struct_unity_editor_1_1_timeline_1_1_marker_draw_options.html">MarkerDrawOptions</a> { tooltip = notes.title }; <span class="comment">// If NotesMarker, replace tooltip with contents of notes.title</span></div>
+<div class="line">}</div>
+<div class="ttc" id="astruct_unity_editor_1_1_timeline_1_1_marker_draw_options_html"><div class="ttname"><a href="struct_unity_editor_1_1_timeline_1_1_marker_draw_options.html">UnityEditor.Timeline.MarkerDrawOptions</a></div><div class="ttdoc">The user-defined options for drawing a marker.</div><div class="ttdef"><b>Definition</b> MarkerEditor.cs:32</div></div>
+</div><!-- fragment --> The <a href="xref:UnityEditor.Timeline.MarkerEditor#UnityEditor_Timeline_MarkerEditor_GetMarkerOptions_UnityEngine_Timeline_IMarker_">GetMarkerOptions</a> method provides information about the marker through the MarkerEditor class.</li>
+</ol>
+<ol type="1">
+<li>Save the <span class="tt">NotesMarkerEditor</span> script, switch to the <a class="el" href="namespace_unity.html">Unity</a> Editor, and correct any errors or warnings. Errors and warnings are written to the Console window. To view the Console window, select <b>Window</b> &gt; <b>General</b> &gt; <b>Console</b>.</li>
+</ol>
+<ol type="1">
+<li>After the script is corrected and recompiled, when you hover over a Notes marker, the title of the Notes marker displays as a tooltip. By default, each Notes marker tooltip displays "empty". You can change the default title in the <span class="tt">NotesMarker</span> script. The tooltip also displays for collapsed Notes markers.</li>
+</ol>
+<p><a class="anchor" id="fullsrc"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6084"></a>
+Check your scripts</h1>
+<p>This topic provides the complete scripts that you created and modified during this workflow. Use these listings to ensure that you have entered and edited the following scripts correctly:</p>
+<ul>
+<li><a class="el" href="#allnotesmarker">NotesMarker script</a>.</li>
+<li><a class="el" href="#allnotesmarkereditor">NotesMarkerEditor script</a>.</li>
+</ul>
+<p>Use these listings to ensure that your</p>
+<p><a class="anchor" id="allnotesmarker"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6085"></a>
+<span class="tt">NotesMarker</span> script</h2>
+<p>The complete <span class="tt">NotesMarker.</span>cs script: </p><div class="fragment"><div class="line"><span class="keyword">using </span>System.ComponentModel;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a>;</div>
+<div class="line"> </div>
+<div class="line">[CustomStyle(<span class="stringliteral">&quot;NotesStyle&quot;</span>)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>NotesMarker : <a class="code hl_class" href="class_unity_engine_1_1_timeline_1_1_marker.html">Marker</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">public</span> <span class="keywordtype">string</span> title = <span class="stringliteral">&quot;empty&quot;</span>;</div>
+<div class="line">  <span class="keyword">public</span> Color color = <span class="keyword">new</span> Color(1.0f, 1.0f, 1.0f, 0.5f);</div>
+<div class="line">  <span class="keyword">public</span> <span class="keywordtype">bool</span> showLineOverlay = <span class="keyword">false</span>;</div>
+<div class="line">  [TextArea(10, 15)] <span class="keyword">public</span> <span class="keywordtype">string</span> note;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a class="anchor" id="allnotesmarkereditor"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6086"></a>
+<span class="tt">NotesMarkerEditor</span> script</h2>
+<p>The complete <span class="tt">NotesMarkerEditor.cs</span> file: </p><div class="fragment"><div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_editor_1_1_timeline.html">UnityEditor.Timeline</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Editor used by the Timeline window to customize the appearance of a NotesMarker</span></div>
+<div class="line"> </div>
+<div class="line">[CustomTimelineEditor(typeof(NotesMarker))]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>NotesMarkerEditor : <a class="code hl_class" href="class_unity_editor_1_1_timeline_1_1_marker_editor.html">MarkerEditor</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Set a constant for the transparency of overlays</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">float</span> k_OverlayAlpha = 0.5f;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Use MarkerDrawOptions to override the marker&#39;s tooltip if the marker is of type NotesMarker.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_struct" href="struct_unity_editor_1_1_timeline_1_1_marker_draw_options.html">MarkerDrawOptions</a> GetMarkerOptions(<a class="code hl_interface" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a> marker)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Check if marker is not NotesMarker and assign it to notes</span></div>
+<div class="line">        <span class="keywordflow">if</span> (marker is not NotesMarker notes)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> base.GetMarkerOptions(marker); <span class="comment">// If not, return with no tooltip override</span></div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_struct" href="struct_unity_editor_1_1_timeline_1_1_marker_draw_options.html">MarkerDrawOptions</a> { tooltip = notes.title }; <span class="comment">// If NotesMarker, replace tooltip with contents of notes.title</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Override this method to draw a vertical line over the Timeline window&#39;s contents.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> DrawOverlay(IMarker marker, MarkerUIStates uiState, MarkerOverlayRegion region)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Check if marker is not NotesMarker. Set notes as local variable.</span></div>
+<div class="line">        <span class="keywordflow">if</span> (marker is not NotesMarker notes)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span>; <span class="comment">// If not, return without drawing an overlay</span></div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// If NotesMarker, check if Show Line Overlay property is true</span></div>
+<div class="line">        <span class="keywordflow">if</span> (notes.showLineOverlay)</div>
+<div class="line">        {</div>
+<div class="line">            DrawLineOverlay(notes.color, region); <span class="comment">// if Show Line Overlay is true, call function to draw vertical line</span></div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="comment">// If NotesMarker and Show Line Overlay is false, draw marker overlay</span></div>
+<div class="line">        {</div>
+<div class="line">            DrawMarkerOverlay(notes.color, region, uiState);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> DrawLineOverlay(Color color, MarkerOverlayRegion region)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Calculate a rectangle that uses the full timeline region&#39;s height and marker width</span></div>
+<div class="line">        Rect overlayLineRect = <span class="keyword">new</span> Rect(region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.x,</div>
+<div class="line">            region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#ac37ddc09463a450d3fa36bba885d50a8">timelineRegion</a>.y,</div>
+<div class="line">            region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.width,</div>
+<div class="line">            region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#ac37ddc09463a450d3fa36bba885d50a8">timelineRegion</a>.height);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Set the color with an extra alpha value adjustment, then draw the rectangle</span></div>
+<div class="line">        Color overlayLineColor = <span class="keyword">new</span> Color(color.r, color.g, color.b, color.a * k_OverlayAlpha);</div>
+<div class="line">        EditorGUI.DrawRect(overlayLineRect, overlayLineColor);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> DrawMarkerOverlay(Color color, MarkerOverlayRegion region, MarkerUIStates state)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// By default, set the height to the markerRegion&#39;s height</span></div>
+<div class="line">        <span class="keywordtype">float</span> markerHeight = region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.height;</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// If marker is collapsed, set the height to 2/3 the markerRegion&#39;s height</span></div>
+<div class="line">        <span class="keywordflow">if</span> (state.HasFlag(<a class="code hl_enumeration" href="namespace_unity_editor_1_1_timeline.html#aa1815b2a771f9839fb1df5fc94d1e41a">MarkerUIStates</a>.Collapsed))</div>
+<div class="line">        {</div>
+<div class="line">            markerHeight = region.markerRegion.height / 1.5f;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Calculate a rectangle that uses the marker region and variable markerHeight</span></div>
+<div class="line">        Rect overlayMarkerRect = <span class="keyword">new</span> Rect(region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.x,</div>
+<div class="line">            region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.y,</div>
+<div class="line">            region.<a class="code hl_property" href="struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e">markerRegion</a>.width,</div>
+<div class="line">            markerHeight);</div>
+<div class="line"> </div>
+<div class="line">        Color overlayMarkerColor = <span class="keyword">new</span> Color(color.r, color.g, color.b, color.a * k_OverlayAlpha);</div>
+<div class="line">        EditorGUI.DrawRect(overlayMarkerRect, overlayMarkerColor);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a class="anchor" id="more"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6087"></a>
+Add more features</h1>
+<p>The Notes marker is complete but you can continue adding features. Here are some suggestions:</p>
+<ul>
+<li>In the <a class="el" href="#marker-overlay">add a marker overlay</a> step, you draw a colored overlay for the Notes marker. This changes the background color of the Notes marker but does not draw the image using color. To do this, you could load each marker image as a 2D texture and draw these images with the marker's color. Consult the <a href="samp-custom-samples.md#annosamp">custom Annotation marker sample</a> for more on how to load 2D textures and draw them with a specific color.</li>
+<li>In the <a class="el" href="#marker-uss">customize the marker's appearance with USS</a> step, you use the <span class="tt">common.uss</span> file to define USS styles for both the light and dark <a href="https://docs.unity3d.com/Manual/Preferences.html#external-tools">Editor Theme</a>. To define specific styles for the light and dark themes, you can create USS files named <span class="tt">light.uss</span> and <span class="tt">dark.uss</span>. These files, if present at the same path as <span class="tt">common.uss</span>, overrides styles with the same name and pseudo-states. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

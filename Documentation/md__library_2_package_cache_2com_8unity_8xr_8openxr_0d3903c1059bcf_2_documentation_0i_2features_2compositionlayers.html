@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: compositionlayers</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_2compositionlayers.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">compositionlayers </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md9352"></a>
+autotoc_md9352</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9353"></a>
+uid: openxr-composition-layers</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9354"></a>
+Composition Layers Support</h1>
+<p>The OpenXR Composition Layers feature provides support for rendering high quality images on layer types, such as cylinder, equirect, cube, and more, on platforms like the Quest headsets. This functionality allows developers to manage visual layers in a flexible, performant way, tailored for XR applications.</p>
+<p>Refer to the <a href="https://docs.unity3d.com/Packages/com.unity.xr.compositionlayers@latest">Composition Layers</a> documentation for information about using composition layers in a scene.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9355"></a>
+Installation</h2>
+<p>To use this feature, install the <a href="https://docs.unity3d.com/Packages/com.unity.xr.compositionlayers@1.0/manual/index.html">Composition Layers package</a>. Follow the steps in the package documentation for installation details.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9356"></a>
+Enabling Composition Layers</h2>
+<p>Once the package is installed, you can enable OpenXR Composition Layers in your <a class="el" href="namespace_unity.html">Unity</a> project:</p>
+<ol type="1">
+<li>Open the <b>Project Settings</b> window (menu: <b>Edit &gt; Project Settings</b>).</li>
+<li>Select <b>XR Plug-in Management</b> from the list of settings on the left.</li>
+<li>If necessary, enable <b>OpenXR</b> in the list of <b>Plug-in Providers</b>. <a class="el" href="namespace_unity.html">Unity</a> installs the OpenXR plug-in, if not already installed.</li>
+<li>Select the <b>OpenXR</b> settings page under <b>XR Plug-in Management</b>.</li>
+<li>Enable the <b>Composition Layer Support</b> option in the <b>OpenXR Feature Groups</b> area of the <b>OpenXR</b> settings.</li>
+</ol>
+<p><img src="../../images/openxr-features.png" alt="OpenXR feature options" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9357"></a>
+Custom Layers</h2>
+<p>In addition to the built-in layer types supported by the Composition Layers feature, you can create and register your own custom composition layers. This is particularly useful when your project requires non-standard visual behavior, optimized layer rendering, or complex interactions in AR/VR environments.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9358"></a>
+Custom Layer Example</h3>
+<p>The following example demonstrates how to create a custom layer handler for a custom layer type. This handler is responsible for managing the lifecycle of the layer, rendering, and other properties.</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line">[<a class="code hl_namespace" href="namespace_unity_editor.html">UnityEditor</a>.<a class="code hl_namespace" href="namespace_unity_editor_1_1_x_r.html">XR</a>.<a class="code hl_namespace" href="namespace_unity_editor_1_1_x_r_1_1_open_x_r.html">OpenXR</a>.<a class="code hl_namespace" href="namespace_unity_editor_1_1_x_r_1_1_open_x_r_1_1_features.html">Features</a>.OpenXRFeature(UiName = <span class="stringliteral">&quot;OpenXR Custom Layer Handler Example&quot;</span>,</div>
+<div class="line">    BuildTargetGroups = <span class="keyword">new</span>[] { BuildTargetGroup.Standalone, BuildTargetGroup.WSA, BuildTargetGroup.Android },</div>
+<div class="line">    Company = <span class="stringliteral">&quot;Unity&quot;</span>,</div>
+<div class="line">    Desc = <span class="stringliteral">&quot;An example to demonstrate how to enable a handler for a customized composition layer type.&quot;</span>,</div>
+<div class="line">    DocumentationLink = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line">    FeatureId = <span class="stringliteral">&quot;com.unity.openxr.features.customlayerexample&quot;</span>,</div>
+<div class="line">    OpenxrExtensionStrings = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line">    Version = <span class="stringliteral">&quot;1&quot;</span>)]</div>
+<div class="line">#endif</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class</span> CustomFeature : OpenXRFeature</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">bool</span> isSubscribed;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnEnable()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (OpenXRLayerProvider.isStarted)</div>
+<div class="line">            CreateAndRegisterLayerHandler();</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">            OpenXRLayerProvider.Started += CreateAndRegisterLayerHandler;</div>
+<div class="line">            isSubscribed = <span class="keyword">true</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnDisable()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (isSubscribed)</div>
+<div class="line">        {</div>
+<div class="line">            OpenXRLayerProvider.Started -= CreateAndRegisterLayerHandler;</div>
+<div class="line">            isSubscribed = <span class="keyword">false</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keywordtype">void</span> CreateAndRegisterLayerHandler()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (enabled)</div>
+<div class="line">        {</div>
+<div class="line">            var layerHandler = <span class="keyword">new</span> CustomLayerHandler();</div>
+<div class="line">            OpenXRLayerProvider.RegisterLayerHandler(typeof(CustomQuadLayerData), layerHandler);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_x_r_1_1_open_x_r_1_1_features_html"><div class="ttname"><a href="namespace_unity_editor_1_1_x_r_1_1_open_x_r_1_1_features.html">UnityEditor.XR.OpenXR.Features</a></div><div class="ttdef"><b>Definition</b> BootConfigBuilder.cs:7</div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_x_r_1_1_open_x_r_html"><div class="ttname"><a href="namespace_unity_editor_1_1_x_r_1_1_open_x_r.html">UnityEditor.XR.OpenXR</a></div><div class="ttdef"><b>Definition</b> BootConfig.cs:6</div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_x_r_html"><div class="ttname"><a href="namespace_unity_editor_1_1_x_r.html">UnityEditor.XR</a></div><div class="ttdef"><b>Definition</b> HandsSampleProjectValidation.cs:12</div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition</b> HandsSampleProjectValidation.cs:12</div></div>
+</div><!-- fragment --><p>This code can also be imported from the OpenXR <a class="el" href="class_samples.html">Samples</a> in the Package Manager.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9359"></a>
+When to Use Custom Layers</h3>
+<p>You may want to create a custom layer in situations where:</p>
+<ul>
+<li>You need to implement a specific rendering technique not covered by the standard layer types (such as a specialized quad or cylinder layer).</li>
+<li>Performance optimizations for specific layer interactions are required.</li>
+<li>Create unique visual effects or layer behaviors in your XR application.</li>
+</ul>
+<p>By registering custom layer handlers, you can gain full control over how the composition layers are processed and rendered, allowing for more tailored XR experiences. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

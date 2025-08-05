@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Processors</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_processors.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Processors </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2220"></a>
+autotoc_md2220</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2221"></a>
+uid: input-system-processors</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2222"></a>
+Processors</h1>
+<p>An Input Processor takes a value and returns a processed result for it. The received value and result value must be of the same type. For example, you can use a clamp Processor to clamp values from a control to a certain range.</p>
+<p>&gt;<b>Note</b>: To convert received input values into different types, see <a href="ActionBindings.md#composite-bindings">composite Bindings</a>.</p>
+<ul>
+<li>Using Processors<ul>
+<li>Processors on Bindings</li>
+<li>Processors on Actions</li>
+<li>Processors on Controls</li>
+</ul>
+</li>
+<li>Predefined Processors<ul>
+<li>Clamp</li>
+<li>Invert</li>
+<li>Invert Vector 2</li>
+<li>Invert Vector 3</li>
+<li>Normalize</li>
+<li>Normalize Vector 2</li>
+<li>Normalize Vector 3</li>
+<li>Scale</li>
+<li>Scale Vector 2</li>
+<li>Scale Vector 3</li>
+<li>Axis deadzone</li>
+<li>Stick deadzone</li>
+</ul>
+</li>
+<li>Writing custom Processors</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2223"></a>
+Using Processors</h2>
+<p>You can install Processors on <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_bindings.html">bindings</a>, <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">actions</a> or on <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_controls.html">controls</a>.</p>
+<p>Each Processor is <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_RegisterProcessor__1_System_String_">registered</a> using a unique name. To replace an existing Processor, register your own Processor under an existing name.</p>
+<p>Processors can have parameters which can be booleans, integers, or floating-point numbers. When created in data such as <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_bindings.html">bindings</a>, processors are described as strings that look like function calls:</p>
+<div class="fragment"><div class="line"><span class="comment">// This references the processor registered as &quot;scale&quot; and sets its &quot;factor&quot;</span></div>
+<div class="line"><span class="comment">// parameter (a floating-point value) to a value of 2.5.</span></div>
+<div class="line"> </div>
+<div class="line"><span class="stringliteral">&quot;scale(factor=2.5)&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Multiple processors can be chained together. They are processed</span></div>
+<div class="line"><span class="comment">// from left to right.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// Example: First invert the value, then normalize [0..10] values to [0..1].</span></div>
+<div class="line"> </div>
+<div class="line"><span class="stringliteral">&quot;invert,normalize(min=0,max=10)&quot;</span></div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2224"></a>
+Processors on Bindings</h3>
+<p>When you create Bindings for your <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">actions</a>, you can choose to add Processors to the Bindings. These process the values from the controls they bind to, before the system applies them to the Action value. For instance, you might want to invert the <span class="tt">Vector2</span> values from the controls along the Y axis before passing these values to the Action that drives the input logic for your application. To do this, you can add an Invert Vector2 Processor to your Binding.</p>
+<p>If you're using Actions defined in the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions Editor</a>, or in an <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_assets.html">Action Asset</a>, you can add any Processor to your Bindings in the Input Action editor. Select the Binding you want to add Processors to so that the right pane of the window displays the properties for that Binding. Select the Add (+) icon on the <b>Processors</b> foldout to open a list of all available Processors that match your control type, then choose a Processor type to add a Processor instance of that type. The Processor now appears under the <b>Processors</b> foldout. If the Processor has any parameters, you can edit them in the <b>Processors</b> foldout.</p>
+<p><img src="Images/BindingProcessors.png" alt="Binding Processors" class="inline"/></p>
+<p>To remove a Processor, click the Remove (-) icon next to it. You can also use the up and down arrows to change the order of Processors. This affects the order in which the system processes values.</p>
+<p>If you create your Bindings in code, you can add Processors like this:</p>
+<div class="fragment"><div class="line">var action = <span class="keyword">new</span> InputAction();</div>
+<div class="line">action.AddBinding(<span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick&quot;</span>)</div>
+<div class="line">    .WithProcessor(<span class="stringliteral">&quot;invertVector2(invertX=false)&quot;</span>);</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2225"></a>
+Processors on Actions</h3>
+<p>Processors on Actions work in the same way as Processors on Bindings, but they affect all controls bound to an Action, rather than just the controls from a specific Binding. If there are Processors on both the Binding and the Action, the system processes the ones from the Binding first.</p>
+<p>You can add and edit Processors on Actions in the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions Editor</a>, or in an <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_assets.html">Action Asset</a> the same way as you would for Bindings: select an Action to edit, then add one or more Processors in the right window pane.</p>
+<p>If you create your Actions in code, you can add Processors like this:</p>
+<div class="fragment"><div class="line">var action = <span class="keyword">new</span> InputAction(processors: <span class="stringliteral">&quot;invertVector2(invertX=false)&quot;</span>);</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2226"></a>
+Processors on Controls</h3>
+<p>You can have any number of Processors directly on an <a href="../api/UnityEngine.InputSystem.InputControl.html"><span class="tt">InputControl</span></a>, which then process the values read from the Control. Whenever you call <a href="../api/UnityEngine.InputSystem.InputControl-1.html#UnityEngine_InputSystem_InputControl_1_ReadValue"><span class="tt">ReadValue</span></a> on a Control, all Processors on that Control process the value before it gets returned to you. You can use <a href="../api/UnityEngine.InputSystem.InputControl-1.html#UnityEngine_InputSystem_InputControl_1_ReadUnprocessedValue"><span class="tt">ReadUnprocessedValue</span></a> on a Control to bypass the Processors.</p>
+<p>The Input System adds Processors to a Control during device creation, if they're specified in the Control's <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_layouts.html">layout</a>. You can't add Processors to existing Controls after they've been created, so you can only add Processors to Controls when you're <a href="Devices.md#creating-custom-devices">creating custom devices</a>. The devices that the Input System supports out of the box already have some useful Processors added on their Controls. For instance, sticks on gamepads have a Stick Deadzone Processor.</p>
+<p>If you're using a layout generated by the Input System from a <a href="Devices.md#step-1-the-state-struct">state struct</a> using <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html"><span class="tt">InputControlAttributes</span></a>, you can specify the Processors you want to use via the <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_processors"><span class="tt">processors</span></a> property of the attribute, like this:</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">struct </span>MyDeviceState : IInputStateTypeInfo</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> FourCC format =&gt; <span class="keywordflow">return</span> <span class="keyword">new</span> FourCC(<span class="charliteral">&#39;M&#39;</span>, <span class="charliteral">&#39;Y&#39;</span>, <span class="charliteral">&#39;D&#39;</span>, <span class="charliteral">&#39;V&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Add an axis deadzone to the Control to ignore values</span></div>
+<div class="line">    <span class="comment">// smaller then 0.2, as our Control does not have a stable</span></div>
+<div class="line">    <span class="comment">// resting position.</span></div>
+<div class="line">    [InputControl(layout = <span class="stringliteral">&quot;Axis&quot;</span>, processors = <span class="stringliteral">&quot;AxisDeadzone(min=0.2)&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">short</span> axis;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>If you <a href="Layouts.md#layout-from-json">create a layout from JSON</a>, you can specify Processors on your Controls like this:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="stringliteral">&quot;name&quot;</span> : <span class="stringliteral">&quot;MyDevice&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;extend&quot;</span> : <span class="stringliteral">&quot;Gamepad&quot;</span>, <span class="comment">// Or some other thing</span></div>
+<div class="line">    <span class="stringliteral">&quot;controls&quot;</span> : [</div>
+<div class="line">        {</div>
+<div class="line">            <span class="stringliteral">&quot;name&quot;</span> : <span class="stringliteral">&quot;axis&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;layout&quot;</span> : <span class="stringliteral">&quot;Axis&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;offset&quot;</span> : 4,</div>
+<div class="line">            <span class="stringliteral">&quot;format&quot;</span> : <span class="stringliteral">&quot;FLT&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;processors&quot;</span> : <span class="stringliteral">&quot;AxisDeadzone(min=0.2)&quot;</span></div>
+<div class="line">        }</div>
+<div class="line">    ]</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md2227"></a>
+Predefined Processors</h2>
+<p>The Input System package comes with a set of useful Processors you can use.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2228"></a>
+Clamp</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.ClampProcessor.html"><span class="tt">Clamp</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Parameters</b>  </td><td class="markdownTableBodyNone"><span class="tt">float min</span><br  />
+<span class="tt">float max</span>  </td></tr>
+</table>
+<p>Clamps input values to the [<span class="tt">min</span>..<span class="tt">max</span>] range.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2229"></a>
+Invert</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.InvertProcessor.html"><span class="tt">Invert</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td></tr>
+</table>
+<p>Inverts the values from a Control (that is, multiplies the values by -1).</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2230"></a>
+Invert Vector 2</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.InvertVector2Processor.html"><span class="tt">InvertVector2</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">Vector2</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Parameters</b>  </td><td class="markdownTableBodyNone"><span class="tt">bool invertX</span><br  />
+<span class="tt">bool invertY</span>  </td></tr>
+</table>
+<p>Inverts the values from a Control (that is, multiplies the values by -1). Inverts the x axis of the vector if <span class="tt">invertX</span> is true, and the y axis if <span class="tt">invertY</span> is true.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2231"></a>
+Invert Vector 3</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.InvertVector3Processor.html"><span class="tt">Invert Vector 3</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">Vector3</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Parameters</b>  </td><td class="markdownTableBodyNone"><span class="tt">bool invertX</span><br  />
+<span class="tt">bool invertY</span><br  />
+<span class="tt">bool invertZ</span>  </td></tr>
+</table>
+<p>Inverts the values from a Control (that is, multiplies the values by -1). Inverts the x axis of the vector if <span class="tt">invertX</span> is true, the y axis if <span class="tt">invertY</span> is true, and the z axis if <span class="tt">invertZ</span> is true.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2232"></a>
+Normalize</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.NormalizeProcessor.html"><span class="tt">Normalize</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Parameters</b>  </td><td class="markdownTableBodyNone"><span class="tt">float min</span><br  />
+<span class="tt">float max</span><br  />
+<span class="tt">float zero</span>  </td></tr>
+</table>
+<p>Normalizes input values in the range [<span class="tt">min</span>..<span class="tt">max</span>] to unsigned normalized form [0..1] if <span class="tt">min</span> is &gt;= <span class="tt">zero</span>, and to signed normalized form [-1..1] if <span class="tt">min</span> &lt; <span class="tt">zero</span>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2233"></a>
+Normalize Vector 2</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.NormalizeVector2Processor.html"><span class="tt">NormalizeVector2</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">Vector2</span>  </td></tr>
+</table>
+<p>Normalizes input vectors to be of unit length (1). This is the same as calling <span class="tt">Vector2.normalized</span>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2234"></a>
+Normalize Vector 3</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.NormalizeVector3Processor.html"><span class="tt">NormalizeVector3</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">Vector3</span>  </td></tr>
+</table>
+<p>Normalizes input vectors to be of unit length (1). This is the same as calling <span class="tt">Vector3.normalized</span>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2235"></a>
+Scale</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.ScaleProcessor.html"><span class="tt">Scale</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Parameters</b>  </td><td class="markdownTableBodyNone"><span class="tt">float factor</span>  </td></tr>
+</table>
+<p>Multiplies all input values by <span class="tt">factor</span>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2236"></a>
+Scale Vector 2</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.ScaleVector2Processor.html"><span class="tt">ScaleVector2</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">Vector2</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Parameters</b>  </td><td class="markdownTableBodyNone"><span class="tt">float x</span><br  />
+<span class="tt">float y</span>  </td></tr>
+</table>
+<p>Multiplies all input values by <span class="tt">x</span> along the X axis and by <span class="tt">y</span> along the Y axis.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2237"></a>
+Scale Vector 3</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.ScaleVector3Processor.html"><span class="tt">ScaleVector3</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">Vector3</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Parameters</b>  </td><td class="markdownTableBodyNone"><span class="tt">float x</span><br  />
+<span class="tt">float y</span><br  />
+<span class="tt">float x</span>  </td></tr>
+</table>
+<p>Multiplies all input values by <span class="tt">x</span> along the X axis, by <span class="tt">y</span> along the Y axis, and by <span class="tt">z</span> along the Z axis.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2238"></a>
+Axis deadzone</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor.html"><span class="tt">AxisDeadzone</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Parameters</b>  </td><td class="markdownTableBodyNone"><span class="tt">float min</span><br  />
+<span class="tt">float max</span>  </td></tr>
+</table>
+<p>An axis deadzone Processor scales the values of a Control so that any value with an absolute value smaller than <span class="tt">min</span> is 0, and any value with an absolute value larger than <span class="tt">max</span> is 1 or -1. Many Controls don't have a precise resting point (that is, they don't always report exactly 0 when the Control is in the center). Using the <span class="tt">min</span> value on a deadzone Processor avoids unintentional input from such Controls. Also, some Controls don't consistently report their maximum values when moving the axis all the way. Using the <span class="tt">max</span> value on a deadzone Processor ensures that you always get the maximum value in such cases.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2239"></a>
+Stick deadzone</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><a href="../api/UnityEngine.InputSystem.Processors.StickDeadzoneProcessor.html"><span class="tt">StickDeadzone</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Operand Type</b>  </td><td class="markdownTableBodyNone"><span class="tt">Vector2</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Parameters</b>  </td><td class="markdownTableBodyNone"><span class="tt">float min</span><br  />
+<span class="tt">float max</span>  </td></tr>
+</table>
+<p>A stick deadzone Processor scales the values of a Vector2 Control, such as a stick, so that any input vector with a magnitude smaller than <span class="tt">min</span> results in (0,0), and any input vector with a magnitude greater than <span class="tt">max</span> is normalized to length 1. Many Controls don't have a precise resting point (that is, they don't always report exactly 0,0 when the Control is in the center). Using the <span class="tt">min</span> value on a deadzone Processor avoids unintentional input from such Controls. Also, some Controls don't consistently report their maximum values when moving the axis all the way. Using the <span class="tt">max</span> value on a deadzone Processor ensures that you always get the maximum value in such cases.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2240"></a>
+Writing custom Processors</h2>
+<p>You can also write custom Processors to use in your Project. Custom Processors are available in the UI and code in the same way as the built-in Processors. Add a class derived from <a href="../api/UnityEngine.InputSystem.InputProcessor-1.html"><span class="tt">InputProcessor&lt;TValue&gt;</span></a>, and implement the <a href="../api/UnityEngine.InputSystem.InputProcessor-1.html#UnityEngine_InputSystem_InputProcessor_1_Process__0_UnityEngine_InputSystem_InputControl_"><span class="tt">Process</span></a> method:</p>
+<p>&gt;<b>IMPORTANT</b>: Processors must be <b>stateless</b>. This means you cannot store local state in a processor that will change depending on the input being processed. The reason for this is because processors are not part of the <a href="./Controls.md#control-state">input state</a> that the Input System keeps.</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyValueShiftProcessor : InputProcessor&lt;float&gt;</div>
+<div class="line">{</div>
+<div class="line">    [Tooltip(<span class="stringliteral">&quot;Number to add to incoming values.&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">float</span> valueShift = 0;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">float</span> Process(<span class="keywordtype">float</span> value, InputControl control)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> value + valueShift;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Now, you need to tell the Input System about your Processor. Call <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_RegisterProcessor__1_System_String_"><span class="tt">InputSystem.RegisterProcessor</span></a> in your initialization code. You can do so locally within the Processor class like this:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line">[InitializeOnLoad]</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyValueShiftProcessor : InputProcessor&lt;float&gt;</div>
+<div class="line">{</div>
+<div class="line"><span class="preprocessor">    #if UNITY_EDITOR</span></div>
+<div class="line">    <span class="keyword">static</span> MyValueShiftProcessor()</div>
+<div class="line">    {</div>
+<div class="line">        Initialize();</div>
+<div class="line">    }</div>
+<div class="line"><span class="preprocessor">    #endif</span></div>
+<div class="line"> </div>
+<div class="line">    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]</div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> Initialize()</div>
+<div class="line">    {</div>
+<div class="line">        InputSystem.RegisterProcessor&lt;MyValueShiftProcessor&gt;();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">//...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Your new Processor is now available in the in the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions Editor</a> and you can also add it in code like this:</p>
+<div class="fragment"><div class="line">var action = <span class="keyword">new</span> InputAction(processors: <span class="stringliteral">&quot;myvalueshift(valueShift=2.3)&quot;</span>);</div>
+</div><!-- fragment --><p>If you want to customize the UI for editing your Processor, create a custom <a href="../api/UnityEngine.InputSystem.Editor.InputParameterEditor-1.html"><span class="tt">InputParameterEditor</span></a> class for it:</p>
+<div class="fragment"><div class="line"><span class="comment">// No registration is necessary for an InputParameterEditor.</span></div>
+<div class="line"><span class="comment">// The system will automatically find subclasses based on the</span></div>
+<div class="line"><span class="comment">// &lt;..&gt; type parameter.</span></div>
+<div class="line"><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyValueShiftProcessorEditor : InputParameterEditor&lt;MyValueShiftProcessor&gt;</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">private</span> GUIContent m_SliderLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Shift By&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnEnable()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Put initialization code here. Use &#39;target&#39; to refer</span></div>
+<div class="line">        <span class="comment">// to the instance of MyValueShiftProcessor that is being</span></div>
+<div class="line">        <span class="comment">// edited.</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnGUI()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Define your custom UI here using EditorGUILayout.</span></div>
+<div class="line">        target.valueShift = EditorGUILayout.Slider(m_SliderLabel,</div>
+<div class="line">            target.valueShift, 0, 10);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Workflow-PlayerInput</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_workflow-_player_input.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Workflow-PlayerInput </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2391"></a>
+autotoc_md2391</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2392"></a>
+uid: input-system-workflow-player-input</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2393"></a>
+Workflow Overview - Actions and the PlayerInput Component</h1>
+<p><img src="Images/Workflow-PlayerInput.png" alt="" class="inline"/></p>
+<p>The highest level of abstraction provided by the Input System is when you use <a href="Actions.html">Actions</a> and the <b>Player Input component</b> together.</p>
+<p>The Player Input provides a way to make connections between your configured Actions and the C# methods in your own MonoBehaviour scripts, so that your desired C# methods are called when the user performs an input action.</p>
+<p>It allows you to set up these connections using a UI in the inspector using an event-driven model, instead writing code to poll the values of your Actions as described in the <a href="Workflow-Actions.html">previous workflow example</a>).</p>
+<p>The PlayerInput component also helps with local multi-player scenarios. You can use the PlayerInput component along with the PlayerInputManager component to handle automatic instantiation of new players when input occurs on new devices. For example, if you were making a four-player local cooperative game, PlayerInput with PlayerInputManager can handle allowing new players to join when they press start on their respective controller.</p>
+<p><img src="./Images/PlayerInputWithGameplayEvents.png" alt="image alt text" class="inline"/></p>
+<p>In the above example image, you can see the PlayerInput component set up to map the "move", "jump" actions to <span class="tt">OnMove</span> and <span class="tt">OnJump</span> methods in a script, via <a class="el" href="namespace_unity.html">Unity</a> Events.</p>
+<p>This is an example of the script which would provide an implementation of these methods</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// This script is designed to have the OnMove and</span></div>
+<div class="line"><span class="comment">// OnJump methods called by a PlayerInput component</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>ExampleScript : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    Vector2 moveAmount;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnMove(<a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a>.<a class="code hl_struct" href="struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context.html">CallbackContext</a> context)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// read the value for the &quot;move&quot; action each event call</span></div>
+<div class="line">        moveAmount = context.ReadValue&lt;Vector2&gt;();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnJump(<a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a>.<a class="code hl_struct" href="struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context.html">CallbackContext</a> context)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// your jump code goes here.</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> Update()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// to use the Vector2 value from the &quot;move&quot; action each</span></div>
+<div class="line">        <span class="comment">// frame, use the &quot;moveAmount&quot; variable here.</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_html"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action.html">UnityEngine.InputSystem.InputAction</a></div><div class="ttdoc">A named input signal that can flexibly decide which input data to tap.</div><div class="ttdef"><b>Definition</b> InputAction.cs:169</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_input_system_html"><div class="ttname"><a href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a></div><div class="ttdef"><b>Definition</b> AxisComposite.cs:14</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+<div class="ttc" id="astruct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_html"><div class="ttname"><a href="struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context.html">UnityEngine.InputSystem.InputAction.CallbackContext</a></div><div class="ttdoc">Information provided to action callbacks about what triggered an action.</div><div class="ttdef"><b>Definition</b> InputAction.cs:2065</div></div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p><b>Note</b>: As a general rule, if you are using the PlayerInput workflow, you should read input through callbacks as described above, however if you need to access the input actions asset directly while using the PlayerInput component, you should access the <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_actions">PlayerInput component's copy of the actions</a>, not <span class="tt">InputSystem.actions</span>.</p>
+<p>This is because the PlayerInput component performs device filtering to automatically assign devices to multiple players, so each instance has its own copy of the actions filtered for each player. If you bypass this by reading <span class="tt">InputSystem.actions</span> directly, the automatic device assignment won't work. </p>
+</blockquote>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2394"></a>
+Pros and Cons</h2>
+<p>This workflow has pros and cons when compared to using <a href="Workflow-Actions.html">Actions without a PlayerInput component</a>. Because it builds on the use of Actions, it comes with all the benefits provided by them, such as Action Maps, Bindings, and the ability to configure them in the Actions Editor. You can also implement <a href="ActionBindings.html#interactive-rebinding">user rebinding at run time</a>.</p>
+<p>This workflow also allows you to set up callbacks in the Editor using an interface in the Inspector, which can sometimes reduce code complexity but can also make debugging more difficult, because the connections between your actions and code are not themselves defined in your code.</p>
+<p>It also provides ready-made handling of the <a href="PlayerInput.html#device-assignments">assignment of devices</a> and <a href="PlayerInputManager.html#split-screen">screen-splitting</a> in local multiplayer scenarios. While these are things you can implement yourself, having a simple solution ready to go can be beneficial. However if you choose this option, the implementation is somewhat of a "black box", meaning you are less able to customise how it works.</p>
+<p>As with the other workflows described in this section, there is a trade-off between flexibility, simplicity, and speed of implementation.</p>
+<p>To get started using this workflow, <a href="PlayerInput.html">see the documentation for the Player Input component</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

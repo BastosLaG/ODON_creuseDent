@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_controller_profile =
+[
+    [ "WMRSpatialController", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6.html", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_contr61442aee4906640d93a0d0bea6f1ddf6" ],
+    [ "GetDeviceLayoutName", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_controller_profile.html#a8f8dc376743fa70d0496cd280059b200", null ],
+    [ "RegisterActionMapsWithRuntime", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_controller_profile.html#af223069ba97084824c7e1c9ebab39f25", null ],
+    [ "RegisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_controller_profile.html#a589810aefc491d2f53d3b5a91130e689", null ],
+    [ "UnregisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_microsoft_motion_controller_profile.html#a6731aefc1b24436699ea3cb9b3178823", null ]
+];

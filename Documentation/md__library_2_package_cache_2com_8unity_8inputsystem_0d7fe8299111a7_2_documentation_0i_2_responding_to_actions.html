@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Responding to Actions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_responding_to_actions.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Responding to Actions </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2253"></a></p>
+<p>There are two main techniques you can use to respond to Actions in your project. These are to either use <b>polling</b> or an <b>event-driven</b> approach.</p>
+<ul>
+<li>The <b>Polling</b> approach refers to the technique of repeatedly checking the current state of the Actions you are interested in. Typically you would do this in the <span class="tt">Update()</span> method of a <span class="tt">MonoBehaviour</span> script.</li>
+<li>The <b>Event-driven</b> approach involves creating your own methods in code that are automatically called when an action is performed.</li>
+</ul>
+<p>For most common scenarios, especially action games where the user's input should have a continuous effect on an in-game character, <b>Polling</b> is usually simpler and easier to implement.</p>
+<p>For other situations where input is less frequent and directed to various different GameObjects in your scene, an event-driven approach might be more suitable.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2254"></a>
+Polling Actions</h1>
+<p>You can poll the current value of an Action using <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_ReadValue__1"><span class="tt">InputAction.ReadValue&lt;&gt;()</span></a>:</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>Example : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a> moveAction;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line">    {</div>
+<div class="line">        moveAction = <a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">InputSystem</a>.actions.FindAction(<span class="stringliteral">&quot;Move&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> Update()</div>
+<div class="line">    {</div>
+<div class="line">        Vector2 moveValue = moveAction.ReadValue&lt;Vector2&gt;();</div>
+<div class="line">        <span class="comment">// your code would then use moveValue to apply movement</span></div>
+<div class="line">        <span class="comment">// to your GameObject</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_html"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action.html">UnityEngine.InputSystem.InputAction</a></div><div class="ttdoc">A named input signal that can flexibly decide which input data to tap.</div><div class="ttdef"><b>Definition</b> InputAction.cs:169</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_input_system_html"><div class="ttname"><a href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a></div><div class="ttdef"><b>Definition</b> AxisComposite.cs:14</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><p>Note that the value type has to correspond to the value type of the control that the value is being read from.</p>
+<p>There are two methods you can use to poll for <span class="tt">performed</span> action callbacks to determine whether an action was performed or stopped performing in the current frame.</p>
+<p>These methods differ from <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_WasPressedThisFrame"><span class="tt">InputAction.WasPressedThisFrame()</span></a> and <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_WasReleasedThisFrame"><span class="tt">InputAction.WasReleasedThisFrame()</span></a> in that these depend directly on the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_interactions.html">Interactions</a> driving the action (including the <a href="Interactions.md#default-interaction">default Interaction</a> if no specific interaction has been added to the action or binding).</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_WasPerformedThisFrame"><span class="tt">InputAction.WasPerformedThisFrame()</span></a>  </td><td class="markdownTableBodyNone">True if the <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_phase"><span class="tt">InputAction.phase</span></a> of the action has, at any point during the current frame, changed to <a href="../api/UnityEngine.InputSystem.InputActionPhase.html#UnityEngine_InputSystem_InputActionPhase_Performed"><span class="tt">Performed</span></a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_WasCompletedThisFrame"><span class="tt">InputAction.WasCompletedThisFrame()</span></a>  </td><td class="markdownTableBodyNone">True if the <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_phase"><span class="tt">InputAction.phase</span></a> of the action has, at any point during the current frame, changed away from <a href="../api/UnityEngine.InputSystem.InputActionPhase.html#UnityEngine_InputSystem_InputActionPhase_Performed"><span class="tt">Performed</span></a> to any other phase. This can be useful for Button actions or Value actions with interactions like <a href="Interactions.md#press">Press</a> or <a href="Interactions.md#hold">Hold</a> when you want to know the frame the interaction stops being performed. For actions with the <a href="Interactions.md#default-interaction">default Interaction</a>, this method will always return false for Value and Pass-Through actions (since the phase stays in <a href="../api/UnityEngine.InputSystem.InputActionPhase.html#UnityEngine_InputSystem_InputActionPhase_Started"><span class="tt">Started</span></a> for Value actions and stays in <a href="../api/UnityEngine.InputSystem.InputActionPhase.html#UnityEngine_InputSystem_InputActionPhase_Performed"><span class="tt">Performed</span></a> for Pass-Through).  </td></tr>
+</table>
+<p>This example uses the Interact action from the <a href="./ProjectWideActions.md#the-default-actions">default actions</a>, which has a <a href="Interactions.md#hold">Hold</a> interaction to make it perform only after the bound control is held for a period of time (for example, 0.4 seconds):</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>Example : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a> interactAction;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line">    {</div>
+<div class="line">        interactAction = <a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">InputSystem</a>.actions.FindAction(<span class="stringliteral">&quot;Interact&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> Update()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (interactAction.<a class="code hl_function" href="class_unity_engine_1_1_input_system_1_1_input_action.html#a1968a212ee4e88950b4f1f15043a9d42">WasPerformedThisFrame</a>())</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// your code to respond to the first frame that the Interact action is held for enough time</span></div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (interactAction.<a class="code hl_function" href="class_unity_engine_1_1_input_system_1_1_input_action.html#afd23544e1635f9ea8114eb2e1ab4d08b">WasCompletedThisFrame</a>())</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// your code to respond to the frame that the Interact action is released after being held for enough time</span></div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_html_a1968a212ee4e88950b4f1f15043a9d42"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action.html#a1968a212ee4e88950b4f1f15043a9d42">UnityEngine.InputSystem.InputAction.WasPerformedThisFrame</a></div><div class="ttdeci">unsafe bool WasPerformedThisFrame()</div><div class="ttdoc">Check whether phase was InputActionPhase.Performed at any point in the current frame.</div><div class="ttdef"><b>Definition</b> InputAction.cs:1447</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_html_afd23544e1635f9ea8114eb2e1ab4d08b"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action.html#afd23544e1635f9ea8114eb2e1ab4d08b">UnityEngine.InputSystem.InputAction.WasCompletedThisFrame</a></div><div class="ttdeci">unsafe bool WasCompletedThisFrame()</div><div class="ttdoc">Check whether phase transitioned from InputActionPhase.Performed to any other phase value at least on...</div><div class="ttdef"><b>Definition</b> InputAction.cs:1566</div></div>
+</div><!-- fragment --><p>Finally, there are three methods you can use to poll for button presses and releases:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_IsPressed"><span class="tt">InputAction.IsPressed()</span></a>  </td><td class="markdownTableBodyNone">True if the level of <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_EvaluateMagnitude">actuation</a> on the action has crossed the <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint">press point</a> and did not yet fall to or below the <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_buttonReleaseThreshold">release threshold</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_WasPressedThisFrame"><span class="tt">InputAction.WasPressedThisFrame()</span></a>  </td><td class="markdownTableBodyNone">True if the level of <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_EvaluateMagnitude">actuation</a> on the action has, at any point during the current frame, reached or gone above the <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint">press point</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_WasReleasedThisFrame"><span class="tt">InputAction.WasReleasedThisFrame()</span></a>  </td><td class="markdownTableBodyNone">True if the level of <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_EvaluateMagnitude">actuation</a> on the action has, at any point during the current frame, gone from being at or above the <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint">press point</a> to at or below the <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_buttonReleaseThreshold">release threshold</a>.  </td></tr>
+</table>
+<p>This example uses three actions called Shield, Teleport and Submit (which are not included in the <a href="./ProjectWideActions.md#the-default-actions">default actions</a>):</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>Example : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a> shieldAction;</div>
+<div class="line">    <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a> teleportAction;</div>
+<div class="line">    <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a> submitAction;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line">    {</div>
+<div class="line">        shieldAction = <a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">InputSystem</a>.actions.FindAction(<span class="stringliteral">&quot;Shield&quot;</span>);</div>
+<div class="line">        teleportAction = <a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">InputSystem</a>.actions.FindAction(<span class="stringliteral">&quot;Teleport&quot;</span>);</div>
+<div class="line">        submitAction = <a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">InputSystem</a>.actions.FindAction(<span class="stringliteral">&quot;Submit&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> Update()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (shieldAction.<a class="code hl_function" href="class_unity_engine_1_1_input_system_1_1_input_action.html#a4ba2a7836129d30d4996714c3e3f871d">IsPressed</a>())</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// shield is active for every frame that the shield action is pressed</span></div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (teleportAction.<a class="code hl_function" href="class_unity_engine_1_1_input_system_1_1_input_action.html#a7776c9dbaab7db1f49493c6e7e8c4fbb">WasPressedThisFrame</a>())</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// teleport occurs on the first frame that the action is pressed, and not again until the button is released</span></div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (submit.WasReleasedThisFrame())</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// submit occurs on the frame that the action is released, a common technique for buttons relating to UI controls.</span></div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_html_a4ba2a7836129d30d4996714c3e3f871d"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action.html#a4ba2a7836129d30d4996714c3e3f871d">UnityEngine.InputSystem.InputAction.IsPressed</a></div><div class="ttdeci">unsafe bool IsPressed()</div><div class="ttdoc">Check whether the current actuation of the action has crossed the button press threshold (see InputSe...</div><div class="ttdef"><b>Definition</b> InputAction.cs:1178</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_html_a7776c9dbaab7db1f49493c6e7e8c4fbb"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action.html#a7776c9dbaab7db1f49493c6e7e8c4fbb">UnityEngine.InputSystem.InputAction.WasPressedThisFrame</a></div><div class="ttdeci">unsafe bool WasPressedThisFrame()</div><div class="ttdoc">Returns true if the action&#39;s value crossed the press threshold (see InputSettings....</div><div class="ttdef"><b>Definition</b> InputAction.cs:1259</div></div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md2255"></a>
+Responding to Actions using callbacks</h1>
+<p>When you set up callbacks for your Action, the Action informs your code that a certain type of input has occurred, and your code can then respond accordingly.</p>
+<p>There are several ways to do this:</p>
+<ol type="1">
+<li>You can use the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_workflow-_player_input.html">PlayerInput component</a> to set up callbacks in the inspector.</li>
+</ol>
+<ol type="1">
+<li>Each Action has a `started`, `performed`, and `canceled` callback.</li>
+</ol>
+<ol type="1">
+<li>Each Action Map has an `actionTriggered` callback.</li>
+</ol>
+<ol type="1">
+<li>The Input System has a global `InputSystem.onActionChange` callback.</li>
+<li>`InputActionTrace` can record changes happening on Actions.</li>
+</ol>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2256"></a>
+The PlayerInput component</h3>
+<p>The PlayerInput component is the simplest way to set up Action callbacks. It provides an interface in the inspector that allows you set up callbacks directly to your methods without requiring intermediate code. <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_workflow-_player_input.html">Read more about the PlayerInput component</a>.</p>
+<p>Alternatively, you can implement callbacks entirely from your own code using the following workflow:</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2257"></a>
+Action callbacks</h3>
+<p>Every Action has a set of distinct phases it can go through in response to receiving input.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Phase  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Disabled</span>  </td><td class="markdownTableBodyNone">The Action is disabled and can't receive input.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Waiting</span>  </td><td class="markdownTableBodyNone">The Action is enabled and is actively waiting for input.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Started</span>  </td><td class="markdownTableBodyNone">The Input System has received input that started an Interaction with the Action.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Performed</span>  </td><td class="markdownTableBodyNone">An Interaction with the Action has been completed.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Canceled</span>  </td><td class="markdownTableBodyNone">An Interaction with the Action has been canceled.  </td></tr>
+</table>
+<p>You can read the current phase of an action using <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_phase"><span class="tt">InputAction.phase</span></a>.</p>
+<p>The <span class="tt">Started</span>, <span class="tt">Performed</span>, and <span class="tt">Canceled</span> phases each have a callback associated with them:</p>
+<div class="fragment"><div class="line">var action = <span class="keyword">new</span> <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a>();</div>
+<div class="line"> </div>
+<div class="line">action.started += context =&gt; <span class="comment">/* Action was started */</span>;</div>
+<div class="line">action.performed += context =&gt; <span class="comment">/* Action was performed */</span>;</div>
+<div class="line">action.canceled += context =&gt; <span class="comment">/* Action was canceled */</span>;</div>
+</div><!-- fragment --><p>Each callback receives an <a href="../api/UnityEngine.InputSystem.InputAction.CallbackContext.html"><span class="tt">InputAction.CallbackContext</span></a> structure, which holds context information that you can use to query the current state of the Action and to read out values from Controls that triggered the Action (<a href="../api/UnityEngine.InputSystem.InputAction.CallbackContext.html#UnityEngine_InputSystem_InputAction_CallbackContext_ReadValue__1"><span class="tt">InputAction.CallbackContext.ReadValue</span></a>).</p>
+<p>&gt;<b>Note</b>: The contents of the structure are only valid for the duration of the callback. In particular, it isn't safe to store the received context and later access its properties from outside the callback.</p>
+<p>When and how the callbacks are triggered depends on the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_interactions.html">Interactions</a> present on the respective Bindings. If the Bindings have no Interactions that apply to them, the <a href="Interactions.md#default-interaction">default Interaction</a> applies.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2258"></a>
+<span class="tt">InputActionMap.actionTriggered</span> callback</h4>
+<p>Instead of listening to individual actions, you can listen on an entire Action Map for state changes on any of the Actions in the Action Map.</p>
+<div class="fragment"><div class="line">var actionMap = <span class="keyword">new</span> <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action_map.html">InputActionMap</a>();</div>
+<div class="line">actionMap.AddAction(<span class="stringliteral">&quot;action1&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/buttonSouth&quot;</span>);</div>
+<div class="line">actionMap.AddAction(<span class="stringliteral">&quot;action2&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/buttonNorth&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">actionMap.actionTriggered +=</div>
+<div class="line">    context =&gt; { ... };</div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_map_html"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action_map.html">UnityEngine.InputSystem.InputActionMap</a></div><div class="ttdoc">A mechanism for collecting a series of input actions (see InputAction) and treating them as a group.</div><div class="ttdef"><b>Definition</b> InputActionMap.cs:74</div></div>
+</div><!-- fragment --><p>The argument received is the same <span class="tt">InputAction.CallbackContext</span> structure that you receive through the `started`, `performed`, and `canceled` callbacks.</p>
+<p>&gt;<b>Note</b>: The Input System calls <span class="tt">InputActionMap.actionTriggered</span> for all three of the individual callbacks on Actions. That is, you get <span class="tt">started</span>, <span class="tt">performed</span>, and <span class="tt">canceled</span> all on a single callback.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2259"></a>
+<span class="tt">InputSystem.onActionChange</span> callback</h4>
+<p>Similar to <span class="tt">InputSystem.onDeviceChange</span>, your app can listen for any action-related change globally.</p>
+<div class="fragment"><div class="line">InputSystem.onActionChange +=</div>
+<div class="line">    (obj, change) =&gt;</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// obj can be either an InputAction or an InputActionMap</span></div>
+<div class="line">        <span class="comment">// depending on the specific change.</span></div>
+<div class="line">        <span class="keywordflow">switch</span> (change)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_unity_engine_1_1_input_system.html#a71a0bbccbb83c4d0c1e92eb0f1e403d7">InputActionChange</a>.ActionStarted:</div>
+<div class="line">            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_unity_engine_1_1_input_system.html#a71a0bbccbb83c4d0c1e92eb0f1e403d7">InputActionChange</a>.ActionPerformed:</div>
+<div class="line">            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_unity_engine_1_1_input_system.html#a71a0bbccbb83c4d0c1e92eb0f1e403d7">InputActionChange</a>.ActionCanceled:</div>
+<div class="line">                Debug.Log($<span class="stringliteral">&quot;{((InputAction)obj).name} {change}&quot;</span>);</div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="ttc" id="anamespace_unity_engine_1_1_input_system_html_a71a0bbccbb83c4d0c1e92eb0f1e403d7"><div class="ttname"><a href="namespace_unity_engine_1_1_input_system.html#a71a0bbccbb83c4d0c1e92eb0f1e403d7">UnityEngine.InputSystem.InputActionChange</a></div><div class="ttdeci">InputActionChange</div><div class="ttdoc">Indicates what type of change related to an input action occurred.</div><div class="ttdef"><b>Definition</b> InputActionChange.cs:8</div></div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2260"></a>
+<span class="tt">InputActionTrace</span></h3>
+<p>You can trace Actions to generate a log of all activity that happened on a particular set of Actions. To do so, use <a href="../api/UnityEngine.InputSystem.Utilities.InputActionTrace.html"><span class="tt">InputActionTrace</span></a>. This behaves in a similar way to <a href="../api/UnityEngine.InputSystem.LowLevel.InputEventTrace.html"><span class="tt">InputEventTrace</span></a> for events.</p>
+<p>&gt;<b>Note</b>: <span class="tt">InputActionTrace</span> allocates unmanaged memory and needs to be disposed of so that it doesn't create memory leaks.</p>
+<div class="fragment"><div class="line">var trace = <span class="keyword">new</span> InputActionTrace();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Subscribe trace to single Action.</span></div>
+<div class="line"><span class="comment">// (Use UnsubscribeFrom to unsubscribe)</span></div>
+<div class="line">trace.SubscribeTo(myAction);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Subscribe trace to entire Action Map.</span></div>
+<div class="line"><span class="comment">// (Use UnsubscribeFrom to unsubscribe)</span></div>
+<div class="line">trace.SubscribeTo(myActionMap);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Subscribe trace to all Actions in the system.</span></div>
+<div class="line">trace.SubscribeToAll();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Record a single triggering of an Action.</span></div>
+<div class="line">myAction.performed +=</div>
+<div class="line">    ctx =&gt;</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (ctx.ReadValue&lt;<span class="keywordtype">float</span>&gt;() &gt; 0.5f)</div>
+<div class="line">            trace.RecordAction(ctx);</div>
+<div class="line">    };</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Output trace to console.</span></div>
+<div class="line">Debug.Log(<span class="keywordtype">string</span>.Join(<span class="stringliteral">&quot;,\n&quot;</span>, trace));</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Walk through all recorded Actions and then clear trace.</span></div>
+<div class="line"><span class="keywordflow">foreach</span> (var record <span class="keywordflow">in</span> trace)</div>
+<div class="line">{</div>
+<div class="line">    Debug.Log($<span class="stringliteral">&quot;{record.action} was {record.phase} by control {record.control}&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// To read out the value, you either have to know the value type or read the</span></div>
+<div class="line">    <span class="comment">// value out as a generic byte buffer. Here, we assume that the value type is</span></div>
+<div class="line">    <span class="comment">// float.</span></div>
+<div class="line"> </div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;Value: &quot;</span> + record.ReadValue&lt;<span class="keywordtype">float</span>&gt;());</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// If it&#39;s okay to accept a GC hit, you can also read out values as objects.</span></div>
+<div class="line">    <span class="comment">// In this case, you don&#39;t have to know the value type.</span></div>
+<div class="line"> </div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;Value: &quot;</span> + record.ReadValueAsObject());</div>
+<div class="line">}</div>
+<div class="line">trace.Clear();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Unsubscribe trace from everything.</span></div>
+<div class="line">trace.UnsubscribeFromAll();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Release memory held by trace.</span></div>
+<div class="line">trace.Dispose();</div>
+</div><!-- fragment --><p>Once recorded, a trace can be safely read from multiple threads as long as it is not concurrently being written to and as long as the Action setup (that is, the configuration data accessed by the trace) is not concurrently being changed on the main thread.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2261"></a>
+Action types</h2>
+<p>Each Action can be one of three different <a href="../api/UnityEngine.InputSystem.InputActionType.html">Action types</a>. You can select the Action type in the Input Action editor window, or by specifying the <span class="tt">type</span> parameter when calling the <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction__ctor_System_String_UnityEngine_InputSystem_InputActionType_System_String_System_String_System_String_System_String_"><span class="tt">InputAction()</span></a> constructor. The Action type influences how the Input System processes state changes for the Action. The default Action type is <span class="tt">Value</span>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2262"></a>
+Value</h3>
+<p>This is the default Action type. Use this for any inputs which should track continuous changes to the state of a Control.</p>
+<p><a href="../api/UnityEngine.InputSystem.InputActionType.html#UnityEngine_InputSystem_InputActionType_Value"><span class="tt">Value</span></a> type actions continuously monitor all the Controls which are bound to the Action, and then choose the one which is the most actuated to be the Control driving the Action, and report the values from that Control in callbacks, triggered whenever the value changes. If a different bound Control actuated more, then that Control becomes the Control driving the Action, and the Action starts reporting values from that Control. This process is called <a href="ActionBindings.md#conflicting-inputs">conflict resolution</a>. This is useful if you want to allow different Controls to control an Action in the game, but only take input from one Control at the same time.</p>
+<p>When the Action initially enables, it performs an <a href="ActionBindings.md#initial-state-check">initial state check</a> of all bound Controls. If any of them is actuated, the Action then triggers a callback with the current value.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2263"></a>
+Button</h3>
+<p>This is very similar to <a href="../api/UnityEngine.InputSystem.InputActionType.html#UnityEngine_InputSystem_InputActionType_Value"><span class="tt">Value</span></a>, but <a href="../api/UnityEngine.InputSystem.InputActionType.html#UnityEngine_InputSystem_InputActionType_Button"><span class="tt">Button</span></a> type Actions can only be bound to <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a> Controls, and don't perform an initial state check like <a href="../api/UnityEngine.InputSystem.InputActionType.html#UnityEngine_InputSystem_InputActionType_Value"><span class="tt">Value</span></a> Actions do (see the Value section above). Use this for inputs that trigger an Action once every time they are pressed. The initial state check is usually not useful in such cases, because it can trigger actions if the button is still held down from a previous press when the Action was enabled.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2264"></a>
+Pass-Through</h3>
+<p><a href="../api/UnityEngine.InputSystem.InputActionType.html#UnityEngine_InputSystem_InputActionType_PassThrough"><span class="tt">Pass-Through</span></a> Actions bypass the <a href="ActionBindings.md#conflicting-inputs">conflict resolution</a> process described above for <span class="tt">Value</span> Actions and don't use the concept of a specific Control driving the Action. Instead, any change to any bound Control triggers a callback with that Control's value. This is useful if you want to process all input from a set of Controls.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2265"></a>
+Debugging Actions</h2>
+<p>To see currently enabled Actions and their bound Controls, use the <a href="Debugging.md#debugging-actions">Input Debugger</a>.</p>
+<p>You can also use the <a href="Debugging.md#inputactionvisualizer"><span class="tt">InputActionVisualizer</span></a> component from the Visualizers sample to get an on-screen visualization of an Action's value and Interaction state in real-time.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2266"></a>
+Using Actions with multiple players</h2>
+<p>You can use the same Action definitions for multiple local players (for example, in a local co-op game). For more information, see documentation on the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input_manager.html">Player Input Manager</a> component. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

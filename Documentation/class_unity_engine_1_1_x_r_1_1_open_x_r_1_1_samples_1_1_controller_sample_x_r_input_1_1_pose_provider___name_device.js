@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_samples_1_1_controller_sample_x_r_input_1_1_pose_provider___name_device =
+[
+    [ "GetPoseFromProvider", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_samples_1_1_controller_sample_x_r_input_1_1_pose_provider___name_device.html#a377a90b4f07ebf0ba45a5a7371978923", null ]
+];

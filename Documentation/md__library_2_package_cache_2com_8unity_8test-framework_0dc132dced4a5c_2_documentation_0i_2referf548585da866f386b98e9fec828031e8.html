@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: TestPlayerBuildModifier attribute</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2referf548585da866f386b98e9fec828031e8.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">TestPlayerBuildModifier attribute </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5445"></a></p>
+<p>You can use the <span class="tt">TestPlayerBuildModifier</span> attribute to accomplish a couple of different scenarios:</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5446"></a>
+Modify the Player build options for Play Mode tests</h1>
+<p>It is possible to change the <a href="https://docs.unity3d.com/ScriptReference/BuildPlayerOptions.html">BuildPlayerOptions</a> for the test <b>Player</b>, to achieve custom behavior when running <b>Play Mode</b> tests. Modifying the build options allows for changing the target location of the build as well as changing <a href="https://docs.unity3d.com/ScriptReference/BuildOptions.html">BuildOptions</a>.</p>
+<p>To modify the <span class="tt">BuildPlayerOptions</span>, do the following:</p>
+<ul>
+<li>Implement the <span class="tt">ITestPlayerBuildModifier</span></li>
+<li>Reference the implementation type in a <span class="tt">TestPlayerBuildModifier</span> attribute on an assembly level.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5447"></a>
+Example</h2>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEditor.TestTools;</div>
+<div class="line"> </div>
+<div class="line">[assembly:TestPlayerBuildModifier(typeof(BuildModifier))]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>BuildModifier : <a class="code hl_interface" href="interface_unity_editor_1_1_test_tools_1_1_i_test_player_build_modifier.html">ITestPlayerBuildModifier</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> BuildPlayerOptions ModifyOptions(BuildPlayerOptions playerOptions)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (playerOptions.target == BuildTarget.iOS)</div>
+<div class="line">        {</div>
+<div class="line">            playerOptions.options |= BuildOptions.SymlinkLibraries; <span class="comment">// Enable symlink libraries when running on iOS</span></div>
+<div class="line">        }</div>
+<div class="line">        </div>
+<div class="line">        playerOptions.options |= BuildOptions.AllowDebugging; <span class="comment">// Enable allow Debugging flag on the test Player.</span></div>
+<div class="line">        <span class="keywordflow">return</span> playerOptions;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="ainterface_unity_editor_1_1_test_tools_1_1_i_test_player_build_modifier_html"><div class="ttname"><a href="interface_unity_editor_1_1_test_tools_1_1_i_test_player_build_modifier.html">UnityEditor.TestTools.ITestPlayerBuildModifier</a></div><div class="ttdoc">An interface for a callback modifying the BuildPlayerOptions when building a player for running tests...</div><div class="ttdef"><b>Definition</b> ITestPlayerBuildModifier.cs:9</div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition</b> HandsSampleProjectValidation.cs:12</div></div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p><b>Note:</b> When building the Player, it includes all <span class="tt">TestPlayerBuildModifier</span> attributes across all loaded assemblies, independent of the currently used test filter. As the implementation references the <span class="tt"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></span> namespace, the code is typically implemented in an Editor only assembly, as the <span class="tt"><a class="el" href="namespace_unity_editor.html">UnityEditor</a></span> namespace is not available otherwise. </p>
+</blockquote>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5448"></a>
+Split build and run</h1>
+<p>It is possible to use the <a class="el" href="namespace_unity.html">Unity</a> Editor for building the Player with tests, without <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2workfe0eefd5443a4f7cb6ef538a567d8e30c.html">running the tests</a>. This allows for running the Player on e.g. another machine. In this case, it is necessary to modify the Player to build and implement a custom handling of the test result.</p>
+<p>By using <span class="tt">TestPlayerBuildModifier</span>, you can alter the <span class="tt">BuildOptions</span> to not start the Player after the build as well as build the Player at a specific location. Combined with <a href="./reference-setup-and-cleanup.md#prebuildsetup-and-postbuildcleanup">PostBuildCleanup</a>, you can automatically exit the Editor on completion of the build.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5449"></a>
+Example</h2>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>System;</div>
+<div class="line"><span class="keyword">using </span>System.IO;</div>
+<div class="line"><span class="keyword">using </span>System.Linq;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_tests.html">Tests</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEditor.TestTools;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.TestTools;</div>
+<div class="line"> </div>
+<div class="line">[assembly:TestPlayerBuildModifier(typeof(HeadlessPlayModeSetup))]</div>
+<div class="line">[assembly:PostBuildCleanup(typeof(HeadlessPlayModeSetup))]</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_tests.html">Tests</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">class </span>HeadlessPlayModeSetup : <a class="code hl_interface" href="interface_unity_editor_1_1_test_tools_1_1_i_test_player_build_modifier.html">ITestPlayerBuildModifier</a>, <a class="code hl_interface" href="interface_unity_engine_1_1_test_tools_1_1_i_post_build_cleanup.html">IPostBuildCleanup</a></div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> s_RunningPlayerTests;</div>
+<div class="line">        <span class="keyword">public</span> BuildPlayerOptions ModifyOptions(BuildPlayerOptions playerOptions)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Do not launch the player after the build completes.</span></div>
+<div class="line">            playerOptions.options &amp;= ~BuildOptions.AutoRunPlayer;</div>
+<div class="line"> </div>
+<div class="line">            <span class="comment">// Set the headlessBuildLocation to the output directory you desire. It does not need to be inside the project.</span></div>
+<div class="line">            var headlessBuildLocation = Path.GetFullPath(Path.Combine(Application.dataPath, <span class="stringliteral">&quot;.//..//PlayModeTestPlayer&quot;</span>));</div>
+<div class="line">            var fileName = Path.GetFileName(playerOptions.locationPathName);</div>
+<div class="line">            <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(fileName))</div>
+<div class="line">            {</div>
+<div class="line">                headlessBuildLocation = Path.Combine(headlessBuildLocation, fileName);</div>
+<div class="line">            }</div>
+<div class="line">            playerOptions.locationPathName = headlessBuildLocation;</div>
+<div class="line"> </div>
+<div class="line">            <span class="comment">// Instruct the cleanup to exit the Editor if the run came from the command line. </span></div>
+<div class="line">            <span class="comment">// The variable is static because the cleanup is being invoked in a new instance of the class.</span></div>
+<div class="line">            s_RunningPlayerTests = <span class="keyword">true</span>;</div>
+<div class="line">            <span class="keywordflow">return</span> playerOptions;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">void</span> Cleanup()</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> (s_RunningPlayerTests &amp;&amp; IsRunningTestsFromCommandLine())</div>
+<div class="line">            {</div>
+<div class="line">                <span class="comment">// Exit the Editor on the next update, allowing for other PostBuildCleanup steps to run.</span></div>
+<div class="line">                EditorApplication.update += () =&gt; { EditorApplication.Exit(0); };</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsRunningTestsFromCommandLine()</div>
+<div class="line">        {</div>
+<div class="line">            var commandLineArgs = <a class="code hl_enumvalue" href="namespace_unity_editor_1_1_rendering_1_1_look_dev.html#ae1a505102c7032ec9d483f153f1d1794a0ba29c6a1afacf586b03a26162c72274">Environment</a>.GetCommandLineArgs();</div>
+<div class="line">            <span class="keywordflow">return</span> commandLineArgs.Any(value =&gt; value == <span class="stringliteral">&quot;-runTests&quot;</span>);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="ainterface_unity_engine_1_1_test_tools_1_1_i_post_build_cleanup_html"><div class="ttname"><a href="interface_unity_engine_1_1_test_tools_1_1_i_post_build_cleanup.html">UnityEngine.TestTools.IPostBuildCleanup</a></div><div class="ttdoc">Implement this interface if you want to define a set of actions to execute as a post-build step....</div><div class="ttdef"><b>Definition</b> IPostBuildCleanup.cs:9</div></div>
+<div class="ttc" id="anamespace_tests_html"><div class="ttname"><a href="namespace_tests.html">Tests</a></div><div class="ttdef"><b>Definition</b> UISystemProfilerAddMarkerWithNullObjectDoesNotCrash.cs:5</div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_rendering_1_1_look_dev_html_ae1a505102c7032ec9d483f153f1d1794a0ba29c6a1afacf586b03a26162c72274"><div class="ttname"><a href="namespace_unity_editor_1_1_rendering_1_1_look_dev.html#ae1a505102c7032ec9d483f153f1d1794a0ba29c6a1afacf586b03a26162c72274">UnityEditor.Rendering.LookDev.SidePanel.Environment</a></div><div class="ttdeci">@ Environment</div><div class="ttdoc">Environment side panel.</div><div class="ttdef"><b>Definition</b> Context.cs:59</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><p>If the Editor is still running after the Play Mode tests have run, the Player tries to report the results back, using <a href="https://docs.unity3d.com/ScriptReference/Networking.PlayerConnection.PlayerConnection.html">PlayerConnection</a>, which has a reference to the IP address of the Editor machine, when built.</p>
+<p>To implement a custom way of reporting the results of the test run, let one of the assemblies in the Player include a <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-attribute-testruncallback.html">TestRunCallback</a>. At <span class="tt">RunFinished</span>, it is possible to get the full test report as XML from the <a href="http://www.nunit.org/">NUnit</a> test result by calling <span class="tt">result.ToXml(true)</span>. You can save the result and then save it on the device or send it to another machine as needed. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

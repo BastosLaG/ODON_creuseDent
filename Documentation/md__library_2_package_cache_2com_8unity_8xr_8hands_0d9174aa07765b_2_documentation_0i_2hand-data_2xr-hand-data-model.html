@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: xr-hand-data-model</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8hands_0d9174aa07765b_2_documentation_0i_2hand-data_2xr-hand-data-model.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">xr-hand-data-model </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md7719"></a>
+autotoc_md7719</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7720"></a>
+uid: xrhands-data-model</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7721"></a>
+Hand data model</h2>
+<p>Hand tracking provides data such as position, orientation, and velocity for several points on a user's hand. The following diagram illustrates the tracked points:</p>
+<p><img src="../images/xrhands-data-model.png" alt="Tracked points of a hand" class="inline"/><br  />
+<em>Left hand showing tracked hand points</em></p>
+<p>The 26 tracked points of the hand include the finger joints, fingertips, the wrist and the palm.</p>
+<dl class="section note"><dt>Note</dt><dd>The thumb has one fewer joint than the other fingers because thumbs do not have an intermediate phalanx.</dd></dl>
+<p>The hand API reports tracking data relative to the real-world location chosen by the user's device as its tracking origin. Distances are provided in meters. The <a href="https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.2/manual/xr-origin.html">XR Origin</a> in a properly configured XR scene is positioned relative to the device's tracking origin. To position model hands in the correct place in a virtual scene relative to the user's real hands, you can set the local poses of a hand model in your scene directly from the tracking data as long as the model is a child of the XR Origin's <a href="https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.2/manual/xr-origin-reference.html">Camera Offset</a> object in the scene hierarchy. In other situations, you can transform the hand data into <a class="el" href="namespace_unity.html">Unity</a> world space with the XR Origin's pose.</p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="namespace_unity.html">Unity</a> uses a left hand coordinate system, with the positive Z axis facing forward. This is different from the right-handed coordinate system used by OpenXR. Provider plug-in implementations are required to transform the data they provide into the <a class="el" href="namespace_unity.html">Unity</a> coordinate system.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7722"></a>
+Tracking data</h2>
+<p>The tracking data supplied by the hand API includes:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">API  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Hand pose  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHand.rootPose*">XRHand.rootPose</a>  </td><td class="markdownTableBodyLeft">The position and rotation of a hand. Positions are in meters and the rotation is expressed as a quaternion.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Joint pose  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandJoint.TryGetPose(UnityEngine.Pose@)">XRHandJoint.TryGetPose</a>  </td><td class="markdownTableBodyLeft">The position and rotation of a joint.<br  />
+<br  />
+Note that the term "joint" should be interpreted loosely in this context. The list of joints provided by the XRHand includes the fingertips and the palm.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Joint radius  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandJoint.TryGetRadius*">XRHandJoint.TryGetRadius</a>  </td><td class="markdownTableBodyLeft">The distance from the center of the joint to the skin surface.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Joint linear velocity  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandJoint.TryGetLinearVelocity*">XRHandJoint.TryGetLinearVelocity</a>  </td><td class="markdownTableBodyLeft">A vector expressing the speed and direction of the joint in meters per second.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Joint angular velocity  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandJoint.TryGetAngularVelocity*">XRHandJoint.TryGetAngularVelocity</a>  </td><td class="markdownTableBodyLeft">A vector expressing a joint's rotational velocity. The direction of this vector is the axis of rotation and its magnitude is the angular velocity in meters per second.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Grip  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandDevice.gripPosition*">XRHandDevice.gripPosition</a><br  />
+<a href="xref:UnityEngine.XR.Hands.XRHandDevice.gripRotation*">XRHandDevice.gripRotation</a>  </td><td class="markdownTableBodyLeft">The position and orientation of the center of mass of a hand in a grip pose.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Pinch  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandDevice.pinchPosition">XRHandDevice.pinchPosition</a><br  />
+<a href="xref:UnityEngine.XR.Hands.XRHandDevice.pinchRotation">XRHandDevice.pinchRotation</a>  </td><td class="markdownTableBodyLeft">The position and orientation of the point between the thumb and the index finger when the hand is in a pinching pose.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Poke  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.XRHandDevice.pokePosition">XRHandDevice.pokePosition</a><br  />
+<a href="xref:UnityEngine.XR.Hands.XRHandDevice.pokeRotation">XRHandDevice.pokeRotation</a>  </td><td class="markdownTableBodyLeft">The position and orientation of the index fingertip when the hand is in a poking pose.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Device gestures, including pinch, menu pressed, and system.  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.XR.Hands.OpenXR.MetaHandTrackingAim.MetaAimHand.aimFlags*">MetaAimHand.aimFlags</a>  </td><td class="markdownTableBodyLeft">Hand gestures reported through the Meta Aim Hand extension to OpenXR.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Aim direction and position  </td><td class="markdownTableBodyLeft"><a href="xref:UnityEngine.InputSystem.TrackedDevice.devicePosition">MetaAimHand.devicePosition</a><br  />
+<a href="xref:UnityEngine.InputSystem.TrackedDevice.deviceRotation">MetaAimHand.deviceRotation</a>  </td><td class="markdownTableBodyLeft">A pose indicating where a device gesture is pointing, which can be used for UI and other interactions in a scene.  </td></tr>
+</table>
+<p>The <a href="xref:UnityEngine.XR.Hands.XRHand">XRHand</a>, <a href="xref:UnityEngine.XR.Hands.XRHandJoint">XRHandJoint</a>, and <a href="xref:UnityEngine.XR.Hands.XRHandDevice">XRHandDevice</a> objects are always available from a provider plug-in that supports the <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem">XRHandSubsystem</a>. However, a provider might not support every possible joint on the hand. You can determine which joints the current device supports with the <a href="xref:UnityEngine.XR.Hands.XRHandSubsystem.jointsInLayout">XRHandSubsystem.jointsInLayout</a> property. Refer to <a href="xref:xrhands-access-data#joint-layout">Get provider data layout</a> for more information.</p>
+<p>A provider might not support every type of data for a hand or joint, or might not be able to provide it with every hand update event. In both cases, you can determine which data are valid in an update with the <a href="xref:UnityEngine.XR.Hands.XRHandJoint.trackingState">XRHandJoint.trackingState</a> property. Refer to <a href="xref:xrhands-access-data#check-data-validity">Check data validity</a> for more information.</p>
+<p>The data for the <a href="xref:UnityEngine.XR.Hands.MetaAimHand">MetaAimHand</a> is supplied by an optional OpenXR extension. Provider plug-ins are not required to support it. Use the <a href="xref:UnityEngine.XR.Hands.MetaAimHand.aimFlags">MetaAimHand.aimFlags</a> at runtime to determine if the data in a <span class="tt">MetaAimHand</span> object is valid.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7723"></a>
+Joint nomenclature</h2>
+<p>The term "joint" should be interpreted fairly loosely. In this context, a joint is really a point on the hand that is independently tracked. It might not correspond to an anatomical joint. For example, the fingertips, palm, and wrist are not anatomical joints, but they do appear in the list of joints provided by the API.</p>
+<p>The <a class="el" href="namespace_unity.html">Unity</a> API follows the OpenXR joint nomenclature. In addition to including points that aren't joints, the OpenXR API names a joint by its adjacent bone rather than by its anatomical name. For example, the OpenXR API metacarpal "joint" is the end of the metacarpal bone that is closest to the wrist.</p>
+<p>The following table provides the API names along with the anatomical joint names for the tracked hand points:</p>
+<table class="doxtable">
+<tr>
+<td>Tracked point </td><td>Nomenclature </td></tr>
+<tr>
+<td rowspan="10"><p class="starttd"><b>Tip</b><br  />
+ <img src="../images/gestures/tip.png" alt="Fingertips" title="Fingertips" class="inline"/></p>
+<p class="endtd"></p>
+</td><td><b>Thumb</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: ThumbTip<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_THUMB_TIP_EXT </td></tr>
+<tr>
+<td><b>Index Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: IndexTip<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_INDEX_TIP_EXT </td></tr>
+<tr>
+<td><b>Middle Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: MiddleTip<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_MIDDLE_TIP_EXT </td></tr>
+<tr>
+<td><b>Ring Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: RingTip<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_RING_TIP_EXT </td></tr>
+<tr>
+<td><b>Little Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: LittleTip<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_LITTLE_TIP_EXT </td></tr>
+<tr>
+<td rowspan="10"><p class="starttd"><b>Distal point</b><br  />
+ <img src="../images/gestures/distal.png" alt="Distal Interphalangeal joints" title="Distal Interphalangeal joints" class="inline"/></p>
+<p class="endtd"></p>
+</td><td><b>Thumb</b> </td></tr>
+<tr>
+<td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: ThumbDistal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_THUMB_DISTAL_EXT </p>
+<p class="endtd"><b>Anatomic</b>: Interphalangeal (IP) </p>
+</td></tr>
+<tr>
+<td><b>Index Finger</b> </td></tr>
+<tr>
+<td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: IndexDistal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_INDEX_DISTAL_EXT </p>
+<p class="endtd"><b>Anatomic</b>: Distal Interphalangeal (DIP) </p>
+</td></tr>
+<tr>
+<td><b>Middle Finger</b> </td></tr>
+<tr>
+<td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: MiddleDistal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_MIDDLE_DISTAL_EXT </p>
+<p class="endtd"><b>Anatomic</b>: Distal Interphalangeal (DIP) </p>
+</td></tr>
+<tr>
+<td><b>Ring Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: RingDistal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_RING_DISTAL_EXT<br  />
+<b>Anatomic</b>: Distal Interphalangeal (DIP) </td></tr>
+<tr>
+<td><b>Little Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: LittleDistal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_LITTLE_DISTAL_EXT<br  />
+<b>Anatomic</b>: Distal Interphalangeal (DIP) </td></tr>
+<tr>
+<td rowspan="10"><p class="starttd"><b>Intermediate point</b><br  />
+ <img src="../images/gestures/intermediate.png" alt="Proximal Interphalangeal joints" title="Proximal Interphalangeal joints" class="inline"/></p>
+<p class="endtd"></p>
+</td><td><b>Thumb</b> </td></tr>
+<tr>
+<td>Not defined (the thumb has one less phalange bone than the other fingers). </td></tr>
+<tr>
+<td><b>Index Finger</b> </td></tr>
+<tr>
+<td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: IndexIntermediate<br  />
+OpenXR: XR_HAND_JOINT_INDEX_INTERMEDIATE_EXT </p>
+<p class="endtd">Anatomic: Proximal Interphalangeal (PIP) </p>
+</td></tr>
+<tr>
+<td><b>Middle Finger</b> </td></tr>
+<tr>
+<td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: MiddleIntermediate<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_MIDDLE_INTERMEDIATE_EXT </p>
+<p class="endtd"><b>Anatomic</b>: Proximal Interphalangeal (PIP) </p>
+</td></tr>
+<tr>
+<td><b>Ring Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: RingIntermediate<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_RING_INTERMEDIATE_EXT<br  />
+<b>Anatomic</b>: Proximal Interphalangeal (PIP) </td></tr>
+<tr>
+<td><b>Little Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: LittleIntermediate<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_LITTLE_INTERMEDIATE_EXT<br  />
+<b>Anatomic</b>: Proximal Interphalangeal (PIP) </td></tr>
+<tr>
+<td rowspan="10"><p class="starttd"><b>Proximal point</b><br  />
+ <img src="../images/gestures/proximal.png" alt="Metacarpophalangeal joints" title="Metacarpophalangeal joints" class="inline"/></p>
+<p class="endtd"></p>
+</td><td><b>Thumb</b> </td></tr>
+<tr>
+<td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: ThumbProximal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_THUMB_PROXIMAL_EXT </p>
+<p class="endtd"><b>Anatomic</b>: Metacarpophalangeal (MCP) </p>
+</td></tr>
+<tr>
+<td><b>Index Finger</b> </td></tr>
+<tr>
+<td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: IndexProximal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_INDEX_PROXIMAL_EXT </p>
+<p class="endtd"><b>Anatomic</b>: Metacarpophalangeal (MCP) </p>
+</td></tr>
+<tr>
+<td><b>Middle Finger</b> </td></tr>
+<tr>
+<td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: MiddleProximal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_MIDDLE_PROXIMAL_EXT </p>
+<p class="endtd"><b>Anatomic</b>: Metacarpophalangeal (MCP) </p>
+</td></tr>
+<tr>
+<td><b>Ring Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: RingProximal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_RING_PROXIMAL_EXT<br  />
+<b>Anatomic</b>: Metacarpophalangeal (MCP) </td></tr>
+<tr>
+<td><b>Little Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: LittleProximal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_LITTLE_PROXIMAL_EXT<br  />
+<b>Anatomic</b>: Metacarpophalangeal (MCP) </td></tr>
+<tr>
+<td rowspan="10"><p class="starttd"><b>Metacarpal point</b><br  />
+ <img src="../images/gestures/metacarpal.png" alt="Carpometacarpal joints" title="Carpometacarpal joints" class="inline"/></p>
+<p class="endtd"></p>
+</td><td><b>Thumb</b> </td></tr>
+<tr>
+<td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: ThumbMetacarpal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_THUMB_DISTAL_EXT </p>
+<p class="endtd"><b>Anatomic</b>: Carpometacarpal (CMC) </p>
+</td></tr>
+<tr>
+<td><b>Index Finger</b> </td></tr>
+<tr>
+<td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: IndexMetacarpal<br  />
+OpenXR: XR_HAND_JOINT_INDEX_METACARPAL_EXT </p>
+<p class="endtd">Anatomic: Carpometacarpal (CMC) </p>
+</td></tr>
+<tr>
+<td><b>Middle Finger</b> </td></tr>
+<tr>
+<td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: MiddleMetacarpal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_MIDDLE_METACARPAL_EXT </p>
+<p class="endtd"><b>Anatomic</b>: Carpometacarpal (CMC) </p>
+</td></tr>
+<tr>
+<td><b>Ring Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: RingMetacarpal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_RING_METACARPAL_EXT<br  />
+<b>Anatomic</b>: Carpometacarpal (CMC) </td></tr>
+<tr>
+<td><b>Little Finger</b> </td></tr>
+<tr>
+<td><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: LittleMetacarpal<br  />
+<b>OpenXR</b>: XR_HAND_JOINT_LITTLE_METACARPAL_EXT<br  />
+<b>Anatomic</b>: Carpometacarpal (CMC) </td></tr>
+<tr>
+<td><p class="starttd"><b>Palm point</b><br  />
+ <img src="../images/gestures/palm.png" alt="Palm point" title="Palm point" class="inline"/></p>
+<p class="endtd"></p>
+</td><td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: Palm </p>
+<p class="endtd"><b>OpenXR</b>: XR_HAND_JOINT_PALM_EXT </p>
+</td></tr>
+<tr>
+<td><p class="starttd"><b>Wrist point</b><br  />
+ <img src="../images/gestures/wrist.png" alt="Wrist point" title="Wrist point" class="inline"/></p>
+<p class="endtd"></p>
+</td><td><p class="starttd"><b><a class="el" href="namespace_unity.html">Unity</a> API</b>: Wrist </p>
+<p class="endtd"><b>OpenXR</b>: XR_HAND_JOINT_WRIST_EXT </p>
+</td></tr>
+</table>
+<p>For the API declarations of the tracked points, refer to the Enum <a href="xref:UnityEngine.XR.Hands.XRHandJointID">XRHandJointID</a> in the <a class="el" href="namespace_unity.html">Unity</a> API and <a href="https://registry.khronos.org/OpenXR/specs/1.0/man/html/XrHandJointEXT.html">XrHandJointEXT</a> in the OpenXR specification. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

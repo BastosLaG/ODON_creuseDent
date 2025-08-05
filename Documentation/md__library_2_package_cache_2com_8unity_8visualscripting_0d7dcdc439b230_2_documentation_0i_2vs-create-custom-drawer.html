@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Create a custom PropertyDrawer for a custom type</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-drawer.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Create a custom PropertyDrawer for a custom type </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7041"></a></p>
+<p>If you want to use a custom type from a custom class in Visual Scripting, and you don't have access to its source code, you must create a custom PropertyDrawer.</p>
+<p>You can't assign a value to a custom type inside the Editor or initialize the value for a variable with a custom type if it doesn't have a PropertyDrawer.</p>
+<dl class="section note"><dt>Note</dt><dd>The class for your custom type must have the <span class="tt">[Serializable]</span> tag in its source code to create a custom PropertyDrawer.</dd></dl>
+<p>To create a custom PropertyDrawer:</p>
+<ol type="1">
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-project-window.html">vs-open-project-window</a>]</li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snipec311abad128a63462ff39679ccbe3fd.html">vs-create-c-script-project</a>]</li>
+<li>Enter a name, such as <span class="tt">CounterDrawer</span>, for the new script file.</li>
+<li>Press Enter.</li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-new-external-code.html">vs-open-new-external-code</a>]</li>
+<li>Remove the <span class="tt">Start</span> and <span class="tt">Update</span> functions and their comments from the script file.</li>
+<li>Above the line that defines your new <span class="tt">public class</span>, add a <span class="tt">[CustomPropertyDrawer]</span> attribute.</li>
+<li>In the parameters for the <span class="tt">[CustomPropertyDrawer]</span> attribute, specify a <span class="tt">type of</span> parameter with the name of the type you want to assign to this PropertyDrawer, exactly as it appears in <a class="el" href="namespace_unity.html">Unity</a>.</li>
+<li>Change the <span class="tt">MonoBehaviour</span> class at the end of your <span class="tt">public class</span> definition to <span class="tt">PropertyDrawer</span>.</li>
+</ol>
+<dl class="section note"><dt>Note</dt><dd>After you create a custom PropertyDrawer, you must generate the required property provider scripts from your Visual Scripting Project Settings. For more information, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-configuration.html">Configure project settings</a>.</dd></dl>
+<p>The following is an example of a finished PropertyDrawer script:</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_editor.html">UnityEditor</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line">[CustomPropertyDrawer(type of(&lt;Counter&gt;))]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>CounterDrawer : PropertyDrawer</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Draw the property inside the given rect</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnGUI(Rect position, SerializedProperty property, GUIContent label)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Using BeginProperty / EndProperty on the parent property means that</span></div>
+<div class="line">        <span class="comment">// prefab override logic works on the entire property.</span></div>
+<div class="line">        EditorGUI.BeginProperty(position, label, property);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Draw label</span></div>
+<div class="line">        position = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Don&#39;t indent child fields</span></div>
+<div class="line">        var indent = EditorGUI.indentLevel;</div>
+<div class="line">        EditorGUI.indentLevel = 0;</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Calculate rects</span></div>
+<div class="line">        var amountRect = <span class="keyword">new</span> Rect(position.x, position.y, 30, position.height);</div>
+<div class="line">        var unitRect = <span class="keyword">new</span> Rect(position.x + 35, position.y, 50, position.height);</div>
+<div class="line">        var nameRect = <span class="keyword">new</span> Rect(position.x + 90, position.y, position.width - 90, position.height);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Draw fields - passs GUIContent.none to each so they are drawn without labels</span></div>
+<div class="line">        EditorGUI.PropertyField(amountRect, property.FindPropertyRelative(<span class="stringliteral">&quot;amount&quot;</span>), GUIContent.none);</div>
+<div class="line">        EditorGUI.PropertyField(unitRect, property.FindPropertyRelative(<span class="stringliteral">&quot;unit&quot;</span>), GUIContent.none);</div>
+<div class="line">        EditorGUI.PropertyField(nameRect, property.FindPropertyRelative(<span class="stringliteral">&quot;name&quot;</span>), GUIContent.none);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Set indent back to what it was</span></div>
+<div class="line">        EditorGUI.indentLevel = indent;</div>
+<div class="line"> </div>
+<div class="line">        EditorGUI.EndProperty();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition</b> HandsSampleProjectValidation.cs:12</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><p>To create the rest of your custom PropertyDrawer, you must decide what fields you must display, and how you want them to display in the Editor's interface. For example, you might want to use the UIElements module to create your PropertyDrawer, or decide to use <a class="el" href="namespace_unity.html">Unity</a>'s IMGUI module.</p>
+<p>For more information on how to create and design a custom PropertyDrawer, see the <a href="https://docs.unity3d.com/ScriptReference/PropertyDrawer.html">PropertyDrawer class</a> in the main <a class="el" href="namespace_unity.html">Unity</a> Scripting API and its related methods. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['initializepotentialdrag_0',['initializePotentialDrag',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_u_i_1_1_u_i_input_module.html#a8994014ca189d33f31c84221bbbd0f7d',1,'UnityEngine::XR::Interaction::Toolkit::UI::UIInputModule']]],
+  ['inputfocusacquired_1',['InputFocusAcquired',['../class_unity_1_1_x_r_1_1_oculus_1_1_input_focus.html#a3380c9000bb8151ec005e3bd11cb2e6e',1,'Unity::XR::Oculus::InputFocus']]],
+  ['inputfocuslost_2',['InputFocusLost',['../class_unity_1_1_x_r_1_1_oculus_1_1_input_focus.html#a3bd277537f60d3f6a4eda2ba1f570d3c',1,'Unity::XR::Oculus::InputFocus']]],
+  ['interactableregistered_3',['interactableRegistered',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html#a9270741f4211743329825f032c727617',1,'UnityEngine::XR::Interaction::Toolkit::XRInteractionManager']]],
+  ['interactableunregistered_4',['interactableUnregistered',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html#a2e24afb500d21c69b307ab70ab54cba1',1,'UnityEngine::XR::Interaction::Toolkit::XRInteractionManager']]],
+  ['interactiongroupregistered_5',['interactionGroupRegistered',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html#a59b3cc9a3e041b0418e963301214c66d',1,'UnityEngine::XR::Interaction::Toolkit::XRInteractionManager']]],
+  ['interactiongroupunregistered_6',['interactionGroupUnregistered',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html#a0e31b5512840b7709498ab77a8ee4786',1,'UnityEngine::XR::Interaction::Toolkit::XRInteractionManager']]],
+  ['interactorlinked_7',['interactorLinked',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_target_filter.html#a89c808d7fb9822b607905081524418f5',1,'UnityEngine::XR::Interaction::Toolkit::Filtering::XRTargetFilter']]],
+  ['interactorregistered_8',['interactorRegistered',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html#ac41ffcf2d36e4f2202c3d68b731a630a',1,'UnityEngine::XR::Interaction::Toolkit::XRInteractionManager']]],
+  ['interactorunlinked_9',['interactorUnlinked',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_target_filter.html#ab294bb2456715022347b5fee91bf91ea',1,'UnityEngine::XR::Interaction::Toolkit::Filtering::XRTargetFilter']]],
+  ['interactorunregistered_10',['interactorUnregistered',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html#ab2e8c1980d3ee6c3111607469fe58b08',1,'UnityEngine::XR::Interaction::Toolkit::XRInteractionManager']]],
+  ['itemadded_11',['ItemAdded',['../class_unity_engine_1_1_rendering_1_1_observable_list-1-g.html#a2e3c7791403a555cd11d72f5cd6e52ca',1,'UnityEngine::Rendering::ObservableList-1-g']]],
+  ['iteminserted_12',['ItemInserted',['../class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control.html#a4e99e27fb2cd7f9759b060dac9e245e9',1,'Unity::VisualScripting::ReorderableList::ReorderableListControl']]],
+  ['itemmoved_13',['ItemMoved',['../class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control.html#aa435d44c390a3169bbd26aa12cb3fba3',1,'Unity::VisualScripting::ReorderableList::ReorderableListControl']]],
+  ['itemmoving_14',['ItemMoving',['../class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control.html#ad00e17b8b446b7717ab7f662a82ea193',1,'Unity::VisualScripting::ReorderableList::ReorderableListControl']]],
+  ['itemremoved_15',['ItemRemoved',['../class_unity_engine_1_1_rendering_1_1_observable_list-1-g.html#a172c0fd361ff1e0c2d72c511acf46511',1,'UnityEngine::Rendering::ObservableList-1-g']]],
+  ['itemremoving_16',['ItemRemoving',['../class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_reorderable_list_control.html#a7ecf99c4a01667246e5c5e5cfccbd718',1,'Unity::VisualScripting::ReorderableList::ReorderableListControl']]]
+];

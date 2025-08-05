@@ -1,0 +1,1087 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Changelog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8collab-proxy_0dc854d1f7d97f_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Changelog </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md970"></a></p>
+<p>All notable changes to this package will be documented in this file.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md971"></a>
+[2.8.2] - 2025-05-06</h1>
+<ul>
+<li>Fixed false positive error showing in console if creating a workspace from the Hub with a version of the <a class="el" href="namespace_unity.html">Unity</a> Editor shipping with a default Version Control package older than version 2.7.1.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md972"></a>
+[2.8.1] - 2025-04-29</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md973"></a>
+Added</h2>
+<ul>
+<li>Added to the list of branches a context action to hide branches. You can use the filter to list the hidden branches and unhide them from the context menu.</li>
+<li>Added to the list of branches a context action to diff the branch.</li>
+<li>Added to the list of changesets a context action to create a new branch from a specific changeset.</li>
+<li>Added to the check-in and shelve notification a link to go to the list of changesets/shelves. The user can also copy the direct diff link.</li>
+<li>Added to the merge operation a notification with a link to go to the pending changes.</li>
+<li>Added to the undo and update workspace operations an ephemeral notification.</li>
+<li>Added to the status bar an action to copy to the clipboard the name of the current branch.</li>
+<li>Added to most dialogs an "Enter" keyboard shortcut to confirm the operation like the corresponding button.</li>
+<li>Added to the history of a folder a context action to revert changes.</li>
+<li>Added to the history a context action to diff changes for files that were moved/renamed.</li>
+<li>Added to the pending changes view the user avatar if available from Gravatar.</li>
+<li>Added to the merge view the avatars for authors of changes.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md974"></a>
+Fixed</h2>
+<ul>
+<li>Fixed the UI that could start refreshing forever, never completing the ongoing operations.</li>
+<li>Fixed the auto checkout for assets to only apply for file containing actual changes.</li>
+<li>Fixed project download from the Hub that was silently skipped when trying to download inside another workspace. It's now logging an explicit error in the console.</li>
+<li>Fixed a null exception that could occur when switching to the changesets tab very quickly after checkin.</li>
+<li>Fixed bulk editing meta files that was only performing a single checkout for the last element.</li>
+<li>Fixed a null exception that could occur on Revert to this revision if the selected change triggered a domain reload.</li>
+<li>Fixed the scroll that was not at the top when opening the branches or the shelves view.</li>
+<li>Fixed an error that was showing when deleting a shelveset that wasn't the one selected in the list.</li>
+<li>Fixed merge success notification that was showing in the view potentially colliding with contents.</li>
+<li>Implemented a mechanism to fix the path to UnityYAMLMerge.exe in the client.conf so it always points to an existing <a class="el" href="namespace_unity.html">Unity</a> installation.</li>
+<li>Fixed the apply shelve operation so that it checks for dirty changes and warn the user before applying the shelve.</li>
+<li>Fixed Undo changes of a Moved asset using the Asset Context Menu from the Project View that was leaving an inconsistent .meta file.</li>
+<li>Added the option to add a folder by path to the ignore or hidden changes list, instead of the incorrect option "Using the item extension".</li>
+<li>Fixed incorrect branch name in the history of a file for a revision where it was moved, displaying details of the move instead of the name of the branch.</li>
+<li>Fixed the <a class="el" href="namespace_unity.html">Unity</a> Editor crashing on macOS when opening the <a class="el" href="namespace_unity.html">Unity</a> Version Control window with the PiXYZ Plugin installed.</li>
+<li>Fixed a null exception that occured when using the diff search filter without any shelve in the repository.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md975"></a>
+[2.7.1] - 2025-02-13</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md976"></a>
+Added</h2>
+<ul>
+<li>Added a button to shelve selected pending changes. You can inspect the shelves content, and apply them to your workspace.</li>
+<li>Added the option to shelve pending changes when switching to another branch (or changeset). You can decide to apply them automatically after the switch.</li>
+<li>Added a context menu entry to create a code review from the list of branches (or changesets). You can decide to open the Desktop App or the <a class="el" href="namespace_unity.html">Unity</a> Cloud website.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md977"></a>
+Changed</h2>
+<ul>
+<li>Serialized the Checkin comment and tick selection so they are kept on any domain reload and play mode.</li>
+<li>Optimized incoming changes &amp; merge to only reload the Package Manager when needed.</li>
+<li>Added dedicated toolbar buttons to open the list of branches and the Branch Explorer of the Desktop App.</li>
+<li>Reworded the changeset context menu "Undo this change" to "Revert this file to the previous revision" so it’s more explicit.</li>
+<li>Moved the '<a class="el" href="namespace_unity.html">Unity</a> Version Control' menu item under 'Window'/'Version Control' submenu starting from <a class="el" href="namespace_unity.html">Unity</a> 6.1.</li>
+<li>Improve the Create workspace window to suggest the matching <a class="el" href="namespace_unity.html">Unity</a> Cloud project if it exists.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md978"></a>
+Fixed</h2>
+<ul>
+<li>Ensured ignore.conf is not being reformatted when adding or removing an ignore rule, so it keeps empty lines and comments.</li>
+<li>Fixed missing checked-out for renamed assets.</li>
+<li>Fixed rename asset leaves 'Added' + 'Remove locally' status instead of 'Moved'.</li>
+<li>Fixed console error GUI Error: Invalid GUILayout state in PlasticWindow view which is caused under some circumstances.</li>
+<li>Fixed null exception on entering in Play Mode before creating the workspace.</li>
+<li>Fixed lock statuses to correctly refresh in Project View and Inspector after merging.</li>
+<li>Fixed a performance issue by preventing the ConfigureLogging call on every domain reload when <a class="el" href="namespace_unity.html">Unity</a> Version Control is not used, reducing the load time by ~200ms. .</li>
+<li>Fixed the create branch operation to work in Gluon mode which uses partial workspaces.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md979"></a>
+[2.6.0] - 2024-11-28</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md980"></a>
+Added</h2>
+<ul>
+<li>Added the ability to merge a branch or a changeset, using a new context menu actions</li>
+<li>Added file conflict &amp; dir conflict context menu actions to the merge view</li>
+<li>Added diff and merge settings in Project Settings -&gt; Version Control -&gt; <a class="el" href="namespace_unity.html">Unity</a> Version Control Settings</li>
+<li>Added merge options dialog to the merge view</li>
+<li>Added copy path &amp; history context menu actions in all menus where they apply</li>
+<li>Added an menu entry to 'Open in <a class="el" href="namespace_unity.html">Unity</a> Cloud' showing the repository in the <a class="el" href="namespace_unity.html">Unity</a> Dashboard</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md981"></a>
+Changed</h2>
+<ul>
+<li>Updated the minimum supported version to <a class="el" href="namespace_unity.html">Unity</a> 2021.3.0f1</li>
+<li>Removed support for migrating old Collaborate workspaces to <a class="el" href="namespace_unity.html">Unity</a> Version Control</li>
+<li>Hide from the public documentation all internal APIs that were previously visible by mistake</li>
+<li>Optimized switching operations to only triggers the Package Manager to reinstall packages when needed</li>
+<li>Optimized incoming changes to only reload the Package Manager when needed (Gluon/partial workspace only for now)</li>
+<li>Automatically add UnityDirMonSyncFile rule for existing ignore.conf to avoid triggering unnecessary finding changes operation</li>
+<li>Improved the “search” edit box so it can resize when there is not enough space in the toolbar</li>
+<li>Replaced the "D" DevOps icon by the branching icon used in the Hub</li>
+<li>Replaced the logo of <a class="el" href="namespace_unity.html">Unity</a> in the Sign in to <a class="el" href="namespace_unity.html">Unity</a> VCS window</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md982"></a>
+Fixed</h2>
+<ul>
+<li>Fixed files getting checked out even though they are in hidden_changes.conf</li>
+<li>Fixed manual login to Cloud that didn't work with an Enterprise installation</li>
+<li>Fixed resolve conflicts not informing about lack of UVCS installation</li>
+<li>Fixed the Invite users to cloud organization when using an Enterprise installation</li>
+<li>Fixed new child branch not created from HEAD after update</li>
+<li>Fixed the learn more (here) link that showed the hex color value in <a class="el" href="namespace_unity.html">Unity</a> 6</li>
+<li>Fixed link to invite members in <a class="el" href="namespace_unity.html">Unity</a> Cloud.</li>
+<li>Fixed a crash in the create workspace window when unable to resolve a @unity organization</li>
+<li>Fixed incoming changes view that was not kept as selected after resolving some conflicts</li>
+<li>Fixed workspace name that was not refreshed after repository manual creation or selection</li>
+<li>Added a warning message to inform users about mismatching cloud project.</li>
+<li>Removed from the Create Workspace window the Local server that was present with no installation of UVCS</li>
+<li>Replaced hardcoded urls pointing to plasticscm.com</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md983"></a>
+[2.5.2] - 2024-09-25</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md984"></a>
+Fixed</h2>
+<ul>
+<li>Fixed token renewal issue: Can't obtain a new token (Message: Invalid Refresh Token., Code: 132.104)</li>
+<li>Reworded labels in the Create Repository window and added a link to Create a new organization project.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md985"></a>
+[2.5.1] - 2024-09-04</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md986"></a>
+Added</h2>
+<ul>
+<li>Added support for the new @unity organizations</li>
+<li>Allow deletion of non-empty branches that have not been merged anywhere</li>
+<li>New setting to control if new files must be automatically added to source control</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md987"></a>
+Changed</h2>
+<ul>
+<li>Improve the dialog to install <a class="el" href="namespace_unity.html">Unity</a> Version Control from the Editor</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md988"></a>
+Fixed</h2>
+<ul>
+<li>Fixed 'an existing xxx operation has locked the workspace' error on finding changes operation</li>
+<li>Fixed a case of a hang happening on Editor quit</li>
+<li>Fixed the login that could fail for Enterprise installation</li>
+<li>Fixed undo operation that didn't capture changes in packages</li>
+<li>Fixed history that was not shown when there was no desktop client installed</li>
+<li>Fixed unity 6 Editor going into the background after a dialog was closed</li>
+<li>Fixed wrong font size when changing to changesets view</li>
+<li>Fixed the "Upgrade plan" button in <a class="el" href="namespace_unity.html">Unity</a> plugin that used a obsolete redirection link</li>
+<li>Fixed Logs that were configured too late in the initialization</li>
+<li>Fixed the minimum supported version (2020.3.48f1 LTS) in the README</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md989"></a>
+[2.4.4] - 2024-07-19</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md990"></a>
+Fixed</h2>
+<ul>
+<li>Fixed the <a class="el" href="namespace_unity.html">Unity</a> Editor stuck on "Creating workspace" when "Use Unity Version Control" was selected from the Hub</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md991"></a>
+[2.4.3] - 2024-06-20</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md992"></a>
+Added</h2>
+<ul>
+<li>Changed the default ignore.conf to not ignore itself</li>
+<li>Added "Undo unchanged" and "Undo checkouts keeping changes" options to pending changes view</li>
+<li>Removed focus redirection after Check-in</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md993"></a>
+Fixed</h2>
+<ul>
+<li>Moving folders in the Editor now correctly use the UVCS "Move" operation</li>
+<li>Fixed hang on domain reload</li>
+<li>Fixed "item with the same key has already been added" error</li>
+<li>Fixed failure to delete a .meta file when deleting a private folder from the pending changes</li>
+<li>Supported workspace name with non-latin characters in Pending Changes</li>
+<li>Fixed text cut-off in filter rules dialog</li>
+<li>Fixed unexpected error while switching between branches</li>
+<li>Fixed error after renaming a parent branch of the working branch</li>
+<li>Fixed variables's value becoming clear after resolving conflict in inspector</li>
+<li>Removed misleading indication about shelves</li>
+<li>Fixed column sorting in pending changes view</li>
+<li>Fixed missing incoming changes after removing a branch</li>
+<li>Fixed "Collection was modified" error when doing multiple renames in a row</li>
+<li>Fixed undo &amp; check-in operations not working when the current scene was never saved</li>
+<li>Fixed check in error if nothing is selected in the pending changes tree</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md994"></a>
+[2.3.1] - 2024-02-27</h1>
+<p><a class="el" href="namespace_unity.html">Unity</a> Version Control is now available as part of the Version Control Package! You can enable <a class="el" href="namespace_unity.html">Unity</a> Version Control via Window &gt; <a class="el" href="namespace_unity.html">Unity</a> Version Control to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p>
+<ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md995"></a>
+Added</h2>
+<ul>
+<li>New view to list and manage locks.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md996"></a>
+Fixed</h2>
+<ul>
+<li>Fixed DropdownField not working properly on a ModalUtility window on MacOS.</li>
+<li>Fixed issue with existing checkout operations locking the workspace.</li>
+<li>Reviewed initialization and application lifecycle.</li>
+<li>Fixed layout error when switching checkout status in the inspector.</li>
+<li>Fixed Diff option unavailable for .prefab.</li>
+<li>Fixed UI error when opening and closing multiple closable tabs.</li>
+<li>Ensured branch creations start from the latest changeset.</li>
+<li>Unable to expand added item list after collapsing.</li>
+<li>Pending Changes context menu had the view file history greyed out for asset+meta.</li>
+<li>Preconfigured date format was not recognized as a valid DateTime.</li>
+<li>Fixed finding changes operation being firing constantly.</li>
+<li>Removed obsolete content in package documentation.</li>
+<li>Fixed typo in locks tooltip.</li>
+<li>Replaced the text "plasticscm.com" by a <a href="https://unity.com/solutions/version-control">https://unity.com/solutions/version-control</a> in the package.json</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md997"></a>
+[2.2.0] - 2023-10-06</h1>
+<p><a class="el" href="namespace_unity.html">Unity</a> Version Control is now available as part of the Version Control Package! You can enable <a class="el" href="namespace_unity.html">Unity</a> Version Control via Window &gt; <a class="el" href="namespace_unity.html">Unity</a> Version Control to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p>
+<ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md998"></a>
+Added</h2>
+<ul>
+<li>Added button for organization owner/admins to upgrade to DevOps subscription.</li>
+<li>Included new decorators for retained &amp; locked files.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md999"></a>
+Changed</h2>
+<ul>
+<li>Updated description in the package.json, including an updated link to get started.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1000"></a>
+Fixed</h2>
+<ul>
+<li>Fixed failed operations when the workspace is already locked.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1001"></a>
+[2.1.0] - 2023-09-01</h1>
+<p><a class="el" href="namespace_unity.html">Unity</a> Version Control is now available as part of the Version Control Package! You can enable <a class="el" href="namespace_unity.html">Unity</a> Version Control via Window &gt; <a class="el" href="namespace_unity.html">Unity</a> Version Control to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p>
+<ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1002"></a>
+Added</h2>
+<ul>
+<li>Added command to support Hub creating a new project, and connecting a project to <a class="el" href="namespace_unity.html">Unity</a> Version Control.</li>
+<li>Show a message with a link to invite users to the organization after the first checkin.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1003"></a>
+Changed</h2>
+<ul>
+<li>Moved the button to invite users to the organization from the submenu to the toolbar.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1004"></a>
+Removed</h2>
+<ul>
+<li>Don't write cloudProjectId in ProjectSettings.asset anymore since it should only be managed by Services.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1005"></a>
+Fixed</h2>
+<ul>
+<li>Fixed Add to ignored/hidden changes list from the Project window creating a negative rule.</li>
+<li>Fixed Switch to changeset not working on Gluon partial workspace.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1006"></a>
+[2.0.7] - 2023-07-25</h1>
+<p><a class="el" href="namespace_unity.html">Unity</a> Version Control is now available as part of the Version Control Package! You can enable <a class="el" href="namespace_unity.html">Unity</a> Version Control via Window &gt; <a class="el" href="namespace_unity.html">Unity</a> Version Control to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p>
+<ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1007"></a>
+Fixed</h2>
+<ul>
+<li>Fixed the <a class="el" href="namespace_unity.html">Unity</a> Version Control icon disappearing from the Editor Toolbar on domain reload.</li>
+<li>Fixed the popup stating "An existing checkout operation has locked the workspace" when trying to check in a scene with unsaved changes.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1008"></a>
+[2.0.5] - 2023-05-31</h1>
+<p><a class="el" href="namespace_unity.html">Unity</a> Version Control is now available as part of the Version Control Package! You can enable <a class="el" href="namespace_unity.html">Unity</a> Version Control via Window &gt; <a class="el" href="namespace_unity.html">Unity</a> Version Control to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p>
+<ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1009"></a>
+Fixed</h2>
+<ul>
+<li>Fixed remaining references to 'Plastic SCM' in localized labels.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1010"></a>
+[2.0.4] - 2023-04-14</h1>
+<p><a class="el" href="namespace_unity.html">Unity</a> Version Control is now available as part of the Version Control Package! You can enable <a class="el" href="namespace_unity.html">Unity</a> Version Control via Window &gt; <a class="el" href="namespace_unity.html">Unity</a> Version Control to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1011"></a>
+Fixed</h2>
+<ul>
+<li>Fixed 'Texture2D' does not contain a definition for 'ignoreMipmapLimit' error when installing <a class="el" href="namespace_unity.html">Unity</a> Version Control on previous <a class="el" href="namespace_unity.html">Unity</a> Editor Versions</li>
+<li>Fixed broken sign in dialog style when waiting for user to complete sign in</li>
+<li>Fixed NullReferenceException when opening a new project and the user doesn't have a <a class="el" href="namespace_unity.html">Unity</a> Version Control organization linked to a <a class="el" href="namespace_unity.html">Unity</a> ID</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1012"></a>
+[2.0.3] - 2023-03-29</h1>
+<p><a class="el" href="namespace_unity.html">Unity</a> Version Control is now available as part of the Version Control Package! You can enable <a class="el" href="namespace_unity.html">Unity</a> Version Control via Window &gt; <a class="el" href="namespace_unity.html">Unity</a> Version Control to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1013"></a>
+Changed</h2>
+<ul>
+<li>Changed the icons for <a class="el" href="namespace_unity.html">Unity</a> Version Control rebranding</li>
+<li>Changed onboarding workflow</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1014"></a>
+Fixed</h2>
+<ul>
+<li>Fixed blurry icons in the <a class="el" href="namespace_unity.html">Unity</a> Version Control window and toolbar button</li>
+<li>Fixed Pending Changes tab not always opening its selected item's location in Project window</li>
+<li>Fixed "Checked-out (changed)" status icon not showing up on Pending Changes tab</li>
+<li>Fixed issue that prevented new packages from being installed unless user enters play mode</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1015"></a>
+[2.0.1] - 2023-02-17</h1>
+<p><a class="el" href="namespace_unity.html">Unity</a> Version Control is now available as part of the Version Control Package! You can enable <a class="el" href="namespace_unity.html">Unity</a> Version Control via Window &gt; <a class="el" href="namespace_unity.html">Unity</a> Version Control to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1016"></a>
+Changed</h2>
+<ul>
+<li>Updated branding from "Plastic SCM" to "Unity Version Control"</li>
+<li>Improved offline experience by disabling the plugin when there is no internet connection</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1017"></a>
+[2.0.0] - 2023-01-11</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1018"></a>
+Changed</h2>
+<ul>
+<li>Removed Collab from the package</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1019"></a>
+[1.17.7] - 2022-10-28</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1020"></a>
+Added</h2>
+<ul>
+<li>Added offline mode toggle for smoother offline experience</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1021"></a>
+Fixed</h2>
+<ul>
+<li>Fixed performance issue with FindWorkspaceForPath method called multiple times every frame</li>
+<li>Fixed performance issue with UI.CooldownWindowDelayer.OnUpdate running on project without Plastic SCM workspace</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1022"></a>
+[1.17.6] - 2022-10-06</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1023"></a>
+Changed</h2>
+<ul>
+<li>Changed the "Go back to changeset" option in Changesets tab to "Revert to changeset"</li>
+<li>Improved notification banner appearance</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1024"></a>
+Fixed</h2>
+<ul>
+<li>Fixed editor refresh triggering when a workspace update is in progress</li>
+<li>Fixed pending changes show global ignored as private</li>
+<li>Removed encryption checkbox from create organization dialog</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1025"></a>
+[1.17.2] - 2022-07-06</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1026"></a>
+Added</h2>
+<ul>
+<li>Added notification banner on the status bar for live updates</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1027"></a>
+Changed</h2>
+<ul>
+<li>Renamed "Invite members to workspace" option to "Invite members to organization"</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1028"></a>
+Fixed</h2>
+<ul>
+<li>Fixed not being able to view changesets in a Gluon workspace</li>
+<li>Fixed not being able to insert carriage return in checkin dialog</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1029"></a>
+[1.17.1] - 2022-06-21</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1030"></a>
+Fixed</h2>
+<ul>
+<li>Fixed missing references in synced prefabs</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1031"></a>
+[1.17.0] - 2022-06-13</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1032"></a>
+Added</h2>
+<ul>
+<li>Added option to enable changelists and display them in pending changes tab</li>
+<li>Added changelist related options to pending changes context menu</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1033"></a>
+Fixed</h2>
+<ul>
+<li>Fixed editor hangs when there is no network available</li>
+<li>Fixed existing checkout has locked the workspace error</li>
+<li>Fixed checkin fails over unstable connection</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1034"></a>
+[1.15.18] - 2022-05-18</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1035"></a>
+Fixed</h2>
+<ul>
+<li>Fixed editor hang when entering Play Mode</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1036"></a>
+[1.15.17] - 2022-04-27</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1037"></a>
+Added</h2>
+<ul>
+<li>Added checkin comment column to Incoming Changes view</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1038"></a>
+Changed</h2>
+<ul>
+<li>Updated Go Back confirmation message to be consistent with feature</li>
+<li>Updated Create Child Branch dialog to focus on branch name field when opened</li>
+<li>Improved messaging of Subtractive Merge after using Go Back feature</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1039"></a>
+Fixed</h2>
+<ul>
+<li>Fixed assets not added correctly when Plastic SCM window is not open</li>
+<li>Fixed wrong position of overlay icons on Pending Changes view</li>
+<li>Disallowed Go Back feature to a changeset from another branch</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1040"></a>
+[1.15.16] - 2022-03-28</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1041"></a>
+Added</h2>
+<ul>
+<li>Added "Switch to changeset" menu option in changesets view</li>
+<li>Added "Go back to changeset" menu option in changesets view</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1042"></a>
+Changed</h2>
+<ul>
+<li>Removed category icons from views</li>
+<li>Removed "com.unity.services.core" package dependency</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1043"></a>
+Fixed</h2>
+<ul>
+<li>Fixed light theme icons used in dark theme after pulling incoming changes</li>
+<li>Fixed "Input string was not in a correct format" error</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1044"></a>
+[1.15.15] - 2022-03-09</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1045"></a>
+Added</h2>
+<ul>
+<li>Added checkout option in scene prefab view</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1046"></a>
+Changed</h2>
+<ul>
+<li>Updated file overlay icon size to adapt to project window zoom level</li>
+<li>Updated the styling of number of items in a category in Gluon incoming changes view</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1047"></a>
+Fixed</h2>
+<ul>
+<li>Fixed Plastic X not opening from plugin menu</li>
+<li>Fixed error when trying to invite members to proect</li>
+<li>Fixed editor unhandled errors being hijacked by the plugin</li>
+<li>Fixed toolbar icon not displaying incoming changes notification when Plastic window is closed</li>
+<li>Fixed VCCache::instance != NULL error when opening a project with Plastic window opened</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1048"></a>
+[1.15.13] - 2022-02-14</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1049"></a>
+Added</h2>
+<ul>
+<li>Added branch name column in changeset view</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1050"></a>
+Changed</h2>
+<ul>
+<li>Updated checkin comment box to keep the last comment after checkin error</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1051"></a>
+Fixed</h2>
+<ul>
+<li>Fixed performance regression in large projects due to FindObjectsOfTypeAll calls</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1052"></a>
+[1.15.12] - 2022-01-27</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1053"></a>
+Added</h2>
+<ul>
+<li>Added option to "Save Revision as" to the context menu in the changesets view</li>
+<li>Added incoming changes overview bar for Gluon workspace</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1054"></a>
+Changed</h2>
+<ul>
+<li>Updated the styling for number of items in category for pending changes view</li>
+<li>Updated the styling for number of items in category for changesets view</li>
+<li>Updated the styling for tabs close button</li>
+<li>Updated the color in different sections of the plugin</li>
+<li>Reduced dialog padding for the "Create Branch" dialog</li>
+<li>Updated the display overlay icons to show even if PlasticSCM window is closed</li>
+<li>Updated styling of number of items in incoming changes category</li>
+<li>Improved plugin initialization process and let the plugin functions without needing the Plastic window opened</li>
+<li>Disabled the invite button when user does not have invite permission or not on a cloud repo</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1055"></a>
+Fixed</h2>
+<ul>
+<li>Fixed size info in incoming changes view does not match actual changes size</li>
+<li>Fixed checkin and checkout options not respecting inspector locked status</li>
+<li>Fixed buttons in inspector view displayed even when Plastic window is closed</li>
+<li>Fixed icon incorrect sizes</li>
+<li>Fixed errors on create branch dialog</li>
+<li>Fixed Newtonsoft.Json.dll conflicts with other external packages</li>
+<li>Fixed editor objects count increasing when hovering over Plastic window or toolbar button</li>
+<li>Fixed ArgumentOutOfRange exception when creating a branch</li>
+<li>Fixed scene reloading not happening after creating a new branch</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1056"></a>
+[1.15.7] - 2021-12-02</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1057"></a>
+Added</h2>
+<ul>
+<li>Added option to "Save Revision as" to the context menu in the changesets view</li>
+<li>Added incoming changes overview bar for Gluon workspace</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1058"></a>
+Changed</h2>
+<ul>
+<li>Moved Plastic Package settings to the <a class="el" href="namespace_unity.html">Unity</a> Project Settings window</li>
+<li>Refined styling for Updating Workplace success state</li>
+<li>Updated texts for empty state and overview bar</li>
+<li>Removed Incoming Changes notification from empty state</li>
+<li>Updated the text for Forced Checkout option</li>
+<li>Refined the status overlay icons</li>
+<li>Updated the refresh icon on the toolbar</li>
+<li>Updated the texts for empty checkin message dialog</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1059"></a>
+Fixed</h2>
+<ul>
+<li>Fixed capitalization of Pending Changes and File History tab names</li>
+<li>Fixed the amount of spacing after the Item column title in the Pending Changes tab</li>
+<li>Removed pin striping from line items in File History tab</li>
+<li>Fixed project view context menu and icons missing after Collaborate project migration</li>
+<li>Fixed migrated projects not downloading correctly from <a class="el" href="namespace_unity.html">Unity</a> Hub</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1060"></a>
+[1.15.4] - 2021-11-10</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1061"></a>
+Added</h2>
+<ul>
+<li>Add option to "Add to ignore file" in context menu in the project view</li>
+<li>Added empty state message for Pending Changes tab</li>
+<li>Added success state message for Pending Changes tab</li>
+<li>Added metrics for Branches tab functionalities</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1062"></a>
+Changed</h2>
+<ul>
+<li>Removed pinstriping in the Gluon Incoming Changes window</li>
+<li>Removed the “Nothing to download” bar from the Incoming Changes window when there are no items to download</li>
+<li>Changed the default metadata columns shown in the Incoming Changes screen</li>
+<li>Updated the alignment of sorting arrows to the right of the column</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1063"></a>
+Fixed</h2>
+<ul>
+<li>Fixed UI overlays in Project view missing on changed assets when force checkout is disabled</li>
+<li>Fixed console error when selecting object in Scene view hierarchy or creating a new asset</li>
+<li>Fixed NullReferenceException after closing the Plastic SCM window</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1064"></a>
+[1.15.1] - 2021-10-21</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1065"></a>
+Added</h2>
+<ul>
+<li>Added visual overview bar to the incoming changes tab</li>
+<li>Added progress dialog for the migration process</li>
+<li>Added Branches tab that shows a list of all branches in the repository</li>
+<li>Added option and dialog to create a child branch from selected branch.</li>
+<li>Added option to switch to another branch</li>
+<li>Added option and dialog to rename a branch</li>
+<li>Added option to delete a branch</li>
+<li>Added a preference to save if the window should open the Branches tab by default</li>
+<li>Added metrics for Plastic SCM installation window usage</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1066"></a>
+Changed</h2>
+<ul>
+<li>Updated texts for workspace modes selection and checkin comment box</li>
+<li>Updated status bar notification icons</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1067"></a>
+Fixed</h2>
+<ul>
+<li>Fixed inverted text for the force checkout option</li>
+<li>Fixed typing capital O in checkin comment would open the selected item</li>
+<li>Fixed loading indicator not centered on Plastic SCM installation window</li>
+<li>Fixed installing Plastic SCM would sign out user from the plugin</li>
+<li>Removed extra refresh button on Gluon's Incoming Changes tab</li>
+<li>Fixed loading indicator not centered on Plastic SCM installation window</li>
+<li>Fixed missing Plastic SCM window option when user is not signed in on <a class="el" href="namespace_unity.html">Unity</a> Hub</li>
+<li>Removed meta file warning message for the deleted Beta folder</li>
+<li>Fixed Plastic SCM menu missing from Project view context menu</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1068"></a>
+[1.13.5] - 2021-09-27</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1069"></a>
+Added</h2>
+<ul>
+<li>Added workspace migration from Collab to Plastic which can be done with or without Plastic installed</li>
+<li>Added notification status icons</li>
+<li>Added light and dark mode versions of avatar icon</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1070"></a>
+Changed</h2>
+<ul>
+<li>Updated texts for migration</li>
+<li>Improved usage analytics around Editor and Plugin version</li>
+<li>Workspace Migration Adjustments</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1071"></a>
+Fixed</h2>
+<ul>
+<li>Renamed the CoreServices namespace so it doesn't conflict with other packages</li>
+<li>Devex integration to properly depend on <a class="el" href="namespace_core.html">Core</a></li>
+<li>Fixed some situations where the history window would be blank</li>
+<li>Fixed missing Enterprise login link</li>
+<li>Fixed low resolution icons in light theme</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1072"></a>
+[1.11.2] - 2021-08-27</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1073"></a>
+Added</h2>
+<ul>
+<li>Added horizontal scroll bar to Changesets list for easier viewing</li>
+<li>Added auto-login for SSO credentials handler</li>
+<li>Added metrics for changeset tab usage</li>
+<li>Added metrics for checkin actions</li>
+<li>Added new Undo icon</li>
+<li>Added missing API documentation</li>
+<li>Added ability to modify assets without checkout</li>
+<li>Added ability to allow empty checkin messages</li>
+<li>Added empty checking message localization</li>
+<li>Added Plastic toolbar button to <a class="el" href="namespace_unity.html">Unity</a> editor</li>
+<li>Added notification icon for incoming changes to Plastic toolbar button</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1074"></a>
+Changed</h2>
+<ul>
+<li>Removed the unneeded refresh button from History Tab</li>
+<li>Moved search bar to the top right global icon section in all tabs</li>
+<li>Updated capitalization of options in the Settings context menu</li>
+<li>Updated tab button styling to be consistent with <a class="el" href="namespace_unity.html">Unity</a> Editor conventions</li>
+<li>Status bar visible across all tabs</li>
+<li>Moved refresh button to the toolbar at the top right corner of the window</li>
+<li>Moved changesets time period selector to the right corner of the window</li>
+<li>Removed "Changes of changeset" header on the Changesets tab</li>
+<li>Moved number of selected items next to "Item" metadata title on the Pending Changes tab</li>
+<li>Improved refresh icon resolution</li>
+<li>Changed changesets detail to appear in vertical column</li>
+<li>Reduced default number of columns in changesets tab</li>
+<li>The number of changesets is no longer displayed in changesets tab</li>
+<li>Changed Launch branch explorer into an icon with tooltip</li>
+<li>Removed the hide changes button in changesets tab</li>
+<li>Moved incoming change prompt and button into a status bar</li>
+<li>Changed "Launch Plastic" to "Launch Plastic SCM" in options menu</li>
+<li>Wording change for plastic installation</li>
+<li>Updated file status icons</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1075"></a>
+Fixed</h2>
+<ul>
+<li>Fixed a bug where the Texture2D error would pop up after downloading a project</li>
+<li>Fixed a bug when context menu would sometimes disappear</li>
+<li>Fixed small textbox on checkin dialog when launched from context menu</li>
+<li>Fixed a workspace NullReferenceException bug</li>
+<li>Fixed notification icon not showing on Plastic window</li>
+<li>Fixed auto login errors not showing up for users</li>
+<li>Fixed unexpected error message after user switched workspace to a label</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1076"></a>
+[1.9.0] - 2021-07-13</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1077"></a>
+Added</h2>
+<ul>
+<li>Added Checkin and Update confirmation notification</li>
+<li>Added auto sign in when logged into <a class="el" href="namespace_unity.html">Unity</a> account</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1078"></a>
+Changed</h2>
+<ul>
+<li>Simplified UI: decluttered UI</li>
+<li>Improved load time performance</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1079"></a>
+Fixed</h2>
+<ul>
+<li>Fixed view not switching to workspace after creating an Enterprise Gluon workspace</li>
+<li>Fixed contextual menu not showing up in project view</li>
+<li>Fixed SSO renew token after password change</li>
+<li>Fixed some namespace collisions with Antlr3</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1080"></a>
+[1.7.1] - 2021-06-25</h1>
+<p>Plastic SCM for <a class="el" href="namespace_unity.html">Unity</a> is now available as part of the Version Control Package! You can enable Plastic SCM via Window &gt; Plastic SCM to get started! If you have previously used the <a class="el" href="namespace_unity.html">Unity</a> Asset Store Plastic SCM plug-in, you can now simply use this package. Make sure you delete the plug-in from your project. Removing a previously added Plastic SCM Asset Store Plug-In:</p><ul>
+<li>Select the PlasticSCM folder in the Assets\Plugins folder on the Project tab, then click Edit &gt; Delete</li>
+<li>Close the <a class="el" href="namespace_unity.html">Unity</a> Editor and open your project again. You will find the Plastic SCM menu item in the Window menu. </li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1081"></a>
+Added</h2>
+<ul>
+<li>Added support for inviting other members. This option is available from the gear / settings icon.</li>
+<li>Added support for signing in with Cloud Edition. This is available during the onboarding screen if you have never signed in.</li>
+<li>Added support for turning off Plastic in their project. This option removes the Plastic metadata from your directory. This option is available under Assets &gt; Plastic SCM &gt; Turn off Plastic SCM</li>
+<li>Added notification on the Plastic SCM tab title to indicate incoming changes. Users will no longer need to have the Plastic SCM window visible to know there are incoming changes.</li>
+<li>Auto configuration of SSO</li>
+<li>Added date column in incoming changes </li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1082"></a>
+Changed</h2>
+<ul>
+<li>Updating license to better conform with expected customer usage.</li>
+<li>Updated documentation file to meet standards.</li>
+<li>Updated third-party usage.</li>
+<li>No longer requires downloading of the full Plastic client. Basic features will work without additional installation. Features that require the full Plastic client will allow download and install as needed.</li>
+<li>Usability improvements around checking in code</li>
+<li>Improved update workspace tab UX</li>
+<li>Plastic SCM context menu is now available even if the Plastic SCM window is closed </li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1083"></a>
+Fixed</h2>
+<ul>
+<li>Stability and performance improvements</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1084"></a>
+[1.5.7] - 2021-04-07</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1085"></a>
+Unreleased</h2>
+<ul>
+<li>The Version Control package will be expanding to include both Collaborate and Plastic SCM version control interfaces. This release is preparing for that move and contains no new functionality or bug fixes for Collaborate. </li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1086"></a>
+Changed</h2>
+<ul>
+<li>Collaborate Package renamed to Version Control with changes to package display name and description. </li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1087"></a>
+Fixed</h2>
+<ul>
+<li>Fixed NPE when updating the version of the Collab package.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1088"></a>
+[1.3.9] - 2020-07-13</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1089"></a>
+Fixed</h2>
+<ul>
+<li>Unnecessary use of texture compression in icons that slowed down platform switching</li>
+<li>Update publish button state when selected changes update</li>
+<li>Use colorized icons when changes are available.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1090"></a>
+[1.3.8] - 2020-06-08</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1091"></a>
+Fixed</h2>
+<ul>
+<li>Fix incorrect priority of error messages</li>
+<li>Fix Collab button being stuck in inprogress state</li>
+<li>Fix error when partially publishing without the window open</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1092"></a>
+[1.3.7] - 2020-01-30</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1093"></a>
+Changed</h2>
+<ul>
+<li>Bulk revert is now supported.</li>
+<li>Collab is blocked in play mode. </li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1094"></a>
+Fixed</h2>
+<ul>
+<li>Fixed services window's links to open Collab.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1095"></a>
+[1.3.6] - 2020-01-21</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1096"></a>
+Fixed</h2>
+<ul>
+<li>Fixed compile errors when removing the NUnit package by removing unnecessary references.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1097"></a>
+[1.3.5] - 2020-01-08</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1098"></a>
+Fixed</h2>
+<ul>
+<li>Fix "accept mine" / "accept remote" icon swap in conflicts view.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1099"></a>
+[1.3.4] - 2019-12-16</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1100"></a>
+Changed</h2>
+<ul>
+<li>Window state is no longer restored after the window is closed and opened. </li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1101"></a>
+Fixed</h2>
+<ul>
+<li>History tab failing to load on startup if it is left open in the previous session.</li>
+<li>Progress bar percentage not matching the bar.</li>
+<li>History list correctly updates after a new revision is published.</li>
+<li>UI instabilities when restoring or going back to a revision with a different package manifest.</li>
+<li>Improve handling of changes to the project id.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1102"></a>
+[1.3.3] - 2019-12-10</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1103"></a>
+Changed</h2>
+<ul>
+<li>Disable UI test cases that can be unstable.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1104"></a>
+[1.3.2] - 2019-12-05</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1105"></a>
+Changed</h2>
+<ul>
+<li>Update UX to UIElements.</li>
+<li>Increased minimum supported version to 2020.1.</li>
+<li>Update <a class="el" href="namespace_documentation.html">Documentation</a> to required standards.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1106"></a>
+[1.2.16] - 2019-02-11</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1107"></a>
+Fixed</h2>
+<ul>
+<li>Update stylesheet to pass USS validation</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1108"></a>
+[1.2.15] - 2018-11-16</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1109"></a>
+Changed</h2>
+<ul>
+<li>Added support for non-experimental UIElements.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1110"></a>
+[1.2.11] - 2018-09-04</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1111"></a>
+Fixed</h2>
+<ul>
+<li>Made some performance improvements to reduce impact on ReloadAssemblies.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1112"></a>
+[1.2.9] - 2018-08-13</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1113"></a>
+Fixed</h2>
+<ul>
+<li>Test issues for the Collab History Window are now fixed.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1114"></a>
+[1.2.7] - 2018-08-07</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1115"></a>
+Fixed</h2>
+<ul>
+<li>Toolbar drop-down will no longer show up when package is uninstalled.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1116"></a>
+[1.2.6] - 2018-06-15</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1117"></a>
+Fixed</h2>
+<ul>
+<li>Fixed an issue where Collab's History window wouldn't load properly.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1118"></a>
+[1.2.5] - 2018-05-21</h1>
+<p>This is the first release of <em><a class="el" href="namespace_unity.html">Unity</a> Package CollabProxy</em>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1119"></a>
+Added</h2>
+<ul>
+<li>Collab history and toolbar windows</li>
+<li>Collab view and presenter classes</li>
+<li>Collab Editor tests for view and presenter </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+var interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_render_graph_enabled_render_pipeline =
+[
+    [ "isImmediateModeSupported", "interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_render_graph_enabled_render_pipeline.html#ae45cf845eb1a343afdbfa98dff701906", null ]
+];

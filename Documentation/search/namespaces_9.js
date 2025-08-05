@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['microsoft_0',['Microsoft',['../namespace_microsoft.html',1,'']]],
+  ['microsoft_3a_3aunity_1',['Unity',['../namespace_microsoft_1_1_unity.html',1,'Microsoft']]],
+  ['microsoft_3a_3aunity_3a_3avisualstudio_2',['VisualStudio',['../namespace_microsoft_1_1_unity_1_1_visual_studio.html',1,'Microsoft::Unity']]],
+  ['microsoft_3a_3aunity_3a_3avisualstudio_3a_3aeditor_3',['Editor',['../namespace_microsoft_1_1_unity_1_1_visual_studio_1_1_editor.html',1,'Microsoft::Unity::VisualStudio']]],
+  ['microsoft_3a_3aunity_3a_3avisualstudio_3a_3aeditor_3a_3amessaging_4',['Messaging',['../namespace_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_messaging.html',1,'Microsoft::Unity::VisualStudio::Editor']]],
+  ['microsoft_3a_3aunity_3a_3avisualstudio_3a_3aeditor_3a_3atesting_5',['Testing',['../namespace_microsoft_1_1_unity_1_1_visual_studio_1_1_editor_1_1_testing.html',1,'Microsoft::Unity::VisualStudio::Editor']]],
+  ['mono_6',['Mono',['../namespace_mono.html',1,'']]],
+  ['mono_3a_3areflection_7',['Reflection',['../namespace_mono_1_1_reflection.html',1,'Mono']]],
+  ['myexercise_5f1_8',['MyExercise_1',['../namespace_my_exercise__1.html',1,'']]],
+  ['myexercise_5f1s_9',['MyExercise_1s',['../namespace_my_exercise__1s.html',1,'']]],
+  ['myexercise_5f2_10',['MyExercise_2',['../namespace_my_exercise__2.html',1,'']]],
+  ['myexercise_5f2s_11',['MyExercise_2s',['../namespace_my_exercise__2s.html',1,'']]],
+  ['myexercise_5f3_12',['MyExercise_3',['../namespace_my_exercise__3.html',1,'']]],
+  ['myexercise_5f3s_13',['MyExercise_3s',['../namespace_my_exercise__3s.html',1,'']]],
+  ['myexercise_5f4_14',['MyExercise_4',['../namespace_my_exercise__4.html',1,'']]],
+  ['myexercise_5f4s_15',['MyExercise_4s',['../namespace_my_exercise__4s.html',1,'']]],
+  ['myexercise_5f5_16',['MyExercise_5',['../namespace_my_exercise__5.html',1,'']]],
+  ['myexercise_5f5s_17',['MyExercise_5s',['../namespace_my_exercise__5s.html',1,'']]],
+  ['myexercise_5f6_18',['MyExercise_6',['../namespace_my_exercise__6.html',1,'']]],
+  ['myexercise_5f6s_19',['MyExercise_6s',['../namespace_my_exercise__6s.html',1,'']]]
+];

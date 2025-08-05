@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Include or exclude a setting in your build</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_008eb7258d02edff2bf7eedba5b277172.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Include or exclude a setting in your build </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2750"></a></p>
+<p>By default, <a class="el" href="namespace_unity.html">Unity</a> doesn't include a setting ("strips" the setting) in your built project to optimize performance and reduce build size. For example, if you create a custom reference property that points to a shader asset, by default <a class="el" href="namespace_unity.html">Unity</a> doesn't include that property in your build.</p>
+<p>You can choose to include a setting in your build instead. The value of the property is read-only at runtime.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2751"></a>
+Include a setting in your build</h1>
+<p>To include a setting in your build by default, set the <span class="tt">IsAvailableInPlayerBuild</span> property of your <a class="el" href="md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2add-custom-graphics-settings.html">settings group class</a> to <span class="tt">true</span>.</p>
+<p>For example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MySettings: IRenderPipelineGraphicsSettingsStripper</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <span class="comment">// Make settings in this class available in your build</span></div>
+<div class="line">  <span class="keyword">public</span> <span class="keywordtype">bool</span> IsAvailableInPlayerBuild =&gt; <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md2752"></a>
+Create your own stripping code</h1>
+<p>To conditionally control whether <a class="el" href="namespace_unity.html">Unity</a> includes or excludes a setting in your build, override the <span class="tt">IsAvailableInPlayerBuild</span> property by implementing the <span class="tt">IRenderPipelineGraphicsSettingsStripper</span> interface.</p>
+<p>Follow these steps:</p>
+<ol type="1">
+<li>Create a class that implements the <span class="tt">IRenderPipelineGraphicsSettingsStripper</span> interface, and pass in your <a class="el" href="md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2add-custom-graphics-settings.html">settings class</a>.</li>
+<li>Implement the <span class="tt">active</span> property. If you set <span class="tt">active</span> to <span class="tt">false</span>, the code in the class doesn't run.</li>
+<li>Implement the <span class="tt">CanRemoveSettings</span> method with your own code that decides whether to include the setting. Return <span class="tt">true</span> to strip the setting, or <span class="tt">false</span> to include the setting.</li>
+</ol>
+<p>For example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.Rendering;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Implement the IRenderPipelineGraphicsSettingsStripper interface, and pass in our settings class</span></div>
+<div class="line"><span class="keyword">class </span>SettingsStripper : IRenderPipelineGraphicsSettingsStripper&lt;MySettings&gt;</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Make this stripper active</span></div>
+<div class="line">  <span class="keyword">public</span> <span class="keywordtype">bool</span> active =&gt; <span class="keyword">true</span>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Implement the CanRemoveSettings method with our own code</span></div>
+<div class="line">  <span class="keyword">public</span> <span class="keywordtype">bool</span> CanRemoveSettings(MySettings settings)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">// Strip the setting (return true) if useMyFeature is false</span></div>
+<div class="line">    <span class="keywordflow">return</span> !settings.useMyFeature;</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><p>If you implement <span class="tt">IRenderPipelineGraphicsSettingsStripper</span> multiple times for one setting, <a class="el" href="namespace_unity.html">Unity</a> only strips the setting if they all return <span class="tt">true</span>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2753"></a>
+Check if your build includes a setting</h1>
+<p>You can check if a setting exists at runtime. A setting might not exist at runtime for one of the following reasons:</p>
+<ul>
+<li><a class="el" href="namespace_unity.html">Unity</a> didn't include the setting in your build.</li>
+<li>The current pipeline doesn't support the setting.</li>
+<li>The setting is in an assembly that <a class="el" href="namespace_unity.html">Unity</a> doesn't include in your build. Refer to [Organizing scripts into assemblies](xref:um-script-compilation-assembly-definition-files) for more information.</li>
+</ul>
+<p>To check if the setting exists, use the <span class="tt">TryGetRenderPipelineSettings</span> API. <span class="tt">TryGetRenderPipelineSettings</span> puts the setting in an <span class="tt">out</span> variable if the setting exists. Otherwise it returns <span class="tt">false</span>.</p>
+<p>For example, the following code checks whether a settings group called <span class="tt">MySettings</span> exists at runtime:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keywordflow">if</span> (GraphicsSettings.TryGetRenderPipelineSettings&lt;MySettings&gt;(out var mySetting)){</div>
+<div class="line">  Debug.Log(<span class="stringliteral">&quot;The setting is in the build and its value is {mySetting.myValue}&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md2754"></a>
+Additional resources</h1>
+<ul>
+<li>[Organizing scripts into assemblies](xref:um-script-compilation-assembly-definition-files) </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

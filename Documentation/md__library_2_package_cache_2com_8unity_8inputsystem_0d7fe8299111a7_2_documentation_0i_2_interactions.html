@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Interactions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_interactions.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Interactions </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2112"></a>
+autotoc_md2112</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2113"></a>
+uid: input-system-interactions</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2114"></a>
+Interactions</h1>
+<ul>
+<li>Interactions<ul>
+<li>Operation<ul>
+<li>Multiple Controls on an Action</li>
+<li>Multiple Interactions on a Binding</li>
+<li>Timeouts</li>
+</ul>
+</li>
+<li>Using Interactions<ul>
+<li>Interactions applied to Bindings</li>
+<li>Interactions applied to Actions</li>
+</ul>
+</li>
+<li>Predefined Interactions<ul>
+<li>Default Interaction</li>
+<li>Press</li>
+<li>Hold</li>
+<li>Tap</li>
+<li>SlowTap</li>
+<li>MultiTap</li>
+</ul>
+</li>
+<li>Writing custom Interactions</li>
+</ul>
+</li>
+</ul>
+<p>An Interaction represents a specific input pattern. For example, a hold is an Interaction that requires a Control to be held for at least a minimum amount of time.</p>
+<p>Interactions drive responses on Actions. You can place them on individual Bindings or an Action as a whole, in which case they apply to every Binding on the Action. At runtime, when a particular interaction completes, this triggers the Action.</p>
+<p><img src="Images/InteractionProperties.png" alt="Interaction Properties" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2115"></a>
+Operation</h2>
+<p>An Interaction has a set of distinct phases it can go through in response to receiving input.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Phase  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Waiting</span>  </td><td class="markdownTableBodyNone">The Interaction is waiting for input.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Started</span>  </td><td class="markdownTableBodyNone">The Interaction has been started (that is, it received some of its expected input), but is not complete yet.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Performed</span>  </td><td class="markdownTableBodyNone">The Interaction is complete.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Canceled</span>  </td><td class="markdownTableBodyNone">The Interaction was interrupted and aborted. For example, the user pressed and then released a button before the minimum time required for a hold Interaction to complete.  </td></tr>
+</table>
+<p>Not every Interaction triggers every phase, and the pattern in which specific Interactions trigger phases depends on the Interaction type.</p>
+<p>While <span class="tt">Performed</span> is typically the phase that triggers the actual response to an Interaction, <span class="tt">Started</span> and <span class="tt">Canceled</span> can be useful for providing UI feedback while the Interaction is in progress. For example, when a hold is <span class="tt">Started</span>, the app can display a progress bar that fills up until the hold time has been reached. If, however, the hold is <span class="tt">Canceled</span> before it completes, the app can reset the progress bar to the beginning.</p>
+<p>The following example demonstrates this kind of setup with a fire Action that the user can tap to fire immediately, or hold to charge:</p>
+<div class="fragment"><div class="line">var fireAction = <span class="keyword">new</span> InputAction(<span class="stringliteral">&quot;fire&quot;</span>);</div>
+<div class="line">fireAction.AddBinding(<span class="stringliteral">&quot;&lt;Gamepad&gt;/buttonSouth&quot;</span>)</div>
+<div class="line">    <span class="comment">// Tap fires, slow tap charges. Both act on release.</span></div>
+<div class="line">    .WithInteractions(<span class="stringliteral">&quot;tap,slowTap&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">fireAction.started +=</div>
+<div class="line">    context =&gt;</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (context.interaction is SlowTapInteraction)</div>
+<div class="line">            ShowChargingUI();</div>
+<div class="line">    };</div>
+<div class="line"> </div>
+<div class="line">fireAction.performed +=</div>
+<div class="line">    context =&gt;</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (context.interaction is SlowTapInteraction)</div>
+<div class="line">            ChargedFire();</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">            Fire();</div>
+<div class="line">    };</div>
+<div class="line"> </div>
+<div class="line">fireAction.canceled +=</div>
+<div class="line">    _ =&gt; HideChargingUI();</div>
+<div class="line">fireAction.Enable();</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2116"></a>
+Multiple Controls on an Action</h3>
+<p>If you have multiple Controls bound to a Binding or an Action which has an Interaction, then the Input System first applies the <a href="ActionBindings.md#conflicting-inputs">Control conflict resolution</a> logic to get a single value for the Action, which it then feeds to the Interaction logic. Any of the bound Controls can perform the Interaction.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2117"></a>
+Multiple Interactions on a Binding</h3>
+<p>If multiple Interactions are present on a single Binding or Action, then the Input System checks the Interactions in the order they are present on the Binding. The code example above illustrates this example. The Binding on the <span class="tt">fireAction</span> Action has two Interactions: <span class="tt">WithInteractions("tap;slowTap")</span>. The tap Interaction gets a first chance at interpreting the input from the Action. If the button is pressed, the Action calls the <span class="tt">Started</span> callback on the tap Interaction. If the user keeps holding the button, the tap Interaction times out, and the Action calls the <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_canceled"><span class="tt">Canceled</span></a> callback for the tap Interaction and starts processing the slow tap Interaction (which now receives a <span class="tt">Started</span> callback).</p>
+<p>At any one time, only one Interaction can be "driving" the action (that is, it gets to determine the action's current <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_phase"><span class="tt">phase</span></a>). If an Interaction higher up in the stack cancels, Interactions lower down in the stack can take over.</p>
+<p>Note that the order of interactions can affect which interaction is passed to your callback function. For example, an action with Tap, MultiTap and Hold interactions will have different behaviour when the interactions are in a different order, such as Hold, MultiTap and Tap. If you get unexpected behaviour, you may need to experiment with a different ordering.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2118"></a>
+Timeouts</h3>
+<p>Interactions might need to wait a certain time for a specific input to occur or to not occur. An example of this is the Hold interaction which, after a button is pressed, has to wait for a set <a href="../api/UnityEngine.InputSystem.Interactions.HoldInteraction.html#UnityEngine_InputSystem_Interactions_HoldInteraction_duration">duration</a> until the "hold" is complete. To do this, an interaction installs a timeout using <a href="../api/UnityEngine.InputSystem.InputInteractionContext.html#UnityEngine_InputSystem_InputInteractionContext_SetTimeout_System_Single_"><span class="tt">SetTimeout</span></a>.</p>
+<p>It can be useful to know how much of a timeout is left for an interaction to complete. For example, you might want to display a bar in the UI that is charging up while the interaction is waiting to complete. To query the percentage to which a timeout has completed, use <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_GetTimeoutCompletionPercentage_"><span class="tt">GetTimeoutCompletionPercentage</span></a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// Returns a value between 0 (inclusive) and 1 (inclusive).</span></div>
+<div class="line">var warpActionCompletion = playerInput.actions[<span class="stringliteral">&quot;warp&quot;</span>].GetTimeoutCompletionPercentage();</div>
+</div><!-- fragment --><p>Note that each Interaction can have its own separate timeout (but only a single one at any one time). If multiple interactions are in effect, then <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_GetTimeoutCompletionPercentage_"><span class="tt">GetTimeoutCompletionPercentage</span></a> will only use the timeout of the one interaction that is currently driving the action.</p>
+<p>Some Interactions might involve multiple timeouts in succession. In this case, knowing only the completion of the currently running timeout (if any) is often not useful. An example is <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html"><span class="tt">MultiTapInteraction</span></a>, which involves a timeout on each individual tap, as well as a timeout in-between taps. The Interaction is complete only after a full tap sequence has been performed.</p>
+<p>An Interaction can use <a href="../api/UnityEngine.InputSystem.InputInteractionContext.html#UnityEngine_InputSystem_InputInteractionContext_SetTotalTimeoutCompletionTime_System_Single_"><span class="tt">SetTotalTimeoutCompletionTime</span></a> to inform the Input System of the total time it will run timeouts for.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2119"></a>
+Using Interactions</h2>
+<p>You can install Interactions on <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_bindings.html">Bindings</a> or <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Actions</a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2120"></a>
+Interactions applied to Bindings</h3>
+<p>When you create Bindings for your <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Actions</a>, you can choose to add Interactions to the Bindings.</p>
+<p>If you're using <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">project-wide actions</a>, or <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_assets.html">Input Action Assets</a>, you can add any Interaction to your Bindings in the Input Action editor. Once you <a href="ActionsEditor.md#bindings">created some Bindings</a>, select the Binding you want to add Interactions to, so that the right pane of the window shows the properties for that Binding. Next, click on the plus icon on the <b>Interactions</b> foldout to open a list of all available Interactions types. Choose an Interaction type to add an Interaction instance of that type. The Interaction now appears in the <b>Interactions</b> foldout. If the Interaction has any parameters, you can now edit them here as well:</p>
+<p><img src="Images/BindingProcessors.png" alt="Binding Processors" class="inline"/></p>
+<p>To remove an Interaction, click the minus button next to it. To change the order of Interactions, click the up and down arrows.</p>
+<p>If you create your Bindings in code, you can add Interactions like this:</p>
+<div class="fragment"><div class="line">var Action = <span class="keyword">new</span> InputAction();</div>
+<div class="line">action.AddBinding(<span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick&quot;</span>)</div>
+<div class="line">    .WithInteractions(<span class="stringliteral">&quot;tap(duration=0.8)&quot;</span>);</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2121"></a>
+Interactions applied to Actions</h3>
+<p>Applying Interactions directly to an Action is equivalent to applying them to all Bindings for the Action. It is thus more or less a shortcut that avoids manually adding the same Interaction(s) to each of the Bindings.</p>
+<p>If Interactions are applied <b>both</b> to an Action and to its Bindings, then the effect is the same as if the Action's Interactions are <em>appended</em> to the list of Interactions on each of the Bindings. This means that the Binding's Interactions are applied <em>first</em>, and then the Action's Interactions are applied <em>after</em>.</p>
+<p>You can add and edit Interactions on Actions in the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_assets.html">Input Action Assets</a> editor window the same way as you would do for Bindings: select an Action to Edit, then add the Interactions in the right window pane.</p>
+<p>If you create your Actions in code, you can add Interactions like this:</p>
+<div class="fragment"><div class="line">var Action = <span class="keyword">new</span> InputAction(Interactions: <span class="stringliteral">&quot;tap(duration=0.8)&quot;</span>);</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md2122"></a>
+Predefined Interactions</h2>
+<p>The Input System package comes with a set of basic Interactions you can use. If an Action has no Interactions set, the system uses its default Interaction.</p>
+<p>&gt;<b>Note</b>: The built-in Interactions operate on Control actuation and don't use Control values directly. The Input System evaluates the <span class="tt">pressPoint</span> parameters against the magnitude of the Control actuation. This means you can use these Interactions on any Control which has a magnitude, such as sticks, and not just on buttons.</p>
+<p>The following diagram shows the behavior of the built-in Interactions for a simple button press.</p>
+<p><img src="./Images/InteractionsDiagram.png" alt="Interaction Diagram" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2123"></a>
+Default Interaction</h3>
+<p>If you haven't specifically added an Interaction to a Binding or its Action, the default Interaction applies to the Binding.</p>
+<p><a href="RespondingToActions.md#value"><span class="tt">Value</span></a> type Actions have the following behavior:</p>
+<ol type="1">
+<li>As soon as a bound Control becomes <a href="Controls.md#control-actuation">actuated</a>, the Action goes from <span class="tt">Waiting</span> to <span class="tt">Started</span>, and then immediately to <span class="tt">Performed</span> and back to <span class="tt">Started</span>. One callback occurs on <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_started"><span class="tt">InputAction.started</span></a>, followed by one callback on <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed"><span class="tt">InputAction.performed</span></a>.</li>
+<li>For as long as the bound Control remains actuated, the Action stays in <span class="tt">Started</span> and triggers <span class="tt">Performed</span> whenever the value of the Control changes (that is, one call occurs to <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed"><span class="tt">InputAction.performed</span></a>).</li>
+<li>When the bound Control stops being actuated, the Action goes to <span class="tt">Canceled</span> and then back to <span class="tt">Waiting</span>. One call occurs to <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_canceled"><span class="tt">InputAction.canceled</span></a>.</li>
+</ol>
+<p><a href="RespondingToActions.md#button"><span class="tt">Button</span></a> type Actions have the following behavior:</p>
+<ol type="1">
+<li>As soon as a bound Control becomes <a href="Controls.md#control-actuation">actuated</a>, the Action goes from <span class="tt">Waiting</span> to <span class="tt">Started</span>. One callback occurs on <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_started"><span class="tt">InputAction.started</span></a>.</li>
+<li>If a Control then reaches or exceeds the button press threshold, the Action goes from <span class="tt">Started</span> to <span class="tt">Performed</span>. One callback occurs on <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed"><span class="tt">InputAction.performed</span></a>. The default value of the button press threshold is defined in the <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint">input settings</a>. However, an individual control can <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html#UnityEngine_InputSystem_Controls_ButtonControl_pressPoint">override</a> this value.</li>
+<li>Once the Action has <span class="tt">Performed</span>, if all Controls then go back to a level of actuation at or below the <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_buttonReleaseThreshold">release threshold</a>, the Action goes from <span class="tt">Performed</span> to <span class="tt">Canceled</span>. One call occurs to <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_canceled"><span class="tt">InputAction.canceled</span></a>.</li>
+<li>If the Action never went to <span class="tt">Performed</span>, it will go to <span class="tt">Canceled</span> as soon as all Controls are released. One call occurs to <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_canceled"><span class="tt">InputAction.canceled</span></a>.</li>
+</ol>
+<p><a href="RespondingToActions.md#pass-through"><span class="tt">PassThrough</span></a> type Actions have a simpler behavior. The Input System doesn't try to track bound Controls as a single source of input. Instead, it triggers a <span class="tt">Performed</span> callback for each value change.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Callback</b>  </th><th class="markdownTableHeadNone"><a href="RespondingToActions.md#value"><span class="tt">InputActionType.Value</span></a>  </th><th class="markdownTableHeadNone"><a href="RespondingToActions.md#button"><span class="tt">InputActionType.Button</span></a>  </th><th class="markdownTableHeadNone"><a href="RespondingToActions.md#pass-through"><span class="tt">InputActionType.PassThrough</span></a>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_started"><span class="tt">started</span></a>  </td><td class="markdownTableBodyNone">Control(s) changed value away from the default value.  </td><td class="markdownTableBodyNone">Button started being pressed but has not necessarily crossed the press threshold yet.  </td><td class="markdownTableBodyNone">not used  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed"><span class="tt">performed</span></a>  </td><td class="markdownTableBodyNone">Control(s) changed value.  </td><td class="markdownTableBodyNone">Button was pressed to at least the button <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint">press threshold</a>.  </td><td class="markdownTableBodyNone">Control changed value.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_canceled"><span class="tt">canceled</span></a>  </td><td class="markdownTableBodyNone">Control(s) are no longer actuated.  </td><td class="markdownTableBodyNone">Button was released. If the button was pressed above the press threshold, the button has now fallen to or below the <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_buttonReleaseThreshold">release threshold</a>. If the button was never fully pressed, the button is now back to completely unpressed.  </td><td class="markdownTableBodyNone">Action is disabled.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2124"></a>
+Press</h3>
+<p>You can use a <a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html"><span class="tt">PressInteraction</span></a> to explicitly force button-like interactions. Use the <a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html#UnityEngine_InputSystem_Interactions_PressInteraction_behavior"><span class="tt">behavior</span></a> parameter to select if the Interaction should trigger on button press, release, or both.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Parameters</b>  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Default value  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html#UnityEngine_InputSystem_Interactions_PressInteraction_pressPoint"><span class="tt">pressPoint</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint"><span class="tt">InputSettings.defaultButtonPressPoint</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html#UnityEngine_InputSystem_Interactions_PressInteraction_behavior"><span class="tt">behavior</span></a>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.PressBehavior.html"><span class="tt">PressBehavior</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">PressOnly</span>  </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Callbacks</b>/<a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html#UnityEngine_InputSystem_Interactions_PressInteraction_behavior"><span class="tt">behavior</span></a>  </th><th class="markdownTableHeadNone"><span class="tt">PressOnly</span>  </th><th class="markdownTableHeadNone"><span class="tt">ReleaseOnly</span>  </th><th class="markdownTableHeadNone"><span class="tt">PressAndRelease</span>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_started"><span class="tt">started</span></a>  </td><td class="markdownTableBodyNone">Control magnitude crosses <a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html#UnityEngine_InputSystem_Interactions_PressInteraction_pressPoint"><span class="tt">pressPoint</span></a>  </td><td class="markdownTableBodyNone">Control magnitude crosses <a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html#UnityEngine_InputSystem_Interactions_PressInteraction_pressPoint"><span class="tt">pressPoint</span></a>  </td><td class="markdownTableBodyNone">Control magnitude crosses <a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html#UnityEngine_InputSystem_Interactions_PressInteraction_pressPoint"><span class="tt">pressPoint</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed"><span class="tt">performed</span></a>  </td><td class="markdownTableBodyNone">Control magnitude crosses <a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html#UnityEngine_InputSystem_Interactions_PressInteraction_pressPoint"><span class="tt">pressPoint</span></a>  </td><td class="markdownTableBodyNone">Control magnitude goes back below <a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html#UnityEngine_InputSystem_Interactions_PressInteraction_pressPoint"><span class="tt">pressPoint</span></a>  </td><td class="markdownTableBodyNone">- Control magnitude crosses <a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html#UnityEngine_InputSystem_Interactions_PressInteraction_pressPoint"><span class="tt">pressPoint</span></a><br  />
+or<br  />
+- Control magnitude goes back below <a href="../api/UnityEngine.InputSystem.Interactions.PressInteraction.html#UnityEngine_InputSystem_Interactions_PressInteraction_pressPoint"><span class="tt">pressPoint</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_canceled"><span class="tt">canceled</span></a>  </td><td class="markdownTableBodyNone">not used  </td><td class="markdownTableBodyNone">not used  </td><td class="markdownTableBodyNone">not used  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2125"></a>
+Hold</h3>
+<p>A <a href="../api/UnityEngine.InputSystem.Interactions.HoldInteraction.html"><span class="tt">HoldInteraction</span></a> requires the user to hold a Control for <a href="../api/UnityEngine.InputSystem.Interactions.HoldInteraction.html#UnityEngine_InputSystem_Interactions_HoldInteraction_duration"><span class="tt">duration</span></a> seconds before the Input System triggers the Action.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Parameters</b>  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Default value  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.HoldInteraction.html#UnityEngine_InputSystem_Interactions_HoldInteraction_duration"><span class="tt">duration</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultHoldTime"><span class="tt">InputSettings.defaultHoldTime</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.HoldInteraction.html#UnityEngine_InputSystem_Interactions_HoldInteraction_pressPoint"><span class="tt">pressPoint</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint"><span class="tt">InputSettings.defaultButtonPressPoint</span></a>  </td></tr>
+</table>
+<p>To display UI feedback when a button starts being held, use the <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_started"><span class="tt">started</span></a> callback.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line"> </div>
+<div class="line">   action.started += _ =&gt; ShowGunChargeUI();</div>
+<div class="line">   action.performed += _ =&gt; FinishGunChargingAndHideChargeUI();</div>
+<div class="line">   action.cancelled += _ =&gt; HideChargeUI();</div>
+</div><!-- fragment --><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone" colspan="2"><b>Callbacks</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_started"><span class="tt">started</span></a>  </td><td class="markdownTableBodyNone">Control magnitude crosses <a href="../api/UnityEngine.InputSystem.Interactions.HoldInteraction.html#UnityEngine_InputSystem_Interactions_HoldInteraction_pressPoint"><span class="tt">pressPoint</span></a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed"><span class="tt">performed</span></a>  </td><td class="markdownTableBodyNone">Control magnitude held above <a href="../api/UnityEngine.InputSystem.Interactions.HoldInteraction.html#UnityEngine_InputSystem_Interactions_HoldInteraction_pressPoint"><span class="tt">pressPoint</span></a> for &gt;= <a href="../api/UnityEngine.InputSystem.Interactions.HoldInteraction.html#UnityEngine_InputSystem_Interactions_HoldInteraction_duration"><span class="tt">duration</span></a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_canceled"><span class="tt">canceled</span></a>  </td><td class="markdownTableBodyNone">Control magnitude goes back below <a href="../api/UnityEngine.InputSystem.Interactions.HoldInteraction.html#UnityEngine_InputSystem_Interactions_HoldInteraction_pressPoint"><span class="tt">pressPoint</span></a> before <a href="../api/UnityEngine.InputSystem.Interactions.HoldInteraction.html#UnityEngine_InputSystem_Interactions_HoldInteraction_duration"><span class="tt">duration</span></a> (that is, the button was not held long enough).  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2126"></a>
+Tap</h3>
+<p>A <a href="../api/UnityEngine.InputSystem.Interactions.TapInteraction.html"><span class="tt">TapInteraction</span></a> requires the user to press and release a Control within <a href="../api/UnityEngine.InputSystem.Interactions.TapInteraction.html#UnityEngine_InputSystem_Interactions_TapInteraction_duration"><span class="tt">duration</span></a> seconds to trigger the Action.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Parameters</b>  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Default value  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.TapInteraction.html#UnityEngine_InputSystem_Interactions_TapInteraction_duration"><span class="tt">duration</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultTapTime"><span class="tt">InputSettings.defaultTapTime</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.TapInteraction.html#UnityEngine_InputSystem_Interactions_TapInteraction_pressPoint"><span class="tt">pressPoint</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint"><span class="tt">InputSettings.defaultButtonPressPoint</span></a>  </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone" colspan="2"><b>Callbacks</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_started"><span class="tt">started</span></a>  </td><td class="markdownTableBodyNone">Control magnitude crosses <a href="../api/UnityEngine.InputSystem.Interactions.TapInteraction.html#UnityEngine_InputSystem_Interactions_TapInteraction_pressPoint"><span class="tt">pressPoint</span></a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed"><span class="tt">performed</span></a>  </td><td class="markdownTableBodyNone">Control magnitude goes back below <a href="../api/UnityEngine.InputSystem.Interactions.TapInteraction.html#UnityEngine_InputSystem_Interactions_TapInteraction_pressPoint"><span class="tt">pressPoint</span></a> before <a href="../api/UnityEngine.InputSystem.Interactions.TapInteraction.html#UnityEngine_InputSystem_Interactions_TapInteraction_duration"><span class="tt">duration</span></a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_canceled"><span class="tt">canceled</span></a>  </td><td class="markdownTableBodyNone">Control magnitude held above <a href="../api/UnityEngine.InputSystem.Interactions.TapInteraction.html#UnityEngine_InputSystem_Interactions_TapInteraction_pressPoint"><span class="tt">pressPoint</span></a> for &gt;= <a href="../api/UnityEngine.InputSystem.Interactions.TapInteraction.html#UnityEngine_InputSystem_Interactions_TapInteraction_duration"><span class="tt">duration</span></a> (that is, the tap was too slow).  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2127"></a>
+SlowTap</h3>
+<p>A <a href="../api/UnityEngine.InputSystem.Interactions.SlowTapInteraction.html"><span class="tt">SlowTapInteraction</span></a> requires the user to press and hold a Control for a minimum duration of <a href="../api/UnityEngine.InputSystem.Interactions.SlowTapInteraction.html#UnityEngine_InputSystem_Interactions_SlowTapInteraction_duration"><span class="tt">duration</span></a> seconds, and then release it, to trigger the Action.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Parameters</b>  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Default value  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.SlowTapInteraction.html#UnityEngine_InputSystem_Interactions_SlowTapInteraction_duration"><span class="tt">duration</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultSlowTapTime"><span class="tt">InputSettings.defaultSlowTapTime</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.SlowTapInteraction.html#UnityEngine_InputSystem_Interactions_SlowTapInteraction_pressPoint"><span class="tt">pressPoint</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint"><span class="tt">InputSettings.defaultButtonPressPoint</span></a>  </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone" colspan="2"><b>Callbacks</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_started"><span class="tt">started</span></a>  </td><td class="markdownTableBodyNone">Control magnitude crosses <a href="../api/UnityEngine.InputSystem.Interactions.SlowTapInteraction.html#UnityEngine_InputSystem_Interactions_SlowTapInteraction_pressPoint"><span class="tt">pressPoint</span></a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed"><span class="tt">performed</span></a>  </td><td class="markdownTableBodyNone">Control magnitude goes back below <a href="../api/UnityEngine.InputSystem.Interactions.SlowTapInteraction.html#UnityEngine_InputSystem_Interactions_SlowTapInteraction_pressPoint"><span class="tt">pressPoint</span></a> after <a href="../api/UnityEngine.InputSystem.Interactions.SlowTapInteraction.html#UnityEngine_InputSystem_Interactions_SlowTapInteraction_duration"><span class="tt">duration</span></a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_canceled"><span class="tt">canceled</span></a>  </td><td class="markdownTableBodyNone">Control magnitude goes back below <a href="../api/UnityEngine.InputSystem.Interactions.SlowTapInteraction.html#UnityEngine_InputSystem_Interactions_SlowTapInteraction_pressPoint"><span class="tt">pressPoint</span></a> before <a href="../api/UnityEngine.InputSystem.Interactions.SlowTapInteraction.html#UnityEngine_InputSystem_Interactions_SlowTapInteraction_duration"><span class="tt">duration</span></a> (that is, the tap was too fast).  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2128"></a>
+MultiTap</h3>
+<p>A <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html"><span class="tt">MultiTapInteraction</span></a> requires the user to press and release a Control within <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_tapTime"><span class="tt">tapTime</span></a> seconds <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_tapCount"><span class="tt">tapCount</span></a> times, with no more then <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_tapDelay"><span class="tt">tapDelay</span></a> seconds passing between taps, for the Interaction to trigger. You can use this to detect double-click or multi-click gestures.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Parameters</b>  </th><th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Default value  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_tapTime"><span class="tt">tapTime</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultTapTime"><span class="tt">InputSettings.defaultTapTime</span></a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_tapDelay"><span class="tt">tapDelay</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td><td class="markdownTableBodyNone">2 * <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_tapTime"><span class="tt">tapTime</span></a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_tapCount"><span class="tt">tapCount</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">int</span>  </td><td class="markdownTableBodyNone">2  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_pressPoint"><span class="tt">pressPoint</span></a>  </td><td class="markdownTableBodyNone"><span class="tt">float</span>  </td><td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint"><span class="tt">InputSettings.defaultButtonPressPoint</span></a>  </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone" colspan="2"><b>Callbacks</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_started"><span class="tt">started</span></a>  </td><td class="markdownTableBodyNone">Control magnitude crosses <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_pressPoint"><span class="tt">pressPoint</span></a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed"><span class="tt">performed</span></a>  </td><td class="markdownTableBodyNone">Control magnitude went back below <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_pressPoint"><span class="tt">pressPoint</span></a> and back up above it repeatedly for <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_tapCount"><span class="tt">tapCount</span></a> times.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_canceled"><span class="tt">canceled</span></a>  </td><td class="markdownTableBodyNone">- After going back below <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_pressPoint"><span class="tt">pressPoint</span></a>, Control magnitude did not go back above <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_pressPoint"><span class="tt">pressPoint</span></a> within <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_tapDelay"><span class="tt">tapDelay</span></a> time (that is, taps were spaced out too far apart).<br  />
+or<br  />
+- After going back above <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_pressPoint"><span class="tt">pressPoint</span></a>, Control magnitude did not go back below <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_pressPoint"><span class="tt">pressPoint</span></a> within <a href="../api/UnityEngine.InputSystem.Interactions.MultiTapInteraction.html#UnityEngine_InputSystem_Interactions_MultiTapInteraction_tapTime"><span class="tt">tapTime</span></a> time (that is, taps were too long).  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2129"></a>
+Writing custom Interactions</h2>
+<p>You can also write a custom Interaction to use in your Project. You can use custom Interactions in the UI and code the same way you use built-in Interactions. Add a class implementing the <a href="../api/UnityEngine.InputSystem.IInputInteraction.html"><span class="tt">IInputInteraction</span></a> interface, like this:</p>
+<div class="fragment"><div class="line"><span class="comment">// Interaction which performs when you quickly move an</span></div>
+<div class="line"><span class="comment">// axis all the way from extreme to the other.</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyWiggleInteraction : IInputInteraction</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">float</span> duration = 0.2;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> Process(ref InputInteractionContext context)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (context.timerHasExpired)</div>
+<div class="line">        {</div>
+<div class="line">            context.Canceled();</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">switch</span> (context.phase)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">case</span> InputActionPhase.Waiting:</div>
+<div class="line">                <span class="keywordflow">if</span> (context.Control.ReadValue&lt;<span class="keywordtype">float</span>&gt;() == 1)</div>
+<div class="line">                {</div>
+<div class="line">                    context.Started();</div>
+<div class="line">                    context.SetTimeout(duration);</div>
+<div class="line">                }</div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_unity_engine_1_1_input_system.html#aecc012480a29c4b720a87b8465f34182">InputActionPhase</a>.Started:</div>
+<div class="line">                <span class="keywordflow">if</span> (context.Control.ReadValue&lt;<span class="keywordtype">float</span>&gt;() == -1)</div>
+<div class="line">                    context.Performed();</div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Unlike processors, Interactions can be stateful, meaning that you can keep a</span></div>
+<div class="line">    <span class="comment">// local state that mutates over time as input is received. The system might</span></div>
+<div class="line">    <span class="comment">// invoke the Reset() method to ask Interactions to reset to the local state</span></div>
+<div class="line">    <span class="comment">// at certain points.</span></div>
+<div class="line">    <span class="keywordtype">void</span> Reset()</div>
+<div class="line">    {</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_engine_1_1_input_system_html_aecc012480a29c4b720a87b8465f34182"><div class="ttname"><a href="namespace_unity_engine_1_1_input_system.html#aecc012480a29c4b720a87b8465f34182">UnityEngine.InputSystem.InputActionPhase</a></div><div class="ttdeci">InputActionPhase</div><div class="ttdoc">Trigger phase of an InputAction.</div><div class="ttdef"><b>Definition</b> InputActionPhase.cs:26</div></div>
+</div><!-- fragment --><p>Now, you need to tell the Input System about your Interaction. Call this method in your initialization code:</p>
+<div class="fragment"><div class="line">InputSystem.RegisterInteraction&lt;MyWiggleInteraction&gt;();</div>
+</div><!-- fragment --><p>Your new Interaction is now available in the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_assets.html">Input Action Asset Editor window</a>. You can also add it in code like this:</p>
+<div class="fragment"><div class="line">var Action = <span class="keyword">new</span> InputAction(Interactions: <span class="stringliteral">&quot;MyWiggle(duration=0.5)&quot;</span>);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: metaquest</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_2metaquest.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">metaquest </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md9399"></a>
+autotoc_md9399</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9400"></a>
+uid: openxr-meta-quest-support</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9401"></a>
+Meta Quest Support</h1>
+<p>Understand how to configure the OpenXR plug-in for Meta Quest devices.</p>
+<p>The Meta Quest Support feature enables Meta Quest support for the OpenXR plug-in. The <b>Meta Quest Support</b> window provides configurable settings specific for Meta Quest devices.</p>
+<p>Refer to the following sections to understand how to Enable Meta Quest Support, and the <a class="el" href="#settings">Settings</a> you can configure.</p>
+<h2 class="doxsection"><a class="anchor" id="enable"></a>
+Enable Meta Quest Support</h2>
+<p>To deploy to Meta Quest, enable the Meta Quest Support feature on the Android build target as follows:</p>
+<ol type="1">
+<li>Open the Project Settings window (menu: <b>Edit &gt; Project Settings</b>).</li>
+<li>Select the <b>XR Plug-in Management</b> from the list of settings on the left.</li>
+<li>If necessary, enable <b>OpenXR</b> in the list of <b>Plug-in Providers</b>. <a class="el" href="namespace_unity.html">Unity</a> installs the OpenXR plug-in, if not already installed.</li>
+<li>Select the OpenXR settings page under XR Plug-in Management.</li>
+<li>Add the <b>Oculus Touch Controller Profile</b> to the <b>Interaction Profiles</b> list. (You can have multiple profiles enabled in the list, the OpenXR chooses the one to use based on the current device at runtime.)</li>
+<li>Enable <b>Meta Quest Support</b> under <b>OpenXR Feature Groups</b>.</li>
+</ol>
+<p>When you enable Meta Quest Support, <a class="el" href="namespace_unity.html">Unity</a> produces Application Package Kit (APK) files that you can run on the Quest family of devices.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9402"></a>
+Open the Meta Quest Support window</h2>
+<p>The <b>Meta Quest Support</b> settings window provides the settings you can configure for OpenXR support on Meta Quest devices.</p>
+<p>To open the <b>Meta Quest Support</b> window:</p>
+<ol type="1">
+<li>Open the <b>OpenXR</b> section of <b>XR Plug-in Management</b> (menu: <b>Edit</b> &gt; <b>Project Settings</b> &gt; <b>XR Plug-in Management</b> &gt; <b>OpenXR</b>).</li>
+<li>Under <b>OpenXR Feature Groups</b>, enable <b>Meta Quest Support</b>.</li>
+<li>Click the gear icon next to <b>Meta Quest Support</b> to open <b>Meta Quest Support</b> settings.</li>
+</ol>
+<p><img src="../images/meta-quest-support.png" alt="Meta Quest Support in the OpenXR settings." class="inline"/><br  />
+<em>Meta Quest Support feature.</em></p>
+<h2 class="doxsection"><a class="anchor" id="settings"></a>
+settings</h2>
+<p>The following sections provide a reference of the settings you can configure in the <b>Meta Quest Support</b> window.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9403"></a>
+Rendering Settings</h3>
+<p>Use the following settings to configure rendering in your project.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9404"></a>
+Symmetric Projection (Vulkan)</h4>
+<p>If enabled, when the application begins it will create a stereo symmetric view that changes the eye buffer resolution based on the Inter-Pupillary Distance (IPD). Provides a performance benefit across all IPD values.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9405"></a>
+Optimize Buffer Discards (Vulkan)</h4>
+<p>Enable this setting to enable an optimization that allows 4x Multi <a class="el" href="class_sample.html">Sample</a> Anti Aliasing (MSAA) textures to be memoryless on Vulkan.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9406"></a>
+Optimize Multiview Render Regions (Vulkan)</h4>
+<p>Enable to activate Multiview Render Regions optimizations at application start (<a class="el" href="namespace_unity.html">Unity</a> 6.1 and newer).</p>
+<p>To learn more about this feature, refer to [Multiview Render Regions](xref:openxr-multiview-render-regions).</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9407"></a>
+Space Warp motion vector texture format</h4>
+<p>Choose the format used by the motion vector texture to store its values. The option you choose depends on whether you want to prioritize visual quality and performance.</p>
+<p>The options you can choose are:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Option  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>RGBA16f</b>  </td><td class="markdownTableBodyLeft">Use this for more precise values. This can improve the visual quality of Space Warp.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>RG16f</b>  </td><td class="markdownTableBodyLeft">Use this option for reduced memory usage, but slightly less precision.  </td></tr>
+</table>
+<p>To learn more about Space Warp, refer to [URP Application Spacewarp](xref:um-xr-application-spacewarp).</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9408"></a>
+Manifest Settings</h3>
+<p>Use the following settings to configure your project manifest.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9409"></a>
+Force Remove Internet Permission</h4>
+<p>Enable to force the removal of internet permissions added to the [Android App Manifest](xref:um-android-manifest).</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md9410"></a>
+System Splash Screen</h4>
+<p>Uses a <span class="tt">PNG</span> in the <span class="tt">Assets</span> folder as the system splash screen image. If set, the OS will display the system splash screen as a high quality compositor layer as soon as the app is starting to launch, until the app submits the first frame.</p>
+<p>Use the picker (&amp;#8857;) to select an image from the <span class="tt">Assets</span> folder you want to use as the system splash screen image.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9411"></a>
+Target Devices</h3>
+<p>Select the Quest devices your project targets.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9412"></a>
+Experimental</h3>
+<p>The <b>Experimental</b> section contains experimental settings that are under active development.</p>
+<dl class="section note"><dt>Note</dt><dd>Experimental settings might change before they’re verified.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9413"></a>
+Additional resources</h2>
+<ul>
+<li>[Develop for Meta Quest](xref:um-xr-meta-quest-develop) (<a class="el" href="namespace_unity.html">Unity</a> manual)</li>
+<li><a href="https://developer.oculus.com/blog/oculus-all-in-on-openxr-deprecates-proprietary-apis">Oculus All In on OpenXR: Deprecates Proprietary APIs</a> (Meta developer blog) </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

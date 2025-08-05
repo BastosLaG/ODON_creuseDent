@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Devices</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_devices.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Devices </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2017"></a>
+autotoc_md2017</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2018"></a>
+uid: input-system-devices</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2019"></a>
+Devices</h1>
+<ul>
+<li>Devices<ul>
+<li>Device descriptions<ul>
+<li>Capabilities</li>
+<li>Matching<ul>
+<li>Hijacking the matching process</li>
+</ul>
+</li>
+<li>Device lifecycle<ul>
+<li>Device creation</li>
+<li>Device removal</li>
+<li>Device resets</li>
+<li>Device syncs</li>
+<li>Device enabling and disabling</li>
+<li>Background and focus change behavior</li>
+<li>Domain reloads in the Editor</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Native Devices<ul>
+<li>Disconnected Devices</li>
+</ul>
+</li>
+<li>Device IDs</li>
+<li>Device usages</li>
+<li>Device commands<ul>
+<li>Sending commands to Devices</li>
+<li>Adding custom device Commands</li>
+</ul>
+</li>
+<li>Device state<ul>
+<li>State changes<ul>
+<li>Monitoring state changes</li>
+<li>Synthesizing state</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Working with Devices<ul>
+<li>Monitoring Devices</li>
+<li>Adding and removing Devices</li>
+<li>Creating custom Devices<ul>
+<li>Step 1: The state struct</li>
+<li>Step 2: The Device class</li>
+<li>Step 3: The Update method</li>
+<li>Step 4: Device registration and creation</li>
+<li>Step 5: `current` and `all` (optional)</li>
+<li>Step 6: Device Commands (Optional)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Physically, Input Devices represent devices attached to the computer, which a user can use to control the app. Logically, Input Devices are the top-level container for <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_controls.html">Controls</a>. The <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a> class is itself a specialization of <a href="../api/UnityEngine.InputSystem.InputControl.html"><span class="tt">InputControl</span></a>. See <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_supported_devices.html">supported Devices</a> to see what kind of Devices the Input System currently supports.</p>
+<p>To query the set of all currently present Devices, you can use <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_devices"><span class="tt">InputSystem.devices</span></a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2020"></a>
+Device descriptions</h2>
+<p>An <a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html"><span class="tt">InputDeviceDescription</span></a> describes a Device. The Input System uses this primarily during the Device discovery process. When a new Device is reported (by the runtime or by the user), the report contains a Device description. Based on the description, the system then attempts to find a Device <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_layouts.html">layout</a> that matches the description. This process is based on Device matchers.</p>
+<p>After a Device has been created, you can retrieve the description it was created from through the <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_description"><span class="tt">InputDevice.description</span></a> property.</p>
+<p>Every description has a set of standard fields:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Field  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html#UnityEngine_InputSystem_Layouts_InputDeviceDescription_interfaceName"><span class="tt">interfaceName</span></a>  </td><td class="markdownTableBodyNone">Identifier for the interface/API that is making the Device available. In many cases, this corresponds to the name of the platform, but there are several more specific interfaces that are commonly used: <a href="https://www.usb.org/hid">HID</a>, <a href="https://docs.microsoft.com/en-us/windows/desktop/inputdev/raw-input">RawInput</a>, <a href="https://docs.microsoft.com/en-us/windows/desktop/xinput/xinput-game-controller-apis-portal">XInput</a>.<br  />
+This field is required.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html#UnityEngine_InputSystem_Layouts_InputDeviceDescription_deviceClass"><span class="tt">deviceClass</span></a>  </td><td class="markdownTableBodyNone">A broad categorization of the Device. For example, "Gamepad" or "Keyboard".  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html#UnityEngine_InputSystem_Layouts_InputDeviceDescription_product"><span class="tt">product</span></a>  </td><td class="markdownTableBodyNone">Name of the product as reported by the Device/driver itself.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html#UnityEngine_InputSystem_Layouts_InputDeviceDescription_manufacturer"><span class="tt">manufacturer</span></a>  </td><td class="markdownTableBodyNone">Name of the manufacturer as reported by the Device/driver itself.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html#UnityEngine_InputSystem_Layouts_InputDeviceDescription_version"><span class="tt">version</span></a>  </td><td class="markdownTableBodyNone">If available, provides the version of the driver or hardware for the Device.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html#UnityEngine_InputSystem_Layouts_InputDeviceDescription_serial"><span class="tt">serial</span></a>  </td><td class="markdownTableBodyNone">If available, provides the serial number for the Device.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html#UnityEngine_InputSystem_Layouts_InputDeviceDescription_capabilities"><span class="tt">capabilities</span></a>  </td><td class="markdownTableBodyNone">A string in JSON format that describes Device/interface-specific capabilities. See the section on capabilities.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2021"></a>
+Capabilities</h3>
+<p>Aside from a number of standardized fields, such as <span class="tt">product</span> and <span class="tt">manufacturer</span>, a Device description can contain a <a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html#UnityEngine_InputSystem_Layouts_InputDeviceDescription_capabilities"><span class="tt">capabilities</span></a> string in JSON format. This string describes characteristics which help the Input System to interpret the data from a Device, and map it to Control representations. Not all Device interfaces report Device capabilities. Examples of interface-specific Device capabilities are <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_h_i_d.html">HID descriptors</a>. WebGL, Android, and Linux use similar mechanisms to report available Controls on connected gamepads.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2022"></a>
+Matching</h3>
+<p><a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceMatcher.html"><span class="tt">InputDeviceMatcher</span></a> instances handle matching an <a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html"><span class="tt">InputDeviceDescription</span></a> to a registered layout. Each matcher loosely functions as a kind of regular expression. Each field in the description can be independently matched with either a plain string or regular expression. Matching is not case-sensitive. For a matcher to apply, all of its individual expressions have to match.</p>
+<p>To matchers to any layout, call <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_RegisterLayoutMatcher_System_String_UnityEngine_InputSystem_Layouts_InputDeviceMatcher_"><span class="tt">InputSystem.RegisterLayoutMatcher</span></a>. You can also supply them when you register a layout.</p>
+<div class="fragment"><div class="line"><span class="comment">// Register a new layout and supply a matcher for it.</span></div>
+<div class="line">InputSystem.RegisterLayoutMatcher&lt;MyDevice&gt;(</div>
+<div class="line">    matches: <span class="keyword">new</span> InputDeviceMatcher()</div>
+<div class="line">        .WithInterface(<span class="stringliteral">&quot;HID&quot;</span>)</div>
+<div class="line">        .WithProduct(<span class="stringliteral">&quot;MyDevice.*&quot;</span>)</div>
+<div class="line">        .WithManufacturer(<span class="stringliteral">&quot;MyBrand&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Register an alternate matcher for an already registered layout.</span></div>
+<div class="line">InputSystem.RegisterLayoutMatcher&lt;MyDevice&gt;(</div>
+<div class="line">    <span class="keyword">new</span> InputDeviceMatcher()</div>
+<div class="line">        .WithInterface(<span class="stringliteral">&quot;HID&quot;</span>)</div>
+</div><!-- fragment --><p>If multiple matchers are matching the same <a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html"><span class="tt">InputDeviceDescription</span></a>, the Input System chooses the matcher that has the larger number of properties to match against.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2023"></a>
+Hijacking the matching process</h4>
+<p>You can overrule the internal matching process from outside to select a different layout for a Device than the system would normally choose. This also makes it possible to quickly build new layouts. To do this, add a custom handler to the <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_onFindLayoutForDevice"><span class="tt">InputSystem.onFindControlLayoutForDevice</span></a> event. If your handler returns a non-null layout string, then the Input System uses this layout.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2024"></a>
+Device lifecycle</h3>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2025"></a>
+Device creation</h4>
+<p>Once the system has chosen a <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_layouts.html">layout</a> for a device, it instantiates an <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a> and populates it with <a href="../api/UnityEngine.InputSystem.InputControl.html"><span class="tt">InputControls</span></a> as the layout dictates. This process is internal and happens automatically.</p>
+<p>&gt;<b>Note</b>: You can't create valid <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevices</span></a> and <a href="../api/UnityEngine.InputSystem.InputControl.html"><span class="tt">InputControls</span></a> by manually instantiating them with <span class="tt">new</span>. To guide the creation process, you must use <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_layouts.html">layouts</a>.</p>
+<p>After the Input System assembles the <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a>, it calls <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_FinishSetup_"><span class="tt">FinishSetup</span></a> on each control of the device and on the device itself. Use this to finalize the setup of the Controls.</p>
+<p>After an <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a> is fully assembled, the Input System adds it to the system. As part of this process, the Input System calls <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_MakeCurrent_"><span class="tt">MakeCurrent</span></a> on the Device, and signals <a href="../api/UnityEngine.InputSystem.InputDeviceChange.html#UnityEngine_InputSystem_InputDeviceChange_Added"><span class="tt">InputDeviceChange.Added</span></a> on <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_onDeviceChange"><span class="tt">InputSystem.onDeviceChange</span></a>. The Input System also calls <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_OnAdded_"><span class="tt">InputDevice.OnAdded</span></a>.</p>
+<p>Once added, the <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_added"><span class="tt">InputDevice.added</span></a> flag is set to true.</p>
+<p>To add devices manually, you can call one of the <span class="tt">InputSystem.AddDevice</span> methods such as <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_AddDevice_System_String_System_String_System_String_"><span class="tt">InputSystem.AddDevice(layout)</span></a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// Add a gamepad. This bypasses the matching process and creates a device directly</span></div>
+<div class="line"><span class="comment">// with the Gamepad layout.</span></div>
+<div class="line">InputSystem.AddDevice&lt;Gamepad&gt;();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Add a device such that the matching process is employed:</span></div>
+<div class="line">InputSystem.AddDevice(<span class="keyword">new</span> InputDeviceDescription</div>
+<div class="line">{</div>
+<div class="line">    interfaceName = <span class="stringliteral">&quot;XInput&quot;</span>,</div>
+<div class="line">    product = <span class="stringliteral">&quot;Xbox Controller&quot;</span>,</div>
+<div class="line">});</div>
+</div><!-- fragment --><p>When a device is added, the Input System automatically issues a <a href="../api/UnityEngine.InputSystem.LowLevel.RequestSyncCommand.html">sync request</a> on the device. This instructs the device to send an event representing its current state. Whether this request succeeds depends on the whether the given device supports the sync command.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2026"></a>
+Device removal</h4>
+<p>When a Device is disconnected, it is removed from the system. A notification appears for <a href="../api/UnityEngine.InputSystem.InputDeviceChange.html"><span class="tt">InputDeviceChange.Removed</span></a> (sent via <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_onDeviceChange"><span class="tt">InputSystem.onDeviceChange</span></a>) and the Devices are removed from the <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_onDeviceChange"><span class="tt">devices</span></a> list. The system also calls <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_OnRemoved_"><span class="tt">InputDevice.OnRemoved</span></a>.</p>
+<p>The <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_added"><span class="tt">InputDevice.added</span></a> flag is reset to false in the process.</p>
+<p>Note that Devices are not destroyed when removed. Device instances remain valid and you can still access them in code. However, trying to read values from the controls of these Devices leads to exceptions.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2027"></a>
+Device resets</h4>
+<p>Resetting a Device resets its Controls to their default state. You can do this manually using <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_ResetDevice_UnityEngine_InputSystem_InputDevice_System_Boolean_"><span class="tt">InputSystem.ResetDevice</span></a>:</p>
+<div class="fragment"><div class="line">InputSystem.ResetDevice(Gamepad.current);</div>
+</div><!-- fragment --><p>There are two types of resets as determined by the second parameter to <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_ResetDevice_UnityEngine_InputSystem_InputDevice_System_Boolean_"><span class="tt">InputSystem.ResetDevice</span></a>:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">"Soft" Resets  </td><td class="markdownTableBodyNone">This is the default. With this type, only controls that are <em>not</em> marked as <a href="Layouts.md#control-items"><span class="tt">dontReset</span></a> are reset to their default value. This excludes controls such as <a href="../api/UnityEngine.InputSystem.Pointer.html#UnityEngine_InputSystem_Pointer_position"><span class="tt">Pointer.position</span></a> from resets and thus prevents mouse positions resetting to <span class="tt">(0,0)</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">"Hard" Resets  </td><td class="markdownTableBodyNone">In this type, <em>all</em> controls are reset to their default value regardless of whether they have <a href="Layouts.md#control-items"><span class="tt">dontReset</span></a> set or not.  </td></tr>
+</table>
+<p>Resetting Controls this way is visible on <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Actions</a>. If you reset a Device that is currently driving one or more Action, the Actions are cancelled. This cancellation is different from sending an event with default state. Whereas the latter may inadvertently <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed">perform</a> Actions (e.g. a button that was pressed would not appear to have been released), a reset will force clean cancellation.</p>
+<p>Resets may be triggered automatically by the Input System depending on application focus.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2028"></a>
+Device syncs</h4>
+<p>A Device may be requested to send an event with its current state through <a href="../api/UnityEngine.InputSystem.LowLevel.RequestSyncCommand.html"><span class="tt">RequestSyncCommand</span></a>. It depends on the platform and type of Device whether this is supported or not.</p>
+<p>A synchronization request can be explicitly sent using <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_TrySyncDevice_UnityEngine_InputSystem_InputDevice_"><span class="tt">InputSystem.TrySyncDevice</span></a>. If the device supports sync requests, the method returns true and an <a href="../api/UnityEngine.InputSystem.LowLevel.InputEvent.html"><span class="tt">InputEvent</span></a> will have been queued on the device for processing in the next <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_Update_">update</a>.</p>
+<p>Synchronization requests are also automatically sent by the Input System in certain situations. See Background and focus change behavior for more details.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2029"></a>
+Device enabling and disabling</h4>
+<p>When a Device is added, the Input System sends it an initial <a href="../api/UnityEngine.InputSystem.LowLevel.QueryEnabledStateCommand.html"><span class="tt">QueryEnabledStateCommand</span></a> to find out whether the device is currently enabled or not. The result of this is reflected in the <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_enabled"><span class="tt">InputDevice.enabled</span></a> property.</p>
+<p>When disabled, no events other than removal (<a href="../api/UnityEngine.InputSystem.LowLevel.DeviceRemoveEvent.html"><span class="tt">DeviceRemoveEvent</span></a>) and configuration change (<a href="../api/UnityEngine.InputSystem.LowLevel.DeviceConfigurationEvent.html"><span class="tt">DeviceConfigurationEvent</span></a>) events are processed for a Device, even if they are sent.</p>
+<p>A Device can be manually disabled and re-enabled via <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_DisableDevice_"><span class="tt">InputSystem.DisableDevice</span></a> and <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_EnableDevice_"><span class="tt">InputSystem.EnableDevice</span></a> respectively.</p>
+<p>Note that <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_sensors.html">sensors</a> start in a disabled state by default, and you need to enable them in order for them to generate events.</p>
+<p>The Input System may automatically disable and re-enable Devices in certain situations, as detailed in the next section.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2030"></a>
+Background and focus change behavior</h4>
+<p>In general, input is tied to <a href="https://docs.unity3d.com/ScriptReference/Application-isFocused.html">application focus</a>. This means that Devices do not receive input while the application is not in the foreground and thus no <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Actions</a> will receive input either. When the application comes back into focus, all devices will receive a sync request to have them send their current state (which may have changed while the application was in the background) to the application. Devices that do not support sync requests will see a soft reset that resets all Controls not marked as <a href="Layouts.md#control-items"><span class="tt">dontReset</span></a> to their default state.</p>
+<p>On platforms such as iOS and Android, that do not support running <a class="el" href="namespace_unity.html">Unity</a> applications in the background, this is the only supported behavior.</p>
+<p>If the application is configured to run while in the background (that is, not having focus), input behavior can be selected from several options. This is supported in two scenarios:</p>
+<ul>
+<li>In <a class="el" href="namespace_unity.html">Unity</a>'s <a href="https://docs.unity3d.com/Manual/class-PlayerSettings.html">Player Settings</a> you can explicity enable <span class="tt">Run In Background</span> for specific players that support it (such as Windows or Mac standalone players). Note that in these players this setting is always enabled automatically in <em>development</em> players.</li>
+<li>In the editor, application focus is tied to focus on the Game View. If no Game View is focused, the application is considered to be running in the background. However, while in play mode, the editor will <em>always</em> keep running the player loop regardless of focus on the Game View window. This means that in the editor, <span class="tt">Run In Background</span> is considered to always be enabled.</li>
+</ul>
+<p>If the application is configured this way to keep running while in the background, the player loop and thus the Input System, too, will keep running even when the application does not have focus. What happens with respect to input then depends on two factors:</p>
+<ol type="1">
+<li>On the ability of individual devices to receive input while the application is not running in the foreground. This is only supported by a small subset of devices and platforms. VR devices (<a href="../api/UnityEngine.InputSystem.TrackedDevice.html"><span class="tt">TrackedDevice</span></a>) such as HMDs and VR controllers generally support this.<br  />
+<br  />
+To find out whether a specific device supports this, you can query the <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_canRunInBackground"><span class="tt">InputDevice.canRunInBackground</span></a> property. This property can also be forced to true or false via a Device's <a href="Layouts.md#control-items">layout</a>.</li>
+<li>On two settings you can find in the project-wide <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_settings.html">Input Settings</a>. Specifically, <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_backgroundBehavior"><span class="tt">InputSettings.backgroundBehavior</span></a> and <a href="../api/UnityEngine.InputSystem.InputSettings.html#UnityEngine_InputSystem_InputSettings_editorInputBehaviorInPlayMode"><span class="tt">InputSettings.editorInputBehaviorInPlayMode</span></a>. The table below shows a detailed breakdown of how input behaviors vary based on these two settings and in relation to the <span class="tt">Run In Background</span> player setting in <a class="el" href="namespace_unity.html">Unity</a>.</li>
+</ol>
+<p>&gt;<b>Note</b>: <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_canRunInBackground"><span class="tt">InputDevice.canRunInBackground</span></a> is overridden by the editor in certain situations (see table below). In general, the value of the property does not have to be the same between the editor and the player and depends on the specific platform and device.</p>
+<p>The following table shows the full matrix of behaviors according to the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_settings.html">Input Settings</a> and whether the game is running in the editor or in the player.</p>
+<p><img src="Images/FocusBehavior.png" alt="Focus Behavior" class="inline"/></p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2031"></a>
+Domain reloads in the Editor</h4>
+<p>The Editor reloads the C# application domain whenever it reloads and recompiles scripts, or when the Editor goes into Play mode. This requires the Input System to reinitialize itself after each domain reload. During this process, the Input System attempts to recreate devices that were instantiated before the domain reload. However, the state of each Device doesn't carry across, which means that Devices reset to their default state on domain reloads.</p>
+<p>Note that layout registrations do not persist across domain reloads. Instead, the Input System relies on all registrations to become available as part of the initialization process (for example, by using <span class="tt">[InitializeOnLoad]</span> to run registration as part of the domain startup code in the Editor). This allows you to change registrations and layouts in script, and the change to immediately take effect after a domain reload.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2032"></a>
+Native Devices</h2>
+<p>Devices that the <a href="Architecture.md#native-backend">native backend</a> reports are considered native (as opposed to Devices created from script code). To identify these Devices, you can check the <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_native"><span class="tt">InputDevice.native</span></a> property.</p>
+<p>The Input System remembers native Devices. For example, if the system has no matching layout when the Device is first reported, but a layout which matches the device is registered later, the system uses this layout to recreate the Device.</p>
+<p>You can force the Input System to use your own <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_layouts.html">layout</a> when the native backend discovers a specific Device, by describing the Device in the layout, like this:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">   &quot;name&quot; : &quot;MyGamepad&quot;,</div>
+<div class="line">   &quot;extend&quot; : &quot;Gamepad&quot;,</div>
+<div class="line">   &quot;device&quot; : {</div>
+<div class="line">       // All strings in here are regexs and case-insensitive.</div>
+<div class="line">       &quot;product&quot; : &quot;MyController&quot;,</div>
+<div class="line">       &quot;manufacturer&quot; : &quot;MyCompany&quot;</div>
+<div class="line">   }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Note: You don't have to restart <a class="el" href="namespace_unity.html">Unity</a> in order for changes in your layout to take effect on native Devices. The Input System applies changes automatically on every domain reload, so you can just keep refining a layout and your Device is recreated with the most up-to-date version every time scripts are recompiled.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2033"></a>
+Disconnected Devices</h3>
+<p>If you want to get notified when Input Devices disconnect, subscribe to the <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_onDeviceChange"><span class="tt">InputSystem.onDeviceChange</span></a> event, and look for events of type <a href="../api/UnityEngine.InputSystem.InputDeviceChange.html"><span class="tt">InputDeviceChange.Disconnected</span></a>.</p>
+<p>The Input System keeps track of disconnected Devices in <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_disconnectedDevices"><span class="tt">InputSystem.disconnectedDevices</span></a>. If one of these Devices reconnects later, the Input System can detect that the Device was connected before, and reuses its <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a> instance. This allows the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input_manager.html"><span class="tt">PlayerInputManager</span></a> to reassign the Device to the same <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_user_management.html">user</a> again.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2034"></a>
+Device IDs</h2>
+<p>Each Device that is created receives a unique numeric ID. You can access this ID through <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_deviceId"><span class="tt">InputDevice.deviceId</span></a>.</p>
+<p>All IDs are only used once per <a class="el" href="namespace_unity.html">Unity</a> session.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2035"></a>
+Device usages</h2>
+<p>Like any <a href="../api/UnityEngine.InputSystem.InputControl.html"><span class="tt">InputControl</span></a>, a Device can have usages associated with it. You can query usages with the <a href="../api/UnityEngine.InputSystem.InputControl.html#UnityEngine_InputSystem_InputControl_usages"><span class="tt">usages</span></a> property, and use<a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_SetDeviceUsage_UnityEngine_InputSystem_InputDevice_System_String_"><span class="tt">InputSystem.SetDeviceUsage()</span></a> to set them. Usages can be arbitrary strings with arbitrary meanings. One common case where the Input System assigns Devices usages is the handedness of XR controllers, which are tagged with the "LeftHand" or "RightHand" usages.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2036"></a>
+Device commands</h2>
+<p>While input <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_events.html">events</a> deliver data from a Device, commands send data back to the Device. The Input System uses these to retrieve specific information from the Device, to trigger functions on the Device (such as rumble effects), and for a variety of other needs.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2037"></a>
+Sending commands to Devices</h3>
+<p>The Input System sends commands to the Device through <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_ExecuteCommand__1___0__"><span class="tt">InputDevice.ExecuteCommand&lt;TCommand&gt;</span></a>. To monitor Device commands, use <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_onDeviceCommand"><span class="tt">InputSystem.onDeviceCommand</span></a>.</p>
+<p>Each Device command implements the <a href="../api/UnityEngine.InputSystem.LowLevel.IInputDeviceCommandInfo.html"><span class="tt">IInputDeviceCommandInfo</span></a> interface, which only requires the <a href="../api/UnityEngine.InputSystem.LowLevel.IInputDeviceCommandInfo.html#UnityEngine_InputSystem_LowLevel_IInputDeviceCommandInfo_typeStatic"><span class="tt">typeStatic</span></a> property to identify the type of the command. The native implementation of the Device should then understand how to handle that command. One common case is the <span class="tt">"HIDO"</span> command type which is used to send <a href="HID.md#hid-output">HID output reports</a> to HIDs.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2038"></a>
+Adding custom device Commands</h3>
+<p>To create custom Device commands (for example, to support some functionality for a specific HID), create a <span class="tt">struct</span> that contains all the data to be sent to the Device, and add a <a href="../api/UnityEngine.InputSystem.LowLevel.IInputDeviceCommandInfo.html#UnityEngine_InputSystem_LowLevel_IInputDeviceCommandInfo_typeStatic"><span class="tt">typeStatic</span></a> property to make that struct implement the <a href="../api/UnityEngine.InputSystem.LowLevel.IInputDeviceCommandInfo.html"><span class="tt">IInputDeviceCommandInfo</span></a> interface. To send data to a HID, this property should return <span class="tt">"HIDO"</span>.</p>
+<p>You can then create an instance of this struct and populate all its fields, then use <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_ExecuteCommand__1___0__"><span class="tt">InputDevice.ExecuteCommand&lt;TCommand&gt;</span></a> to send it to the Device. The data layout of the struct must match the native representation of the data as the device interprets it.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2039"></a>
+Device state</h2>
+<p>Like any other type of <a href="Controls.md#control-state">Control</a>, each Device has a block of memory allocated to it which stores the state of all the Controls associated with the Device.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2040"></a>
+State changes</h3>
+<p>State changes are usually initiated through <a href="Events.md#state-events">state events</a> from the native backend, but you can use <a href="../api/UnityEngine.InputSystem.InputControl-1.html#UnityEngine_InputSystem_InputControl_1_WriteValueIntoState__0_System_Void__"><span class="tt">InputControl&lt;&gt;.WriteValueIntoState()</span></a> to manually overwrite the state of any Control.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2041"></a>
+Monitoring state changes</h4>
+<p>You can use <a href="../api/UnityEngine.InputSystem.LowLevel.InputState.html#UnityEngine_InputSystem_LowLevel_InputState_AddChangeMonitor_UnityEngine_InputSystem_InputControl_System_Action_UnityEngine_InputSystem_InputControl_System_Double_UnityEngine_InputSystem_LowLevel_InputEventPtr_System_Int64__System_Int32_System_Action_UnityEngine_InputSystem_InputControl_System_Double_System_Int64_System_Int32__"><span class="tt">InputState.AddChangeMonitor()</span></a> to register a callback to be called whenever the state of a Control changes. The Input System uses the same mechanism to implement <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">input Actions</a>.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2042"></a>
+Synthesizing state</h4>
+<p>The Input System can synthesize a new state from an existing state. An example of such a synthesized state is the <a href="../api/UnityEngine.InputSystem.Pointer.html#UnityEngine_InputSystem_Pointer_press"><span class="tt">press</span></a> button Control that <a href="../api/UnityEngine.InputSystem.Touchscreen.html"><span class="tt">Touchscreen</span></a> inherits from <a href="../api/UnityEngine.InputSystem.Pointer.html"><span class="tt">Pointer</span></a>. Unlike a mouse, which has a physical button, for <a href="../api/UnityEngine.InputSystem.Touchscreen.html"><span class="tt">Touchscreen</span></a> this is a <a href="Controls.md#synthetic-controls">synthetic Control</a> that doesn't correspond to actual data coming in from the Device backend. Instead, the Input System considers the button to be pressed if any touch is currently ongoing, and released otherwise.</p>
+<p>To do this, the Input System uses <a href="../api/UnityEngine.InputSystem.LowLevel.InputState.html#UnityEngine_InputSystem_LowLevel_InputState_Change__1_UnityEngine_InputSystem_InputControl___0_UnityEngine_InputSystem_LowLevel_InputUpdateType_UnityEngine_InputSystem_LowLevel_InputEventPtr_"><span class="tt">InputState.Change</span></a>, which allows feeding arbitrary state changes into the system without having to run them through the input event queue. The Input System incorporates state changes directly and synchronously. State change monitors still trigger as expected.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2043"></a>
+Working with Devices</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2044"></a>
+Monitoring Devices</h3>
+<p>To be notified when new Devices are added or existing Devices are removed, use <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_onDeviceChange"><span class="tt">InputSystem.onDeviceChange</span></a>.</p>
+<div class="fragment"><div class="line">InputSystem.onDeviceChange +=</div>
+<div class="line">    (device, change) =&gt;</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">switch</span> (change)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">case</span> InputDeviceChange.Added:</div>
+<div class="line">                <span class="comment">// New Device.</span></div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">            <span class="keywordflow">case</span> InputDeviceChange.Disconnected:</div>
+<div class="line">                <span class="comment">// Device got unplugged.</span></div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">            <span class="keywordflow">case</span> InputDeviceChange.Connected:</div>
+<div class="line">                <span class="comment">// Plugged back in.</span></div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">            <span class="keywordflow">case</span> InputDeviceChange.Removed:</div>
+<div class="line">                <span class="comment">// Remove from Input System entirely; by default, Devices stay in the system once discovered.</span></div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">            <span class="keywordflow">default</span>:</div>
+<div class="line">                <span class="comment">// See InputDeviceChange reference for other event types.</span></div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+</div><!-- fragment --><p><a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_onDeviceChange"><span class="tt">InputSystem.onDeviceChange</span></a> delivers notifications for other device-related changes as well. See the <a href="../api/UnityEngine.InputSystem.InputDeviceChange.html"><span class="tt">InputDeviceChange</span> enum</a> for more information.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2045"></a>
+Adding and removing Devices</h3>
+<p>To manually add and remove Devices through the API, use <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_AddDevice_UnityEngine_InputSystem_InputDevice_"><span class="tt">InputSystem.AddDevice()</span></a> and <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_RemoveDevice_UnityEngine_InputSystem_InputDevice_"><span class="tt">InputSystem.RemoveDevice()</span></a>.</p>
+<p>This allows you to create your own Devices, which can be useful for testing purposes, or for creating virtual Input Devices which synthesize input from other events. As an example, see the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_on_screen.html">on-screen Controls</a> that the Input System provides. The Input Devices used for on-screen Controls are created entirely in code and have no native representation.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2046"></a>
+Creating custom Devices</h3>
+<p>&gt;<b>Note</b>: This example deals only with Devices that have fixed layouts (that is, you know the specific model or models that you want to implement). This is different from an interface such as HID, where Devices can describe themselves through the interface and take on a wide variety of forms. A fixed Device layout can't cover self-describing Devices, so you need to use a <a href="Layouts.md#generated-layouts">layout builder</a> to build Device layouts from information you obtain at runtime.</p>
+<p>There are two main situations in which you might need to create a custom Device:</p>
+<ol type="1">
+<li>You have an existing API that generates input, and which you want to reflect into the Input System.</li>
+<li>You have an HID that the Input System ignores, or that the Input system auto-generates a layout for that doesn't work well enough for your needs.</li>
+</ol>
+<p>For the second scenario, see <a href="HID.md#creating-a-custom-device-layout">Overriding the HID Fallback</a>.</p>
+<p>The steps below deal with the first scenario, where you want to create a new Input Device entirely from scratch and provide input to it from a third-party API.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2047"></a>
+Step 1: The state struct</h4>
+<p>The first step is to create a C# <span class="tt">struct</span> that represents the form in which the system receives and stores input, and also describes the <span class="tt">InputControl</span> instances that the Input System must create for the Device in order to retrieve its state.</p>
+<div class="fragment"><div class="line"><span class="comment">// A &quot;state struct&quot; describes the memory format that a Device uses. Each Device can</span></div>
+<div class="line"><span class="comment">// receive and store memory in its custom format. InputControls then connect to</span></div>
+<div class="line"><span class="comment">// the individual pieces of memory and read out values from them.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// If it&#39;s important for the memory format to match 1:1 at the binary level</span></div>
+<div class="line"><span class="comment">// to an external representation, it&#39;s generally advisable to use</span></div>
+<div class="line"><span class="comment">// LayoutLind.Explicit.</span></div>
+<div class="line">[StructLayout(LayoutKind.Explicit, Size = 32)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">struct </span>MyDeviceState : IInputStateTypeInfo</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// You must tag every state with a FourCC code for type</span></div>
+<div class="line">    <span class="comment">// checking. The characters can be anything. Choose something that allows</span></div>
+<div class="line">    <span class="comment">// you to easily recognize memory that belongs to your own Device.</span></div>
+<div class="line">    <span class="keyword">public</span> FourCC format =&gt; <span class="keyword">new</span> FourCC(<span class="charliteral">&#39;M&#39;</span>, <span class="charliteral">&#39;Y&#39;</span>, <span class="charliteral">&#39;D&#39;</span>, <span class="charliteral">&#39;V&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// InputControlAttributes on fields tell the Input System to create Controls</span></div>
+<div class="line">    <span class="comment">// for the public fields found in the struct.</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Assume a 16bit field of buttons. Create one button that is tied to</span></div>
+<div class="line">    <span class="comment">// bit #3 (zero-based). Note that buttons don&#39;t need to be stored as bits.</span></div>
+<div class="line">    <span class="comment">// They can also be stored as floats or shorts, for example. The</span></div>
+<div class="line">    <span class="comment">// InputControlAttribute.format property determines which format the</span></div>
+<div class="line">    <span class="comment">// data is stored in. If omitted, the system generally infers it from the value</span></div>
+<div class="line">    <span class="comment">// type of the field.</span></div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;button&quot;</span>, layout = <span class="stringliteral">&quot;Button&quot;</span>, bit = 3)]</div>
+<div class="line">    <span class="keyword">public</span> ushort buttons;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create a floating-point axis. If a name is not supplied, it is taken</span></div>
+<div class="line">    <span class="comment">// from the field.</span></div>
+<div class="line">    [InputControl(layout = <span class="stringliteral">&quot;Axis&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">short</span> axis;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The Input System's layout mechanism uses <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html"><span class="tt">InputControlAttribute</span></a> annotations to add Controls to the layout of your Device. For details, see the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_layouts.html">layout system</a> documentation.</p>
+<p>With the state struct in place, you now have a way to send input data to the Input System and store it there. The next thing you need is an <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a> that uses your custom state struct and represents your custom Device.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2048"></a>
+Step 2: The Device class</h4>
+<p>Next, you need a class derived from one of the <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a> base classes. You can either base your Device directly on <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a>, or you can pick a more specific Device type, like <a href="../api/UnityEngine.InputSystem.Gamepad.html"><span class="tt">Gamepad</span></a>.</p>
+<p>This example assumes that your Device doesn't fit into any of the existing Device classes, so it derives directly from <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// InputControlLayoutAttribute attribute is only necessary if you want</span></div>
+<div class="line"><span class="comment">// to override the default behavior that occurs when you register your Device</span></div>
+<div class="line"><span class="comment">// as a layout.</span></div>
+<div class="line"><span class="comment">// The most common use of InputControlLayoutAttribute is to direct the system</span></div>
+<div class="line"><span class="comment">// to a custom &quot;state struct&quot; through the `stateType` property. See below for details.</span></div>
+<div class="line">[InputControlLayout(displayName = <span class="stringliteral">&quot;My Device&quot;</span>, stateType = typeof(MyDeviceState))]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyDevice : InputDevice</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// In the state struct, you added two Controls that you now want to</span></div>
+<div class="line">    <span class="comment">// surface on the Device, for convenience. The Controls</span></div>
+<div class="line">    <span class="comment">// get added to the Device either way. When you expose them as properties,</span></div>
+<div class="line">    <span class="comment">// it is easier to get to the Controls in code.</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> ButtonControl button { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line">    <span class="keyword">public</span> AxisControl axis { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The Input System calls this method after it constructs the Device,</span></div>
+<div class="line">    <span class="comment">// but before it adds the device to the system. Do any last-minute setup</span></div>
+<div class="line">    <span class="comment">// here.</span></div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> FinishSetup()</div>
+<div class="line">    {</div>
+<div class="line">        base.FinishSetup();</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// NOTE: The Input System creates the Controls automatically.</span></div>
+<div class="line">        <span class="comment">//       This is why don&#39;t do `new` here but rather just look</span></div>
+<div class="line">        <span class="comment">//       the Controls up.</span></div>
+<div class="line">        button = GetChildControl&lt;ButtonControl&gt;(<span class="stringliteral">&quot;button&quot;</span>);</div>
+<div class="line">        axis = GetChildControl&lt;AxisControl&gt;(<span class="stringliteral">&quot;axis&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4 class="doxsection"><a class="anchor" id="autotoc_md2049"></a>
+Step 3: The Update method</h4>
+<p>You now have a Device in place along with its associated state format. You can call the following method to create a fully set-up Device with your two Controls on it:</p>
+<div class="fragment"><div class="line">InputSystem.AddDevice&lt;MyDevice&gt;();</div>
+</div><!-- fragment --><p>However, this Device doesn't receive input yet, because you haven't added any code that generates input. To do that, you can use <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_QueueStateEvent__1_UnityEngine_InputSystem_InputDevice___0_System_Double_"><span class="tt">InputSystem.QueueStateEvent</span></a> or <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_QueueDeltaStateEvent__1_UnityEngine_InputSystem_InputControl___0_System_Double_"><span class="tt">InputSystem.QueueDeltaStateEvent</span></a> from anywhere, including from a thread. The following example uses <a href="../api/UnityEngine.InputSystem.LowLevel.IInputUpdateCallbackReceiver.html"><span class="tt">IInputUpdateCallbackReceiver</span></a>, which, when implemented by any <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a>, adds an <a href="../api/UnityEngine.InputSystem.LowLevel.IInputUpdateCallbackReceiver.html#UnityEngine_InputSystem_LowLevel_IInputUpdateCallbackReceiver_OnUpdate"><span class="tt">OnUpdate()</span></a> method that automatically gets called during <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_onBeforeUpdate"><span class="tt">InputSystem.onBeforeUpdate</span></a> and provides input events to the current input update.</p>
+<p>&gt;<b>Note</b>: If you already have a place where input for your device becomes available, you can skip this step and queue input events from there instead of using <a href="../api/UnityEngine.InputSystem.LowLevel.IInputUpdateCallbackReceiver.html"><span class="tt">IInputUpdateCallbackReceiver</span></a>.</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyDevice : InputDevice, IInputUpdateCallbackReceiver</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">//...</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnUpdate()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// In practice, this would read out data from an external</span></div>
+<div class="line">        <span class="comment">// API. This example uses some empty input.</span></div>
+<div class="line">        var state = <span class="keyword">new</span> MyDeviceState();</div>
+<div class="line">        InputSystem.QueueStateEvent(<span class="keyword">this</span>, state);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4 class="doxsection"><a class="anchor" id="autotoc_md2050"></a>
+Step 4: Device registration and creation</h4>
+<p>You now have a functioning device, but you haven't registered it (added it to the system) yet. This means you can't see the device when, for example, you create bindings in the <a href="ActionAssets.md#editing-input-action-assets">Action editor</a>.</p>
+<p>You can register your device type with the system from within the code that runs automatically as part of <a class="el" href="namespace_unity.html">Unity</a>'s startup. To do so, modify the definition of <span class="tt">MyDevice</span> like so:</p>
+<div class="fragment"><div class="line"><span class="comment">// Add the InitializeOnLoad attribute to automatically run the static</span></div>
+<div class="line"><span class="comment">// constructor of the class after each C# domain load.</span></div>
+<div class="line"><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line">[InitializeOnLoad]</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyDevice : InputDevice, IInputUpdateCallbackReceiver</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">//...</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">static</span> MyDevice()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// RegisterLayout() adds a &quot;Control layout&quot; to the system.</span></div>
+<div class="line">        <span class="comment">// These can be layouts for individual Controls (like sticks)</span></div>
+<div class="line">        <span class="comment">// or layouts for entire Devices (which are themselves</span></div>
+<div class="line">        <span class="comment">// Controls) like in our case.</span></div>
+<div class="line">        InputSystem.RegisterLayout&lt;MyDevice&gt;();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// You still need a way to trigger execution of the static constructor</span></div>
+<div class="line">    <span class="comment">// in the Player. To do this, you can add the RuntimeInitializeOnLoadMethod</span></div>
+<div class="line">    <span class="comment">// to an empty method.</span></div>
+<div class="line">    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]</div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> InitializeInPlayer() {}</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This registers the Device type with the system and makes it available in the Control picker. However, you still need a way to add an instance of the Device when it is connected.</p>
+<p>In theory, you could call <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_AddDevice__1_System_String_"><span class="tt">InputSystem.AddDevice&lt;MyDevice&gt;()</span></a> somewhere, but in a real-world setup you likely have to correlate the Input Devices you create with their identities in the third-party API.</p>
+<p>It might be tempting to do something like this:</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyDevice : InputDevice, IInputUpdateCallbackReceiver</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">//...</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// This does NOT work correctly.</span></div>
+<div class="line">    <span class="keyword">public</span> ThirdPartyAPI.DeviceId externalId { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>and then set that on the Device after calling <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_AddDevice__1_System_String_"><span class="tt">AddDevice&lt;MyDevice&gt;</span></a>. However, this doesn't work as expected in the Editor, because the Input System requires Devices to be created solely from their <a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html"><span class="tt">InputDeviceDescription</span></a> in combination with the chosen layout (and layout variant). In addition, the system supports a fixed set of mutable per-device properties such as device usages (that is, <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_SetDeviceUsage_UnityEngine_InputSystem_InputDevice_System_String_"><span class="tt">InputSystem.SetDeviceUsage()</span></a> and related methods). This allows the system to easily recreate Devices after domain reloads in the Editor, as well as to create replicas of remote Devices when connecting to a Player. To comply with this requirement, you must cast that information provided by the third-party API into an <a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceDescription.html"><span class="tt">InputDeviceDescription</span></a> and then use an <a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceMatcher.html"><span class="tt">InputDeviceMatcher</span></a> to match the description to our custom <span class="tt">MyDevice</span> layout.</p>
+<p>This example assumes that the third-party API has two callbacks, like this:</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> ThirdPartyAPI</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// This example assumes that the argument is a string that</span></div>
+<div class="line">    <span class="comment">// contains the name of the Device, and that no two Devices</span></div>
+<div class="line">    <span class="comment">// have the same name in the external API.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Action&lt;string&gt; deviceAdded;</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Action&lt;string&gt; deviceRemoved;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You can hook into those callbacks and create and destroy devices in response.</p>
+<div class="fragment"><div class="line"><span class="comment">// This example uses a MonoBehaviour with [ExecuteInEditMode]</span></div>
+<div class="line"><span class="comment">// on it to run the setup code. You can do this many other ways.</span></div>
+<div class="line">[ExecuteInEditMode]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyDeviceSupport : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">protected</span> <span class="keywordtype">void</span> OnEnable()</div>
+<div class="line">    {</div>
+<div class="line">        ThirdPartyAPI.deviceAdded += OnDeviceAdded;</div>
+<div class="line">        ThirdPartyAPI.deviceRemoved += OnDeviceRemoved;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keywordtype">void</span> OnDisable()</div>
+<div class="line">    {</div>
+<div class="line">        ThirdPartyAPI.deviceAdded -= OnDeviceAdded;</div>
+<div class="line">        ThirdPartyAPI.deviceRemoved -= OnDeviceRemoved;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> OnDeviceAdded(<span class="keywordtype">string</span> name)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Feed a description of the Device into the system. In response, the</span></div>
+<div class="line">        <span class="comment">// system matches it to the layouts it has and creates a Device.</span></div>
+<div class="line">        InputSystem.AddDevice(</div>
+<div class="line">            <span class="keyword">new</span> InputDeviceDescription</div>
+<div class="line">            {</div>
+<div class="line">                interfaceName = <span class="stringliteral">&quot;ThirdPartyAPI&quot;</span>,</div>
+<div class="line">                product = name</div>
+<div class="line">            });</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> OnDeviceRemoved(<span class="keywordtype">string</span> name)</div>
+<div class="line">    {</div>
+<div class="line">        var device = InputSystem.devices.FirstOrDefault(</div>
+<div class="line">            x =&gt; x.description == <span class="keyword">new</span> InputDeviceDescription</div>
+<div class="line">            {</div>
+<div class="line">                interfaceName = <span class="stringliteral">&quot;ThirdPartyAPI&quot;</span>,</div>
+<div class="line">                product = name,</div>
+<div class="line">            });</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (device != <span class="keyword">null</span>)</div>
+<div class="line">            InputSystem.RemoveDevice(device);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Move the registration of MyDevice from the</span></div>
+<div class="line">    <span class="comment">// static constructor to here, and change the</span></div>
+<div class="line">    <span class="comment">// registration to also supply a matcher.</span></div>
+<div class="line">    <span class="keyword">protected</span> <span class="keywordtype">void</span> Awake()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Add a match that catches any Input Device that reports its</span></div>
+<div class="line">        <span class="comment">// interface as &quot;ThirdPartyAPI&quot;.</span></div>
+<div class="line">        InputSystem.RegisterLayout&lt;MyDevice&gt;(</div>
+<div class="line">            matches: <span class="keyword">new</span> InputDeviceMatcher()</div>
+<div class="line">                .WithInterface(<span class="stringliteral">&quot;ThirdPartyAPI&quot;</span>));</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4 class="doxsection"><a class="anchor" id="autotoc_md2051"></a>
+Step 5: <span class="tt">current</span> and <span class="tt">all</span> (optional)</h4>
+<p>For convenience, you can quickly access the last used device of a given type, or list all devices of a specific type. To do this, add support for a <span class="tt">current</span> and for an <span class="tt">all</span> getter to the API of <span class="tt">MyDevice</span>.</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyDevice : InputDevice, IInputCallbackReceiver</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">//...</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> MyDevice current { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> IReadOnlyList&lt;MyDevice&gt; all =&gt; s_AllMyDevices;</div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;MyDevice&gt; s_AllMyDevices = <span class="keyword">new</span> List&lt;MyDevice&gt;();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> MakeCurrent()</div>
+<div class="line">    {</div>
+<div class="line">        base.MakeCurrent();</div>
+<div class="line">        current = <span class="keyword">this</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnAdded()</div>
+<div class="line">    {</div>
+<div class="line">        base.OnAdded();</div>
+<div class="line">        s_AllMyDevices.Add(<span class="keyword">this</span>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnRemoved()</div>
+<div class="line">    {</div>
+<div class="line">        base.OnRemoved();</div>
+<div class="line">        s_AllMyDevices.Remove(<span class="keyword">this</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4 class="doxsection"><a class="anchor" id="autotoc_md2052"></a>
+Step 6: Device Commands (Optional)</h4>
+<p>A final, but optional, step is to add support for Device commands. A "device command" is that opposite of input. In other words, it consists of data traveling <b>to</b> the input device, which might also return data as part of the operation (much like a function call). You can use this to communicate with the backend of the device in order to query configuration, or to initiate effects such as haptics. At the moment there isn't a proper interface available for this, however there are still some scenarios that can be solved with the current interfaces.</p>
+<p>E.g. the following shows, when implementing a non-hardware-backed device (simulated device), how to simulate hardware reporting that the device can be run in the background and supports sync commands. This is useful to prevent the device from cancelling Actions when application focus is lost and restored. For more info see Device syncs</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyDevice : InputDevice, IInputCallbackReceiver</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">//...</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> unsafe <span class="keywordtype">long</span> ExecuteCommand(InputDeviceCommand* commandPtr)</div>
+<div class="line">    {</div>
+<div class="line">        var type = commandPtr-&gt;type;</div>
+<div class="line">        <span class="keywordflow">if</span> (type == RequestSyncCommand.Type)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Report that the device supports the sync command and has handled it.</span></div>
+<div class="line">            <span class="comment">// This will prevent device reset during focus changes.</span></div>
+<div class="line">            result = InputDeviceCommand.GenericSuccess;</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (type == QueryCanRunInBackground.Type)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Notify that the device supports running in the background.</span></div>
+<div class="line">            ((QueryCanRunInBackground*)commandPtr)-&gt;canRunInBackground = <span class="keyword">true</span>;</div>
+<div class="line">            result = InputDeviceCommand.GenericSuccess;</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        result = <span class="keywordflow">default</span>;</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

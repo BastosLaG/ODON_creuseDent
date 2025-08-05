@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_vision_o_s_1_1_material_color_affordance_receiver =
+[
+    [ "ConsumeAffordance", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_vision_o_s_1_1_material_color_affordance_receiver.html#a35d9e9f90424a3e7524002c591a085e2", null ],
+    [ "Start", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_vision_o_s_1_1_material_color_affordance_receiver.html#a6c617c56dee739de7a11ef7871c21f3d", null ]
+];

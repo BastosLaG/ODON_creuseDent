@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Rewindable allocator overview</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2allocator-rewindable.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Rewindable allocator overview </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1398"></a></p>
+<p>A rewindable allocator is a <a class="el" href="md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2allocator-custom-define.html">custom allocator</a> that works in a similar way to a linear allocator. It's fast and thread safe. A rewindable allocator pre-allocates blocks of memory in advance.</p>
+<p>When you request memory from a rewindable allocator, it selects a range of memory from its pre-allocated block and assigns it to use. The minimum alignment of rewindable allocations is 64 bytes. After it uses all the existing blocks of memory, the rewindable allocator allocates another block of memory.</p>
+<p>It doubles the size of the new block until it reaches a maximum block size. When it reaches this point, the rewindable allocator adds the maximum block size to its previous block size to increase its block size linearly.</p>
+<p>One advantage of rewindable allocator is that you don't need to free individual allocations. As its name implies, a rewindable allocator can rewind and free all your allocations at one point.</p>
+<p>When you rewind an allocator, the allocator keeps the memory blocks that it used before to improve performance and disposes the rest of the blocks. When you request to free or dispose a memory allocation from a rewindable allocator, it's a no-op unless you set the enable block free flag of the rewindable allocator. When you set the flag to enable block free, the rewindable allocator rewinds a memory block when it frees the last allocation from the block. <br  />
+</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1399"></a>
+Declare and create a rewindable allocator</h1>
+<p>To create a rewindable allocator, you must do the following:</p>
+<ul>
+<li>Allocate memory to hold the rewindable allocator</li>
+<li>Add an entry in the global allocator table to register the allocator</li>
+<li>Pre-allocate the allocator's first memory block to initialize it. <br  />
+</li>
+</ul>
+<p>You can use the wrapper <a href="xref:Unity.Collections.AllocatorHelper`1"><span class="tt">AllocatorHelper</span></a> to create a rewindable allocator.</p>
+<p>The following example declares and creates a rewindable allocator:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="comment">// Example user structure</span></div>
+<div class="line">internal <span class="keyword">struct </span>ExampleStruct</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Use AllocatorHelper to help creating a rewindable alloctor</span></div>
+<div class="line">    AllocatorHelper&lt;RewindableAllocator&gt; rwdAllocatorHelper;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Rewindable allocator property for accessibility</span></div>
+<div class="line">    <span class="keyword">public</span> ref RewindableAllocator RwdAllocator =&gt; ref rwdAllocatorHelper.Allocator;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create the rewindable allocator</span></div>
+<div class="line">    <span class="keywordtype">void</span> CreateRewindableAllocator(AllocatorManager.AllocatorHandle backgroundAllocator, <span class="keywordtype">int</span> initialBlockSize, <span class="keywordtype">bool</span> enableBlockFree = <span class="keyword">false</span>)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Allocate the rewindable allocator from backgroundAllocator and register the allocator</span></div>
+<div class="line">        rwdAllocatorHelper = <span class="keyword">new</span> AllocatorHelper&lt;RewindableAllocator&gt;(backgroundAllocator);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Allocate the first memory block with initialBlockSize in bytes, and indicate whether</span></div>
+<div class="line">        <span class="comment">// to enable the rewindable allocator with individual block free through enableBlockFree</span></div>
+<div class="line">        RwdAllocator.Initialize(initialBlockSize, enableBlockFree);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h1 class="doxsection"><a class="anchor" id="autotoc_md1400"></a>
+Use a rewindable allocator to allocate memory</h1>
+<p>For <span class="tt">Native-</span> collection types, allocation from a rewindable allocator is similar to a classic allocator, except you must use <a href="xref:Unity.Collections.CollectionHelper.CreateNativeArray*"><span class="tt">CollectionHelper.CreateNativeArray</span></a> to create a <span class="tt">NativeArray</span> from a rewindable allocator. When you use a rewindable allocator to create a <span class="tt">Native-</span> collection type, its safety handle is added to the list of child safety handles of the rewindable allocator.</p>
+<p>For <span class="tt">Unsafe-</span> collection types, you must use <a href="xref:Unity.Collections.AllocatorManager.Allocate*"><span class="tt">AllocatorManager.Allocate</span></a> to allocate memory from a rewindable allocator.</p>
+<p>You don't need to dispose individual allocations. When all allocations aren't needed anymore, call the <span class="tt">Rewind</span> method of a rewindable allocator to free all its allocations. When you rewind the rewindable allocator, it invalidates and unregisters its child allocators, and invalidates all its child safety handles. For <span class="tt">Native-</span> collection types, the disposal safety checks throw an exception if the rewindable allocator has rewound.</p>
+<p>This example method <span class="tt">UseRewindableAllocator</span> shows how to use a rewindable allocator to create and allocate native containers:</p>
+<p>[!code-cs<a href="../Unity.Collections.Tests/AllocatorRewindableTests.cs#allocator-rewindable-use">Use rewindable allocator to allocate memory</a>]</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1401"></a>
+Free all allocated memory of a rewindable allocator</h1>
+<p>When you <span class="tt">Rewind</span> the rewindable allocator, it performs the following operations:</p>
+<ul>
+<li>Invalidates and unregisters all the allocator handle's child allocators</li>
+<li>Invalidates all its child safety handles</li>
+</ul>
+<p>The example method <span class="tt">FreeRewindableAllocator</span> shows how to Free all allocations from the rewindable allocator, with <a href="xref:Unity.Collections.RewindableAllocator.Rewind"><span class="tt">Rewind</span></a>.</p>
+<p>[!code-cs<a href="../Unity.Collections.Tests/AllocatorRewindableTests.cs#allocator-rewindable-free">Free all allocations from the rewindable allocator</a>]</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1402"></a>
+Dispose a rewindable allocator</h1>
+<p>To dispose a rewindable allocator, you must do the following:</p>
+<ul>
+<li>Dispose all the memory blocks of the rewindable allocator from <span class="tt">Allocator.Persistant</span>.</li>
+<li>Unregister the allocator</li>
+<li>Dispose the memory used to store the allocator</li>
+</ul>
+<p>The following example adds a method <span class="tt">DisposeRewindableAllocator</span>that disposes a rewindable allocator using <a href="xref:Unity.Collections.AllocatorHelper`1.Dispose"><span class="tt">Dispose</span></a>:</p>
+<p>[!code-cs<a href="../Unity.Collections.Tests/AllocatorRewindableTests.cs#allocator-rewindable-dispose">Dispose a rewindable allocator</a>]</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1403"></a>
+Full example of a rewindable allocator</h1>
+<p>The following is a full example of how to use a rewindable allocator:</p>
+<p>[!code-cs<a href="../Unity.Collections.Tests/AllocatorRewindableTests.cs#allocator-rewindable-example">Full example of a rewindable allocator</a>] </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

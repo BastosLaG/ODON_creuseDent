@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Object types</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-types.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Object types </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7427"></a></p>
+<p>All scripting in <a class="el" href="namespace_unity.html">Unity</a> is based on the C# programming language. C# is a "strongly typed" language. This means that all data and objects in Visual Scripting have a specific type. For example, a variable can be a number with an <span class="tt">integer</span> type, or the object provided by a node's output port can be a <span class="tt">GameObject</span>.</p>
+<p>Types help the computer run Visual Scripting code. Visual Scripting's behavior might not depend on the object type you give a node as an input, but sometimes, an object's type is important.</p>
+<p>For example, to add a new variable in the Blackboard, you must specify the variable's type to assign it a value. When you make a new edge in the Graph Editor, some nodes might have ports that only allow a connection if the data input is the correct type.</p>
+<p>Choose the type for an object with the Type menu. For example, you can choose the type for a Data Input port on a Script Graph with the Type menu from the <a href="vs-interface-overview.md#the-graph-inspector">Graph Inspector</a>.</p>
+<p><img src="images/vs-types-menu.png" alt="An image of the Graph Inspector. A new port is being added to a graph, and the Type menu is open to choose a new type for the port." class="inline"/></p>
+<p>Enter a search term in the Type menu to find a specific object type. You can also navigate through the namespaces listed in the Type menu to find a type.</p>
+<p>Visual Scripting identifies namespaces in the Type menu with an arrow (&gt;). Select any namespace to view the other namespaces or available types within that namespace.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7428"></a>
+Common object types</h1>
+<p><a class="el" href="namespace_unity.html">Unity</a> has hundreds of types. You can also add your own custom types. For more information on custom types, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-custom-types.html">Custom types</a>.</p>
+<p>The following table includes some commonly used types in Visual Scripting.</p>
+<table class="doxtable">
+<tr>
+<th><b>Type</b></th><th colspan="2"><b>Description</b></th></tr>
+</table>
+<p><b>Float</b></p>
+<p>A float is a numeric value, with or without decimal places. <br  />
+For example, <code>0.25</code> or <code>13.1</code>.</p>
+<p><b>Integer</b></p>
+<p>An integer is a numeric value without decimal places. <br  />
+For example, <code>3</code> or <code>200</code>.</p>
+<p><b>Boolean</b></p>
+<p>A Boolean is a <code>true</code> or <code>false</code> value. Use a Boolean to create logic in a Script Graph and for toggles. <br  />
+For example, a Script Graph can trigger an event only if a condition is <code>true</code>.</p>
+<p><b>String</b></p>
+<p>A string is a sequence of characters or piece of text. <br  />
+For example, <code>string</code>, <code>string123</code>, and <code>s</code>.</p>
+<p><b>Char</b></p>
+<p>A char is a single alphanumeric character from a string. <br  />
+For example, <code>s</code> or <code>1</code>.</p>
+<p><b>Enum</b></p>
+<p>An enum is a finite enumeration of options. Enums are usually represented as dropdowns. <br  />
+For example, a <b>Force Mode</b> enum can have a value of either <code>Force</code>, <code>Impulse</code>, <code>Acceleration</code>, or <code>Velocity Change</code>.</p>
+<p><b>Vector</b></p>
+<p>A vector represents a set of float coordinates. <a class="el" href="namespace_unity.html">Unity</a> uses vectors for positions or directions.</p>
+<p><b>Vector 2</b></p>
+<p>A Vector 2 has X and Y values. You can use a Vector 2 for coordinates in 2D spaces.</p>
+<p><b>Vector 3</b></p>
+<p>A Vector 3 has X, Y, and Z values. You can use a Vector 3 for coordinates in 3D spaces.</p>
+<p><b>Vector 4</b></p>
+<p>A Vector 4 has X, Y, Z, and W values. You can use a Vector 4 for coordinates in 4D spaces, such as parameters for shaders.</p>
+<p><b>GameObject</b></p>
+<p>A GameObject is the basic entity used in <a class="el" href="namespace_unity.html">Unity</a> scenes. All GameObjects have a name, a transform for their position and rotation in the scene, and a list of components.</p>
+<p><b>List</b></p>
+<p>A list is an ordered collection of elements. The elements in a list can each have their own type or all have the same type. <br  />
+Visual Scripting indexes items in a list with the first position at 0. This means that the first element of a list is at the <code>0</code> index of the list. The second item is at the <code>1</code> index, the third is at the <code>2</code> index, and so on.</p>
+<p><b>Dictionary</b></p>
+<p>A dictionary is a collection of elements. Each element has a unique key and a value. Use a key to access and assign the values for an element in a dictionary. <br  />
+For example, you can use a dictionary to organize the names and ages of a group of people. The person's name is the key to the value of their age. A single element in the dictionary can be <code>John</code> and <code>33</code>.</p>
+<p><b>Object</b></p>
+<p>An Object is a special type in <a class="el" href="namespace_unity.html">Unity</a>. If a data input port on a node has its type set to <code>Object</code>, the node doesn't need a specific type as an input.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7429"></a>
+Supported type conversions</h1>
+<p>Visual Scripting can automatically convert some data types passed between nodes. For example, the following graph gets the Transform from a child GameObject of the current GameObject, and triggers an Animator Controller to play an animation. Visual Scripting converts the Transform component sent by the Transform Get Child node to the Animator Controller component on the same GameObject.</p>
+<p><img src="images/vs-types-type-conversion-example.png" alt="An image of the Graph window. A Transform Get Child node is set to This, the current GameObject. Its Index value is set to 0 with an inline value. The trigger output port connects to the trigger input port on a Animator Play node. Visual Scripting converts the Transform output from the Transform Get Child to an Animator component input on the Animator Play node." class="inline"/></p>
+<p>Visual Scripting can automatically perform the following type conversions:</p>
+<ul>
+<li>Number to Number (for example, you can convert an integer to a float, such as 5 to 5.0, or 5.0 to 5)</li>
+<li>Base class to child class</li>
+<li>Child class to base class</li>
+<li>Custom operators (for example, you can convert a Vector 2 to a Vector 3)</li>
+<li>GameObject to a component (for example, a GameObject to its Rigidbody component)</li>
+<li>Component to GameObject (for example, a Rigidbody component to its GameObject)</li>
+<li>Component to component on the same GameObject (for example, a Rigidbody component to a Transform component)</li>
+<li>Enum to array</li>
+<li>Enum to list </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

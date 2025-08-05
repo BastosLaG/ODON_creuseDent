@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile =
+[
+    [ "HandInteraction", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction.html", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile_1_1_hand_interaction" ],
+    [ "GetDeviceLayoutName", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile.html#aeaa6571397b8b4aadc68e2f5f7b93a48", null ],
+    [ "RegisterActionMapsWithRuntime", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile.html#aae05fffba3193d65bf4b1ad5a365fbf0", null ],
+    [ "RegisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile.html#ae12a6db7fab23e384256989063eae6a5", null ],
+    [ "UnregisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_interaction_profile.html#abb113965eeadc50469204595b48357c5", null ]
+];

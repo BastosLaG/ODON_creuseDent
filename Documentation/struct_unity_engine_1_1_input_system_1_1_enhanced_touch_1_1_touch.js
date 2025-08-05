@@ -1,0 +1,27 @@
+var struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch =
+[
+    [ "Equals", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a36db31295414e201e2068ce668ea70a8", null ],
+    [ "Equals", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#aa166f37b019856005ce228ab7301e3cc", null ],
+    [ "GetHashCode", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a71d744e45226f7edc7dea1858c821eb2", null ],
+    [ "ToString", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#aae9effc8149a78ee65f8ad34f0d57340", null ],
+    [ "began", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#aae70495f96e865a761ef8a278f9c88fc", null ],
+    [ "delta", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a45756ad4a971f95cc6912e73234efe64", null ],
+    [ "displayIndex", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a23877c404e09ad7d7d534e7f85d43d99", null ],
+    [ "ended", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a266125cfe2ae190646a8dfc543891f88", null ],
+    [ "finger", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#ab63554f9d0f0b8e8a2c2ac452d38af83", null ],
+    [ "history", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a7b177ac4bf2ed166ebfd85fdf6243b43", null ],
+    [ "inProgress", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#adb50b4b98c4830ab30b7c0b5a052d899", null ],
+    [ "isInProgress", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#afa3ce55a2798a7157afda03a886487f9", null ],
+    [ "isTap", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a5e7f556d8a64db6ec041eba93f170730", null ],
+    [ "phase", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#af4d520649da3c818adf566d9c5456193", null ],
+    [ "pressure", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a307198cf55bb9115b2f9bef93b0b77bd", null ],
+    [ "radius", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a2f3db63cea038b1cbb5ef6a207068eb4", null ],
+    [ "screen", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#af566eb464d50348fb21b3479e0301041", null ],
+    [ "screenPosition", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#aaa8e30cc9da7959fe563fdf3d56b70cf", null ],
+    [ "startScreenPosition", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a352869d0e47a6ed43b7c2053fcee2869", null ],
+    [ "startTime", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#ae22dcfef36a4821299f108ffca6b6df5", null ],
+    [ "tapCount", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a47a9d2920913af520f0e0425730a3c3a", null ],
+    [ "time", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#ac640d15e0ae4d45fabd62a9fc8c93574", null ],
+    [ "touchId", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a29f046e92a20a86932d000dc6453a1c2", null ],
+    [ "valid", "struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch.html#a06fb32c8f363c53ca9d7f49a1d5e8962", null ]
+];

@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Using Code Coverage in batchmode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_coverage_batchmode.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Using Code Coverage in batchmode </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5703"></a></p>
+<p>You can pass the following arguments in batchmode:</p>
+<p><b>-enableCodeCoverage</b>, to enable code coverage. <br  />
+ <b>-coverageResultsPath</b> (optional), to set the location where the coverage results and report are saved to. The default location is the project's path. <br  />
+ <b>-coverageHistoryPath</b> (optional), to set the location where the coverage report history is saved to. The default location is the project's path. <br  />
+ <b>-coverageOptions</b> (optional), to pass extra options. Options are separated by semicolon. Some shells use semicolons to separate commands. Therefore, to ensure that coverage options are parsed correctly, enclose them in quotation marks.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Coverage Option  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">generateHtmlReport</span>  </td><td class="markdownTableBodyLeft">Add this to generate a coverage <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_how_to_interpret_results.html">HTML report</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">generateHtmlReportHistory</span>  </td><td class="markdownTableBodyLeft">Add this to generate and include the coverage history in the HTML report.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">generateAdditionalReports</span>  </td><td class="markdownTableBodyLeft">Add this to generate <a href="https://docs.sonarqube.org/latest/analysis/generic-test">SonarQube</a>, <a href="https://cobertura.github.io/cobertura">Cobertura</a> and <a href="https://github.com/linux-test-project/lcov">LCOV</a> reports.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">generateBadgeReport</span>  </td><td class="markdownTableBodyLeft">Add this to generate coverage summary badges in SVG and PNG format.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">generateAdditionalMetrics</span>  </td><td class="markdownTableBodyLeft">Add this to generate and include additional metrics in the HTML report. These currently include Cyclomatic Complexity and Crap Score calculations for each method. See the <a href="HowToInterpretResults.md#risk-hotspots">Risk Hotspots</a> section for more information.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">generateTestReferences</span>  </td><td class="markdownTableBodyLeft">Add this to include test references to the generated coverage results and enable the <a href="HowToInterpretResults.md#coverage-by-test-methods">Coverage by test methods</a> section in the HTML report. This shows how each test contributes to the overall coverage.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">verbosity</span>  </td><td class="markdownTableBodyLeft">Add this to set the verbosity level for the editor and console logs. The default value is <span class="tt">info</span>.<br  />
+<b>Values:</b> <span class="tt">verbose</span>, <span class="tt">info</span>, <span class="tt">warning</span>, <span class="tt">error</span>, <span class="tt">off</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">useProjectSettings</span>  </td><td class="markdownTableBodyLeft">Add this to use the settings specified in <span class="tt">ProjectSettings/Packages/com.unity.testtools.codecoverage/</span> <span class="tt">Settings.json</span> instead. Any options passed in the command line will override this. This option can only be used in batchmode and it does not take effect when running the editor from the command line in non-batchmode.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">dontClear</span>  </td><td class="markdownTableBodyLeft">Add this to allow coverage results to be accumulated after every code coverage session. If not passed the results are cleared before a new session. For more information see Generate combined report from EditMode and PlayMode tests.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">sourcePaths</span>  </td><td class="markdownTableBodyLeft">Add this to specify the source directories which contain the corresponding source code. The source directories are used by the report generator when the path information of classes cannot be determined. This is a comma separated string. Globbing is not supported.<br  />
+<br  />
+<b>Example:</b> See Generate combined report from separate projects.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">assemblyFilters</span>  </td><td class="markdownTableBodyLeft">Add this to specify the assemblies to include or exclude in the coverage calculation and/or report. This is a comma-separated string. Prefix assemblies with <span class="tt">+</span> to include them or with <span class="tt">-</span> to exclude them. Globbing can be used to filter the assemblies.<br  />
+<br  />
+<b>Available aliases:</b><br  />
+<br  />
+<span class="tt">&lt;all&gt;</span> maps to all the assemblies in the project.<br  />
+<span class="tt">&lt;assets&gt;</span> maps to the assemblies under the <span class="tt">Assets</span> folder.<br  />
+<span class="tt">&lt;packages&gt;</span> maps to the <a class="el" href="namespace_packages.html">Packages</a>' assemblies in the project, including the built-in packages.<br  />
+<br  />
+<b>By default, if there are no included assemblies specified, only the assemblies under the <span class="tt">Assets</span> folder will be included.</b><br  />
+<br  />
+<b>Examples:</b><br  />
+<br  />
+<span class="tt">assemblyFilters:+&lt;all&gt;</span> will include code from all the assemblies in the project.<br  />
+<br  />
+<span class="tt">assemblyFilters:+my.assembly</span> will only include code from the assembly called <span class="tt">my.assembly</span>.<br  />
+<br  />
+<span class="tt">assemblyFilters:+unity.*</span> will include code from any assembly whose name starts with <span class="tt">unity.</span><br  />
+<br  />
+<span class="tt">assemblyFilters:-*unity*</span> will exclude code from all assemblies that contain the word <span class="tt">unity</span> in their names.<br  />
+<br  />
+<span class="tt">assemblyFilters:+my.assembly.*,-my.assembly.tests</span> will include code from any assembly whose name starts with <span class="tt">my.assembly.</span>, but will explicitly exclude code from the assembly called <span class="tt">my.assembly.tests</span>.<br  />
+<br  />
+<span class="tt">assemblyFilters:+my.locale.??</span> will only include code from assemblies whose names match this format, e.g. <span class="tt">my.locale.en</span>, <span class="tt">my.locale.99</span>, etc.<br  />
+<br  />
+<span class="tt">assemblyFilters:+my.assembly.[a-z][0-9]</span> will only include code from assemblies whose names match this format, e.g. <span class="tt">my.assembly.a1</span>, <span class="tt">my.assembly.q7</span>, etc.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">pathFilters</span>  </td><td class="markdownTableBodyLeft">Add this to specify the paths that should be included or excluded in the coverage calculation and/or report. This is a comma-separated string. Prefix paths with <span class="tt">+</span> to include them and with <span class="tt">-</span> to exclude them. Globbing can be used to filter the paths.<br  />
+<br  />
+Both absolute and relative paths are supported. Absolute paths can be shortened using globbing e.g. <span class="tt">**/Assets/Scripts/</span>. Relative paths require the <span class="tt">sourcePaths</span> option to be set. See Using relative paths in path filters.<br  />
+<br  />
+<b>Note:</b> If <span class="tt">pathFilters</span> are specified and there are no included assemblies specified in <span class="tt">assemblyFilters</span>, then all the assemblies in the project are included in order for <span class="tt">path filtering</span> to take precedence over <span class="tt">assembly filtering</span>.<br  />
+<br  />
+<br  />
+<b>Examples:</b><br  />
+<br  />
+<span class="tt">pathFilters:+C:/MyProject/Assets/MyClass.cs</span> will only include the <span class="tt">MyClass.cs</span> file.<br  />
+<br  />
+<span class="tt">pathFilters:+C:/MyProject/Assets/Scripts/*</span> will include all files in the <span class="tt">C:/MyProject/Assets/Scripts</span> folder. Files in subfolders will not be included.<br  />
+<br  />
+<span class="tt">pathFilters:-C:/MyProject/Assets/AutoGenerated/**</span> will exclude all files under the <span class="tt">C:/MyProject/Assets/AutoGenerated</span> folder and any of its subfolders.<br  />
+<br  />
+<span class="tt">pathFilters:+**/Assets/Editor/**</span> will include just the files that have <span class="tt">/Assets/Editor/</span> in their path.<br  />
+<br  />
+<span class="tt">pathFilters:+C:/MyProject/Assets/**/MyClass.cs</span> will include any file named <span class="tt">MyClass.cs</span> that is under the <span class="tt">C:/MyProject/Assets</span> folder and any of its subfolders.<br  />
+<br  />
+<span class="tt">pathFilters:+C:/MyProject/**,-**/Packages/**</span> will only include files under <span class="tt">C:/MyProject/</span> folder and exclude all files under any <span class="tt"><a class="el" href="namespace_packages.html">Packages</a></span> folder.<br  />
+<br  />
+<span class="tt">pathFilters:+**/MyGeneratedClass_??.cs</span> will include only files with filenames that match this format, i.e. <span class="tt">MyGeneratedClass_01.cs</span>, <span class="tt">MyGeneratedClass_AB.cs</span>, etc.<br  />
+<br  />
+<span class="tt">pathFilters:+**/MyClass_[A-Z][0-9].cs</span> will include only files with filenames that match this format, i.e. <span class="tt">MyClass_A1.cs</span>, <span class="tt">MyClass_Q7.cs</span>, etc.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">pathFiltersFromFile</span>  </td><td class="markdownTableBodyLeft">Add this to specify the file to read path filtering rules from. Instead of defining all path filtering rules directly in the command line, as you would with the <span class="tt">pathFilters</span> option, this allows you to store them in a separate file, making your commands clearer and easier to manage.<br  />
+<br  />
+Like with the <span class="tt">pathFilters</span> option, <span class="tt">pathFiltersFromFile</span> also supports relative paths. See Using relative paths in path filters.<br  />
+<br  />
+<b>Examples:</b><br  />
+<br  />
+<span class="tt">pathFiltersFromFile:C:/MyProject/FilteringRules.txt</span> will read rules from a file located in <span class="tt">C:/MyProject/FilteringRules.txt</span><br  />
+<br  />
+<span class="tt">pathFiltersFromFile:FilteringRules.txt</span> will read rules from <span class="tt">FilteringRules.txt</span> located in the root of your project.<br  />
+<br  />
+Syntax of the rules is the same as with the <span class="tt">pathFilters</span> option, however, rules should be listed in separate lines in the file.<br  />
+<br  />
+<b>File example:</b><br  />
+<br  />
+This will include all the files in the <span class="tt">Scripts</span> folder and exclude all the files in the <span class="tt">Scripts/Generated</span> folder<br  />
+<br  />
+ <pre>+\*\*/Scripts/\*\*<br  />
+-\*\*/Scripts/Generated/\*\*</pre><br  />
+<b>Note:</b> The <span class="tt">pathFiltersFromFile</span> option will be deprecated in the next package major release. Please use the <span class="tt">filtersFromFile</span> option instead.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">filtersFromFile</span>  </td><td class="markdownTableBodyLeft">Add this to specify the json file to read path and assembly filtering rules from. Instead of defining all filtering rules directly in the command line, as you would with <span class="tt">pathFilters</span> and <span class="tt">assemblyFilters</span> options, this allows you to store them in a separate file, making your commands clearer and easier to manage.<br  />
+<br  />
+Like with the <span class="tt">pathFilters</span> option, <span class="tt">filtersFromFile</span> also supports relative paths. See Using relative paths in path filters.<br  />
+<br  />
+<b>Examples:</b><br  />
+<br  />
+<span class="tt">filtersFromfile:C:/MyProject/FilteringRules.json</span> will read rules from a file located in <span class="tt">C:/MyProject/FilteringRules.json</span>.<br  />
+<br  />
+<span class="tt">filtersFromFile:FilteringRules.json</span> will read rules from <span class="tt">FilteringRules.json</span> located in the root of your project.<br  />
+<br  />
+<b>File example:</b><br  />
+<br  />
+This will include the <span class="tt">my.included.assembly</span>, exclude <span class="tt">my.excluded.assembly</span> and all assemblies with <span class="tt">unity</span> in their name. It will also include all files in the <span class="tt">Scripts</span> folder, and exclude all files in the <span class="tt">Scripts/Generated</span> folder<pre>{<br  />
+   "assembliesInclude": [ "my.included.assembly" ],<br  />
+   "assembliesExclude": [ "my.excluded.assembly", "\*unity\*" ],<br  />
+   "pathsInclude": [ "\*\*/Scripts/\*\*" ],<br  />
+   "pathsExclude":[ "\*\*/Scripts/Generated/\*\*" ]<br  />
+}</pre><b>Note:</b> The <span class="tt">pathFiltersFromFile</span> option will be deprecated in the next package major release. Please use the <span class="tt">filtersFromFile</span> option instead.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">pathReplacePatterns</span>  </td><td class="markdownTableBodyLeft">Add this to replace specific sections from the paths that are stored in the coverage results xml files. This is a comma separated string and requires elements to be passed in pairs i.e. <span class="tt">pathReplacePatterns:from,to,from,to</span>. Globbing is supported.<br  />
+<br  />
+You can change the file paths in the coverage results xml to relative paths so that coverage data generated on different machines can be merged into a single report. Use the <span class="tt">pathReplacePatterns</span> option in conjunction with the <span class="tt">sourcePaths</span> option to specify the source directories which contain the corresponding source code. For more information see Generate combined report from separate projects.<br  />
+<br  />
+<b>Note:</b> The <a href="https://github.com/OpenCover/opencover">OpenCover</a> results xml format specifies file paths as absolute paths (<span class="tt">fullPath</span>). Changing these paths to relative paths will invalidate the <a class="el" href="namespace_open_cover.html">OpenCover</a> standard format. When the results xml files are fed into other tools, these may not work as expected if the paths are relative.<br  />
+<br  />
+<b>Examples:</b><br  />
+<br  />
+<span class="tt">pathReplacePatterns:C:/MyProject,C:/MyOtherProject</span> will store the path as <span class="tt">C:/MyOtherProject/Assets/Scripts/MyScript.cs</span>, when the original path is <span class="tt">C:/MyProject/Assets/Scripts/MyScript.cs</span><br  />
+<br  />
+<span class="tt">pathReplacePatterns:@*,,**/PackageCache/,Packages/</span> will store the path as <span class="tt">Packages/com.unity.my.package/Editor/MyScript.cs</span>, when the original path is <span class="tt">C:/Project/Library/PackageCache/com.unity.my.package@12345/Editor/</span> <span class="tt">MyScript.cs</span><br  />
+<br  />
+<span class="tt">pathReplacePatterns:C:/MyProject/,</span> will store the path as <span class="tt">Assets/Scripts/MyScript.cs</span>, when the original path is <span class="tt">C:/MyProject/Assets/Scripts/MyScript.cs</span><br  />
+<br  />
+<span class="tt">pathReplacePatterns:**Assets/,</span> will store the path as <span class="tt">Scripts/MyScript.cs</span>, when the original path is <span class="tt">C:/MyProject/Assets/Scripts/MyScript.cs</span><br  />
+<br  />
+<span class="tt">pathReplacePatterns:C:/*/Assets/,</span> will store the path as <span class="tt">Scripts/MyScript.cs</span>, when the original path is <span class="tt">C:/MyProject/Assets/Scripts/MyScript.cs</span><br  />
+<br  />
+<span class="tt">pathReplacePatterns:C:/MyProject??/,</span> will store the path as <span class="tt">Assets/Scripts/MyScript.cs</span>, when the original path is <span class="tt">C:/MyProject01/Assets/Scripts/MyScript.cs</span><br  />
+<br  />
+<span class="tt">pathReplacePatterns:**/MyProject[A-Z][0-9]/,</span> will store the path as <span class="tt">Assets/Scripts/MyScript.cs</span>, when the original path is <span class="tt">C:/MyProjectA1/Assets/Scripts/MyScript.cs</span>  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5704"></a>
+Example</h1>
+<div class="fragment"><div class="line">Unity.exe -projectPath &lt;path-to-project&gt; -batchmode -testPlatform editmode -runTests -testResults</div>
+<div class="line">&lt;path-to-results-xml&gt; -debugCodeOptimization </div>
+<div class="line">-enableCodeCoverage</div>
+<div class="line">-coverageResultsPath &lt;path-to-coverage-results&gt;</div>
+<div class="line">-coverageHistoryPath &lt;path-to-coverage-history&gt;</div>
+<div class="line">-coverageOptions &quot;generateAdditionalMetrics;generateHtmlReport;generateHtmlReportHistory;generateBadgeReport;</div>
+<div class="line">assemblyFilters:+my.assembly.*,+&lt;packages&gt;;</div>
+<div class="line">pathFilters:-**/Tests/**,-**/BuiltInPackages/**&quot;</div>
+</div><!-- fragment --><p> The example above opens the project at <span class="tt">&lt;path-to-project&gt;</span>, runs the <span class="tt">EditMode</span> tests and produces an HTML coverage report and coverage summary badges in <span class="tt">&lt;path-to-coverage-results&gt;</span>. The report includes the coverage history, Cyclomatic Complexity and Crap Score calculations. The coverage history files are saved in <span class="tt">&lt;path-to-coverage-history&gt;</span>.</p>
+<p>Additionally, the report includes code from any assembly whose name starts with <span class="tt">my.assembly.</span>, and includes code from all the <a class="el" href="namespace_packages.html">Packages</a>' assemblies. It excludes files that have <span class="tt">/Tests/</span> in their path (i.e. all the files under the <a class="el" href="class_tests.html">Tests</a> folder) and also excludes files that have <span class="tt">/BuiltInPackages/</span> in their path (i.e. all the built-in packages).</p>
+<p><b>Note:</b> <span class="tt">-debugCodeOptimization</span> is passed above to ensure Code optimization is set to Debug mode. See <a href="UsingCodeCoverage.md#using-code-coverage-with-code-optimization">Using Code Coverage with Code Optimization</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5705"></a>
+Generate combined report from EditMode and PlayMode tests</h1>
+<p>To get coverage information for both EditMode and PlayMode tests, run the editor three times as shown in the example below: </p><div class="fragment"><div class="line">Unity.exe -projectPath &lt;path-to-project&gt; -batchmode -testPlatform editmode -runTests -debugCodeOptimization -enableCodeCoverage -coverageResultsPath &lt;path-to-coverage-results&gt;</div>
+<div class="line">-coverageOptions &quot;generateAdditionalMetrics;assemblyFilters:+my.assembly.*;dontClear&quot;</div>
+<div class="line"> </div>
+<div class="line">Unity.exe -projectPath &lt;path-to-project&gt; -batchmode -testPlatform playmode -runTests -debugCodeOptimization -enableCodeCoverage -coverageResultsPath &lt;path-to-coverage-results&gt;</div>
+<div class="line">-coverageOptions &quot;generateAdditionalMetrics;assemblyFilters:+my.assembly.*;dontClear&quot;</div>
+<div class="line"> </div>
+<div class="line">Unity.exe -projectPath &lt;path-to-project&gt; -batchmode -debugCodeOptimization -enableCodeCoverage -coverageResultsPath &lt;path-to-coverage-results&gt;</div>
+<div class="line">-coverageOptions &quot;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*&quot; -quit</div>
+</div><!-- fragment --><p> The first generates the coverage results for the EditMode tests, the second generates the coverage results for the PlayMode tests and the third generates the coverage report and summary badges based on both coverage results.<br  />
+<br  />
+<b>Note:</b> In <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@2.0">Unity Test Framework 2.0</a> and above the coverage results from both the EditMode and PlayMode test runs are stored in the <span class="tt">Automated</span> folder. In this example, passing the <span class="tt">dontClear</span> coverage option ensures that the results from the EditMode test run are not cleared during the PlayMode test run.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5706"></a>
+Generate combined report from separate projects</h1>
+<p>To get a coverage report for your shared code which is used on separate projects, run the tests for each project making sure the <span class="tt">-coverageResultsPath</span> points to a separate location inside a shared root folder as shown in the example below: </p><div class="fragment"><div class="line">Unity.exe -projectPath C:/MyProject -batchmode -testPlatform playmode -runTests -debugCodeOptimization -enableCodeCoverage -coverageResultsPath C:/CoverageResults/MyProject</div>
+<div class="line">-coverageOptions &quot;generateAdditionalMetrics;assemblyFilters:+my.assembly.*;pathReplacePatterns:C:/MyProject/,&quot;</div>
+<div class="line"> </div>
+<div class="line">Unity.exe -projectPath C:/MyOtherProject -batchmode -testPlatform playmode -runTests -debugCodeOptimization -enableCodeCoverage -coverageResultsPath C:/CoverageResults/MyOtherProject</div>
+<div class="line">-coverageOptions &quot;generateAdditionalMetrics;assemblyFilters:+my.assembly.*;pathReplacePatterns:C:/MyOtherProject/,&quot;</div>
+<div class="line"> </div>
+<div class="line">Unity.exe -projectPath C:/MyProject -batchmode -debugCodeOptimization -enableCodeCoverage -coverageResultsPath C:/CoverageResults</div>
+<div class="line">-coverageOptions &quot;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*;sourcePaths:C:/MyProject&quot; -quit</div>
+</div><!-- fragment --><p> The first run generates the coverage results for the PlayMode tests for <span class="tt">MyProject</span> and stores these in <span class="tt">C:/CoverageResults/MyProject</span>. The second run generates the coverage results for the PlayMode tests for <span class="tt">MyOtherProject</span> and stores these in <span class="tt">C:/CoverageResults/MyOtherProject</span>. The third run generates the coverage report and summary badges based on the results found under the common <span class="tt">C:/CoverageResults</span> folder.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5707"></a>
+Using relative paths in path filters</h1>
+<p>When the <span class="tt">sourcePaths</span> option is specified, the path filtering rules set by the <span class="tt">pathFilters</span>, <span class="tt">pathFiltersFromFile</span> and <span class="tt">filtersFromFile</span> options can be defined as relative paths.</p>
+<p><b>Example:</b></p>
+<div class="fragment"><div class="line">Unity.exe -projectPath C:/MyProject -batchmode -testPlatform playmode -runTests -debugCodeOptimization -enableCodeCoverage -coverageResultsPath C:/CoverageResults/MyProject</div>
+<div class="line">-coverageOptions &quot;generateHtmlReport;generateAdditionalMetrics;assemblyFilters:+&lt;all&gt;;pathFiltersFromFile:FilteringRules.txt;sourcePaths:C:/MyProject/Assets&quot;</div>
+</div><!-- fragment --><p><span class="tt">FilteringRules.txt</span> </p><div class="fragment"><div class="line">+Scripts/Animation/**</div>
+<div class="line">-**/Generated/**</div>
+<div class="line">+C:/MyPackages/com.my.company.mypackage/**</div>
+</div><!-- fragment --><p>This example contains three rules:</p><ul>
+<li><span class="tt">+Scripts/Animation/**</span> - because the <span class="tt">sourcePaths</span> option was set and this is a relative path, this rule will include all the scripts in the <span class="tt">C:/MyProject/Assets/Scripts/Animation</span> folder and its subfolders.</li>
+<li><span class="tt">-**/Generated/**</span> - excludes all the files that have <span class="tt">/Generated/</span> in their path. This is not a relative path so the <span class="tt">sourcePaths</span> option has no effect.</li>
+<li><span class="tt">+C:/MyPackages/com.my.company.mypackage/**</span> - includes all the scripts located in the package outside of the project. This is an absolute path so the <span class="tt">sourcePaths</span> option has no effect. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

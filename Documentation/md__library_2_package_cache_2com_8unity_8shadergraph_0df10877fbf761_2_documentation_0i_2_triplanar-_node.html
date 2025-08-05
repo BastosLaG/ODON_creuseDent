@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Triplanar Node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_triplanar-_node.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Triplanar Node </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4822"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4823"></a>
+Description</h1>
+<p>Generates UVs and samples a texture by projecting in world space. This method is commonly used to texture large models such as terrain, where hand authoring UV coordinates would either be problematic or not performant. <a class="el" href="class_samples.html">Samples</a> the input <b>Texture</b> 3 times, once in each of the world x, y, and z axes. The resulting information is planar projected onto the model, blended by the normal, or surface angle. You can scale the generated UVs with the input <b>Tile</b> and you can control the final blending strength with the input <b>Blend</b>.</p>
+<p><b>Blend</b> controls the way the normal affects the blending of each plane sample and should be greater than or equal to 0. The larger <b>Blend</b> is, the more contribution will be given to the sample from the plane towards which the normal is most oriented. (The maximum blend exponent is between 17 and 158 depending on the platform and the precision of the node.) A <b>Blend</b> of 0 makes each plane get equal weight regardless of normal orientation.</p>
+<p>To choose the projection, change the <b>Input Space</b>. You can also modify the projection via the inputs <b>Position</b> and <b>Normal</b>.</p>
+<p>Use the <b>Type</b> dropdown to change the expected type of the input <b>Texture</b>. If set to <b>Normal</b>, the <b>Out</b> port returns the blended normals in <b>Normal Output Space</b>.</p>
+<p>If you experience texture sampling errors while using this node in a graph which includes Custom Function Nodes or Sub Graphs, upgrade to version 10.3 or later.</p>
+<p>NOTE: You can only use the Triplanar Node in the <b>Fragment</b> shader stage.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4824"></a>
+Ports</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Direction  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Binding  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Texture  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Texture  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Input texture value  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Sampler  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Sampler State  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Sampler for input <b>Texture</b>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Position  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Vector 3  </td><td class="markdownTableBodyLeft">Input Space Position  </td><td class="markdownTableBodyLeft">Fragment position  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Normal  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Vector 3  </td><td class="markdownTableBodyLeft">Input Space Normal  </td><td class="markdownTableBodyLeft">Fragment normal  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Tile  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Tiling amount for generated UVs  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Blend  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Blend factor between different samples  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Out  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 4  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Output value  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4825"></a>
+Controls</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Options  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Type  </td><td class="markdownTableBodyLeft">Dropdown  </td><td class="markdownTableBodyLeft">Default, Normal  </td><td class="markdownTableBodyLeft">Type of input <b>Texture</b>  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4826"></a>
+Node Settings Controls</h1>
+<p>The following controls appear on the Node Settings tab of the Graph Inspector, when you select the Triplanar Node.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Options  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Input Space  </td><td class="markdownTableBodyLeft">Dropdown  </td><td class="markdownTableBodyLeft">Object, View, World, Tangent, AbsoluteWorld  </td><td class="markdownTableBodyLeft">Controls the coordinate space used by the input ports <b>Position</b> and <b>Normal</b>. When you change the <b>Input Space</b> value, it changes the bindings on the <b>Position</b> and <b>Normal</b> ports to use the specified space. The default value is <b>AbsoluteWorld</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Normal Output Space  </td><td class="markdownTableBodyLeft">Dropdown  </td><td class="markdownTableBodyLeft">Object, View, World, Tangent, AbsoluteWorld  </td><td class="markdownTableBodyLeft">Controls the coordinate space used for the <b>Out</b> port. The Normal Output Space control is only available when <b>Type</b> is set to <b>Normal</b>. The default value is <b>Tangent</b>.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4827"></a>
+Generated Code Example</h1>
+<p>The following example code represents one possible outcome of this node.</p>
+<p><b>Default</b></p>
+<div class="fragment"><div class="line">float3 Node_UV = Position * Tile;</div>
+<div class="line">float3 Node_Blend = pow(abs(Normal), Blend);</div>
+<div class="line">Node_Blend /= dot(Node_Blend, 1.0);</div>
+<div class="line">float4 Node_X = SAMPLE_TEXTURE2D(Texture, Sampler, Node_UV.zy);</div>
+<div class="line">float4 Node_Y = SAMPLE_TEXTURE2D(Texture, Sampler, Node_UV.xz);</div>
+<div class="line">float4 Node_Z = SAMPLE_TEXTURE2D(Texture, Sampler, Node_UV.xy);</div>
+<div class="line">float4 Out = Node_X * Node_Blend.x + Node_Y * Node_Blend.y + Node_Z * Node_Blend.z;</div>
+</div><!-- fragment --><p><b>Normal</b></p>
+<div class="fragment"><div class="line">float3 Node_UV = Position * Tile;</div>
+<div class="line">float3 Node_Blend = max(pow(abs(Normal), Blend), 0);</div>
+<div class="line">Node_Blend /= (Node_Blend.x + Node_Blend.y + Node_Blend.z ).xxx;</div>
+<div class="line">float3 Node_X = UnpackNormal(SAMPLE_TEXTURE2D(Texture, Sampler, Node_UV.zy));</div>
+<div class="line">float3 Node_Y = UnpackNormal(SAMPLE_TEXTURE2D(Texture, Sampler, Node_UV.xz));</div>
+<div class="line">float3 Node_Z = UnpackNormal(SAMPLE_TEXTURE2D(Texture, Sampler, Node_UV.xy));</div>
+<div class="line">Node_X = float3(Node_X.xy + Normal.zy, abs(Node_X.z) * Normal.x);</div>
+<div class="line">Node_Y = float3(Node_Y.xy + Normal.xz, abs(Node_Y.z) * Normal.y);</div>
+<div class="line">Node_Z = float3(Node_Z.xy + Normal.xy, abs(Node_Z.z) * Normal.z);</div>
+<div class="line">float4 Out = float4(normalize(Node_X.zyx * Node_Blend.x + Node_Y.xzy * Node_Blend.y + Node_Z.xyz * Node_Blend.z), 1);</div>
+<div class="line">float3x3 Node_Transform = float3x3(IN.WorldSpaceTangent, IN.WorldSpaceBiTangent, IN.WorldSpaceNormal);</div>
+<div class="line">Out.rgb = TransformWorldToTangent(Out.rgb, Node_Transform);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

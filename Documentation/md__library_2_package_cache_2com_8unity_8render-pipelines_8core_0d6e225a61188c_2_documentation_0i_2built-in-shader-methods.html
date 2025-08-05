@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Use shader methods from the SRP Core shader library</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2built-in-shader-methods.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Use shader methods from the SRP Core shader library </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2742"></a></p>
+<p>SRP <a class="el" href="namespace_core.html">Core</a> has a library of High-Level Shader Language (HLSL) shader files that contain helper methods. You can import these files into your custom shader files and use the helper methods.</p>
+<p>To use the following methods, add <span class="tt">#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/SpaceTransforms.hlsl"</span> inside the <span class="tt">HLSLPROGRAM</span> in your shader file.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2743"></a>
+Get matrices</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Method</b>  </th><th class="markdownTableHeadNone"><b>Syntax</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">CreateTangentToWorld</span>  </td><td class="markdownTableBodyNone"><span class="tt">real3x3 CreateTangentToWorld(real3 normal, real3 tangent, real flipSign)</span>  </td><td class="markdownTableBodyNone">Returns the matrix that converts tangents to world space.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">GetObjectToWorldMatrix()</span>  </td><td class="markdownTableBodyNone"><span class="tt">float4x4 GetObjectToWorldMatrix()</span>  </td><td class="markdownTableBodyNone">Returns the matrix that converts positions in object space to world space.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">GetViewToHClipMatrix()</span>  </td><td class="markdownTableBodyNone"><span class="tt">float4x4 GetViewToHClipMatrix()</span>  </td><td class="markdownTableBodyNone">Returns the matrix that converts positions in view space to clip space.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">GetViewToWorldMatrix()</span>  </td><td class="markdownTableBodyNone"><span class="tt">float4x4 GetViewToWorldMatrix()</span>  </td><td class="markdownTableBodyNone">Returns the matrix that converts positions in view space to world space.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">GetWorldToHClipMatrix()</span>  </td><td class="markdownTableBodyNone"><span class="tt">float4x4 GetWorldToHClipMatrix()</span>  </td><td class="markdownTableBodyNone">Returns the matrix that converts positions in world space to clip space.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">GetWorldToObjectMatrix()</span>  </td><td class="markdownTableBodyNone"><span class="tt">float4x4 GetWorldToObjectMatrix()</span>  </td><td class="markdownTableBodyNone">Returns the matrix that converts positions in world space to object space.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">GetWorldToViewMatrix()</span>  </td><td class="markdownTableBodyNone"><span class="tt">float4x4 GetWorldToViewMatrix()</span>  </td><td class="markdownTableBodyNone">Returns the matrix that converts positions in world space to view space.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2744"></a>
+Transform positions</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Method</b>  </th><th class="markdownTableHeadNone"><b>Syntax</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformObjectToHClip</span>  </td><td class="markdownTableBodyNone"><span class="tt">float4 TransformObjectToHClip(float3 positionInObjectSpace)</span>  </td><td class="markdownTableBodyNone">Converts a position in object space to clip space.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">TransformObjectToWorld</span>  </td><td class="markdownTableBodyNone"><span class="tt">float3 TransformObjectToWorld(float3 positionInObjectSpace)</span>  </td><td class="markdownTableBodyNone">Converts a position in object space to world space.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformViewToWorld</span>  </td><td class="markdownTableBodyNone"><span class="tt">float3 TransformViewToWorld(float3 positionInViewSpace)</span>  </td><td class="markdownTableBodyNone">Converts a position in view space to world space.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">TransformWorldToHClip</span>  </td><td class="markdownTableBodyNone"><span class="tt">float4 TransformWorldToHClip(float3 positionInWorldSpace)</span>  </td><td class="markdownTableBodyNone">Converts a position in world space to clip space.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformWorldToObject</span>  </td><td class="markdownTableBodyNone"><span class="tt">float3 TransformWorldToObject(float3 positionInWorldSpace)</span>  </td><td class="markdownTableBodyNone">Converts a position in world space to object space.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">TransformWorldToView</span>  </td><td class="markdownTableBodyNone"><span class="tt">float3 TransformWorldToView(float3 positionInWorldSpace)</span>  </td><td class="markdownTableBodyNone">Converts a position in world space to view space.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformWViewToHClip</span>  </td><td class="markdownTableBodyNone"><span class="tt">float4 TransformWViewToHClip(float3 positionInViewSpace)</span>  </td><td class="markdownTableBodyNone">Converts a position in view space to clip space.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2745"></a>
+Transform directions</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Method</b>  </th><th class="markdownTableHeadNone"><b>Syntax</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformObjectToTangent</span>  </td><td class="markdownTableBodyNone"><span class="tt">real3 TransformObjectToTangent(real3 directionInObjectSpace, real3x3 tangentToWorldMatrix)</span>  </td><td class="markdownTableBodyNone">Converts a direction in object space to tangent space, using a tangent-to-world matrix.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">TransformObjectToWorldDir</span>  </td><td class="markdownTableBodyNone"><span class="tt">float3 TransformObjectToWorldDir(float3 directionInObjectSpace, bool normalize = true)</span>  </td><td class="markdownTableBodyNone">Converts a direction in object space to world space.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformTangentToObject</span>  </td><td class="markdownTableBodyNone"><span class="tt">real3 TransformTangentToObject(real3 dirTS, real3x3 tangentToWorldMatrix)</span>  </td><td class="markdownTableBodyNone">Converts a direction in tangent space to object space, using a tangent-to-world matrix.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">TransformTangentToWorldDir</span>  </td><td class="markdownTableBodyNone"><span class="tt">real3 TransformTangentToWorldDir(real3 directionInWorldSpace, real3x3 tangentToWorldMatrix, bool normalize = false)</span>  </td><td class="markdownTableBodyNone">Converts a direction in tangent space to world space, using a tangent-to-world matrix.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformViewToWorldDir</span>  </td><td class="markdownTableBodyNone"><span class="tt">real3 TransformViewToWorldDir(real3 directionInViewSpace, bool normalize = false)</span>  </td><td class="markdownTableBodyNone">Converts a direction in view space to world space.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">TransformWorldToHClipDir</span>  </td><td class="markdownTableBodyNone"><span class="tt">real3 TransformWorldToHClipDir(real3 directionInWorldSpace, bool normalize = false)</span>  </td><td class="markdownTableBodyNone">Converts a direction in world space to clip space.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformWorldToObjectDir</span>  </td><td class="markdownTableBodyNone"><span class="tt">float3 TransformWorldToObjectDir(float3 directionInWorldSpace, bool normalize = true)</span>  </td><td class="markdownTableBodyNone">Converts a direction in world space to object space.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">TransformWorldToTangentDir</span>  </td><td class="markdownTableBodyNone"><span class="tt">real3 TransformWorldToTangentDir(real3 directionInWorldSpace, real3x3 tangentToWorldMatrix, bool normalize = false)</span>  </td><td class="markdownTableBodyNone">Converts a direction in world space to tangent space, using a tangent-to-world matrix.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformWorldToViewDir</span>  </td><td class="markdownTableBodyNone"><span class="tt">real3 TransformWorldToViewDir(real3 directionInWorldSpace, bool normalize = false)</span>  </td><td class="markdownTableBodyNone">Converts a direction in world space to view space.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2746"></a>
+Transform surface normals</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Method</b>  </th><th class="markdownTableHeadNone"><b>Syntax</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformObjectToWorldNormal</span>  </td><td class="markdownTableBodyNone"><span class="tt">float3 TransformObjectToWorldNormal(float3 normalInObjctSpace, bool normalize = true)</span>  </td><td class="markdownTableBodyNone">Converts a normal in object space to world space.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">TransformTangentToWorld</span>  </td><td class="markdownTableBodyNone"><span class="tt">float3 TransformTangentToWorld(float3 normalInTangentSpace, real3x3 tangentToWorldMatrix, bool normalize = false)</span>  </td><td class="markdownTableBodyNone">Converts a normal in tangent space to world space, using a tangent-to-world matrix.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformViewToWorldNormal</span>  </td><td class="markdownTableBodyNone"><span class="tt">real3 TransformViewToWorldNormal(real3 normalInViewSpace, bool normalize = false)</span>  </td><td class="markdownTableBodyNone">Converts a normal in view space to world space.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">TransformWorldToObjectNormal</span>  </td><td class="markdownTableBodyNone"><span class="tt">float3 TransformWorldToObjectNormal(float3 normalInWorldSpace, bool normalize = true)</span>  </td><td class="markdownTableBodyNone">Converts a normal in world space to object space.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TransformWorldToTangent</span>  </td><td class="markdownTableBodyNone"><span class="tt">float3 TransformWorldToTangent(float3 normalInWorldSpace, real3x3 tangentToWorldMatrix, bool normalize = true)</span>  </td><td class="markdownTableBodyNone">Converts a normal in world space to tangent space using a tangent-to-world matrix.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">TransformWorldToViewNormal</span>  </td><td class="markdownTableBodyNone"><span class="tt">real3 TransformWorldToViewNormal(real3 normalInWorldSpace, bool normalize = false)</span>  </td><td class="markdownTableBodyNone">Converts a normal in world space to view space.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2747"></a>
+Additional resources</h1>
+<ul>
+<li><a href="https://docs.unity3d.com/Manual/SL-ShaderPrograms.html">HLSL in Unity</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

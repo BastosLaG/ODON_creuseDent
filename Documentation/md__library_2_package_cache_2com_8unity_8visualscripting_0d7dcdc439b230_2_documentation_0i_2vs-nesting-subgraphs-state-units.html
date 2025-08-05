@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Subgraphs and State Units</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-nesting-subgraphs-state-units.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Subgraphs and State Units </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7243"></a></p>
+<p>In a Script Graph, you can add a node that links directly to another Script Graph or State Graph.</p>
+<ul>
+<li>A nested Script Graph is a Subgraph.</li>
+<li>A nested State Graph is a State Unit.</li>
+</ul>
+<p>A nested Script Graph or State Graph helps you to organize and reuse logic across an application. A Subgraph or State Unit can exist as the node that adds it to a graph, or it can link to an external graph file.</p>
+<p><img src="images/vs-nesting-nodes-example.png" alt="An image of two Graph windows. The first Graph window has a Subgraph node, with its details open in the Graph Inspector. The node links to an external graph file. The second Graph window has a State Unit node with no details provided and the node uses an embedded graph." class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7244"></a>
+Subgraphs</h1>
+<p>A Subgraph nests a Script Graph inside another Script Graph. Use a Subgraph node to reuse a set of logic across Script Graphs in an application.</p>
+<p>A Subgraph node can take inputs or send outputs back to its parent graph. Add ports to configure what data a Subgraph and its parent graph send to each other.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7245"></a>
+Subgraph inputs and outputs</h2>
+<p>With the Graph Inspector, you can choose and define the ports that appear when you use a Script Graph as a Subgraph. The port definitions for a Script Graph appear in the <a href="vs-interface-overview.md#the-graph-inspector">Graph Inspector</a> when you have no other items selected in a graph. <br  />
+</p>
+<p><img src="images/vs-data-trigger-subgraph-ports.png" alt="An image of the Graph Inspector open in the Graph window. The Graph Inspector displays the ports added to the open Script Graph. The graph has a single Trigger Input port, called Start; a Trigger Output port, called Finish; a Data Input port with a float type, called var; and a data output port with a string type, called string." class="inline"/></p>
+<p>Defined ports appear on any Subgraph node that uses that Script Graph. In the following image, the Subgraph <b><a class="el" href="class_rotate.html">Rotate</a> the Cube</b> has:</p>
+<ul>
+<li>A Trigger Input port.</li>
+<li>An Data Input port.</li>
+<li>An Trigger Output port.</li>
+<li>An Data Output port.</li>
+</ul>
+<p><img src="images/vs-subgraph-ports-example.png" alt="An image of the Graph window. The Graph Inspector is open and displays information for each port added to a Subgraph node. The ports are the same as the ones defined in the previous image: Start, Finish, var, and string. A Float literal node with a value of 2 connects to the var input data port." class="inline"/></p>
+<p>A port definition also changes the <b>Input</b> and <b>Output</b> nodes for a Subgraph. These nodes control the execution and flow between a Subgraph and its parent graph. In the following image, the Input and Output nodes have the same ports as the <b><a class="el" href="class_rotate.html">Rotate</a> the Cube</b> Subgraph node from the previous example. <br  />
+</p>
+<p>&lt;img src="images/vs-subgraph-ports-example-2.png" alt="An image of the Graph window that displays the Rotate the Cube Script Graph. The Input and Output nodes are highlighted with a red box. A Get Graph variable node, with the Variable name XRotate, connects to the B input port on an Add Inputs node. The Add Inputs node has only 2 inputs, and receives its second input from the var port on the Input node. The Start port on the Input node connects to the Input Trigger port on a Transform Rotate node. The Transform Rotate node rotates the transform from the current GameObject by the same amount on the X, Y, and Z axis. It takes its X Angle, Y Angle, and Z Angle inputs from the result of the Add Inputs node. The Output Trigger port on the Transform Rotate node connects to the Input Trigger port on a String Concat node. The String Concat node takes the string from a String literal node, "Rotated by" and appends the result of the Add Inputs node. The Output Trigger port on the String Concat node connects to the Input Trigger port, Finish, on the Output node. The string output port on the String Concat node connects to the string input port on the Output node."/&gt;</p>
+<dl class="section note"><dt>Note</dt><dd>You can only use a single <b>Input</b> node and a single <b>Output</b> node in a Script Graph. If you add more <b>Input</b> or <b>Output</b> nodes, Visual Scripting only uses the first <b>Input</b> and <b>Output</b> nodes you added to the graph.</dd></dl>
+<p>For more information on how to add ports to a Script Graph, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-nesting-add-triggers-data-graph.html">Add a Trigger or Data port to a Script Graph</a>. For more information on the different types of ports, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-nesting-subgraph-node.html">Subgraph node</a>. For more information on how to use a Subgraph, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-nesting-add-subgraph.html">Add a Subgraph to a Script Graph</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7246"></a>
+State Units</h1>
+<p>A State Unit starts a State Graph from a Script Graph. You can't change the ports that appear on a State Unit node or send data between the State Graph and its parent Script Graph.</p>
+<p><img src="images/vs-state-unit-node-example.png" alt="An image of the Graph window that displays a State Unit node." class="inline"/></p>
+<p>The State Unit node starts different logic in a Script Graph, at different times in code execution:</p>
+<ul>
+<li>When the nested State Graph starts to run.</li>
+<li>While the nested State Graph runs.</li>
+<li>When the nested State Graph stops.</li>
+<li>After the nested State Graph stops.</li>
+</ul>
+<p>When you start a State Unit node's Start and Started ports in a parent graph, Visual Scripting marks all Start states inside the node's State Graph as active. When you start the Stop and Stopped ports, Visual Scripting marks all Start states as inactive.</p>
+<p>For more information on State Graphs and Start states, see <a href="vs-graph-types.md#state-graphs">State Graphs</a>. For more information on the State Unit node, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-nesting-state-unit-node.html">State Unit node</a> and <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-nesting-add-state-unit.html">Add a State Unit to a Script Graph</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

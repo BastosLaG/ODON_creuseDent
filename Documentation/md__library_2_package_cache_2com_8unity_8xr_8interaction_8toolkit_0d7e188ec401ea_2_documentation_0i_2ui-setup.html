@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: ui-setup</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2ui-setup.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">ui-setup </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8514"></a>
+autotoc_md8514</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8515"></a>
+uid: xri-ui-setup</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8516"></a>
+Set up UI Canvases for XR</h1>
+<p>To interact with <a class="el" href="namespace_unity.html">Unity</a>'s built-in UI elements, you need to perform extra steps, particularly if you're dealing with 3D-tracked devices. The XR Interaction Toolkit package provides a number of new components that you can use to convert an XR controller to work seamlessly with the UI, as well as helper menu options that handle basic configuration settings.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8517"></a>
+Using the GameObject menu</h2>
+<p>The XR Interaction Toolkit package comes with menu items that perform basic setup. Use these helpers to create a new UI Canvas. You can access them from the <b>GameObject &gt; XR</b> menu.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Helper  </th><th class="markdownTableHeadNone">Function  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>UI Canvas</b>  </td><td class="markdownTableBodyNone">Creates a new world-space Canvas that you can add standard UI elements to. If you haven't configured an Event System yet, it also creates and configures a new Event System for XR.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>UI EventSystem</b>  </td><td class="markdownTableBodyNone">Creates a new Event System for XR, or modifies and selects the existing one in the loaded scenes.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8518"></a>
+Event System</h2>
+<p>The <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/EventSystem.html">Event System</a> component acts as a central dispatch for UI events to process input, and update individual active canvases. Additionally, each Event System needs an Input Module to process input. Use the default configuration, pictured below, as a starting point. Only one Input Module can be active at one time. The Tracked Device Physics Raycaster can also be added to a scene so that objects with physics colliders are able to receive Event System events from tracked devices.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8519"></a>
+Canvas optimizer</h2>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2canvas-optimizer.html">Canvas Optimizer</a> is an optional component that will reduce the performance cost of scenes with heavily nested UI elements. It will also disable processing input events on UI canvases that cannot be seen or are too far away.</p>
+<p>Add this component to a scene, such as on the EventSystem GameObject, to allow the Canvas Optimizer to automatically find all Canvas components in all loaded scenes to optimize processing.</p>
+<dl class="section note"><dt>Note</dt><dd>If you instantiate a UI element with a Canvas at runtime, you will need to manually register it with the Canvas Optimizer by calling <span class="tt">CanvasOptimizer.RegisterCanvas(Canvas)</span>.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8520"></a>
+Canvas</h2>
+<p>All UI elements exist in the canvas. In the XR Interaction Toolkit, a user can only interact with canvases that have their <b>Render Mode</b> set to <b>World Space</b>. The XR Interaction Toolkit package contains a new component (pictured below) called the <b>Tracked Device Graphic Raycaster</b>. This component lets you use 3D tracked devices to highlight and select UI elements in that canvas.</p>
+<p><img src="images/ui-canvas-setup.png" alt="ui-canvas-setup" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8521"></a>
+Checking for UI Occlusion</h2>
+<p>When using the <b>Tracked Device Graphic Raycaster</b> with the canvas components, you might run into situations where non-UI objects exist in front of the UI elements. The natural behavior would be for the non-UI object to block access to the UI. To support this behavior, enable <b>Check For 3D Occlusion</b> for 3D objects to block the ray from UI behind it. Enable <b>Check For 2D Occlusion</b> if you make use of 2D physics and those 2D objects should block the ray in a similar way.</p>
+<dl class="section important"><dt>Important</dt><dd>These occlusion options are turned off by default to save on performance. Be aware that each of these checkboxes performs additional ray casts to find 3D and 2D occlusion objects.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8522"></a>
+Known Issues with Input Fields</h2>
+<ul>
+<li>When building for UWP (Universal Windows Platform) and using standard UGUI Input Fields, the input field does not receive text input from the software keyboard provided by the Mixed Reality Portal. The TextMeshPro - Input Field component should be used instead, which responds correctly to software keyboard events.</li>
+<li>There is an issue where the software keyboard cannot be closed on Quest platform builds when using an <b>Input Field</b> with <b>Line Type</b> set to <b>Multi Line Newline</b>. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

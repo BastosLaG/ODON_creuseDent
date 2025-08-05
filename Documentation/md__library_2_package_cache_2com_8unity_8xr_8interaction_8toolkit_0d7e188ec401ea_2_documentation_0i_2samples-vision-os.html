@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: samples-vision-os</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-vision-os.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">samples-vision-os </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8424"></a>
+autotoc_md8424</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8425"></a>
+uid: xri-samples-vision-os</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8426"></a>
+visionOS Sample</h1>
+<p>The visionOS sample provides a working demo of core interactors working with visionOS input. While some work has been done to accommodate the discontinuous nature of pose tracking on the platform, the interaction paradigm demonstrated on other platforms is intact here.</p>
+<p>Importantly, a simple swap of the XR Origin (XR Rig) prefab and the introduction of a volume camera used in a scene that is already designed around hand tracking should be all that's required to get the XR Interaction Toolkit content to work in a mixed reality (Bounded or Unbounded) context on visionOS.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8427"></a>
+Prerequisites and setup</h2>
+<p>This sample and its dependencies are configured to run with the latest <a href="https://unity.com/releases/editor/qa/lts-releases">Unity 2022.3 LTS</a> or newer (minimum 2022.3.19f1). A <a class="el" href="namespace_unity.html">Unity</a> Pro license is also <a href="https://unity.com/campaign/spatial">required</a> to access the PolySpatial packages.</p>
+<p>In order for this sample to function properly, a few additional packages are required. Install these by clicking <b>Fix</b> in <b>Edit</b> &gt; <b>Project Settings</b> &gt; <b>XR Plug-in Management</b> &gt; <b>Project Validation</b> or by using the <b>Window</b> &gt; <b>Package Manager</b> window.</p><ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-starter-assets.html">Starter Assets</a> sample - imported from Package Manager under XR Interaction Toolkit in the <a class="el" href="class_samples.html">Samples</a> area</li>
+<li><a href="https://docs.unity3d.com/Manual/com.unity.shadergraph.html">Shader Graph</a> - For the materials used. PolySpatial requires the use of Shader Graph for any custom materials.</li>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.1/manual/index.html">AR Foundation</a> - For mixed reality support.</li>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.polyspatial.xr@1.1/manual/index.html">PolySpatial XR</a> - For PolySpatial XR functionality.</li>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.polyspatial.visionos@1.1/manual/index.html">PolySpatial visionOS</a> - For visionOS support with PolySpatial.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8428"></a>
+Key interactions supported</h3>
+<ul>
+<li>Touching objects with your index finger tip will allow interactables to receive poke interaction events, leveraging the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-poke-interactor.html">poke interactor</a>.</li>
+<li>Gazing at objects will highlight them using the <a href="https://docs.unity3d.com/Packages/com.unity.polyspatial.visionos@1.1/manual/HoverEffect.html"><span class="tt">VisionOSHoverEffect</span></a> component, and on pinch `VisionOSFarCaster` will provide that object as a valid target to the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2near-far-interactor.html"><span class="tt">NearFarInteractor</span></a>.</li>
+<li>Direct pinching objects will leverage the `PointNearCaster` and prioritize close proximity targets over the object surfaced by the platform input.</li>
+</ul>
+<p>Given the modular paradigm of the Near-Far Interactor, it is possible to selectively disable either near or far interaction at authoring or runtime to control how interaction behaves.</p>
+<p>This sample is installed into the default location for package samples, in the <span class="tt">Assets\<a class="el" href="class_samples.html">Samples</a>\XR Interaction Toolkit\[version]\visionOS</span> folder. You can move these Assets to a different location.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Asset</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">Editor\</span></b>  </td><td class="markdownTableBodyNone">Contains project validation logic for the <a class="el" href="namespace_unity.html">Unity</a> Editor.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">Input\</span></b>  </td><td class="markdownTableBodyNone">Contains action map and generated C# bindings used by `SpatialTouchInputReader.cs`.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">Materials\</span></b>  </td><td class="markdownTableBodyNone">Contains SpatialUI materials added in this sample. Other materials are located in the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-starter-assets.html">Starter Assets sample</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">Models\</span></b>  </td><td class="markdownTableBodyNone">Contains 3D models used in this sample, namely the Spatial UI .fbx model, as well as rounded cube and platform meshes.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">Prefabs\</span></b>  </td><td class="markdownTableBodyNone">Contains numerous starter prefab and example object prefabs. Importantly look for the <span class="tt">XRI_SimpleRig</span> prefab to get started.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">Resources\</span></b>  </td><td class="markdownTableBodyNone">Contains volume config scriptable object. This is required to configure mixed reality PolySpatial applications.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">Scripts\</span></b>  </td><td class="markdownTableBodyNone">Contains the sample's scripts. See the `Input Bridge` folder for the core scripts required to make the XRI Rig work with visionOS.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">Shaders\</span></b>  </td><td class="markdownTableBodyNone">Asset folder containing Shader Graph shaders used in the scene.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><span class="tt">Themes\</span></b>  </td><td class="markdownTableBodyNone">Contains <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2affordance-system.html">Affordance System</a> themes created for this sample. Grab interaction's rely on themes from the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-starter-assets.html">Starter Assets sample</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b><span class="tt">VolumeDemo</span></b>  </td><td class="markdownTableBodyNone">Scene that demonstrates XRI interaction utilizing PolySpatial input events for direct, indirect, and poke-based input in a shared space volume.<br  />
+See <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-starter-assets.html#demo-scene">Demo scene</a> below.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8429"></a>
+Demo scene</h2>
+<p>The <span class="tt">VolumeDemo</span> scene shows a minimal bounded volume setup designed to demo 3D interaction using the XR Interaction Toolkit. It features two-handed interactions supported on cubes, a floating cylinder, and tapered cylinder.</p>
+<p>The cubes and tapered cylinder are set up using velocity tracked mode on the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-grab-interactable.html"><span class="tt">XRGrabInteractable</span></a>, to showcase how physics interaction is meant to behave. The floating cylinder uses the lower latency instantaneous mode, which ignores physics collisions when evaluating motion.</p>
+<p>There is also a reset button in the scene that is meant to demo a tactile poke interactable using an <a href="samples-starter-assets.md#scripts"><span class="tt">XRPokeFollowAffordance</span></a> component to animate the button position as the poke depth changes. When fully pressed it will trigger the reset function on all interactables in the scene with a <span class="tt">Resetable</span> component on them, to re-initialize them to the original location.</p>
+<p>Finally, there is an instance of the <a class="el" href="#spatialpanel_ui">`SpatialPanel_UI`</a> prefab meant to show how common UI components can be interacted with using the XR Interaction Toolkit interaction events.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8430"></a>
+Prefabs</h2>
+<ul>
+<li><b>Interactables</b><ul>
+<li><span class="tt">GrabAffordance</span></li>
+<li><span class="tt">XRI_Cube</span></li>
+</ul>
+</li>
+<li><b>Interactors</b><ul>
+<li><span class="tt">Primary Interaction Group</span></li>
+<li><span class="tt">Secondary Interaction Group Variant</span></li>
+</ul>
+</li>
+<li><b>SpatialUI</b><ul>
+<li><span class="tt">ButtonAffordance</span></li>
+<li><span class="tt">SpatialPanel_UI</span></li>
+</ul>
+</li>
+<li><span class="tt">XRI_SimpleRig</span></li>
+</ul>
+<p>The most important prefab in this folder is the <span class="tt">XRI_SimpleRig</span>, which uses the prefabs in the <span class="tt">Interactors</span> folder to create a functional rig that can be dropped into an XRI scene and allow interaction to occur on visionOS, assuming the project is well configured.</p>
+<p>The <span class="tt">Primary Interaction Group</span>, and its secondary variant, are configured to handle poke, direct, and indirect pinch for the corresponding spatial pointer device input.</p>
+<p><span class="tt">GrabAffordance</span> shows a minimal setup used to enable select rim shader effects to pair with an <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-simple-interactable.html">XRI interactable</a>. <span class="tt">ButtonAffordance</span> does the same for the <span class="tt">SpatialUI</span> components.</p>
+<p><span class="tt">XRI_Cube</span> is a simple grab interactable that supports two-handed interaction by enabling Multiple on Select Mode property from <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-grab-interactable.html"><span class="tt">XRGrabInteractable</span></a>. While <span class="tt">XRGrabInteractable</span> automatically adds a <span class="tt">GeneralGrabTransformer</span> component at runtime if needed, the component has been added to the GameObject to allow two-handed scaling by enabling the Allow Two Handed Scaling property on that component.</p>
+<p><a class="anchor" id="spatialpanel_ui"></a></p>
+<p><span class="tt">SpatialPanel_UI</span> is a 3D UI panel showing common interaction patterns in UI, implemented using the XR Interaction Toolkit interaction events. This panel should be compatible with projects that use the XR Interaction Toolkit on other supported platforms.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8431"></a>
+Scripts / Input Bridge</h2>
+<p>The input bridge folder represents the core of the work done to make the XR Interaction Toolkit interactors compatible with visionOS.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8432"></a>
+SpatialTouchInputReader</h3>
+<p><a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/whats-new-3.0.html">XRI 3.0</a> introduced <a href="architecture.md#input-readers">Input Readers</a>, which are a core part of managing input events that interactors rely on to correctly handle state transitions. Because interactors poll input from an abstracted Input Reader rather than input actions directly, it is possible to write a custom implementation of input logic that can process input before they're exposed to interactors.</p>
+<p>To handle an interactor's select state transition, we need to implement <a href="xref:UnityEngine.XR.Interaction.Toolkit.Inputs.Readers.IXRInputButtonReader"><span class="tt">IXRInputButtonReader</span></a> which exposes a bool through <span class="tt">ReadIsPerformed</span> to tell the interactor when select is active.</p>
+<p><span class="tt">SpatialTouchInputReader</span> implements <span class="tt">IXRInputButtonReader</span> and is set up to bind to <span class="tt">performed</span> calls on the generated <span class="tt"><a class="el" href="class_spatial_pointer_input.html">SpatialPointerInput</a></span> input class, which exposes the Primary <span class="tt">SpatialPointer0</span> and Secondary <span class="tt">SpatialPointer1</span> spatial pointers. visionOS does not provide handedness information for these pointers, and the pointer <span class="tt">kind</span> can change throughout the lifecycle of an interaction. If no input is active, the first hand to pinch or poke something will be the primary pointer, and the second will be the secondary.</p>
+<p>Note: This input reader will not function in fully immersive VR mode because different input action binding are required to source input events in that mode.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md8433"></a>
+Frame behavior of pointer events</h4>
+<p>Because of the way PolySpatial is set up to work with visionOS, input performed calls may not arrive at regular intervals. In one frame, you might receive 3 callbacks, while in the next, you'll receive 0. This erratic input timing can lead to issues if your input stack expects only one state transition per frame, which is indeed the case here. Consider a scenario where you poll <span class="tt">ReadValue</span> once per frame to get the last passed value. If the previous frame started an interaction with a <span class="tt">Begin</span> phase event, and the current frame ended that interaction and started a new one, the last state would still be <span class="tt">Begin</span>. While two different interactions have occurred, the polling input code would have failed to transition between them correctly.</p>
+<p>To address this issue, <span class="tt">SpatialTouchInputReader</span> implements a queue to buffer input events, capturing every one that passes through. Then, in the component's update loop, we can work our way through the queue and ensure that we only change the input <span class="tt">ReadIsPerformed</span> state once per frame, assuring the integrity of <span class="tt">WasPerformedThisFrame</span> and <span class="tt">WasCompletedThisFrame</span>. This queue also allows us to safely exit interactions when an incompatible <span class="tt">kind</span> is passed through. Our XRI rig is configured with a separate input reader for poke (Touch) and for Near-Far interaction (Direct &amp; Indirect Pinch), and visionOS' fluidity in change <span class="tt">kind</span>s requires careful consideration.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8434"></a>
+VisionOSFarCaster</h3>
+<p><a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/whats-new-3.0.html">XRI 3.0</a> introduced the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2near-far-interactor.html">Near-Far Interactor</a>, which modularized the components responsible for sourcing the list of valid targets considered by the interactor. One of the key motivations for this change was to make it possible for valid targets to be determined by other means than physics casting.</p>
+<p>The visionOS Far Caster is a prime example of the power of this system, as it sources its valid targets directly from the <a href="https://docs.unity3d.com/Packages/com.unity.polyspatial.visionos@1.1/manual/PolySpatialInput.html"><span class="tt">SpatialPointerState</span></a> struct exposed by the `SpatialTouchInputReader`.</p>
+<p>Note: This caster will only work in bounded and unbounded mixed reality modes, and not in fully immersive VR mode. This is because of the limitation of the `SpatialTouchInputReader`, but also because visionOS only sources an entity id (valid target) when ARKit is doing the rendering.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8435"></a>
+PointNearCaster</h3>
+<p>Much like the `VisionOSFarCaster` is in charge of handling far casting for the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2near-far-interactor.html">Near-Far Interactor</a>, we need to have a near interaction caster that is well suited to the discontinuous input of visionOS.</p>
+<p>The <span class="tt">PointNearCaster</span> functions very similarly to the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2near-far-interactor.html"><span class="tt">SphereInteractionCaster</span></a> in the XR Interaction Toolkit, except that instead of sweeping the distance covered between frames for valid targets, a simple overlap sphere check is performed when `SpatialTouchInputReader` reports valid positions.</p>
+<p>While in theory the entity id returned by the `SpatialTouchInputReader` during <span class="tt">DirectPinch</span> input events should be sufficient for near interaction, in practice, visionOS fails to prioritize direct pinch over indirect when the user's hand is directly over objects. For this reason, the sphere overlap check done by this component at the pinch device position takes precedence over the target returned by `VisionOSFarCaster`, simply because the Near-Far Interactor prioritizes near interactors over far by default.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8436"></a>
+Poke Interaction Toggler</h3>
+<p>Unlike the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2near-far-interactor.html">Near-Far Interactor</a> which allows the valid targets to be determined by caster components, the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-poke-interactor.html">XR Poke Interactor</a> does not support custom casters as of this release.</p>
+<p>As a result, the Poke Interactor is ill-suited for discontinuous input and does not support custom entity id target sources. The <span class="tt">PokeInteractorToggler</span> component simply listens for changes in the `SpatialTouchInputReader` and toggles the <span class="tt">XRPokeInteractor</span> on and off as touch input comes and goes. This ensures that sudden jumps in position of the poke interactor do not cause accidental touches to occur.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8437"></a>
+Scripts / UI</h2>
+<p>The following components are ported from PolySpatial samples to leverage the XR Interaction Toolkit interaction events.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8438"></a>
+Drop-Down Component</h3>
+<p>Simple interactable drop down component that activates a pop-up of <span class="tt">DropDownElement</span> components.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8439"></a>
+Drop-Down Element</h3>
+<p>Drop-Down Element component pairs with the <span class="tt">DropDownComponent</span> to handle selecting an element and to close the drop-down pop-up.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8440"></a>
+Slider Component</h3>
+<p>Slider component that uses a material property to animate the fill amount of a slider. Poking the slider will move the slider end to the poke position. Indirect pinching will move the slider using a motion delta as the user's hand moves left and right.</p>
+<p>A float <a href="https://docs.unity3d.com/Manual/UnityEvents.html">UnityEvent</a> is exposed to the <a class="el" href="namespace_unity.html">Unity</a> Editor to allow scripts to bind to the fill amount of the slider.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8441"></a>
+Toggle Component</h3>
+<p>Simple toggle interactable that animates the toggle visual according to the current toggle state.</p>
+<p>A bool <a href="https://docs.unity3d.com/Manual/UnityEvents.html">UnityEvent</a> is exposed to the <a class="el" href="namespace_unity.html">Unity</a> Editor to allow scripts to bind to the toggle state.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8442"></a>
+Input</h2>
+<p>Folder holding the input action map used by this sample. A generated C# script also exposes the input actions to be bound through code.</p>
+<p>See `SpatialTouchInputReader` for details on how this is used.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8443"></a>
+Known limitations</h2>
+<ul>
+<li>Because poke relies on continuous motion to determine interaction, and volumes do not have access to the hand skeleton data, this sample relies on the touch data returned by the spatial pointer API, which can lead to some late starts on poke or incorrect angle threshold calculations in some situations. Work is ongoing to improve the feel of poke with visionOS.</li>
+<li>At the time of this release, PolySpatial requires that all canvases have a PolySpatial <a class="el" href="namespace_graphics.html">Graphics</a> Raycaster component on them, which is incompatible with the [<span class="tt">TrackedDeviceGraphicsRaycaster</span>](xref:xri-tracked-device-graphic-raycaster) in the XR Interaction Toolkit. Because of this, <a class="el" href="namespace_unity.html">Unity</a> UI (uGUI) interaction is not well supported on visionOS in projects that use the XR Interaction Toolkit. We are investigating ways of improving support for this for future releases of PolySpatial and the toolkit.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8444"></a>
+Helpful links</h2>
+<p>If you have a question after reading the documentation, you can:</p><ul>
+<li>Join our XRI <a href="https://forum.unity.com/forums/xr-interaction-toolkit-and-input.519/">support forum</a>.</li>
+<li>Visit the visionOS <a href="https://discussions.unity.com/c/visionos">support forum</a>.</li>
+<li>Search the <a href="https://issuetracker.unity3d.com/product/unity/issues?project=192&amp;status=1&amp;unity_version=&amp;view=newest">issue tracker</a> for active issues.</li>
+<li>View our <a href="https://portal.productboard.com/brs5gbymuktquzeomnargn2u">public roadmap</a> and submit feature requests. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

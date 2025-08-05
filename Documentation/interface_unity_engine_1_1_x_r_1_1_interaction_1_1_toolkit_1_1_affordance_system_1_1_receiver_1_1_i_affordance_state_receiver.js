@@ -1,0 +1,5 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_i_affordance_state_receiver =
+[
+    [ "OnAffordanceStateUpdated", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_i_affordance_state_receiver.html#a89d80df636b63f8780aaac42db20cb76", null ],
+    [ "currentAffordanceStateData", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_i_affordance_state_receiver.html#adff478049ac2110ae4f7b62726528d52", null ]
+];

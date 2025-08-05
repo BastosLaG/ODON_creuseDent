@@ -1,0 +1,5 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_target_priority_interactor =
+[
+    [ "targetPriorityMode", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_target_priority_interactor.html#a9df506c0d999bde13e43d39a52814d3a", null ],
+    [ "targetsForSelection", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_target_priority_interactor.html#a5f10e6acc180d70011d89f6b3ba7b0a5", null ]
+];

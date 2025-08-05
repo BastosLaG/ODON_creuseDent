@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Get custom graphics settings</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2get-custom-graphics-settings.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Get custom graphics settings </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2794"></a></p>
+<p>To get a custom setting and read its value, use the <span class="tt">GetRenderPipelineSettings</span> method.</p>
+<p>For example, the following script gets the <span class="tt">MySettings</span> settings class from the example in the <a class="el" href="md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2add-custom-graphics-setting.html">Add a setting</a> page, then logs the value of the <span class="tt">mySetting</span> setting:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.Rendering;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>LogMySettingsValue : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Unity calls the Update method once per frame</span></div>
+<div class="line">    <span class="keywordtype">void</span> Update()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Get the MySettings settings</span></div>
+<div class="line">        var mySettings = GraphicsSettings.GetRenderPipelineSettings&lt;MySettings&gt;();  </div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Log the value of the MyValue setting</span></div>
+<div class="line">        Debug.Log(mySettings.mySetting);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md2795"></a>
+Get a notification when a setting changes</h1>
+<p>To configure a property so it notifies other scripts when its value changes, use the <span class="tt">SetValueAndNotify</span> method. You can use this to debug, update UI elements, or trigger other actions when a setting changes.</p>
+<p>This only works while you're editing your project, not at runtime. If you use <span class="tt">SetValueAndModify</span> in a built application, <a class="el" href="namespace_unity.html">Unity</a> throws an exception.</p>
+<p>Follow these steps:</p>
+<ol type="1">
+<li>Create a public getter and setter in your setting class.</li>
+<li><p class="startli">In the setter, set the value using the <span class="tt">SetValueAndNotify</span> method, so changing the setting value sends a notification to other scripts.</p>
+<p class="startli">For example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   <span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line">   <span class="keyword">using </span>UnityEngine.Rendering;</div>
+<div class="line">   <span class="keyword">using </span>System;</div>
+<div class="line"> </div>
+<div class="line">   [Serializable]</div>
+<div class="line">   [SupportedOnRenderPipeline(typeof(UniversalRenderPipelineAsset))] </div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Create a settings group by implementing the IRenderPipelineGraphicsSettings interface</span></div>
+<div class="line">   <span class="keyword">public</span> <span class="keyword">class </span>MySettings : IRenderPipelineGraphicsSettings</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Implement the version field</span></div>
+<div class="line">       <span class="keyword">public</span> <span class="keywordtype">int</span> version =&gt; 0;</div>
+<div class="line"> </div>
+<div class="line">       <span class="comment">// Create a MyValue setting and set its default value to 100</span></div>
+<div class="line">       [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> MyValue = 100;</div>
+<div class="line"> </div>
+<div class="line">       <span class="keyword">public</span> <span class="keywordtype">int</span> myValue</div>
+<div class="line">       {</div>
+<div class="line">           get =&gt; MyValue;</div>
+<div class="line">           set =&gt; this.SetValueAndNotify(ref MyValue, value);</div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+</div><!-- fragment --></li>
+<li><p class="startli">Use the <span class="tt">GraphicsSettings.Subscribe</span> method to subscribe to notifications from the setting, and call an <span class="tt">Action</span> when the setting changes.</p>
+<p class="startli">For example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   <span class="keyword">using </span>System;</div>
+<div class="line">   <span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line">   <span class="keyword">using </span>UnityEngine.Rendering;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">public</span> <span class="keyword">class </span>DetectSettingsChange : MonoBehaviour</div>
+<div class="line">   {</div>
+<div class="line">       </div>
+<div class="line">       <span class="comment">// Unity calls the Awake method when it loads the script instance.</span></div>
+<div class="line">       <span class="keywordtype">void</span> Awake()</div>
+<div class="line">       {</div>
+<div class="line"> </div>
+<div class="line">           <span class="comment">// Log the new value of the setting</span></div>
+<div class="line">           Action&lt;MySettings, string&gt; onSettingChanged = (setting, name) =&gt;</div>
+<div class="line">           {</div>
+<div class="line">               Debug.Log($<span class="stringliteral">&quot;{name} changed to {setting.myValue}&quot;</span>);</div>
+<div class="line">           };</div>
+<div class="line"> </div>
+<div class="line">           <span class="comment">// Subscribe to notifications from the MySettings settings, and call the OnSettingsChanged Action when notified</span></div>
+<div class="line">           GraphicsSettings.Subscribe&lt;MySettings&gt;(onSettingChanged);</div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+</div><!-- fragment --></li>
+</ol>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2796"></a>
+Unsubscribe from the notifications from a setting</h2>
+<p>To stop calling a method when a setting changes, use the <span class="tt">GraphicsSettings.Unsubscribe</span> method. For example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">GraphicsSettings.Unsubscribe&lt;MySettings&gt;(onSettingChanged);</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md2797"></a>
+Additional resources</h1>
+<ul>
+<li><a href="https://docs.unity3d.com/6000.1/Documentation/ScriptReference/Rendering.IRenderPipelineGraphicsSettings.html"><span class="tt">IRenderPipelineGraphicsSettings</span></a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

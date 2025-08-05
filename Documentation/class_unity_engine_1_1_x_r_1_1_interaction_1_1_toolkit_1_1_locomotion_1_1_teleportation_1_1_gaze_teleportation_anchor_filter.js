@@ -1,0 +1,9 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze_teleportation_anchor_filter =
+[
+    [ "GetDestinationAnchorIndex", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze_teleportation_anchor_filter.html#a310b9dfec05b0d78372963423a9747af", null ],
+    [ "Reset", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze_teleportation_anchor_filter.html#a0480dee0d697f21714e251cec1ffbb1d", null ],
+    [ "distanceWeightCurve", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze_teleportation_anchor_filter.html#a43ccc68348eb2fab1e9c3274b0fb81b1", null ],
+    [ "enableDistanceWeighting", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze_teleportation_anchor_filter.html#aeb8e6016d962c4bd18f4c5e5d71eb163", null ],
+    [ "gazeAngleScoreCurve", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze_teleportation_anchor_filter.html#a41a31c5e2ebf55b09fe94db93445affd", null ],
+    [ "maxGazeAngle", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze_teleportation_anchor_filter.html#aa957abc6318bf6c33a94835dfee6023f", null ]
+];

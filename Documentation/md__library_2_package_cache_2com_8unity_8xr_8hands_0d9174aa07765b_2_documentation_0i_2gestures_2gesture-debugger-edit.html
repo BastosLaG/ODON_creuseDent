@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: gesture-debugger-edit</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8hands_0d9174aa07765b_2_documentation_0i_2gestures_2gesture-debugger-edit.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">gesture-debugger-edit </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md7645"></a>
+autotoc_md7645</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7646"></a>
+uid: xrhands-customize-gesture-debugger</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7647"></a>
+Customize the Gesture Debugger Scene</h1>
+<p>The <b>HandGestures</b> sample scene includes three debugging tools:</p>
+<ul>
+<li><b>Hand Shape Debugger</b>: Displays finger data graphs with target values, tolerances, and current measured values for a predefined hand shape or hand pose.</li>
+<li><b>Hand Pose Debugger</b>: Displays detected hand poses for each hand. At runtime, the corresponding hand pose icon changes color when a pose is detected.</li>
+<li><b>Advanced Pose Debugger</b>: Expands on the Hand Pose Debugger by not only displaying detected hand poses but also showing finger data graphs with target values and tolerance ranges for each finger shape of the current or last recognized hand shape or pose.</li>
+</ul>
+<p>You can modify the scene to debug your own hand shape or hand pose.</p>
+<dl class="section remark"><dt>Remarques</dt><dd>Ensure you have imported the <b>Gestures</b> and <b>HandVisualizer</b> samples from the XR Hands package. Refer to [Install the Gesture Debugger](xref:xrhands-install-gesture-debugger) for setup instructions.</dd></dl>
+<p><a class="anchor" id="set-hand-shape"></a></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7648"></a>
+Configure the Hand Shape Debugger</h2>
+<p>To set the target hand shape in the Hand Shape Debugger:</p>
+<ol type="1">
+<li>Open the <b>HandGestures</b> scene from the <b>Gestures</b> sample in the <a class="el" href="namespace_unity.html">Unity</a> Editor.</li>
+<li>In the <b>Hierarchy</b> window, enable the <b>Hand Shape Debugger</b> prefab and expand it.</li>
+<li>Expand the <b>(Start here) Target Hand Shape</b> GameObject to reveal <b>Left Hand (Add here)</b> and <b>Right Hand (Add here)</b> GameObjects.</li>
+<li>Select either <b>Left Hand (Add here)</b> or <b>Right Hand (Add here)</b> in the Hierarchy to open the Inspector window.</li>
+<li>Assign the desired <span class="tt">XRHandShape</span> or <span class="tt">XRHandPose</span> asset to the <b>Hand Shape Or Pose</b> property of the <b>XR Hand Shape Debug UI</b> component.</li>
+</ol>
+<dl class="section note"><dt>Note</dt><dd>If you assign an <b>XRHandPose</b> asset to the <b>Hand Shape Or Pose</b> property, the debugger displays its underlying <b>XRHandShape</b>. A hand pose is essentially a hand shape with orientation.</dd></dl>
+<p><img src="../images/gestures/set-hand-shape.png" alt="The Hand Shape Debugger" class="inline"/><br  />
+<em>Setting the Hand Shape Debugger's target hand shape in the Inspector window</em></p>
+<dl class="section remark"><dt>Remarques</dt><dd>You can use the preconfigured <span class="tt">XRHandShape</span> assets available in <span class="tt">Gestures/Examples/Hand Shapes</span>, or <a href="xref:xrhands-hand-shapes#create-a-hand-shape-asset">create a new XRHandShape asset</a> and add it to the debug scene.</dd></dl>
+<p><a class="anchor" id="set-hand-pose"></a></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7649"></a>
+Configure the Hand Pose Debugger</h2>
+<p>The gesture detection section of the pose debugging scene contains a set of GameObjects, each configured to detect one of the sample <span class="tt">XRHandPose</span>s. You can change which hand poses can be detected, as well as adding additional hand poses to the list.</p>
+<p>To change one of the existing hand poses to detect a different pose:</p>
+<ol type="1">
+<li>Open the <b>HandGestures</b> scene from the <b>Gestures</b> sample in the <a class="el" href="namespace_unity.html">Unity</a> Editor.</li>
+<li>In the <b>Hierarchy</b> window, enable and expand the <b>Hand Pose Debugger</b> prefab.</li>
+<li>Expand the <b>UI Canvas</b> GameObject to see the <b>Left Hand Gesture Detection</b> and <b>Right Hand Gesture Detection</b> prefabs</li>
+<li>Expand the <b>Left Hand Gesture Detection</b> or <b>Right Hand Gesture Detection</b> prefab.</li>
+<li>Select the prefab corresponding to the hand pose you want to modify.</li>
+<li><p class="startli">Assign the new <span class="tt">XRHandPose</span> asset to the <b>Hand Shape Or Pose</b> property of the <b>Static Hand Gesture</b> component.</p>
+<p class="startli"><img src="../images/gestures/set-hand-pose.png" alt="Thumbs Up hand pose prefab" class="inline"/></p>
+</li>
+<li>If the hand pose requires a target relative orientation, edit the <b>Target Relative Orientation</b> properties of the <b>Static Hand Gesture</b> component.</li>
+</ol>
+<p>To add an additional hand pose to be detected:</p>
+<ol type="1">
+<li>Open the <b>HandGestures</b> scene from the <b>Gestures</b> sample in the <a class="el" href="namespace_unity.html">Unity</a> Editor.</li>
+<li>In the <b>Hierarchy</b> window, enable and expand the <b>Hand Pose Debugger</b> prefab.</li>
+<li>Expand the <b>UI Canvas</b> GameObject to see the <b>Left Hand Gesture Detection</b> and <b>Right Hand Gesture Detection</b> prefabs.</li>
+<li>Expand the <b>Left Hand Gesture Detection</b> or <b>Right Hand Gesture Detection</b> prefab.</li>
+<li>Depending on which hand you are adding a hand pose to, duplicate the <b>Left Custom Gesture</b> or <b>Right Custom Gesture</b> prefab (which is in a disabled state).</li>
+<li>Select and enable the prefab with the checkbox next to the GameObject name in the Inspector window.</li>
+<li><p class="startli">Assign the new <span class="tt">XRHandPose</span> asset to the <b>Hand Shape Or Pose</b> property of the <b>Static Hand Gesture</b> component.</p>
+<p class="startli"><img src="../images/gestures/custom-hand-pose.png" alt="Custom hand pose GameObjects" class="inline"/></p>
+</li>
+<li>If the hand pose requires a target relative orientation, edit the <b>Target Relative Orientation</b> properties of the <b>Static Hand Gesture</b> component.</li>
+<li>Locate the <b>Text</b> GameObject in the hierarchy of your new hand pose object and assign a meaningful name in the text component.</li>
+</ol>
+<p>For the <b>Advanced Pose Debugger</b> only, assign your hand shape or pose asset to the <b>Gesture Performed</b> event handlers:</p>
+<ol type="1">
+<li>Assign the hand shape or pose asset defining the gesture to the first <b>Gesture Performed</b> event, which invokes <span class="tt">XRSelectedHandShapeDebugUI.UpdateSelectedHandshapeTextUI</span>. This event uses the name assigned to the shape or pose to update the UI text when this gesture is detected.</li>
+<li>Assign the hand shape or pose asset defining the gesture to the second <b>Gesture Performed</b> event, which invokes <span class="tt">XRHandShapeDebugUI.handShapeOrPose</span>. This will populate the finger data graphs with the target values and tolerance ranges for each finger shape of the referenced hand shape or pose. <img src="../images/gestures/set-static-hand-gesture.png" alt="Set custom hand gesture" class="inline"/> </li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

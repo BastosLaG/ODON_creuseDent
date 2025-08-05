@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Using the RTHandle system</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2rthandle-system-using.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Using the RTHandle system </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2859"></a></p>
+<p>This page covers how to use the RTHandle system to manage render textures in your render pipeline. For information about the RTHandle system, see <a class="el" href="md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2rthandle-system.html">RTHandle system</a> and <a class="el" href="md__library_2_package_cache_2com_8unity_8render-pipelines_8core_0d6e225a61188c_2_documentation_0i_2rthandle-system-fundamentals.html">RTHandle system fundamentals</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2860"></a>
+Initializing the RTHandle System</h2>
+<p>All operations related to <span class="tt">RTHandles</span> require an instance of the <span class="tt">RTHandleSystem</span> class. This class contains all the APIs necessary to allocate RTHandles, release RTHandles, and set the reference size for the frame. This means that you must create and maintain an instance of <span class="tt">RTHandleSystem</span> in your render pipeline or make use of the static RTHandles class mentioned later in this section. To create your own instance of <span class="tt">RTHandleSystem</span>, see the following code sample:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">RTHandleSystem m_RTHandleSystem = <span class="keyword">new</span> RTHandleSystem();</div>
+<div class="line">m_RTHandleSystem.Initialize(Screen.width, Screen.height);</div>
+</div><!-- fragment --><p> When you initialize the system, you must supply the starting resolution. The above code example uses the width and height of the screen. Because the RTHandle system only reallocates render textures when a Camera requires a resolution larger than the current maximum size, the internal <span class="tt">RTHandle</span> resolution can only increase from the value you pass in here. It is good practice to initialize this resolution to be the resolution of the main display. This means the system does not need to unnecessarily reallocate the render textures (and cause unwanted memory spikes) at the beginning of the application.</p>
+<p>You must only call the <span class="tt">Initialize</span> function once at the beginning of the application. After this, you can use the initialized instance to allocate textures.</p>
+<p>Because you allocate the majority of <span class="tt">RTHandles</span> from the same <span class="tt">RTHandleSystem</span> instance, the RTHandle system also provides a default global instance through the <span class="tt">RTHandles</span> static class. Rather than maintain your own instance of <span class="tt">RTHandleSystem</span>, this allows you to use the same API that you get with an instance, but not worry about the lifetime of the instance. Using the static instance, the initialization becomes this:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">RTHandles.Initialize(Screen.width, Screen.height);</div>
+</div><!-- fragment --><p>The code examples in the rest of this page use the default global instance.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2861"></a>
+Updating the RTHandle System</h2>
+<p>Before rendering with a Camera, you need to set the resolution the RTHandle system uses as a reference size. To do so, call the <span class="tt">SetReferenceSize</span> function.</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">RTHandles.SetReferenceSize(width, height);</div>
+</div><!-- fragment --><p>Calling this function has two effects:</p>
+<ol type="1">
+<li>If the new reference size you provide is bigger than the current one, the RTHandle system reallocates all the render textures internally to match the new size.</li>
+<li>After that, the RTHandle system updates internal properties that set viewport and render texture scales for when the system uses RTHandles as active render textures.</li>
+</ol>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2862"></a>
+Allocating and releasing RTHandles</h2>
+<p>After you initialize an instance of <span class="tt">RTHandleSystem</span>, whether this is your own instance or the static default instance, you can use it to allocate RTHandles.</p>
+<p>There are three main ways to allocate an <span class="tt">RTHandle</span>. They all use the same <span class="tt">Alloc</span> method on the RTHandleSystem instance. Most of the parameters of these functions are the same as the regular <a class="el" href="namespace_unity.html">Unity</a> RenderTexture ones, so for more information see the <a href="https://docs.unity3d.com/ScriptReference/RenderTexture.html">RenderTexture API documentation</a>. This section focuses on the parameters that relate to the size of the <span class="tt">RTHandle</span>:</p>
+<ul>
+<li><span class="tt">Vector2 scaleFactor</span>: This variant requires a constant 2D scale for width and height. The RTHandle system uses this to calculate the resolution of the texture against the maximum reference size. For example, a scale of (1.0f, 1.0f) generates a full-screen texture. A scale of (0.5f 0.5f) generates a quarter-resolution texture.</li>
+<li><span class="tt">ScaleFunc scaleFunc</span>: For cases when you don't want to use a constant scale to calculate the size of an <span class="tt">RTHandle</span>, you can provide a functor that calculates the size of the texture. The functor should take a <span class="tt">Vector2Int</span> as a parameter, which is the maximum reference size, and return a <span class="tt">Vector2In</span>t, which represents the size you want the texture to be.</li>
+<li><span class="tt">int width, int height</span>: This is for fixed-size textures. If you allocate a texture like this, it behaves like any regular RenderTexture.</li>
+</ul>
+<p>There are also overrides that create RTHandles from <a href="https://docs.unity3d.com/ScriptReference/Rendering.RenderTargetIdentifier.html">RenderTargetIdentifier</a>. <a href="https://docs.unity3d.com/ScriptReference/RenderTexture.html">RenderTextures</a>, or <a href="https://docs.unity3d.com/Manual/Textures.html">Textures</a>. These are useful when you want to use the RTHandle API to interact with all your textures, even though the texture might not be an actual <span class="tt">RTHandle</span>.</p>
+<p>The following code sample contains example uses of the <span class="tt">Alloc</span> function:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="comment">// Simple Scale</span></div>
+<div class="line">RTHandle simpleScale = RTHandles.Alloc(Vector2.one, depthBufferBits: DepthBits.Depth32, dimension: TextureDimension.Tex2D, name: <span class="stringliteral">&quot;CameraDepthStencil&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Functor</span></div>
+<div class="line">Vector2Int ComputeRTHandleSize(Vector2Int screenSize)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> DoSpecificResolutionComputation(screenSize);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">RTHandle rtHandleUsingFunctor = RTHandles.Alloc(ComputeRTHandleSize, colorFormat: GraphicsFormat.R32_SFloat, dimension: TextureDimension.Tex2D);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Fixed size</span></div>
+<div class="line">RTHandle fixedSize = RTHandles.Alloc(256, 256, colorFormat: GraphicsFormat.R8G8B8A8_UNorm, dimension: TextureDimension.Tex2D);</div>
+</div><!-- fragment --><p>When you no longer need a particular RTHandle, you can release it. To do this, call the <span class="tt">Release</span> method.</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">myRTHandle.Release();</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md2863"></a>
+Using RTHandles</h1>
+<p>After you allocate an RTHandle, you can use it exactly like a regular RenderTexture. There are implicit conversions to <span class="tt">RenderTargetIdentifier</span> and <span class="tt">RenderTexture</span>, which means you can use them with regular related <a class="el" href="namespace_unity.html">Unity</a> APIs.</p>
+<p>However, when you use the RTHandle system, the actual resolution of the <span class="tt">RTHandle</span> might be different from the current resolution. For example, if the main Camera renders at 1920x1080 and a secondary Camera renders at 512x512, all RTHandle resolutions are based on the 1920x1080 resolution, even when rendering at lower resolutions. Because of this, take care when you set an RTHandle up as a render target. There are a number of APIs available in the <a href="../api/UnityEngine.Rendering.CoreUtils.html">CoreUtils</a> class to help you with this. For example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SetRenderTarget(CommandBuffer cmd, RTHandle buffer, ClearFlag clearFlag, Color clearColor, <span class="keywordtype">int</span> miplevel = 0, CubemapFace cubemapFace = CubemapFace.Unknown, <span class="keywordtype">int</span> depthSlice = -1)</div>
+</div><!-- fragment --><p> This function sets the <span class="tt">RTHandle</span> as the active render target but also sets up the viewport based on the scale of the <span class="tt">RTHandle</span> and the current reference size, not the maximum size.</p>
+<p>For example, when the reference size is 512x512, even if the maximum size is 1920x1080, a texture of scale (1.0f, 1.0f) uses the 512x512 size and therefore sets up a 512x512 viewport. A (0.5f, 0.5f) scaled texture sets up a viewport of 256x256 and so on. This means that, when using these helper functions, the RTHandle system generates the correct viewport based on the <span class="tt">RTHandle</span> parameters.</p>
+<p>This example is one of many different overrides for the <span class="tt">SetRenderTarget</span> function. For the full list of overrides, see the <a href="../api/UnityEngine.Rendering.CoreUtils.html#UnityEngine_Rendering_CoreUtils_SetRenderTarget_CommandBuffer_RenderTargetIdentifier_RenderBufferLoadAction_RenderBufferStoreAction_RenderTargetIdentifier_RenderBufferLoadAction_RenderBufferStoreAction_UnityEngine_Rendering_ClearFlag_">documentation</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2864"></a>
+Using RTHandles in shaders</h1>
+<p>When you sample from a full-screen render texture in a shader in the usual way, UVs span the whole 0 to 1 range. This is not always the case with <span class="tt">RTHandles</span>. The current rendering might only occur in a partial viewport. To take this into account, you must apply a scale to UVs when you sample <span class="tt">RTHandles</span> that use a scale. All the information necessary to handle <span class="tt">RTHandles</span> specificity inside shaders is in the <span class="tt">RTHandleProperties</span> structure that the <span class="tt">RTHandleSystem</span> instance provides. To access it, use:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">RTHandleProperties rtHandleProperties = RTHandles.rtHandleProperties;</div>
+</div><!-- fragment --><p>This structure contains the following properties:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">struct </span>RTHandleProperties</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> Vector2Int previousViewportSize;</div>
+<div class="line">    <span class="keyword">public</span> Vector2Int previousRenderTargetSize;</div>
+<div class="line">    <span class="keyword">public</span> Vector2Int currentViewportSize;</div>
+<div class="line">    <span class="keyword">public</span> Vector2Int currentRenderTargetSize;</div>
+<div class="line">    <span class="keyword">public</span> Vector4 rtHandleScale;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This structure provides:</p>
+<ul>
+<li>The current viewport size. This is the reference size you set for rendering.</li>
+<li>The current render target size. This is the actual size of the render texture based on the maximum reference size.</li>
+<li>The <span class="tt">rtHandleScale</span>. This is the scale to apply to full-screen UVs to sample an RTHandle.</li>
+</ul>
+<p>Values for previous frames are also available. For more information, see Camera specific RTHandles. Generally, the most important property in this structure is <span class="tt">rtHandleScale</span>. It allows you to scale full-screen UV coordinates and use the result to sample an RTHandle. For example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">float2 scaledUVs = fullScreenUVs * rtHandleScale.xy;</div>
+</div><!-- fragment --><p>However, because the partial viewport always starts at (0, 0), when you use integer pixel coordinates within the viewport to load content from a texture, there is no need to rescale them.</p>
+<p>Another important thing to consider is that, when you render a full-screen quad into a partial viewport, there is no benefit from standard UV addressing mechanisms such as wrap or clamp. This is because the texture might be bigger than the viewport. For this reason, take care when you sample pixels outside of the viewport.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2865"></a>
+Custom SRP specific information</h2>
+<p>There are no shader constants provided by default with SRP. So, when you use RTHandles with your own SRP, you must provide these constants to their shaders themselves.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2866"></a>
+Camera specific RTHandles</h1>
+<p>Most of the render textures that a rendering loop uses can be shared by all Cameras. If their content does not need to carry from one frame to another, this is fine. However, some render textures need persistence. A good example of this is using the main color buffer in subsequent frames for Temporal Anti-aliasing. This means that the Camera cannot share its RTHandle with other Cameras. Most of the time, this also means that these RTHandles must be at least double-buffered (written to during the current frame, read from during the previous frame). To address this problem, the RTHandle system includes <span class="tt">BufferedRTHandleSystems</span>.</p>
+<p>A <span class="tt">BufferedRTHandleSystem</span> is an <span class="tt">RTHandleSystem</span> that can multi-buffer RTHandles. The principle is to identify a buffer by a unique ID and provide APIs to allocate a number of instances of the same buffer then retrieve them from previous frames. These are history buffers. Usually, you must allocate one <span class="tt">BufferedRTHandleSystem</span> for each Camera. Each one owns their Camera-specific RTHandles.</p>
+<p>Not every Camera needs history buffers. For example, if a Camera does not need Temporal Anti-aliasing, you do not need to assign a <span class="tt">BufferedRTHandleSystem</span> to it. History buffers require memory which means you can save memory by not assigning history buffers to Cameras that do not need them. Another consequence is that the system only allocates history buffers at the resolution of the Camera that the buffers are for. If the main Camera is 1920x1080 and another Camera renders in 256x256 and needs a history color buffer, the second Camera only uses a 256x256 buffer and not a 1920x1080 buffer as the non-Camera specific RTHandles would. To create an instance of a <span class="tt">BufferedRTHandleSystem</span>, see the following code sample:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">BufferedRTHandleSystem  m_HistoryRTSystem = <span class="keyword">new</span> BufferedRTHandleSystem();</div>
+</div><!-- fragment --><p>To allocate an <span class="tt">RTHandle</span> using a <span class="tt">BufferedRTHandleSystem</span>, the process is different from a normal <span class="tt">RTHandleSystem</span>:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> AllocBuffer(<span class="keywordtype">int</span> bufferId, Func&lt;RTHandleSystem, int, RTHandle&gt; allocator, <span class="keywordtype">int</span> bufferCount);</div>
+</div><!-- fragment --><p>The <span class="tt">bufferId</span> is a unique ID that the system uses to identify the buffer. The allocator is a function you provide to allocate the <span class="tt">RTHandles</span> when needed (all instances are not allocated upfront), and the <span class="tt">bufferCount</span> is the number of instances requested.</p>
+<p>From there, you can retrieve each <span class="tt">RTHandle</span> by its ID and instance index like so:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">public</span> RTHandle GetFrameRT(<span class="keywordtype">int</span> bufferId, <span class="keywordtype">int</span> frameIndex);</div>
+</div><!-- fragment --><p>The frame index is between zero and the number of buffers minus one. Zero always represents the current frame buffer, one the previous frame buffer, two the one before that, and so on.</p>
+<p>To release a buffered RTHandle, call the <span class="tt">Release</span> function on the <span class="tt">BufferedRTHandleSystem</span>, passing in the ID of the buffer to release:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> ReleaseBuffer(<span class="keywordtype">int</span> bufferId);</div>
+</div><!-- fragment --><p>In the same way that you provide the reference size for regular <span class="tt">RTHandleSystems</span>, you must do this for each instance of <span class="tt">BufferedRTHandleSystem</span>.</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> SwapAndSetReferenceSize(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+</div><!-- fragment --><p>This works the same way as regular RTHandleSystem but it also swaps the buffers internally so that the 0 index for <span class="tt">GetFrameRT</span> still references the current frame buffer. This slightly different way of handling Camera-specific buffers also has implications when you write shader code.</p>
+<p>With a multi-buffered approach like this, <span class="tt">RTHandles</span> from a previous frame might have a different size to the one from the current frame. For example, this can happen with dynamic resolution or even when you resize the window in the Editor. This means that when you access a buffered <span class="tt">RTHandle</span> from a previous frame, you must scale it accordingly. The scale <a class="el" href="namespace_unity.html">Unity</a> uses to do this is in <span class="tt">RTHandleProperties.rtHandleScale.zw</span>. <a class="el" href="namespace_unity.html">Unity</a> uses this in exactly the same way as <span class="tt">xy</span> for regular RTHandles. This is also the reason why <span class="tt">RTHandleProperties</span> contains the viewport and resolution of the previous frame. It can be useful when doing computation with history buffers.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2867"></a>
+Dynamic Resolution</h1>
+<p>One of the byproducts of the RTHandle System design is that you can also use it to simulate software dynamic resolution. Because the current resolution of the Camera is not directly correlated to the actual render texture objects, you can provide any resolution you want at the beginning of the frame and all render textures scale accordingly.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2868"></a>
+Reset Reference Size</h1>
+<p>Sometimes, you might need to render to a higher resolution than normal for a short period of time. If your application does not require this resolution anymore, the additional memory allocated is wasted. To avoid that, you can reset the current maximum resolution of an <span class="tt">RTHandleSystem</span> like so:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">RTHandles.ResetReferenceSize(newWidth, newHeight);</div>
+</div><!-- fragment --><p>This forces the RTHandle system to reallocate all RTHandles to the new provided size. This is the only way to shrink the size of <span class="tt">RTHandles</span>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

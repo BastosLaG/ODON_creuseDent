@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: project-configuration</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2project-configuration.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">project-configuration </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md9503"></a>
+autotoc_md9503</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9504"></a>
+uid: openxr-project-config</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9505"></a>
+Project configuration</h1>
+<p>Use the <b>XR Plug-in Management</b> settings to configure the OpenXR plug-in for your project.</p>
+<p>To get started, follow the instructions in <a class="el" href="#enable-openxr">Enable the OpenXR plug-in</a>. This also installs the OpenXR package, if needed. Once installed and enabled, you can configure your project settings as described in the <a class="el" href="#project-settings">OpenXR Project settings</a> section.</p>
+<p>You can review the <a class="el" href="#project-validation">Project validation</a> section of the <b>XR Plug-in Management</b> settings to discover if any setting values are incompatible with OpenXR.</p>
+<p><a class="anchor" id="project-settings"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9506"></a>
+OpenXR Project settings</h2>
+<p>Some OpenXR features require specific <a class="el" href="namespace_unity.html">Unity</a> Project settings to function properly. The settings include:</p>
+<ul>
+<li><b><a class="el" href="#enable-openxr">Enable the OpenXR XR plug-in</a></b>: must be enabled to use OpenXR features.</li>
+<li><b><a class="el" href="#openxr-features">OpenXR features</a></b>: select the specific OpenXR features that you want to use.</li>
+<li><b><a class="el" href="#render-mode">Render Mode</a></b>: choose the rendering strategy.</li>
+<li><b>Color Submission Mode</b>: choose how color information is passed to the renderer.</li>
+<li><b><a class="el" href="#depth-submission-mode">Depth Submission Mode</a></b>: choose how depth information is passed to the renderer.</li>
+<li><b><a class="el" href="#openxr-runtime">Play Mode OpenXR Runtime</a></b> (Editor): choose which OpenXR plug-in to use when running in the <a class="el" href="namespace_unity.html">Unity</a> Editor Play mode.</li>
+<li><b><a class="el" href="#interaction-profile">Interaction profiles</a></b>: choose which OpenXR interaction profile to use for a platform.</li>
+<li><b><a class="el" href="#color-space">Color space</a></b>: When using the Open GL graphics API, you must set the <b>Color Space</b> to <b>Linear</b>.</li>
+</ul>
+<p><a class="anchor" id="enable-openxr"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9507"></a>
+Enable the OpenXR plug-in</h3>
+<p>To use OpenXR, you must enable the plug-in in your <b>XR Plug-in Management</b> settings. (Installing the package from the Package Manager does not automatically enable the plug-in.)</p>
+<dl class="section note"><dt>Note</dt><dd>Enabling OpenXR also installs the package, if necessary. However, disabling OpenXR does not uninstall the package.</dd></dl>
+<p>The <b>XR Plug-in Management</b> settings page displays a tab for each platform build target. Build support for a platform must be installed using the <a class="el" href="namespace_unity.html">Unity</a> Hub before you can enable an OpenXR plug-in for that platform. (Not every platform has a supported OpenXR plugin.) See the <a href="https://docs.unity3d.com/hub/manual/AddModules.html">Add modules</a> section of the <a class="el" href="namespace_unity.html">Unity</a> Hub documentation for instructions.</p>
+<p>To enable OpenXR:</p>
+<ol type="1">
+<li>Open the <b>Project Settings</b> window (menu: <b>Edit &gt; Project Settings</b>).</li>
+<li>Select <b>XR Plug-in Management</b> to view the plug-in management settings.</li>
+<li>Select the tab for a platform build target to view the settings for that target.</li>
+<li><p class="startli">Enable the <b>OpenXR</b> option in the <b>Plug-in Providers</b> list.</p>
+<p class="startli"><img src="images/openxr-xrmanagement.png" alt="XR Plug-in Management" title="OpenXR in XR Management" class="inline"/><br  />
+<em>Enabling OpenXR</em></p>
+</li>
+</ol>
+<dl class="section remark"><dt>Remarques</dt><dd>If your project uses OpenXR on more than one platform build target, you must enable the OpenXR plugin for each platform.</dd></dl>
+<p><a class="anchor" id="openxr-features"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9508"></a>
+Enable OpenXR features</h3>
+<p>OpenXR plug-ins and other packages can provide optional feature implementations that you can use with OpenXR itself. For example, the <a class="el" href="namespace_unity.html">Unity</a> OpenXR plug-in provides a <b>Runtime Debugger</b> and a <b>Mock Runtime</b> as OpenXR features. After you <a class="el" href="#enable-openxr">enable the OpenXR plug-in</a>, you can enable any available features.</p>
+<p>Some features are organized as a <em>feature group</em>. You can enable a feature group to enable all the features in that group.</p>
+<p>To enable an OpenXR feature:</p>
+<ol type="1">
+<li>Open the <b>Project Settings</b> window (menu: <b>Edit &gt; Project Settings</b>).</li>
+<li>Click <b>XR Plug-in Management</b> to expand the plug-in section (if necessary).</li>
+<li>Select <b>OpenXR</b> in the list of XR plug-ins.</li>
+<li><p class="startli">Select the tab for a platform build target to view the features for that target.</p>
+<p class="startli"><img src="images/openxr-features.png" alt="OpenXR features and feature groups" title="OpenXR features and feature groups" class="inline"/><br  />
+<em>OpenXR features and feature groups</em></p>
+</li>
+<li>Select the features and feature groups to enable.</li>
+<li>Repeat for any other platform build targets your project supports.</li>
+</ol>
+<p>If a feature has its own configuration options, you can click its gear icon (<img src="images/gear.png" alt="" class="inline"/>) to open the feature's settings window. Some features provide an icon following their name that links to documentation.</p>
+<p>See <a href="index.md#openxr-features">OpenXR Features</a> for more information about features and groups.</p>
+<p><a class="anchor" id="render-mode"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9509"></a>
+Set the render mode</h3>
+<p>The <b>Render Mode</b> determines how OpenXR renders stereo graphics. Different plug-ins might support different modes, but the typical choices involve some form of the following:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Option</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Multi-pass</b>  </td><td class="markdownTableBodyNone">Each eye is rendered separately in independent <em>passes</em> from slightly different view points. Because the entire scene is rendered twice, multipass rendering is typically slower than other options. However, it is also the most similar to nonstereo rendering and does not require you to adapt your shader code.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Single Pass Instanced</b>  </td><td class="markdownTableBodyNone">Both eyes are rendered in one pass. Scene data is shared between the eyes using instanced draw calls, reducing the amount of data that must be transferred from the CPU to the GPU. Single-pass rendering is typically much faster than multi-pass, but requires compatible shaders.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Single Pass Instanced / Multi-view</b>  </td><td class="markdownTableBodyNone">Some GPU hardware supports instancing, while others support multi-view. The two render modes are otherwise very similar. If an OpenXR plug-in supports both types of hardware, you will see this option instead of the <b>Single Pass Instanced</b> option.  </td></tr>
+</table>
+<p>To set the render mode:</p>
+<ol type="1">
+<li>Open the <b>Project Settings</b> window (menu: <b>Edit &gt; Project Settings</b>).</li>
+<li>Click <b>XR Plug-in Management</b> to expand the plug-in section (if necessary).</li>
+<li>Select <b>OpenXR</b> in the list of XR plug-ins.</li>
+<li>Select the tab for a platform build target to view the features for that target.</li>
+<li>Choose the desired <b>Render Mode</b>.</li>
+</ol>
+<p>For more information see:</p>
+<ul>
+<li><a href="xref:UnityEngine.Rendering.SinglePassStereoMode">SinglePassStereoMode</a></li>
+<li>[Single Pass Instanced rendering](xref:SinglePassInstancing)</li>
+</ul>
+<p><a class="anchor" id="depth-submission-mode"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9510"></a>
+Set the color submission mode</h3>
+<p>Some OpenXR runtimes support rendering to additional swapchain formats, such as 10- or 16-bit high-dynamic range (HDR). Alternately, some performance may be gained on some devices by choosing lower fidelity as a trade-off. The available formats depend on both the <a class="el" href="namespace_unity.html">Unity</a> version you are using and the device and runtime that the Player is run on.</p>
+<p><em>Auto Color Submission Mode</em> currently selects the default platforms which is typically an 8bpc RGBA/BGRA format.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Option</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>8 bits per channel (LDR, default)</b>  </td><td class="markdownTableBodyNone">The default 8bpc RGBA/BGRA format. Will use sRGB if supported and either default or selected in player API options (e.g. in GLES).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>10 bits floating-point per color channel, 2 bit alpha (HDR)</b>  </td><td class="markdownTableBodyNone">Packed 10bpc unsigned normalized floating-point color with 2 bits of alpha depth.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>16 bits floating-point per channel (HDR)</b>  </td><td class="markdownTableBodyNone">16bpc signed half-width floating point color/alpha.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>5,6,5 bit packed (LDR, mobile)</b>  </td><td class="markdownTableBodyNone">Compact packed format typically only used on low performance mobile devices and low gamut displays.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>11,11,10 bit packed floating-point (HDR)</b>  </td><td class="markdownTableBodyNone">Packed color-only format using 11bpc unsigned float for red and green channels and 10bpc for blue.  </td></tr>
+</table>
+<p>The best choice depends on your use case, platform, and target devices. Larger HDR formats will generally encounter lower performance especially on lower-spec hardware, but generally provide better rendering integrity in scenes with high dynamic range or luminance gradients (where banding may be noticeable in LDR formats).</p>
+<p>Reasonable rules of thumb when choosing a setting:</p>
+<ul>
+<li>For PC XR devices, consider your target devices and choose a performant HDR setting if you need HDR. This often depends on the graphics API, GPU, and XR device together, so it may require extra performance testing.</li>
+<li>For mobile XR devices, HDR swapchains are generally unsupported. In most cases it's best to stick to <b>Auto Color Submission Mode</b> or <b>8 bits per channel (LDR, default)</b>.</li>
+</ul>
+<p>To set the color submission mode:</p>
+<ol type="1">
+<li>Open the <b>Project Settings</b> window (menu: <b>Edit &gt; Project Settings</b>).</li>
+<li>Click <b>XR Plug-in Management</b> to expand the plug-in section (if necessary).</li>
+<li>Select <b>OpenXR</b> in the list of XR plug-ins.</li>
+<li>Select the tab for a platform build target to view the features for that target.</li>
+<li>Uncheck <b>Auto Color Submission Mode</b>.</li>
+<li>Choose the desired <b>Color Submission Mode**s and sort according to priority (the order the list is in sets the priority; actual selection depends on graphics API and hardware support.) **8 bits per channel (LDR, default)</b> can be reordered but cannot be removed; it is a safe fallback.</li>
+</ol>
+<p><a class="anchor" id="depth-submission-mode"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9511"></a>
+Set the depth submission mode</h3>
+<p>Many OpenXR runtimes can use depth information to perform more accurate and stable <em>reprojection</em> of content during rendering. The available <b>Depth Submission Modes</b> include:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Option</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>None</b>  </td><td class="markdownTableBodyNone">No depth submission support. No depth based stability or re-projection support that the platform might provide is enabled.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Depth 16 bit</b>  </td><td class="markdownTableBodyNone">A shared depth buffer using 16 bits per pixel is used.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Depth 24 bit</b>  </td><td class="markdownTableBodyNone">A shared depth buffer using 24 bits per pixel is used.  </td></tr>
+</table>
+<p>The best choice can depend on the platform and specific target devices. Depth can significantly reduce judder and other XR rendering artifacts, especially with mixed reality (MR) content that combines rendered graphics with real-world video. The 16-bit option uses less bandwidth to transfer data between the CPU and GPU, which can improve rendering performance and battery life on mobile-type devices. However, the 24-bit option can minimize sorting issues and "z-fighting".</p>
+<p>A reasonable rule of thumb to use when choosing a setting is:</p>
+<ul>
+<li>use 24-bit depth on PC XR devices</li>
+<li>use 16-bit depth for battery powered XR devices &ndash; unless judder or sorting issues occur</li>
+<li>use <b>None</b> if your target devices don't use depth information or if you find that the benefits don't outweigh the extra rendering and battery life costs.</li>
+</ul>
+<p>To set the depth submission mode:</p>
+<ol type="1">
+<li>Open the <b>Project Settings</b> window (menu: <b>Edit &gt; Project Settings</b>).</li>
+<li>Click <b>XR Plug-in Management</b> to expand the plug-in section (if necessary).</li>
+<li>Select <b>OpenXR</b> in the list of XR plug-ins.</li>
+<li>Select the tab for a platform build target to view the features for that target.</li>
+<li>Choose the desired <b>Depth Submission Mode</b>.</li>
+</ol>
+<p>Setting the mode to anything other than <b>None</b> enables the OpenXR <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_composition_layer_depth">XR_KHR_composition_layer depth extension</a>. <a class="el" href="namespace_unity.html">Unity</a> ignores the <b>Depth Submission Mode</b> for OpenXR plug-ins that do not support this extension.</p>
+<p><a class="anchor" id="openxr-runtime"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9512"></a>
+Choose an OpenXR runtime to use in Play mode</h3>
+<p>By default, <a class="el" href="namespace_unity.html">Unity</a> uses the OpenXR runtime that is setup as the active runtime for your computer. You can specify a different OpenXR runtime with the <b>Play Mode OpenXR Runtime</b> setting. <a class="el" href="namespace_unity.html">Unity</a> uses the selected runtime when you run a Scene using the Editor Play mode. See <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/loader.html#runtime-discovery">Runtime Discovery</a> for more information about how the active OpenXR runtime is determined.</p>
+<dl class="section note"><dt>Note</dt><dd>The <b>Play Mode OpenXR Runtime</b> setting is not saved between Editor sessions. It reverts to the <b>System Default</b> option on exit.</dd></dl>
+<p>To set the OpenXR runtime to use in Play mode:</p>
+<ol type="1">
+<li>Open the <b>Project Settings</b> window (menu: <b>Edit &gt; Project Settings</b>).</li>
+<li>Click <b>XR Plug-in Management</b> to expand the plug-in section (if necessary).</li>
+<li>Select <b>OpenXR</b> in the list of XR plug-ins.</li>
+<li>Select the Mac, Windows, Linux settings (PC) tab.</li>
+<li>Choose the desired <b>Play Mode OpenXR Runtime</b>.</li>
+</ol>
+<p>The available options include the following choices:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Option</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>System Default</b>  </td><td class="markdownTableBodyNone">The active OpenXR runtime on your computer. Device makers who support OpenXR sometimes provide a utility to designate their OpenXR runtime as the active one.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Windows Mixed Reality</b>  </td><td class="markdownTableBodyNone">If available, sets the current OpenXR runtime to the <a class="el" href="namespace_microsoft.html">Microsoft</a> OpenXR runtime for Windows Mixed Reality.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>SteamVR</b>  </td><td class="markdownTableBodyNone">If available, sets the current OpenXR runtime to the SteamVR OpenXR runtime.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Oculus</b>  </td><td class="markdownTableBodyNone">If available, sets the current OpenXR runtime to the Oculus OpenXR runtime.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Other</b>  </td><td class="markdownTableBodyNone">Specify a runtime by selecting its <span class="tt">json</span> config file on your hard drive. Choose this option to use an OpenXR runtime that <a class="el" href="namespace_unity.html">Unity</a> might not directly support or detect automatically.  </td></tr>
+</table>
+<dl class="section remark"><dt>Remarques</dt><dd>When you hold your mouse over the drop-down control for the <b>Play Mode OpenXR Runtime</b> options, the tool-tip that pops up shows the path to selected OpenXR runtime.</dd></dl>
+<p><a class="anchor" id="interaction-profile"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9513"></a>
+Set the interaction profile</h3>
+<p>When using an OpenXR plug-in, you must specify which interaction profile to use. You can choose a profile in the <b>OpenXR</b> section of the <b>XR Plug-in Management</b> settings.</p>
+<p>To add an OpenXR interaction profile:</p>
+<ol type="1">
+<li>Open the <b>Project Settings</b> window (menu: <b>Edit &gt; Project Settings</b>).</li>
+<li>Click <b>XR Plug-in Management</b> to expand the plug-in section (if necessary).</li>
+<li>Select <b>OpenXR</b> in the list of XR plug-ins.</li>
+<li>In the <b>Interaction Profiles</b> section, click the <b>+</b> button to add a profile.</li>
+<li>Select the profile to add from the list.</li>
+</ol>
+<p><img src="images/openxr-choose-interaction-profile.png" alt="Choose Interaction Profile" class="inline"/><br  />
+<em>Choose an interaction profile</em></p>
+<p>See [Input in OpenXR](xref:openxr-input) for more information.</p>
+<p><a class="anchor" id="color-space"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9514"></a>
+Set the rendering color space</h3>
+<p>When you use the OpenGL graphics API, you must set the <a class="el" href="namespace_unity.html">Unity</a> Editor to use the linear [color space](xref:LinearRendering-LinearOrGammaWorkflow).</p>
+<p>To change the color space:</p>
+<ol type="1">
+<li>Open the <b>Project Settings</b> window (menu: <b>Edit &gt; Project Settings</b>).</li>
+<li>Select the <b>Player</b> settings category.</li>
+<li>Scroll to the <b>Other Settings</b> section. (Click <b>Other Settings</b> to open the section, if necessary.)</li>
+<li>Under the <b>Rendering</b> area, choose a <b>Color Space</b>.</li>
+</ol>
+<p><a class="anchor" id="project-validation"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9515"></a>
+Project validation</h2>
+<p>The OpenXR package defines a set of rules for the Project Validation system. These rules check for possible incompatibilities between OpenXR and the project configuration.</p>
+<p>Some of the rules serve as warnings for possible configuration problems; you are not required to fix these. Other rules flag configuration errors that would result in your app failing to build or not working once built. You must fix these errors.</p>
+<p>If you have the <a href="https://docs.unity3d.com/Packages/com.unity.xr.core-utils@latest">XR Core Utilities</a> 2.1.0 or later installed, you can access the Project Validation status in the <b>Project Settings</b> window under <b>XR Plug-in Management</b> (menu: <b>Edit &gt; Project Settings</b>). These results include the checks for all XR plug-ins that provide validation rules.</p>
+<p><img src="images/ProjectValidation/project-validation-core-utils.png" alt="project-validation" class="inline"/></p>
+<p>You can also open a separate <b>OpenXR Project Validation</b> window for OpenXR (menu: <b>Window &gt; XR &gt; OpenXR &gt; Project Validation</b>). This window only shows the validation results related to the OpenXR plug-in and features.</p>
+<p><img src="images/ProjectValidation/feature-validation.png" alt="feature-validation" class="inline"/></p>
+<p>Rules that pass validation are not shown unless you enable <b>Show all</b>.</p>
+<p>Some rules provide a <b>Fix</b> button that updates the configuration so that the rule passes validation. Other rules provide an <b>Edit</b> button that takes you to the relevant setting so that you can make the necessary adjustments yourself.</p>
+<p>You can enable <b>Ignore build errors</b> to bypass the pre-build validation check. However, any misconfigured features in your app might not work at runtime.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9516"></a>
+Validation issues reported in XR Plug-in Management</h3>
+<p><img src="images/ProjectValidation/loader-with-issues.png" alt="loader-with-issues" class="inline"/></p>
+<p>Clicking on either the validation warning or the error icon brings up the Validation window.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9517"></a>
+Validation issues reported in features pane</h3>
+<p><img src="images/ProjectValidation/features-with-issues.png" alt="features-with-issues" class="inline"/></p>
+<p>Clicking on either the validation warning or the error icon brings up the Validation window.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9518"></a>
+Validation issues reported in build</h3>
+<p><img src="images/ProjectValidation/build-with-issues.png" alt="build-with-issues" class="inline"/></p>
+<p>Double-clicking on build warnings or errors from validation brings up the Validation window. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

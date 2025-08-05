@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: ActionAssets</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_assets.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">ActionAssets </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md1904"></a>
+autotoc_md1904</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1905"></a>
+uid: input-system-action-assets</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1906"></a>
+Input Action Assets</h1>
+<ul>
+<li>Creating Input Action Assets</li>
+<li>Editing Input Action Assets</li>
+<li>Using Input Action Assets</li>
+<li>Type-safe C# API Generation</li>
+</ul>
+<p>An Input Action Asset is an Asset which contains a set of <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Input Actions</a> definitions and their associated <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_bindings.html">Bindings</a> and <a href="ActionBindings.md#control-schemes">Control Schemes</a>. These Assets have the <span class="tt">.inputactions</span> file extension and are stored in a plain JSON format.</p>
+<p>The input system creates an Action Asset when you set up the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_project_wide_actions.html">default project-wide actions</a>, but you can also create new Action Assets directly in the Project window.</p>
+<p>For most common scenarios, you do not need to use more than one Input Action Asset. It is usually simpler to configure your project-wide action definition in the Project Settings window.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1907"></a>
+Creating Input Action Assets</h2>
+<p>To create an Asset that contains <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Input Actions</a> in <a class="el" href="namespace_unity.html">Unity</a>, right-click in the <b>Project</b> window or go to <b>Assets &gt; Create &gt; Input Actions</b> from <a class="el" href="namespace_unity.html">Unity</a>'s main menu.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1908"></a>
+Editing Input Action Assets</h2>
+<p>To bring up the Action editor, double-click an <span class="tt">.inputactions</span> Asset in the Project Browser, or select the <b>Edit Asset</b> button in the Inspector for that Asset. You can have more than one editor window open at the same time, but not for the same Asset.</p>
+<p>The Actions Editor which opens is identical to the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Actions Editor in the Project Settings window</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1909"></a>
+Using Input Action Assets</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1910"></a>
+Type-safe C# API Generation</h2>
+<p>Input Action Assets allow you to <b>generate a C# class</b> from your action definitions, which allow you to refer to your actions in a type-safe manner from code. This means you can avoid looking up your actions by string.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1911"></a>
+Auto-generating script code for Actions</h3>
+<p>One of the most convenient ways to work with <span class="tt">.inputactions</span> Assets in scripts is to automatically generate a C# wrapper class for them. This removes the need to manually look up Actions and Action Maps using their names, and also provides an easier way to set up callbacks.</p>
+<p>To enable this option, tick the <b>Generate C# Class</b> checkbox in the importer properties in the Inspector of the <span class="tt">.inputactions</span> Asset, then select <b>Apply</b>.</p>
+<p><img src="Images/FireActionInputAssetInspector.png" alt="MyPlayerControls Importer Settings" class="inline"/></p>
+<p>You can optionally choose a path name, class name, and namespace for the generated script, or keep the default values.</p>
+<p>This generates a C# script that simplifies working with the Asset.</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// IGameplayActions is an interface generated from the &quot;gameplay&quot; action map</span></div>
+<div class="line"><span class="comment">// we added (note that if you called the action map differently, the name of</span></div>
+<div class="line"><span class="comment">// the interface will be different). This was triggered by the &quot;Generate Interfaces&quot;</span></div>
+<div class="line"><span class="comment">// checkbox.</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyPlayerScript : MonoBehaviour, IGameplayActions</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// MyPlayerControls is the C# class that Unity generated.</span></div>
+<div class="line">    <span class="comment">// It encapsulates the data from the .inputactions asset we created</span></div>
+<div class="line">    <span class="comment">// and automatically looks up all the maps and actions for us.</span></div>
+<div class="line">    MyPlayerControls controls;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnEnable()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (controls == <span class="keyword">null</span>)</div>
+<div class="line">        {</div>
+<div class="line">            controls = <span class="keyword">new</span> MyPlayerControls();</div>
+<div class="line">            <span class="comment">// Tell the &quot;gameplay&quot; action map that we want to get told about</span></div>
+<div class="line">            <span class="comment">// when actions get triggered.</span></div>
+<div class="line">            controls.gameplay.SetCallbacks(<span class="keyword">this</span>);</div>
+<div class="line">        }</div>
+<div class="line">        controls.gameplay.Enable();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnDisable()</div>
+<div class="line">    {</div>
+<div class="line">        controls.gameplay.Disable();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnUse(InputAction.CallbackContext context)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// &#39;Use&#39; code here.</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnMove(InputAction.CallbackContext context)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// &#39;Move&#39; code here.</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_engine_1_1_input_system_html"><div class="ttname"><a href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a></div><div class="ttdef"><b>Definition</b> AxisComposite.cs:14</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><p>&gt;<b>Note</b>: To regenerate the .cs file, right-click the .inputactions asset in the Project Browser and choose "Reimport".</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1912"></a>
+Using Action Assets with <span class="tt">PlayerInput</span></h3>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input.html">Player Input</a> component provides a convenient way to handle input for one or multiple players. You can assign your Action Asset to the Player Input component so that it can then automatically handle activating Action Maps and selecting Control Schemes for you.</p>
+<p><img src="Images/PlayerInput.png" alt="PlayerInput" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1913"></a>
+Modifying Input Action Assets at runtime</h3>
+<p>There are several ways to modify an Input Action Asset at runtime. Any modifications that you make during Play mode to an Input Action Asset do not persist in the Input Action Asset after you exit Play mode. This means you can test your application in a realistic manner in the Editor without having to worry about inadvertently modifying the asset. For examples on how to modify an Input Action Asset, see the documentation on <a href="Actions.md#creating-actions-in-code">Creating Actions in code</a> and <a href="ActionBindings.md#changing-bindings">Changing Bindings</a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1914"></a>
+The Default Actions Asset</h3>
+<p>An asset called <span class="tt">DefaultInputActions.inputactions</span> containing a default setup of Actions comes with the Input System Package. You can reference this asset directly in your projects like any other <a class="el" href="namespace_unity.html">Unity</a> asset. However, the asset is also available in code form through the <a href="../api/UnityEngine.InputSystem.DefaultInputActions.html"><span class="tt">DefaultInputActions</span></a> class.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Start()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Create an instance of the default actions.</span></div>
+<div class="line">    var actions = <span class="keyword">new</span> <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_default_input_actions.html">DefaultInputActions</a>();</div>
+<div class="line">    actions.Player.Look.performed += OnLook;</div>
+<div class="line">    actions.Player.Move.performed += OnMove;</div>
+<div class="line">    actions.Enable();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_default_input_actions_html"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_default_input_actions.html">UnityEngine.InputSystem.DefaultInputActions</a></div><div class="ttdoc">A default InputAction setup.</div><div class="ttdef"><b>Definition</b> DefaultInputActions.cs:40</div></div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p><b>Note:</b> This default actions asset is older than, and entirely separate from the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_project_wide_actions.html">default project-wide actions</a>. It is a legacy asset that remains included in the package for backward compatibility. </p>
+</blockquote>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

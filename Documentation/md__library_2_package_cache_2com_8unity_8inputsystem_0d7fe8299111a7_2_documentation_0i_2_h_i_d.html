@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: HID</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_h_i_d.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">HID </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2087"></a>
+autotoc_md2087</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2088"></a>
+uid: input-system-hid</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2089"></a>
+HID Support</h1>
+<p>Human Interface Device (HID) is a <a href="https://www.usb.org/hid">specification</a> to describe peripheral user input devices connected to computers via USB or Bluetooth. HID is commonly used to implement devices such as gamepads, joysticks, or racing wheels.</p>
+<p>The Input System directly supports HID (connected via both USB and Bluetooth) on Windows, MacOS, and the Universal Windows Platform (UWP). The system might support HID on other platforms, but not deliver input through HID-specific APIs. For example, on Linux, the system supports gamepad and joystick HIDs through SDL, but doesn't support other HIDs.</p>
+<p>Every HID comes with a device descriptor. To browse through the descriptor of an HID from the Input Debugger, click the <b>HID Descriptor</b> button in the device debugger window. To specify the type of the device, the HID descriptor reports entry numbers in the <a href="https://www.usb.org/document-library/hid-usage-tables-112">HID usage tables</a>, and a list of all controls on the device, along with their data ranges and usages.</p>
+<p><img src="Images/HIDDescriptor.png" alt="HID Descriptor" class="inline"/></p>
+<p>The Input System handles HIDs in one of two ways:</p>
+<ol type="1">
+<li>The system has a known layout for the specific HID.</li>
+<li>If the system does not have a known layout, it auto-generates one for the HID.</li>
+</ol>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2090"></a>
+Auto-generated layouts</h2>
+<p>By default, the Input System creates layouts and Device representations for any HID which reports its usage as <span class="tt">GenericDesktop/Joystick</span>, <span class="tt">GenericDesktop/Gamepad</span>, or <span class="tt">GenericDesktop/MultiAxisController</span> (see the <a href="https://www.usb.org/document-library/hid-usage-tables-112">HID usage table specifications</a> for more information). To change the list of supported usages, set <a href="../api/UnityEngine.InputSystem.HID.HIDSupport.html#UnityEngine_InputSystem_HID_HIDSupport_supportedHIDUsages"><span class="tt">HIDSupport.supportedHIDUsages</span></a>.</p>
+<p>When the Input System automatically creates a layout for an HID, it always reports these Devices as <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_joystick.html"><span class="tt">Joysticks</span></a>, represented by the <a href="../api/UnityEngine.InputSystem.Joystick.html"><span class="tt">Joystick</span> device class</a>. The first elements with a reported HID usage of <span class="tt">GenericDesktop/X</span> and <span class="tt">GenericDesktop/Y</span> together form the joystick's <a href="../api/UnityEngine.InputSystem.Joystick.html#UnityEngine_InputSystem_Joystick_stick"><span class="tt">stick</span></a> Control. The system then adds Controls for all further HID axis or button elements, using the Control names reported by the HID specification. The Input System assigns the first control with an HID usage of <span class="tt">Button/Button 1</span> to the joystick's <a href="../api/UnityEngine.InputSystem.Joystick.html#UnityEngine_InputSystem_Joystick_trigger"><span class="tt">trigger</span></a> Control.</p>
+<p>The auto-generated layouts represent a "best effort" on the part of the Input System. The way Human Interface Devices describe themselves in accordance with the HID standard is too ambiguous in practice, so generated layouts might lead to Controls that don't work as expected. For example, while the layout builder can identify hat switches and D-pads, it can often only make guesses as to which direction represents which. The same goes for individual buttons, which generally aren't assigned any meaning in HID.</p>
+<p>The best way to resolve the situation of HIDs not working as expected is to add a custom layout, which bypasses auto-generation altogether. See Creating a custom device layout for details.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2091"></a>
+HID output</h2>
+<p>HIDs can support output (for example, to toggle lights or force feedback motors on a gamepad). <a class="el" href="namespace_unity.html">Unity</a> controls output by sending HID Output Report commands to a Device. Output reports use Device-specific data formats. To use HID Output Reports, call <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_ExecuteCommand__1___0__"><span class="tt">InputDevice.ExecuteCommand</span></a> to send a command struct with the <a href="../api/UnityEngine.InputSystem.LowLevel.IInputDeviceCommandInfo.html#properties"><span class="tt">typeStatic</span></a> property set as <span class="tt">"HIDO"</span> to a Device. The command struct contains the Device-specific data sent out to the HID.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2092"></a>
+Creating a custom device layout</h2>
+<p>Often, when using the layouts auto-generated for HIDs, the result isn't ideal. Controls don't receive proper names specific to the Device, some Controls might not work as expected, and some Controls that use vendor-specific formats might not appear altogether.</p>
+<p>The best way to deal with this is to override the HID fallback and set up a custom Device layout specifically for your Device. This overrides the default auto-generation and gives you full control over how the Device is exposed.</p>
+<p>Below are three example workflows showing different ways to achieve this.</p>
+<ul>
+<li>Example 1 - Use an existing C# InputDevice</li>
+<li>Example 2 - Create your own InputDevice class</li>
+<li>Example 3 - A more complex example using the PS4 DualShock Controller</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2093"></a>
+Custom Device Workflow Example 1 - Use an existing C# InputDevice</h3>
+<p>If you want to use one of the existing C# <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a> classes in code to interface with your Device, you can build on an existing layout using JSON:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    &quot;name&quot; : &quot;MyDevice&quot;,</div>
+<div class="line">    &quot;extend&quot; : &quot;Gamepad&quot;, // Or some other thing</div>
+<div class="line">    &quot;controls&quot; : [</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot; : &quot;firstButton&quot;,</div>
+<div class="line">            &quot;layout&quot; : &quot;Button&quot;,</div>
+<div class="line">            &quot;offset&quot; : 0,</div>
+<div class="line">            &quot;bit&quot;: 0,</div>
+<div class="line">            &quot;format&quot; : &quot;BIT&quot;,</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot; : &quot;secondButton&quot;,</div>
+<div class="line">            &quot;layout&quot; : &quot;Button&quot;,</div>
+<div class="line">            &quot;offset&quot; : 0,</div>
+<div class="line">            &quot;bit&quot;: 1,</div>
+<div class="line">            &quot;format&quot; : &quot;BIT&quot;,</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot; : &quot;axis&quot;,</div>
+<div class="line">            &quot;layout&quot; : &quot;Axis&quot;,</div>
+<div class="line">            &quot;offset&quot; : 4,</div>
+<div class="line">            &quot;format&quot; : &quot;FLT&quot;,</div>
+<div class="line">            &quot;parameters&quot; : &quot;clamp=true,clampMin=0,clampMax=1&quot;</div>
+<div class="line">        }</div>
+<div class="line">    ]</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> You then register your layout with the system and then instantiate it:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   InputSystem.RegisterControlLayout(myDeviceJson);</div>
+<div class="line">   var device = InputSystem.AddDevice(<span class="stringliteral">&quot;MyDevice&quot;</span>);</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2094"></a>
+Custom Device Workflow Example 2 - Create your own InputDevice class</h3>
+<p>Alternatively, you can create your own <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a> class and state layouts in C#.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   <span class="keyword">public</span> <span class="keyword">struct </span>MyDeviceState : IInputStateTypeInfo</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// FourCC type codes are used to identify the memory layouts of state blocks.</span></div>
+<div class="line">       <span class="keyword">public</span> FourCC format =&gt; <span class="keyword">new</span> FourCC(<span class="charliteral">&#39;M&#39;</span>, <span class="charliteral">&#39;D&#39;</span>, <span class="charliteral">&#39;E&#39;</span>, <span class="charliteral">&#39;V&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">       [InputControl(name = <span class="stringliteral">&quot;firstButton&quot;</span>, layout = <span class="stringliteral">&quot;Button&quot;</span>, bit = 0)]</div>
+<div class="line">       [InputControl(name = <span class="stringliteral">&quot;secondButton&quot;</span>, layout = <span class="stringliteral">&quot;Button&quot;</span>, bit = 1)]</div>
+<div class="line">       <span class="keyword">public</span> <span class="keywordtype">int</span> buttons;</div>
+<div class="line">       [InputControl(layout = <span class="stringliteral">&quot;Analog&quot;</span>, parameters=<span class="stringliteral">&quot;clamp=true,clampMin=0,clampMax=1&quot;</span>)]</div>
+<div class="line">       <span class="keyword">public</span> <span class="keywordtype">float</span> axis;</div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   [InputState(typeof(MyDeviceState)]</div>
+<div class="line">   <span class="keyword">public</span> <span class="keyword">class</span> MyDevice : InputDevice</div>
+<div class="line">   {</div>
+<div class="line">       <span class="keyword">public</span> ButtonControl firstButton { get; <span class="keyword">private</span> set; }</div>
+<div class="line">       <span class="keyword">public</span> ButtonControl secondButton { get; <span class="keyword">private</span> set; }</div>
+<div class="line">       <span class="keyword">public</span> AxisControl axis { get; <span class="keyword">private</span> set; }</div>
+<div class="line"> </div>
+<div class="line">       <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> FinishSetup(InputControlSetup setup)</div>
+<div class="line">       {</div>
+<div class="line">            firstButton = setup.GetControl&lt;ButtonControl&gt;(<span class="keyword">this</span>, <span class="stringliteral">&quot;firstButton&quot;</span>);</div>
+<div class="line">            secondButton = setup.GetControl&lt;ButtonControl&gt;(<span class="keyword">this</span>, <span class="stringliteral">&quot;secondButton&quot;</span>);</div>
+<div class="line">            axis = setup.GetControl&lt;AxisControl&gt;(<span class="keyword">this</span>, <span class="stringliteral">&quot;axis&quot;</span>);</div>
+<div class="line">            base.FinishSetup(setup);</div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+</div><!-- fragment --><p>To create an instance of your Device, register it as a layout and then instantiate it:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   InputSystem.RegisterControlLayout(<span class="stringliteral">&quot;MyDevice&quot;</span>, typeof(MyDevice));</div>
+<div class="line">   InputSystem.AddDevice(<span class="stringliteral">&quot;MyDevice&quot;</span>);</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2095"></a>
+Custom Device Workflow Example 3 - PS4 DualShock Controller</h3>
+<p>This example workflow uses the same technique as the previous example, but provides more detail by using the PS4 DualShock controller as a more complex device to set up.</p>
+<p>The following example assumes that the Input System doesn't already have a custom layout for the PS4 DualShock controller, and that you want to add such a layout.</p>
+<p>In this example, you want to expose the controller as a <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_gamepad.html"><span class="tt">Gamepad</span></a> and you roughly know the HID data format used by the Device.</p>
+<p>&gt;<b>Tip</b>: If you don't know the format of a given HID you want to support, you can open the Input Debugger with the Device plugged in and pop up both the debugger view for the Device and the window showing the HID descriptor. Then, you can go through the Controls one by one, see what happens in the debug view, and correlate that to the Controls in the HID descriptor. You can also double-click individual events and compare the raw data coming in from the Device. If you select two events in the event trace, you can then right-click them and choose <b>Compare</b> to open a window that shows only the differences between the two events.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2096"></a>
+Step 1: The state struct</h4>
+<p>The first step is to describe in detail what format that input data for the Device comes in, as well as the <a href="../api/UnityEngine.InputSystem.InputControl.html"><span class="tt">InputControl</span></a> instances that should read out individual pieces of information from that data.</p>
+<p>The HID input reports from the PS4 controller look approximately like this:</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>PS4InputReport</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">byte</span> reportId;             <span class="comment">// #0</span></div>
+<div class="line">    <span class="keywordtype">byte</span> leftStickX;           <span class="comment">// #1</span></div>
+<div class="line">    <span class="keywordtype">byte</span> leftStickY;           <span class="comment">// #2</span></div>
+<div class="line">    <span class="keywordtype">byte</span> rightStickX;          <span class="comment">// #3</span></div>
+<div class="line">    <span class="keywordtype">byte</span> rightStickY;          <span class="comment">// #4</span></div>
+<div class="line">    <span class="keywordtype">byte</span> dpad : 4;             <span class="comment">// #5 bit #0 (0=up, 2=right, 4=down, 6=left)</span></div>
+<div class="line">    <span class="keywordtype">byte</span> squareButton : 1;     <span class="comment">// #5 bit #4</span></div>
+<div class="line">    <span class="keywordtype">byte</span> crossButton : 1;      <span class="comment">// #5 bit #5</span></div>
+<div class="line">    <span class="keywordtype">byte</span> circleButton : 1;     <span class="comment">// #5 bit #6</span></div>
+<div class="line">    <span class="keywordtype">byte</span> triangleButton : 1;   <span class="comment">// #5 bit #7</span></div>
+<div class="line">    <span class="keywordtype">byte</span> leftShoulder : 1;     <span class="comment">// #6 bit #0</span></div>
+<div class="line">    <span class="keywordtype">byte</span> rightShoulder : 1;    <span class="comment">// #6 bit #1</span></div>
+<div class="line">    <span class="keywordtype">byte</span> leftTriggerButton : 2;<span class="comment">// #6 bit #2</span></div>
+<div class="line">    <span class="keywordtype">byte</span> rightTriggerButton : 2;<span class="comment">// #6 bit #3</span></div>
+<div class="line">    <span class="keywordtype">byte</span> shareButton : 1;      <span class="comment">// #6 bit #4</span></div>
+<div class="line">    <span class="keywordtype">byte</span> optionsButton : 1;    <span class="comment">// #6 bit #5</span></div>
+<div class="line">    <span class="keywordtype">byte</span> leftStickPress : 1;   <span class="comment">// #6 bit #6</span></div>
+<div class="line">    <span class="keywordtype">byte</span> rightStickPress : 1;  <span class="comment">// #6 bit #7</span></div>
+<div class="line">    <span class="keywordtype">byte</span> psButton : 1;         <span class="comment">// #7 bit #0</span></div>
+<div class="line">    <span class="keywordtype">byte</span> touchpadPress : 1;    <span class="comment">// #7 bit #1</span></div>
+<div class="line">    <span class="keywordtype">byte</span> padding : 6;</div>
+<div class="line">    <span class="keywordtype">byte</span> leftTrigger;          <span class="comment">// #8</span></div>
+<div class="line">    <span class="keywordtype">byte</span> rightTrigger;         <span class="comment">// #9</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You can translate this into a C# struct:</p>
+<div class="fragment"><div class="line"><span class="comment">// We receive data as raw HID input reports. This struct</span></div>
+<div class="line"><span class="comment">// describes the raw binary format of such a report.</span></div>
+<div class="line">[StructLayout(LayoutKind.Explicit, Size = 32)]</div>
+<div class="line"><span class="keyword">struct </span>DualShock4HIDInputReport : IInputStateTypeInfo</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Because all HID input reports are tagged with the &#39;HID &#39; FourCC,</span></div>
+<div class="line">    <span class="comment">// this is the format we need to use for this state struct.</span></div>
+<div class="line">    <span class="keyword">public</span> FourCC format =&gt; <span class="keyword">new</span> FourCC(<span class="charliteral">&#39;H&#39;</span>, <span class="charliteral">&#39;I&#39;</span>, <span class="charliteral">&#39;D&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// HID input reports can start with an 8-bit report ID. It depends on the device</span></div>
+<div class="line">    <span class="comment">// whether this is present or not. On the PS4 DualShock controller, it is</span></div>
+<div class="line">    <span class="comment">// present. We don&#39;t really need to add the field, but let&#39;s do so for the sake of</span></div>
+<div class="line">    <span class="comment">// completeness. This can also help with debugging.</span></div>
+<div class="line">    [FieldOffset(0)] <span class="keyword">public</span> <span class="keywordtype">byte</span> reportId;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The InputControl annotations here probably look a little scary, but what we do</span></div>
+<div class="line">    <span class="comment">// here is relatively straightforward. The fields we add we annotate with</span></div>
+<div class="line">    <span class="comment">// [FieldOffset] to force them to the right location, and then we add InputControl</span></div>
+<div class="line">    <span class="comment">// to attach controls to the fields. Each InputControl attribute can only do one of</span></div>
+<div class="line">    <span class="comment">// two things: either it adds a new control or it modifies an existing control.</span></div>
+<div class="line">    <span class="comment">// Given that our layout is based on Gamepad, almost all the controls here are</span></div>
+<div class="line">    <span class="comment">// inherited from Gamepad, and we just modify settings on them.</span></div>
+<div class="line"> </div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;leftStick&quot;</span>, layout = <span class="stringliteral">&quot;Stick&quot;</span>, format = <span class="stringliteral">&quot;VC2B&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;leftStick/x&quot;</span>, offset = 0, format = <span class="stringliteral">&quot;BYTE&quot;</span>,</div>
+<div class="line">        parameters = <span class="stringliteral">&quot;normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;leftStick/left&quot;</span>, offset = 0, format = <span class="stringliteral">&quot;BYTE&quot;</span>,</div>
+<div class="line">        parameters = <span class="stringliteral">&quot;normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5,clamp,clampMin=0,clampMax=0.5,invert&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;leftStick/right&quot;</span>, offset = 0, format = <span class="stringliteral">&quot;BYTE&quot;</span>,</div>
+<div class="line">        parameters = <span class="stringliteral">&quot;normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5,clamp,clampMin=0.5,clampMax=1&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;leftStick/y&quot;</span>, offset = 1, format = <span class="stringliteral">&quot;BYTE&quot;</span>,</div>
+<div class="line">        parameters = <span class="stringliteral">&quot;invert,normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;leftStick/up&quot;</span>, offset = 1, format = <span class="stringliteral">&quot;BYTE&quot;</span>,</div>
+<div class="line">        parameters = <span class="stringliteral">&quot;normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5,clamp,clampMin=0,clampMax=0.5,invert&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;leftStick/down&quot;</span>, offset = 1, format = <span class="stringliteral">&quot;BYTE&quot;</span>,</div>
+<div class="line">        parameters = <span class="stringliteral">&quot;normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5,clamp,clampMin=0.5,clampMax=1,invert=false&quot;</span>)]</div>
+<div class="line">    [FieldOffset(1)] <span class="keyword">public</span> <span class="keywordtype">byte</span> leftStickX;</div>
+<div class="line">    [FieldOffset(2)] <span class="keyword">public</span> <span class="keywordtype">byte</span> leftStickY;</div>
+<div class="line"> </div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;rightStick&quot;</span>, layout = <span class="stringliteral">&quot;Stick&quot;</span>, format = <span class="stringliteral">&quot;VC2B&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;rightStick/x&quot;</span>, offset = 0, format = <span class="stringliteral">&quot;BYTE&quot;</span>, parameters = <span class="stringliteral">&quot;normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;rightStick/left&quot;</span>, offset = 0, format = <span class="stringliteral">&quot;BYTE&quot;</span>, parameters = <span class="stringliteral">&quot;normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5,clamp,clampMin=0,clampMax=0.5,invert&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;rightStick/right&quot;</span>, offset = 0, format = <span class="stringliteral">&quot;BYTE&quot;</span>, parameters = <span class="stringliteral">&quot;normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5,clamp,clampMin=0.5,clampMax=1&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;rightStick/y&quot;</span>, offset = 1, format = <span class="stringliteral">&quot;BYTE&quot;</span>, parameters = <span class="stringliteral">&quot;invert,normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;rightStick/up&quot;</span>, offset = 1, format = <span class="stringliteral">&quot;BYTE&quot;</span>, parameters = <span class="stringliteral">&quot;normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5,clamp,clampMin=0,clampMax=0.5,invert&quot;</span>)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;rightStick/down&quot;</span>, offset = 1, format = <span class="stringliteral">&quot;BYTE&quot;</span>, parameters = <span class="stringliteral">&quot;normalize,normalizeMin=0,normalizeMax=1,normalizeZero=0.5,clamp,clampMin=0.5,clampMax=1,invert=false&quot;</span>)]</div>
+<div class="line">    [FieldOffset(3)] <span class="keyword">public</span> <span class="keywordtype">byte</span> rightStickX;</div>
+<div class="line">    [FieldOffset(4)] <span class="keyword">public</span> <span class="keywordtype">byte</span> rightStickY;</div>
+<div class="line"> </div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;dpad&quot;</span>, format = <span class="stringliteral">&quot;BIT&quot;</span>, layout = <span class="stringliteral">&quot;Dpad&quot;</span>, sizeInBits = 4, defaultState = 8)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;dpad/up&quot;</span>, format = <span class="stringliteral">&quot;BIT&quot;</span>, layout = <span class="stringliteral">&quot;DiscreteButton&quot;</span>, parameters = <span class="stringliteral">&quot;minValue=7,maxValue=1,nullValue=8,wrapAtValue=7&quot;</span>, bit = 0, sizeInBits = 4)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;dpad/right&quot;</span>, format = <span class="stringliteral">&quot;BIT&quot;</span>, layout = <span class="stringliteral">&quot;DiscreteButton&quot;</span>, parameters = <span class="stringliteral">&quot;minValue=1,maxValue=3&quot;</span>, bit = 0, sizeInBits = 4)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;dpad/down&quot;</span>, format = <span class="stringliteral">&quot;BIT&quot;</span>, layout = <span class="stringliteral">&quot;DiscreteButton&quot;</span>, parameters = <span class="stringliteral">&quot;minValue=3,maxValue=5&quot;</span>, bit = 0, sizeInBits = 4)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;dpad/left&quot;</span>, format = <span class="stringliteral">&quot;BIT&quot;</span>, layout = <span class="stringliteral">&quot;DiscreteButton&quot;</span>, parameters = <span class="stringliteral">&quot;minValue=5, maxValue=7&quot;</span>, bit = 0, sizeInBits = 4)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;buttonWest&quot;</span>, displayName = <span class="stringliteral">&quot;Square&quot;</span>, bit = 4)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;buttonSouth&quot;</span>, displayName = <span class="stringliteral">&quot;Cross&quot;</span>, bit = 5)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;buttonEast&quot;</span>, displayName = <span class="stringliteral">&quot;Circle&quot;</span>, bit = 6)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;buttonNorth&quot;</span>, displayName = <span class="stringliteral">&quot;Triangle&quot;</span>, bit = 7)]</div>
+<div class="line">    [FieldOffset(5)] <span class="keyword">public</span> <span class="keywordtype">byte</span> buttons1;</div>
+<div class="line"> </div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;leftShoulder&quot;</span>, bit = 0)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;rightShoulder&quot;</span>, bit = 1)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;leftTriggerButton&quot;</span>, layout = <span class="stringliteral">&quot;Button&quot;</span>, bit = 2)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;rightTriggerButton&quot;</span>, layout = <span class="stringliteral">&quot;Button&quot;</span>, bit = 3)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;select&quot;</span>, displayName = <span class="stringliteral">&quot;Share&quot;</span>, bit = 4)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;start&quot;</span>, displayName = <span class="stringliteral">&quot;Options&quot;</span>, bit = 5)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;leftStickPress&quot;</span>, bit = 6)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;rightStickPress&quot;</span>, bit = 7)]</div>
+<div class="line">    [FieldOffset(6)] <span class="keyword">public</span> <span class="keywordtype">byte</span> buttons2;</div>
+<div class="line"> </div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;systemButton&quot;</span>, layout = <span class="stringliteral">&quot;Button&quot;</span>, displayName = <span class="stringliteral">&quot;System&quot;</span>, bit = 0)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;touchpadButton&quot;</span>, layout = <span class="stringliteral">&quot;Button&quot;</span>, displayName = <span class="stringliteral">&quot;Touchpad Press&quot;</span>, bit = 1)]</div>
+<div class="line">    [FieldOffset(7)] <span class="keyword">public</span> <span class="keywordtype">byte</span> buttons3;</div>
+<div class="line"> </div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;leftTrigger&quot;</span>, format = <span class="stringliteral">&quot;BYTE&quot;</span>)]</div>
+<div class="line">    [FieldOffset(8)] <span class="keyword">public</span> <span class="keywordtype">byte</span> leftTrigger;</div>
+<div class="line"> </div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;rightTrigger&quot;</span>, format = <span class="stringliteral">&quot;BYTE&quot;</span>)]</div>
+<div class="line">    [FieldOffset(9)] <span class="keyword">public</span> <span class="keywordtype">byte</span> rightTrigger;</div>
+<div class="line"> </div>
+<div class="line">    [FieldOffset(30)] <span class="keyword">public</span> <span class="keywordtype">byte</span> batteryLevel;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4 class="doxsection"><a class="anchor" id="autotoc_md2097"></a>
+Step 2: The InputDevice</h4>
+<p>Next, you need an <span class="tt">InputDevice</span> to represent your device. Because you're dealing with a gamepad, you must create a new subclass of <span class="tt">Gamepad</span>.</p>
+<p>For simplicity, this example ignores the fact that there is a <span class="tt">DualShockGamepad</span> class that the actual <span class="tt">DualShockGamepadHID</span> is based on.</p>
+<div class="fragment"><div class="line"><span class="comment">// Using InputControlLayoutAttribute, we tell the system about the state</span></div>
+<div class="line"><span class="comment">// struct we created, which includes where to find all the InputControl</span></div>
+<div class="line"><span class="comment">// attributes that we placed on there. This is how the Input System knows</span></div>
+<div class="line"><span class="comment">// what controls to create and how to configure them.</span></div>
+<div class="line">[InputControlLayout(stateType = typeof(DualShock4HIDInputReport)]</div>
+<div class="line"><span class="keyword">public</span> DualShock4GamepadHID : Gamepad</div>
+<div class="line">{</div>
+<div class="line">}</div>
+</div><!-- fragment --><h4 class="doxsection"><a class="anchor" id="autotoc_md2098"></a>
+Step 3: Registering the Device</h4>
+<p>The last step is to register your new type of Device and set up the Input System so that when a PS4 controller is connected, the Input System generates your custom Device instead of using the default HID fallback.</p>
+<p>This only requires a call to <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_RegisterLayout__1_System_String_System_Nullable_UnityEngine_InputSystem_Layouts_InputDeviceMatcher__"><span class="tt">InputSystem.RegisterLayout&lt;T&gt;</span></a>, giving it an <a href="../api/UnityEngine.InputSystem.Layouts.InputDeviceMatcher.html"><span class="tt">InputDeviceMatcher</span></a> that matches the description for a PS4 DualShock HID. In theory, you can place this call anywhere, but the best point for registering layouts is generally during startup. Doing so ensures that your custom layout is visible to the <a class="el" href="namespace_unity.html">Unity</a> Editor and therefore exposed, for example, in the Input Control picker.</p>
+<p>You can insert your registration into the startup sequence by modifying the code for your <span class="tt">DualShock4GamepadHID</span> Device as follows:</p>
+<div class="fragment"><div class="line">[InputControlLayout(stateType = typeof(DualShock4HIDInputReport)]</div>
+<div class="line">#<span class="keywordflow">if</span> UNITY_EDITOR</div>
+<div class="line">[InitializeOnLoad] <span class="comment">// Make sure static constructor is called during startup.</span></div>
+<div class="line">#endif</div>
+<div class="line"><span class="keyword">public</span> DualShock4GamepadHID : Gamepad</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">static</span> DualShock4GamepadHID()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// This is one way to match the Device.</span></div>
+<div class="line">        InputSystem.RegisterLayout&lt;DualShock4GamepadHID&gt;(</div>
+<div class="line">            <span class="keyword">new</span> InputDeviceMatcher()</div>
+<div class="line">                .WithInterface(<span class="stringliteral">&quot;HID&quot;</span>)</div>
+<div class="line">                .WithManufacturer(<span class="stringliteral">&quot;Sony.+Entertainment&quot;</span>)</div>
+<div class="line">                .WithProduct(<span class="stringliteral">&quot;Wireless Controller&quot;</span>));</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Alternatively, you can also match by PID and VID, which is generally</span></div>
+<div class="line">        <span class="comment">// more reliable for HIDs.</span></div>
+<div class="line">        InputSystem.RegisterLayout&lt;DualShock4GamepadHID&gt;(</div>
+<div class="line">            matches: <span class="keyword">new</span> InputDeviceMatcher()</div>
+<div class="line">                .WithInterface(<span class="stringliteral">&quot;HID&quot;</span>)</div>
+<div class="line">                .WithCapability(<span class="stringliteral">&quot;vendorId&quot;</span>, 0x54C) <span class="comment">// Sony Entertainment.</span></div>
+<div class="line">                .WithCapability(<span class="stringliteral">&quot;productId&quot;</span>, 0x9CC)); <span class="comment">// Wireless controller.</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// In the Player, to trigger the calling of the static constructor,</span></div>
+<div class="line">    <span class="comment">// create an empty method annotated with RuntimeInitializeOnLoadMethod.</span></div>
+<div class="line">    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]</div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> Init() {}</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Your custom layout now picks up any Device that matches the manufacturer and product name strings, or the vendor and product IDs in its HID descriptor. The Input System now represents a <span class="tt">DualShock4GamepadHID</span> Device instance.</p>
+<p>For more information, you can also read the <a href="Devices.md#matching">Device matching</a> documentation. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

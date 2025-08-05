@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: CHANGELOG</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8core-utils_0d5b282bc7378d_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">CHANGELOG </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md7488"></a>
+autotoc_md7488</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7489"></a>
+uid: xr-core-utils-changelog</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7490"></a>
+Changelog</h1>
+<p>All notable changes to this package will be documented in this file.</p>
+<p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a> and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7491"></a>
+[2.5.2] - 2025-03-15</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7492"></a>
+Fixed</h3>
+<ul>
+<li>Fixed the Project Validation window so that it draws the Web and Facebook Instant Games icons in the correct aspect ratio.</li>
+<li>Fixed an error in the <span class="tt">PackageVersionUtility.UpdatePackageVersions</span> method where failed package manager requests were not handled, leading to a null reference exception.</li>
+<li>Fixed error "InvalidOperationException: Cannot modify VisualElement hierarchy during layout calculation" in the <span class="tt">ProjectValidationSettingsProvider</span> where the drawer would clear during an asset refresh and cause a <span class="tt">NullReferenceException</span> when refreshing the Project Validation issue list. (<a href="https://issuetracker.unity3d.com/product/unity/issues/guid/XRCB-19">XRCB-19</a>)</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7493"></a>
+[2.5.1] - 2024-12-20</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7494"></a>
+Fixed</h3>
+<ul>
+<li>Fixed the <span class="tt">==</span> and <span class="tt">!=</span> operators for <span class="tt">ReadOnlyList&lt;T&gt;</span> so that they can't cause a stack overflow.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7495"></a>
+[2.5.0] - 2024-12-16</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7496"></a>
+Added</h3>
+<ul>
+<li>Added support for <a href="https://docs.unity3d.com/ScriptReference/XR.TrackingOriginModeFlags.Unbounded.html">TrackingOriginModeFlags.Unbounded</a> in XROrigin.</li>
+<li>Added support for the <span class="tt">IEquatable&lt;ReadOnlyList&lt;T&gt;&gt;</span> interface to <a href="xref:Unity.XR.CoreUtils.Collections.ReadOnlyList`1">ReadOnlyList</a>.</li>
+<li>Added support for the <span class="tt">IEquatable&lt;ReadOnlyListSpan&lt;T&gt;&gt;</span> interface to <a href="xref:Unity.XR.CoreUtils.Collections.ReadOnlyListSpan`1">ReadOnlyListSpan</a>.</li>
+<li>Added overrides for the <span class="tt">==</span> and <span class="tt">!=</span> operators for <span class="tt">ReadOnlyList&lt;T&gt;</span> and <span class="tt">ReadOnlyListSpan&lt;T&gt;</span> to use the new <span class="tt">IEquatable</span> implementations.</li>
+<li>Added overrides for <span class="tt">object.ToString</span> to <span class="tt">ReadOnlyList&lt;T&gt;</span> and <span class="tt">ReadOnlyListSpan&lt;T&gt;</span> for a better debugging experience.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7497"></a>
+Changed</h3>
+<ul>
+<li>Changed <a href="xref:Unity.XR.CoreUtils.Collections.ReadOnlyListSpan`1">ReadOnlyListSpan&lt;T&gt;</a> so that it can provide a read-only view of any implementation of <span class="tt">IReadOnlyList&lt;T&gt;</span>, instead of only working for <span class="tt">List&lt;T&gt;</span>.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7498"></a>
+Deprecated</h3>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7499"></a>
+Removed</h3>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7500"></a>
+Fixed</h3>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7501"></a>
+[2.4.0] - 2024-11-25</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7502"></a>
+Added</h3>
+<ul>
+<li>Added <a href="xref:Unity.XR.CoreUtils.Collections.ReadOnlyList`1.Empty">ReadOnlyList&lt;T&gt;.Empty()</a>, a static shortcut method that allows you to re-use the same empty collection throughout your app.</li>
+<li>Added new collection <a href="xref:Unity.XR.CoreUtils.Collections.ReadOnlyListSpan">ReadOnlyListSpan&lt;T&gt;</a> that creates a read-only wrapper around a <span class="tt">List</span> and allows for slicing similar to <a href="https://learn.microsoft.com/en-us/dotnet/api/system.readonlyspan-1.slice?view=net-8.0">ReadOnlySpan.Slice</a>.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7503"></a>
+Changed</h3>
+<ul>
+<li>Changed the minimum version of supported <a class="el" href="namespace_unity.html">Unity</a> editor to 2021.3 LTS.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7504"></a>
+Removed</h3>
+<ul>
+<li>Removed <span class="tt">Type.GetFieldsWithAttribute</span> and <span class="tt">ReflectionUtils.GetFieldsWithAttribute</span> APIs which were only available in <a class="el" href="namespace_unity.html">Unity</a> 2019.4.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7505"></a>
+Fixed</h3>
+<ul>
+<li>Improved performance of <a href="xref:Unity.XR.CoreUtils.Collections.HashSetList`1">HashSetList&lt;T&gt;</a> to optimize getting <span class="tt">Count</span> and optimize <span class="tt">Remove</span> when empty.</li>
+<li>Improved performance of <a href="xref:Unity.XR.CoreUtils.Bindings.Variables.BindableVariableBase`1">BindableVariableBase&lt;T&gt;</a> to optimize value changes by skipping the equality check when there are no subscribers. The <span class="tt">SetValueWithoutNotify</span> method will now always return <span class="tt">false</span> when there are no subscribers.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7506"></a>
+[2.3.0] - 2024-01-17</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7507"></a>
+Added</h3>
+<ul>
+<li>Added a new collection <a href="xref:Unity.XR.CoreUtils.Collections.ReadOnlyList`1">ReadOnlyList&lt;T&gt;</a> as a more performant alternative to <span class="tt">ReadOnlyCollection</span>. <span class="tt">ReadOnlyList</span> improves upon <span class="tt">ReadOnlyCollection</span> by removing the heap allocations associated with <span class="tt">GetEnumerator()</span>.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7508"></a>
+Fixed</h3>
+<ul>
+<li>Fixed the XmlDocs issues for API documentation.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7509"></a>
+[2.3.0-pre.3] - 2023-12-11</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7510"></a>
+Fixed</h3>
+<ul>
+<li>Fix conditional compilation of analytics API on 2023.2 and newer editor versions.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7511"></a>
+[2.3.0-pre.2] - 2023-11-27</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7512"></a>
+Added</h3>
+<ul>
+<li>Added the [Building Blocks system](xref:xr-core-utils-building-blocks), an overlay window in the scene view with quick access to commonly used items in the project.</li>
+<li>Added the [Capability Profile system](xref:xr-core-utils-capability-profile) that allows the creation of assets with key-value pairs to abstract the capabilities of a platform, device, OS, or a combination of them.</li>
+<li>Added <span class="tt">EditorAnalyticsEvent</span> class that can be extended to create editor analytics events. This class supports the new analytics APIs introduced in editor version 2023.2 as well as the analytics APIs from older editor versions.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7513"></a>
+Changed</h3>
+<ul>
+<li>Changed Project Validation to query <span class="tt">IsRuleEnabled</span> and <span class="tt">CheckPredicate</span> before invoking <span class="tt">FixIt</span> action of a <span class="tt">BuildValidationRule</span> via <b>Fix All</b> button. This prevents <span class="tt">FixIt</span> action being called unexpectedly via <b>Fix All</b> button while the changes by another rule are in progress.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7514"></a>
+Fixed</h3>
+<ul>
+<li>Fixed the sort order of enabled issues in the Project Validation window to keep them in the original order added in code.</li>
+<li>Fixed to prevent the progress bar from getting stuck when an exception is thrown during the <span class="tt">BuildValidationRule.FixIt</span> method.</li>
+<li>Fixed a bug in <span class="tt">ScriptableSettingsBase</span> that would attempt to create a new instance of the settings asset even when the asset already existed.</li>
+<li>Fixed an issue in the Project Validation window where opening a <a class="el" href="namespace_unity.html">Unity</a> project without window focus could throw an exception.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7515"></a>
+[2.3.0-pre.1] - 2023-08-14</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7516"></a>
+Added</h3>
+<ul>
+<li>Added <span class="tt">BuildValidationRule.HighlighterFocus</span> property in project validation rules to allow for the searching and highlighting of text in the editor.</li>
+<li>Added ability to the Datum property drawer to allow the Use Asset/Use Value property to be reverted separately from the parent property when right-clicking the More menu (<span class="tt">⋮</span>) button.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7517"></a>
+Fixed</h3>
+<ul>
+<li>Fixed Datum property drawer so the Use Asset/Use Value dropdown appears directly under the button instead of under the multiline value.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7518"></a>
+[2.2.3] - 2023-08-01</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7519"></a>
+Fixed</h3>
+<ul>
+<li>Fixed <a href="xref:Unity.XR.CoreUtils.TransformExtensions"><span class="tt">TransformExtensions</span></a> methods to use <span class="tt">Transform.GetPositionAndRotation</span>/<span class="tt">Transform.GetLocalPositionAndRotation</span> and <span class="tt">Transform.SetPositionAndRotation</span>/<span class="tt">Transform.SetLocalPositionAndRotation</span> when available to improve performance.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7520"></a>
+[2.2.2] - 2023-07-12</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7521"></a>
+Fixed</h3>
+<ul>
+<li>Fixed bug with Datum property editor incorrectly reporting the height of datum properties in the inspector.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7522"></a>
+[2.2.1] - 2023-05-02</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7523"></a>
+Changed</h3>
+<ul>
+<li>Renamed the following display names of the properties in <span class="tt">XROrigin</span> inspector:<ul>
+<li><b>Camera GameObject</b> to <b>Camera</b> for <span class="tt">Camera</span> property</li>
+<li><b>Camera Floor Offset Object</b> to <b>Camera Floor Offset GameObject</b> for <span class="tt">CameraFloorOffsetObject</span> property</li>
+</ul>
+</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7524"></a>
+[2.2.0] - 2023-02-10</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7525"></a>
+Changed</h3>
+<ul>
+<li>Promoted package from prerelease to verified.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7526"></a>
+[2.2.0-pre.2] - 2022-11-10</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7527"></a>
+Added</h3>
+<ul>
+<li>Added <span class="tt">SetValueWithoutNotify</span> method to <span class="tt">BindableVariableBase&lt;T&gt;</span> to let users set the value without broadcasting to subscribers.</li>
+<li>Added <span class="tt">BuildValidationRule.OnClick</span> lambda function that is invoked when the rule is clicked in the validator. Also added the <span class="tt">BuildValidator.SelectObject</span> method to perform the object select logic for rules.</li>
+<li>Added <span class="tt">BuildValidator.FixIssues</span> method to process and fix a batch of validation rules.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7528"></a>
+Changed</h3>
+<ul>
+<li>Renamed <span class="tt">UnBindAction</span> to <span class="tt">UnbindAction</span> in <a href="xref:Unity.XR.CoreUtils.Bindings.EventBinding">EventBinding</a>.</li>
+<li>The <span class="tt">Fix All</span> button, in the <span class="tt">Project Validation</span>, now processes and fixes all issues in a single frame. Set <span class="tt">BuildValidationRule.FixItAutomatic</span> to <span class="tt">false</span> if the issue cannot be processed with others in the same frame (Ex. if the fix requires a <a class="el" href="namespace_unity.html">Unity</a> Editor restart).</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7529"></a>
+Removed</h3>
+<ul>
+<li>Removed <span class="tt">SetValue</span> method from <span class="tt">BindableVariableBase&lt;T&gt;</span>. Use the <span class="tt">Value</span> property setter instead.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7530"></a>
+Fixed</h3>
+<ul>
+<li>Fixed GC alloc caused by the value comparison in <span class="tt">BindableVariable&lt;T&gt;</span>.</li>
+<li>Fixed error when calling <span class="tt">GameObjectUtils.GetComponentsInAllScenes&lt;T&gt;</span> with unloaded scenes in the Hierarchy window.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7531"></a>
+[2.2.0-pre.1] - 2022-09-21</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7532"></a>
+Added</h3>
+<ul>
+<li>Added <span class="tt">SwapAtIndices&lt;T&gt;()</span> function to <span class="tt">ListExtensions</span> that performs an index-based element swap on any <span class="tt">List&lt;T&gt;</span>.</li>
+<li>Added bindable variable classes which allow a typed variable to be observed for value changes.</li>
+<li>Added value datum classes, which store data in a <span class="tt">ScriptableObject</span> or directly within a serializable class. These can be utilized to share common configuration across multiple objects and are used by the affordance system.</li>
+<li>Added common primitive types of <span class="tt">UnityEvent&lt;T&gt;</span> to allow serialized typed <a class="el" href="namespace_unity.html">Unity</a> Editor events.</li>
+<li>Added <span class="tt">HashSetList</span>, which is basically a wrapper for both a <span class="tt">HashSet</span> and <span class="tt">List</span> that allows the benefits of O(1) <span class="tt">Contains</span> checks, while allowing deterministic iteration without allocation.</li>
+<li>Added Multiply, Divide, and SafeDivide Vector3 extensions.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7533"></a>
+[2.1.0] - 2022-08-22</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7534"></a>
+Fixed</h3>
+<ul>
+<li>Organized alignment for help button on project validation rules window.</li>
+<li>Fixed alignment issues with the error icon.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7535"></a>
+[2.1.0-pre.1] - 2022-04-21</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7536"></a>
+Added</h3>
+<ul>
+<li>Add Project Validation for validating packages against package configuration correctness. See the [manual entry for project validation](xref:xr-core-utils-project-validation) for more details.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7537"></a>
+Removed</h3>
+<ul>
+<li>Removed the <b>GameObject</b> &gt; <b>XR</b> &gt; <b>XR Origin</b> menu item. To create a new XR Origin, users should instead use the menu items provided by <a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.0/manual/index.html#scene-setup">AR Foundation</a> and/or <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@latest?subfolder=/manual/general-setup.html">XR Interaction Toolkit</a>.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7538"></a>
+Fixed</h3>
+<ul>
+<li><a href="xref:Unity.XR.CoreUtils.NativeArrayUtils.EnsureCapacity*">NativeArrayUtils.EnsureCapacity</a> now checks for unallocated array before disposing it and reallocating for a larger capacity.</li>
+<li>Fixed compilation errors on platforms such as Stadia where the XR module is not available.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7539"></a>
+[2.0.0] - 2022-02-16</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7540"></a>
+Added</h3>
+<ul>
+<li>Define constants for documentation to include missing APIs.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7541"></a>
+Fixed</h3>
+<ul>
+<li>Fixed XR Origin so it appears in the <b>Component &gt; XR</b> menu.</li>
+<li>Fixed so test behaviors and <a href="xref:Unity.XR.CoreUtils.OnDestroyNotifier">OnDestroyNotifier</a> do not show up in the <b>Component &gt; Add</b> menu since those are not intended to be used directly by users.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7542"></a>
+[2.0.0-pre.6] - 2021-12-10</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7543"></a>
+Changed</h3>
+<ul>
+<li>Stopped firing warnings when users attach the <a href="https://docs.unity3d.com/Packages/com.unity.xr.legacyinputhelpers@2.1/api/UnityEngine.SpatialTracking.TrackedPoseDriver.html">TrackedPoseDriver</a> from <span class="tt">com.unity.xr.legacyinputhelpers</span>, but strongly recommend that users attach the <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@latest?subfolder=/api/UnityEngine.InputSystem.XR.TrackedPoseDriver.html">TrackedPoseDriver</a> from <span class="tt">com.unity.inputsystem</span> to the <span class="tt">camera</span> property of <a href="xref:Unity.XR.CoreUtils.XROrigin">XROrigin</a> instead. (<a href="https://issuetracker.unity3d.com/product/unity/issues/guid/1388617">1388617</a>)</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7544"></a>
+[2.0.0-pre.5] - 2021-11-16</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7545"></a>
+Changed</h3>
+<ul>
+<li>Changed property names so that they adhere to PascalCase.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7546"></a>
+Added</h3>
+<ul>
+<li>Added <span class="tt">XROrigin</span> menu item to SceneInspector that creates and configures a basic <span class="tt">XROrigin</span> in the scene.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7547"></a>
+Fixed</h3>
+<ul>
+<li>Fixed serialization issue where upgrading to <a href="xref:Unity.XR.CoreUtils.XROrigin">XROrigin</a> from <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@1.0/api/UnityEngine.XR.Interaction.Toolkit.XRRig.html">XRRig</a> may cause references to be broken in the component.</li>
+<li>Fixed issue where <a href="xref:Unity.XR.CoreUtils.XROrigin.CameraInOriginSpacePos">XROrigin.CameraInOriginSpacePos</a> was being miscalculated.</li>
+<li>Fixed issue where the custom Inspector for <a href="xref:Unity.XR.CoreUtils.XROrigin">XROrigin</a> was not being used.</li>
+<li>Fixed warning message referencing an old property name when a Camera could not be found.</li>
+<li>Fixed a reflection issue with <a href="xref:Unity.XR.CoreUtils.ScriptableSettingsBase.GetInstanceByType(System.Type)">ScriptableSettingsBase.GetInstanceByType</a> by renaming <span class="tt">EditorScriptableSettings&lt;T&gt;.instance</span> to <span class="tt">EditorScriptableSettings&lt;T&gt;.Instance</span>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7548"></a>
+[2.0.0-pre.3] - 2021-11-03</h2>
+<p>This is the first release of <em>XR <a class="el" href="namespace_core.html">Core</a> Utilities</em> package.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7549"></a>
+Added</h3>
+<ul>
+<li>XROrigin is a new XR agnostic setup that handles session space. It will be replacing <a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/api/UnityEngine.XR.ARFoundation.ARSessionOrigin.html?q=ARSessionOrigin">ARSessionOrigin</a> and <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@1.0/api/UnityEngine.XR.Interaction.Toolkit.XRRig.html?q=XRRig">XRRig</a>.</li>
+<li>All the utilities from <a href="https://docs.unity3d.com/Packages/com.unity.xrtools.utils@latest?preview=1&amp;subfolder=/manual/">XR Tools Utilities</a> (<span class="tt">com.unity.xrtools.utils</span>) package has been migrated in this package. This includes common utilities used by XR packages like MARS, AR Foundation, and Spatial Framework.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7550"></a>
+Changed</h3>
+<ul>
+<li>The minimum <a class="el" href="namespace_unity.html">Unity</a> version for this package is now 2019.4.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7551"></a>
+Removed</h3>
+<ul>
+<li>Removed <span class="tt">CONTRIBUTING.md</span> since the package is not accepting external contribution.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7552"></a>
+Fixed</h3>
+<ul>
+<li>Fixed company name in <span class="tt">LICENSE.md</span> file from "Unity Technologies ApS" to "Unity Technologies". </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

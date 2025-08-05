@@ -1,0 +1,17 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume =
+[
+    [ "Awake", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#ad203b96df13302418243202713b4c999", null ],
+    [ "GenerateTeleportRequest", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#a166475ac27a29bc36b4fd18b1977d4e4", null ],
+    [ "GetAttachTransform", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#a0fceb518cc359692737d21a6dafc27e0", null ],
+    [ "OnDestroy", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#a326e6afa9c2bd3041b8fa07955276f01", null ],
+    [ "OnDrawGizmosSelected", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#a27290cc0b733312e28aeecd1f6c8841c", null ],
+    [ "OnHoverEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#aa580146f375c0b77479fe16901cf8145", null ],
+    [ "OnHoverExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#af7e871fcb6f746c54bbca2c490bf52f2", null ],
+    [ "ProcessInteractable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#a0c07537e1e4977913f86caef87c9eaba", null ],
+    [ "anchorTransforms", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#ad8632cbd663210d872edd2c0a5abb135", null ],
+    [ "destinationAnchor", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#a09242b0a6fe269b9ddd6663be75c31c4", null ],
+    [ "destinationEvaluationFilter", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#a727c1b630f9137f7ddd6311dbe06002b", null ],
+    [ "destinationEvaluationProgress", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#a303cfbee36cb11a8d2114f75574e904d", null ],
+    [ "destinationEvaluationSettings", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#ae058830979752eac4bc05c04e79d2e00", null ],
+    [ "destinationAnchorChanged", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_teleportation_multi_anchor_volume.html#a7cf7f07d4091b5e6a910ca799881a0ba", null ]
+];

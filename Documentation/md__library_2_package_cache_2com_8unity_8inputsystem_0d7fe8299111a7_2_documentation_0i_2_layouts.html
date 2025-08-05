@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Layouts</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_layouts.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Layouts </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2148"></a>
+autotoc_md2148</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2149"></a>
+uid: input-system-layouts</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2150"></a>
+Layouts</h1>
+<ul>
+<li>Layout formats<ul>
+<li>Layout from type</li>
+<li>Layout from JSON</li>
+<li>Generated layouts</li>
+</ul>
+</li>
+<li>Layout inheritance</li>
+<li>Control items</li>
+<li>Layout overrides</li>
+<li>Precompiled layouts<ul>
+<li>Creating a precompiled layout</li>
+</ul>
+</li>
+</ul>
+<p>Layouts are the central mechanism by which the Input System learns about types of Input Devices and Input Controls. Each layout represents a specific composition of Input Controls. By matching the description of a Device to a layout, the Input System is able to create the correct type of Device and interpret the incoming input data correctly.</p>
+<p>&gt;<b>Note</b>: Layouts are an advanced, mostly internal feature of the Input System. Knowledge of the layout system is mostly useful if you want to support custom Devices or change the behavior of existing Devices.</p>
+<p>A layout describes a memory format for input, and the Input Controls to build in order to read and write data to or from that memory.</p>
+<p>The Input System ships with a large set of layouts for common Control types and common Devices. For other Device types, the system automatically generates layouts based on the Device description that the Device's interface reports.</p>
+<p>You can browse the set of currently understood layouts from the Input Debugger.</p>
+<p><img src="Images/LayoutsInDebugger.png" alt="Layouts in Debugger" class="inline"/></p>
+<p>A layout has two primary functions:</p>
+<ul>
+<li>Describe a certain memory layout containing input data.</li>
+<li>Assign names, structure, and meaning to the Controls operating on the data.</li>
+</ul>
+<p>A layout can either be for a Control on a Device (for example, <span class="tt">Stick</span>), or for a Device itself (that is, anything based on <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a>).</p>
+<p>The Input System only loads layouts when they are needed (usually, when creating a new Device). To manually load a layout, you can use <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_LoadLayout_System_String_"><span class="tt">InputSystem.LoadLayout</span></a>. This returns an <a href="../api/UnityEngine.InputSystem.Layouts.InputControlLayout.html"><span class="tt">InputControlLayout</span></a> instance, which contains the final, fully merged (that is, containing any information inherited from base layouts and/or affected by layout overrides) structure of the layout.</p>
+<p>You can register new layouts through <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_RegisterLayout_System_String_System_String_System_Nullable_UnityEngine_InputSystem_Layouts_InputDeviceMatcher__"><span class="tt">InputSystem.RegisterLayout</span></a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2151"></a>
+Layout formats</h2>
+<p>You can add new layouts layouts in one of three ways.</p>
+<ol type="1">
+<li>Represented by C# structs and classes.</li>
+<li>In JSON format.</li>
+<li>Built on the fly at runtime using layout builders.</li>
+</ol>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2152"></a>
+Layout from type</h3>
+<p>In its most basic form, a layout can be expressed by a C# class derived from:</p>
+<ul>
+<li><a href="../api/UnityEngine.InputSystem.InputControl.html"><span class="tt">InputControl</span></a> for a Control layout.</li>
+<li><a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a> for a Device layout.</li>
+</ul>
+<div class="fragment"><div class="line"><span class="comment">// The InputControlLayout attribute is not strictly necessary here.</span></div>
+<div class="line"><span class="comment">// However, you can use it to set additional properties (such as</span></div>
+<div class="line"><span class="comment">// a custom display name for the layout).</span></div>
+<div class="line">[InputControlLayout]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyDevice : InputDevice</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> AxisControl axis { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line">    <span class="keyword">public</span> ButtonControl button { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> FinishSetup(InputDeviceBuilder builder)</div>
+<div class="line">    {</div>
+<div class="line">        base.FinishSetup(builder);</div>
+<div class="line"> </div>
+<div class="line">        axis = builder.GetControl&lt;AxisControl&gt;(<span class="stringliteral">&quot;axis&quot;</span>);</div>
+<div class="line">        button = builder.GetControl&lt;ButtonControl&gt;(<span class="stringliteral">&quot;button&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You can then register the layout with <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_RegisterLayout_System_String_System_String_System_Nullable_UnityEngine_InputSystem_Layouts_InputDeviceMatcher__"><span class="tt">InputSystem.RegisterLayout</span></a>. This works the same for Control and for Device layouts.</p>
+<div class="fragment"><div class="line"><span class="comment">// Note: This should generally be done from InitializeOnLoad/</span></div>
+<div class="line"><span class="comment">// RuntimeInitializeOnLoad code.</span></div>
+<div class="line">InputSystem.RegisterLayout&lt;MyDevice&gt;();</div>
+</div><!-- fragment --><p>When the layout is instantiated, the system looks at every field and property defined directly in the type to potentially turn it into one or more Control items.</p>
+<ol type="1">
+<li>If the field or property is annotated with <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html"><span class="tt">InputControlAttribute</span></a>, the system applies the attribute's properties to the Control item. Some special defaults apply in this case:<ul>
+<li>If no <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_offset"><span class="tt">offset</span></a> is set, and the attribute is applied to a field, <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_offset"><span class="tt">offset</span></a> defaults to the offset of the field.</li>
+<li>If no <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_name"><span class="tt">name</span></a> is set, it defaults to the name of the property/field.</li>
+<li>If no <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_layout"><span class="tt">layout</span></a> is set, the system infers it from the type of the field/property.</li>
+</ul>
+</li>
+<li>If the field or property has a struct type which implements <a href="../api/UnityEngine.InputSystem.LowLevel.IInputStateTypeInfo.html"><span class="tt">IInputStateTypeInfo</span></a>, the field is considered to be an embedded state struct and the system recurses into the field or property to gather Controls from it.</li>
+<li>Otherwise, if the type of the field or property is based on <a href="../api/UnityEngine.InputSystem.InputControl.html"><span class="tt">InputControl</span></a>, the system adds a Control item similar to case 1, where the member is annotated with <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html"><span class="tt">InputControlAttribute</span></a>.</li>
+</ol>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2153"></a>
+Using a state structure</h4>
+<p>When you implement support for a new Input Device, there's usually an existing data format in which the Input System receives input for the Device. The easiest way to add support for the data format is to describe it with a C# struct annotated with <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html"><span class="tt">InputControlAttribute</span></a>.</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">struct </span>MyDeviceState : IInputStateTypeInfo</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> FourCC format =&gt; <span class="keyword">new</span> FourCC(<span class="charliteral">&#39;M&#39;</span>, <span class="charliteral">&#39;D&#39;</span>, <span class="charliteral">&#39;E&#39;</span>, <span class="charliteral">&#39;V&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;button1&quot;</span>, layout = <span class="stringliteral">&quot;Button&quot;</span>, bit = 0)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;button2&quot;</span>, layout = <span class="stringliteral">&quot;Button&quot;</span>, bit = 1)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;dpad&quot;</span>, layout = <span class="stringliteral">&quot;Dpad&quot;</span>, bit = 2, sizeInBits = 4)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;dpad/up&quot;</span>, bit = 2)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;dpad/down&quot;</span>, bit = 3)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;dpad/left&quot;</span>, bit = 4)]</div>
+<div class="line">    [InputControl(name = <span class="stringliteral">&quot;dpad/right&quot;</span>, bit = 5)]</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">int</span> buttons;</div>
+<div class="line"> </div>
+<div class="line">    [InputControl(layout = <span class="stringliteral">&quot;Stick&quot;</span>)]</div>
+<div class="line">    <span class="keyword">public</span> Vector2 stick;</div>
+<div class="line"> </div>
+<div class="line">    [InputControl(layout = <span class="stringliteral">&quot;Axis&quot;</span>)] <span class="comment">// Automatically converts from byte to float.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">byte</span> trigger;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// The Device must be directed to the state struct we have created.</span></div>
+<div class="line">[InputControlLayout(stateType = typeof(MyDeviceState)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class</span> MyDevice : InputDevice</div>
+<div class="line">{</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2154"></a>
+Layout from JSON</h3>
+<p>You can also create a layout from a JSON string that contains the same information. This is mostly useful if you want to be able to store and transfer layout information separate from your code - for instance, if you want to be able to add support for new Devices dynamically without making a new build of your application. You can use <a href="../api/UnityEngine.InputSystem.Layouts.InputControlLayout.html#UnityEngine_InputSystem_Layouts_InputControlLayout_ToJson"><span class="tt">InputControlLayout.ToJson()</span></a> and <a href="../api/UnityEngine.InputSystem.Layouts.InputControlLayout.html#UnityEngine_InputSystem_Layouts_InputControlLayout_FromJson_System_String_"><span class="tt">InputControlLayout.FromJson()</span></a> to convert layouts to and from the format.</p>
+<p>The same layout as above looks like this in JSON format:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    &quot;name&quot;: &quot;MyDevice&quot;,</div>
+<div class="line">    &quot;format&quot;: &quot;MDEV&quot;,</div>
+<div class="line">    &quot;controls&quot;: [</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot;: &quot;button1&quot;,</div>
+<div class="line">            &quot;layout&quot;: &quot;Button&quot;,</div>
+<div class="line">            &quot;offset&quot;: 0,</div>
+<div class="line">            &quot;bit&quot;: 0,</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot;: &quot;button2&quot;,</div>
+<div class="line">            &quot;layout&quot;: &quot;Button&quot;,</div>
+<div class="line">            &quot;offset&quot;: 0,</div>
+<div class="line">            &quot;bit&quot;: 1,</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot;: &quot;dpad&quot;,</div>
+<div class="line">            &quot;layout&quot;: &quot;Dpad&quot;,</div>
+<div class="line">            &quot;offset&quot;: 0,</div>
+<div class="line">            &quot;bit&quot;: 2,</div>
+<div class="line">            &quot;sizeInBits&quot;: 4,</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot;: &quot;dpad/up&quot;,</div>
+<div class="line">            &quot;offset&quot;: -1,</div>
+<div class="line">            &quot;bit&quot;: 2,</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot;: &quot;dpad/down&quot;,</div>
+<div class="line">            &quot;offset&quot;: -1,</div>
+<div class="line">            &quot;bit&quot;: 3,</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot;: &quot;dpad/left&quot;,</div>
+<div class="line">            &quot;offset&quot;: -1,</div>
+<div class="line">            &quot;bit&quot;: 4,</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot;: &quot;dpad/right&quot;,</div>
+<div class="line">            &quot;offset&quot;: -1,</div>
+<div class="line">            &quot;bit&quot;: 5,</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot;: &quot;stick&quot;,</div>
+<div class="line">            &quot;layout&quot;: &quot;Stick&quot;,</div>
+<div class="line">            &quot;offset&quot;: 4,</div>
+<div class="line">            &quot;format&quot;: &quot;VEC2&quot;,</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;name&quot;: &quot;trigger&quot;,</div>
+<div class="line">            &quot;layout&quot;: &quot;Axis&quot;,</div>
+<div class="line">            &quot;offset&quot;: 12,</div>
+<div class="line">            &quot;format&quot;: &quot;BYTE&quot;,</div>
+<div class="line"> </div>
+<div class="line">        }</div>
+<div class="line">    ]</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md2155"></a>
+Generated layouts</h3>
+<p>Finally, the Input System can also build layouts on the fly in code. This is useful for Device interfaces such as <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_h_i_d.html">HID</a> that supply descriptive information for each Device.</p>
+<p>To build layouts dynamically in code, you can use the <a href="../api/UnityEngine.InputSystem.Layouts.InputControlLayout.Builder.html"><span class="tt">InputControlLayout.Builder</span></a> API.</p>
+<p>Here's the same layout from the previous examples constructed programmatically:</p>
+<div class="fragment"><div class="line">var builder = new InputControlLayout.Builder()</div>
+<div class="line">    .WithName(&quot;MyDevice&quot;)</div>
+<div class="line">    .WithFormat(&quot;MDEV&quot;);</div>
+<div class="line"> </div>
+<div class="line">builder.AddControl(&quot;button1&quot;)</div>
+<div class="line">    .WithLayout(&quot;Button&quot;)</div>
+<div class="line">    .WithByteOffset(0)</div>
+<div class="line">    .WithBitOffset(0);</div>
+<div class="line"> </div>
+<div class="line">builder.AddControl(&quot;button2&quot;)</div>
+<div class="line">    .WithLayout(&quot;Button&quot;)</div>
+<div class="line">    .WithByteOffset(0)</div>
+<div class="line">    .WithBitOffset(1);</div>
+<div class="line"> </div>
+<div class="line">builder.AddControl(&quot;dpad&quot;)</div>
+<div class="line">    .WithLayout(&quot;Dpad&quot;)</div>
+<div class="line">    .WithByteOffset(0)</div>
+<div class="line">    .WithBitOffset(2)</div>
+<div class="line">    .WithSizeInBits(4);</div>
+<div class="line"> </div>
+<div class="line">builder.AddControl(&quot;dpad/up&quot;)</div>
+<div class="line">    .WithByteOffset(-1)</div>
+<div class="line">    .WithBitOffset(2);</div>
+<div class="line"> </div>
+<div class="line">builder.AddControl(&quot;dpad/down&quot;)</div>
+<div class="line">    .WithByteOffset(-1)</div>
+<div class="line">    .WithBitOffset(3);</div>
+<div class="line"> </div>
+<div class="line">builder.AddControl(&quot;dpad/left&quot;)</div>
+<div class="line">    .WithByteOffset(-1)</div>
+<div class="line">    .WithBitOffset(4);</div>
+<div class="line"> </div>
+<div class="line">builder.AddControl(&quot;dpad/right&quot;)</div>
+<div class="line">    .WithByteOffset(-1)</div>
+<div class="line">    .WithBitOffset(5);</div>
+<div class="line"> </div>
+<div class="line">builder.AddControl(&quot;stick&quot;)</div>
+<div class="line">    .WithLayout(&quot;Stick&quot;)</div>
+<div class="line">    .WithByteOffset(4)</div>
+<div class="line">    .WithFormat(&quot;VEC2&quot;);</div>
+<div class="line"> </div>
+<div class="line">builder.AddControl(&quot;trigger&quot;)</div>
+<div class="line">    .WithLayout(&quot;Axis&quot;)</div>
+<div class="line">    .WithByteOffset(12)</div>
+<div class="line">    .WithFormat(&quot;BYTE&quot;);</div>
+<div class="line"> </div>
+<div class="line">var layout = builder.Build();</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md2156"></a>
+Layout inheritance</h2>
+<p>You can derive a layout from an existing layout. This process is based on merging the information from the derived layout on top of the information that the base layout contains.</p>
+<ul>
+<li>For layouts defined as types, the base layout is the layout of the base type (if any).</li>
+<li>For layouts defined in JSON, you can specify the base layout in the <span class="tt">extends</span> property of the root node.</li>
+<li>For layouts created in code using <a href="../api/UnityEngine.InputSystem.Layouts.InputControlLayout.Builder.html"><span class="tt">InputControlLayout.Builder</span></a>, you can specify a base layout using <a href="../api/UnityEngine.InputSystem.Layouts.InputControlLayout.Builder.html#UnityEngine_InputSystem_Layouts_InputControlLayout_Builder_Extend_System_String_"><span class="tt">InputControlLayout.Builder.Extend()</span></a>.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2157"></a>
+Control items</h2>
+<p>Each layout is comprised of zero or more Control items. Each item either describes a new Control, or modifies the properties of an existing Control. The latter can also reach down into the hierarchy and modify properties of a Control added implicitly as a child by another item.</p>
+<div class="fragment"><div class="line"><span class="comment">// Add a dpad Control.</span></div>
+<div class="line">[InputControl(layout = <span class="stringliteral">&quot;Dpad&quot;</span>)]</div>
+<div class="line"><span class="comment">// And now modify the properties of the &quot;up&quot; Control that was added by the</span></div>
+<div class="line"><span class="comment">// &quot;Dpad&quot; layout above.</span></div>
+<div class="line">[InputControl(name = <span class="stringliteral">&quot;dpad/up&quot;</span>, displayName = <span class="stringliteral">&quot;DPADUP&quot;</span>)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">int</span> buttons;</div>
+</div><!-- fragment --><p>The following table details the properties that a Control item can have. These can be set as properties on <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html"><span class="tt">InputControlAttribute</span></a>, as properties on the Control in JSON, or through methods on <a href="../api/UnityEngine.InputSystem.Layouts.InputControlLayout.Builder.ControlBuilder.html"><span class="tt">InputControlLayout.Builder.ControlBuilder</span></a>.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_name"><span class="tt">name</span></a>  </td><td class="markdownTableBodyNone">Name of the Control.<br  />
+By default, this is the name of the field/property that <a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html"><span class="tt">InputControlAttribute</span></a> is applied to.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_displayName"><span class="tt">displayName</span></a>  </td><td class="markdownTableBodyNone">Display name of the Control (for use in UI strings).  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_shortDisplayName"><span class="tt">shortDisplayName</span></a>  </td><td class="markdownTableBodyNone">Short display name of the Control (for use in UI strings).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_layout"><span class="tt">layout</span></a>  </td><td class="markdownTableBodyNone">Layout to use for the Control.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_variants"><span class="tt">variants</span></a>  </td><td class="markdownTableBodyNone">Variants of the Control.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_aliases"><span class="tt">aliases</span></a>  </td><td class="markdownTableBodyNone">Aliases for the Control. These are alternative names the Control can be referred by.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_usages"><span class="tt">usages</span></a>  </td><td class="markdownTableBodyNone"><a href="Controls.md#control-usages">Usages</a> of the Control.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_offset"><span class="tt">offset</span></a>  </td><td class="markdownTableBodyNone">The byte offset at which the state for the Control is found.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_bit"><span class="tt">bit</span></a>  </td><td class="markdownTableBodyNone">The bit offset at which the state of the Control is found within its byte.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_sizeInBits"><span class="tt">sizeInBits</span></a>  </td><td class="markdownTableBodyNone">The total size of the Control's state, in bits.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_arraySize"><span class="tt">arraySize</span></a>  </td><td class="markdownTableBodyNone">If this is set to a non-zero value, the system will create an array of Controls of this size.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_parameters"><span class="tt">parameters</span></a>  </td><td class="markdownTableBodyNone">Any parameters to be passed to the Control. The system will apply these to any fields the Control type might have, such as <a href="../api/UnityEngine.InputSystem.Controls.AxisControl.html#UnityEngine_InputSystem_Controls_AxisControl_scaleFactor"><span class="tt">AxisControl.scaleFactor</span></a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_processors"><span class="tt">processors</span></a>  </td><td class="markdownTableBodyNone"><a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_processors.html">Processors</a> to apply to the Control.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_noisy"><span class="tt">noisy</span></a>  </td><td class="markdownTableBodyNone">Whether the Control is to be considered <a href="Controls.md#noisy-controls">noisy</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_synthetic"><span class="tt">synthetic</span></a>  </td><td class="markdownTableBodyNone">Whether the Control is to be considered <a href="Controls.md#synthetic-controls">synthetic</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_defaultState"><span class="tt">defaultState</span></a>  </td><td class="markdownTableBodyNone">Default initial value of the state <b>memory</b> Control.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_useStateFrom"><span class="tt">useStateFrom</span></a>  </td><td class="markdownTableBodyNone">For <a href="Controls.md#synthetic-controls">synthetic</a> Controls, used to synthesize Control state.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_minValue"><span class="tt">minValue</span></a>  </td><td class="markdownTableBodyNone">The minimum value the Control can report. Used for evaluating <a href="Controls.md#control-actuation">Control magnitude</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_maxValue"><span class="tt">maxValue</span></a>  </td><td class="markdownTableBodyNone">The maximum value the Control can report. Used for evaluating <a href="Controls.md#control-actuation">Control magnitude</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html#UnityEngine_InputSystem_Layouts_InputControlAttribute_dontReset"><span class="tt">dontReset</span></a>  </td><td class="markdownTableBodyNone">When a device <a href="Devices.md#device-resets">"soft" reset</a> is performed, the state of this control will not be reset. This is useful for controls such as pointer positions which should not go to <span class="tt">(0,0)</span> on a reset. When a "hard" reset is performed, the control will still be reset to its default value.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2158"></a>
+Layout overrides</h2>
+<p>You can non-destructively change aspects of an existing layout using layout overrides. You can call <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_RegisterLayoutOverride_System_String_System_String_"><span class="tt">InputSystem.RegisterLayoutOverride</span></a> to register a layout as an override of its base layout. The system then adds any property present in the override to the base layout or to existing properties.</p>
+<div class="fragment"><div class="line"><span class="comment">// Add an extra Control to the &quot;Mouse&quot; layout</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">string</span> json = <span class="stringliteral">@&quot;</span></div>
+<div class="line"><span class="stringliteral">    {</span></div>
+<div class="line"><span class="stringliteral">        &quot;&quot;name&quot;&quot; : &quot;&quot;Overrides&quot;&quot;,</span></div>
+<div class="line"><span class="stringliteral">        &quot;&quot;extend&quot;&quot; : &quot;&quot;Mouse&quot;&quot;,</span></div>
+<div class="line"><span class="stringliteral">        &quot;&quot;controls&quot;&quot; : [</span></div>
+<div class="line"><span class="stringliteral">            { &quot;&quot;name&quot;&quot; : &quot;&quot;extraControl&quot;&quot;, &quot;&quot;layout&quot;&quot; : &quot;&quot;Button&quot;&quot; }</span></div>
+<div class="line"><span class="stringliteral">        ]</span></div>
+<div class="line"><span class="stringliteral">    }</span></div>
+<div class="line"><span class="stringliteral">&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">InputSystem.RegisterLayoutOverride(json);</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md2159"></a>
+Precompiled layouts</h2>
+<p>Building a device at runtime from an <a href="../api/UnityEngine.InputSystem.Layouts.InputControlLayout.html"><span class="tt">InputControlLayout</span></a> is a slow process. The layout instance itself has to be built (which might involve reflection) and then interpreted in order to put the final <a href="../api/UnityEngine.InputSystem.InputDevice.html"><span class="tt">InputDevice</span></a> instance together. This process usually involves the loading of multiple <a href="../api/UnityEngine.InputSystem.Layouts.InputControlLayout.html"><span class="tt">InputControlLayout</span></a> instances, each of which might be the result of merging multiple layouts together (if the layout involves inheritance or overrides).</p>
+<p>You can speed up this process up by "baking" the final form of a layout into a "precompiled layout". A precompiled layout is generated C# code that, when run, will build the corresponding device without relying on loading and interpreting an <a href="../api/UnityEngine.InputSystem.Layouts.InputControlLayout.html"><span class="tt">InputControlLayout</span></a>. Aside from running faster, this will also create far less garbage and will not involve C# reflection (which generally causes runtime overhead by inflating the number of objects internally kept by the C# runtime).</p>
+<p>&gt;<b>NOTE</b>: Precompiled layouts must be device layouts. It is not possible to precompile the layout for an <a href="../api/UnityEngine.InputSystem.InputControl.html"><span class="tt">InputControl</span></a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2160"></a>
+Creating a precompiled layout</h3>
+<p>The first step in setting up a precompiled layout is to generate it. To do so, open the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_debugging.html">Input Debugger</a>, navigate to the layout you want to precompile within the <b>Layouts</b> branch, right-click it, and select <b>Generate Precompiled Layout</b>.</p>
+<p><img src="./Images/GeneratePrecompiledLayout.png" alt="Generate Precompiled Layout" class="inline"/></p>
+<p><a class="el" href="namespace_unity.html">Unity</a> will ask you where to store the generated code. Pick a directory in your project, enter a file name, and click <b>Save</b>.</p>
+<p>Once generated, you can register the precompiled layout with the Input System using <a href="../api/UnityEngine.InputSystem.InputSystem.html#UnityEngine_InputSystem_InputSystem_RegisterPrecompiledLayout__1_System_String_"><span class="tt">InputSystem.RegisterPrecompiledLayout</span></a>. The method expects a string argument containing metadata for the precompiled layout. This string is automatically emitted as a <span class="tt">const</span> inside the generated class.</p>
+<div class="fragment"><div class="line">InputSystem.RegisterPrecompiledLayout&lt;MyPrecompiledDevice&gt;(MyPrecompiledDevice.metadata);</div>
+</div><!-- fragment --><p>&gt;<b>IMPORTANT</b>: It is very important that this method is called with all relevant layout registrations being in the same state as at the time the layout was precompiled. There is no internal check whether the precompiled layout will still generate an identical result to the non-precompiled version.</p>
+<p>Once registered, a precompiled layout is automatically used whenever the layout that the precompiled layout is based on is instantiated.</p>
+<div class="fragment"><div class="line"><span class="comment">// Let&#39;s assume you have a custom device class.</span></div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyDevice : InputDevice</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Setters for your control getters need to have at least `protected`</span></div>
+<div class="line">    <span class="comment">// or `internal` access so the precompiled version can use them.</span></div>
+<div class="line">    [InputControl]</div>
+<div class="line">    <span class="keyword">public</span> ButtonControl button { <span class="keyword">get</span>; <span class="keyword">protected</span> <span class="keyword">set</span>; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// This method will *NOT* be invoked by the precompiled version. Instead, all the lookups</span></div>
+<div class="line">    <span class="comment">// performed here will get hardcoded into the generated C# code.</span></div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> FinishSetup()</div>
+<div class="line">    {</div>
+<div class="line">        base.FinishSetup();</div>
+<div class="line"> </div>
+<div class="line">        button = GetChildControl&lt;ButtonControl&gt;(<span class="stringliteral">&quot;button1&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// You register the device as a layout somewhere during startup.</span></div>
+<div class="line">InputSystem.RegisterLayout&lt;MyDevice&gt;();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// And you register a precompiled version of it then as well.</span></div>
+<div class="line">InputSystem.RegisterPrecompiledLayout&lt;PrecompiledMyDevice&gt;(PrecompiledMyDevice.metadata);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Then the following will implicitly use the precompiled version.</span></div>
+<div class="line">InputSystem.AddDevice&lt;MyDevice&gt;();</div>
+</div><!-- fragment --><p>A precompiled layout will automatically be unregistered in the following cases:</p>
+<ul>
+<li>A layout override is applied to one of the layouts used by the precompiled Device. This also extends to <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_controls.html">controls</a> used by the Device.</li>
+<li>A layout with the same name as one of the layouts used by the precompiled Device is registered (which replaces the layout already registered under the name).</li>
+<li>A <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_processors.html">processor</a> is registered that replaces a processor used by the precompiled Device.</li>
+</ul>
+<p>This causes the Input System to fall back to the non-precompiled version of the layout. Note also that a precompiled layout will not be used for layouts derived from the layout the precompiled version is based on. In the example above, if someone derives a new layout from <span class="tt">MyDevice</span>, the precompiled version is unaffected (it will not be unregistered) but is also not used for the newly created type of device.</p>
+<div class="fragment"><div class="line"><span class="comment">// Let&#39;s constinue from the example above and assume that sometime</span></div>
+<div class="line"><span class="comment">// later, someone replaces the built-in button with an extended version.</span></div>
+<div class="line">InputSystem.RegisterLayout&lt;ExtendedButtonControl&gt;(<span class="stringliteral">&quot;Button&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// PrecompiledMyDevice has implicitly been removed now, because the ButtonControl it uses</span></div>
+<div class="line"><span class="comment">// has now been replaced with ExtendedButtonControl.</span></div>
+</div><!-- fragment --><p>If needed, you can add <span class="tt">#if</span> checks to the generated code, if needed. The code generator will scan the start of an existing file for a line starting with <span class="tt">#if</span> and, if found, preserve it in newly generated code and generate a corresponding <span class="tt">#endif</span> at the end of the file. Similarly, you can change the generated class from <span class="tt">public</span> to <span class="tt">internal</span> and the modifier will be preserved when regenerating the class. Finally, you can also modify the namespace in the generated file with the change being preserved.</p>
+<p>The generated class is marked as <span class="tt">partial</span>, which means you can add additional overloads and other code by having a parallel, <span class="tt">partial</span> class definition.</p>
+<div class="fragment"><div class="line"><span class="comment">// The next line will be preserved when regenerating the precompiled layout. A</span></div>
+<div class="line"><span class="comment">// corresponding #endif will be emitted at the end of the file.</span></div>
+<div class="line"><span class="preprocessor">#if UNITY_EDITOR || UNITY_STANDALONE</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// If you change the namespace to a different one, the name of the namespace will be</span></div>
+<div class="line"><span class="comment">// preserved when you regenerate the precompiled layout.</span></div>
+<div class="line">namepace MyNamespace</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// If you change `public` to `internal`, the change will be preserved</span></div>
+<div class="line">    <span class="comment">// when regenerating the precompiled layout.</span></div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">partial class </span>PrecompiledMyDevice : MyDevice</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">//...</span></div>
+</div><!-- fragment --><p>The namespace of the generated layout will correspond to the </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: About com.unity.xr.legacyinputhelpers</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8legacyinputhelpers_0db7579e86f3b4_2_documentation_0i_2index.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">About com.unity.xr.legacyinputhelpers </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md8780"></a></p>
+<p>The com.unity.xr.legacyinputhelpers package contains a number of useful helpers for building XR Projects. These include the Tracked Pose Driver and the Input Asset XR Bindings Seed Utility.</p>
+<p>This document also contains sections on how to use, or migrate your project to, the XR Plugin Framework.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8781"></a>
+Requirements</h1>
+<p>This version of the XR Legacy Input Helpers package is compatible with the following versions of the <a class="el" href="namespace_unity.html">Unity</a> Editor:</p>
+<ul>
+<li>2019.4 and later</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8782"></a>
+Installing com.unity.xr.legacyinputhelpers</h1>
+<p>To install this package, follow the instructions in the <a href="https://docs.unity3d.com/Manual/upm-ui-install.html">Package Manager documentation</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8783"></a>
+Using com.unity.xr.legacyinputhelpers</h1>
+<p>The com.unity.xr.legacyinputhelpers package contains the following helpers for building XR Projects:</p><ul>
+<li>Tracked Pose Driver</li>
+<li>XR Input Binding Seeder</li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8legacyinputhelpers_0db7579e86f3b4_2_documentation_0i_2_arm_models.html">Arm Models</a></li>
+<li>Camera Offset</li>
+<li>XR Rig Explanation</li>
+</ul>
+<p>To use, or migrate your project to, the new XR Plugin Framework, see the Migrating to the XR Plugin Framework / XR Management section on this page.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8784"></a>
+Tracked Pose Driver</h1>
+<p>Use the Tracked Pose Driver component to update a GameObject’s transform to match that of a tracked device. A tracked device is any input device that can generate a Pose (such as a VR HMD, an AR device, or an MR tracked controller).</p>
+<p>The following section details the different settings and options available to the Tracked Pose Driver.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8785"></a>
+Settings</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8786"></a>
+Device and Pose Source fields</h3>
+<p>The Tracked Pose Driver updates a target transform using a pose source. The final pose source is identified using the <b>Device</b> and <b>Pose Source</b> fields.</p>
+<p>The <b>Device</b> field indicates which type of device the pose source will be obtained from. This field has the following options:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Option</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Generic XR Device</b>  </td><td class="markdownTableBodyNone">Represents VR HMDs and AR device poses.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Generic XR Controller</b>  </td><td class="markdownTableBodyNone">Represents VR controllers.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Generic XR Remote</b>  </td><td class="markdownTableBodyNone">Represents mobile-based remote devices.  </td></tr>
+</table>
+<p>The following image shows the options above in the actual Tracked Pose Driver component.</p>
+<p><img src="Images/deviceselection.png" alt="Tracked Pose Driver" class="inline"/></p>
+<p>Once you set the <b>Device</b> field, <a class="el" href="namespace_unity.html">Unity</a> updates the <b>Pose Source</b> field with the available sources for that device. The table below lists all the possible sources.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Device</b>  </th><th class="markdownTableHeadNone"><b>Source</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th><th class="markdownTableHeadNone"><b>Usage</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Generic XR device</b>  </td><td class="markdownTableBodyNone">Left Eye  </td><td class="markdownTableBodyNone">The pose of the left eye of the device.  </td><td class="markdownTableBodyNone">VR HMDs  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Right Eye  </td><td class="markdownTableBodyNone">The pose of the right eye of the device.  </td><td class="markdownTableBodyNone">VR HMDs  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Center Eye - HMD Reference  </td><td class="markdownTableBodyNone">The pose of the center eye of the device.  </td><td class="markdownTableBodyNone">VR HMDs  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Head  </td><td class="markdownTableBodyNone">The pose of the head of the device, if available. For most devices, the Head pose will be the same as the Center Eye.  </td><td class="markdownTableBodyNone">VR HMDs  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Color Camera  </td><td class="markdownTableBodyNone">The pose of the color camera on the device, if available. The color camera is intended for use with AR devices that support camera-based spatial mapping.  </td><td class="markdownTableBodyNone">AR devices  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Generic XR Controller</b>  </td><td class="markdownTableBodyNone">Left Controller  </td><td class="markdownTableBodyNone">The left controller device pose, if available. This is intended to be used with 6 degrees of freedom style controllers commonly used with VR and MR devices.  </td><td class="markdownTableBodyNone">6 and 3 degrees of freedom VR tracked controllers  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Right Controller  </td><td class="markdownTableBodyNone">The right controller device pose, if available. Zero if unavailable. This is intended to be used with 6 degrees of freedom style controllers commonly used with VR and MR devices.  </td><td class="markdownTableBodyNone">6 and 3 degrees of freedom VR tracked controllers  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Generic XR remote</b>  </td><td class="markdownTableBodyNone">Device Pose  </td><td class="markdownTableBodyNone">This pose is intended to be used with 3 degrees of freedom style controllers commonly used with mobile VR devices (for example, the Google Daydream Controller).  </td><td class="markdownTableBodyNone">Mobile 3 degrees of freedom tracked controllers  </td></tr>
+</table>
+<p>If a requested source pose is not valid, <a class="el" href="namespace_unity.html">Unity</a> provides a position vector that consists of zeros and an identity quaternion. The following image shows the possible values for the <b>Pose Source</b> field when the <b>Device</b> is set to Generic XR Device.</p>
+<p><img src="Images/poseselection.png" alt="Tracked Pose Driver" class="inline"/></p>
+<p>For camera or HMD tracking, use the Center Eye - HMD Reference value. For ease of use, this is the default setting of the Tracked Pose Driver.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8787"></a>
+Tracking Type field</h2>
+<p>Use the <b>Tracking Type</b> field to control how the tracked pose is applied to the target transform. This field has the following options:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Option</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Position Only</b>  </td><td class="markdownTableBodyNone">The Position part of the source pose will be applied to the target transform.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Rotation Only</b>  </td><td class="markdownTableBodyNone">The Rotation part of the source pose will be applied to the target transform.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Both Position and Rotation</b>  </td><td class="markdownTableBodyNone">The entire source pose will be applied to the target transform. This is the default setting.  </td></tr>
+</table>
+<p>The screenshot below shows all of these options.</p>
+<p><img src="Images/trackingtypeselection.png" alt="Tracked Pose Driver" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8788"></a>
+Update Type field</h2>
+<p>Use the <b>Update Type</b> field to control when the Tracked Pose Driver applies updates from the tracked pose source. You can select one of the following options:</p>
+<ul>
+<li>Update And Before Render</li>
+<li>Update</li>
+<li>Before Render</li>
+</ul>
+<p>The default and recommended option is Update And Before Render, especially in situations where a Tracked Pose Driver is driving a camera pose. To ensure user comfort and minimize latency, it is critically important to have the position of the camera updated as close to rendering as possible.</p>
+<p>The following table outlines when, during the frame, the Target Pose will be updated:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Option</b>  </th><th class="markdownTableHeadNone"><b>Fixed Update</b>  </th><th class="markdownTableHeadNone"><b>Update</b>  </th><th class="markdownTableHeadNone"><b>Before Render</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Before Render Only</b>  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">Yes  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Update Only</b>  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">No  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Both Update and Before Render</b>  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes  </td></tr>
+</table>
+<p>The Update option causes the transform to be set in both Fixed Update (if happening that frame) and the start of the normal Update frame. This ensures that the target transform is in the correct location before executing any scripts during those phases.</p>
+<p>The screenshot below shows the options available for the <b>Update Type</b> field.</p>
+<p><img src="Images/updatetypeselection.png" alt="Tracked Pose Driver" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8789"></a>
+Use Relative Transform option</h2>
+<p><b>Note: This option will be deprecated in the future, please do not use.</b></p>
+<p>The <b>Use Relative Transform</b> option allows you to control how the pose source is applied to the target transform. For instructions on how to migrate your project to use the recommended XR Rig please see the Migrating to the XR Plugin Framework section in this document.</p>
+<p>If the <b>Use Relative Transform</b> option is:</p><ul>
+<li>Enabled, the Tracked Pose Driver caches the original position of the transform internally. <a class="el" href="namespace_unity.html">Unity</a> then uses this position to offset any source pose values so they are correct in relation to the starting location of the object being controlled.</li>
+<li>Disabled, the Tracked Pose Driver will apply the source pose value directly to the target transform. This is useful when the target transform is part of a greater transform hierarchy.</li>
+</ul>
+<p>The screenshot below shows the <b>Use Relative Transform</b> option.</p>
+<p><img src="Images/trackedposedriver.png" alt="Tracked Pose Driver" class="inline"/></p>
+<p>This option was added to provide compatibility with the implicit camera control for VR cameras within <a class="el" href="namespace_unity.html">Unity</a>. <a class="el" href="namespace_unity.html">Unity</a> will deprecate this option, along with <b>Reference Transform</b> for implicit cameras, in a future release. Follow the best practices for Object Hierarchies to correctly reflect tracked objects in the appropriate space.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8790"></a>
+Additional information</h2>
+<ul>
+<li>The Tracked Pose Driver can only track one pose at a time.</li>
+<li>If the device and pose combination are not valid, the resulting transform will be zero position and identity rotation.</li>
+<li>You can change the tracked node at runtime via script.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8791"></a>
+Special case behaviour when attached to cameras</h3>
+<ul>
+<li>When attached to a camera, the implicit VR Device control of the camera transform is disabled, and the value generated by the Tracked Pose Driver is used instead.</li>
+</ul>
+<p>For information on how to configure the Tracked Pose Driver to track cameras, see the Device &amp; Pose Source section of the document.</p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8792"></a>
+Seeding XR input bindings</h1>
+<p>Use the <b>Seed XR Input Bindings</b> tool to populate the Input Asset with a set of cross-platform bindings intended for use with XR Devices.</p>
+<p>To open the tool, after you load the Legacy Input Helpers package in your Project, go to <b>Assets &gt; Seed XR Bindings</b> from <a class="el" href="namespace_unity.html">Unity</a>'s main menu.</p>
+<p><img src="Images/assetmenu.PNG" alt="Asset Menu" class="inline"/></p>
+<p>Clicking this menu option seeds the Input Manager with the <a class="el" href="namespace_unity.html">Unity</a> Cross-Platform Input bindings. The XR Input Bindings will not replace any bindings which are already present in the Input Manager with the same name.</p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8793"></a>
+Migrating to the XR Plugin Framework</h1>
+<p>With the legacy built-in VR Device, <a class="el" href="namespace_unity.html">Unity</a> took control over any camera which was labeled with <span class="tt">Main Camera</span> and applied HMD tracking data to it. This is known as <b>implicit camera tracking</b> within <a class="el" href="namespace_unity.html">Unity</a>. While it was useful for simple HMD-only experiences, it proved confusing when users began to add controllers and other interactions. This was because implicit camera tracking functionality would cache the starting Local Position of the transform of the <span class="tt">Main Camera</span>, and would then apply tracking data on top of this transform. This transform was hidden from the user, and made handling of controllers and other complex scenarios difficult.</p>
+<p>With the move to the <a href="https://docs.unity3d.com/Manual/XRPluginArchitecture.html">XR Plugin Framework</a>, <a class="el" href="namespace_unity.html">Unity</a> no longer provides implicit camera tracking. Instead, you can use the Tracked Pose Driver component as an-out-of-the-box solution to apply tracking information from various input sources to GameObject transforms within your Scene.</p>
+<p>To migrate to the XR Plugin Framework, follow the migration steps outlined below. They cover two different scenarios: whether you're starting from a new Project or Scene, or migrating an existing one:</p>
+<ul>
+<li>Starting from a new Scene</li>
+<li>Starting from an existing Scene</li>
+</ul>
+<p>If you're already using the Tracked Pose Driver on your <span class="tt">Main Camera</span> or have your own tracking functionality, your current Scene is already configured correctly and you don't need to do anything else.</p>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8794"></a>
+Starting from a new Scene</h2>
+<p>Follow the steps below if you're starting from a new Scene, or a scene that satisfies both of these conditions:</p><ul>
+<li>There is only one camera in the Scene, and that camera is tagged as the <span class="tt">Main Camera</span></li>
+<li>The camera in the Scene is at the root of the hierarchy</li>
+</ul>
+<p>From <a class="el" href="namespace_unity.html">Unity</a>'s main menu, go to <b>GameObject &gt; XR &gt; Add XR Rig</b>. This attempts to transform your new Scene into one that correctly supports the XR Plugin Framework.</p>
+<p><img src="Images/upgrademenuoption.png" alt="Upgrade Menu Item" class="inline"/></p>
+<p>For example, the following image shows a new Scene that can be converted using the <b>Add AR Rig</b> option:</p>
+<p><img src="Images/newscene.png" alt="New Scene" class="inline"/></p>
+<p>After you click the <b>Add AR Rig</b> option, this is the result:</p>
+<p><img src="Images/convertedscene.png" alt="Migrated Scene" class="inline"/></p>
+<p>If there are no errors in the console log, you should now be able to press <b>Play</b> in your Scene to have the camera track against the device you have configured in the XR Plugin Management package. For more information on how to configure your Project for XR with XR Plugin Management, see documentation on the <a href="https://docs.unity3d.com/Manual/XRPluginArchitecture.html">XR Plugin Framework</a>.</p>
+<p>If your Scene can't be migrated correctly, the <a class="el" href="namespace_unity.html">Unity</a> console will display an error. If this happens, follow the instructions in the the Starting from an existing Scene section below.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8795"></a>
+Starting from an existing Scene</h2>
+<p>Migrating from an existing Scene has additional steps compared to migrating an empty Scene. As a result, there are different options depending on how your scene is configured. The overall goal is to have the Scene track in exactly the same way as it did before migrating to the XR Plugin Framework.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8796"></a>
+Identify your Scene type</h3>
+<p>Find the camera in your Scene which is tagged as the <span class="tt">Main Camera</span>. <a class="el" href="namespace_unity.html">Unity</a> uses this camera to render to the HMD or other main device.</p>
+<p>If the <span class="tt">Main Camera</span> GameObject is at the root of your <a class="el" href="namespace_unity.html">Unity</a> Hierarchy, follow the steps for Migrating a simple Scene.</p>
+<p><img src="Images/simple.png" alt="Simple" class="inline"/></p>
+<p>If the <span class="tt">Main Camera</span> GameObject is not at the root of your <a class="el" href="namespace_unity.html">Unity</a> Hierarchy, follow the steps for Migrating a complex Scene.</p>
+<p><img src="Images/complex.png" alt="Simple" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8797"></a>
+Camera Offset</h3>
+<p>The Camera Offset component is a MonoBehaviour that the XR Rig uses to perform two tasks:</p><ul>
+<li>Select which type of origin tracking the application wants to use</li>
+<li>At runtime, if the HMD is operating using a Device Tracking Origin, the Camera Offset component will apply a Y axis uplift to the specified component. This uplift simulates the height of the user.</li>
+</ul>
+<p>The camera needs to be uplifted in Device Tracking Origin modes because the tracking data returned by the HMD or device does not contain the height of the user, nor the height of the device from the ground.</p>
+<p>If the <b>Requested Tracking Mode</b> is set to Floor, the tracking data implicitly contains the height of the device from the floor, so you don't need to apply any additional uplift.</p>
+<p>It's important to apply this uplift between the XR Rig and any tracked camera or device, as this allows <a class="el" href="namespace_unity.html">Unity</a> to move the XR Rig as a unit without needing to account for any uplift when teleporting or locomoting. This also ensures that any other tracked devices which are reported in the same tracking space appear correctly in your Scene.</p>
+<p>This component is a simplified version of the XR Rig Component found in the XR Interaction Toolkit package. It is applied automatically when you:</p><ul>
+<li>Click the <b>Add XR Rig</b> menu option.</li>
+<li>Create an instance of the XR Rig prefab.</li>
+</ul>
+<p>The following image shows the options for the Camera Offset component. <img src="Images/cameraoffset.png" alt="Camera Offset" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Option</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Camera Floor Offset Object</b>  </td><td class="markdownTableBodyNone">The GameObject, or transform, that will be shifted upwards in the Y axis in local space if the HMD is operating in Device Tracking Origin mode.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Requested Tracking Mode</b>  </td><td class="markdownTableBodyNone">The Requested Tracking Mode setting Use this option to request that the HMD (or other device) you're using operate in a specific mode. The options are:<br  />
+<br  />
+- Default: Lets the HMD or device pick the Tracking Origin mode it runs in. Different devices have different defaults or user selections. The Camera Offset component will apply a camera offset if necessary.<br  />
+- Device: Requests that the HMD or device use a Device Tracking Origin mode. If the HMD or device supports this, the GameObject or transform specified in the <b>Camera Floor Offset Object</b> field will be moved upwards in Y local space by the amount specified in the <b>Camera Y Offset</b> field.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Floor</b>  </td><td class="markdownTableBodyNone">Requests that the HMD or device use a Floor Tracking Origin. If the HMD or device supports this, no uplift will be applied to the <b>Camera Floor Offset Object</b>, because the tracking data returned by the device will implicitly contain the user's height.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Camera Y Offset</b>  </td><td class="markdownTableBodyNone">Specifies how far in the local Y axis the <b>Camera Floor Offset Object</b> will be moved, in meters.  </td></tr>
+</table>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8798"></a>
+Migrating a simple Scene</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8799"></a>
+1. Create an instance of the XR Rig prefab.</h3>
+<p>Migrating a camera that was previously at the root of the Scene Hierarchy allows you to swap the existing camera to an XR Rig by instancing the XR Rig prefab that this package contains.</p>
+<p><img src="Images/xrrigprefabcontents.png" alt="Prefab" class="inline"/></p>
+<p>You can find this prefab in the <span class="tt">Packages/XR Legacy Input Helpers/Prefabs</span> folder:</p>
+<p><img src="Images/prefablocation.png" alt="Prefab Location" class="inline"/></p>
+<p>Drag this prefab into your scene hierarchy to create a new instance of the prefab.</p>
+<p><img src="Images/prefabinstance.png" alt="Prefab Instance" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8800"></a>
+2. Move the XR Rig to match the location of the camera.</h3>
+<p>Now that you have an instance of the XR Rig prefab, you need to configure the XR Rig GameObject so that the resulting camera positions will be correct when your application starts.</p>
+<p>Change the position and rotation of the XR Rig GameObject so that it matches the position of the current <span class="tt">Main Camera</span>. If you're applying a scale transformation to the <span class="tt">Main Camera</span>, make sure that you also apply this scale to the XR Rig GameObject. If you are going to scale the XR Rig, it's highly recommended to use a uniform scale across all three axes.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8801"></a>
+3. Replicate the position change, if necessary.</h3>
+<p>If the <span class="tt">Main Camera</span> in your non-migrated SCene is above the floor (its Y component is &gt; 0.0f), you need to replicate this position change. You can do this in a few different ways, depending on what the original position the change was intended to replicate.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md8802"></a>
+3.1 - Uplift to simulate the height of the user</h4>
+<p>If the previous <span class="tt">Main Camera</span> was raised above the floor to simulate the height of the user and the application is using a Device Tracking Origin (sometimes called "Stationary" Tracking Mode) then this additional uplift will be performed by the Camera Offset component. If this is not the case, see the next section.</p>
+<p>To configure the camera to have a vertical uplift when the application is being used in a Device Tracking Origin mode, set the following options on the <b>Camera Offset</b> component on the XR Rig GameObject.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Option</b>  </th><th class="markdownTableHeadNone"><b>Value</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Requested Tracking Mode</b>  </td><td class="markdownTableBodyNone">Device  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Camera Y Offset</b>  </td><td class="markdownTableBodyNone">Set this option to the height at which the existing <span class="tt">Main Camera</span> was raised to simulate the user height.  </td></tr>
+</table>
+<p>After you configure these options, change the XR Rig GameObject's Y Position to be what you would consider as the "floor" in your application (usually 0.0f). The <b>Camera Offset</b> component will add any additional uplift as needed.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md8803"></a>
+3.2 - Uplift indicates camera position</h4>
+<p>If your non-migrated Scene uses Floor Tracking Origin (historically referred to as "Room Scale" Tracking Mode), and the position of the <span class="tt">Main Camera</span> represents the user's starting point without including their height (that is, the camera is effectively on the logical "floor"), follow these steps to migrate your Scene correctly:</p>
+<ul>
+<li>Move the XR Rig to match the <span class="tt">Main Camera</span>'s current position and rotation in <a class="el" href="namespace_unity.html">Unity</a> world space.</li>
+<li>If the application is using a Floor Tracking Origin, set the <b>Requested Tracking Mode</b> on the <b>Camera Offset</b> component to Floor. This ensures that the camera has the correct vertical offset.</li>
+<li>If the application isn't using a Floor Tracking Origin, set the <b>Requested Tracking Mode</b> on the <b>Camera Offset</b> component to Default. This applies the correct behavior regardless of the device tracking mode the application starts with.</li>
+<li>If you were previously using a different component to move the camera vertically and handle the difference between Device and Floor tracking origins, you might need to disable or modify this component so that the camera will not be incorrectly moved multiple times by different components.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8804"></a>
+4. Replace the XR Rig Main Camera with your Main Camera</h3>
+<p>Now that the <b>Camera Offset</b> is correctly configured, you need to swap the XR Rig's Main Camera with your current <span class="tt">Main Camera</span> GameObject. If your current <span class="tt">Main Camera</span>:</p>
+<ul>
+<li>Doesn't have a Tracked Pose Driver component (or any other way of tracking the HMD) then you should copy the Tracked Pose Driver from XR Rig's Main Camera GameObject.</li>
+<li>Has a Tracked Pose Driver, make sure that the settings exactly match those for the XR Rig's Main Camera.</li>
+</ul>
+<p><img src="Images/xrrigtpddefaults.png" alt="XR Rig TPD Defaults" class="inline"/></p>
+<p>Next, delete the Main Camera GameObject from the XR Rig instance, and parent your existing <span class="tt">Main Camera</span> GameObject to the Camera Offset GameObject.</p>
+<p>Make sure that the position and rotation of your <span class="tt">Main Camera</span> GameObject are both 0,0,0. Instead of changing the camera's position, always change the position of the XR Rig GameObject instead. Also, make sure that any GameObject, or Component links on any of the Components attached to your <span class="tt">Main Camera</span>, are still correct.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8805"></a>
+5. Configure XR Management</h3>
+<p>See documentation on the <a href="https://docs.unity3d.com/Manual/XRPluginArchitecture.html">XR Plugin Framework</a> for details.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8806"></a>
+6. Press Play!</h3>
+<p>Now that your Scene has been successfully migrated, press <b>Play</b> and make sure that the camera's starting location is the same as it was before migrating to the XR Plugin Framework. If it's not, see the Troubleshooting section below.</p>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8807"></a>
+Migrating a complex Scene</h2>
+<p>If your current Scene is using the implicit camera tracking from the legacy VR system, and the <span class="tt">Main Camera</span> is part of GameObject hierarchy, follow these steps to migrate ]your legacy VR tracking system to the XR Plugin Framework.</p>
+<p>The Implicit camera update would update the local transform of the <span class="tt">Main Camera</span> GameObject twice each frame, which made the <span class="tt">Main Camera</span> GameObject moved relative to the position, scale and rotation of the hierarchy that it existed under.</p>
+<p>In this scenario, you have two options to migrate your Scene:</p><ol type="1">
+<li>Leave the existing hierarchy in place and add components to enable tracking in the current hierarchy</li>
+<li>Migrate the existing hierarchy to use the XR Rig structure.</li>
+</ol>
+<p>It's generally recommended to leave the existing hierarchy in place if your Scene has any functionality that relies on this hierarchy structure. If you have a relatively simple configuration, then you can migrate directly to the XR Rig.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8808"></a>
+Leave in place</h3>
+<p>This method involves the least amount of modifications to the existing Scene hierarchy to enable tracking within <a class="el" href="namespace_unity.html">Unity</a>, and involves adding a Tracked Pose Driver to the <span class="tt">Main Camera</span> in your Scene. This ensures that any other functionality that requires your current GameObject hierarchy continues to function as before.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md8809"></a>
+1. Locate your <span class="tt">Main Camera</span> and add a Tracked Pose Driver to it</h4>
+<p>Locate the <span class="tt">Main Camera</span> in the Scene.</p>
+<p>Add a Tracked Pose Driver, using the exact same settings that the XR Rig's Main Camera uses. The screenshot below shows a reference for these settings:</p>
+<p><img src="Images/xrrigtpddefaults.png" alt="XR Rig TPD Defaults" class="inline"/></p>
+<p>Do this for all the <span class="tt">Main Camera</span>s in your Scene. If you need to track other devices within your Scene, see the Tracked Pose Driver settings for the correct options for your use case.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md8810"></a>
+2. Configure XR Management</h4>
+<p>See documentation on the <a href="https://docs.unity3d.com/Manual/XRPluginArchitecture.html">XR Plugin Framework</a> for details.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md8811"></a>
+3. Press Play!</h4>
+<p>Now that your Scene has been successfully migrated, press <b>Play</b> and make sure that the camera's starting location is the same as it was before migrating to the XR Plugin Framework. If it's not, see the Troubleshooting section below.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8812"></a>
+Migrate to XR Rig</h3>
+<p>Because there are an infinite number of possible hierarchies in use, <a class="el" href="namespace_unity.html">Unity</a> can't provide specific steps to migrate your current Scene hierarchy to use the XR Rig. Instead, the following section describes what the XR Rig is intended to represent, which will allow you to map your existing hierarchy to the concepts within the XR Rig.</p>
+<p>To configure your scene to use XR Management, see documentation on the <a href="https://docs.unity3d.com/Manual/XRPluginArchitecture.html">XR Plugin Framework</a>.</p>
+<p>If there are still issues, see the Troubleshooting section.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md8813"></a>
+XR Rig explanation</h4>
+<p>The XR Rig GameObject represents the transform from tracking space to <a class="el" href="namespace_unity.html">Unity</a> worlds pace. GameObjects parented to the XR Rig effectively live in the tracking space.</p>
+<p>All devices that produce tracking data (HMDs, controllers, phones, etc.) report data relative to the same origin in the same tracking space.</p>
+<p>Camera offset is used to raise the entire tracking space when the tracking space is in Device Tracking Origin mode. This mode tracks the origin of the tracking space as a historical position of the tracked device, and is typically found in mobile AR, integrated VR, stationary VR, and wearable AR devices. It does not account for user height, which is why you need to lift the tracking volume to simulate user height.</p>
+<p>The Floor Tracking Origin mode tracks the origin of teh tracking space as the logical "floor" of the play space. The tracking data provided in this mode implicitly contains the height of the device off the "floor". In this mode, you don't need to lift the tracking volume to have the camera placed correctly.</p>
+<p>All tracked devices (head, hands, cameras, trackers, etc.) reported by the same device should be children of the Camera Offset game object of the same XR Rig. This lets you move the user, or all tracked devices that represent the user, by translating or rotating the XR Rig GameObject.</p>
+<p>The actual location of objects within tracking space is unlikely to be at the origin of the tracking space. Teleporting the user requires some calculations to correctly orient the XR Rig in <a class="el" href="namespace_unity.html">Unity</a> world space so that the resulting HMD or camera position in <a class="el" href="namespace_unity.html">Unity</a> world space matches the intended result. The XR Interaction Toolkit package provides functionality which performs these calculations for you.</p>
+<p>If your Scene requires scale, it should only be applied to the XR Rig GameObject, only uniformly across all axes.</p>
+<p>All GameObjects that represent tracked devices must have some mechanism for updating their transform with their applicable device position and rotation. The Tracked Pose Driver covers this update. For HMDs, as a best practice, use the default settings.</p>
+<p><b>Note:</b> When working within a hierarchy where a GameObject (for example, XR Rig) provides the transform from tracking space to world space, you must disable the <b>Use Relative Transform</b> option for the transform to work properly.</p>
+<p>The starting position of all tracked child objects of the XR Rig should be 0,0,0 position and 0,0,0 rotation, because the Tracked Pose Driver (or other tracking mechanism) will set the position of these objects.</p>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8814"></a>
+Troubleshooting</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Problem  </th><th class="markdownTableHeadNone">Possible resolution  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Camera is too high in the scene  </td><td class="markdownTableBodyNone">Is the Camera Offset Component's Requested Tracking Mode set correctly? <br  />
+ Is the Camera Y Offset set too high?  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

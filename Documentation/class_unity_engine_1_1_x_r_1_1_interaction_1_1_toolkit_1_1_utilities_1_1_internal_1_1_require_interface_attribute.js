@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_internal_1_1_require_interface_attribute =
+[
+    [ "RequireInterfaceAttribute", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_internal_1_1_require_interface_attribute.html#a50cf0556d0cc559ee236a08861cf0473", null ],
+    [ "interfaceType", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_internal_1_1_require_interface_attribute.html#a533dd2b9aa6ec61492fcf38b2322e0f6", null ]
+];

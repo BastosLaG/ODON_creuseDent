@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Using Code Coverage with Test Runner</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_coverage_test_runner.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Using Code Coverage with Test Runner </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5710"></a></p>
+<p>When running your tests in the <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html?subfolder=/manual/workflow-run-test.html">Test Runner</a> you can generate an <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_how_to_interpret_results.html">HTML report</a> which shows which lines of your code the tests cover. This includes both <span class="tt">EditMode</span> and <span class="tt">PlayMode</span> tests.</p>
+<p>If <b>Auto Generate Report</b> is checked, then an <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_how_to_interpret_results.html">HTML report</a> is generated and a file viewer window opens (if <b>Auto Open Report</b> is checked too). It contains the coverage results and the report. Otherwise, select <b>Generate Report</b> to generate the report. The results are based on the assemblies specified in <b>Included Assemblies</b>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5711"></a>
+Steps</h1>
+<ol type="1">
+<li>Open the <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_code_coverage_window.html">Code Coverage window</a> (go to <b>Window</b> &gt; <b>Analysis</b> &gt; <b>Code Coverage</b>).<br  />
+<br  />
+ <img src="images/using_coverage/open_coverage_window.png" alt="Code Coverage Window" class="inline"/></li>
+<li>Select <b>Enable Code Coverage</b> if not already selected, to be able to generate Coverage data and reports.<br  />
+ <img src="images/using_coverage/enable_code_coverage.png" alt="Enable Code Coverage" class="inline"/><br  />
+<b>Note:</b> Enabling Code Coverage adds some overhead to the Editor and can affect the performance.</li>
+<li>Select the <a href="https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html">Assembly Definitions</a> you would like to see the coverage for. In this example we selected <span class="tt">Assembly-CSharp</span> and <span class="tt">Assembly-CSharp-Editor</span>. By default, <a class="el" href="namespace_unity.html">Unity</a> compiles almost all project scripts into the <span class="tt">Assembly-CSharp.dll</span> managed assembly and all Editor scripts into the <span class="tt">Assembly-CSharp-Editor.dll</span> managed assembly.<br  />
+<br  />
+ <img src="images/using_coverage/select_assemblies.png" alt="Select Assemblies" class="inline"/></li>
+<li><p class="startli">Switch to the <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html?subfolder=/manual/workflow-run-test.html">Test Runner</a> and run your <span class="tt">EditMode</span> and/or <span class="tt">PlayMode</span> test(s).<br  />
+<br  />
+ <img src="images/coverage_testrunner/test_runner.png" alt="Run Tests in Test Runner" class="inline"/></p>
+<p class="startli">Example test: </p><div class="fragment"><div class="line">using NUnit.Framework;</div>
+<div class="line">using Assert = UnityEngine.Assertions.Assert;</div>
+<div class="line"> </div>
+<div class="line">public class EditorTests</div>
+<div class="line">{</div>
+<div class="line">   [Test]</div>
+<div class="line">   public void MyPublicClass_PublicFunctionCanBeCalled()</div>
+<div class="line">   {</div>
+<div class="line">       MyPublicClass myPublicClass = new MyPublicClass();</div>
+<div class="line">       Assert.IsTrue(myPublicClass.MyPublicFunction());</div>
+<div class="line">   }   </div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li>When the test(s) finish running, a file viewer window opens containing the coverage report. Alternatively, select the <b>Results Location</b> dropdown to open it in the file viewer.<br  />
+<br  />
+<b>Note:</b> To generate the report automatically after the Test Runner has finished running the tests, select <b>Auto Generate Report</b> in the <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_code_coverage_window.html">Code Coverage window</a>. Alternatively, you can select <b>Generate Report</b>.<br  />
+</li>
+<li>Select <span class="tt">index.htm</span>.<br  />
+<br  />
+ <img src="images/using_coverage/index_folder.png" alt="Report File Viewer" class="inline"/> <br  />
+<br  />
+ This opens the <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_how_to_interpret_results.html">HTML coverage report</a>.<br  />
+<br  />
+ <img src="images/coverage_testrunner/report_html.png" alt="HTML Coverage Report" class="inline"/> <br  />
+</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5712"></a>
+Get results for EditMode and PlayMode tests</h1>
+<p>Coverage data are generated from the last set of tests that were run in the <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html?subfolder=/manual/workflow-run-test.html">Test Runner</a>.<br  />
+<br  />
+ <b>Note:</b> Currently the <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html?subfolder=/manual/workflow-run-test.html">Test Runner</a> does not support <span class="tt">EditMode</span> and <span class="tt">PlayMode</span> tests running at the same time. In <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@2.0/manual/whats-new.html#added">version 2.0</a> of the Test Framework this will be possible. In the meantime, to include coverage for both <span class="tt">EditMode</span> and <span class="tt">PlayMode</span> tests, you must run these separately. In this case, the last Coverage Report generated will include the combined coverage of <span class="tt">EditMode</span> and <span class="tt">PlayMode</span> tests.</p>
+<p>If a fresh start is required, select <b>Clear Results</b> to clear the Coverage data from all previous test runs for both <span class="tt">EditMode</span> and <span class="tt">PlayMode</span> tests.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5713"></a>
+Get coverage by test methods</h1>
+<p>To see how each test contributes to the overall coverage check <b>Test Runner References</b>. For more details see <a href="HowToInterpretResults.md#coverage-by-test-methods">Coverage by test methods</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

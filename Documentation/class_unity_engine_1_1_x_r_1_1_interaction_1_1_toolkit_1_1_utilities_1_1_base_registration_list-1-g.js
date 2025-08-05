@@ -1,0 +1,25 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list_1_g =
+[
+    [ "AddToBufferedAdd", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#af6941e0c719cbf9fd0586cd52fad069b", null ],
+    [ "AddToBufferedRemove", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a5d9341d4aed585fe589186d1886db8b2", null ],
+    [ "ClearBufferedAdd", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a6536ec815b5113728a69c76acf5d6880", null ],
+    [ "ClearBufferedRemove", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#ab0caed6e6a6a42a7dabfbb4590ededc5", null ],
+    [ "Flush", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#ad79690b6f055362fa171cbdfd7b656f0", null ],
+    [ "GetRegisteredItemAt", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a01d5831f8273152be40473d4495305c3", null ],
+    [ "GetRegisteredItems", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a746e2b2bf4b517be0540e0722f9779de", null ],
+    [ "IsRegistered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a87059b555dd590f9dfceb1cfb696ef10", null ],
+    [ "IsStillRegistered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#aaa22655d41a5c3b8a06c448a52719809", null ],
+    [ "MoveItemImmediately", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a362765a028bef20bfbd4ca025002a9b7", null ],
+    [ "OnItemMovedImmediately", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a7dc409c1093769db5683c00d5bd4d670", null ],
+    [ "Register", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#afa7f1d31e81c1d2e94f5f6d19ea76712", null ],
+    [ "RemoveFromBufferedAdd", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a198412bfe51ae188bb81caf5d2b1f383", null ],
+    [ "RemoveFromBufferedRemove", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#ade1cb4d47108df9de42942b41d893e06", null ],
+    [ "Unregister", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a8dc6673fc1c2ac70daddced052a53047", null ],
+    [ "UnregisterAll", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a968a8cdfae2cb21dbe63d849cf5a05f0", null ],
+    [ "m_BufferedAdd", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#acdf85ed8d9be47ddc8b0f763c08d0de5", null ],
+    [ "m_BufferedRemove", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a266c90f1292d72039526ef8f58470d01", null ],
+    [ "bufferedAddCount", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a37f9f178ddc2f7dbaf349123435a204c", null ],
+    [ "bufferedRemoveCount", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#a0743e78e84ff9fbc74ac255f1cb63fd0", null ],
+    [ "flushedCount", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#abe76868444a3986f6d1dee570bc8ff45", null ],
+    [ "registeredSnapshot", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_base_registration_list-1-g.html#aae082948550d4190bfeb0b03cb1fb829", null ]
+];

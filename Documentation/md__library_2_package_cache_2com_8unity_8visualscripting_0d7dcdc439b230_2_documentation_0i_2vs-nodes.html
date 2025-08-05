@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Nodes</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-nodes.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Nodes </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7349"></a></p>
+<p>Nodes are the most basic part of scripts in Visual Scripting. A node can listen for events, get the value of a variable, modify a component on a GameObject, and more. <br  />
+</p>
+<p>Nodes appear as blocks in <a href="vs-interface-overview.md#the-graph-editor">the Graph Editor</a>.</p>
+<p><img src="images/vs-node-example.png" alt="An image of the Graph window. A blank Set Variable node sits in the middle of the Graph Editor." class="inline"/></p>
+<p>You can arrange and connect these blocks with edges to create logic for an application. Add nodes with <a href="vs-interface-overview.md#the-fuzzy-finder">the fuzzy finder</a>. Click and drag a node to move it in the Graph Editor.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7350"></a>
+Node anatomy</h1>
+<p>Visual Scripting highlights nodes in your current selection. All nodes have a header, which displays the node's name. Some node headers might contain additional information or controls.</p>
+<p>Select a node in your graph, the Visual Scripting <a href="vs-interface-overview.md#the-graph-inspector">Graph Inspector</a> displays the following information:</p>
+<ul>
+<li>The node's name and type icon.</li>
+<li>A brief description of what the node does, if available.</li>
+<li>The current warning messages or errors for the node.</li>
+<li>The additional settings for the node, if available.</li>
+<li>The required type for each input port and a brief description, if available.</li>
+<li>The type for each output port and a brief description, if available.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7351"></a>
+Connections and ports</h2>
+<p>Connect a port from one node to a compatible port on another node to create an edge. Edges form the logic flow in a Visual Scripting graph. Click any port to create a new edge.</p>
+<p>Edges are color-coded: edges that control the logic flow in your graph are white. Data edges are colored based on their type. For more information about types, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-types.html">Object types</a>.</p>
+<p>When you create a new edge, Visual Scripting highlights ports on any other nodes in a graph where you can make a valid connection. If you enable <b>Dim Incompatible Nodes</b>, Visual Scripting also dims any nodes or ports without a valid connection.</p>
+<p>Ports on the left side of a node are Input Ports. Ports on the right side of a node are Output Ports.</p>
+<p>An input port or output port can be a Control Port or a Data Port:</p>
+<ul>
+<li>Control Ports control the logical flow in a graph. They tell Visual Scripting what order to execute the nodes in a graph, from left to right. The icon for a control port is always an arrow. These arrows display the direction of the flow of logic in a graph.</li>
+<li>Data Ports send and receive data, such as number values or GameObjects, between nodes. They have colors that correspond to the specific type they expect to receive as inputs, or send as outputs. Their icons change based on their type.</li>
+</ul>
+<p>You can make multiple connections to or from the same port, with some restrictions:</p>
+<ul>
+<li>You can connect a single Data Output port to multiple Data Input ports.</li>
+<li>You can't connect multiple Data Output ports to a single Data Input port. Visual Scripting can't choose which value to use.</li>
+<li>You can connect multiple Control Output ports to a single Control Input port.</li>
+<li>You can't connect a single Control Output port to multiple Control Input ports. Visual Scripting can't choose which node to run first.</li>
+</ul>
+<p><img src="images/vs-multiple-connections-example.png" alt="An image of the Graph Editor. An On Update Event node connects its trigger output port to the trigger input port on a Transform Rotate node. A Per Second node, with its Input set to 30, connects its output port to the X Angle, Y Angle, and Z Angle input ports on the Transform Rotate node. An On Keyboard Input Event node with its Key set to Space and its Action set to Down connects its trigger output port to the trigger input port on a Rigidbody Add Force node. An On Mouse Down Event node also connects its trigger output port to the trigger input on the Rigidbody Add Force node." class="inline"/></p>
+<p>For more information on how to connect nodes, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-creating-connections.html">Connect nodes in a Script Graph</a>.</p>
+<p>More complex nodes can have more complex or specialized ports, outside of the ports described here. </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7352"></a>
+Node controls and inline values</h2>
+<p>A node might have additional controls that display on its header or in the <a href="vs-interface-overview.md#the-graph-inspector">Graph Inspector</a>. Controls can change the available ports or behavior of a node. Some ports might also use inline values.</p>
+<table class="doxtable">
+<tr>
+<th><b>Element</b></th><th><b>Example</b></th><th><b>Description</b></th></tr>
+</table>
+<p><b>Control</b></p>
+<p><img src="images\vs-node-container-type.png" alt="" class="inline"/></p>
+<p>A control appears as a dropdown option on the header of a node. For example, a Container Type control might tell a node to expect to receive a GameObject instead of a Script Machine.</p>
+<p><b>Inline Value</b></p>
+<p><img src="images\vs-node-inline-value.png" alt="" class="inline"/></p>
+<p>An inline value appears as an object picker field next to a port. You can use an inline value instead of a node connection to specify a value for a node. Not all Visual Scripting types support inline values.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7353"></a>
+Node overloads</h1>
+<p>Variations of a Visual Scripting node are called overloads. Overloads change the input and output data that a node can accept, and can change the number of input or output data ports on a node.</p>
+<p>For example, the <b>Add</b> node has four overloads, as shown in the following image of the fuzzy finder after a search for <span class="tt">Add</span>.</p>
+<p><img src="images/vs-add-node-overloads.png" alt="A screenshot of the Visual Scripting fuzzy finder that displays a search for an Add node. The fuzzy finder displays five results for the Math Add node: Math/Generic, Math/Scalar, Math/Vector 2, Math/Vector 3, and Math/Vector 4." class="inline"/></p>
+<p>You can distinguish each overload through its subcategory in the fuzzy finder. The <b>Add</b> node is a part of the <b>Math</b> category, but each overload is a part of a different subcategory: <b>Generic</b>, <b>Scalar</b>, <b>Vector 2</b>, <b>Vector 3</b>, or <b>Vector 4</b>.</p>
+<p>The specific node overload changes what input and output data the <b>Add</b> node can accept. While a Generic <b>Add</b> node can input and output any object type in Visual Scripting, a Vector 3 <b>Add</b> node can only take 3D vectors as an input, and can only output a single 3D vector:</p>
+<p><img src="images/vs-add-node-overloads-2.png" alt="An image of the Graph window. The five different Add nodes have been added to a Script Graph. Every node has a different icon for its ports, based on the data type the node can add. Some ports on every Add node but the Generic node has inline values." class="inline"/></p>
+<p>The default type and number of ports on the <b>Add</b> node stays consistent across its overloads. For the <b><a class="el" href="class_rotate.html">Rotate</a></b> node, the type and number of ports varies.</p>
+<p><img src="images/vs-nodes-rotate-node-overloads.png" alt="An image of the Rotate node's overloads. Named groups in the Graph Editor highlight their different options: you can specify angles as vectors, angles as separate floats, or specify the angle of rotation around the axis. These three different nodes can also contain an option to rotate relative to the target GameObject or to World space in the scene." class="inline"/></p>
+<p>Based on the <b><a class="el" href="class_rotate.html">Rotate</a></b> node you select, you might be able to specify the angle of rotation as a vector, as separate float values, or as an angle relative to each axis. You can also choose whether the node rotates the GameObject relative to itself, or relative to the center of the scene's world space. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

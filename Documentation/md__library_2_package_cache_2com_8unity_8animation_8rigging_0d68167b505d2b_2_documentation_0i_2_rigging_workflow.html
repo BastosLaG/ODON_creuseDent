@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Rigging Workflow</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8animation_8rigging_0d68167b505d2b_2_documentation_0i_2_rigging_workflow.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Rigging Workflow </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md445"></a></p>
+<p>This document describes all of the steps and components required to create a custom Animation Rig. This <a href="https://youtu.be/DzW_jQGO1dc"><b>video</b></a> also demonstrates the process.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md446"></a>
+Core Components</h1>
+<p>Animation Rigs in <a class="el" href="namespace_unity.html">Unity</a> make use of four key components:</p>
+<ul>
+<li><b>Animator:</b> When added to some root GameObject, this built-in component designates that a hierarchy is animatable. <em>Animation Rigging works on top of <a class="el" href="namespace_unity.html">Unity</a>'s animation system, and so requires an Animator.</em></li>
+<li><b>Rig Builder:</b> When added to the root GameObject, this component allows the animated hierarchy to be modified by one or more Rigs, which it assembles into layers.</li>
+<li><b>Rig:</b> When added to GameObjects in an animatable hierarchy, Rigs act as containers for source objects and Constraints that modify the animated hierarchy's pose. You can adjust the weight of a Rig to control its contribution to the final pose.</li>
+<li><b>Constraints:</b> When added to Rig GameObjects or their children, these components specify operations a Rig will perform.</li>
+</ul>
+<p>The following illustration depicts a schematic overview of the interdependencies among all of the required types of components.</p>
+<p><img src="images/rig_setup/rig_setup_overview.png" alt="Rig Setup Overview" class="inline"/></p>
+<p>Once you have added a Rig Builder component to an animatable hierarchy's root GameObject, you can create a Rig GameObject as a child of this root <em>(ex: Rig Setup)</em>. To enable animation rigging, the Rig GameObject must have a Rig component. To then connect the Rig to the Animator, you must assign this Rig component to a Rig Layer on the Rig Builder component.</p>
+<p><img src="images/rig_setup/rig_setup.gif" alt="Rig Setup" class="inline"/></p>
+<p>After you connect the Rig GameObject to the Rig Builder component, you can add rig elements (i.e., GameObjects with Constraint components) under the Rig GameObject hierarchy. Different rig elements can be organized and hierarchically structured to accommodate any rigging requirement. <br  />
+</p>
+<p>Source objects for Constraints, such as Target Effectors or Hint Effectors, can be placed under their associated Rig GameObject. In the following illustration, <em>Left Leg IK</em> has a <b>Two Bone IK Constraint</b> component and is acting as a rig element. It is the parent of both the <em>LeftFootEffector</em> and <em>LeftLegHint</em> source objects. <br  />
+</p>
+<p><img src="images/rig_setup/source_object_example.png" alt="Source Object Example" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md447"></a>
+Rig Builder Component</h2>
+<p>The Rig Builder component lives alongside the Animator component and creates a Playable Graph that is appended to the existing Animator state machine. The Rig Builder component needs to be added to the GameObject that has the Animator component. Rig Builder needs to affect the same hierarchy as the Animator.</p>
+<p><img src="images/rig_builder/rig_builder_setup.gif" alt="Rig Builder Setup" class="inline"/></p>
+<p>Using Rig Layers, the Rig Builder component allows for stacking of multiple Rigs that can be enabled/disabled at any time.</p>
+<p><img src="images/rig_builder/rig_builder_layers.gif" alt="Rig Builder Layers" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md448"></a>
+Rig Component</h2>
+<p>The Rig component is the main entry point for all Constraints in a given control rig. Note there should only be one Rig component per control rig hierarchy, which you must assign to a Rig Layer on the Rig Builder component. To use multiple control rigs with a single hierarchy, you must assign each Rig to a different Rig Layer, and enable/disable them independently.</p>
+<p>From a technical standpoint, the main purpose of a Rig component is to collect all Constraint components in its local hierarchy. The component generates an ordered list of <em>IAnimationJobs</em>, which are applied to the Animator's pose after its normal evaluation. The Rig component gathers constraints using <em>GetComponentsInChildren</em>, and so the order of components in the Rig's hierarchy determines the evaluation order of the jobs. This method follows depth-first traversal as shown below:</p>
+<p><img src="images/rig/eval_order.png" alt="Rig Constraint Evaluation Order" class="inline"/></p>
+<p>In other words, grouping constraints under a GameObject allows you to manage the evaluation order of these constraints by modifying the hierarchy.</p>
+<p>Control rig hierarchies should hold all the necessary rig elements such as effectors, constraints, and other objects/elements required by the constraint definitions. The root of a control rig hierarchy should be at the same level as the skeleton root, both under the Game Object holding the Animator. <em>In other words, it should not be in the skeleton hierarchy, but rather live beside it.</em></p>
+<p><img src="images/rig/rig_setup.gif" alt="Rig Setup" class="inline"/></p>
+<p><img src="images/rig/rig_weight.gif" alt="Rig Weight" class="inline"/></p>
+<p>Rig components, like all Constraint components, have a Weight property that can be used, animated, and scripted to enable/disable or ease-in/ease-out an entire control rig hierarchy.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md449"></a>
+Other Utilities</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md450"></a>
+Bone Renderer Component</h2>
+<p>The Bone Renderer component allows you to define a transform hierarchy to be drawn as bones for visualization and selection during the rigging process. These bones are not visible in the Game view. This allows you to define your character deformation skeletons for rigging purposes.</p>
+<p><img src="images/bone_renderer/bone_renderer_setup.gif" alt="Bone Renderer Setup" class="inline"/> <img src="images/bone_renderer/bone_renderer_component.gif" alt="Bone Renderer Component" class="inline"/></p>
+<p>You can customize the appearance of the bones by modifying Bone Size, Shape and Color. The package provides these default shapes: Line, Pyramid, and Box. You can also display tripods of local axes and adjust their size to suit your preference.</p>
+<p><img src="images/bone_renderer/bone_looks.png" alt="Bone Look Pyramid" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md451"></a>
+Rig Effectors</h2>
+<p>Similarly to bones, Rig Effectors allow you to add gizmos to transforms for visualization and selection. You can add them to any transform in the same hierarchy as a Rig Builder or Rig component. Like bones, Effectors are not visible in the Game view. A special Scene View overlay allows you to manage and customize effectors in the Rig hierarchy.</p>
+<p><img src="images/rig_effector/rig_effector_setup.gif" alt="Rig Effector Overlay" class="inline"/></p>
+<p>You can also customize the appearance of the effectors by modifying Effector Size, Shape, Color, Offset Position and Offset Rotation. The shape can be any Mesh asset available in the project. You can create, delete, or edit multiple effectors at once.</p>
+<p><img src="images/rig_effector/rig_effector_shapes.png" alt="Rig Effector Shapes" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md452"></a>
+Rig Transform</h2>
+<p>When a specific GameObject in your rig's hierarchy is important for manipulation but not referenced by any rig constraints, you must add a <b>RigTransform</b> component, found under <em>Animation Rigging/Setup</em>. As shown in the video below, in order to manipulate both the left and right foot IK targets (<em>lfik</em> and <em>rfik</em>) of the <em>2BoneIK</em> sample using their parent transform (<em>ik</em> ), you must add this component to get the expected behavior.</p>
+<p><img src="images/rig_transform/rig_transform_manipulation.gif" alt="Rig Transform" class="inline"/> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

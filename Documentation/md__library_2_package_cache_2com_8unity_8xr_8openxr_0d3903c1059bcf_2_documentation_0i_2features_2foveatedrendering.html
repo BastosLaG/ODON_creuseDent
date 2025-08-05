@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: foveatedrendering</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_2foveatedrendering.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">foveatedrendering </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md9368"></a>
+autotoc_md9368</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9369"></a>
+uid: openxr-foveated-rendering</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9370"></a>
+Foveated rendering in OpenXR</h1>
+<p>Foveated rendering is an optimization technique that can speed up rendering with little perceived impact on visual quality. Foveated rendering works by lowering the resolution of areas in the user's peripheral vision. On headsets that support eye-tracking as well as foveated rendering, the higher-resolution area can be centered where the user is currently looking. Without eye-tracking, the higher resolution area is fixed near the middle of the screen. Fixed foveated rendering can be more apparent to the user since they can shift their eyes to look at the peripheral areas.</p>
+<p>OpenXR platforms use the variable shading rate (VSR) technique for foveated rendering, which does not require you to change custom shaders. (However, if you are creating assets that should work on all XR platforms, refer to the "Foveated rendering shaders" topic in <a href="https://docs.unity3d.com/Manual/xr-foveated-rendering.html">Foveated rendering</a> to learn how to write shaders and shader graphs that work under all supported foveated rendering methods.)</p>
+<p>OpenXR devices can implement VRS using a variety of techniques and a single device can support more than one implementation. The <a class="el" href="namespace_unity.html">Unity</a> OpenXR plug-in chooses from the following techniques, in this order, depending on what the current device supports:</p>
+<ol type="1">
+<li>Gaze-based Fragment Density Map (GFDM) from provider.</li>
+<li>Fixed Fragment Density Map (FFDM) from provider.</li>
+<li>Fragment Shading Rate (FSR) using a provider's texture.</li>
+<li>Fragment Shading Rate using a compute shader calculated from the asymmetric FOVs the provider gives.</li>
+</ol>
+<p>This topic covers aspects of foveated rendering specific to the <a class="el" href="namespace_unity.html">Unity</a> OpenXR provider plug-in:</p>
+<ul>
+<li><a class="el" href="#prerequisites">Prerequisites</a></li>
+<li><a class="el" href="#configure-foveated-rendering">Configure foveated rendering</a></li>
+<li><a class="el" href="#use-the-srp-foveation-api">Use the **SRP Foveation** API</a></li>
+<li><a class="el" href="#use-the-legacy-api">Use the **Legacy** API</a></li>
+<li><a class="el" href="#request-eye-tracking-permission">Request eye-tracking permission on Android</a></li>
+</ul>
+<p>For general information about foveated rendering in <a class="el" href="namespace_unity.html">Unity</a> XR, refer to <a href="https://docs.unity3d.com/Manual/xr-foveated-rendering.html">Foveated rendering</a>.</p>
+<p><a class="anchor" id="prerequisites"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9371"></a>
+Prerequisites</h2>
+<p>To use the foveated rendering feature in OpenXR, your project must meet the following prerequisites:</p>
+<ul>
+<li><a class="el" href="namespace_unity.html">Unity</a> 6+</li>
+<li><a class="el" href="namespace_unity.html">Unity</a> OpenXR plugin (com.unity.xr.openxr) 1.11.0+</li>
+<li>Universal Rendering Pipeline or High Definition Render Pipeline (HDRP not recommended for mobile XR platforms such as the Meta Quest family of devices)</li>
+</ul>
+<p>Alternately, you can use the Meta <a class="el" href="namespace_core.html">Core</a> XR SDK package to access the OpenXR foveated rendering feature on Quest devices:</p>
+<ul>
+<li><a class="el" href="namespace_unity.html">Unity</a> 2022.2+, <a class="el" href="namespace_unity.html">Unity</a> 6+</li>
+<li><a class="el" href="namespace_unity.html">Unity</a> OpenXR plugin (com.unity.xr.openxr) 1.11.0+</li>
+<li>Meta <a class="el" href="namespace_core.html">Core</a> XR SDK 68.0+</li>
+<li>Built-in or Universal Rendering Pipeline</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>The primary differences between the <a class="el" href="namespace_unity.html">Unity</a> <b>SRP Foveation</b> API and the Meta API for foveated rendering include: <br  />
+<br  />
+<ul>
+<li>They uses different APIs and code paths to enable and control foveated rendering on a device.</li>
+<li>The <a class="el" href="namespace_unity.html">Unity</a> <b>SRP Foveation</b> API works on all platforms that support foveated rendering, which allows you to share code across different types of devices.</li>
+<li>The <a class="el" href="namespace_unity.html">Unity</a> <b>SRP Foveation</b> API does not support the Built-in Rendering Pipeline.</li>
+<li>The Meta API, which only works on Quest devices, supports <a class="el" href="namespace_unity.html">Unity</a> 2022.3 and the Built-in Render Pipeline.</li>
+<li>The Meta API does not support foveated rendering when you use intermediate render targets. Intermediate rendering targets are used by post-processing, tone mapping and camera stacking, for example, and may be used by other rendering features, too. <br  />
+<br  />
+ <a class="el" href="namespace_unity.html">Unity</a> recommends that you use the <a class="el" href="namespace_unity.html">Unity</a> <b>SRP Foveation</b> API where possible for better compatibility. You can still use other features from the Meta <a class="el" href="namespace_core.html">Core</a> XR SDK in conjunction with the <b>SRP Foveation</b> API, if desired.</li>
+</ul>
+</dd></dl>
+<p><a class="anchor" id="configure-foveated-rendering"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9372"></a>
+Configure foveated rendering</h2>
+<p>You can configure foveated rendering in a project that meets the <a class="el" href="#prerequisites">Prerequisites</a>:</p>
+<ul>
+<li><a class="el" href="#configure-srp-foveation">Configure SRP Foveation</a></li>
+<li><a class="el" href="#configure-legacy-foveated-rendering">Configure Legacy foveated rendering</a></li>
+<li><a class="el" href="#configure-gaze-based-foveated-rendering">Configure gaze-based foveated rendering</a></li>
+</ul>
+<p>Once configured in settings, you must also turn on foveated rendering at runtime. By default, the foveated rendering strength or level is set to off. You must also set a runtime flag to use gaze-based foveated rendering.</p>
+<p>Refer to the following topics for more information:</p>
+<ul>
+<li><a class="el" href="#use-the-srp-foveation-api">Use the SRP Foveation API</a></li>
+<li><a class="el" href="#use-the-srp-foveation-api">Use the Legacy API</a></li>
+</ul>
+<p><a class="anchor" id="configure-srp-foveation"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9373"></a>
+Configure SRP Foveation</h3>
+<p>To enable the <b>SRP Foveation</b> API in <a class="el" href="namespace_unity.html">Unity</a> 6+:</p>
+<ol type="1">
+<li>Open the <b>Project Settings</b> window.</li>
+<li>Under <b>XR Plug-in Management</b>, select the <b>OpenXR</b> settings.</li>
+<li>Set the <b>Foveated Rendering API</b> option to <b>SRP Foveation</b>.</li>
+</ol>
+<ol type="1">
+<li>In the list of <b>OpenXR Feature Groups</b>, select <b>All Features</b>.</li>
+<li>Enable the <b>Foveated Rendering</b> feature.</li>
+</ol>
+<p><img src="../images/FoveatedRendering/xr-foveation-srp-api-settings.png" alt="SRP Foveation settings" class="inline"/><br  />
+<em>Settings to enable foveated rendering with the <b>SRP Foveation</b> API</em></p>
+<p>After you have configured the settings, you must also turn on foveated rendering at runtime. Refer to <a class="el" href="#use-the-srp-foveation-api">Use the SRP Foveation API</a> for more information.</p>
+<dl class="section note"><dt>Note</dt><dd>You must configure the project to use either the <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@17.0/manual/InstallURPIntoAProject.html">Universal Render Pipeline (URP)</a> or the <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@17.0/manual/convert-project-from-built-in-render-pipeline.html">High Definition Render Pipeline (HDRP)</a>, if you have not already done so.</dd></dl>
+<p><a class="anchor" id="configure-legacy-foveated-rendering"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9374"></a>
+Configure Legacy foveated rendering</h3>
+<p>In <a class="el" href="namespace_unity.html">Unity</a> 6+, set the OpenXR <b>Foveated Render API</b> option to <b>Legacy</b> to use the Meta <a class="el" href="namespace_core.html">Core</a> XR SDK, which only supports the Meta Quest family of devices. In <a class="el" href="namespace_unity.html">Unity</a> 2022, there is no option to select a <b>Foveated Rendering API</b>. Only the legacy API using the Meta <a class="el" href="namespace_core.html">Core</a> XR SDK is supported.</p>
+<ol type="1">
+<li>Install the <a href="com.unity3d.kharma:upmpackage/com.meta.xr.sdk.core">Meta Core XR SDK</a> package, if necessary. You can get this package from the <a href="https://assetstore.unity.com/packages/tools/integration/meta-xr-core-sdk-269169">Unity Asset Store</a>. The package adds the Meta OpenXR feature group to the OpenXR along with the associated features. Refer to the <a href="https://developer.oculus.com/downloads/package/meta-xr-core-sdk/68.0">Meta Developer site</a> for more information.</li>
+<li>Open the <b>Project Settings</b> window.</li>
+<li>Select the <b>XR Plug-in Management</b> settings from the list on the left.</li>
+<li>Select the <b>Android</b> tab.</li>
+<li><p class="startli">Under <b>OpenXR</b>, enable the <b>Meta XR feature group</b>, which is added when you install the Meta <a class="el" href="namespace_core.html">Core</a> SDK package. (You might be prompted to restart the <a class="el" href="namespace_unity.html">Unity</a> Editor, which you can do now or after you finish configure these settings.)</p>
+<p class="startli"><img src="../images/FoveatedRendering/xr-meta-feature-group.png" alt="Enable Meta XR feature group" class="inline"/></p>
+</li>
+<li>Select the <b>OpenXR</b> settings area (below <b>XR Plug-in Management</b>).</li>
+<li>Set the <b>Foveated Rendering API</b> option to <b>Legacy</b>.</li>
+<li>In the list of <b>OpenXR Feature Groups</b>, select <b>All Features</b>.</li>
+<li>Disable the <b>Foveated Rendering</b> feature, if it is enabled.</li>
+<li>Enable the <b>Meta XR Foveated Rendering</b> feature.</li>
+<li>(Optional) Enable the <b>Meta XR Eye Tracked Foveation</b> feature.</li>
+</ol>
+<p><img src="../images/FoveatedRendering/xr-foveation-legacy-settings.png" alt="Legacy Foveation settings" class="inline"/><br  />
+<em>Settings to enable foveated rendering with the <b>Legacy</b> API</em></p>
+<p>After you have configured the settings, you must also turn on foveated rendering at runtime. Refer to <a class="el" href="#use-the-legacy-api">Use the Legacy API</a> for more information.</p>
+<dl class="section note"><dt>Note</dt><dd>The Meta <a class="el" href="namespace_core.html">Core</a> XR SDK is a third-party package, which is not under <a class="el" href="namespace_unity.html">Unity</a> control. The OpenXR features and API it provides can change without notice.</dd></dl>
+<p><a class="anchor" id="configure-gaze-based-foveated-rendering"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9375"></a>
+Configure gaze-based foveated rendering</h3>
+<p>Devices that provide eye tracking can support gaze-based foveated rendering in which the highest resolution area is centered where the user is looking.</p>
+<p>When using the <a class="el" href="namespace_unity.html">Unity</a> <b>SRP Foveation</b> API, you do not need to enable gaze-based foveated rendering in the OpenXR settings. You do need to <a class="el" href="#use-the-srp-foveation-api">turn the feature on at runtime</a> and make sure any required permissions are enabled.</p>
+<p>When using the <b>Legacy</b>, Meta <a class="el" href="namespace_core.html">Core</a> XR SDK, you must enable the <b>Meta XR Eye Tracked Foveation</b> OpenXR feature.</p>
+<p>To use eye-tracking data, you must <a class="el" href="#request-eye-tracking-permission">Request eye-tracking permission on Android</a>. Other platforms may have similar requirements.</p>
+<p><a class="anchor" id="use-the-srp-foveation-api"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9376"></a>
+Use the SRP Foveation API</h2>
+<p>After you have configured foveated rendering in the OpenXR settings, you must also turn the feature on at runtime. If you want to use gaze-based foveated rendering, you must set a runtime flag, which might require user permission.</p>
+<p>To specify the amount, or <em>strength</em>, of the foveation effect, you must assign a value between 0 and 1 to the <a href="xref:UnityEngine.XR.XRDisplaySubsystem.foveatedRenderingLevel">XRDisplaySubsystem.foveatedRenderingLevel</a> property. The default value of zero turns foveation off altogether. A value of one is the maximum strength. Different device types can interprete this value in the way that best suits their native API. Meta Quest devices, for example, have discrete levels for setting the foveation strength: if you assign a value of <span class="tt">0.5</span> to <span class="tt">foveatedRenderingLevel</span>, the provider plug-in sets the device's <em>medium</em> foveation level.</p>
+<p>To specify that you want to use gaze-based foveated rendering, set <a href="xref:UnityEngine.XR.XRDisplaySubsystem.foveatedRenderingFlags">XRDisplaySubsystem.foveatedRenderingFlags</a> to <a href="xref:UnityEngine.XR.XRDisplaySubsystem.FoveatedRenderingFlags.GazeAllowed">FoveatedRenderingFlags.GazeAllowed</a>. If you do not set this flag, the device doesn't support gaze-based foveated rendering, or the user turns off or denies permission to use eye-tracking, then fixed foveated rendering is performed.</p>
+<p>To set either of these foveated rendering APIs, you must first get a reference to the active <a href="xref:UnityEngine.XR.XRDisplaySubsystem">XRDisplaySubsystem</a> from the <a class="el" href="namespace_unity.html">Unity</a> <a href="xref:UnityEngine.SubsystemManager">SubsystemManager</a>. <a class="el" href="namespace_unity.html">Unity</a> supports multiple subsystems of the same type, and returns a list when you get the subsystems of a given type. Ordinarily, only one <span class="tt">XRDisplaySubsystem</span> exists and you can use the lone subsystem in the <span class="tt">XRDisplaySubsystem</span> list returned by <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/SubsystemManager.GetSubsystems.html">SubsystemManager.GetSubsystems</a>.</p>
+<p>The following code example illustrates how to set foveated rendering to full strength and enable gaze-based foveation after getting the instance of the active <span class="tt">XRDisplaySubsystem</span>:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.XR;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>FoveationStarter : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">  List&lt;XRDisplaySubsystem&gt; xrDisplays = <span class="keyword">new</span> List&lt;XRDisplaySubsystem&gt;();</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">void</span> Start()</div>
+<div class="line">  {</div>
+<div class="line">    SubsystemManager.GetSubsystems(xrDisplays);</div>
+<div class="line">    <span class="keywordflow">if</span> (xrDisplays.Count == 1)</div>
+<div class="line">    {</div>
+<div class="line">      xrDisplays[0].foveatedRenderingLevel = 1.0f; <span class="comment">// Full strength</span></div>
+<div class="line">      xrDisplays[0].foveatedRenderingFlags</div>
+<div class="line">          = XRDisplaySubsystem.FoveatedRenderingFlags.GazeAllowed;</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This code example relies on methods available in <a class="el" href="namespace_unity.html">Unity</a> 6+. It does not compile in earlier versions.</dd></dl>
+<p><a class="anchor" id="use-the-legacy-api"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9377"></a>
+Use the Legacy API</h2>
+<p>This API was built only for Quest headsets; it may not be supported on other devices. You must install Meta's <a class="el" href="namespace_core.html">Core</a> XR SDK package for this API to be available.</p>
+<p>After you configured foveated rendering in the OpenXR settings, you must also turn the feature on at runtime. If you want to use gaze-based foveated rendering, you must set a runtime flag, which might require user permission.</p>
+<p>The following code example illustrates how to set foveated rendering to High and enable gaze-based foveation using the <b>Legacy API</b> and the Meta <a class="el" href="namespace_core.html">Core</a> XR SDK package:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span>UnityEngine.XR;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>FoveationStarter : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line">    {</div>
+<div class="line">        OVRManager.foveatedRenderingLevel = OVRManager.FoveatedRenderingLevel.High;</div>
+<div class="line">        OVRManager.eyeTrackedFoveatedRenderingEnabled = <span class="keyword">true</span>;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Refer to Meta's <a href="https://developer.oculus.com/reference/unity/v67/class_o_v_r_manager#acbd6d504192d2a2a7461382a4eae0715a84ec48f67b50df5ba7f823879769e0ad">OVRManager Class Reference</a> for more information.</p>
+<p><a class="anchor" id="request-eye-tracking-permission"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9378"></a>
+Request eye-tracking permission on Android</h2>
+<p>The Android platform requires the user to grant permission before your app can access eye-tracking data. Eye-tracking permission is required to use gaze-based foveated rendering.</p>
+<p>To declare that your application uses eye tracking, you must add a <span class="tt">uses-feature</span> and a <span class="tt">uses-permission</span> element to your application's Android manifest file:</p>
+<div class="fragment"><div class="line"> xml</div>
+<div class="line">&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; xmlns:tools=&quot;http://schemas.android.com/tools&quot;&gt;</div>
+<div class="line">    &lt;uses-feature android:name=&quot;oculus.software.eye_tracking&quot; android:required=&quot;false&quot; /&gt;</div>
+<div class="line">    &lt;uses-permission android:name=&quot;com.oculus.permission.EYE_TRACKING&quot; /&gt;</div>
+<div class="line">    ... the rest of the manifest elements ...</div>
+</div><!-- fragment --><p>Refer to [Declare permissions for an application](xref:um-android-permissions-declare) for instructions about how to add these and other custom elements to the Android manifest.</p>
+<p>If the user denies permission, your application uses fixed foveated rendering instead. Refer to [Request runtime permissions ](xref:um-android-requesting-permissions) for more information about handling Android permissions issues, including how to handle cases where the user has denied permission. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

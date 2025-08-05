@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Rounded Polygon Node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_rounded-_polygon-_node.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Rounded Polygon Node </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4210"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4211"></a>
+Description</h1>
+<p>Generates a rounded polygon shape based on input <b>UV</b> at the size specified by inputs <b>Width</b> and <b>Height</b>. The input <b>Sides</b> specifies the number of sides, and the input <b>Roundness</b> defines the roundness of each corner.</p>
+<p>You can connect a <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_tiling-_and-_offset-_node.html">Tiling And Offset Node</a> to offset or tile the shape. To preserve the ability to offset the shape within the UV space, the shape does not automatically repeat if you tile it. To achieve a repeating rounded polygon effect, first connect your <b>UV</b> input through a <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_fraction-_node.html">Fraction Node</a>.</p>
+<p>You can only use the Rounded Polygon Node in the <b>Fragment</b> <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-_stage.html">Shader Stage</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4212"></a>
+Ports</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Direction  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Binding  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">UV  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Vector 2  </td><td class="markdownTableBodyLeft">UV  </td><td class="markdownTableBodyLeft">Input UV value  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Width  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Rounded Polygon width  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Height  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Rounded Polygon height  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Sides  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Number of sides of the polygon  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Roundness  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Roundness of corners  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Out  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Output value  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4213"></a>
+Generated Code Example</h1>
+<p>The following example code represents one possible outcome of this node.</p>
+<div class="fragment"><div class="line">void RoundedPolygon_Func_float(float2 UV, float Width, float Height, float Sides, float Roundness, out float Out)</div>
+<div class="line">{</div>
+<div class="line">    UV = UV * 2. + float2(-1.,-1.);</div>
+<div class="line">    float epsilon = 1e-6;</div>
+<div class="line">    UV.x = UV.x / ( Width + (Width==0)*epsilon);</div>
+<div class="line">    UV.y = UV.y / ( Height + (Height==0)*epsilon);</div>
+<div class="line">    Roundness = clamp(Roundness, 1e-6, 1.);</div>
+<div class="line">    float i_sides = floor( abs( Sides ) );</div>
+<div class="line">    float fullAngle = 2. * PI / i_sides;</div>
+<div class="line">    float halfAngle = fullAngle / 2.;</div>
+<div class="line">    float opositeAngle = HALF_PI - halfAngle;</div>
+<div class="line">    float diagonal = 1. / cos( halfAngle );</div>
+<div class="line">    // Chamfer values</div>
+<div class="line">    float chamferAngle = Roundness * halfAngle; // Angle taken by the chamfer</div>
+<div class="line">    float remainingAngle = halfAngle - chamferAngle; // Angle that remains</div>
+<div class="line">    float ratio = tan(remainingAngle) / tan(halfAngle); // This is the ratio between the length of the polygon&#39;s triangle and the distance of the chamfer center to the polygon center</div>
+<div class="line">    // Center of the chamfer arc</div>
+<div class="line">    float2 chamferCenter = float2(</div>
+<div class="line">        cos(halfAngle) ,</div>
+<div class="line">        sin(halfAngle)</div>
+<div class="line">    )* ratio * diagonal;</div>
+<div class="line">    // starting of the chamfer arc</div>
+<div class="line">    float2 chamferOrigin = float2(</div>
+<div class="line">        1.,</div>
+<div class="line">        tan(remainingAngle)</div>
+<div class="line">    );</div>
+<div class="line">    // Using Al Kashi algebra, we determine:</div>
+<div class="line">    // The distance distance of the center of the chamfer to the center of the polygon (side A)</div>
+<div class="line">    float distA = length(chamferCenter);</div>
+<div class="line">    // The radius of the chamfer (side B)</div>
+<div class="line">    float distB = 1. - chamferCenter.x;</div>
+<div class="line">    // The refence length of side C, which is the distance to the chamfer start</div>
+<div class="line">    float distCref = length(chamferOrigin);</div>
+<div class="line">    // This will rescale the chamfered polygon to fit the uv space</div>
+<div class="line">    // diagonal = length(chamferCenter) + distB;</div>
+<div class="line">    float uvScale = diagonal;</div>
+<div class="line">    UV *= uvScale;</div>
+<div class="line">    float2 polaruv = float2 (</div>
+<div class="line">        atan2( UV.y, UV.x ),</div>
+<div class="line">        length(UV)</div>
+<div class="line">    );</div>
+<div class="line">    polaruv.x += HALF_PI + 2*PI;</div>
+<div class="line">    polaruv.x = fmod( polaruv.x + halfAngle, fullAngle );</div>
+<div class="line">    polaruv.x = abs(polaruv.x - halfAngle);</div>
+<div class="line">    UV = float2( cos(polaruv.x), sin(polaruv.x) ) * polaruv.y;</div>
+<div class="line">    // Calculate the angle needed for the Al Kashi algebra</div>
+<div class="line">    float angleRatio = 1. - (polaruv.x-remainingAngle) / chamferAngle;</div>
+<div class="line">    // Calculate the distance of the polygon center to the chamfer extremity</div>
+<div class="line">    float distC = sqrt( distA*distA + distB*distB - 2.*distA*distB*cos( PI - halfAngle * angleRatio ) );</div>
+<div class="line">    Out = UV.x;</div>
+<div class="line">    float chamferZone = ( halfAngle - polaruv.x ) &lt; chamferAngle;</div>
+<div class="line">    Out = lerp( UV.x, polaruv.y / distC, chamferZone );</div>
+<div class="line">    // Output this to have the shape mask instead of the distance field</div>
+<div class="line">    Out = saturate((1 - Out) / fwidth(Out));</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

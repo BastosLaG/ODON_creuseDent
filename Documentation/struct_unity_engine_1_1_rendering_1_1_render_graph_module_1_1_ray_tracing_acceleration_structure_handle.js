@@ -1,0 +1,4 @@
+var struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_ray_tracing_acceleration_structure_handle =
+[
+    [ "IsValid", "struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_ray_tracing_acceleration_structure_handle.html#ada0ba9d644d2bb5da15af84ac5cd5c8e", null ]
+];

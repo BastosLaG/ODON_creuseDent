@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: affordance-system</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2affordance-system.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">affordance-system </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8035"></a>
+autotoc_md8035</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8036"></a>
+uid: xri-affordance-system</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8037"></a>
+Affordance system</h1>
+<dl class="section warning"><dt>Avertissement</dt><dd>The affordance system namespace and classes have been deprecated as of XR Interaction Toolkit 3.0.0. The affordance system will be moved, replaced, and updated with a new interaction feedback system in a future version of the XR Interaction Toolkit.</dd></dl>
+<p>The XR Interaction Toolkit package provides an affordance system which enables users to create visual and auditory feedback to <a href="architecture.md#states">interaction states</a>. The general flow of information starts by adding an <span class="tt">Affordance State Provider</span> to the scene (typically an interactable) and pointing it to the interactable we want to monitor the interaction state of. Once it reads the current interaction state of the interactable, it then fires off a more generalized affordance state event to any subscribers, or affordance receivers. The receivers then act on the state change event and trigger the affordance effect, whether it is a material color change, transform scale, or switching out and playing an audio clip. The receivers get their configuration from a referenced <span class="tt">Affordance Theme</span> but may also be configured locally on the component itself. We recommend using theme assets to help accelerate your development process and improve consistency across your creations. You can refer to the diagram below to help visualize how everything is connected together.</p>
+<p><img src="images/affordance-system-information-flow.svg" alt="affordance-system-information-flow" style="pointer-events: none;" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8038"></a>
+Affordance state providers</h2>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentationbf7fde0a90fb4d3dea7e78a27bad35ac.html">XR Interactable Affordance State Provider</a> connects to an interactable component and reads the interaction state as it changes (Hover, Select, or Activate) to determine and provide the appropriate Affordance State to any affordance receivers subscribed to this particular provider. It is also possible to update an affordance state directly from a script without the need for checking the state of an interactable, such as through a network synchronization script. Writing a custom provider is also possible, extended the possibilities to use the affordance system for non-interactable objects as well.</p>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation201e26543c508174d5694fdfdd5e768d.html">XR Interactor Affordance State Provider</a> connects to an interactor component and reads the interaction state as it changes (Hover, Select, or Activate) to determine and provide the appropriate Affordance State to any affordance receivers subscribed to this particular provider. Futhermore, if tied to an <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-ray-interactor.html">XR Ray Interactor</a>, the ray's collision with a UGUI canvas will trigger the hover state, while the associated select input paired with a hovered canvas will also trigger the select state. Much like the interactable variant of the affordance state provider, it is also possible to update the state without checking an interactor, though if using the Ray Interactor UGUI state polling, the custom state will be overwritten. It also possible to extend this class with a custom provider.</p>
+<p>Note that if you are using click animations for Selected or Activated states, affordance transitions won't be propagated until after the animation is completed.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8039"></a>
+Affordance receivers</h2>
+<p>Affordance receivers are components that receive <span class="tt">Affordance State</span> change events and then perform specific effects using the referenced theme or configuration. Many affordance receivers handle animating tweens to achieve specific visual effects. There are various affordance receiver components for different primitive data types, such as <span class="tt">Color</span> or <span class="tt">Vector3</span> or <span class="tt">Float</span>. Custom affordance receivers can also be built to achieve a variety of effects depending on the properties you wish to enhance on or around a given object.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8040"></a>
+Affordance themes</h2>
+<p>Themes are a convenient way to encapsulate configuration for a specific type of <span class="tt">Affordance Receiver</span>. This makes it easy to create themes for any of the affordance data types and drive a uniform look and feel for the project. It also allows you to tweak settings in one place and not have to worry about updating each GameObject or prefab with those changes. Under the hood, an <span class="tt">Affordance Theme</span> is merely a <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">ScriptableObject</a> designed to use the newer <a href="https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.2/api/Unity.XR.CoreUtils.Datums.Datum-1.html">Datum</a> architecture along with some editor code to make them easier to visualize and configure.</p>
+<p>The theme contains a list of affordance states and the values that should be blended during interactions. The Audio Affordance Theme contains Audio Clip references for when the state is either entered (<b>State Entered</b>) or exited (<b>State Exited</b>), and <a class="el" href="namespace_unity.html">Unity</a> will play them using <a href="https://docs.unity3d.com/ScriptReference/AudioSource.PlayOneShot.html"><span class="tt">AudioSource.PlayOneShot</span></a>. The other Affordance Theme types (Color, Float, Vector2, Vector3, and Vector4) contains that typed value that is interpolated between two values: the start value (<b>Animation State Start Value</b>) and the target value (<b>Animation State End Value</b>). Above the list of states is the State Animation Curve. When each animation is triggered by the Affordance Receiver, it will use this curve to determine the value. 0 on the curve corresponds to the Start Value and 1 corresponds to the End Value. This animation curve can also be driven by the interaction strength or a custom script to provide even more flexibility in the way you want your effects to look and feel.</p>
+<p>The theme assets are created by using the <b>Assets</b> &gt; <b>Create</b> &gt; <b>Affordance Theme</b> menu.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8041"></a>
+How to set up your project using the affordance system</h2>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2samples-starter-assets.html">Starter Assets</a> sample contains a few different uses of various affordance effects to help understand how they are intended to be used. However, if you are starting from scratch, you can use the following steps to get started with the affordance system.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8042"></a>
+Add an XR Interactable Affordance State Provider</h3>
+<p>Pick an existing XR Interactable in your scene and create an empty child object (<b>Assets</b> &gt; <b>Create Empty</b>). Click on the newly created GameObject to bring up the Inspector. Click on <b>Add Component</b> and then navigate to <b>Affordance System</b> &gt; <b>XR Interactable Affordance State Provider</b>. Under the new component editor, locate the <b>Interactable Source</b> property and drag the parent XR Interactable object into the property. Feel free to rename the object to something meaningful like Interaction Affordance. The result will look something like the following:</p>
+<p><img src="images/affordance-state-provider.png" alt="affordance-state-provider" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8043"></a>
+Add an Affordance Receiver</h3>
+<p>From here we will be able to add affordance receivers to add effects to the interactable object based on its state. You can add the next components to the same GameObject as before or create another empty child GameObject. If you created a new child object, click on it to bring it up in the Inspector. Next, click on <b>Add Component</b> and navigate to <b>Affordance System</b> &gt; <b>Rendering</b> &gt; <b>Color Material Property Affordance Receiver</b>. This will add an additional Material Property Block Helper component which should be automatically assigned in the <b>Material Property Block Helper</b> property of the Color Material Property Affordance Receiver component. Next, drag the GameObject from the last section into the <b>Affordance State Provider</b> property on the Color Material Property Affordance Receiver component and the appropriate mesh renderer into the <b>Renderer</b> property on the Material Property Block Helper component. Last, check the box labeled <b>Replace Idle State Value With Initial Value</b> to ensure the original color of the material is used when the state returns to idle. The result will look similar to the image below.</p>
+<p><img src="images/affordance-receiver.png" alt="affordance-receiver" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8044"></a>
+Audio Affordance Receiver</h3>
+<p>It is possible to add audio effects when transitioning between affordance states using the Audio Affordance Receiver. Like other affordance receivers, you simply add a theme and connect the affordance state provider reference, but unlike other themes, audio has one shot clips that play when transitioning between states. Because target values are not smoothly blended like with other receivers, the Audio Affordance Receiver has extra considerations on which states are being entered and exited, to avoid playing clips that shouldn't be played.</p>
+<p>In practice, when moving from hover to select, select is considered a "modifier" to hover. This means that if releasing select, when holding an object for instance, the hover entered sound effect won't play again if the object previously select is still hovered on release. Similarly, when triggering the activated state from select, the select exited sound effect won't play, as it is considered a "modifier" to activated.</p>
+<p>Finally, as mentioned in the Affordance State Provider section, if you are using click animations for Selected or Activated states, repeated activation of activated trigger, faster than the click animation duration, won't trigger affordance audio clips until after the animation is completed. Feel free to disable activated click animations if this is a concern.</p>
+<p><img src="images/audio-affordance-receiver.png" alt="audio-affordance-receiver" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8045"></a>
+Adding a theme</h3>
+<p>Next we will create and setup the theme asset. In the Project window, navigate to a folder you wish to store your themes in. Open the <b>Assets</b> menu and navigate to <b>Create</b> &gt; <b>Affordance Theme</b> &gt; <b>Color Affordance Theme</b> to create the new <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">ScriptableObject</a> asset. Click on the newly created theme to bring up the Inspector window. By default, all colors will be set to black and transparent. Feel free to set the colors to match the aesthetic you are looking for. Below is an image of a fully configured theme included with the Starter Assets.</p>
+<p><img src="images/affordance-theme-color.png" alt="affordance-theme-color" class="inline"/></p>
+<p>Once the theme is configured to your liking, navigate back to the Color Material Property Affordance Receiver component created in the last section. Drag the Color Affordance Theme asset into the <b>Affordance Theme Datum</b> property. You are now ready to test it all out. Feel free to explore the other Affordance Receiver types to add helpful effects to your Interactables to help your players more easily discover them. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

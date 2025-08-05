@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: xr-origin-setup</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8core-utils_0d5b282bc7378d_2_documentation_0i_2xr-origin-setup.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">xr-origin-setup </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md7589"></a>
+autotoc_md7589</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7590"></a>
+uid: xr-core-utils-xr-origin-setup</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7591"></a>
+Add XR Origin to a scene</h1>
+<p>This <em>XR <a class="el" href="namespace_core.html">Core</a> Utilities</em> package defines the <a href="xref:Unity.XR.CoreUtils.XROrigin">XROrigin</a> component. Other XR packages use this component to provide XR Origin configurations for different types of XR applications:</p>
+<ul>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@latest/index.html">AR Foundation (com.unity.xr.arfoundation)</a> provides XR Origin GameObjects configured for AR.</li>
+<li>The <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@latest/index.html">XR Interaction Toolkit (com.unity.xr.interaction.toolkit)</a> provides XR Origin GameObjects configured for VR.</li>
+</ul>
+<p>AR Foundation and the XR Interaction Toolkit are independent packages, but can also be used together to build XR applications.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>XR Origin configuration</b>  </th><th class="markdownTableHeadLeft"><b>Purpose</b>  </th><th class="markdownTableHeadLeft"><b>Package</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>XR Origin (AR)</b>  </td><td class="markdownTableBodyLeft">Apps that support multiple XR modes, such as both HMD and hand-held configurations, and use the current <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@latest">Input System</a> package.  </td><td class="markdownTableBodyLeft"><a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@latest/index.html">AR Foundation (com.unity.xr.arfoundation)</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>XR Origin (Mobile AR)</b>  </td><td class="markdownTableBodyLeft">Apps that support hand-held AR only.  </td><td class="markdownTableBodyLeft"><a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@latest/index.html">AR Foundation (com.unity.xr.arfoundation)</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>XR Origin (VR)</b>  </td><td class="markdownTableBodyLeft">Apps that support VR only and use the current <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@latest">Input System</a> package.  </td><td class="markdownTableBodyLeft"><a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@latest/index.html">XR Interaction Toolkit (com.unity.xr.interaction.toolkit)</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Device-based</b> &gt; <b>XR Origin (VR)</b>  </td><td class="markdownTableBodyLeft">Apps that support VR only and use the legacy [Input Manager](xref:xr_input) for device-based input.  </td><td class="markdownTableBodyLeft"><a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@latest/index.html">XR Interaction Toolkit (com.unity.xr.interaction.toolkit)</a>  </td></tr>
+</table>
+<p>See [XR Origin components and properties](xref:xr-core-utils-xr-origin-reference) for information about the contents of these XR Origin configurations.</p>
+<p>Once you have installed the AR Foundation or XR Interaction Toolkit packages, you can add the appropriate XR Origin to your scene from the <b>GameObject &gt; XR</b> menu. You can also right-click in the Scene Hierarchy window and select an XR Origin option from the context menu:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Right-click in the Hierarchy window  </th><th class="markdownTableHeadCenter">Select XR Origin (Mobile AR)  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><img src="images/xr-origin-xr.png" alt="Select XR" class="inline"/>  </td><td class="markdownTableBodyCenter"><img src="images/xr-origin-mobile.png" alt="Select XR Origin (Mobile AR)" class="inline"/>  </td></tr>
+</table>
+<dl class="section note"><dt>Note</dt><dd>Without the AR Foundation or XR Interaction Toolkit packages installed, the <b>XR</b> menu only contains a <b>Convert main camera to XR Rig</b> option. This option converts the main camera to a simple <b>XR Rig</b> GameObject that configures the Camera object to track the user's XR device. <a class="el" href="namespace_unity.html">Unity</a> recommends that you use the <b>XR Origin</b> setup when possible for better compatibility across the <a class="el" href="namespace_unity.html">Unity</a> XR ecosystem.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7592"></a>
+Set up XR input</h2>
+<p>For apps that use XR controllers and the <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@latest">Input System</a> for input, you must also set up the Input System actions. The XR Interaction Toolkit package provides Starter Assets containing Input Action presets and other assets that you can use to quickly configure standard controller set ups. See the <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@latest?subfolder=/manual/samples.html">XR Interaction Toolkit Samples</a> for information about how to install and use these presets and assets.</p>
+<dl class="section note"><dt>Note</dt><dd>If your project depends on the legacy Input Manager, you can add a device-based XR Origin to a scene by right-clicking in the Hierarchy window and selecting <b>XR</b> &gt; <b>Device-based</b> &gt; <b>XR Origin (Device-based)</b>. This XR Origin configuration provides controller GameObjects that map interactions directly to controller buttons and joysticks. See <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@latest?subfolder=/manual/general-setup.html">Action-based vs Device-based behaviors</a> in the XR Interaction Toolkit manual for more information about the differences between action- and device-based input. Not all XR Interaction Toolkit features support device-based input.</dd></dl>
+<p>For additional configuration guidance about the XR Origin GameObject and its components, see the <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@latest?subfolder=/manual/general-setup.html">XR Interaction Toolkit</a> and <a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@latest?subfolder=/manual/index.html">AR Foundation</a> manuals. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

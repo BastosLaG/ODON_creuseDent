@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: OnScreen</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_on_screen.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">OnScreen </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2178"></a>
+autotoc_md2178</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2179"></a>
+uid: input-system-on-screen</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2180"></a>
+On-screen Controls</h1>
+<p>You can use on-screen Controls to simulate Input Devices with UI widgets that the user interacts with on the screen. The most prominent example is the use of stick and button widgets on touchscreens to emulate a joystick or gamepad.</p>
+<p>There are currently two Control types implemented out of the box: buttons and sticks. You can implement custom Controls by extending the base <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenControl.html"><span class="tt">OnScreenControl</span></a> class (see documentation on writing custom on screen Controls to learn more).</p>
+<p>&gt;<b>Note</b>: On-screen Controls don't have a predefined visual representation. It's up to you to set up the visual aspect of a Control (for example, by adding a sprite or UI component to the GameObject). On-screen Controls take care of the interaction logic and of setting up and generating input from interactions.</p>
+<p>Each on-screen Control uses a <a href="Controls.md#control-paths">Control path</a> to reference the Control that it should report input as. For example, the following on-screen button reports input as the right shoulder button of a gamepad:</p>
+<p><img src="Images/OnScreenButton.png" alt="OnScreenButton" class="inline"/></p>
+<p>The collection of on-screen Controls present in a Scene forms one or more <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_devices.html">Input Devices</a>. The Input System creates one Input Device for each distinct type of Device the Controls reference. For example, if one on-screen button references <span class="tt">&lt;Gamepad&gt;/buttonSouth</span> and another on-screen button references <span class="tt">&lt;Keyboard&gt;/a</span>, the Input System creates both a <span class="tt">Gamepad</span> and a <span class="tt">Keyboard</span>. This happens automatically when the components are enabled. When disabled, the Input System automatically removes the Devices again.</p>
+<p>To query the Control (and, implicitly, the Device) that an on-screen Control feeds into, you can use the <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenControl.html#UnityEngine_InputSystem_OnScreen_OnScreenControl_control"><span class="tt">OnScreenControl.control</span></a> property.</p>
+<p>&gt;<b>Note</b>: This design allows you to use on-screen Controls to create input for arbitrary Input Devices, in addition to joysticks and gamepads.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2181"></a>
+On-screen buttons</h2>
+<p>To create an on-screen button:</p>
+<ol type="1">
+<li>Add a UI <span class="tt">Button</span> object.</li>
+<li>Add the <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenButton.html"><span class="tt">OnScreenButton</span></a> component to it.</li>
+<li>Set the <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenControl.html#UnityEngine_InputSystem_OnScreen_OnScreenControl_controlPath"><span class="tt">Control Path</span></a> to refer to a <a href="../api/UnityEngine.InputSystem.Controls.ButtonControl.html"><span class="tt">ButtonControl</span></a> (for example, <span class="tt">&lt;Gamepad&gt;/buttonSouth</span>). The type of device referenced by the control path determines the type of virtual device created by the component.</li>
+</ol>
+<p><img src="Images/OnScreenButton.png" alt="OnScreenButton" class="inline"/></p>
+<p>The <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenButton.html"><span class="tt">OnScreenButton</span></a> component requires the target Control to be a <span class="tt">Button</span> Control. <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenButton.html"><span class="tt">OnScreenButton</span></a> sets the target Control value to 1 when it receives a pointer-down (<span class="tt">IPointerDownHandler.OnPointerDown</span>) event, or 0 when it receives a pointer-up (<span class="tt">IPointerUpHandler.OnPointerUp</span>) event.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2182"></a>
+On-screen sticks</h2>
+<p>To create an on-screen stick:</p>
+<ol type="1">
+<li>Create a UI <span class="tt">Image</span> object.</li>
+<li>Add the <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenStick.html"><span class="tt">OnScreenStick</span></a> component to it.</li>
+<li>Set the <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenControl.html#UnityEngine_InputSystem_OnScreen_OnScreenControl_controlPath"><span class="tt">Control Path</span></a> to refer to a <a href="../api/UnityEngine.InputSystem.Controls.Vector2Control.html"><span class="tt">Vector2Control</span></a> (for example, <span class="tt">&lt;Gamepad&gt;/leftStick</span>). The type of device referenced by the control path determines the type of virtual device created by the component.</li>
+</ol>
+<p><img src="Images/OnScreenStick.png" alt="OnScreenStick" class="inline"/></p>
+<p>The <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenStick.html"><span class="tt">OnScreenStick</span></a> component requires the target Control to be a <span class="tt">Vector2</span> Control. <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenStick.html"><span class="tt">OnScreenStick</span></a> starts the movement of the stick Control when it receives a pointer-down (<span class="tt">IPointerDownHandler.OnPointerDown</span>) event, and stops it when it receives a pointer-up (<span class="tt">IPointerUpHandler.OnPointerUp</span>) event.</p>
+<p>In-between, the stick moves according to the pointer being dragged (<span class="tt">IDragHandler.OnDrag</span>) within a box centered on the pointer-down screen point, and with an edge length defined in the component's <b>Movement Range</b> property. A movement range of 50, for example, means that the stick's on-screen area is 25 pixels up, down, left, and right of the pointer-down point on screen.</p>
+<p>If you want to be notified when the user starts and/or stops touching the on-screen stick, implement <span class="tt">IPointerDownHandler</span> and/or <span class="tt">IPointerUpHandler</span> on a component and add it to the stick <span class="tt">GameObject</span>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2183"></a>
+Isolated mode</h3>
+<p>The <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenStick.html"><span class="tt">OnScreenStick</span></a> simulates input events from the device specified in the <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenControl.html#UnityEngine_InputSystem_OnScreen_OnScreenControl_control"><span class="tt">OnScreenControl.control</span></a> property. To the Input System itself, these are normal events and can cause the paired device to change in games and applications where dynamic device switching is used, for example when the <a href="../api/UnityEngine.InputSystem.PlayerInput.html"><span class="tt">PlayerInput</span></a> component is used with the <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_neverAutoSwitchControlSchemes"><span class="tt">PlayerInput.neverAutoSwitchControlSchemes</span></a>) propety set to false. As the stick is dragged around, the paired device will alternate between the device that owns the pointer (mouse, touch, pen etc) and the device from the control path, which can result in jittery movement of the on-screen stick.</p>
+<p>Use Isolated Input Actions to fix this. This mode uses a local set of Input Action instances to drive interaction with the stick, and not the actions defined in the UI. The downside of this mode is that pointer actions will be duplicated in both the on-screen stick component and any Input Action Assets being used to drive the UI. Note that if a set of bindings is not specified for the Pointer Down Action and Pointer Move Actions, the following defaults will be used:</p>
+<ul>
+<li>Pointer Down Action<ul>
+<li><span class="tt">&lt;Mouse&gt;/leftButton</span></li>
+<li><span class="tt">&lt;Pen&gt;/tip</span></li>
+<li><span class="tt">&lt;Touchscreen&gt;/touch*/press</span></li>
+<li><span class="tt">&lt;XRController&gt;/trigger</span></li>
+</ul>
+</li>
+<li>Pointer Move Action<ul>
+<li><span class="tt">&lt;Mouse&gt;/position</span></li>
+<li><span class="tt">&lt;Pen&gt;/position</span></li>
+<li><span class="tt">&lt;Touchscreen&gt;/touch*/position</span></li>
+</ul>
+</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2184"></a>
+Writing custom on-screen Controls</h2>
+<p>You can add support for new types of <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_controls.html">Input Controls</a> by extending <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenControl.html"><span class="tt">OnScreenControl</span></a>. An easy example to follow is <a href="../api/UnityEngine.InputSystem.OnScreen.OnScreenButton.html"><span class="tt">OnScreenButton</span></a>.</p>
+<div class="fragment"><div class="line">[AddComponentMenu(<span class="stringliteral">&quot;Input/On-Screen Button&quot;</span>)]</div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>OnScreenButton : OnScreenControl, IPointerDownHandler, IPointerUpHandler</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnPointerUp(PointerEventData data)</div>
+<div class="line">    {</div>
+<div class="line">        SendValueToControl(0.0f);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> OnPointerDown(PointerEventData data)</div>
+<div class="line">    {</div>
+<div class="line">        SendValueToControl(1.0f);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    [InputControl(layout = <span class="stringliteral">&quot;Button&quot;</span>)]</div>
+<div class="line">    [SerializeField]</div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">string</span> m_ControlPath;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">string</span> controlPathInternal</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">get</span> =&gt; m_ControlPath;</div>
+<div class="line">        <span class="keyword">set</span> =&gt; m_ControlPath = value;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Actions outside of tests</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-actions-outside-tests.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Actions outside of tests </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5433"></a></p>
+<p>When writing tests, it is possible to avoid duplication of code by using the <a href="https://docs.nunit.org/articles/nunit/technical-notes/usage/SetUp-and-TearDown.html">SetUp and TearDown</a> methods built into <a href="http://www.nunit.org/">NUnit</a>. The <a class="el" href="namespace_unity.html">Unity</a> Test Framework has extended these methods with extra functionality, which can yield commands and skip frames, in the same way as <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-attribute-unitytest.html">UnityTest</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5434"></a>
+Action execution order</h1>
+<p>The actions related to a test run in the following order:</p>
+<ul>
+<li>Attributes implementing <a href="https://docs.nunit.org/articles/nunit/extending-nunit/IApplyToContext-Interface.html">IApplyToContext</a></li>
+<li>Any attribute implementing <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-outerunitytestaction.html">OuterUnityTestAction</a> has its <span class="tt">BeforeTest</span> invoked</li>
+<li><a class="el" href="class_tests.html">Tests</a> with <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2refer040be24919399c194d6c8a6e034d05ad.html">UnitySetUp</a> methods in their test class</li>
+<li>Attributes implementing <a href="https://docs.nunit.org/articles/nunit/extending-nunit/ICommandWrapper-Interface.html">IWrapSetUpTearDown</a></li>
+<li>Any method with the [SetUp]) attribute</li>
+<li><a href="https://nunit.org/docs/2.6/actionAttributes.html">Action attributes</a> have their <span class="tt">BeforeTest</span> method invoked</li>
+<li>Attributes implementing <a href="https://docs.nunit.org/articles/nunit/extending-nunit/ICommandWrapper-Interface.html">IWrapTestMethod</a> <br  />
+</li>
+<li><b>The test itself runs</b></li>
+<li><a href="https://nunit.org/docs/2.6/actionAttributes.html">Action attributes</a> have their <span class="tt">AfterTest</span> method invoked</li>
+<li>Any method with the <a href="https://docs.nunit.org/articles/nunit/technical-notes/usage/SetUp-and-TearDown.html">TearDown</a> attribute</li>
+<li><a class="el" href="class_tests.html">Tests</a> with <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2refer040be24919399c194d6c8a6e034d05ad.html">UnityTearDown</a> methods in their test class</li>
+<li>Any <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-outerunitytestaction.html">OuterUnityTestAction</a> has its <span class="tt">AfterTest</span> invoked</li>
+</ul>
+<p>The list of actions is the same for both <span class="tt">Test</span> and <span class="tt">UnityTest</span>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5435"></a>
+Execution order flow</h2>
+<p><img src="./images/execution-order-full.svg" alt="Action Execution Order" style="pointer-events: none;" class="inline"/></p>
+<blockquote class="doxtable">
+<p><b>Note</b>: Some browsers do not support SVG image files. If the image above does not display properly (for example, if you cannot see any text), please try another browser, such as <a href="https://www.google.com/chrome/">Google Chrome</a> or <a href="https://www.mozilla.org">Mozilla Firefox</a>. </p>
+</blockquote>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5436"></a>
+Domain Reloads</h1>
+<p>In <b>Edit Mode</b> tests it is possible to yield instructions that can result in a domain reload, such as entering or exiting <b>Play Mode</b> (see <a class="el" href="md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2reference-custom-yield-instructions.html">Custom yield instructions</a>). When a domain reload happens, all non-Unity actions (such as <span class="tt">OneTimeSetup</span> and <span class="tt">Setup</span>) are rerun before the code, which initiated the domain reload, continues. <a class="el" href="namespace_unity.html">Unity</a> actions (such as <span class="tt">UnitySetup</span>) are not rerun. If the <a class="el" href="namespace_unity.html">Unity</a> action is the code that initiated the domain reload, then the rest of the code in the <span class="tt">UnitySetup</span> method runs after the domain reload. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

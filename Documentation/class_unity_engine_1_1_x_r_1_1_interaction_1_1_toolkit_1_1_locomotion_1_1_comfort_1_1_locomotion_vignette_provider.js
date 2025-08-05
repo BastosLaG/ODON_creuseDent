@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_locomotion_vignette_provider =
+[
+    [ "enabled", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_locomotion_vignette_provider.html#a9a17d304df87cc5167a280dcca3f796a", null ],
+    [ "locomotionProvider", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_locomotion_vignette_provider.html#a528473dc037c3e5dcdb646910aaeb3bc", null ],
+    [ "overrideDefaultParameters", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_locomotion_vignette_provider.html#af9bea0d5f94d5e54537f0640650c6e0c", null ],
+    [ "overrideParameters", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_locomotion_vignette_provider.html#a28f2d23550a6d46458a39e042b797a9e", null ],
+    [ "vignetteParameters", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_locomotion_vignette_provider.html#ad15251522a9ef71a983fde00c028dc6b", null ]
+];

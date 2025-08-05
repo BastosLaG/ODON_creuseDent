@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: curve-visual-controller</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2curve-visual-controller.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">curve-visual-controller </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8168"></a>
+autotoc_md8168</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8169"></a>
+uid: xri-curve-visual-controller</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8170"></a>
+Curve Visual Controller</h1>
+<p>The <span class="tt">CurveVisualController</span> component is designed to provide a versatile and configurable controller for a Line Renderer component, based on data provided from an interactor implementing <span class="tt">ICurveInteractionDataProvider</span> to visually represent it.</p>
+<p>It uses a configurable origin and direction, along with end point data from the Curve Data Provider, to generate a bezier curve that masks discrepancies between divergent origins, and mask any stabilization applied.</p>
+<p>Importantly, the per-state line properties allow for dynamic adjustment of the line's visual properties based on the state of the curve data provider, according to what the <span class="tt">EndPointType</span> and selection data provide. In practice this allows for animated color, line width and bend properties to be applied to the line renderer, based on the state of the interactor implementing <span class="tt">ICurveInteractionDataProvider</span>.</p>
+<p>This component also has many advanced configuration options, including:</p><ul>
+<li>Support for different line dynamics modes (<span class="tt">Traditional</span>, <span class="tt">RetractOnHitLoss</span>, and <span class="tt">ExpandFromHitPoint</span>).</li>
+<li>Customizable visual settings, including the number of points for curve creation and maximum curve extension distance.</li>
+<li>Control over line dynamics, such as retraction delay and duration, extension rate, and expansion rate.</li>
+<li>Advanced curve adjustments, including mid-point computation for complex curves and snapping options to attach points or snap volumes.</li>
+<li>Comprehensive color settings, including the ability to change and blend the color gradient based on different states (e.g., hit detection).</li>
+<li>End-point type-specific line configuration, allowing for customized line properties depending on the type of interaction detected (e.g., UI hit, non-UI hit).</li>
+<li>Material settings to swap line renderer's material based whether the data provider reports an empty hit, to enable the use of a material that doesn't write to depth and avoid z-fighting.</li>
+<li>Use of <a class="el" href="namespace_unity.html">Unity</a>'s <a class="el" href="namespace_burst.html">Burst</a> compiler when possible to accelerate the computation of the complex curve mathematics.</li>
+</ul>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Line Renderer</b>  </td><td class="markdownTableBodyNone">Line renderer to control.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Curve Visual Object</b>  </td><td class="markdownTableBodyNone">Curve data source used to generate the visual curve.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Override Line Origin</b>  </td><td class="markdownTableBodyNone">Indicates whether to override the line origin with a custom transform.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Line Origin Transform</b>  </td><td class="markdownTableBodyNone">The transform that determines the origin position and direction of the line when overriding.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Customize Line Properties For State</b>  </td><td class="markdownTableBodyNone">Indicates whether to customize line properties for different endpoint type states.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Line Property Animation Speed</b>  </td><td class="markdownTableBodyNone">Speed at which the line width changes when transitioning between states.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>No Valid Hit Properties</b>  </td><td class="markdownTableBodyNone">Line properties when no hit is detected or when over an object that cannot be interacted with.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>UI Hit Properties</b>  </td><td class="markdownTableBodyNone">Line properties when a valid UI hit is detected.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>UI Press Properties</b>  </td><td class="markdownTableBodyNone">Line properties when a valid UI press hit is detected.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Hover Hit Properties</b>  </td><td class="markdownTableBodyNone">Line properties when a valid non-UI hit is detected.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Select Hit Properties</b>  </td><td class="markdownTableBodyNone">Line properties when a valid selection is detected.  </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Line Properties</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Smoothly Curve Line</b>  </td><td class="markdownTableBodyNone">Determine if the line should smoothly curve when this state property is active. If false, a straight line will be drawn.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Line Bend Ratio</b>  </td><td class="markdownTableBodyNone">Ratio to control the bend of the line by adjusting the mid-point. A value of 1 defaults to a straight line.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Adjust Width</b>  </td><td class="markdownTableBodyNone">Determine if the line width should be customized from defaults when this state property is active.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Start Width</b>  </td><td class="markdownTableBodyNone">Width of the line at the start.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>End Width</b>  </td><td class="markdownTableBodyNone">Width of the line at the end.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>End Width Scale Distance Factor</b>  </td><td class="markdownTableBodyNone">If greater than 0, the curve end width will be scaled based on the the percentage of the line length to the max visual curve distance, multiplied by the scale factor.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Adjust Gradient</b>  </td><td class="markdownTableBodyNone">Determine if the line color should change when this state property is active.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Gradient</b>  </td><td class="markdownTableBodyNone">Color gradient to use when this state property is active.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Customize Expand Line Draw Percent</b>  </td><td class="markdownTableBodyNone">Determine if the line mode expansion should be customized from defaults.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Expand Mode Line Draw Percent</b>  </td><td class="markdownTableBodyNone">Percent of the line to draw when using the expand from hit point mode when this state property is active.  </td></tr>
+</table>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Advanced Properties</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Visual Point Count</b>  </td><td class="markdownTableBodyNone">Number of points used to create the visual curve.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Max Visual Curve Distance</b>  </td><td class="markdownTableBodyNone">Maximum distance the visual curve can extend.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Resting Visual Line Length</b>  </td><td class="markdownTableBodyNone">Default length of the line when not extended or retracted.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Compute Mid Point With Complex Curves</b>  </td><td class="markdownTableBodyNone">Determines if the mid-point is computed for curves with more than 1 segment.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Snap To Selected Attach If Available</b>  </td><td class="markdownTableBodyNone">Snaps the line to a selected attachment point if available.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Snap To Snap Volume If Available</b>  </td><td class="markdownTableBodyNone">Snaps the line to a snap volume if available.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Curve Start Offset</b>  </td><td class="markdownTableBodyNone">Offset at the start of the curve to avoid overlap with the origin.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Curve End Offset</b>  </td><td class="markdownTableBodyNone">Offset at the end of the curve in meters to avoid overlap with the target.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Render Line In World Space</b>  </td><td class="markdownTableBodyNone">If true the line will be rendered in world space, otherwise it will be rendered in local space. Set this to false in the event that high speed locomotion causes some visual artifacts with the line renderer.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Extend Line To Empty Hit</b>  </td><td class="markdownTableBodyNone">Determines if the line should extend out to empty hits, if not, length will be maintained.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Extension Rate</b>  </td><td class="markdownTableBodyNone">Rate at which the line extends to meet hit point. Set to 0 for instant extension.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Line Dynamics Mode</b>  </td><td class="markdownTableBodyNone">Specifies the dynamics mode of the line.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Retract Delay</b>  </td><td class="markdownTableBodyNone">Delay before the line starts retracting after extending.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Retract Duration</b>  </td><td class="markdownTableBodyNone">Duration it takes for the line to fully retract.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>End Point Expansion Rate</b>  </td><td class="markdownTableBodyNone">Rate at which the end point expands and retracts to and from the end point.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Swap Materials</b>  </td><td class="markdownTableBodyNone">Indicates whether to swap the line renderer's material for different states.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Normal Line Material</b>  </td><td class="markdownTableBodyNone">Material to use in all cases other than when over 3D geometry that is not a valid interactable target.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Empty Hit Material</b>  </td><td class="markdownTableBodyNone">Material to use when over 3D geometry that is not a valid interactable target.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

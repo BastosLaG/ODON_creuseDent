@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Changelog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8searcher_0d1e17ce91558d_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Changelog </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md3134"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3135"></a>
+[4.9.3] - 2025-01-06</h1>
+<ul>
+<li>Fixed a bug where spaces are removed when highlighted.</li>
+<li>Changed VisualSplitter to twoPaneSplitView and updated indentation</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3136"></a>
+[4.9.2] - 2022-02-22</h1>
+<ul>
+<li>Fixed a bug that stopped keyboard keys from affecting navigation and interaction with search results list, unless user explicitly focused/click on list using the mouse [1396759]</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3137"></a>
+[4.9.1] - 2021-10-05</h1>
+<ul>
+<li>Fixed a usability issue where in some cases searcher would suggest one collapsed category of results that user would have to manually expand anyway</li>
+<li>Fixed bug that caused incorrect search results with non whitespaced queries for nodes with spaces in their name and for subgraphs [1359158]</li>
+<li>Fixed bug that causes search results to not be visible sometimes in the searcher window [1366061]</li>
+<li>Fixed bug that causes exceptions to be thrown when using the up/down arrow keys with search list focused [1358016]</li>
+<li>Fixed bug that causes some searcher items to be irreversibly collapsed due to expand icon disappearing on collapsing those items [1366074]</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3138"></a>
+[4.9.0] - 2021-09-07</h1>
+<ul>
+<li>Remove Lucene API and dlls</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3139"></a>
+[4.8.0] - 2021-02-17</h1>
+<ul>
+<li>Added ability for clients of searcher window to filter and prioritize search results as they need</li>
+<li>Fixed bug that causes searcher window to prioritize categories over node entries of the same name [case 1304055]</li>
+<li>Fixed bug that causes searcher window to close when double-clicking a category [case 1302267]</li>
+<li>Fixed bug that causes searcher window to be offset too far when accounting for host window boundaries</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3140"></a>
+[4.7.1] - 2020-10-15</h1>
+<ul>
+<li>Fix Regex error during highlighting when the query contains a backslash</li>
+<li>Fix serialization depth warning caused by a property's backing field getting serialized</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3141"></a>
+[4.7.0] - 2020-08-11</h1>
+<ul>
+<li>Added Lucene.Net DLLs and first version of the LuceneDatabase</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3142"></a>
+[4.6.0] - 2020-07-27</h1>
+<ul>
+<li>Added support for multi-select, enabled via MultiSelectEnabled in the SearcherAdapter.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3143"></a>
+[4.5.0] - 2020-07-15</h1>
+<ul>
+<li>Add support for displaying icons in SearcherItem.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3144"></a>
+[4.4.0] - 2020-07-13</h1>
+<ul>
+<li>Add custom UserData field to SearcherItem.</li>
+<li>Add SearcherTreeUtility to create a SearcherItem tree from a flat list of paths.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3145"></a>
+[4.3.1] - 2020-06-08</h1>
+<ul>
+<li>Fix bug that cause keyboard navigation to fail. [case 1253544]</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3146"></a>
+[4.3.0] - 2020-05-27</h1>
+<p>Package: <a href="https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.3.0-preview.tgz">https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.3.0-preview.tgz</a></p>
+<ul>
+<li>Bump minor version for synonyms.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3147"></a>
+[4.2.0] - 2020-04-30</h1>
+<p>Package: <a href="https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.2.0-preview.tgz">https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.2.0-preview.tgz</a></p>
+<ul>
+<li>Bump to minor version for API validation.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3148"></a>
+[4.1.1] - 2020-04-30</h1>
+<p>Package: <a href="https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.1.1-preview.tgz">https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.1.1-preview.tgz</a></p>
+<ul>
+<li>Add all children is now an adapter override.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3149"></a>
+[4.1.0] - 2020-03-20</h1>
+<p>Package: <a href="https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.1.0-preview.tgz">https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.1.0-preview.tgz</a></p>
+<ul>
+<li>Improve matching algorithm</li>
+<li>Add a splitter between searcher and details panel</li>
+<li>Fix adding all children of matching expanded categories</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3150"></a>
+[4.0.9] - 2019-10-22</h1>
+<p>Package: <a href="https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.9-preview.tgz">https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.9-preview.tgz</a></p>
+<ul>
+<li>Update ListView API</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3151"></a>
+[4.0.8] - 2019-09-16</h1>
+<p>Package: <a href="https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.8-preview.tgz">https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.8-preview.tgz</a></p>
+<ul>
+<li>Made SearcherItem Name property virtual</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3152"></a>
+[4.0.7] - 2019-08-29</h1>
+<p>Package: <a href="https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.7-preview.tgz">https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.7-preview.tgz</a></p>
+<ul>
+<li>Fix bold fonts (case 1178374)</li>
+<li>case 1178373 and 1071573014: minor examples tweaks</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3153"></a>
+[4.0.6] - 2019-08-01</h1>
+<p>Package: <a href="https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.6-preview.tgz">https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.6-preview.tgz</a></p>
+<ul>
+<li>Fix bug where items were selected twice when using keyboard inputs</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3154"></a>
+[4.0.5] - 2019-07-26</h1>
+<p>Package: <a href="https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.5-preview.tgz">https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.5-preview.tgz</a></p>
+<ul>
+<li>Fix searcher look to match Northstar changes</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3155"></a>
+[4.0.4] - 2019-07-23</h1>
+<p>Package: <a href="https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.4-preview.tgz">https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.4-preview.tgz</a></p>
+<ul>
+<li>Change the default size when the searcher has a details panel</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3156"></a>
+[4.0.3] - 2019-06-11</h1>
+<p>Package: <a href="https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.3-preview.tgz">https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.3-preview.tgz</a></p>
+<ul>
+<li>Added ability to use capital letters in a search bar</li>
+<li>Bugfix: Search bar focus after the escape button pressed</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3157"></a>
+[4.0.2] - 2019-05-24</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/4.0.2-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/4.0.2-preview</a></p>
+<ul>
+<li>API Make Match() virtual again in SearcherDatabase</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3158"></a>
+[4.0.1] - 2019-04-30</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/4.0.1-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/4.0.1-preview</a></p>
+<ul>
+<li>Bugfix: [MacOs] Fix issue where the searcher moves on the top left corner while resizing/moving</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3159"></a>
+[4.0.0] - 2019-04-24</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/4.0.0-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/4.0.0-preview</a></p>
+<ul>
+<li>Cleanup for promotion to production</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3160"></a>
+[3.0.12] - 2019-04-17</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.12">https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.12</a></p>
+<ul>
+<li>API: Make SearcherField public again</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3161"></a>
+[3.0.11] - 2019-04-15</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.11">https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.11</a></p>
+<ul>
+<li>Fix all issues flagged by ReSharper</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3162"></a>
+[3.0.10] - 2019-03-26</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.10">https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.10</a></p>
+<ul>
+<li>fix CI</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3163"></a>
+[3.0.9] - 2019-03-24</h1>
+<p>Package: none</p>
+<ul>
+<li>Add Yamato CI config</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3164"></a>
+[3.0.8] - 2019-03-24</h1>
+<p>Package: none</p>
+<ul>
+<li>Bugfix: Autocomplete text was misaligned.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3165"></a>
+[3.0.7] - 2019-02-28</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.7">https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.7</a></p>
+<ul>
+<li>API: Remove Experimental API reference.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3166"></a>
+[3.0.6] - 2019-09-27</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.6">https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.6</a></p>
+<ul>
+<li>UI: Restyling</li>
+<li>API: Add public ctor to SearcherDatabase</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3167"></a>
+[3.0.5] - 2018-12-18</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.5">https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.5</a></p>
+<ul>
+<li>Bugfix: Focus search text field when window is displayed</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3168"></a>
+[3.0.4] - 2018-11-30</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.4">https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.4</a></p>
+<ul>
+<li>Trigger callback when an item is selected instead of when the details panel is displayed</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3169"></a>
+[3.0.3] - 2018-11-28</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.3">https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.3</a></p>
+<ul>
+<li>Add alignments</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3170"></a>
+[3.0.2] - 2018-11-22</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.2">https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.2</a></p>
+<ul>
+<li>Bugfix: Searcher autocomplete label now bold to match text input style</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3171"></a>
+[3.0.1] - 2018-11-20</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.1">https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.1</a></p>
+<ul>
+<li>Bugfix</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3172"></a>
+[3.0.0] - 2018-11-20</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.0">https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.0</a></p>
+<ul>
+<li>Restyling and move + resize</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3173"></a>
+[2.1.1] - 2018-11-12</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/2.1.1">https://bintray.com/unity/unity-staging/com.unity.searcher/2.1.1</a></p>
+<ul>
+<li>Fix text input filtering</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3174"></a>
+[2.1.0] - 2018-11-05</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/2.1.0">https://bintray.com/unity/unity-staging/com.unity.searcher/2.1.0</a></p>
+<ul>
+<li>UIElements compatibility update</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3175"></a>
+[2.0.6] - 2018-08-15</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.6-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.6-preview</a></p>
+<ul>
+<li>Add possibility to sort items</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3176"></a>
+[2.0.5] - 2018-08-15</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.5-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.5-preview</a></p>
+<ul>
+<li>Filtering fix</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3177"></a>
+[2.0.4] - 2018-08-08</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.4-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.4-preview</a></p>
+<ul>
+<li>Added hooks for analytics</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3178"></a>
+[2.0.3] - 2018-08-07</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.3-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.3-preview</a></p>
+<ul>
+<li>The matchFilter is now also applied at database initial setup time</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3179"></a>
+[2.0.2] - 2018-08-02</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.2-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.2-preview</a></p>
+<ul>
+<li>Added matchFilter delegate on SearcherDatabase to further control the match criteria</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3180"></a>
+[2.0.1] - 2018-07-13</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.1-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.1-preview</a></p>
+<ul>
+<li>Fixed Exception when a whitespace query is entered</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3181"></a>
+[2.0.0] - 2018-07-12</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.0-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.0-preview</a></p>
+<ul>
+<li>Created a base class for Databases, renamed SearcherDatabase to LuceneDatabase, add a brand new SearcherDatabase written from scratch</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3182"></a>
+[1.0.6] - 2018-06-21</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.6-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.6-preview</a></p>
+<ul>
+<li>hotfix for left arrow on a child that cannot be collapsed will select the parent feature</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3183"></a>
+[1.0.5] - 2018-06-21</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.5-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.5-preview</a></p>
+<ul>
+<li>fixed an draw issue when expanding and collapsing an item on a small list - issue #25</li>
+<li>pressing left arrow on a child that cannot be collapsed will select the parent</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3184"></a>
+[1.0.4] - 2018-05-16</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.4-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.4-preview</a></p>
+<ul>
+<li>fixed compilation error with latest trunk (around styles.flex)</li>
+<li>added third party notices file</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3185"></a>
+[1.0.3] - 2018-05-03</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.3-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.3-preview</a></p>
+<ul>
+<li>window close due to focus loss will now trigger the selection callback with null</li>
+<li>fixed potential null ref exception in sample code</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3186"></a>
+[1.0.2] - 2018-04-30</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.2-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.2-preview</a></p>
+<ul>
+<li>removed AutoCompleter in favor of a more robust top-result based approach</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3187"></a>
+[1.0.1] - 2018-04-26</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.1-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.1-preview</a></p>
+<ul>
+<li>now showing children of matching items - issue #19</li>
+<li>fixed completion scoring with multiple databases</li>
+<li>search results in general have been improved</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3188"></a>
+[1.0.0] - 2018-04-25</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.0-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.0-preview</a></p>
+<ul>
+<li>added basic tests - issue #18</li>
+<li>added a README and documentation</li>
+<li>fixed Searcher.Search() not returning anything if query contained capital letters - issue #22</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3189"></a>
+[0.1.3] - 2018-04-23</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.3-preview">https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.3-preview</a></p>
+<ul>
+<li>added ability to add a title to the Searcher window - feature #3</li>
+<li>removed Searcher arrow and moved default display point to top-right corner - related issues #2, #12, #16</li>
+<li>fixed lingering arrow when bring Searcher window up from Inspector - issue #2</li>
+<li>fixed SearcherWindow.Show() to always take world space display location - issue #17</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3190"></a>
+[0.1.2] - 2018-04-18</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.2-experimental">https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.2-experimental</a></p>
+<ul>
+<li>fixed Searcher's list is visually cut off when closing a parent SearcherItem - issue #9</li>
+<li>scroll to selected item/best result</li>
+<li>add parents field, do not autocomplete it, search using a multi phrase query, auto create the parents path in overwritePath()</li>
+<li>fixed window arrow being removed AFTER the target window repaint, leaving remnant arrwos sometimes - issue #6</li>
+<li>fixed Null Ref Exception when getting the selected item of an empty listview. only get it if relevant</li>
+<li>fixed bug where child was not under parent in Searcher</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3191"></a>
+[0.1.1] - 2018-03-21</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.1-experimental">https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.1-experimental</a></p>
+<ul>
+<li>Minor fixes for VisualScripting</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3192"></a>
+[0.1.0] - 2018-03-05</h1>
+<p>Package: <a href="https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.0-experimental">https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.0-experimental</a></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md3193"></a>
+This is the first release of <em>Unity Package Searcher</em>.</h2>
+<p>General search window for use in the Editor. First target use is for GraphView node search. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

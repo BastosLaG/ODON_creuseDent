@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Examples</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-999abaa0abfa063202877e78a7bf54b0.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Examples </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4516"></a></p>
+<p>These example shaders are built using the subgraph nodes. They show how the subgraph nodes work and how you can combine them to create backgrounds, buttons, and meters.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4517"></a>
+Backgrounds</h1>
+<p>The background examples are shaders that you can assign to Canvas Image objects that serve as backgrounds for other UI elements.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4518"></a>
+80sSunset</h2>
+<p>This example combines the LinearTime, Perspective, Move, SquareTiles, Bars, and AntiAliasing nodes to generate a perspective grid that scrolls into the distance.</p>
+<p>Library Subgraph Nodes used in this example:</p><ul>
+<li>Perspective</li>
+<li>LinearTime</li>
+<li>Move</li>
+<li>SquareTiles</li>
+<li>LinearGradient</li>
+<li>Bars</li>
+<li>AntiAliasing</li>
+<li>Gradients</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4519"></a>
+Animated Clouds</h2>
+<p>This example combines animated procedural noise to create interesting dynamic patterns.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4520"></a>
+Blurred Hexagon</h2>
+<p>This example uses the SceneColorBlurred node to create a blurred version of the scene behind the user interface. It also uses the HexagonTiles node to generate a hexagon grid pattern. You can use the HexagonDisolve parameter to shrink and grow the size of the hexagons, which makes the pattern appear to dissolve.</p>
+<p>Library Subgraph Nodes used in this example:</p><ul>
+<li>SceneColorBlurred</li>
+<li>HexagonTiles</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4521"></a>
+Halftone</h2>
+<p>This example uses the Halftone node to convert the rendered scene behind the UI elements into a halftone pattern. It converts each of the three channels (red, green, and blue) into a halftone dot pattern, then recombines them to create the final image.</p>
+<p>Library Subgraph Nodes used in this example:</p><ul>
+<li>Halftone</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4522"></a>
+LavaLamp</h2>
+<p>This is an illustration of how distorted circle shapes can be animated to move around in random directions, and how signed distance field shapes can be blended together using the Smooth output of the SDFUnite node to merge the shapes.</p>
+<p>Library Subgraph Nodes used in this example:</p><ul>
+<li>SineTime</li>
+<li>Move</li>
+<li>Circle</li>
+<li>SDFUnite</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4523"></a>
+Pixelation</h2>
+<p>This example shows how to use the PosterizeUV node to quantize the UV coordinates used to sample the scene. The result is a version of the scene that appears to be made of larger pixels.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>PosterizeUV</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4524"></a>
+RoundedRectangleBubble</h2>
+<p>This example shows how to create a rounded frame as a background, including an outline and a drop shadow, for other UI elements. To maintain the correct aspect ratio of the rounded corners in this shader, connect the exposed WidthHeight parameter of this shader to the UI Image element’s Width and Height parameters. You can do this with the ImageSize script. Refer to <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-60df38e7db7cca847eefc2995f729540.html">How to make shapes that adapt to the aspect ratio of the UI element</a> for details on how to accomplish this.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>Scale</li>
+<li>LinearGradient</li>
+<li>Move</li>
+<li>Rectangle</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4525"></a>
+TechGrid</h2>
+<p>This example uses the SquareTiles node to generate a grid pattern and the AnimatedClouds node to create a smooth noise. These effects together create a nice tech grid for a background.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>AnimatedClouds</li>
+<li>SquareTiles</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4526"></a>
+WarpedGradient</h2>
+<p>This example shows how to warp UV coordinates with procedural noise and then use those warped coordinates to generate a deformed and blurry circle. It also darkens the corners of the screen using the Vignette node.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>Move</li>
+<li>Circle</li>
+<li>Vignette</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4527"></a>
+Buttons</h1>
+<p><img src="images/UITools-buttons.png" alt="" class="inline"/> These examples show how to create buttons of various visual styles. Each button has exposed parameters that control the button’s visual states - selected, pressed, and active. In the example scene, you can take a look at how these material parameters are connected to the button’s state events to drive the appearance of the button.</p>
+<p>Many shape elements of the buttons use the AntiAliasing node which converts SDFs and gradients to perfectly anti-aliased shapes, regardless of scale or camera position. For more details on how to accomplish this, refer to <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-c07819af6af039643bc51376f963be75.html">How to create a resolution-independent shape</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4528"></a>
+AquaButton</h2>
+<p>This example shows how to create an aqua-style button and includes a specular highlight, gradient shading, a fresnel outline, and a colored drop shadow. It adjusts to the aspect ratio of the button object it’s assigned to using the WidthHeight parameter. In the sample scene, notice that this material parameter is connected to the UI object’s width and height values using the ImageSize script.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>Move</li>
+<li>AspectRatio</li>
+<li>AnimatedSheen</li>
+<li>Pill</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4529"></a>
+SciFiButton</h2>
+<p>This example uses multiple circular elements and illustrates how multiple elements can be combined with subtract, maximum, lerp, and multiply.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>Circle</li>
+<li>CircleSegments</li>
+<li>AntiAliasing</li>
+<li>Scale</li>
+<li>PlayerIcon</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4530"></a>
+SciFiButton2</h2>
+<p>This button example is similar to the Tech Grid background. It uses the SquareTiles node to create a grid and the AnimatedClouds node to create a smooth noise background. It also illustrates the use of the Tilt node to turn the rectangle shape into a parallelogram.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>AspectRatio</li>
+<li>LinearTime</li>
+<li>CircleSegments</li>
+<li>Rectangle</li>
+<li>AntiAliasing</li>
+<li>AnimatedSheen</li>
+<li>SquareTiles</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4531"></a>
+SimpleButton</h2>
+<p>This is an example of how you can create a simple button with a smooth gradient color, a drop shadow, and Selected, Pressed, and Active states.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>Move</li>
+<li>Scale</li>
+<li>LinearGradient</li>
+<li>Rectangle</li>
+<li>AntiAliasing</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4532"></a>
+Indicators</h1>
+<p><img src="images/UITools-meters2.png" alt="" class="inline"/> These UI elements indicate things to the player visually such as health level, ammo count, shield power, etc. All of them have an exposed material parameter called “Health” that drives the level of the meter. Using a script, you can connect this parameter to any value in your project to indicate its level to the player.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4533"></a>
+AquaMeter</h2>
+<p>The style of this meter matches the AquaButton example - but instead of exposing button states, it has a controllable fill meter.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>AspectRatio</li>
+<li>Pill</li>
+<li>AntiAliasing</li>
+<li>HistogramScan</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4534"></a>
+DialMeter</h2>
+<p>This example uses polar coordinates to create a circular-shaped meter. It also uses drop-shadows on both the inner circle and the outer shape. The player icon at the center could be replaced with a texture sample or another SDF shape.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>AspectRatio</li>
+<li>Pill</li>
+<li>AntiAliasing</li>
+<li>HistogramScan</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4535"></a>
+FantasyMeter</h2>
+<p>This example could be used as a health or mana indicator for a fantasy game. It uses the SphereGradient node to generate fake lighting and reflections based on a procedurally-generated sphere shape. The sphere defaults to being filled with red liquid, but you can easily change the color to anything you like by using the exposed Color parameter.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>LinearGradient</li>
+<li>PosterizeGradient</li>
+<li>Hash11</li>
+<li>LinearTime</li>
+<li>GridTiles</li>
+<li>Move</li>
+<li>Circle</li>
+<li>HistogramScan</li>
+<li>Waves</li>
+<li>AntiAliasing</li>
+<li>Gradients</li>
+<li>SphereGradient</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4536"></a>
+SciFiMeter</h2>
+<p>This meter could be used to indicate ammo or shield level in a sci-fi-themed game. The cool thing about this one is that it starts to shake when the indicator gets low - to emphasize the urgency of low ammo or shields.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>Shake</li>
+<li>AspectRatio</li>
+<li>Tilt</li>
+<li>Rectangle</li>
+<li>AntiAliasing</li>
+<li>WindowBlinds</li>
+<li>PosterizeGradient</li>
+<li>HistogramScan</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4537"></a>
+Progress Bars</h1>
+<p><img src="images/UITools-meters.png" alt="" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4538"></a>
+FancyLoading</h2>
+<p>This is a circle that’s made of circles. Each circle starts large and then gets smaller over time and the effect is offset so it happens in a wave pattern. The larger circle pattern also appears to move and change perspective over time as if it were tilting around in a 3D space. These effects are all achieved by chaining together various nodes from the Subgraph Library.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>SineTime</li>
+<li>Perspective</li>
+<li>Scale</li>
+<li>Move</li>
+<li>LinearTime</li>
+<li>GridTiles</li>
+<li>Circle</li>
+<li>AntiAliasing</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4539"></a>
+GradientBar</h2>
+<p>This is a pill-shaped bar that fills up as the progress parameter increases from zero to one. The aspect ratio adapts if it’s correctly connected to the width and height parameters of the Canvas Image element it’s assigned to.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>Move</li>
+<li>Pill</li>
+<li>AntiAliasing</li>
+<li>Invert</li>
+<li>LinearGradient</li>
+<li>Scale</li>
+<li>Gradients</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4540"></a>
+ProgressCircle</h2>
+<p>This is a round dial that fills up in a circle shape as the progress parameter increases from zero to one. The start color and end color are exposed as parameters and can be adjusted to create different looks.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>Invert</li>
+<li>PosterizeGradient</li>
+<li>HistogramScan</li>
+<li>Circle</li>
+<li>AntiAliasing</li>
+<li>CircleSegments</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4541"></a>
+SimpleLoading</h2>
+<p>This is a circle made of pill-shaped elements that fade from white to black over time. Each element fades in a wave-like pattern that appears to go around the circle. This type of animation is very commonly used as a loading indicator.</p>
+<p>Library Subgraph Nodes used in this sample:</p><ul>
+<li>Tilt</li>
+<li>Scale</li>
+<li>LinearTime</li>
+<li>GridTiles</li>
+<li>Pill</li>
+<li>AntiAliasing </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Add ports to a Custom C# node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node-add-ports.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Add ports to a Custom C# node </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7046"></a></p>
+<dl class="section note"><dt>Note</dt><dd>To add ports to your node, you must create the C# file for the node. [!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snip0a2e7a7672e7b62c96b0494e578dd066.html">vs-tasks-note-end</a>]</dd></dl>
+<p>After you create a Custom C# node, add ports to allow the node to send and receive data or trigger other nodes in a Script Graph.</p>
+<p>To add ports to a node:</p>
+<ol type="1">
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-project-window.html">vs-open-project-window</a>]</li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snip7a512cc65c9c6f504fc0f4fdb8aa8624.html">vs-open-existing-external-code</a>]</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7047"></a>
+Add control ports</h1>
+<ol type="1">
+<li>In your external editor, under the class definition for the node, add two public variables: one with a <b>ControlInput</b> type and one with a <b>ControlOutput</b> type.</li>
+<li><p class="startli">In the <span class="tt">Definition</span> method for the node, use the variables to define the control ports, as shown below:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   <span class="keyword">using </span>System;</div>
+<div class="line">   <span class="keyword">using </span>Unity.VisualScripting;</div>
+<div class="line">   <span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">public</span> <span class="keyword">class </span>MyNode : <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line">   {</div>
+<div class="line">   [DoNotSerialize] <span class="comment">// No need to serialize ports.</span></div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_input.html">ControlInput</a> inputTrigger; <span class="comment">//Adding the ControlInput port variable</span></div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize] <span class="comment">// No need to serialize ports.</span></div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_output.html">ControlOutput</a> outputTrigger;<span class="comment">//Adding the ControlOutput port variable.</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Definition()</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">//Making the ControlInput port visible, setting its key and running the anonymous action method to pass the flow to the outputTrigger port.</span></div>
+<div class="line">       inputTrigger = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_input.html">ControlInput</a>(<span class="stringliteral">&quot;inputTrigger&quot;</span>, (flow) =&gt; { <span class="keywordflow">return</span> outputTrigger; });</div>
+<div class="line">       <span class="comment">//Making the ControlOutput port visible and setting its key.</span></div>
+<div class="line">       outputTrigger = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_output.html">ControlOutput</a>(<span class="stringliteral">&quot;outputTrigger&quot;</span>);</div>
+<div class="line">   }</div>
+<div class="line">   }</div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_control_input_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_control_input.html">Unity.VisualScripting.ControlInput</a></div><div class="ttdef"><b>Definition</b> ControlInput.cs:9</div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_control_output_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_control_output.html">Unity.VisualScripting.ControlOutput</a></div><div class="ttdef"><b>Definition</b> ControlOutput.cs:8</div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_unit_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_unit.html">Unity.VisualScripting.Unit</a></div><div class="ttdef"><b>Definition</b> Unit.cs:11</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --></li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-save-script.html">vs-save-script</a>]</li>
+</ol>
+<ol type="1">
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-return-unity.html">vs-return-unity</a>]</li>
+<li><p class="startli">Do one of the following:</p><ul>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snipdda88fa9b4a1d6eec4a539e733236035.html">vs-open-graph-w-node</a>].</li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snip855f6fe716581593e62f27d90b6f901d.html">vs-ff-add-node</a>]</li>
+</ul>
+<p class="startli">If you used the previous code sample, Visual Scripting adds input and output control ports to the node.</p>
+<p class="startli"><img src="images/vs-my-node-custom-node-control-input-output.png" alt="An image of the Graph window. The Custom C# node, My Node, now appears with an Input Trigger port and an Output Trigger port." class="inline"/></p>
+</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7048"></a>
+Add value ports</h1>
+<ol type="1">
+<li><p class="startli">In your external editor, under the class definition for the node, add any number of variables with either a <b>Generic</b> or specific type value:</p><ul>
+<li><b>Generic</b>: The port can receive or output any data type. Corresponds to <a class="el" href="namespace_unity.html">Unity</a>'s <b>Object</b> type.</li>
+<li><b>Specific Type Value</b>: The port can only receive or output a specific data type. For example, <span class="tt">string</span>, <span class="tt">float</span>, or <span class="tt">integer</span>.</li>
+</ul>
+<p class="startli">For more information on types in Visual Scripting, see <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-types.html">Object types</a>.</p>
+</li>
+<li><p class="startli">In the <span class="tt">Definition</span> method for the node, use the variables to define the value ports. In the example below, there are two input ports with a type value of <span class="tt">string</span>, and one <span class="tt">string</span> output port:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   <span class="keyword">using </span>System;</div>
+<div class="line">   <span class="keyword">using </span>Unity.VisualScripting;</div>
+<div class="line">   <span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">public</span> <span class="keyword">class </span>MyNode : <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line">   {</div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_input.html">ControlInput</a> inputTrigger;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_output.html">ControlOutput</a> outputTrigger;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize] <span class="comment">// No need to serialize ports</span></div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput</a> myValueA; <span class="comment">// Adding the ValueInput variable for myValueA</span></div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize] <span class="comment">// No need to serialize ports</span></div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput</a> myValueB; <span class="comment">// Adding the ValueInput variable for myValueB</span></div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize] <span class="comment">// No need to serialize ports</span></div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_output.html">ValueOutput</a> result; <span class="comment">// Adding the ValueOutput variable for result</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">private</span> <span class="keywordtype">string</span> resultValue; <span class="comment">// Adding the string variable for the processed result value</span></div>
+<div class="line">   <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Definition()</div>
+<div class="line">   {</div>
+<div class="line">       inputTrigger = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_input.html">ControlInput</a>(<span class="stringliteral">&quot;inputTrigger&quot;</span>, (flow) =&gt; { <span class="keywordflow">return</span> outputTrigger; });</div>
+<div class="line">       outputTrigger = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_output.html">ControlOutput</a>(<span class="stringliteral">&quot;outputTrigger&quot;</span>);</div>
+<div class="line">       </div>
+<div class="line">       <span class="comment">//Making the myValueA input value port visible, setting the port label name to myValueA and setting its default value to Hello.</span></div>
+<div class="line">       myValueA = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput&lt;string&gt;</a>(<span class="stringliteral">&quot;myValueA&quot;</span>, <span class="stringliteral">&quot;Hello &quot;</span>);</div>
+<div class="line">       <span class="comment">//Making the myValueB input value port visible, setting the port label name to myValueB and setting its default value to an empty string.</span></div>
+<div class="line">       myValueB = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput&lt;string&gt;</a>(<span class="stringliteral">&quot;myValueB&quot;</span>, <span class="keywordtype">string</span>.Empty);</div>
+<div class="line">       <span class="comment">//Making the result output value port visible, setting the port label name to result and setting its default value to the resultValue variable.</span></div>
+<div class="line">       result = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_output.html">ValueOutput&lt;string&gt;</a>(<span class="stringliteral">&quot;result&quot;</span>, (flow) =&gt; { <span class="keywordflow">return</span> resultValue; });</div>
+<div class="line">   }</div>
+<div class="line">   }</div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_value_input_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_value_input.html">Unity.VisualScripting.ValueInput</a></div><div class="ttdef"><b>Definition</b> ValueInput.cs:10</div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_value_output_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_value_output.html">Unity.VisualScripting.ValueOutput</a></div><div class="ttdef"><b>Definition</b> ValueOutput.cs:8</div></div>
+</div><!-- fragment --></li>
+</ol>
+<ol type="1">
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-save-script.html">vs-save-script</a>]</li>
+</ol>
+<ol type="1">
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-return-unity.html">vs-return-unity</a>]</li>
+<li><p class="startli">Do one of the following:</p><ul>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snipdda88fa9b4a1d6eec4a539e733236035.html">vs-open-graph-w-node</a>].</li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snip855f6fe716581593e62f27d90b6f901d.html">vs-ff-add-node</a>]</li>
+</ul>
+<p class="startli">If you used the previous code sample, Visual Scripting adds two input ports, <b>My Value A</b> and <b>My Value B</b>, and one output port, <b>Result</b> to the node.</p>
+<p class="startli"><img src="images/vs-my-node-custom-node-data-input-output.png" alt="An image of the Graph window. The Graph Inspector displays with information about all of the ports on the Custom C# node, My Node. The node has been added to the Script Graph and now has an Input Trigger port, an Output Trigger port, two data input ports, and a data output port. The data ports have been assigned the string data type. " class="inline"/></p>
+</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7049"></a>
+Next steps</h1>
+<p>After you add ports to a node, <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node-add-logic.html">add logic</a> to tell the node what to do with the data it receives. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

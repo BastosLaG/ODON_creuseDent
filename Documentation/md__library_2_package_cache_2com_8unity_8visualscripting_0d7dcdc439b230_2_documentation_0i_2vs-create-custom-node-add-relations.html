@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Add relations to a Custom C# node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node-add-relations.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Add relations to a Custom C# node </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md7050"></a></p>
+<dl class="section note"><dt>Note</dt><dd>To add logic to a node, you must create a Custom C# node and add ports. [!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snip0a2e7a7672e7b62c96b0494e578dd066.html">vs-tasks-note-end</a>]</dd></dl>
+<p>After you <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node-add-ports.html">add ports</a> and <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node-add-logic.html">add logic</a> to a node, relations help Visual Scripting correctly display a Custom C# node in a Script Graph.</p>
+<p>To add relations to a node:</p>
+<ol type="1">
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-open-project-window.html">vs-open-project-window</a>]</li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snip7a512cc65c9c6f504fc0f4fdb8aa8624.html">vs-open-existing-external-code</a>]</li>
+<li><p class="startli">In your external editor, add relations in the format <span class="tt">$RelationType$($Port1$, $Port2$)</span>, where <span class="tt">$RelationType$</span> is the relation type you want to assign between the ports you specify as <span class="tt">$Port1$</span> or <span class="tt">$Port2$</span>.</p>
+<p class="startli">For example, to assign relations to the previous example node:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line">   <span class="keyword">using </span>System;</div>
+<div class="line">   <span class="keyword">using </span>Unity.VisualScripting;</div>
+<div class="line">   <span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">public</span> <span class="keyword">class </span>MyNode : <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line">   {</div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_input.html">ControlInput</a> inputTrigger;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_output.html">ControlOutput</a> outputTrigger;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput</a> myValueA;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput</a> myValueB;</div>
+<div class="line"> </div>
+<div class="line">   [DoNotSerialize]</div>
+<div class="line">   <span class="keyword">public</span> <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_output.html">ValueOutput</a> result;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">private</span> <span class="keywordtype">string</span> resultValue;</div>
+<div class="line">   <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Definition()</div>
+<div class="line">   {</div>
+<div class="line">       inputTrigger = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_input.html">ControlInput</a>(<span class="stringliteral">&quot;inputTrigger&quot;</span>, (flow) =&gt;</div>
+<div class="line">       {</div>
+<div class="line">           resultValue = flow.GetValue&lt;<span class="keywordtype">string</span>&gt;(myValueA) + flow.GetValue&lt;<span class="keywordtype">string</span>&gt;(myValueB) + <span class="stringliteral">&quot;!!!&quot;</span>;</div>
+<div class="line">           <span class="keywordflow">return</span> outputTrigger;</div>
+<div class="line">       });</div>
+<div class="line">       outputTrigger = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_control_output.html">ControlOutput</a>(<span class="stringliteral">&quot;outputTrigger&quot;</span>);</div>
+<div class="line">       </div>
+<div class="line">       myValueA = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput&lt;string&gt;</a>(<span class="stringliteral">&quot;myValueA&quot;</span>, <span class="stringliteral">&quot;Hello &quot;</span>);</div>
+<div class="line">       myValueB = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput&lt;string&gt;</a>(<span class="stringliteral">&quot;myValueB&quot;</span>, String.Empty);</div>
+<div class="line">       result = <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_value_output.html">ValueOutput&lt;string&gt;</a>(<span class="stringliteral">&quot;result&quot;</span>, (flow) =&gt; resultValue);</div>
+<div class="line">       </div>
+<div class="line">       Requirement(myValueA, inputTrigger); <span class="comment">//Specifies that we need the myValueA value to be set before the node can run.</span></div>
+<div class="line">       Requirement(myValueB, inputTrigger); <span class="comment">//Specifies that we need the myValueB value to be set before the node can run.</span></div>
+<div class="line">       Succession(inputTrigger, outputTrigger); <span class="comment">//Specifies that the input trigger port&#39;s input exits at the output trigger port. Not setting your succession also dims connected nodes, but the execution still completes.</span></div>
+<div class="line">       <a class="code hl_class" href="class_unity_1_1_visual_scripting_1_1_assignment.html">Assignment</a>(inputTrigger,result);<span class="comment">//Specifies that data is written to the result string output when the inputTrigger is triggered.</span></div>
+<div class="line">   }</div>
+<div class="line">   }</div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_assignment_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_assignment.html">Unity.VisualScripting.Assignment</a></div><div class="ttdef"><b>Definition</b> Assignment.cs:9</div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_control_input_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_control_input.html">Unity.VisualScripting.ControlInput</a></div><div class="ttdef"><b>Definition</b> ControlInput.cs:9</div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_control_output_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_control_output.html">Unity.VisualScripting.ControlOutput</a></div><div class="ttdef"><b>Definition</b> ControlOutput.cs:8</div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_unit_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_unit.html">Unity.VisualScripting.Unit</a></div><div class="ttdef"><b>Definition</b> Unit.cs:11</div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_value_input_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_value_input.html">Unity.VisualScripting.ValueInput</a></div><div class="ttdef"><b>Definition</b> ValueInput.cs:10</div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_value_output_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_value_output.html">Unity.VisualScripting.ValueOutput</a></div><div class="ttdef"><b>Definition</b> ValueOutput.cs:8</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><p class="startli">For more information on relation types, see <a href="vs-create-custom-node.md#relation-types">Custom C# nodes</a>.</p>
+</li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-save-script.html">vs-save-script</a>]</li>
+</ol>
+<ol type="1">
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snippets_2vs-return-unity.html">vs-return-unity</a>]</li>
+<li>Do one of the following:<ul>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snipdda88fa9b4a1d6eec4a539e733236035.html">vs-open-graph-w-node</a>].</li>
+<li>[!include<a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2snip855f6fe716581593e62f27d90b6f901d.html">vs-ff-add-node</a>]</li>
+</ul>
+</li>
+<li><p class="startli">In the <a href="vs-interface-overview.md#the-graph-toolbar">Graph toolbar</a>, enable <b>Relations</b>.</p>
+<p class="startli">Visual Scripting displays the relations you assigned to the Custom C# node. If you used the previous code sample, the node's relations might look like the following image:</p>
+<p class="startli"><img src="images/vs-my-node-custom-node-relations.png" alt="An image of the Graph window. The opened Script Graph has two groups that each contain a single Custom C# node: a yellow Before group and a purple After group. In the Before group, the Custom C# node, My Node, has no relations. Visual Scripting doesn't display any lines on the node to demonstrate a relation between ports. In the After group, the Custom C# node has two lines that branch from the ports of the My Value A port and the My Value B port. These two lines meet at the Input Trigger port. On the node, the line from the Input Trigger port separates into two lines. One line goes to the Output Trigger port, while the other goes to the Result output port." class="inline"/></p>
+</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7051"></a>
+Next steps</h1>
+<p>After you add relations to a node, you can choose to <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-create-custom-node-add-docs.html">add documentation</a> or <a class="el" href="md__library_2_package_cache_2com_8unity_8visualscripting_0d7dcdc439b230_2_documentation_0i_2vs-ce42125dc9dbdfb238818dd01748884e0.html">customize the node with attributes</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

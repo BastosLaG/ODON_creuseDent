@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Trim clips</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-trim.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Trim clips </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5928"></a></p>
+<p>Trimming a clip cuts off a portion of the clip at its start or end. To trim a clip, select the Mix Edit mode, hover over the start or end of the clip until the trim cursor appears, then drag the trim cursor to modify the start or end of the clip.</p>
+<p>If you trim an Animation clip, an Audio clip, or a Control clip, this selects the portion of the source asset that the clip uses.</p>
+<p>For example, trim the start of an Animation clip to modify its start and offset. This selects the section of the source asset to use. Trim the end of an Animation clip to modify its duration. If an Animation clip's source asset is keyframe animation, use the Curves view to display the unused section of the source asset.</p>
+<p><img src="images/tl-clip-trim-start.png" alt="" class="inline"/></p>
+<p><b>(A)</b> Curves view.<br  />
+ <b>(B)</b> If the area defined by an Animation clip, Audio clip, or Control clip only uses part of its source asset, the clip displays a white arrow to indicate that unused content exists before the start or after the end of the clip.<br  />
+ <b>(C)</b> The trimmed keyframe animation displays outside of the Animation clip.<br  />
+</p>
+<p>Trimming a clip is non-destructive. Trim the clip again to modify its start or end to include the animation, audio waveform, or other source content cut during a previous trim. You can also <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-reset.html">reset a clip</a> to undo trims and other edits.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5929"></a>
+Trim with the Inspector window</h1>
+<p>You can select a clip to display its <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-clip.html">Clip properties</a> in the Inspector window. Use the <b>Start</b>, <b>End</b>, <b>Duration</b>, and <b>Clip In</b> (offset) properties to modify a clip to exact values.</p>
+<p><img src="images/insp-clip-timing.png" alt="" class="inline"/></p>
+<p><em>Position and trim a clip by adjusting its Start, End, Duration, and Clip In properties in the Inspector window</em></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5930"></a>
+Trim with the Timeline Playhead</h1>
+<p>You can trim a clip based on the location of the <a class="el" href="namespace_timeline.html">Timeline</a> Playhead. To trim using the playhead, do the following:</p><ol type="1">
+<li>Position the playhead within the clip to be trimmed.</li>
+<li>Right-click the clip and choose either <b>Editing</b> &gt; <b>Trim Start</b> or <b>Editing</b> &gt; <b>Trim End</b>.</li>
+</ol>
+<p><b>Trim Start</b> trims the start of the clip to the playhead. <b>Trim End</b> trims the end of the clip to the playhead.</p>
+<p><img src="images/tl-playhead-trim-before.png" alt="" class="inline"/></p>
+<p><em>For example, move the <a class="el" href="namespace_timeline.html">Timeline</a> Playhead within the clip</em></p>
+<p><img src="images/tl-playhead-trim-after.png" alt="" class="inline"/></p>
+<p><em>Right-click the clip and choose <b>Editing</b> &gt; <b>Trim Start</b> to trim the start of the clip to the playhead</em></p>
+<p>If you select clips on multiple tracks, <a class="el" href="namespace_timeline.html">Timeline</a> only trims the selected clips that intersect the playhead.</p>
+<p><a class="anchor" id="trimloop"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5931"></a>
+Trim to hold or loop clips</h1>
+<p>If you trim the end of an Animation clip, Audio clip, or Control clip past the end of its source asset, the extra clip area either holds or loops its content.</p>
+<p>When the extra clip area loops, the entire source asset loops. Each full loop is labelled sequentially as L1, L2, L3, and so on. If the source asset is recorded keyframe animation, you can also view the looping animation curves in the Curves view.</p>
+<p>For example, an Animation clip named <span class="tt">EndRotation</span> is set to loop. Trimming the end of the <span class="tt">EndRotation</span> clip past the end of the <span class="tt">Recorded(2)</span> source asset loops its content.</p>
+<p><img src="images/tl-clip-trim-loop.png" alt="" class="inline"/></p>
+<p><em>The <span class="tt">EndRotation</span> clip loops once, indicated by L1. Its animation curve loops and is drawn in white.</em></p>
+<p>Whether the extra clip area holds or loops depends on the <b>Loop</b> property in the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-clip-anim.html">Animation Clip Properties</a> or the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-clip-audio.html">Audio Clip Properties</a>.</p>
+<p>For <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-clip-control.html">Control clips</a>, the properties that determine whether the extra clip area holds or loops depends on whether the clip controls a Sub-Timeline instance, Particle System, Prefab instance, or an ITimeControl Script.</p>
+<p><a class="anchor" id="trimspecial"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5932"></a>
+Special trim options for looping clips</h1>
+<p>The <a class="el" href="namespace_timeline.html">Timeline</a> window provides special trimming options for clips with loops. These special trim options either remove or complete the last partial loop.</p>
+<p>For example, an Animation clip is set to loop and its duration is just over twice longer than its source asset. This results in the Walk clip with one full loop and one partial loop.</p>
+<p><img src="images/tl-walk-loop-before.png" alt="" class="inline"/></p>
+<p><em>L1 indicates a complete loop. The clip ends in the middle of the second partial loop, L2.</em></p>
+<p>To extend the end of the clip and complete the partial loop, right-click the clip and choose <b>Editing</b> &gt; <b>Complete Last Loop</b>. To trim the clip at the last complete loop, right-click the clip and choose <b>Editing</b> &gt; <b>Trim Last Loop</b>.</p>
+<p><img src="images/tl-walk-loop-complete.png" alt="" class="inline"/></p>
+<p><em>The result of <b>Complete Last Loop</b></em></p>
+<p><img src="images/tl-walk-loop-trim.png" alt="" class="inline"/></p>
+<p><em>The result of <b>Trim Last Loop</b></em> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

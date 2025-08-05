@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Loop vectorization</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2optimization-loop-vectorization.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Loop vectorization </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md953"></a></p>
+<p><a class="el" href="namespace_burst.html">Burst</a> uses <a href="https://llvm.org/docs/Vectorizers.html#loop-vectorizer">loop vectorization</a> to improve the performance of your code. It uses this technique to loop over multiple values at the same time, rather than looping over single values at a time, which speeds up the performance of your code. For example:</p>
+<div class="fragment"><div class="line"> c#</div>
+<div class="line">[MethodImpl(MethodImplOptions.NoInlining)]</div>
+<div class="line">private static unsafe void Bar([NoAlias] int* a, [NoAlias] int* b, int count)</div>
+<div class="line">{</div>
+<div class="line">    for (var i = 0; i &lt; count; i++)</div>
+<div class="line">    {</div>
+<div class="line">        a[i] += b[i];</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">public static unsafe void Foo(int count)</div>
+<div class="line">{</div>
+<div class="line">    var a = stackalloc int[count];</div>
+<div class="line">    var b = stackalloc int[count];</div>
+<div class="line"> </div>
+<div class="line">    Bar(a, b, count);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a class="el" href="namespace_burst.html">Burst</a> converts the scalar loop in <span class="tt">Bar</span> into a vectorized loop. Then, instead of looping over a single value at a time, it generates code that loops over multiple values at the same time, which produces faster code.</p>
+<p>This is the <span class="tt">x64</span> assembly <a class="el" href="namespace_burst.html">Burst</a> generates for <span class="tt">AVX2</span> for the loop in <span class="tt">Bar</span> above:</p>
+<div class="fragment"><div class="line">.LBB1_4:</div>
+<div class="line">    vmovdqu    ymm0, ymmword ptr [rdx + 4*rax]</div>
+<div class="line">    vmovdqu    ymm1, ymmword ptr [rdx + 4*rax + 32]</div>
+<div class="line">    vmovdqu    ymm2, ymmword ptr [rdx + 4*rax + 64]</div>
+<div class="line">    vmovdqu    ymm3, ymmword ptr [rdx + 4*rax + 96]</div>
+<div class="line">    vpaddd     ymm0, ymm0, ymmword ptr [rcx + 4*rax]</div>
+<div class="line">    vpaddd     ymm1, ymm1, ymmword ptr [rcx + 4*rax + 32]</div>
+<div class="line">    vpaddd     ymm2, ymm2, ymmword ptr [rcx + 4*rax + 64]</div>
+<div class="line">    vpaddd     ymm3, ymm3, ymmword ptr [rcx + 4*rax + 96]</div>
+<div class="line">    vmovdqu    ymmword ptr [rcx + 4*rax], ymm0</div>
+<div class="line">    vmovdqu    ymmword ptr [rcx + 4*rax + 32], ymm1</div>
+<div class="line">    vmovdqu    ymmword ptr [rcx + 4*rax + 64], ymm2</div>
+<div class="line">    vmovdqu    ymmword ptr [rcx + 4*rax + 96], ymm3</div>
+<div class="line">    add        rax, 32</div>
+<div class="line">    cmp        r8, rax</div>
+<div class="line">    jne        .LBB1_4</div>
+</div><!-- fragment --><p><a class="el" href="namespace_burst.html">Burst</a> has unrolled and vectorized the loop into four <span class="tt">vpaddd</span> instructions, which calculate eight integer additions each, for a total of 32 integer additions per loop iteration.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md954"></a>
+Loop vectorization intrinsics</h1>
+<p><a class="el" href="namespace_burst.html">Burst</a> includes experimental intrinsics to express loop vectorization assumptions: <span class="tt">Loop.ExpectVectorized</span> and <span class="tt">Loop.ExpectNotVectorized</span>. <a class="el" href="namespace_burst.html">Burst</a> then validates the loop vectorization at compile-time. This is useful in a situation where you might break the auto vectorization. For example, if you introduce a branch to the code:</p>
+<div class="fragment"><div class="line"> c#</div>
+<div class="line">[MethodImpl(MethodImplOptions.NoInlining)]</div>
+<div class="line">private static unsafe void Bar([NoAlias] int* a, [NoAlias] int* b, int count)</div>
+<div class="line">{</div>
+<div class="line">    for (var i = 0; i &lt; count; i++)</div>
+<div class="line">    {</div>
+<div class="line">        if (a[i] &gt; b[i])</div>
+<div class="line">        {</div>
+<div class="line">            break;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        a[i] += b[i];</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This changes the assembly to the following:</p>
+<div class="fragment"><div class="line">.LBB1_3:</div>
+<div class="line">    mov        r9d, dword ptr [rcx + 4*r10]</div>
+<div class="line">    mov        eax, dword ptr [rdx + 4*r10]</div>
+<div class="line">    cmp        r9d, eax</div>
+<div class="line">    jg        .LBB1_4</div>
+<div class="line">    add        eax, r9d</div>
+<div class="line">    mov        dword ptr [rcx + 4*r10], eax</div>
+<div class="line">    inc        r10</div>
+<div class="line">    cmp        r8, r10</div>
+<div class="line">    jne        .LBB1_3</div>
+</div><!-- fragment --><p>This isn't ideal because the loop is scalar and only has 1 integer addition per loop iteration. It can be difficult to spot this happening in your code, so use the experimental intrinsics <span class="tt">Loop.ExpectVectorized</span> and <span class="tt">Loop.ExpectNotVectorized</span> to express loop vectorization assumptions. <a class="el" href="namespace_burst.html">Burst</a> then validates the loop vectorization at compile-time.</p>
+<p>Because the intrinsics are experimental, you need to use the <span class="tt">UNITY_BURST_EXPERIMENTAL_LOOP_INTRINSICS</span> preprocessor define to enable them.</p>
+<p>The following example shows the original <span class="tt">Bar</span> example with the <span class="tt">Loop.ExpectVectorized</span> intrinsic:</p>
+<div class="fragment"><div class="line"> c#</div>
+<div class="line">[MethodImpl(MethodImplOptions.NoInlining)]</div>
+<div class="line">private static unsafe void Bar([NoAlias] int* a, [NoAlias] int* b, int count)</div>
+<div class="line">{</div>
+<div class="line">    for (var i = 0; i &lt; count; i++)</div>
+<div class="line">    {</div>
+<div class="line">        Unity.Burst.CompilerServices.Loop.ExpectVectorized();</div>
+<div class="line"> </div>
+<div class="line">        a[i] += b[i];</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a class="el" href="namespace_burst.html">Burst</a> then validates at compile-time whether the loop is vectorized. If the loop isn't vectorized, <a class="el" href="namespace_burst.html">Burst</a> emits a compiler error. The following example produces an error:</p>
+<div class="fragment"><div class="line"> c#</div>
+<div class="line">[MethodImpl(MethodImplOptions.NoInlining)]</div>
+<div class="line">private static unsafe void Bar([NoAlias] int* a, [NoAlias] int* b, int count)</div>
+<div class="line">{</div>
+<div class="line">    for (var i = 0; i &lt; count; i++)</div>
+<div class="line">    {</div>
+<div class="line">        Unity.Burst.CompilerServices.Loop.ExpectVectorized();</div>
+<div class="line"> </div>
+<div class="line">        if (a[i] &gt; b[i])</div>
+<div class="line">        {</div>
+<div class="line">            break;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        a[i] += b[i];</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a class="el" href="namespace_burst.html">Burst</a> emits the following error at compile-time:</p>
+<p>&gt;LoopIntrinsics.cs(6,9): <a class="el" href="namespace_burst.html">Burst</a> error BC1321: The loop is not vectorized where it was expected that it is vectorized.</p>
+<p>&gt;[!IMPORTANT] &gt;These intrinsics don't work inside <span class="tt">if</span> statements. <a class="el" href="namespace_burst.html">Burst</a> doesn't prevent this from happening, so you won't see a compile-time error for this.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md955"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-burst-intrinsics.html">Burst intrinsics</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

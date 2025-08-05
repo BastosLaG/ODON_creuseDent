@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Canvas</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2class-_canvas.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Canvas </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6117"></a></p>
+<p>The <b>Canvas</b> component represents the abstract space in which the UI is laid out and rendered. All UI elements must be children of a GameObject that has a Canvas component attached. When you create a UI element object from the menu (<b>GameObject &gt; Create UI</b>), a Canvas object will be created automatically if there isn't one in the scene already.</p>
+<p><img src="images/UI_CanvasInspector.png" alt="Screen Space - Overlay Set" class="inline"/></p>
+<p><img src="images/UI_CanvasScreenSpaceCameraInspector.png" alt="Screen Space - Camera Set" class="inline"/></p>
+<p><img src="images/UI_CanvasWorldSpaceInspector.png" alt="World Space Set" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6118"></a>
+Properties</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Function:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Render Mode</b>  </td><td class="markdownTableBodyLeft">The way the UI is rendered to the screen or as an object in 3D space (see below). The options are <em>Screen Space - Overlay</em>, <em>Screen Space - Camera</em> and <em>World Space</em>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Pixel Perfect (<em>Screen Space</em> modes only)</b>  </td><td class="markdownTableBodyLeft">Should the UI be rendered without antialiasing for precision?  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Render Camera (<em>Screen Space - Camera</em> mode only)</b>  </td><td class="markdownTableBodyLeft">The camera to which the UI should be rendered (see below).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Plane Distance (<em>Screen Space - Camera</em> mode only)</b>  </td><td class="markdownTableBodyLeft">The distance at which the UI plane should be placed in front of the camera.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Event Camera (<em>World Space</em> mode only)</b>  </td><td class="markdownTableBodyLeft">The camera that will be used to process UI events.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Receives Events</b>  </td><td class="markdownTableBodyLeft">Are UI events processed by this Canvas?  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6119"></a>
+Details</h1>
+<p>A single Canvas for all UI elements is sufficient but multiple Canvases in the scene is possible. It is also possible use nested Canvases, where one Canvas is placed as a child of another for optimization purposes. A nested Canvas uses the same Render Mode as its parent.</p>
+<p>Traditionally, UIs are rendered as if they were simple graphic designs drawn directly on the screen. That is to say, they have no concept of a 3D space being viewed by a camera. <a class="el" href="namespace_unity.html">Unity</a> supports this kind of screen space rendering but also allows UIs to rendered as objects in the scene, depending on the value of the <em>Render Mode</em> property. The modes available are <b>Screen Space - Overlay</b>, <b>Screen Space - Camera</b> and <b>World Space</b>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6120"></a>
+Screen Space - Overlay</h2>
+<p>In this mode, the Canvas is scaled to fit the screen and then rendered directly without reference to the scene or a camera (the UI will be rendered even if there is no camera in the scene at all). If the screen's size or resolution are changed then the UI will automatically rescale to fit. The UI will be drawn over any other graphics such as the camera view.</p>
+<p><img src="images/CanvasOverlay.png" alt="Overlay UI rendered over scene objects" class="inline"/></p>
+<p>Note: The Screen Space - Overlay canvas needs to be stored at the top level of the hierarchy. If this is not used then the UI may disappear from the view. This is a built-in limitation. Keep the Screen Space - Overlay canvas at the top level of the hierarchy to get expected results.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6121"></a>
+Screen Space - Camera</h2>
+<p>In this mode, the Canvas is rendered as if it were drawn on a plane object some distance in front of a given camera. The onscreen size of the UI does not vary with the distance since it is always rescaled to fit exactly within the <a href="https://docs.unity3d.com/Manual/FrustumSizeAtDistance.html">camera frustum</a>. If the screen's size or resolution or the camera frustum are changed then the UI will automatically rescale to fit. Any 3D objects in the scene that are closer to the camera than the UI plane will be rendered in front of the UI, while objects behind the plane will be obscured.</p>
+<p><img src="images/CanvasCamera.png" alt="Camera mode UI with scene objects in front" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6122"></a>
+World Space</h2>
+<p>This mode renders the UI as if it were a plane object in the scene. Unlike <em>Screen Space - Camera</em> mode, however, the plane need not face the camera and can be oriented however you like. The size of the Canvas can be set using its Rect Transform but its onscreen size will depend on the viewing angle and distance of the camera. Other scene objects can pass behind, through or in front of the Canvas.</p>
+<p><img src="images/CanvasWorldSpace.png" alt="World space UI intersecting scene objects" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6123"></a>
+Hints</h1>
+<ul>
+<li>Read more about setting up a World Space Canvas on the <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_h_o_w_t_o-_u_i_world_space.html">Creating a World Space UI</a> page.</li>
+<li>For information about making your Canvas and UI scale to different resolutions or aspect ratios, see the <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_h_o_w_t_o-_u_i_multi_resolution.html">Designing UI for Multiple Resolutions</a> page as well as the <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2script-_canvas_scaler.html">Canvas Scaler</a> page. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

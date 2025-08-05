@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Fresnel Equation Node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_fresnel-_equation-_node.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Fresnel Equation Node </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md3752"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3753"></a>
+Description</h1>
+<p>The Fresnel Equation Node adds equations that affect Material interactions to the Fresnel Component. You can select an equation in the <b>Mode</b> dropdown.</p>
+<p>You can find Numerical values of refractive indices at <a href="https://refractiveindex.info/">refractiveindex.info</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3754"></a>
+Ports (Schlick)</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Direction  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Binding  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">f0  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Vector{1, 2, 3}  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Represente the reflection of the surface when we face typically 0.02-0.08 for a dielectric material.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">DotVector  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The dot product between the normal and the surface.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Fresnel  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">same as f0  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Fresnel coefficient, which describe the amount of light reflected or transmitted.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3755"></a>
+Ports (Dielectric)</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Direction  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Binding  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">IOR Source  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Vector  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The refractive index of the medium the light source originates in.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">IOR Medium  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Vector  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The refractive index of the medium that the light refracts into.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">DotVector  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The dot product between the normal and the surface.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Fresnel  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">same as f0  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The fresnel coefficient, which describe the amount of light reflected or transmitted.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3756"></a>
+Ports (DielectricGeneric)</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Direction  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Binding  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">IOR Source  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Vector  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The refractive index of the medium the light source originates in.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">IOR Medium  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Vector  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The refractive index of the medium that the light refracts into.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">IOR MediumK  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Vector  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The refractive index Medium (imaginary part), or the medium causing the refraction.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">DotVector  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Float  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">The dot product between the normal and the surface.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Fresnel  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">same as f0  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Fresnel coefficient, which describe the amount of light reflected or transmitted.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3757"></a>
+Controls</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Options  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Mode  </td><td class="markdownTableBodyLeft">Dropdown  </td><td class="markdownTableBodyLeft" colspan="2">&amp;#8226; <b>Schlick</b>: This mode produces an approximation based on <a href="https://en.wikipedia.org/wiki/Schlick%27s_approximation">Schlick's Approximation</a>. Use the Schlick mode for interactions between air and dielectric materials. <br  />
+&amp;#8226; <b>Dielectric</b>: Use this mode for interactions between two dielectric Materials. For example, air to glass, glass to water, or water to air.<br  />
+&amp;#8226; <b>DielectricGeneric</b>: This mode computes a <a href="https://seblagarde.wordpress.com/2013/04/29/memo-on-fresnel-equations">Fresnel equation</a> for interactions between a dielectric and a metal. For example, clear-coat- to metal, glass to metal, or water to metal. <br  />
+<b>Note:</b> if the <b>IORMediumK</b> value is 0, <b>DielectricGeneric</b> behaves in the same way as the <b>Dielectric</b> mode.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3758"></a>
+Generated Code Example</h1>
+<p>The following example code represents one possible outcome of this node.</p>
+<div class="fragment"><div class="line">void Unity_FresnelEquation_Schlick(out float Fresnel, float cos0, float f0)</div>
+<div class="line">{</div>
+<div class="line">    Fresnel = F_Schlick(f0, cos0);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void Unity_FresnelEquation_Dielectric(out float3 Fresnel, float cos0, float3 iorSource, float3 iorMedium)</div>
+<div class="line">{</div>
+<div class="line">    FresnelValue = F_FresnelDielectric(iorMedium/iorSource, cos0);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">void Unity_FresnelEquation_DielectricGeneric(out float3 Fresnel, float cos0, float3 iorSource, float3 iorMedium, float3 iorMediumK)</div>
+<div class="line">{</div>
+<div class="line">    FresnelValue = F_FresnelConductor(iorMedium/iorSource, iorMediumK/iorSource, cos0);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

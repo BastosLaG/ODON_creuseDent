@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Timeline assets and instances</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2tl-overview.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Timeline assets and instances </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6023"></a></p>
+<p>Use the <b><a class="el" href="namespace_timeline.html">Timeline</a> window</b> to create cut-scenes, cinematics, and gameplay sequences by visually arranging tracks and clips linked to GameObjects in your Scene.</p>
+<p><img src="images/tl-cinematic-example.png" alt="" class="inline"/></p>
+<p><em>A cinematic sequence in the <a class="el" href="namespace_timeline.html">Timeline</a> window.</em></p>
+<p>For each cut-scene, cinematic, or gameplay sequence, the <a class="el" href="namespace_timeline.html">Timeline</a> window saves the following:</p>
+<ul>
+<li><b><a class="el" href="namespace_timeline.html">Timeline</a> asset</b>: Stores the tracks, clips, and recorded animations without links to the specific GameObjects being animated. The <a class="el" href="namespace_timeline.html">Timeline</a> asset is saved to the Project.</li>
+<li><b><a class="el" href="namespace_timeline.html">Timeline</a> instance</b>: Stores links to the specific GameObjects being animated or affected by the <a class="el" href="namespace_timeline.html">Timeline</a> asset. These links, referred to as <b>bindings</b>, are saved to the Scene.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6024"></a>
+Timeline asset</h1>
+<p>The <a class="el" href="namespace_timeline.html">Timeline</a> window saves track and clip definitions as a <b><a class="el" href="namespace_timeline.html">Timeline</a> asset</b>.</p>
+<p>If you record keyframe animation while creating your cinematic, cut-scene, or gameplay sequence, the <a class="el" href="namespace_timeline.html">Timeline</a> window saves the recorded clips as children of the <a class="el" href="namespace_timeline.html">Timeline</a> asset.</p>
+<p><img src="images/spec-tl-overview-asset.png" alt="" class="inline"/></p>
+<p><em>The <a class="el" href="namespace_timeline.html">Timeline</a> asset saves tracks and clips (A). <a class="el" href="namespace_timeline.html">Timeline</a> window saves recorded clips (B) as children of the <a class="el" href="namespace_timeline.html">Timeline</a> asset.</em></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6025"></a>
+Timeline instance</h1>
+<p>To animate a GameObject in your Scene with a <a class="el" href="namespace_timeline.html">Timeline</a> asset, you must create a <b><a class="el" href="namespace_timeline.html">Timeline</a> instance</b>. A <b><a class="el" href="namespace_timeline.html">Timeline</a> instance</b> associates a <a class="el" href="namespace_timeline.html">Timeline</a> asset with the GameObject in the Scene through a <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2playable-director.html">Playable Director</a> component.</p>
+<p>When you select a GameObject in a Scene that has a Playable Director component, the <a class="el" href="namespace_timeline.html">Timeline</a> instance displays in the <a class="el" href="namespace_timeline.html">Timeline</a> window. The bindings display in the <a class="el" href="namespace_timeline.html">Timeline</a> window and in the Playable Director component (Inspector window).</p>
+<p><img src="images/spec-tl-overview-instance.png" alt="" class="inline"/></p>
+<p><em>The Playable Director component displays the <a class="el" href="namespace_timeline.html">Timeline</a> asset (A) with its bound GameObjects (B). The <a class="el" href="namespace_timeline.html">Timeline</a> window displays the same bindings (B) in the Track list.</em></p>
+<p>The <a class="el" href="namespace_timeline.html">Timeline</a> window provides an automated method of creating a <a class="el" href="namespace_timeline.html">Timeline</a> instance while <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-create-instance.html">creating a Timeline asset</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6026"></a>
+Reusing Timeline assets</h1>
+<p>Because <a class="el" href="namespace_timeline.html">Timeline</a> assets and <a class="el" href="namespace_timeline.html">Timeline</a> instances are separate, you can reuse the same <a class="el" href="namespace_timeline.html">Timeline</a> asset with many <a class="el" href="namespace_timeline.html">Timeline</a> instances.</p>
+<p>For example, you could create a <a class="el" href="namespace_timeline.html">Timeline</a> asset named <span class="tt">VictoryTL</span> with the animation, music, and particle effects that play when the main game character (<span class="tt">Player</span>) wins. To reuse the <span class="tt">VictoryTL</span> <a class="el" href="namespace_timeline.html">Timeline</a> asset to animate another game character (<span class="tt">Enemy</span>) in the same Scene, you can create another <a class="el" href="namespace_timeline.html">Timeline</a> instance for the secondary game character.</p>
+<p><img src="images/tl-player-victory.png" alt="" class="inline"/></p>
+<p><em>The Player GameObject (red) is attached to the <span class="tt">VictoryTL</span> <a class="el" href="namespace_timeline.html">Timeline</a> asset</em></p>
+<p><img src="images/tl-enemy-victory.png" alt="" class="inline"/></p>
+<p><em>The Enemy GameObject (green) is also attached to the <span class="tt">VictoryTL</span> <a class="el" href="namespace_timeline.html">Timeline</a> asset</em></p>
+<p>Because you are reusing the <a class="el" href="namespace_timeline.html">Timeline</a> asset, any modification to the <a class="el" href="namespace_timeline.html">Timeline</a> asset in the <a class="el" href="namespace_timeline.html">Timeline</a> window results in changes to all <a class="el" href="namespace_timeline.html">Timeline</a> instances associated with this asset.</p>
+<p>For example, in the previous example, if you delete the Audio track while modifying the <span class="tt">Player</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance, the <a class="el" href="namespace_timeline.html">Timeline</a> window removes this track from the <span class="tt">VictoryTL</span> <a class="el" href="namespace_timeline.html">Timeline</a> asset. This removes the Audio track from all instances associated with the <span class="tt">VictoryTL</span> <a class="el" href="namespace_timeline.html">Timeline</a> asset, including the <span class="tt">Enemy</span> <a class="el" href="namespace_timeline.html">Timeline</a> instance. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

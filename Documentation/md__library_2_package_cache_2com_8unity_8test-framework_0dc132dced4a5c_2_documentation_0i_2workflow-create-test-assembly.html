@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Workflow: Creating test assemblies</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2workflow-create-test-assembly.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Workflow: Creating test assemblies </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5609"></a></p>
+<p>UTF looks for tests in a <b>Test Assembly</b>, which is any assembly that references Nunit.</p>
+<p>The Test Runner UI helps you set up test assemblies:</p>
+<ol type="1">
+<li>Select the Assets folder in your Project window.</li>
+<li>Open the Test Runner window (menu: <b>Window</b> &gt; <b>General</b> &gt; <b>Test Runner</b>).</li>
+<li>In the <b>Test Runner</b> window, select <b>Create a new Test Assembly Folder in the active path</b>.</li>
+</ol>
+<p><img src="./images/create-test-assembly-folder.png" alt="Test Runner window EditMode tab" class="inline"/></p>
+<p>Alternatively, you can go via the <b>Assets</b> menu:</p>
+<ol type="1">
+<li>Select the Assets folder in your Project window.</li>
+<li>Create a new Test Assembly Folder (menu: <b>Assets</b> &gt; <b>Create</b> &gt; <b>Testing</b> &gt; <b>Test Assembly Folder</b>).</li>
+</ol>
+<p>This creates a <em><a class="el" href="class_tests.html">Tests</a></em> folder in your project Assets with a corresponding <span class="tt">.asmdef</span> file with the required references. You can change the name of the new <a href="https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html">Assembly Definition</a> and press Enter to accept it.</p>
+<p><img src="./images/test-assembly-folder.png" alt="New Test folder and assembly file" class="inline"/></p>
+<p>Click on the assembly definition file to inspect it in the <b>Inspector</b> window. You'll see that it has references to <b>nunit.framework.dll***,* **UnityEngine.<a class="el" href="namespace_test_runner.html">TestRunner</a>,</b> and <b><a class="el" href="namespace_unity_editor_1_1_test_runner.html">UnityEditor.TestRunner</a></b> assemblies. This tells UTF that this is a test assembly.</p>
+<p>The checkbox selections under <b>Platforms</b> determine which platforms the test assembly can run on. Assemblies created through the <b>Test Runner</b> target the <b>Editor</b> only by default. <b>Any Platform</b> or a specific platform other than <b>Editor</b> makes it possible to run any Play Mode tests in the assembly on standalone Players for the additional platforms.</p>
+<p><img src="./images/import-settings.png" alt="Assembly definition import settings" class="inline"/></p>
+<blockquote class="doxtable">
+<p><b>Note</b>: The <b><a class="el" href="namespace_unity_editor_1_1_test_runner.html">UnityEditor.TestRunner</a></b> reference is only available for <a href="./edit-mode-vs-play-mode-tests.md#edit-mode-tests">Edit Mode tests</a>. </p>
+</blockquote>
+<p>You can repeat the steps above as many times as you like to create additional Test Assemblies. The first Test Assembly folder you create is named <em><a class="el" href="class_tests.html">Tests</a></em> by default and subsequent ones are named <em><a class="el" href="class_tests.html">Tests</a> 1</em>, <em><a class="el" href="class_tests.html">Tests</a> 2</em>, and so on. Remember that you can always rename the assemblies but each assembly name must be unique.</p>
+<blockquote class="doxtable">
+<p><b>Note</b>: Changing the file name of the assembly definition file does not affect the value of the <b>Name</b> property in the file. Use the <b>Inspector</b> window or edit the .asmdef direclty in a text editor to make sure the name property is properly changed. </p>
+</blockquote>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

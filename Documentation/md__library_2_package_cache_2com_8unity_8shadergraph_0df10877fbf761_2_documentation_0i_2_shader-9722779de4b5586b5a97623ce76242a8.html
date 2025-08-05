@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Subgraph Nodes</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-9722779de4b5586b5a97623ce76242a8.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Subgraph Nodes </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4548"></a></p>
+<p>The subgraphs have been created to help speed up the process of creating user interface elements. They’re building blocks that can be strung together quickly to achieve various appearances and functionalities. You can see all of the subgraph nodes in the collection by opening this shader file: Assets/Samples/Shader Graph/&lt;your version&gt;/UGUI Shaders/Subgraphs/SubgraphLibrary</p>
+<p>The subgraphs are broken into the following categories:</p><ul>
+<li><b>Inputs</b> - These subgraphs provide input data.</li>
+<li><b>Utilities</b> - These subgraphs feature simple utilities to help with input data.</li>
+<li><b>Gradients</b> - These nodes generate gradients in various shapes including linear, spherical, square, and custom.</li>
+<li><b>Helpers</b> - these subgraphs provide commonly-used operations for building UI elements</li>
+<li><b>Patterns</b> - These nodes generate procedural patterns that can be used as backgrounds or masks. The patterns include clouds, bars, checkers, circle segments, hexagon tiles, player icon, rings, ring segments, square tiles, wedges, and window blinds.</li>
+<li><b>SDFs</b> - Signed Distance Field shapes are the basis for UI elements. The value of each pixel in an SDF represents the distance to the edge of the shape. You can use the SDF data to create resolution-independent shapes that are either sharp or blurry. Shapes in the set include circle, hexagon, pill, rectangle, star, and triangle. This collection also contains operators for combining SDF shapes.</li>
+<li><b>Time</b> - These nodes output time in various forms - looping, mirroredm, sine wave, etc.</li>
+<li><b>UV</b> - These nodes manipulate UV coordinates including move, scale, tilt, mirror, invert, and more. Shapes and elements can be transformed by adjusting their UV coordinates with these nodes. <img src="images/UITools-subgraphs.png" alt="" class="inline"/></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4549"></a>
+Inputs</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4550"></a>
+Canvas Color</h2>
+<p>This subgraph outputs the UI element color in linear space, performing color space conversion on vertex color if the Canvas is set to store vertex colors in gamma space. Make sure to check "Disable Color Tint" in the Graph Settings when using the Canvas Color node, to not tint the final output.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4551"></a>
+Utilities</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4552"></a>
+SelectableStateCompare</h2>
+<p>This subgraph takes a Selectable State as a float and outputs Boolean values to inform on the states.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4553"></a>
+SelectableStatePreview</h2>
+<p>This subgraph takes a Selectable State as a float input and features a dropdown to override its value withing Shader Graph only. This allows previewing what things look like when in a given state. This has no effect on the final shader that will always use the provided input.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4554"></a>
+SliderDirectionCompare</h2>
+<p>This subgraph takes a Direction as a Vector2 and outputs Boolean values to inform on cardinals.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4555"></a>
+SliderDirectionPreview</h2>
+<p>This subgraph takes a Direction as a Vector2 input and features a dropdown to override its value withing Shader Graph only. This allows previewing what things look like with a different direction is used. This has no effect on the final shader that will always use the provided input.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4556"></a>
+Gradients</h2>
+<p>This node is a collection of commonly used gradients. You can select the gradient you want to use from the Style dropdown. By default, a horizontal LinearGradient is used as the input, but you can pass in any input gradient you want.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4557"></a>
+Cone Gradient</h3>
+<p>Creates a Gradient, Normals, Height, and a Mask for a procedurally-generated cone. This allows you to create 3d effects in a 2d environment. The Size input port controls the size of the generated cone relative to the UV space. ConeHeight input controls the height above the base of the cone’s center point. The LightDirection input port is a vector that determines the direction the light is coming from for the Diffuse gradient output. The Diffuse output uses the cone’s normals and the incoming LightDirection to calculate diffuse lighting. Areas of the Diffuse gradient facing away from the LightDirection will have negative values, so you may need to use a Saturate node to limit the range of the output to zero to one. The NormalTS output is a normalized vector that indicates the direction each pixel on the cone’s surface is facing. The Height output is a heightmap for the cone. The Mask output is white inside the cone and black outside.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Backgrounds/80sSunset</li>
+<li>Examples/Indicators/FantasyMeter</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4558"></a>
+Linear Gradient</h3>
+<p>This node uses UV coordinates to create a vertical or horizontal gradient from black to white. By default, the node uses the UV coordinates from the UI element, but you can also pass in your own coordinates to the UV input port. The U output port creates a horizontal gradient and the V output port creates a vertical gradient.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Backgrounds/80sSunset</li>
+<li>Examples/ProgressBars/GradientBar</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4559"></a>
+Cube Gradient</h3>
+<p>Creates a gradient, normals, height, and a mask for a procedurally-generated cube. This allows you to create 3d effects in a 2d environment. The InnerSize and OuterSize input ports control the size of the generated cube relative to the UV space. The LightDirection input port is a vector that determines the direction the light is coming from for the Diffuse gradient output. The Diffuse output uses the cube’s normals and the incoming LightDirection to calculate diffuse lighting. Areas of the Diffuse gradient facing away from the LightDirection will have negative values, so you may need to use a Saturate node to limit the range of the output to zero to one. The NormalTS output is a normalized vector that indicates the direction each pixel on the sphere’s surface is facing. The Mask output is white inside the sphere and black outside.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4560"></a>
+Sphere Gradient</h3>
+<p>Creates a gradient, normals, height, and a mask for a procedurally-generated sphere. This allows you to create 3d effects in a 2d environment. The Size input port controls the size of the generated sphere relative to the UV space. The LightDirection input port is a vector that determines the direction the light is coming from for the Diffuse gradient output. The Diffuse output uses the sphere’s normals and the incoming LightDirection to calculate diffuse lighting. Areas of the Diffuse gradient facing away from the LightDirection will have negative values, so you may need to use a Saturate node to limit the range of the output to zero to one. The NormalTS output is a normalized vector that indicates the direction each pixel on the sphere’s surface is facing. The Mask output is white inside the sphere and black outside.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Indicators/FantasyMeter</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4561"></a>
+Helpers</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4562"></a>
+Anti Aliasing</h3>
+<p>You can use this node to create a perfectly anti-aliased edge from any SDF shape or gradient regardless of the size of the shape or the camera’s distance from the UI element. You can use it to create resolution-independent UI elements. The Cutoff input controls the point along the input gradient where the hard edge should be. See the documentation section entitled “How to create a resolution-independent shape” for instructions on using this node.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Indicators/FantasyMeter</li>
+<li>Examples/Backgrounds/LavaLamp</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4563"></a>
+Aspect Ratio</h3>
+<p>Given the Width and Height of the UI element, this node calculates the aspect ratio of the UI element. It can be used to create buttons and widgets that correctly adapt to changes in the width or height of the assigned UI element. It works best when the WidthHeight input port is connected to the Width and Height parameters of the assigned UI element. See the documentation section entitled “How to make shapes that adapt to the aspect ratio of the UI element” for more information.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Indicators/AquaMeter</li>
+<li>Subgraphs/SDFs/Pill</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4564"></a>
+Ease Curves</h3>
+<p>This node adjusts the falloff curve of the input gradient. There are 9 available falloff curves. More information on the falloff curves can be found here: <a href="https://easings.net/">https://easings.net/</a> By default, the input Gradient is LinearTimeMirror, but you can use any type of gradient you want.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4565"></a>
+Hash11</h3>
+<p>Given an input value In and a Seed, this node generates a deterministic random value in the 0 to 1 range as output. Time is used as the default input, but you can use any input value you want.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Indicators/FantasyMeter</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4566"></a>
+Hash21</h3>
+<p>Given a vector2 value UV (such as UV coordinates) and a Seed, this node generates a deterministic random value as output. UV0 is the default UV input, but you can use any vector 2 value you want.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4567"></a>
+Histogram Scan</h3>
+<p>This node allows you to convert a gradient or SDF into a solid shape. You can control the Position along the gradient where the solid edge forms as well as the hardness of the edge using Contrast input. The lower the Contrast value, the softer the edge.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/ProgressBars/ProgressCircle</li>
+<li>Examples/Indicators/DialMeter</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4568"></a>
+Lerp Multiple</h3>
+<p>This node works in a similar way as the Lerp node, but allows you to blend between 3 or 4 values instead of just 2. FracTime is used as the default for the T value but you can use any value you want.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4569"></a>
+Mirror</h3>
+<p>This node flips the input value back and forth. The number of times to repeat the back and forth pattern is determined by the Subdivisions input.</p>
+<p>Usage Examples:</p><ul>
+<li>Subgraphs/SDFs/Wave</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4570"></a>
+PosterizeGradient</h3>
+<p>This node quantizes gradients into discrete steps. The number of steps is controlled by the Steps input. The step divisions can be divided to preserve the overall range or to preserve the step distance.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/ProgressBars/ProgressCircle</li>
+<li>Examples/Indicators/SciFiMeter</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4571"></a>
+Random</h3>
+<p>Given UV coordinates and a Seed, this node generates random values - either Vector 2 or Float. Because the method used to generate the values uses a sine function, it is non-deterministic, may vary on various hardware platforms (depending on the hardware implementation of sine), and may exhibit repetitive patterns when given large input values. If you are seeing these issues, use the Hash11 or Hash21 nodes instead.</p>
+<p>Usage Examples:</p><ul>
+<li>Subgraphs/UV/Shake.shadersubgraph</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4572"></a>
+RoundedCorners</h3>
+<p>This is a helper node used by the SDF Rectangle node. It helps to generate the rounded corners of the rectangle.</p>
+<p>Usage Examples:</p><ul>
+<li>Subgraphs/SDFs/Rectangle</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4573"></a>
+Scene Color Blurred</h3>
+<p>This node samples the Scene Color node in a spiral pattern and averages the result to create the appearance of blurring the scene background behind the UI element. Cycles is the number of turns of the spiral. Use <a class="el" href="class_samples.html">Samples</a> Per Cycle to control the number of samples in each cycle. The total number of samples is Cycles times <a class="el" href="class_samples.html">Samples</a> Per Cycle. Higher numbers of samples result in smoother blur appearance but higher cost. Lower sample numbers give better performance but grainier results. See the Sticky Notes inside the subgraph for more information.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Backgrounds/BlurredHexagon</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4574"></a>
+Patterns</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4575"></a>
+Animated Clouds</h3>
+<p>Generates an animated cloud pattern. By default, the clouds are generated in screen space, but you can also pass in your own UV coordinates. You can control the color of the clouds with the Color1 and Color2 inputs. The speed of cloud movement is controlled with the Speed input. And the size of the clouds can be controlled with the Scale input.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Backgrounds/TechGrid</li>
+<li>Examples/Buttons/SciFiButton2</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4576"></a>
+Animated Sheen</h3>
+<p>This node creates a scrolling highlight gradient. It’s intended to create the animated sheen on buttons - especially when the button is selected or the user’s mouse is hovering over the button. You can control the size of the effect with the Scale input. The angle of tilt can be adjusted with the Tilt input value. And you can control the Speed that the effect scrolls with the Speed input.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Buttons/AquaButton</li>
+<li>Examples/Buttons/SciFiButton2</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4577"></a>
+Bars</h3>
+<p>This node generates vertical or horizontal bars (an alternating black and white pattern) depending on the output port you use. You can control the number of bars using the Bars input.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4578"></a>
+Checkers</h3>
+<p>This node generates a simple checkerboard pattern. You can control the scale of the pattern using the Tiles input.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4579"></a>
+Circle Segments</h3>
+<p>This node divides a circle into the given number of segments and alternates them between black and white. The width and blur of the segments can be controlled with the Spacing and Blur inputs. The segments can be output as triangles or lines. You can also rotate the pattern using the Rotation input.</p>
+<p>Usage Example:</p><ul>
+<li>Examples/Buttons/SciFiButton</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4580"></a>
+Hexagon Tiles</h3>
+<p>This node creates a hexagon grid. The Tiles input controls the scale of the hexagon tiles. The Thickness input controls the width of the Stroke outlines. The Distance input controls the size of the white parts of the tiles relative to the black lines. The Blur input controls the blurriness of the tile outlines. An interesting and useful inverse SDF effect can be achieved by setting the Distance input to 0 and the Blur input to 0.5.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Backgrounds/BlurredHexagon</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4581"></a>
+Player Icon</h3>
+<p>This node creates an avatar icon. It combines the Circle and Pill SDF nodes. It’s a good example of how SDFs can be combined to create other shapes.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Buttons/SciFiButton</li>
+<li>Examples/Indicators/DialMeter</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4582"></a>
+Rings</h3>
+<p>This subgraph generates a series of concentric rings. You can select the number of rings with the Segments input. You can control how sharp or blurry the rings are with the Glow Min Max input. You can crop the rings at the edges with the Mask To Bounds input. The Offset input moves the rings toward or away from the center. By default it’s set to LinearTime but you can use any input value.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4583"></a>
+Ring Segments</h3>
+<p>This node generates a set of rotating ring segments. You can control the number of segments with the Segments input. The Size input controls how far the segments are from the center. The Blur input controls how sharp or blurry the edges of the segments are. The Thickness input controls the width of the segments. The Contrast input controls the falloff of the segment’s tail. The Rotation input controls the movement or position around the circle of the segments.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4584"></a>
+Square Tiles</h3>
+<p>This node generates a grid pattern of square tiles. The Tiles input controls the number of tiles in each dimension. Size controls the size of the white squares vs black lines in both dimensions. The lower these values are, the thicker the black outlines will be. Blur controls the sharpness/blurriness of the white squares. You’ll most likely need to turn the Size value down in order to make room for blurry edges.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Backgrounds/TechGrid</li>
+<li>Examples/Buttons/SciFiButton2</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4585"></a>
+Wedges</h3>
+<p>This node generates wedge patterns of various types. The type can be selected with the dropdown box.</p>
+<p>Usage Examples:</p><ul>
+<li>Subgraphs/Gradients/SquareGradient</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4586"></a>
+Window Blinds</h3>
+<p>This node generates a bar pattern that can expand or contract to give the appearance of opening and closing window blinds. The Rotation input controls the orientation of the blinds in degrees. The Segments input controls the number of blinds. The Progress input controls the balance between black and white. Higher values make the white bars larger and lower values make the black bars larger. Blur controls the sharpness/blurriness of the bard edges.</p>
+<p>Usage Example:</p><ul>
+<li>Examples/Indicators/SciFiMeter</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4587"></a>
+SDFs</h2>
+<p>SDFs or Signed Distance Fields are a very useful way of representing procedurally-generated shapes. The value of each pixel in the SDF represents the distance to the nearest shape edges. Pixels inside the shape have negative values - also indicating the distance to the nearest edge.</p>
+<p>SDFs can be used to create a final shape using the Fill output of the SDF node, using the Histogram Scan node, or the AntiAliasing node. The AntiAliasing node specifically will create shapes that are perfectly anti-aliased regardless of scale, camera distance, or resolution.</p>
+<p>Each of the SDF shape nodes outputs the shape from the Fill output. The Stroke port outputs an outline of the shape. The Stroke Thickness input parameter controls the width of the Stroke outline. The nodes also output the SDF itself as well as the Stroke SDF.</p>
+<p>You can control the sharpness or blurriness of the Fill shape by using the Edge Min and Edge Max controls. The closer together the values are, the sharper the edge of the shape will be. The farther apart the values are, the softer/blurrier the edges will be. A blurry SDF shape makes a great drop shadow.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4588"></a>
+Circle</h3>
+<p>Creates a circle shape.</p>
+<ul>
+<li>Usage Examples:</li>
+<li>Examples/Buttons/SciFiButton</li>
+<li>Examples/Indicators/FantasyMeter</li>
+<li>Examples/Indicators/DialMeter</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4589"></a>
+Hexagon</h3>
+<p>Creates a hexagon shape. It’s possible to round the corners of the hexagon using the Corner Radius input parameter.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4590"></a>
+Pill</h3>
+<p>Generates a pill shape. You can control the height of the pill with the Size parameter. You can control the width of the pill with the Width parameter. To control the aspect ratio of the pill, use the WidthHeight parameter to enter the dimensions of the UI element.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Buttons/AquaButton</li>
+<li>Examples/ProgressBars/GradientBar</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4591"></a>
+Rectangle</h3>
+<p>Creates a rectangle shape. You can round the corners of the rectangle using the four Corner Radii input values. To control the aspect ratio of the rectangle, use the WidthHeight parameter to enter the dimensions of the UI element.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Buttons/SimpleButton</li>
+<li>Examples/Backgrounds/RoundedRectangleBubble</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4592"></a>
+Star</h3>
+<p>Creates a star shape. You can control the number of points and the point distance.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4593"></a>
+Triangle</h3>
+<p>Creates a triangle shape. It’s possible to round the corners of the triangle using the Corner Radius input parameter.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4594"></a>
+Waves</h3>
+<p>Generates an animated wave pattern from any SDF. You can control the number of waves and the movement of the waves using the Repetitions and Movement parameters.</p>
+<p>Usage Example:</p><ul>
+<li>Examples/Indicators/FantasyMeter</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4595"></a>
+SDF Intersect</h3>
+<p>This is a basic boolean intersection operation between two SDFs. The result is the intersection where the two shapes overlap. Using the Smooth output allows the result to have a soft blend instead of the hard edge.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4596"></a>
+SDF Subtract</h3>
+<p>This is a basic boolean intersection operation between two SDFs. The result is the second SDF subtracted from the first. Using the Smooth output allows the result to have a soft blend instead of the hard edge.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4597"></a>
+SDF Unite</h3>
+<p>This is a basic boolean intersection operation between two SDFs. The result is the two SDF shapes combined together. Using the Smooth output allows the result to have a soft blend instead of the hard edge.</p>
+<p>Usage Example:</p><ul>
+<li>Examples/Backgrounds/LavaLamp</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4598"></a>
+Time</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4599"></a>
+LinearTime</h3>
+<p>Outputs time values that increase linearly. The Loop output increases linearly from 0 to 1 and then jumps back to zero. The Mirror output increases linearly from 0 to 1 and then decreases linearly back to 0 and repeats this back and forth cycle. The Switch output jumps from 0 directly to 1 and then back to 0 again.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Backgrounds/80sSunset</li>
+<li>Examples/Buttons/SciFiButton2</li>
+<li>Examples/Indicators/FantasyMeter</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4600"></a>
+SineTime</h3>
+<p>The Raw output flows in a smooth curve from -1 to 1 and back. The Normalized output flows in a smooth curve between 0 and 1.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/ProgressBars/FancyLoading</li>
+<li>Examples/Backgrounds/LavaLamp</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4601"></a>
+TimeOffset</h3>
+<p>Allows you to use a mask to determine areas where time is offset. The maximum offset value is defined by the Offset input. Areas where the Mask is 1 are time offset by the maximum amount. Areas where the Mask is 0 are not time offset.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4602"></a>
+UV</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4603"></a>
+GridTiles</h3>
+<p>Divides the UV space into the number of tiles defined by Tile U and Tile V. Aspect ratio can be maintained by inputting correct values into WidthHeight</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Indicators/FantasyMeter</li>
+<li>Examples/ProgressBars/FancyLoading</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4604"></a>
+Halftone</h3>
+<p>Divides the UV space into halftone space or outputs a halftone pattern based on the input gradient where the size of the dots are determined by the shades in the input gradient. Areas where the input gradient is white have the largest halftone dots.</p>
+<p>Usage Example:</p><ul>
+<li>Examples/Backgrounds/Halftone</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4605"></a>
+Invert</h3>
+<p>Flips the U coordinate, the V coordinate, or both.</p>
+<p>Usage Example:</p><ul>
+<li>Examples/Indicators/DialMeter</li>
+<li>Examples/ProgressBars/GradientBar</li>
+<li>Examples/ProgressBars/ProgressCircle</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4606"></a>
+MirrorUV</h3>
+<p>Takes UV coordinates in the 0 to 1 range and converts them to go from 0 to 1 to 0 again. You can control the offset, rotation, scale, and axis to mirror.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4607"></a>
+Move</h3>
+<p>Moves UV coordinates the amount specified by the Move input.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Backgrounds/80sSunset</li>
+<li>Examples/Backgrounds/LavaLamp</li>
+<li>Examples/Backgrounds/WarpedGradient</li>
+<li>Examples/Buttons/SimpleButton</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4608"></a>
+Perspective</h3>
+<p>Distorts UV coordinates to make it look like perspective is applied as if the object were rotated away from the camera. Because of the perspective warping, some empty space is created around the edges. This empty space is black in the Alpha output. The Alpha Threshold and Alpha Feather inputs control the edges of the empty space.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/ProgressBars/FancyLoading</li>
+<li>Examples/Backgrounds/80sSunset</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4609"></a>
+PosterizeUV</h3>
+<p>Divides smooth UV coordinates into discrete, quantized units. The number of units can be specified with the Steps input. This node works well to convert a high resolution image into a low resolution one.</p>
+<p>Usage Example:</p><ul>
+<li>Examples/Backgrounds/Pixelation</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4610"></a>
+Scale</h3>
+<p>Scales texture coordinates by the amount specified in Scale around the point specified by Pivot Point.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Backgrounds/RoundedRectangleBubble</li>
+<li>Examples/Buttons/SciFiButton</li>
+<li>Examples/Indicators/DialMeter</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4611"></a>
+Shake</h3>
+<p>Oscillates UV coordinates back and forth quickly by a random amount and using the Speed and Strength inputs.</p>
+<p>Usage Example:</p><ul>
+<li>Examples/Indicators/SciFiMeter</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4612"></a>
+Tilt</h3>
+<p>Tilts the UV coordinates so that the resulting object slants to the left or right.</p>
+<p>Usage Examples:</p><ul>
+<li>Examples/Indicators/SciFiMeter</li>
+<li>Examples/ProgressBars/SimpleLoading</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4613"></a>
+Waves</h3>
+<p>Distorts the UV coordinates in a wave pattern. The strength and size of the waves can be controlled with the Amplitude and Frequency inputs.</p>
+<p>Usage Example:</p><ul>
+<li>Examples/Indicators/FantasyMeter </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

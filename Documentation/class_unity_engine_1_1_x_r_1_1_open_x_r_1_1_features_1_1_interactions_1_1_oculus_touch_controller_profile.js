@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controller_profile =
+[
+    [ "OculusTouchController", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848.html", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controlleb9e7d9ddedd4ccde56e9cadd6ed26848" ],
+    [ "GetDeviceLayoutName", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controller_profile.html#a2dd641f899d4014644c3084dd52084d6", null ],
+    [ "RegisterActionMapsWithRuntime", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controller_profile.html#a16aa173d775c7a3da23142b22566c28d", null ],
+    [ "RegisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controller_profile.html#a2727a1c8feb89684aeb8e34356f9e8e7", null ],
+    [ "UnregisterDeviceLayout", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_oculus_touch_controller_profile.html#ad637aafa0167e9d21b6f851a3e81a01c", null ]
+];

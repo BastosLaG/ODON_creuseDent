@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Font Asset Creator</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_2_font_assets_creator.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Font Asset Creator </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6587"></a></p>
+<p>The Font Asset Creator converts <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_2_font_assets.html">Unity font assets</a> into TextMesh Pro font assets. You can use it to create both Signed <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_2_font_assets_s_d_f.html">Distance Field (SDF)</a> fonts and bitmap fonts.</p>
+<p>When you create a new font Asset, TextMesh Pro generates the Asset itself, as well as the atlas texture and material for the font.</p>
+<p>After you create a TextMesh Pro font Asset, you can delete the <a class="el" href="namespace_unity.html">Unity</a> font Asset you used as a source, although you may want to keep it in the Scene in case you need to regenerate the TextMesh Pro font Asset.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6588"></a>
+Creating a font Asset</h1>
+<p>Before you start, make sure that you've already imported the font (usually a TrueType .ttf file) you want to use into the project. For more information about importing fonts into <a class="el" href="namespace_unity.html">Unity</a>, see the documentation on <a href="https://docs.unity3d.com/Manual/class-Font.html">Fonts</a> in the <a class="el" href="namespace_unity.html">Unity</a> manual.</p>
+<p><b>To create a TextMesh Pro font Asset:</b></p>
+<ol type="1">
+<li>From the menu, choose: <b>Window &gt; TextMesh Pro &gt; Font Asset Creator</b> to open the Font Asset Creator.</li>
+</ol>
+<ol type="1">
+<li>Choose a <b>Source Font File</b>. This the <a class="el" href="namespace_unity.html">Unity</a> font Asset that you want to convert into a TextMesh Pro font Asset.</li>
+</ol>
+<ol type="1">
+<li>Adjust the <b><a class="el" href="#FontAssetCreatorSettings">Font Settings</a></b> as needed, then click <b>Generate Font Atlas</b> to create the atlas texture<br  />
+<br  />
+The atlas, and information about the font Asset appear in the texture preview area.<br  />
+<br  />
+IMAGE</li>
+</ol>
+<ol type="1">
+<li>Continue adjusting the settings and regenerating the atlas until you're satisfied with the result.</li>
+</ol>
+<ol type="1">
+<li>Click <b>Save</b> or <b>Save as...</b> to save the font Asset to your project.<br  />
+<br  />
+You must save the Asset to a <b>Resources</b> folder to make it accessible to TextMesh Pro.</li>
+</ol>
+<p><a class="anchor" id="FontAssetCreatorSettings"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6589"></a>
+Font Asset Creator Settings:</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone" colspan="2">Property:  </th><th class="markdownTableHeadNone">Function:  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="2"><b>Source Font File</b>  </td><td class="markdownTableBodyNone">Select a font from which to generate a Text Mesh Pro font Asset.<br  />
+<br  />
+This font is not included in project builds, unless you use it elsewhere in the project, or put it in a Resources folder.<br  />
+<br  />
+You can use one of the default TextMesh Pro font assets, or <a href="https://docs.unity3d.com/Manual/class-Font.html">import your own</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="2"><b>Sampling Point Size</b>  </td><td class="markdownTableBodyNone">Set the font size, in points, used to generate the font texture.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="2"><b>Auto Sizing</b>  </td><td class="markdownTableBodyNone">Use the largest point size possible while still fitting all characters on the texture.<br  />
+<br  />
+This is the usual setting for SDF fonts.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="2"><b>Custom Size</b>  </td><td class="markdownTableBodyNone">Use a custom point size. Enter the desired size in the text box.<br  />
+<br  />
+Use this setting to achieve pixel-accurate control over bitmap-only fonts.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="2"><b>Padding</b>  </td><td class="markdownTableBodyNone">Specify the space, in pixels, between characters in the font texture.<br  />
+<br  />
+Padding provides the space required to render character separately, and to generate the SDF gradient (See the documentation on <a class="el" href="md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_2_font_assets_s_d_f.html">Font Assets</a> for details).<br  />
+<br  />
+The larger the padding, the smoother the transition, which allows for higher-quality rendering and larger effects, like thick outlines.<br  />
+<br  />
+A padding of 5 is often fine for a 512x512 texture.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="2"><b>Packing Method</b>  </td><td class="markdownTableBodyNone">Specify how to fit the characters into the font texture.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Optimum  </td><td class="markdownTableBodyNone">Finds the largest possible automatic font size that still fits all characters in the texture.<br  />
+<br  />
+Use this setting to generate the final font texture.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Fast  </td><td class="markdownTableBodyNone">Computes character packing more quickly, but may use a smaller font size than Optimum mode.<br  />
+<br  />
+Use this setting when testing out font Asset creation settings.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="2"><b>Atlas Resolution</b>  </td><td class="markdownTableBodyNone">Set the size width and height of the font texture, in pixels.<br  />
+<br  />
+A resolution of 512 x 512 is fine for most fonts, as long as you are only including ASCII characters. Fonts with more characters may require larger resolutions, or multiple atlases. <br  />
+<br  />
+When using an SDF font, a higher resolution produces finer gradients, and therefore higher quality text.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="2"><b>Character Set</b>  </td><td class="markdownTableBodyNone">The characters in a font file aren't included in the font Asset automatically. You have to specify which ones you need. You can select a predefined character set, provide a list of characters to include, or include all of the characters in an existing font Asset or text Asset.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">ASCII  </td><td class="markdownTableBodyNone">Includes the visible characters in the ASCII character set.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Extended ASCII  </td><td class="markdownTableBodyNone">Includes the visible characters in the extended ASCII character set.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">ASCII Lowercase  </td><td class="markdownTableBodyNone">Includes only visible lower-case characters from the ASCII character set.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">ASCII Uppercase  </td><td class="markdownTableBodyNone">Includes only visible upper-case characters from the ASCII character set.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Numbers + Symbols  </td><td class="markdownTableBodyNone">Includes only the visible numbers and symbols from the ASCII character set.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Custom Range  </td><td class="markdownTableBodyNone">Includes a range of characters that you define.<br  />
+<br  />
+Enter a sequence of decimal values, or ranges of values, to specify which characters to include.<br  />
+<br  />
+Use a hyphen to separate the first and last values of a range. Use commas to separate values and ranges (for example <span class="tt">32-126,160,8230</span>).<br  />
+<br  />
+You can also choose an existing font Asset to include the characters in that Asset.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Unicode Range (Hex)  </td><td class="markdownTableBodyNone">Includes a range of characters that you define.<br  />
+<br  />
+Enter a sequence of unicode hexadecimal values, or ranges of values, to specify which characters to include.<br  />
+<br  />
+Use a hyphen to separate the first and last values of a range. Use commas to separate values and ranges (for example <span class="tt">20-7E,A0,2026</span>).<br  />
+<br  />
+You can also choose an existing font Asset to include the characters in that Asset.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Custom Characters  </td><td class="markdownTableBodyNone">Includes a range of characters that you define.<br  />
+<br  />
+Enter a sequence of characters to specify which characters to include.<br  />
+<br  />
+Enter characters one after the other, with no spaces or delimiting characters in between (for example <span class="tt">abc123*#%</span>).<br  />
+<br  />
+You can also choose an existing font Asset to include the characters in that Asset.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Characters from File  </td><td class="markdownTableBodyNone">Includes all the characters in a text Asset that you specify.<br  />
+<br  />
+Use this option when you want to save your character set.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="2"><b>Font Style</b>  </td><td class="markdownTableBodyNone">Apply basic font styling when creating a bitmap-only font Asset.<br  />
+<br  />
+For SDF fonts, you configure the styling in the shader rather than the font Asset.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Normal  </td><td class="markdownTableBodyNone">Generates characters with no styling.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Bold, Italic, Bold_Italic  </td><td class="markdownTableBodyNone">Generates the font Asset with bold characters, italicized characters, or both.<br  />
+<br  />
+With these settings, you can set a strength value that applied to bolding and italicization  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"><a class="el" href="class_outline.html">Outline</a>  </td><td class="markdownTableBodyNone">Generates the font Asset with outline characters.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Bold_Sim  </td><td class="markdownTableBodyNone">Generates the font Asset with a simulated bold.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="2"><b>Render Mode</b>  </td><td class="markdownTableBodyNone">Specify the render mode to use when outputting the font atlas.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">SMOOTH  </td><td class="markdownTableBodyNone">Renders the atlas to an antialiased bitmap.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">RASTER  </td><td class="markdownTableBodyNone">Renders the atlas to a non-antialiased bitmap.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">SMOOTH_HINTED  </td><td class="markdownTableBodyNone">Renders the atlas to an antialiased bitmap, and aligns character pixels with texture pixels for a crisper result.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">RASTER_HINTED  </td><td class="markdownTableBodyNone">Renders the atlas to a non-antialiased bitmap and aligns character pixels with texture pixels for a crisper result.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">SDF  </td><td class="markdownTableBodyNone">Renders the atlas using a slower, but more accurate SDF generation mode, and no oversampling.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">SDFAA  </td><td class="markdownTableBodyNone">Renders the atlas using a faster, but less accurate SDF generation mode. It produces font atlases that are sufficient for most situations.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">SDFAA_HINTED  </td><td class="markdownTableBodyNone">Renders the atlas using a faster, but less accurate SDF generation mode, and aligns character pixels with texture pixels for a crisper result.. It produces font atlases that are sufficient for most situations  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">SDF8  </td><td class="markdownTableBodyNone">Renders the atlas using a slower, but more accurate SDF generation mode, and 8x oversampling.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">SDF16  </td><td class="markdownTableBodyNone">Renders the atlas using a slower, but more accurate SDF generation mode, and 16x oversampling.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">SDF32  </td><td class="markdownTableBodyNone">Renders the atlas using a slower, but more accurate SDF generation mode, and 32x oversampling. Use this setting for fonts with complex or small characters.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="2"><b>Get Kerning Pairs</b>  </td><td class="markdownTableBodyNone">Enable this option to copy the kerning data from the font.<br  />
+<br  />
+Kerning data is used to adjust the spacing between specific character pairs to produce a more visually pleasing result.<br  />
+<br  />
+<b>Note:</b> It isn't always possible to import kerning data. Some fonts store kerning pairs in their glyph positioning (GPOS) table, which is not supported by FreeType, the font engine used by TextMesh Pro. Other fonts do not store kerning pairs at all.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="2"><b>Generate Font Atlas</b>  </td><td class="markdownTableBodyNone">Generate the font atlas texture.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone" colspan="2"><b>Save</b>  </td><td class="markdownTableBodyNone">Save the current font atlas.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" colspan="2"><b>Save As</b>  </td><td class="markdownTableBodyNone">Save the current font atlas as a new font Asset.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6590"></a>
+Tips for creating font assets</h1>
+<p>Characters in the font texture need some padding between them so they can be rendered separately. This padding is specified in pixels. Padding also creates room for the SDF gradient. The larger the padding, the smoother the transition, which allows for higher-quality rendering and larger effects, like thick outlines. A padding of 5 is often fine for a 512x512 texture.</p>
+<p>For most fonts, a 512x512 texture resolution is fine when including all ASCII characters. When you need to support thousands of character, you will have to use large textures. But even at maximum resolution, you might not be able to fit everything. In that case, you can split the characters by creating multiple font assets. Put the most often used characters in a main font Asset, and the others in a fallback font assets. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

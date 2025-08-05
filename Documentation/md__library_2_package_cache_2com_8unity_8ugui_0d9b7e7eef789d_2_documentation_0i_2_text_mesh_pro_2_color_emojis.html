@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Color emojis</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ugui_0d9b7e7eef789d_2_documentation_0i_2_text_mesh_pro_2_color_emojis.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Color emojis </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6308"></a></p>
+<p>You can include color glyphs and emojis in text. To do so, import a font file that has color emojis in it and set it as the fallback emojis text assets.</p>
+<p><img src="../images/NativeEmojiExample.png" alt="Native Emoji Example" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6309"></a>
+Set up color emojis</h1>
+<p>Create a color font asset and add it to the TMP Settings Fallback. Note this is the same as the Project Settings/TextMeshPro/Settings as depicted in the image.</p>
+<ol type="1">
+<li>In your project, import a font file that has color emojis in it.</li>
+<li>Right-click in the <span class="tt">Asset</span> folder, and then select <b>Create &gt; TextMeshPro &gt; FontAsset &gt; Color</b>. This ensures that you create the font asset with the right shader (Sprite) and the right atlas rendering mode (Color).</li>
+<li>Open the TMP Settings asset or alternatively via the <b>Edit &gt; ProjectSettings &gt; TextMesh Pro &gt; Settings</b>.</li>
+<li>Add the emoji font asset to the <b>Fallback Emoji Text Assets</b> section.</li>
+</ol>
+<p><img src="../images/FallbackEmoji.png" alt="Example image" class="inline"/></p>
+<p>Alternatively, assigning a color font asset to the text object will work fine provided that the [Emoji Fallback Support](ColorEmojis) option in the Extra Settings of the text component is disabled.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6310"></a>
+Include emojis in text</h1>
+<p>To include emojis in text, do the following:</p>
+<ul>
+<li>Include emojis in text through their Unicode. For example, enter <span class="tt">\U00001f60</span> to represent a smile.</li>
+<li>Use OS Virtual Keyboard.</li>
+<li>Copy the emojis from an external Text Editing tool and paste them in your text field.</li>
+</ul>
+<p>To find more information about the Unicode Emojis Standard, see this <a href="http://unicode.org/Public/emoji/14.0/">link</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6311"></a>
+Control Emoji Fallback Search</h1>
+<p>The "Emoji Fallback Support" option controls where we search for characters defined in the Unicode Standards as Emojis.</p>
+<p>When this option is enabled (default), the "Fallback Emoji Text Assets" list will be search first for any characters defined as Emojis.</p>
+<p>When this option is disabled, the Primary font asset assigned to the text component will be searched first.</p>
+<p>Basically, this option overrides the character search to prioritize searching thru the "Fallback Emoji Text Assets" list first when the character is an emoji.</p>
+<p>This option is also useful when a font contains black-and-white emojis as it allows the user to control if the emojis contained in the primary will be used or those from the "Fallback Emoji Text Assets" list.</p>
+<p>To update the <span class="tt">Emoji Fallback Support</span>:</p><ol type="1">
+<li>Select the <b>Text (TMP)</b> field in the hierarchy.</li>
+<li>In the Inspector window, under the <span class="tt">Extra Settings</span> foldout of the <b>Text (TMP)</b> field, select the <b>Emoji Fallback Support</b> toggle.</li>
+</ol>
+<p><img src="../images/EmojiFallbackSupport.png" alt="Example image" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6312"></a>
+Limitations</h1>
+<p>The color emojis feature has the following limitations:</p>
+<ul>
+<li>It doesn't support some OpenType font features, such as chain context and single substitution.</li>
+<li>It doesn't support Apple fonts that use the AAT format. It's a predecessor to OpenType.</li>
+<li>It doesn't support SVG color glyphs.</li>
+<li>Dynamic OS FontAsset has limited support on some iOS devices. The <span class="tt">Apple Color Emoji</span> font file found on OSX and several iOS devices works fine. However, the <span class="tt">Apple Color Emoji-160px</span> found on newer iOS devices is not support as the emoji's are encoded in JPEG format which is not supported by FreeType.</li>
+<li>Prior to <a class="el" href="namespace_unity.html">Unity</a> 2023.1, adding a UTF-32 through the inspector sends an error. The emojis won't display in the inspector. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

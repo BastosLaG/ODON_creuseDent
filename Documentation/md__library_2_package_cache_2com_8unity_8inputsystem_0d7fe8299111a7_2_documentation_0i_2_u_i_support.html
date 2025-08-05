@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: UISupport</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_u_i_support.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">UISupport </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2345"></a>
+autotoc_md2345</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2346"></a>
+uid: input-system-ui-support</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2347"></a>
+UI support</h1>
+<ul>
+<li>Overview and compatibility</li>
+<li>Setting up UI input</li>
+<li>Required Actions for UI</li>
+<li>The UI Input Module component<ul>
+<li>Using the UI Input Module</li>
+<li>UI Input Module properties</li>
+<li>How the bindings work</li>
+<li>Other notes about the UI Input Module</li>
+</ul>
+</li>
+<li>Multiplayer UIs</li>
+<li>Virtual mouse cursor control<ul>
+<li>Using the Virtual Mouse component</li>
+</ul>
+</li>
+<li>Distinguishing between UI and game input<ul>
+<li>Handling ambiguities for pointer-type input</li>
+<li>Handling ambiguities for navigation-type input</li>
+</ul>
+</li>
+<li>Immediate Mode GUI</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2348"></a>
+Overview and compatibility</h2>
+<p><a class="el" href="namespace_unity.html">Unity</a> has <a href="https://docs.unity3d.com/Manual/UIToolkits.html">various UI solutions</a>. The Input System package's compatibility and workflow with these solutions varies depending on which UI solution you are using, and which version of <a class="el" href="namespace_unity.html">Unity</a> you are using.</p>
+<p>In some cases you must use the <b>UI Input Module</b> (a component supplied in the Input System package) to define which actions are passed through from the Input System to the UI.</p>
+<p>The three main UI solutions are <b>UI Toolkit</b>, <b><a class="el" href="namespace_unity.html">Unity</a> UI</b>, and <b>IMGUI</b>. The compatibility and workflow for each of these are as follows:</p>
+<p><b>For [**UI Toolkit</b>](<a href="https://docs.unity3d.com/Manual/UIElements.html">https://docs.unity3d.com/Manual/UIElements.html</a>), also known as "UI Elements" (an XML/CSS style UI solution):**</p>
+<ul>
+<li>From <a class="el" href="namespace_unity.html">Unity</a> 2023.2 and onwards, the UI actions defined in the default <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_project_wide_actions.html">project-wide actions</a> directly map to UI Toolkit input. You do not need to use the UI Input Module component.</li>
+</ul>
+<ul>
+<li>In versions of <a class="el" href="namespace_unity.html">Unity</a> prior to 2023.2, you must use the UI Input Module component to define which actions are passed through from the Input System to the UI.</li>
+<li>Refer to UI Toolkit <a href="https://docs.unity3d.com/Manual/UIE-Runtime-Event-System.html">Runtime UI event system and input handling</a> for more information on how to configure UI Toolkit input.</li>
+</ul>
+<p><b>For [**Unity UI</b>](<a href="https://docs.unity3d.com/Packages/com.unity.ugui@latest">https://docs.unity3d.com/Packages/com.unity.ugui@latest</a>), also known as "uGUI" (a GameObject and Component style UI solution):**</p>
+<p>When using <a class="el" href="namespace_unity.html">Unity</a> UI (uGUI), you must always use the UI Input Module component to define which actions are passed through from the Input System to the UI.</p>
+<p><b>For [**IMGUI</b>](<a href="https://docs.unity3d.com/Manual/GUIScriptingGuide.html">https://docs.unity3d.com/Manual/GUIScriptingGuide.html</a>) (a script-based "Immediate Mode" UI using the <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnGUI.html"><span class="tt">OnGUI</span></a> method):**</p>
+<p>The Input System package is <b>not compatible</b> with IMGUI, however you can still use the Input System for other parts of your project such as gameplay. See the Immediate Mode GUI section for more information.</p>
+<p>The compatibility above is summarized in the following table:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">UI Solution  </th><th class="markdownTableHeadNone">Compatible  </th><th class="markdownTableHeadNone">UI Input Module component  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">UI Toolkit (2023.2+)  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Not required  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">UI Toolkit (pre 2023.2)  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Required  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="namespace_unity.html">Unity</a> UI (uGUI)  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Required  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">IMGUI  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">n/a  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2349"></a>
+Setting up UI input</h2>
+<p>The default <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_project_wide_actions.html">project-wide actions</a> comes with a "**UI**" Action Map, that contains all the actions required for UI interaction (shown in the image below). You can configure the bindings for these actions in the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Actions Editor</a>. Go to <b>Project Settings &gt; Input System Package</b>, then select "**UI**" in the Action Maps column.</p>
+<p><img src="Images/ProjectSettingsInputActionsUIActionMap.png" alt="ProjectSettingsInputActionsUIActionMap" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2350"></a>
+Required Actions for UI</h2>
+<p>The default project-wide actions comes with all the required actions to be compatible with UI Toolkit and <a class="el" href="namespace_unity.html">Unity</a> UI.</p>
+<p>You can modify, add, or remove bindings to the named actions in the UI action map to suit your project, however in order to remain compatible with UI Toolkit, the name of the action map ("**UI**"), the names of the actions it contains, and their respective <b>Action Types</b> must remain the same.</p>
+<p>These specific actions and types, which are expected by the <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html">UI Input Module</a> class, are as follows:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Action</b>  </th><th class="markdownTableHeadNone"><b>Action Type</b>  </th><th class="markdownTableHeadNone"><b>Control Type</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Navigate  </td><td class="markdownTableBodyNone">PassThrough  </td><td class="markdownTableBodyNone">Vector2  </td><td class="markdownTableBodyNone">A vector used to select the currently active UI <a href="https://docs.unity3d.com/Manual/script-Selectable.html">selectable</a> in gamepad or arrow-key navigation-type input.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Submit  </td><td class="markdownTableBodyNone">Button  </td><td class="markdownTableBodyNone">Button  </td><td class="markdownTableBodyNone">Submits the currently selected UI <a href="https://docs.unity3d.com/Manual/script-Selectable.html">selectable</a> in navigation-type input  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Cancel  </td><td class="markdownTableBodyNone">Button  </td><td class="markdownTableBodyNone">Button  </td><td class="markdownTableBodyNone">Exits any interaction with the currently selected UI <a href="https://docs.unity3d.com/Manual/script-Selectable.html">selectable</a> in navigation-type input  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Point  </td><td class="markdownTableBodyNone">PassThrough  </td><td class="markdownTableBodyNone">Vector2  </td><td class="markdownTableBodyNone">A 2D screen position. The cursor for pointer-type interaction.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Click  </td><td class="markdownTableBodyNone">PassThrough  </td><td class="markdownTableBodyNone">Button  </td><td class="markdownTableBodyNone">The primary button for pointer-type interaction.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">RightClick  </td><td class="markdownTableBodyNone">PassThrough  </td><td class="markdownTableBodyNone">Button  </td><td class="markdownTableBodyNone">The secondary button for pointer-type interaction.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">MiddleClick  </td><td class="markdownTableBodyNone">PassThrough  </td><td class="markdownTableBodyNone">Button  </td><td class="markdownTableBodyNone">The middle button for pointer-type interaction.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">ScrollWheel  </td><td class="markdownTableBodyNone">PassThrough  </td><td class="markdownTableBodyNone">Vector2  </td><td class="markdownTableBodyNone">The scrolling gesture for pointer-type interaction.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Tracked Device Position  </td><td class="markdownTableBodyNone">PassThrough  </td><td class="markdownTableBodyNone">Vector3  </td><td class="markdownTableBodyNone">A 3D position of one or multiple spatial tracking devices, such as XR hand controllers. In combination with Tracked Device Orientation, this allows XR-style UI interactions by pointing at UI <a href="https://docs.unity3d.com/Manual/script-Selectable.html">selectables</a> in space. See tracked-type input.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Tracked Device Orientation  </td><td class="markdownTableBodyNone">PassThrough  </td><td class="markdownTableBodyNone">Quaternion  </td><td class="markdownTableBodyNone">a <span class="tt">Quaternion</span> representing the rotation of one or multiple spatial tracking devices, such as XR hand controllers. In combination with <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_trackedDevicePosition">Tracked Device Position</a>, this allows XR-style UI interactions by pointing at UI <a href="https://docs.unity3d.com/Manual/script-Selectable.html">selectables</a> in space. See tracked-type input.  </td></tr>
+</table>
+<p>You can also reset the UI action map to its default bindings by selecting <b>Reset</b> from the <b>More (⋮)</b> menu, at the top right of the actions editor window. However, this will reset both the 'Player' and 'UI' action maps to their default bindings.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2351"></a>
+The UI Input Module component</h2>
+<p>When working with <a class="el" href="namespace_unity.html">Unity</a> UI (uGUI), or when using UI Toolkit in versions of <a class="el" href="namespace_unity.html">Unity</a> prior to <a class="el" href="namespace_unity.html">Unity</a> 2023.2, you must use the <b>UI Input Module</b> component which defines which actions are passed through to your UI, as well as some other UI-related input settings. </p><blockquote class="doxtable">
+<p><b>Note:</b> If you have an instance of the <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html">Input System UI Input Module</a> component in your scene, the settings on that component takes priority and are used instead of the UI settings in your project-wide actions. Also, The UI action map will be enabled, along with the default action map specified on any UI Input Module component in the scene. </p>
+</blockquote>
+<p>The UI Input module is implemented in the class <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html"><span class="tt">InputSystemUIInputModule</span></a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2352"></a>
+Using the UI Input Module</h3>
+<p>The UI Input Module is a component which you must add to a GameObject in your scene in order for your UI to receive input from the Input System. To do this:</p>
+<ol type="1">
+<li>Create a new empty GameObject</li>
+<li>Click <a href="https://docs.unity3d.com/Manual/UsingComponents.html"><b>Add Component</b></a> in the inspector</li>
+<li>In the search field displayed, type "Input System UI Input Module"</li>
+<li>Select <b>Input System UI Input Module</b> to add it to the GameObject.</li>
+</ol>
+<p><img src="Images/InputSystemUIInputModuleAdd.png" alt="InputSystemUIInputModule" class="inline"/></p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2353"></a>
+UI Input Module properties</h3>
+<p><img src="Images/InputSystemUIInputModule.png" alt="InputSystemUIInputModule" class="inline"/></p>
+<p>You can use the following properties to configure <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html">InputSystemUIInputModule</a>:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_moveRepeatDelay">Move Repeat Delay</a>  </td><td class="markdownTableBodyNone">The initial delay (in seconds) between generating an initial <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.EventSystems.IMoveHandler.html">IMoveHandler.OnMove</a> navigation event and generating repeated navigation events when the <b>Move</b> Action stays actuated.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_moveRepeatDelay">Move Repeat Rate</a>  </td><td class="markdownTableBodyNone">The interval (in seconds) between generating repeat navigation events when the <b>Move</b> Action stays actuated. Note that this is capped by the frame rate; there will not be more than one move repeat event each frame so if the frame rate dips below the repeat rate, the effective repeat rate will be lower than this setting.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_actionsAsset">Actions Asset</a>  </td><td class="markdownTableBodyNone">An <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_assets.html">Input Action Asset</a> containing all the Actions to control the UI. You can choose which Actions in the Asset correspond to which UI inputs using the following properties.<br  />
+<br  />
+By default, this references a built-in Asset named <em>DefaultInputActions</em>, which contains common default Actions for driving UI. If you want to set up your own Actions, <a href="ActionAssets.md#creating-input-action-assets">create a custom Input Action Asset</a> and assign it here. When you assign a new Asset reference to this field in the Inspector, the Editor attempts to automatically map Actions to UI inputs based on common naming conventions.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_deselectOnBackgroundClick">Deselect on Background Click</a>  </td><td class="markdownTableBodyNone">By default, when the pointer is clicked and does not hit any <span class="tt">GameObject</span>, the current selection is cleared. This, however, can get in the way of keyboard and gamepad navigation which will want to work off the currently selected object. To prevent automatic deselection, set this property to false.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_pointerBehavior">Pointer Behavior</a>  </td><td class="markdownTableBodyNone">How to deal with multiple pointers feeding input into the UI. See pointer-type input.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_cursorLockBehavior">Cursor Lock Behavior</a>  </td><td class="markdownTableBodyNone">Controls the origin point of UI raycasts when the cursor is locked.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2354"></a>
+How the bindings work</h3>
+<p>The UI input module can deal with three different types of input:</p>
+<ul>
+<li>Pointer-type input</li>
+<li>Navigation-type input</li>
+<li>Tracked-type input</li>
+</ul>
+<p>For each of these types of input, input is sourced and combined from a specific set of Actions as detailed below.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2355"></a>
+Pointer-type input</h4>
+<p>To the UI, a pointer is a position from which clicks and scrolls can be triggered to interact with UI elements at the pointer's position. Pointer-type input is sourced from <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_point">point</a>, <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_leftClick">leftClick</a>, <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_rightClick">rightClick</a>, <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_middleClick">middleClick</a>, and <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_scrollWheel">scrollWheel</a>.</p>
+<p>The UI input module does not have an association between pointers and cursors. In general, the UI is oblivious to whether a cursor exists for a particular pointer. However, for mouse and pen input, the UI input module will respect <a href="https://docs.unity3d.com/ScriptReference/Cursor-lockState.html">Cusor.lockState</a> and pin the pointer position at <span class="tt">(-1,-1)</span> whenever the cursor is locked. This behavior can be changed through the <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_cursorLockBehavior">Cursor Lock Behavior</a> property of the <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html">InputSystemUIInputModule</a>.</p>
+<p>Multiple pointer Devices may feed input into a single UI input module. Also, in the case of <a href="../api/UnityEngine.InputSystem.Touchscreen.html">Touchscreen</a>, a single Device can have the ability to have multiple concurrent pointers (each finger contact is one pointer).</p>
+<p>Because multiple pointer Devices can feed into the same set of Actions, it is important to set the <a href="./RespondingToActions.md#action-types">action type</a> to <a href="../api/UnityEngine.InputSystem.InputActionType.html#UnityEngine_InputSystem_InputActionType_PassThrough">PassThrough</a>. This ensures that no filtering is applied to input on these actions and that instead every input is relayed as is.</p>
+<p>From the perspective of <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html">InputSystemUIInputModule</a>, each <a href="../api/UnityEngine.InputSystem.InputDevice.html">InputDevice</a> that has one or more controls bound to one of the pointer-type actions is considered a unique pointer. Also, for each <a href="../api/UnityEngine.InputSystem.Touchscreen.html">Touchscreen</a> devices, each separate <a href="../api/UnityEngine.InputSystem.Controls.TouchControl.html">TouchControl</a> that has one or more of its controls bound to the those actions is considered its own unique pointer as well. Each pointer receives a unique <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.EventSystems.PointerEventData.html#UnityEngine_EventSystems_PointerEventData_pointerId">pointerId</a> which generally corresponds to the <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_deviceId">deviceId</a> of the pointer. However, for touch, this will be a combination of <a href="../api/UnityEngine.InputSystem.InputDevice.html#UnityEngine_InputSystem_InputDevice_deviceId">deviceId</a> and <a href="../api/UnityEngine.InputSystem.Controls.TouchControl.html#UnityEngine_InputSystem_Controls_TouchControl_touchId">touchId</a>. Use <a href="../api/UnityEngine.InputSystem.UI.ExtendedPointerEventData.html#UnityEngine_InputSystem_UI_ExtendedPointerEventData_touchId">ExtendedPointerEventData.touchId</a> to find the ID for a touch event.</p>
+<p>You can influence how the input module deals with concurrent input from multiple pointers using the <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_pointerBehavior">Pointer Behavior</a> setting.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Pointer Behavior</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.UI.UIPointerBehavior.html#UnityEngine_InputSystem_UI_UIPointerBehavior_SingleMouseOrPenButMultiTouchAndTrack">Single Mouse or Pen But Multi Touch And Track</a>  </td><td class="markdownTableBodyNone">Behaves like <a href="../api/UnityEngine.InputSystem.UI.UIPointerBehavior.html#UnityEngine_InputSystem_UI_UIPointerBehavior_SingleUnifiedPointer">Single Unified Pointer</a> for all input that is not classified as touch or tracked input, and behaves like <a href="../api/UnityEngine.InputSystem.UI.UIPointerBehavior.html#UnityEngine_InputSystem_UI_UIPointerBehavior_AllPointersAsIs">All Pointers As Is</a> for tracked and touch input.<br  />
+<br  />
+If concurrent input is received on a <a href="../api/UnityEngine.InputSystem.Mouse.html">Mouse</a> and <a href="../api/UnityEngine.InputSystem.Pen.html"><span class="tt">Pen</span></a>, for example, the input of both is fed into the same UI pointer instance. The position input of one will overwrite the position of the other.<br  />
+<br  />
+Note that when input is received from touch or tracked devices, the single unified pointer for mice and pens is <b>removed</b> including <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.EventSystems.IPointerExitHandler.html">IPointerExit</a> events being sent in case the mouse/pen cursor is currently hovering over objects.<br  />
+<br  />
+This is the default behavior.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.UI.UIPointerBehavior.html#UnityEngine_InputSystem_UI_UIPointerBehavior_SingleUnifiedPointer">Single Unified Pointer</a>  </td><td class="markdownTableBodyNone">All pointer input is unified such that there is only ever a single pointer. This includes touch and tracked input. This means, for example, that regardless how many devices feed input into <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_point">Point</a>, only the last such input in a frame will take effect and become the current UI pointer's position.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.UI.UIPointerBehavior.html#UnityEngine_InputSystem_UI_UIPointerBehavior_AllPointersAsIs">All Pointers As Is</a>  </td><td class="markdownTableBodyNone">The UI input module will not unify any pointer input. Any device, including touch and tracked devices that feed input pointer-type actions, will be its own pointer (or multiple pointers for touch input).<br  />
+<br  />
+Note: This might mean that there will be an arbitrary number of pointers in the UI, and several objects might be pointed at concurrently.  </td></tr>
+</table>
+<p>If you bind a device to a pointer-type action such as <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_leftClick">Left Click</a> without also binding it to <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_point">Point</a>, the UI input module will recognize the device as not being able to point and try to route its input into that of another pointer. For example, if you bind <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_leftClick">Left Click</a> to the <span class="tt">Space</span> key and <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_point">Point</a> to the position of the mouse, then pressing the space bar will result in a left click at the current position of the mouse.</p>
+<p>For pointer-type input (as well as for tracked-type input), <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html">InputSystemUIInputModule</a> will send <a href="../api/UnityEngine.InputSystem.UI.ExtendedPointerEventData.html">ExtendedPointerEventData</a> instances which are an extended version of the base <span class="tt">PointerEventData</span>. These events contain additional data such as the <a href="../api/UnityEngine.InputSystem.UI.ExtendedPointerEventData.html#UnityEngine_InputSystem_UI_ExtendedPointerEventData_device">device</a> and <a href="../api/UnityEngine.InputSystem.UI.ExtendedPointerEventData.html#UnityEngine_InputSystem_UI_ExtendedPointerEventData_pointerType">pointer type</a> which the event has been generated from.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2356"></a>
+Navigation-type input</h4>
+<p>Navigation-type input controls the current selection based on motion read from the <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_move">move</a> action. Additionally, input from <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_submit">submit</a> will trigger <span class="tt">ISubmitHandler</span> on the currently selected object and <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_cancel">cancel</a> will trigger <span class="tt">ICancelHandler</span> on it.</p>
+<p>Unlike with pointer-type, where multiple pointer inputs may exist concurrently (think two touches or left- and right-hand tracked input), navigation-type input does not have multiple concurrent instances. In other words, only a single <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_move">move</a> vector and a single <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_submit">submit</a> and <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_cancel">cancel</a> input will be processed by the UI module each frame. However, these inputs need not necessarily come from one single Device always. Arbitrary many inputs can be bound to the respective actions.</p>
+<p>While, <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_move">move</a> should be set to <a href="../api/UnityEngine.InputSystem.InputActionType.html#UnityEngine_InputSystem_InputActionType_PassThrough">PassThrough</a> Action type, it is important that <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_submit">submit</a> and <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_cancel">cancel</a> be set to the <a href="../api/UnityEngine.InputSystem.InputActionType.html#UnityEngine_InputSystem_InputActionType_Button">Button</a> Action type.</p>
+<p>Navigation input is non-positional, that is, unlike with pointer-type input, there is no screen position associcated with these actions. Rather, navigation actions always operate on the current selection.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2357"></a>
+Tracked-type input</h4>
+<p>Input from <a href="../api/UnityEngine.InputSystem.TrackedDevice.html">tracked devices</a> such as <a href="../api/UnityEngine.InputSystem.XR.XRController.html">XR controllers</a> and <a href="../api/UnityEngine.InputSystem.XR.XRHMD.html">HMDs</a> essentially behaves like pointer-type input. The main difference is that the world-space device position and orientation sourced from <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_trackedDevicePosition">trackedDevicePosition</a> and <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_trackedDeviceOrientation">trackedDeviceOrientation</a> is translated into a screen-space position via raycasting.</p>
+<blockquote class="doxtable">
+<p><b>Important:</b> &gt;Because multiple tracked Devices can feed into the same set of Actions, it is important to set the <a href="./RespondingToActions.md#action-types">action type</a> to <a href="../api/UnityEngine.InputSystem.InputActionType.html#UnityEngine_InputSystem_InputActionType_PassThrough">PassThrough</a>. This ensures that no filtering is applied to input on these actions and that instead every input is relayed as is. </p>
+</blockquote>
+<p>For this raycasting to work, you need to add <a href="../api/UnityEngine.InputSystem.UI.TrackedDeviceRaycaster.html">TrackedDeviceRaycaster</a> to the <span class="tt">GameObject</span> that has the UI's <span class="tt">Canvas</span> component. This <span class="tt">GameObject</span> will usually have a <span class="tt">GraphicRaycaster</span> component which, however, only works for 2D screen-space raycasting. You can put <a href="../api/UnityEngine.InputSystem.UI.TrackedDeviceRaycaster.html">TrackedDeviceRaycaster</a> alongside <span class="tt">GraphicRaycaster</span> and both can be enabled at the same time without advserse effect.</p>
+<p><img src="Images/TrackedDeviceRaycasterComponentMenu.png" alt="TrackedDeviceRayster Add Component" class="inline"/></p>
+<p><img src="Images/TrackedDeviceRaycaster.png" alt="TrackedDeviceRayster Properties" class="inline"/></p>
+<p>Clicks on tracked devices do not differ from other pointer-type input. Therefore, actions such as <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html#UnityEngine_InputSystem_UI_InputSystemUIInputModule_leftClick">Left Click</a> work for tracked devices just like they work for other pointers.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2358"></a>
+Other notes about the UI Input Module</h3>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2359"></a>
+Upgrading from the Input Manager and the older Standalone Input Module</h4>
+<p>The <a class="el" href="namespace_unity.html">Unity</a> UI (uGUI) package contains an older equivalent module called "**[Standalone Input Module](https://docs.unity3d.com/Manual/script-StandaloneInputModule.html)**" which performs the same kind of integration between the <a class="el" href="namespace_unity.html">Unity</a> UI and the legacy Input Manager system.</p>
+<p>If you have one of these older Standalone Input Module components on a GameObject in your project, and the Input System is installed, <a class="el" href="namespace_unity.html">Unity</a> displays a button in the Inspector offering to automatically replace it with the equivalent newer Input System UI Input Module for you.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2360"></a>
+UI Input Module priority</h4>
+<p>The UI Input Module component is not required with UI Toolkit in <a class="el" href="namespace_unity.html">Unity</a> 2023.2 and onwards. However, if you do use it, the settings on that component take priority over the UI settings in your project-wide actions.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md2361"></a>
+Technical details</h4>
+<p>Input support for both <a href="https://docs.unity3d.com/Manual/com.unity.ugui.html">Unity UI</a> and <a href="https://docs.unity3d.com/Manual/UIElements.html">UI Toolkit</a> is based on the same <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/EventSystem.html">EventSystem</a> and <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/InputModules.html">BaseInputModule</a> subsystem. In other words, the same input setup based on InputSystemUIInputModule supports input in either UI solution and nothing extra needs to be done.</p>
+<p>Internally, UI Toolkit installs an event listener in the form of the <span class="tt">PanelEventHandler</span> component which intercepts events that <span class="tt">InputSystemUIInputModule</span> sends and translates them into UI Toolkit-specific events that are then routed into the visual tree. If you employ <span class="tt">EventSystem.SetUITookitEventSystemOverride</span>, this default mechanism is bypassed.</p>
+<p>&gt;<b>Note:</b> &gt;XR (tracked-type input) is not yet supported in combination with UI Toolkit. This means that you cannot use devices such as VR controllers to operate interfaces created with UI Toolkit.</p>
+<p>There are some additional things worth noting:</p>
+<ul>
+<li>UI Toolkit handles raycasting internally. No separate raycaster component is needed like for uGUI. This means that <a href="../api/UnityEngine.InputSystem.UI.TrackedDeviceRaycaster.html">TrackedDeviceRaycaster</a> does not work together with UI Toolkit.</li>
+<li>A pointer click and a gamepad submit action are distinct at the event level in UI Toolkit. This means that if you, for example, do <div class="fragment"><div class="line">button.RegisterCallback&lt;ClickEvent&gt;(_ =&gt; ButtonWasClicked());</div>
+</div><!-- fragment --> the handler is not invoked when the button is "clicked" with the gamepad (a <span class="tt">NavigationSubmitEvent</span> and not a <span class="tt">ClickEvent</span>). If, however, you do <div class="fragment"><div class="line">button.clicked += () =&gt; ButtonWasClicked();</div>
+</div><!-- fragment --> the handle is invoked in both cases.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2362"></a>
+Multiplayer UIs</h2>
+<p>The Input System can also handle multiple separate UI instances on the screen controlled separately from different input Bindings. This is useful if you want to have multiple local players share a single screen with different controllers, so that every player can control their own UI instance. To allow this, you need to replace the <a href="https://docs.unity3d.com/Manual/script-EventSystem.html">Event System</a> component from <a class="el" href="namespace_unity.html">Unity</a> with the Input System's <a href="../api/UnityEngine.InputSystem.UI.MultiplayerEventSystem.html">Multiplayer Event System</a> component.</p>
+<p><img src="Images/MultiplayerEventSystem.png" alt="MultiplayerEventSystem" class="inline"/></p>
+<p>Unlike the Event System component, you can have multiple Multiplayer Event Systems active in the Scene at the same time. That way, you can have multiple players, each with their own UI Input Module and Multiplayer Event System components, and each player can have their own set of Actions driving their own UI instance. If you are using the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input.html">Player Input</a> component, you can also set it to automatically configure the player's UI Input Module to use the player's Actions. See the documentation on <a href="PlayerInput.md#ui-input">Player Input</a> to learn how.</p>
+<p>The properties of the Multiplayer Event System component are identical to those from the Event System component. Additionally, the Multplayer Event System component adds a <a href="../api/UnityEngine.InputSystem.UI.MultiplayerEventSystem.html#UnityEngine_InputSystem_UI_MultiplayerEventSystem_playerRoot">Player Root</a> property, which you can set to a GameObject that contains all the UI <a href="https://docs.unity3d.com/Manual/script-Selectable.html">selectables</a> this event system should handle in its hierarchy. Mouse input that this event system processes then ignores any UI selectables which are not on any GameObject in the Hierarchy under <a href="../api/UnityEngine.InputSystem.UI.MultiplayerEventSystem.html#UnityEngine_InputSystem_UI_MultiplayerEventSystem_playerRoot">Player Root</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2363"></a>
+Virtual mouse cursor control</h2>
+<p>If your application uses gamepads and joysticks as an input, you can use the navigation Actions to operate the UI. However, it usually involves extra work to make the UI work well with navigation. An alternative way to operate the UI is to allow gamepads and joysticks to drive the cursor from a "virtual mouse cursor".</p>
+<p>The Input System package provides a <b>Virtual Mouse</b> component for this purpose.</p>
+<blockquote class="doxtable">
+<p><b>Note</b>: This component is only compatible with the <a href="https://docs.unity3d.com/Manual/com.unity.ugui.html">Unity UI</a> (uGUI) system, and not UI Toolkit. </p>
+</blockquote>
+<p>To see an example of the Virtual Mouse in a project, see the <a href="Installation.md#installing-samples">Gamepad Mouse Cursor sample</a> included with the Input System package.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2364"></a>
+Using the Virtual Mouse component</h3>
+<p>To set up the Virtual Mouse component with the <a class="el" href="namespace_unity.html">Unity</a> UI system:</p>
+<ol type="1">
+<li>Create a UI GameObject with an <b>Image</b> component. This GameObject is the mouse pointer. It can help to rename it "_Pointer_".</li>
+<li>Parent the pointer GameObject as a child of your <b>Canvas</b> GameObject that contains the UI which the cursor should operate on.</li>
+<li>Set the anchor position of the GameObject's <span class="tt">RectTransform</span> to the bottom left.</li>
+<li>Ensure your pointer GameObject is the last child of the Canvas so that the cursor draws on top of everything else.</li>
+<li>Add a <b>Virtual Mouse</b> component to the GameObject.</li>
+<li>Drag the <b>Image</b> component of the pointer GameObject into the <b>Cursor Graphic</b> field of the Virtual Mouse component.</li>
+<li>Drag the <b>Rect Transform</b> component of the pointer GameObject to the <b>Cursor Transform</b> field of the Virtual Mouse component.</li>
+<li>If you want the virtual mouse to control the system mouse cursor, set <a href="../api/UnityEngine.InputSystem.UI.VirtualMouseInput.html#UnityEngine_InputSystem_UI_VirtualMouseInput_cursorMode">Cursor Mode</a> to <b>Hardware Cursor If Available</b>. In this mode, the <b>Cursor Graphic</b> is hidden when a system mouse is present and you use <a href="../api/UnityEngine.InputSystem.Mouse.html#UnityEngine_InputSystem_Mouse_WarpCursorPosition_UnityEngine_Vector2_">Mouse.WarpCursorPosition</a> to move the system mouse cursor instead of the software cursor. The transform linked through <b>Cursor Transform</b> is not updated in that case.</li>
+<li>To configure the input to drive the virtual mouse, either add bindings on the various actions (such as <b>Stick Action</b>), or enable <b>Use Reference</b> and link existing actions from an Input Actions asset.</li>
+</ol>
+<blockquote class="doxtable">
+<p><b>Important:</b> Make sure the UI Input Module component on the UI's <b>Event System</b> does not receive navigation input from the same devices that feed into the Virtual Mouse component. If, for example, the Virtual Mouse component is set up to receive input from gamepads, and <span class="tt">Move</span>, <span class="tt">Submit</span>, and <span class="tt">Cancel</span> on the UI Input Module are also linked to the gamepad, then the UI receives input from the gamepad on two channels. </p>
+</blockquote>
+<p><img src="Images/VirtualMouseInput.png" alt="VirtualMouseInput" class="inline"/></p>
+<p>At runtime, the component adds a virtual <a href="../api/UnityEngine.InputSystem.Mouse.html">Mouse</a> device which the <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html">InputSystemUIInputModule</a> component picks up. The controls of the <span class="tt">Mouse</span> are fed input based on the actions configured on the <a href="../api/UnityEngine.InputSystem.UI.VirtualMouseInput.html">VirtualMouseInput</a> component.</p>
+<p>Note that the resulting <a href="../api/UnityEngine.InputSystem.Mouse.html">Mouse</a> input is visible in all code that picks up input from the mouse device. You can therefore use the component for mouse simulation elsewhere, not just with <a href="../api/UnityEngine.InputSystem.UI.InputSystemUIInputModule.html">InputSystemUIInputModule</a>.</p>
+<blockquote class="doxtable">
+<p><b>Note</b>: Do not set up gamepads and joysticks for navigation input while using the Virtual Mouse component. If both the Virtual Mouse component and navigation are configured, input is triggered twice: once via the pointer input path, and once via the navigation input path. If you encounter problems such as where buttons are pressed twice, this is likely the problem. </p>
+</blockquote>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2365"></a>
+Distinguishing between UI and game input</h2>
+<p>UI in <a class="el" href="namespace_unity.html">Unity</a> receives input through the same mechanisms as the input for the rest of your game or app. There is no automatic mechanism that implicitly ensures that if a certain input &ndash; such as a click &ndash; is consumed by the UI, it is not also received by your gameplay code.</p>
+<p>This can create ambiguities between, for example, code that responds to <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.UI.Button.html#UnityEngine_UI_Button_onClick"><span class="tt">UI.Button.onClick</span></a> and code that responds to <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed"><span class="tt">InputAction.performed</span></a> of an Action bound to <span class="tt">&lt;Mouse&gt;/leftButton</span>.</p>
+<p>Whether such ambiguities exist depends on <em>how</em> UIs are used. For example, you can avoid ambiguities by implementing your UI in one of the following ways:</p>
+<ul>
+<li>All interaction is performed through UI elements. A 2D/3D scene is rendered in the background but all interaction is performed through UI events (including those such as 'background' clicks on the <span class="tt">Canvas</span>).</li>
+<li>UI is overlaid over a 2D/3D scene but the UI elements cannot be interacted with directly.</li>
+<li>UI is overlaid over a 2D/3D scene but there is a clear "mode" switch that determines if interaction is picked up by UI or by the game. For example, a first-person game on desktop may employ a <a href="https://docs.unity3d.com/ScriptReference/Cursor-lockState.html">cursor lock</a> and direct input to the game while it is engaged whereas it may leave all interaction to the UI while the lock is not engaged.</li>
+</ul>
+<p>When ambiguities arise, they do so differently for pointer-type and navigation-type.</p>
+<p>&gt;[!NOTE] &gt;A sample called "**UI vs Game Input**" is provided with the package and can be installed from the <a class="el" href="namespace_unity.html">Unity</a> Package Manager UI in the editor. The sample demonstrates how to deal with a situation where ambiguities arise between inputs for UI and inputs for the game.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2366"></a>
+Handling ambiguities for pointer-type input</h3>
+<p>Input from pointers (mice, touchscreens, pens) can be ambiguous depending on whether or not the pointer is over a UI element when initiating an interaction. For example, if there is a button on screen, then clicking on the button may lead to a different outcome than clicking outside of the button and within the game scene.</p>
+<p>If all pointer input is handled via UI events, no ambiguities arise as the UI will implicitly route input to the respective receiver. If, however, input within the UI is handled via UI events and input in the game is handled via <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html">Actions</a>, pointer input will by default lead to <em>both</em> being triggered.</p>
+<p>The easiest way to resolve such ambiguities is to respond to in-game actions by <a href="RespondingToActions.md#polling-actions">polling</a> from inside <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html"><span class="tt">MonoBehaviour.Update</span></a> methods and using <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.EventSystems.EventSystem.html?q=ispointerovergameobject#UnityEngine_EventSystems_EventSystem_IsPointerOverGameObject"><span class="tt">EventSystem.IsPointerOverGameObject</span></a> to find out whether the pointer is over UI or not. Another way is to use <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.EventSystems.EventSystem.html?q=ispointerovergameobj#UnityEngine_EventSystems_EventSystem_RaycastAll_UnityEngine_EventSystems_PointerEventData_System_Collections_Generic_List_UnityEngine_EventSystems_RaycastResult__"><span class="tt">EventSystem.RaycastAll</span></a> to determine if the pointer is currently over UI.</p>
+<p>&gt;[!NOTE] &gt;Calling <a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.EventSystems.EventSystem.html?q=ispointerovergameobject#UnityEngine_EventSystems_EventSystem_IsPointerOverGameObject"><span class="tt">EventSystem.IsPointerOverGameObject</span></a> from within <a href="../api/UnityEngine.InputSystem.InputAction.html"><span class="tt">InputAction</span></a> callbacks such as <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_performed"><span class="tt">InputAction.performed</span></a> will lead to a warning. The UI updates separately <em>after</em> input processing and UI state thus corresponds to that of the <em>last</em> frame/update while input is being processed.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2367"></a>
+Handling ambiguities for navigation-type input</h3>
+<p>Ambiguities for navigation-type Devices such as gamepads and joysticks (but also keyboards) cannot arise the same way that it does for pointers. Instead, your application has to decide explicitly whether to use input for the UI's <span class="tt">Move</span>, <span class="tt">Submit</span>, and <span class="tt">Cancel</span> inputs or for the game. This can be done by either splitting control on a Device or by having an explicit mode switch.</p>
+<p>Splitting input on a Device is done by simply using certain controls for operating the UI while using others to operate the game. For example, you could use the d-pad on gamepads to operate UI selection while using the sticks for in-game character control. This setup requires adjusting the bindings used by the UI Actions accordingly.</p>
+<p>An explicit mode switch is implemented by temporarily switching to UI control while suspending in-game Actions. For example, the left trigger on the gamepad could bring up an item selection wheel which then puts the game in a mode where the sticks are controlling UI selection, the A button confirms the selection, and the B button closes the item selection wheel. No ambiguities arise as in-game actions will not respond while the UI is in the "foreground".</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2368"></a>
+Immediate Mode GUI</h2>
+<p>The Input System package does not support <a href="https://docs.unity3d.com/Manual/GUIScriptingGuide.html">Immediate Mode GUI</a> (IMGUI) methods at runtime.</p>
+<p>However, if you need to use IMGUI for your UI, it is possible to use legacy Input Manager input for your IMGUI user interface, while also using the Input System package for your in-game input.</p>
+<p>When the Editor's <a href="https://docs.unity3d.com/Manual/class-PlayerSettings.html"><b>Active Input Handling</b></a> setting is set to "**Input System Package**" (which is the default, when using the Input System package), the <span class="tt">OnGUI</span> methods in your player code won't receive any input events.</p>
+<p>To restore functionality to runtime <span class="tt">OnGUI</span> methods, you can change the <b>Active Input Handling</b> setting to "**Both**". Doing this means that <a class="el" href="namespace_unity.html">Unity</a> processes the input twice which could introduce a small performance impact.</p>
+<p>This only affects runtime (play mode) OnGUI methods. Editor GUI code is unaffected and will receive input events regardless. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

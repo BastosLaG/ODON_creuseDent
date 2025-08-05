@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Allocator benchmarks</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2allocator-benchmarks.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Allocator benchmarks </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1377"></a></p>
+<p>The Collections package has different allocators that you can use to manage memory allocations. The different allocators organize and track their memory in different ways. These are the allocators available:</p>
+<ul>
+<li><a href="allocator-overview.md#allocatortemp">Allocator.Temp</a>: A fast allocator for short-lived allocations, which is created on every thread.</li>
+<li><a href="allocator-overview.md#allocatortempjob">Allocator.TempJob</a>: A short-lived allocator, which must be deallocated within 4 frames of their creation.</li>
+<li><a href="allocator-overview.md#allocatorpersistent">Allocator.Persistent</a>: The slowest allocator for indefinite lifetime allocations.</li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2allocator-rewindable.html">Rewindable allocator</a>: A custom allocator that's fast and thread safe, and can rewind and free all your allocations at one point.</li>
+</ul>
+<p>The <a href="https://docs.unity3d.com/Packages/com.unity.entities@latest">Entities package</a> has its own set of custom prebuilt allocators:</p>
+<ul>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.entities@latest/index.html?subfolder=/manual/allocators-world-update.html">World update allocator</a>: A double rewindable allocator that a world owns, which is fast and thread safe.</li>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.entities@latest/index.html?subfolder=/manual/allocators-entity-command-buffer.html">Entity command buffer allocator</a>: A rewindable allocator that an entity command buffer system owns and uses to create entity command buffers.</li>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.entities@latest/index.html?subfolder=/manual/allocators-system-group.html">System group allocator</a>: An optional double rewindable allocator that a component system group creates when setting its rate manager. It's for allocations in a system of fixed or variable rate system group that ticks at different rate from the world update.</li>
+</ul>
+<p>For more information, see the Entities documentation on <a href="https://docs.unity3d.com/Packages/com.unity.entities@latest/index.html?subfolder=/manual/allocators-custom-prebuilt.html">Custom prebuilt allocators</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1378"></a>
+Allocator feature comparison</h1>
+<p>The different allocators have the following different features:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Allocator type</b>  </th><th class="markdownTableHeadNone"><b>Custom Allocator</b>  </th><th class="markdownTableHeadNone"><b>Need to create before use</b>  </th><th class="markdownTableHeadNone"><b>Lifetime</b>  </th><th class="markdownTableHeadNone"><b>Automatically freed allocations</b>  </th><th class="markdownTableHeadNone"><b>Can pass to jobs</b>  </th><th class="markdownTableHeadNone"><b>Min Allocation Alignment (bytes)</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="allocator-overview.md#allocatortemp">Allocator.Temp</a>  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">A frame or a job  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">64  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="allocator-overview.md#allocatortempjob">Allocator.TempJob</a>  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">Within 4 frames of creation  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">16  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="allocator-overview.md#allocatorpersistent">Allocator.Persistent</a>  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">Indefinite  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">16  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2allocator-rewindable.html">Rewindable allocator</a>  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">Indefinite  </td><td class="markdownTableBodyNone">No  </td><td class="markdownTableBodyNone">Yes  </td><td class="markdownTableBodyNone">64  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1379"></a>
+Performance test results</h1>
+<p>The following performance tests compare Temp, TempJob, Persistent and rewindable allocators. Because the world update allocator, entity command buffer allocator, and system group allocator are rewindable allocators, their performance is reflected in the rewindable allocator test results. The allocators are tested in single thread cases and in multithread cases by scheduling allocations in jobs across all the cores. <br  />
+</p>
+<p>For results, refer to the <a class="el" href="md__library_2_package_cache_2com_8unity_8collections_0d56bff8827a7e_2_documentation_0i_2performance-comparison-allocators.html">Performance comparison of allocators</a> documentation. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

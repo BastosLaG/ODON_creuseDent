@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Match clip offsets</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-match.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Match clip offsets </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5904"></a></p>
+<p>Every Animation clip contains keyframe animation, or motion, that animates a GameObject, or character, bound to the Animation track.</p>
+<p>When you add an Animation clip to an Animation track, its animation or motion does not automatically begin where the previous clip ends. By default, each Animation clip begins at the position and rotation of the GameObject, or character, at the start of the <a class="el" href="namespace_timeline.html">Timeline</a> instance.</p>
+<p>For example, three Animation clips create an animation sequence where a character walks (<span class="tt">Walk</span>), turns around and stops (<span class="tt">TurnLeft</span>), then walks to a jog (<span class="tt">Wk-Jog</span>).</p>
+<p><img src="images/tl-match-clips-before.png" alt="" class="inline"/></p>
+<p><em>An animation sequence of three Animation clips: <span class="tt">Walk</span>, <span class="tt">TurnLeft</span>, <span class="tt">Wk-Jog</span>.</em></p>
+<p>When first added, each Animation clip starts at the position and rotation of the character at the start of the <a class="el" href="namespace_timeline.html">Timeline</a> instance. The following illustration shows the end of each Animation clip.</p>
+<p><img src="images/scene-prematch-clips.png" alt="" class="inline"/></p>
+<p><b>(A)</b> The start of the <a class="el" href="namespace_timeline.html">Timeline</a> instance. <b>(B)</b> The end of the <span class="tt">Walk</span> Animation clip. <b>(C)</b> The end of the <span class="tt">TurnLeft</span> Animation clip. <b>(D)</b> The end of the <span class="tt">Wk-Jog</span> Animation clip.</p>
+<p>For an animation sequence to flow seamlessly, the start position and rotation of each Animation clip must match the end position and rotation of the previous Animation clip.</p>
+<p>These position and rotation offsets are named <b>Clip Transform Offsets</b> and they <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-clip-anim.html">can be set manually in the Inspector window</a> or automatically. The following sections describe how to automatically set clip offsets by matching two or more Animation clips.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5905"></a>
+Match two clips</h1>
+<p>To match the clip offsets between two clips, right-click the Animation clip that you want to match. From the context menu, select either <b>Match Offsets to Previous Clip</b> or <b>Match Offsets to Next Clip</b>.</p>
+<p><img src="images/spec-tl-match-next.png" alt="" class="inline"/></p>
+<p><em>Matching an Animation clip with the next clip</em></p>
+<p>For example, right-click the middle Animation clip, named <span class="tt">TurnLeft</span>, and choose <b>Match Offsets To Next Clip</b> to match its offsets to the next clip. This selects the clip, then matches the end of the middle clip with the start of next clip.</p>
+<p>The context menu only displays the match options available for the selected Animation clip. For example, if the first clip, <span class="tt">Walk</span> is selected, only the <b>Match Offsets to Next Clip</b> menu item is available.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5906"></a>
+Match many clips</h1>
+<p>To match the clip offsets of many clips, select the adjacent Animation clips that you want to match and right-click one of the selected clips. From the context menu, select either <b>Match Offsets to Previous Clip</b> or <b>Match Offsets to Next Clip</b>.</p>
+<p><img src="images/spec-tl-match-many.png" alt="" class="inline"/></p>
+<p><em>Matching many clips with previous clips</em></p>
+<p>For example, select the <span class="tt">TurnLeft</span> and <span class="tt">Wk-Jog</span> clips. Right-click one of the selected clips and choose <b>Match Offsets to Previous Clip</b>. This matches the <span class="tt">TurnLeft</span> clip with the previous <span class="tt">Walk</span> clip and matches the <span class="tt">Wk-Jog</span> clip with the previous <span class="tt">RunLeft</span> clip. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

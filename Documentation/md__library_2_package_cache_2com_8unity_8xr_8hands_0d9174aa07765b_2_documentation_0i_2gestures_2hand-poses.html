@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: hand-poses</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8hands_0d9174aa07765b_2_documentation_0i_2gestures_2hand-poses.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">hand-poses </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md7684"></a>
+autotoc_md7684</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7685"></a>
+uid: xrhands-hand-poses</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7686"></a>
+Hand pose</h1>
+<p>A hand pose adds a user-relative orientation to a [hand shape](xref:xrhands-hand-shapes).</p>
+<p>You can reference either a hand pose or a hand shape in a [Static Hand Gesture](xref:xrhands-static-gesture-component) component. The difference is that with a hand shape, the gesture is recognized no matter how the user's hand is oriented (assuming the finger shape conditions all pass). With a hand pose, you can specify that the hand must also be oriented in a specific way relative to the user or the XR Origin. For example, to define a "thumb's up" gesture, you could create a hand shape specifying that the thumb is extended and all the other fingers are curled. To ensure that the thumb is pointing up, you would need to reference the hand shape in a hand pose asset and add the proper orientation values. Refer to [Hand Orientation](xref:xrhands-hand-orientation) for more information about specifying an orientation as part of a gesture.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7687"></a>
+Create a hand pose asset</h3>
+<p>Add a new hand pose asset to your project from the Editor <b>Assets</b> menu: <b>Assets &gt; Create &gt; XR &gt; Hand Interactions &gt; Hand Pose</b> or by right-clicking on a project folder to open the context menu:</p>
+<ol type="1">
+<li>In the <a class="el" href="namespace_unity.html">Unity</a> Editor Project panel, right-click the folder in which you want to create the new asset.</li>
+<li>In the pop-up menu, select the command: <b>Create &gt; XR &gt; Hand Interactions &gt; Hand Pose</b>.<ul>
+<li>A <b>New Hand Pose</b> asset is created.</li>
+</ul>
+</li>
+<li>Assign an appropriate name to the new asset file.</li>
+<li>Select the asset to view its properties.</li>
+<li>Edit the asset to define your hand pose.</li>
+</ol>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7688"></a>
+Edit a hand pose</h3>
+<p>To edit a hand pose:</p>
+<ol type="1">
+<li>Select the hand pose asset file in the Editor Project panel.<ul>
+<li>The asset properties are displayed in the Inspector.</li>
+</ul>
+</li>
+<li>Choose an <b>XRHandShape</b> asset for the <b>Hand Shape</b> property.<ul>
+<li>You can drag an asset to the property or click the object picker button inside the field.</li>
+</ul>
+</li>
+<li>Under <b>Hand Orientation</b>, use the + button to add one or more <b>Hand Orientation Conditions</b> to the pose.</li>
+<li>Set the properties of each condition to the desired values.</li>
+</ol>
+<p>When you reference a hand pose in a gesture component, the user's hand must satisfy both the hand shape conditions and the orientation conditions in order for the gesture to be recognized.</p>
+<dl class="section note"><dt>Note</dt><dd>You can only specify user-relative orientations or the <a href="xref:xrhands-hand-orientation#origin-up">XR Origin Up axis</a> in a hand pose. For example, you can specify that the palm is facing toward or away from the user, but you cannot specify that the palm is facing another object in a scene. To specify a target-relative orientation for a gesture, you must use the orientation properties of the [XR Static Hand Gesture](xref:xrhands-static-gesture-component) component used to add the gesture to the scene containing the target object.</dd></dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7689"></a>
+XRHandPose properties</h3>
+<p>The <b>XRHandPose</b> class is a ScriptableObject that you can use to define the hand poses to use with gestures.</p>
+<p><img src="../images/gestures/hand-pose.png" alt="XR Hand Pose Inspector" class="inline"/> <br  />
+ <em>XRHandPose Inspector example</em></p>
+<p>The <b>XRHandPose</b> object has the following properties:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Property  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Hand Shape</b>  </td><td class="markdownTableBodyLeft">The [XRHandShape](xref:xrhands-hand-shapes) asset to use for this pose.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>User Conditions</b> list  </td><td class="markdownTableBodyLeft">A list of user conditions that the gesture must satisfy to be recognized. All orientations in the list must evaluate to true. Refer to User Relative Conditions for more information about the individual properties of a condition.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Target Conditions</b>  </td><td class="markdownTableBodyLeft">An optional collection of target-relative orientation conditions that must be met for the gesture to be detected. Refer to Target Relative Orientation for information about the properties of the elements of this list.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7690"></a>
+User Relative Conditions</h3>
+<p>A user relative condition defines the required angular relationship between an axis of the hand and a reference direction. To evaluate to true, the hand axis and the reference direction must be aligned within the number of degrees set by the <b>Angle Tolerance</b> property.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Property  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Hand Axis</b>  </td><td class="markdownTableBodyLeft">The <a href="xref:xrhands-hand-orientation#hand-axis">axis of the hand</a> to compare to the <b>Reference Direction</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Alignment Condition</b>  </td><td class="markdownTableBodyLeft">The desired <a href="xref:xrhands-hand-orientation#alignment">alignment</a> between the <b>Hand Axis</b> and the <b>Reference Direction</b>. The options are:<ul>
+<li>
+<b>Aligns With</b>: Parallel and point in the same direction</li>
+<li>
+<b>Perpendicular To</b>: At right angles to each other</li>
+<li>
+<b>Opposite To</b>: Parallel but point in the opposite directions</li>
+</ul>
+</td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Reference Direction</b>  </td><td class="markdownTableBodyLeft">The user-relative direction to compare to the chosen <b>Hand Axis</b>. You can also use the <a href="xref:xrhands-hand-orientation#origin-up">XR Origin Up axis</a> as the reference direction. (Set the orientation condition in a [Static Hand Gesture](xref:xrhands-static-gesture-component) component to specify target-relative conditions.)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Angle Tolerance</b>  </td><td class="markdownTableBodyLeft">The allowed deviation in degrees between the <b>Hand Axis</b> and the <b>Reference Direction</b>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Ignore Position Y</b>  </td><td class="markdownTableBodyLeft">Enable to ignore the Y values of the hand when determining orientation.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md7691"></a>
+Target Relative Conditions</h3>
+<p>Each element of the <b>Target Conditions</b> list defines a condition that the hand must meet in order for the gesture to be detected. The conditions in this list define how the hand must be oriented relative to a target GameObject in the scene. (Use a [Hand Pose](xref:xrhands-hand-poses) asset to define orientation conditions relative to the user or the global Y axis.)</p>
+<p>For additional information, including visual examples, about the orientation properties, refer to [Hand orientation](xref:xrhands-hand-orientation).</p>
+<p><img src="../images/gestures/target-relative-orientation.png" alt="Settings for an element in the Target Conditions list" class="inline"/><br  />
+<em>Settings for an element in the Target Conditions list</em></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Property  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Hand Axis</b>  </td><td class="markdownTableBodyLeft">The <a href="xref:xrhands-hand-orientation#hand-axis">axis of the hand</a> to compare to the <b>Reference Direction</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Alignment Condition</b>  </td><td class="markdownTableBodyLeft">The desired <a href="xref:xrhands-hand-orientation#alignment">alignment</a> between the <b>Hand Axis</b> and the <b>Reference Direction</b>. The options are:<ul>
+<li>
+<b>Aligns With</b>: Parallel and point in the same direction</li>
+<li>
+<b>Perpendicular To</b>: At right angles to each other</li>
+<li>
+<b>Opposite To</b>: Parallel but point in the opposite directions</li>
+</ul>
+</td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Reference Direction</b>  </td><td class="markdownTableBodyLeft">The target relative direction to compare to the chosen <b>Hand Axis</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Angle Tolerance</b>  </td><td class="markdownTableBodyLeft">The allowed deviation in degrees between the <b>Hand Axis</b> and the <b>Reference Direction</b>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Ignore Position Y</b>  </td><td class="markdownTableBodyLeft">Enable to ignore the Y values of the hand and the target object when determining orientation. Only matters when the <b>Hand To Target</b> is chosen as the <b>Reference Direction</b>.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

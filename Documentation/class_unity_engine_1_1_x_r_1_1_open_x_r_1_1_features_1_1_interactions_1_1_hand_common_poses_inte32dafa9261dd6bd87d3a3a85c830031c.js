@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_inte32dafa9261dd6bd87d3a3a85c830031c =
+[
+    [ "FinishSetup", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_inte32dafa9261dd6bd87d3a3a85c830031c.html#a7ef889a69f51c5f6ff64128d1b017b2d", null ],
+    [ "devicePose", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_inte32dafa9261dd6bd87d3a3a85c830031c.html#a06d0bf24e15aa36222c9c4ab90966068", null ],
+    [ "pinchPose", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_inte32dafa9261dd6bd87d3a3a85c830031c.html#a077e6c92ee8c07a272e99ecf2e646107", null ],
+    [ "pointer", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_inte32dafa9261dd6bd87d3a3a85c830031c.html#af722426a2696380fee2617ed3db3181f", null ],
+    [ "pokePose", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_hand_common_poses_inte32dafa9261dd6bd87d3a3a85c830031c.html#a127cf81d6a53d465ac6842b50be5ad6d", null ]
+];

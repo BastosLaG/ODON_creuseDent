@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Lit Shaders</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-e63594e5eba813c65c5f76deeb0e6fea.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Lit Shaders </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4455"></a></p>
+<p>Both URP and HDRP come with code-based shaders. The most commonly used shader for each of the SRPs is called Lit. For projects that use it, it’s often applied to just about every mesh in the game. Both the HDRP and URP versions of the Lit shader are very full-featured. However, sometimes users want to add additional features to get just the look they’re trying to achieve, or remove unused features to optimize performance. For users who aren’t familiar with shader code, this can be very difficult.</p>
+<p>For that reason, we’ve included Shader Graph versions of the Lit shader for both URP and HDRP in this sample pack. Users will be able to make a copy of the appropriate Shader Graph Lit shader, and then change any material that’s currently referencing the code version of the Lit shader with the Shader Graph version. All of the material settings will correctly be applied and continue to work. They’ll then be able to make changes to the Shader Graph version as needed.</p>
+<p>Please note that most <em>but not all</em> of the features of the code-based shaders are duplicated in the Shader Graph versions. Some lesser-used features may be missing from the Shader Graph versions due to the differences in creating shader with Shader Graph vs creating them with code.</p>
+<p>Also note - If you’re going to use the Lit shader <em>as is</em>, we recommend sticking with the code version. Only swap out the shader for the Shader Graph version if you’re making changes. We also recommend removing unused features from the Shader Graph version for better performance. For example, if you’re not using Emissive or Detail Maps, you can remove those parts of the shader (both graph nodes and Blackboard parameters) for faster build times and better performance. The real power of Shader Graph is its flexibility and how easy it is to change, update, and improve shaders.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4456"></a>
+URP Lit</h3>
+<p>Just like the code version, this shader offers the Metallic workflow or the Specular workflow. Shaders can be either opaque or transparent, and there are options for Alpha Clipping, Cast Shadows, and Receive Shadows. For the main surface, users can apply a base map, metallic or specular map, normal map, height map, occlusion map, and emission map. Parameters are available to control the strength of the smoothness, height, normal, and occlusion and control the tiling and offset of the textures.</p>
+<p>Users can also add base and normal detail maps and mask off where they appear using the mask map.</p>
+<p>For more details on each of the parameters in the shader, refer to the <a href="http://UnityEditor.Rendering.Universal.ShaderGUI.LitShader">Lit Shader documentation for URP</a>.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4457"></a>
+Shader Variant Limit</h4>
+<p>In order to be able to use this shader, you’ll need to increase the Shader Variant Limit to at least 513. This should be done on both the Shader Graph tab in Project Settings as well as the Shader Graph tab in the Preferences.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4458"></a>
+Custom Editor GUI</h4>
+<p>In order to create a more compact and user-friendly GUI in the material, this shader uses the same Custom Editor GUI that the code version of the Lit shader uses. Open the Graph Inspector and look at the Graph Settings. At the bottom of the list, you’ll see the following under Custom Editor GUI: </p><pre class="fragment">    UnityEditor.Rendering.Universal.ShaderGUI.LitShader
+</pre><p>This custom GUI script enables the small texture thumbnails and other features in the GUI. If you need to add or remove parameters in the Blackboard, we recommend removing the Custom Editor GUI and just using Shader Graph’s default material GUI instead. The custom GUI depends on the existence of many of the Blackboard parameters and won’t function properly if they’re removed.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4459"></a>
+HDRP Lit</h3>
+<p>Just like the code version, this shader offers opaque and transparent options. It supports Pixel displacement (Parallax Occlusion mapping) and all of the parameters that go with it. (It does not support Material Types other than standard.) For the main surface, users can apply a base map, mask map, normal map, bent normal map, and height map. Options are also available to use a detail map and emissive map.</p>
+<p>For more details on each of the parameters in the shader, refer to the <a href="http://UnityEditor.Rendering.Universal.ShaderGUI.LitShader">Lit Shader documentation for HDRP</a>.</p>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md4460"></a>
+Custom Editor GUI</h4>
+<p>In order to create a more compact and user-friendly GUI in the material, this shader uses the same Custom Editor GUI that the code version of the Lit shader uses. Open the Graph Inspector and look at the Graph Settings. At the bottom of the list, you’ll see the following under Custom Editor GUI: </p><pre class="fragment">    Rendering.HighDefinition.LitGUI
+</pre><p>This custom GUI script enables the small texture thumbnails and other features in the GUI. If you need to add or remove parameters in the Blackboard, we recommend removing the Custom Editor GUI and just using Shader Graph’s default material GUI instead. The custom GUI depends on the existence of many of the Blackboard parameters and won’t function properly if they’re removed. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

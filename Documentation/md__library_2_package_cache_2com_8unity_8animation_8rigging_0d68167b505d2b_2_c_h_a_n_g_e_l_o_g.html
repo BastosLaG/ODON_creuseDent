@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Changelog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8animation_8rigging_0d68167b505d2b_2_c_h_a_n_g_e_l_o_g.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Changelog </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md377"></a></p>
+<p>All notable changes to this package will be documented in this file.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md378"></a>
+[1.3.0] - 2023-01-30</h1>
+<ul>
+<li>Added the <span class="tt">TransformHandle</span>'s function <span class="tt">GetLocalToParentMatrix</span> to get the matrix of an animation stream transform in local space.</li>
+<li>Added the <span class="tt">TransformHandle</span>'s function <span class="tt">GetLocalToWorldMatrix</span> to get the matrix of an animation stream transform in world space.</li>
+<li>Fixed handling negative scale in the <span class="tt">MultiAimConstraintJob</span> (case 1366549).</li>
+<li>Fixed transforms in animator hierarchy, but not children of avatar root not resolving properly (case 1373387).</li>
+<li>Fixed MultiAimConstraint evaluation with a world up axis (UM-1936).</li>
+<li>Fixed crash when calling <span class="tt">RigBuilder.Build</span> by preventing rebuilding the PlayableGraph when in a preview context (case UUM-8599).</li>
+<li>Fixed an issue where a misplaced <span class="tt">BoneHandles.shader</span> shader would cause the Scene View's Orientation Overlay to no longer render (case UUM-20874).</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md379"></a>
+[1.2.0] - 2021-12-08</h1>
+<ul>
+<li>Updated package icons (case 1361823).</li>
+<li>Fixed BoneRenderer to refresh bones rendered in viewport on a mouse drag and drop event (case 1361819).</li>
+<li>Fixed potential performance issue with rig effectors when used in a deep hierarchy.</li>
+<li>Fixed NullReferenceException when previewing animation and layers were not initialized in <span class="tt">RigBuilder.StartPreview</span> (case 1367857).</li>
+<li>Added the function RigBuilder.SyncLayers to manually update rigs and constraints prior to PlayableGraph evaluation.</li>
+<li>Added the function RigBuilder.Evaluate(float) to manually update and evaluate the RigBuilder.</li>
+<li>Added the function RigBuilder.Build(PlayableGraph) to build the RigBuilder Playable nodes in an external PlayableGraph.</li>
+<li>Added effector visuals for auto setup of Two-Bone IK.</li>
+<li>Correctly positioned effectors for auto setup of Two-Bone IK.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md380"></a>
+[1.1.1] - 2021-08-23</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md381"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Added missing tooltips to components (case 1265274).</li>
+<li>Labels on components now support localization in supported regions.</li>
+<li>Upgraded Animation Rigging overlay toolbox to use new <a class="el" href="namespace_unity.html">Unity</a> overlays.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md382"></a>
+[1.1.0] - 2021-04-09</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md383"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Fixed Auto Setup on TwoBoneIK throwing an ArgumentNullException instead of a warning message.</li>
+<li>Fixed MultiReferential constraint not writing driver transform to stream.</li>
+<li>Added exceptions in ReadWriteTransformHandle and ReadOnlyTransformHandle to cover invalid Transform references (case 1275002).</li>
+<li>Added functions ConstructConstraintDataPropertyName and ConstructCustomPropertyName to ConstraintsUtils public API.</li>
+<li>Fixed Gizmo icons reimporting when switching platforms.</li>
+<li>Added missing icon to TwistChainConstraint.</li>
+<li>Built-in RigConstraint components now support multi-object editing in the Inspector.</li>
+<li>Fixed bug causing multi-target constraints to add a new target simply by viewing them in the Inspector.</li>
+<li>Fixed collapsing Source Objects and Settings foldouts in the Inspector going on the undo stack.<ul>
+<li>Appearance of foldout groups now matches other <a class="el" href="namespace_unity.html">Unity</a> components.</li>
+</ul>
+</li>
+<li>Appearance of WeightedTransformArray in the Inspector now matches default array control.<ul>
+<li>Header now supports dragging and dropping Transforms.</li>
+</ul>
+</li>
+<li>Validate constraint weights and source object weights are within supported range when deserializing built-in constraints in the Editor.</li>
+<li>Improvements to help when creating custom constraints:<ul>
+<li>RigConstraint m_Data field no longer displays nested under a foldout in the Inspector by default.</li>
+<li>RigConstraint.OnValidate() is now overridable in sub-classes.</li>
+<li>Added WeightedTransformArray.OnValidate().</li>
+<li>Added default PropertyDrawer for WeightedTransformArray that supports multi-select.</li>
+<li>Added optional WeightRangeAttribute. It should now be used in conjunction with WeightedTransformArray fields instead of RangeAttribute to specify the control should use a slider.</li>
+</ul>
+</li>
+<li>Updated samples to standard Samples/PackageName/Version/SampleName structure (case 1276329).</li>
+<li>Fixed BoneRenderer and RigEffectors not respecting layer visibility flags (case 1238204).</li>
+<li>Added support for nested struct properties tagged with the SyncSceneToStream attribute.</li>
+<li>Fixed MultiParent and MultiPosition constraints evaluating with an offset when root game object scale is not one (case 1246893).</li>
+<li>Fixed unnormalized rotation in TwoBoneIK constraint when hint weight is lower than one (case 1311769).</li>
+<li>Removed editor only conditional compilation on serialized data (case 1324071).</li>
+<li>Updated <a class="el" href="namespace_burst.html">Burst</a> to version 1.4.1.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md384"></a>
+[1.0.3] - 2020-08-21</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md385"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Updated <a class="el" href="namespace_burst.html">Burst</a> to version 1.3.4.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md386"></a>
+[1.0.2] - 2020-07-02</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md387"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Updated minimum unity release to 2020.2.0a16.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md388"></a>
+[1.0.1] - 2020-06-26</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md389"></a>
+Verified release of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Added world up vector options for MultiAim.</li>
+<li>Removed use of <span class="tt">latest</span> keyword in links to documentation (case 1233972).</li>
+<li>Removed error log in CustomOverlayAttribute (case 1253862).</li>
+<li>Disabled alt-picking on BoneRenderer in Scene View. [AAA-102]</li>
+<li>Fixed unecessary GC Alloc in RigBuilder.Update(). [AAA-103]</li>
+<li>Fixed TwoBoneIK inverse constraint not taking dynamic bone lengths into account.</li>
+<li>Fixed ChainIK not applying chain rotation weight properly.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md390"></a>
+[0.3.3] - 2020-03-06</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md391"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Improved RigEffector picking when using custom shapes.</li>
+<li>Improved RigEffector hover feedback when shape does not have line geometry.</li>
+<li>Adjusted MultiAim calculations to prevent rolling effects (case 1215736).</li>
+<li>Removed cached 'LimbLengths' in TwoBoneIKConstraintJob which lets users modify bone lengths dynamically. [AAA-97]</li>
+<li>Fixed erroneous link to TwistChain constraint documentation in the ConstraintSamples readme. [AAA-95]</li>
+<li>Fixed add and remove operations in ReorderableList when constraint is nested in prefab. [AAA-98]</li>
+<li>Fixed undo operations in ReorderableList. [AAA-98]</li>
+<li>Removed uses of Resources.Load in Runtime and Editor assemblies.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md392"></a>
+[0.3.2] - 2020-01-23</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md393"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Updated documentation.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md394"></a>
+[0.3.1] - 2020-01-14</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md395"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Removed unecessary files BakeUtils.cs.orig and BakeUtils.cs.orig.meta.</li>
+<li>Updated <a class="el" href="namespace_burst.html">Burst</a> to version 1.2.0-preview.12.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md396"></a>
+[0.3.0] - 2019-10-18</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md397"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Added support for bidirectional-baking to existing constraints.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md398"></a>
+[0.2.5] - 2019-11-20</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md399"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Adjusted calculations on MultiAim constrained axes. [AAA-86]</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md400"></a>
+[0.2.4] - 2019-11-06</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md401"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Added support for scene visibility and picking flags on BoneRenderer component and Rig effectors. [AAA-65]</li>
+<li>Fixed preview of disabled RigBuilder component in Animation Window and <a class="el" href="namespace_timeline.html">Timeline</a>. [AAA-37]</li>
+<li>Fixed constrained axes in MultiAim not properly constraining local rotation. [AAA-86]</li>
+<li>Updated Animation Rigging samples and added a Readme file.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md402"></a>
+[0.2.3] - 2019-07-24</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md403"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Increased the priority index of AnimationPlayableOutput in order for Animation Rigging to always evaluate after State Machine and <a class="el" href="namespace_timeline.html">Timeline</a>.</li>
+<li>Fixed NullReferenceException in RigEffectorRenderer.</li>
+<li>Fixed TwoBoneIK evaluation when used on straight limbs by using hint target to define a valid IK plane.</li>
+<li>Fixed Multi-Parent, Multi-Rotation and Multi-Aim constraints to perform order independent rotation blending. [AAA-17]</li>
+<li>Fixed RigTransform component to work on all objects of an animator hierarchy not only specific to sub rig hierarchies. [AAA-18]</li>
+<li>Fixed crash in RigSyncSceneToStreamJob when rebuilding jobs after having deleted all valid rigs (case 1167624).</li>
+<li>Fixed undo/redo issues with Rig Effectors set on Prefab instances (case 1162002).</li>
+<li>Fixed missing links to package documentation for MonoBehaviour scripts. [AAA-16]</li>
+<li>Added Vector3IntProperty and Vector3BoolProperty helper structs.</li>
+<li>Updated <a class="el" href="namespace_burst.html">Burst</a> to version 1.1.1.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md404"></a>
+[0.2.2] - 2019-04-29</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md405"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Added Rig Effector visualization toolkit for Animation Rigging.</li>
+<li>Fixed Animation Rigging align operations not using the same selection order in Scene View and Hierarchy.</li>
+<li>Updated <a class="el" href="namespace_burst.html">Burst</a> to version 1.0.4.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md406"></a>
+[0.2.1] - 2019-02-28</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md407"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Added <a class="el" href="namespace_burst.html">Burst</a> support to existing constraints. The Animation Rigging package now depends on com.unity.burst.</li>
+<li>Upgraded weighted transform arrays in order for weights to be animatable. The following constraints were modified and will require a manual update:<ul>
+<li>MultiAimConstraint</li>
+<li>MultiParentConstraint</li>
+<li>MultiPositionConstraint</li>
+<li>MultiReferentialConstraint</li>
+<li>TwistCorrection</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md408"></a>
+[0.2.0] - 2019-02-12</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md409"></a>
+Keyframing support for <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Changed RigBuilder to build and update the PlayableGraph for Animation Window.</li>
+<li>Added attribute [NotKeyable] to properties that shouldn't be animated.</li>
+<li>Removed 'sync' property flag on transform fields for constraints. Syncing scene data to the animation stream is now performed by marking a constraint field with [SyncSceneToStream].</li>
+<li>Fixed issue where constraint parameters were evaluated one frame late when animated.</li>
+<li>Added attribute [DisallowMultipleComponent] to constraints to avoid use of multiple constraints per Game Object.</li>
+<li>Updated constraints to use new AnimationStream API to reduce engine to script conversion.</li>
+<li>Added IAnimatableProperty helpers for Bool/Int/Float/Vector2/Vector3/Vector4 properties.</li>
+<li>Added ReadOnlyTransformHandle and ReadWriteTransformHandle.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md410"></a>
+[0.1.4] - 2018-12-21</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md411"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Fixed onSceneGUIDelegate deprecation warning in BoneRenderUtils</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md412"></a>
+[0.1.3] - 2018-12-21</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md413"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Fixed stale bone rendering in prefab isolation view.</li>
+<li>Updated constraints to have a transform sync scene to stream toggle only on inputs.</li>
+<li>Fixed Twist Correction component to have twist nodes with weight varying between [-1, 1]</li>
+<li>Added Maintain Offset dropdown to TwoBoneIK, ChainIK, Blend and Multi-Parent constraints</li>
+<li>Added Rig Transform component in order to tag extra objects not specified by constraints to have an influence in the animation stream</li>
+<li>Updated documentation and samples to reflect component changes</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md414"></a>
+[0.1.2] - 2018-11-29</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md415"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Added constraint examples to <a class="el" href="class_sample.html">Sample</a> folder (Samples/ConstraintExamples/AnimationRiggingExamples.unitypackage)</li>
+<li>Fixed links in documentation</li>
+<li>Updated package description</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md416"></a>
+[0.1.1] - 2018-11-26</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md417"></a>
+Patch Update of <em>Animation Rigging</em>.</h2>
+<ul>
+<li>Improved blend constraint UI layout</li>
+<li>Fixed jittering of DampedTransform when constraint weight was in between 0 and 1</li>
+<li>Made generic interface of Get/Set AnimationJobCache functions</li>
+<li>Added separate size parameters for bones and tripods in BoneRenderer.</li>
+<li>Fixed NullReferenceException when deleting skeleton hierarchy while it's still being drawn by BoneRenderer.</li>
+<li>Fixed Reset and Undo operations on BoneRenderer not updating skeleton rendering.</li>
+<li>Reworked multi rig playable graph setup to have one initial scene to stream sync layer followed by subsequent rigs</li>
+<li>Prune duplicate rig references prior to creating sync to stream job</li>
+<li>Added passthrough conditions in animation jobs for proper stream values to be passed downstream when job weights are zero. Fixes a few major issues when character did not have a controller.</li>
+<li>Fixed bug in ChainIK causing chain to not align to full extent when target is out of reach</li>
+<li>Fixed TwoBoneIK bend normal strategy when limbs are collinear</li>
+<li>Reworked AnimationJobData classes to be declared as structs in order for their serialized members to be keyable within the Animation Window.</li>
+<li>Renamed component section and menu item "Runtime Rigging" to "Animation Rigging"</li>
+<li>Added check in SyncToStreamJob to make sure StreamHandle is still valid prior to reading it's values.</li>
+<li>Adding first draft of package documentation.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md418"></a>
+[0.1.0] - 2018-11-01</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md419"></a>
+This is the first release of <em>Animation Rigging</em>.</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md420"></a>
+Added</h2>
+<ul>
+<li>RigBuilder component.</li>
+<li>Rig component.</li>
+<li>The following RuntimeRigConstraint components:<ul>
+<li>BlendConstraint</li>
+<li>ChainIKConstraint</li>
+<li>MultiAimConstraint</li>
+<li>MultiParentConstraint</li>
+<li>MultiPositionConstraint</li>
+<li>MultiReferentialConstraint</li>
+<li>OverrideTransform</li>
+<li>TwistCorrection </li>
+</ul>
+</li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

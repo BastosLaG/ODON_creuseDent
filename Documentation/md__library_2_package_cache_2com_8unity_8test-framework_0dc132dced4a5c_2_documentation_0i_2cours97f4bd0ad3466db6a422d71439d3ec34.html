@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: 7\. Scene Validation Test</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_0dc132dced4a5c_2_documentation_0i_2cours97f4bd0ad3466db6a422d71439d3ec34.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">7. Scene Validation Test </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5321"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5322"></a>
+Learning Objectives</h1>
+<p>Test scene for presence of Sara and Wand game object. Utilize Test Framework feature to make this test use all scenes as fixtures.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5323"></a>
+Exercise</h1>
+<ol type="1">
+<li>Create <b>ValidationTest.cs</b> file with a single namespace and two classes <em>SceneValidationTests</em> and <em>GameplayScenesProvider</em>.</li>
+<li>In the <a class="el" href="class_tests.html">Tests</a> class create <b>SaraAndWandArePresent</b> test to check that "Sara Variant" and "Wand" game objects are not null.</li>
+<li>In the Fixture class <span class="tt">GameplayScenesProvider</span> implement <span class="tt">IEnumerable&lt;string&gt;</span> and in generator method yield all scenes from <a href="https://docs.unity3d.com/ScriptReference/EditorBuildSettings-scenes.html">EditorBuildSettings.scenes</a>.</li>
+<li>Use <span class="tt">TestFixture</span> and <a href="https://docs.nunit.org/articles/nunit/writing-tests/attributes/testfixturesource.html">TestFixtureSource</a> annotations on <em>SceneValidationTests</em> class.</li>
+<li>Create a new Empty Scene and attach it to <span class="tt">EditorBuildSettings</span> to verify if tests are created dynamically.</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5324"></a>
+Hints</h1>
+<ul>
+<li><span class="tt">TestFixture</span> and <span class="tt">TestFixtureSource</span> NUnit annotations require Test Class to be present inside Namespace.</li>
+<li>To attach a scene to <span class="tt">EditorBuildSettings</span>, you need to create a new Scene, and then add it to <b>File &gt; Build Settings</b>.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5325"></a>
+Solution</h1>
+<p>ValidationTests.cs </p><div class="fragment"><div class="line">using System.Collections;</div>
+<div class="line">using System.Collections.Generic;</div>
+<div class="line">using NUnit.Framework;</div>
+<div class="line">using UnityEditor;</div>
+<div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.SceneManagement;</div>
+<div class="line">using UnityEngine.TestTools;</div>
+<div class="line"> </div>
+<div class="line">namespace ValidationTests</div>
+<div class="line">{</div>
+<div class="line">    [TestFixture]</div>
+<div class="line">    [TestFixtureSource(typeof(GameplayScenesProvider))]</div>
+<div class="line">    public class SceneValidationTests</div>
+<div class="line">    {</div>
+<div class="line">        private readonly string _scenePath;</div>
+<div class="line">    </div>
+<div class="line">        public SceneValidationTests(string scenePath)</div>
+<div class="line">        {</div>
+<div class="line">            _scenePath = scenePath;</div>
+<div class="line">        }</div>
+<div class="line">        </div>
+<div class="line">        [OneTimeSetUp]</div>
+<div class="line">        public void LoadScene()</div>
+<div class="line">        {</div>
+<div class="line">            SceneManager.LoadScene(_scenePath);</div>
+<div class="line">        }</div>
+<div class="line">        </div>
+<div class="line">        [UnityTest]</div>
+<div class="line">        public IEnumerator SaraAndWandArePresent()</div>
+<div class="line">        {</div>
+<div class="line">            yield return waitForSceneLoad();</div>
+<div class="line">            var wand = GameObject.Find(&quot;Wand&quot;);</div>
+<div class="line">            var sara = GameObject.Find(&quot;Sara Variant&quot;);</div>
+<div class="line">            </div>
+<div class="line">            Assert.NotNull(wand, &quot;Wand object exists&quot;);</div>
+<div class="line">            Assert.NotNull(sara, &quot;Sara object exists&quot;);</div>
+<div class="line">        }</div>
+<div class="line">        </div>
+<div class="line">        IEnumerator waitForSceneLoad()</div>
+<div class="line">        {</div>
+<div class="line">            while (!SceneManager.GetActiveScene().isLoaded)</div>
+<div class="line">            {</div>
+<div class="line">                yield return null;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">    public class GameplayScenesProvider : IEnumerable</div>
+<div class="line">    {</div>
+<div class="line">        public IEnumerator GetEnumerator()</div>
+<div class="line">        {</div>
+<div class="line">            foreach (var scene in EditorBuildSettings.scenes)</div>
+<div class="line">            {</div>
+<div class="line">                if (!scene.enabled || scene.path == null)</div>
+<div class="line">                {</div>
+<div class="line">                    continue;</div>
+<div class="line">                }</div>
+<div class="line">    </div>
+<div class="line">                yield return scene.path;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    </div>
+<div class="line">        IEnumerator IEnumerable.GetEnumerator()</div>
+<div class="line">        {</div>
+<div class="line">            return GetEnumerator();</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

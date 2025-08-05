@@ -1,0 +1,4 @@
+var interface_unity_1_1_x_r_1_1_management_1_1_android_manifest_1_1_editor_1_1_i_android_manifest_requirement_provider =
+[
+    [ "ProvideManifestRequirement", "interface_unity_1_1_x_r_1_1_management_1_1_android_manifest_1_1_editor_1_1_i_android_manifest_requirement_provider.html#ac1e6cb54ca44fc1f332abf1c82bda7ea", null ]
+];

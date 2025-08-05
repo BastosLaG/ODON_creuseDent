@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Workflow-Actions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_workflow-_actions.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Workflow-Actions </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2380"></a>
+autotoc_md2380</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2381"></a>
+uid: input-system-workflow-project-wide-actions</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2382"></a>
+Workflow Overview - Actions</h1>
+<p><img src="Images/Workflow-Actions.png" alt="" height="200px" class="inline"/></p>
+<p>While the Input System has a variety of workflows to choose from, this is the primary recommended workflow, which suits most common scenarios for game and app input.</p>
+<p>In this workflow, you configure Actions in the <a href="ActionsEditor.html"><b>Input Actions</b> editor</a>, then set up references to those actions and read their values in your code.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2383"></a>
+Configure Actions in the Actions Editor</h2>
+<p>Open the Input System settings by going to <b>Edit</b> &gt; <b>Project Settings</b> &gt; <b>Input System Package</b> &gt; <b>Input Actions</b>.</p>
+<p>If you have not yet created and assigned the default <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_project_wide_actions.html">project-wide actions</a>, the Input System settings window displays a button to do this.</p>
+<p>Once you have created and assigned the default project-wide actions, the Actions Editor is displayed:</p>
+<p><img src="./Images/ProjectSettingsInputActionsSimpleShot.png" alt="image alt text" class="inline"/> <em>The Input Actions editor in the Project Settings window</em></p>
+<p>The <a href="ActionsEditor.html">Input Actions editor</a> provides a way to define and manage Actions which relate to what you want users to be able to do in your game or app. It also allows you to create bindings between your Actions and one or more types of control on various devices, such as a stick on a gamepad, a key on a keyboard, or a button on an XR controller.</p>
+<p>Actions and Bindings allows you to separate the conceptual actions that you want in your game or app from the the specific decvices and controls that a player has to use to perform the actions, which can make your code simpler and more flexible. This is in contrast to <a href="Workflow-Direct.html">directly reading device states</a> in your code, which can suit simple projects, but can become unwieldy and inflexible for more complex projects.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2384"></a>
+The default Actions</h3>
+<p>The Input System comes pre-configured with some default Actions such as "Move", "Jump", and more, which suit many common app and game scenarios. They are configured to read input most types of input controller such as Keyboard, Mouse, Gamepad, Touchscreen and XR.</p>
+<p>This means, in many cases, you can start scripting with the Input System without any configuration by referring to the names of the default actions that are already configured for you.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2385"></a>
+Accessing your Actions from code</h2>
+<p>There are various ways to access your actions from code. One of the simplest ways is to use the <span class="tt">FindAction</span> method.</p>
+<p><span class="tt">FindAction</span> allows you to search for an action by name from within the set of configured acations, and returns a reference which you can then either read the value directly (also called "polling"), or you can attach callback methods that are called the action is performed. The workflow described on this page focuses only on reading the action values. <a href="RespondingToActions.html#action-callbacks">You can read more about using callbacks here</a>.</p>
+<blockquote class="doxtable">
+<p><b>Tip</b>: Finding and storing a reference to an Action is similar to finding and storing a reference to a Component, so if you have done that elsewhere in <a class="el" href="namespace_unity.html">Unity</a>, this may be a familiar process. </p>
+</blockquote>
+<p>To use <span class="tt">FindAction</span> to get references to your Actions and read user input in your script, use the following steps:</p>
+<ol type="1">
+<li>Create a new C# script in <a class="el" href="namespace_unity.html">Unity</a>.</li>
+</ol>
+<ol type="1">
+<li>Add the Input System's "using" statement to the top of your script. This allows you to use the Input System API throughout the rest of your script: <pre class="fragment"> using UnityEngine.InputSystem
+</pre></li>
+</ol>
+<ol type="1">
+<li>Create some variables of type <span class="tt">InputAction</span> in your class body, one for each Action that you want to use in your script. These will store the references to each Action. A good naming convention is to add the word Action to the name of the action. For example: <pre class="fragment"> InputAction moveAction;
+ InputAction jumpAction;
+</pre></li>
+</ol>
+<ol type="1">
+<li>In your Start() method, use <span class="tt">FindAction</span> to find the reference to each action and store it in its respective variable, for example: <pre class="fragment"> moveAction = InputSystem.actions.FindAction("Move");
+ jumpAction = InputSystem.actions.FindAction("Jump");
+</pre></li>
+</ol>
+<ol type="1">
+<li>In your Update() method, read the value from your action variables. This allows you to write code that reads the latest values coming from your Actions each frame and respond accordingly.<br  />
+<br  />
+The way you read a value depends on the Action's <b>value type</b>. For example some actions may return a 1D or 2D axis value, and other actions may return a boolean true/false value. In this example, the "Move" action returns a 2D axis, and the "Jump" action returns a boolean. <pre class="fragment"> Vector2 moveValue = moveAction.ReadValue&lt;Vector2&gt;();
+ bool jumpValue = jumpAction.IsPressed();
+</pre></li>
+</ol>
+<p>The example script below shows all these steps combined together into a single script:</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>Example : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// These variables are to hold the Action references</span></div>
+<div class="line">    <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a> moveAction;</div>
+<div class="line">    <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a> jumpAction;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Find the references to the &quot;Move&quot; and &quot;Jump&quot; actions</span></div>
+<div class="line">        moveAction = <a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">InputSystem</a>.actions.FindAction(<span class="stringliteral">&quot;Move&quot;</span>);</div>
+<div class="line">        jumpAction = <a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">InputSystem</a>.actions.FindAction(<span class="stringliteral">&quot;Jump&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> Update()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Read the &quot;Move&quot; action value, which is a 2D vector</span></div>
+<div class="line">        <span class="comment">// and the &quot;Jump&quot; action state, which is a boolean value</span></div>
+<div class="line"> </div>
+<div class="line">        Vector2 moveValue = moveAction.ReadValue&lt;Vector2&gt;();</div>
+<div class="line">        <span class="comment">// your movement code here</span></div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (jumpAction.<a class="code hl_function" href="class_unity_engine_1_1_input_system_1_1_input_action.html#a4ba2a7836129d30d4996714c3e3f871d">IsPressed</a>())</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// your jump code here</span></div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_html"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action.html">UnityEngine.InputSystem.InputAction</a></div><div class="ttdoc">A named input signal that can flexibly decide which input data to tap.</div><div class="ttdef"><b>Definition</b> InputAction.cs:169</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_html_a4ba2a7836129d30d4996714c3e3f871d"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action.html#a4ba2a7836129d30d4996714c3e3f871d">UnityEngine.InputSystem.InputAction.IsPressed</a></div><div class="ttdeci">unsafe bool IsPressed()</div><div class="ttdoc">Check whether the current actuation of the action has crossed the button press threshold (see InputSe...</div><div class="ttdef"><b>Definition</b> InputAction.cs:1178</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_input_system_html"><div class="ttname"><a href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a></div><div class="ttdef"><b>Definition</b> AxisComposite.cs:14</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p><b>Note:</b> You should avoid using <span class="tt">FindAction</span> in your Update() loop, because it performs a string-based lookup which could impact performance. This is why the Action refeferences in the example above are found during the Start() function, and stored in variables after finding them. </p>
+</blockquote>
+<blockquote class="doxtable">
+<p><b>Note:</b> The <a href="../api/UnityEngine.InputSystem.InputSystem.html">InputSystem.actions</a> API refers specifically to the Action Asset assigned as the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_project_wide_actions.html">project-wide actions</a>. Most projects only require one Action Asset, but if you are using more than one Action Asset, you must create a reference using the type InputActionAsset to the asset you wish to access. </p>
+</blockquote>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2386"></a>
+Pros and Cons</h2>
+<p>This is the recommended workflow with the Input System Package, providing a flexible but simple solution suitable for most projects.</p>
+<p>You benefit from the Action-based features such as Action Maps, Bindings, and the ability to configure them in the Actions Editor. You can also implement <a href="ActionBindings.html#interactive-rebinding">user rebinding at run time</a>.</p>
+<p>This workflow alone doesn't provide built-in support for local multiplayer scenarios with multiple devices, so if you are producing a local multiplayer game you might want to consider using the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_workflow-_player_input.html">Actions &amp; PlayerInput</a> workflow. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

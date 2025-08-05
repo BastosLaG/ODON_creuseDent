@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Building your project</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2building-projects.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Building your project </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md789"></a></p>
+<p>When you build your project, <a class="el" href="namespace_burst.html">Burst</a> compiles your code and creates a single dynamic library in the Plugins folder for the platform you're targeting. For example, on Windows, the path is <span class="tt">Data/Plugins/lib_burst_generated.dll</span>.</p>
+<p>&gt;[!NOTE] &gt;If your target platform is iOS, <a class="el" href="namespace_unity.html">Unity</a> instead generates a static library to meet Apple's submission requirements for TestFlight.</p>
+<p>The job system runtime loads the generated library the first time a <a class="el" href="namespace_burst.html">Burst</a> compiled method is invoked.</p>
+<p>To control <a class="el" href="namespace_burst.html">Burst</a>'s AOT compilation, use the settings in the <b><a class="el" href="namespace_burst.html">Burst</a> AOT Settings</b> section of the Player Settings window (<b>Edit &gt; Player Settings &gt; <a class="el" href="namespace_burst.html">Burst</a> AOT Settings</b>). For more information, refer to <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2building-aot-settings.html">Burst AOT Settings reference</a>.</p>
+<p><a class="anchor" id="cross-compilation"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md790"></a>
+Platforms without cross compilation</h1>
+<p>If you're compiling for a non-desktop platform, <a class="el" href="namespace_burst.html">Burst</a> compilation requires specific platform compilation tools (similar to <a href="https://docs.unity3d.com/Manual/IL2CPP.html">IL2CPP</a>). By default, desktop platforms (macOS, Linux, Windows) don't need external toolchain support, unless you enable the <b>Use Platform SDK Linker</b> setting in the <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2building-aot-settings.html">Burst AOT Settings</a>.</p>
+<p>The table below lists the level of support for AOT compilation on each platform. If you select an invalid target (one with missing tools, or unsupported), <a class="el" href="namespace_unity.html">Unity</a> doesn't use <a class="el" href="namespace_burst.html">Burst</a> compilation, but still builds the target without <a class="el" href="namespace_burst.html">Burst</a> optimizations.</p>
+<p>&gt;[!NOTE] &gt;<a class="el" href="namespace_burst.html">Burst</a> supports cross-compilation between desktop platforms (macOS/Linux/Windows) by default.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Host Editor platform</b>  </th><th class="markdownTableHeadNone"><b>Target Player platform</b>  </th><th class="markdownTableHeadNone"><b>Supported CPU architectures</b>  </th><th class="markdownTableHeadNone"><b>External toolchain requirements</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Windows  </td><td class="markdownTableBodyNone">Windows  </td><td class="markdownTableBodyNone">x86 (SSE2, SSE4)<br  />
+ x64 (SSE2, SSE4, AVX, AVX2)  </td><td class="markdownTableBodyNone">None  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Windows  </td><td class="markdownTableBodyNone">Universal Windows Platform  </td><td class="markdownTableBodyNone">x86 (SSE2, SSE4)<br  />
+ x64 (SSE2, SSE4, AVX, AVX2)<br  />
+ARM32 (Thumb2, Neon32)<br  />
+ARMV8 AARCH64<br  />
+<br  />
+<b>Note:</b> A UWP build always compiles all four targets.  </td><td class="markdownTableBodyNone">Visual Studio 2017<br  />
+Universal Windows Platform Development Workflow<br  />
+C++ Universal Platform Tools  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Windows  </td><td class="markdownTableBodyNone">Android  </td><td class="markdownTableBodyNone">x86 SSE2<br  />
+ ARMV7 (Thumb2, Neon32)<br  />
+ ARMV8 AARCH64 (ARMV8A, ARMV8A_HALFFP, ARMV9A)  </td><td class="markdownTableBodyNone">Android NDK<br  />
+<br  />
+<b>Important:</b> Use the Android NDK that you install through <a class="el" href="namespace_unity.html">Unity</a> Hub (via <b>Add Component</b>). <a class="el" href="namespace_burst.html">Burst</a> falls back to the one that the <span class="tt">ANDROID_NDK_ROOT</span> environment variable specifies if the <a class="el" href="namespace_unity.html">Unity</a> external tools settings aren't configured.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Windows  </td><td class="markdownTableBodyNone">Magic Leap 2  </td><td class="markdownTableBodyNone">ARMV8 AARCH64  </td><td class="markdownTableBodyNone">From <a class="el" href="namespace_unity.html">Unity</a> 6, Magic Leap 2 requires the <a href="https://docs.unity3d.com/Packages/com.unity.xr.openxr@latest">OpenXR plugin</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Windows  </td><td class="markdownTableBodyNone">Xbox One  </td><td class="markdownTableBodyNone">x64 SSE4  </td><td class="markdownTableBodyNone"><a class="el" href="namespace_microsoft.html">Microsoft</a> GDK  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Windows  </td><td class="markdownTableBodyNone">Xbox Series  </td><td class="markdownTableBodyNone">x64 AVX2  </td><td class="markdownTableBodyNone"><a class="el" href="namespace_microsoft.html">Microsoft</a> GDK  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Windows  </td><td class="markdownTableBodyNone">PlayStation 4  </td><td class="markdownTableBodyNone">x64 SSE4  </td><td class="markdownTableBodyNone">Minimum PS4 SDK version 8.00  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Windows  </td><td class="markdownTableBodyNone">PlayStation 5  </td><td class="markdownTableBodyNone">x64 AVX2  </td><td class="markdownTableBodyNone">Minimum PS5 SDK version 2.00  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Windows  </td><td class="markdownTableBodyNone">Nintendo Switch  </td><td class="markdownTableBodyNone">ARMV8 AARCH64  </td><td class="markdownTableBodyNone">None  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">macOS  </td><td class="markdownTableBodyNone">macOS  </td><td class="markdownTableBodyNone">x64 (SSE2, SSE4, AVX, AVX2), Apple Silicon  </td><td class="markdownTableBodyNone">None  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">macOS  </td><td class="markdownTableBodyNone">iOS  </td><td class="markdownTableBodyNone">ARM32 Thumb2/Neon32, ARMV8 AARCH64  </td><td class="markdownTableBodyNone">Xcode with command line tools installed (<span class="tt">xcode-select --install</span>)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">macOS  </td><td class="markdownTableBodyNone">Android  </td><td class="markdownTableBodyNone">x86 SSE2<br  />
+ ARMV7 (Thumb2, Neon32)<br  />
+ ARMV8 AARCH64 (ARMV8A, ARMV8A_HALFFP, ARMV9A)  </td><td class="markdownTableBodyNone">Android NDK<br  />
+<br  />
+<b>Important:</b> Use the Android NDK that you install through <a class="el" href="namespace_unity.html">Unity</a> Hub (via <b>Add Component</b>). <a class="el" href="namespace_burst.html">Burst</a> falls back to the one that the <span class="tt">ANDROID_NDK_ROOT</span> environment variable specifies if the <a class="el" href="namespace_unity.html">Unity</a> external tools settings aren't configured.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">macOS  </td><td class="markdownTableBodyNone">Magic Leap 2  </td><td class="markdownTableBodyNone">ARMV8 AARCH64  </td><td class="markdownTableBodyNone">From <a class="el" href="namespace_unity.html">Unity</a> 6, Magic Leap 2 requires the <a href="https://docs.unity3d.com/Packages/com.unity.xr.openxr@latest">OpenXR plugin</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Linux  </td><td class="markdownTableBodyNone">Linux  </td><td class="markdownTableBodyNone">x64 (SSE2, SSE4, AVX, AVX2)  </td><td class="markdownTableBodyNone">None  </td></tr>
+</table>
+<p>The maximum target CPU is hardcoded per platform. For standalone builds that target desktop platforms (Windows/Linux/macOS) you can choose the supported targets via the <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2building-aot-settings.html">Burst AOT Settings</a></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md791"></a>
+Projects that don't use Burst</h2>
+<p>Some projects can't use <a class="el" href="namespace_burst.html">Burst</a> as the compiler:</p>
+<ul>
+<li>iOS projects from the Windows Editor</li>
+<li>Android projects from the Linux Editor</li>
+<li>Xcode projects generated from the <b>Create Xcode Project</b> option</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md792"></a>
+Multiple Burst targets</h1>
+<p>When <a class="el" href="namespace_burst.html">Burst</a> compiles multiple target platforms during a build, it has to perform separate compilations. For example, if you want to compile <span class="tt">X64_SSE2</span> and <span class="tt">X64_SSE4</span>, <a class="el" href="namespace_burst.html">Burst</a> has to do two separate compilations to generate code for each of the targets you choose.</p>
+<p>To keep the combinations of targets to a minimum, <a class="el" href="namespace_burst.html">Burst</a> target platforms require multiple processor instruction sets underneath:</p>
+<ul>
+<li><span class="tt">SSE4.2</span> is gated on having <span class="tt">SSE4.2</span> and <span class="tt">POPCNT</span> instruction sets.</li>
+<li><span class="tt">AVX2</span> is gated on having <span class="tt">AVX2</span>, <span class="tt">FMA</span>, <span class="tt">F16C</span>, <span class="tt">BMI1</span>, and <span class="tt">BMI2</span> instruction sets.</li>
+<li><span class="tt">ARMV8A</span> is a basic Armv8-A CPU target</li>
+<li><span class="tt">ARMV8A_HALFFP</span> is <span class="tt">ARMV8A</span> plus the following extensions: <span class="tt">fullfp16</span>, <span class="tt">dotprod</span>, <span class="tt">crypto</span>, <span class="tt">crc</span>, <span class="tt">rdm</span>, <span class="tt">lse</span>. In practice, this means Cortex A75/A55 and later cores.</li>
+<li><span class="tt">ARMV9A</span> is <span class="tt">ARMV8A_HALFFP</span> plus SVE2 support. In practice, this means Cortex X2/A710/A510 and later cores. <b>Important:</b> this target is currently experimental.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md793"></a>
+Dynamic dispatch based on runtime CPU features</h1>
+<p>For all <span class="tt">x86</span>/<span class="tt">x64</span> CPU desktop platforms, as well as for 64-bit Arm on Android, <a class="el" href="namespace_burst.html">Burst</a> takes into account the CPU features available at runtime to dispatch jobs to different versions it compiles.</p>
+<p>For <span class="tt">x86</span> and <span class="tt">x64</span> CPUs, <a class="el" href="namespace_burst.html">Burst</a> supports <span class="tt">SSE2</span> and <span class="tt">SSE4</span> instruction sets at runtime only.</p>
+<p>For example, with dynamic CPU dispatch, if your CPU supports <span class="tt">SSE3</span> and below, <a class="el" href="namespace_burst.html">Burst</a> selects <span class="tt">SSE2</span> automatically.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md794"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2building-aot-settings.html">Burst AOT Settings reference</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2editor-reference-overview.html">Editor reference</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

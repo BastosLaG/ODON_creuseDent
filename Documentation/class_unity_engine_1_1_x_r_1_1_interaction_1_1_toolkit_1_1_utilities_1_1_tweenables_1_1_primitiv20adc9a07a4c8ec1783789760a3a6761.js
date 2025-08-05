@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_primitiv20adc9a07a4c8ec1783789760a3a6761 =
+[
+    [ "ScheduleTweenJob", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_primitiv20adc9a07a4c8ec1783789760a3a6761.html#a5f346c715eb91e5ed8426bf446ede30c", null ]
+];

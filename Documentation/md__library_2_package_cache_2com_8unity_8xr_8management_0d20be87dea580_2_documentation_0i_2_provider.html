@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Provider</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8management_0d20be87dea580_2_documentation_0i_2_provider.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Provider </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8994"></a>
+autotoc_md8994</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8995"></a>
+uid: xr-plug-in-management-provider</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8996"></a>
+Package author documentation</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8997"></a>
+XR Plug-in Management packages and Unity packages</h2>
+<p>All <b>XR Plug-in Management</b> packages must also be full <a class="el" href="namespace_unity.html">Unity</a> packages. The package does not have to be registered or exist in any external repository or package server. It can live within the <span class="tt">Assets</span> folder. The only requirement is that you define the package with a <span class="tt">package.json</span> file and a unique package id.</p>
+<p>For more information, see documentation on <a href="https://docs.unity3d.com/Manual/PackagesList.html">Unity Packages</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8998"></a>
+Lifecycle management</h2>
+<p>This package enables you to manage the lifecycle of XR SDK subsystems without the need for boilerplate code. The <span class="tt">XRManagerSettings</span>class provides a scriptable object that your app can use to start, stop, initialize, and deinitialize a set of subsystems defined in an <span class="tt">XRLoader</span> instance.</p>
+<p>Providers must create a subclass of <span class="tt">XRLoader</span> to make a Loader available for their particular runtime scheme.</p>
+<p>The <span class="tt">XRLoader</span> interface looks like this:</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span>XRLoader : ScriptableObject</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Initialize() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Start() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Stop() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Deinitialize() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <a class="code hl_enumvalue" href="namespace_unity_engine_1_1_input_system.html#ad8a6cae0143584257f5a72d1842ea496ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> GetLoadedSubsystem&lt;T&gt;() where T : IntegratedSubsystem;</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_unity_engine_1_1_input_system_html_ad8a6cae0143584257f5a72d1842ea496ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespace_unity_engine_1_1_input_system.html#ad8a6cae0143584257f5a72d1842ea496ab9ece18c950afbfa6b0fdbfa4ff731d3">UnityEngine.InputSystem.Key.T</a></div><div class="ttdeci">@ T</div><div class="ttdoc">The Keyboard.tKey.</div><div class="ttdef"><b>Definition</b> Keyboard.cs:474</div></div>
+</div><!-- fragment --><p>To handle subsystem management in a type-safe manner, derive from the <span class="tt">XRLoaderHelper</span> class. For an example, see <em><a href="/Samples/SampleLoader.cs">Samples/SampleLoader.cs</a></em>.</p>
+<p>An <span class="tt">XRLoader</span> is a <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">ScriptableObject</a>, which means you can create one or more instances of it. Each <span class="tt">XRLoader</span> subclass defines the subsystems and their load order, and manages the set of subsystems they require.</p>
+<p>Add all the <span class="tt">XRLoader</span> instances you created to the <b>Loaders</b> property of the <b>XRManagerSettings</b>, and arrange them in the order you want them to load. When initializing Loaders, <b>XR Manager Settings</b> calls each <span class="tt">XRLoader</span> instance it has a reference to, in the order you specify, and attempts to initialize each one. The first Loader to initialize successfully becomes the active Loader and <a class="el" href="namespace_unity.html">Unity</a> stops all further attempts to initialize other Loaders. Once that happens, you can query the static <span class="tt">XRManagerSettings.ActiveLoader</span> instance to access the active Loader. If all Loaders fail to initialize, <a class="el" href="namespace_unity.html">Unity</a> sets <span class="tt">activeLoader</span> to null.</p>
+<p>Scene-based automatic lifecycle management hooks into the following <span class="tt">MonoBehaviour</span> callback points:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Callback  </th><th class="markdownTableHeadNone">Lifecycle step  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">OnEnable  </td><td class="markdownTableBodyNone">Find the first Loader that initialized successfully and set <span class="tt">ActiveLoader</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Start  </td><td class="markdownTableBodyNone">Start all subsystems.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">OnDisable  </td><td class="markdownTableBodyNone">Stop all subsystems.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">OnDestroy  </td><td class="markdownTableBodyNone">Deinitialize all subsystems and remove the <span class="tt">ActiveLoader</span> instance.  </td></tr>
+</table>
+<p>Application lifetime-based automatic lifecycle management hooks into the following callback points:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Callback  </th><th class="markdownTableHeadNone">Lifecycle step  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Runtime initialization after assemblies loaded  </td><td class="markdownTableBodyNone">Find the first Loader that succeeds initialization and set <span class="tt">ActiveLoader</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Runtime initialization before splash screen displays  </td><td class="markdownTableBodyNone">Start all subsystems.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">OnDisable  </td><td class="markdownTableBodyNone">Stop all subsystems.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">OnDestroy  </td><td class="markdownTableBodyNone">Deintialize all subsystems and remove the <span class="tt">ActiveLoader</span> instance.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8999"></a>
+Configuring build and runtime settings through Unified Settings</h2>
+<p>A provider might need additional settings to help manage build issues or runtime configuration. To do this, add an <span class="tt">XRConfigurationData</span> attribute to a ScriptableObject, and define a set of properties you want to surface to allow users to control configuration. <a class="el" href="namespace_unity.html">Unity</a> displays configuration options in the <b>XR</b> section of the <b>Unified Settings</b> window.</p>
+<p><a class="el" href="namespace_unity.html">Unity</a> manages the lifecycle of one instance of the class marked with the attribute through the <a href="https://docs.unity3d.com/ScriptReference/EditorBuildSettings.html">EditorBuildSettings</a> config object API. If you don't provide a dedicated UI, configuration settings are displayed in the <b>Unified Settings</b> window using the standard <b>Scriptable Object</b> UI Inspector. You can create a custom <b>Editor</b> for your configuration settings type, which then replaces the standard Inspector in the <b>Unified Settings</b> window.</p>
+<p>The provider needs to handle getting the settings from <span class="tt">EditorUserBuildSettings</span> into the built application. You can do this with a custom build processing script. If you only need to make sure that you have access to the same settings at runtime, you can derive from <span class="tt">XRBuildHelper&lt;T&gt;</span>. This is a generic abstract base class that takes the build settings stored in <span class="tt">EditorUserBuildSettings</span> and gets them into the built application for runtime access.</p>
+<p>The simplest build script for your package would look like this:</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyBuildProcessor : XRBuildHelper&lt;MySettings&gt;</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> BuildSettingsKey { <span class="keyword">get</span> { <span class="keywordflow">return</span> <span class="stringliteral">&quot;MyPackageSettingsKey&quot;</span>; } }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You can override the build processing steps from <span class="tt">IPreprocessBuildWithReport</span> and <span class="tt">IPostprocessBuildWithReport</span>, but make sure you call to the base class implementation. If you don’t, your settings don't transfer to the built application.</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyBuildProcessor : XRBuildHelper&lt;MySettings&gt;</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> BuildSettingsKey { <span class="keyword">get</span> { <span class="keywordflow">return</span> <span class="stringliteral">&quot;MyPackageSettingsKey&quot;</span>; } }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnPreprocessBuild(BuildReport report)</div>
+<div class="line">    {</div>
+<div class="line">        base.OnPreprocessBuild(report);</div>
+<div class="line">        <span class="comment">// Do your work here</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnPostprocessBuild(BuildReport report)</div>
+<div class="line">    {</div>
+<div class="line">        base.OnPreprocessBuild(report);</div>
+<div class="line">        <span class="comment">// Do your work here</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>If you want to support different settings per platform at build time, you can override <span class="tt">UnityEngine.Object SettingsForBuildTargetGroup(BuildTargetGroup buildTargetGroup)</span> and use the <span class="tt">buildTargetGroup</span> attribute to retrieve the appropriate platform settings. By default, this method uses the key associated with the settings instance to copy the entire settings object from <span class="tt">EditorUserBuildSettings</span> to <span class="tt">PlayerSettings</span>.</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>MyBuildProcessor : XRBuildHelper&lt;MySettings&gt;</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> BuildSettingsKey { <span class="keyword">get</span> { <span class="keywordflow">return</span> <span class="stringliteral">&quot;MyPackageSettingsKey&quot;</span>; } }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">override</span> UnityEngine.Object SettingsForBuildTargetGroup(BuildTargetGroup buildTargetGroup)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Get platform specific settings and return them. Use something like the following</span></div>
+<div class="line">        <span class="comment">// for simple settings data that isn&#39;t platform specific.</span></div>
+<div class="line">        UnityEngine.Object settingsObj = <span class="keyword">null</span>;</div>
+<div class="line">        EditorBuildSettings.TryGetConfigObject(BuildSettingsKey, out settingsObj);</div>
+<div class="line">        <span class="keywordflow">if</span> (settingsObj == <span class="keyword">null</span> || !(settingsObj is T))</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> settingsObj;</div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>If you need more extensive support and/or complete control, you can make a copy of the <span class="tt">SampleBuildProcessor</span> in the <span class="tt">Samples/Editor</span> folder and work from there.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9000"></a>
+Package metadata</h2>
+<p>Your plug-in must provide metadata information for it to be usable by the <b>XR Plug-in Management</b> system. Your plug-in must implement the following interfaces:</p>
+<ul>
+<li>IXRPackage</li>
+<li>IXRPackageMetadata</li>
+<li>IXRLoaderMetadata</li>
+</ul>
+<p>The system will use .Net reflection to find all types implementing the <b>IXRPackage</b> interface. It will then attempt to instantiate each one and populate the metadata store with the information provided by each instance.</p>
+<p>You can only have one instance of <b>IXRPackage</b> within a given <a class="el" href="namespace_unity.html">Unity</a> package. The <b>IXRMetadata.packageId</b> field must return the same id as set in the package's <span class="tt">package.json</span> file.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9001"></a>
+Example: Simple, minimal package information setup:</h2>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyPackage : IXRPackage</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">class </span>MyLoaderMetadata : IXRLoaderMetadata</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">string</span> loaderName { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">string</span> loaderType { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">        <span class="keyword">public</span> List&lt;BuildTargetGroup&gt; supportedBuildTargets { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">class </span>MyPackageMetadata : IXRPackageMetadata</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">string</span> packageName { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">string</span> packageId { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">string</span> settingsType { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">        <span class="keyword">public</span> List&lt;IXRLoaderMetadata&gt; loaderMetadata { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> IXRPackageMetadata s_Metadata = <span class="keyword">new</span> MyPackageMetadata(){</div>
+<div class="line">            packageName = <span class="stringliteral">&quot;My XR Plug-in&quot;</span>,</div>
+<div class="line">            packageId = <span class="stringliteral">&quot;my.xr.package&quot;</span>,</div>
+<div class="line">            settingsType = <span class="stringliteral">&quot;My.Package.MyPackageSettings&quot;</span>,</div>
+<div class="line">            loaderMetadata = <span class="keyword">new</span> List&lt;IXRLoaderMetadata&gt;() {</div>
+<div class="line">            <span class="keyword">new</span> MyLoaderMetadata() {</div>
+<div class="line">                    loaderName = <span class="stringliteral">&quot;My Loader&quot;</span>,</div>
+<div class="line">                    loaderType = <span class="stringliteral">&quot;My.Package.MyLoader&quot;</span>,</div>
+<div class="line">                    supportedBuildTargets = <span class="keyword">new</span> List&lt;BuildTargetGroup&gt;() {</div>
+<div class="line">                        BuildTargetGroup.Standalone,</div>
+<div class="line">                        BuildTargetGroup.Android,</div>
+<div class="line">                        BuildTargetGroup.iOS</div>
+<div class="line">                    }</div>
+<div class="line">                },</div>
+<div class="line">            }</div>
+<div class="line">        };</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> IXRPackageMetadata metadata =&gt; s_Metadata;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">bool</span> PopulateNewSettingsInstance(ScriptableObject obj)</div>
+<div class="line">    {</div>
+<div class="line">        MyPackageSettings packageSettings = obj as MyPackageSettings;</div>
+<div class="line">        <span class="keywordflow">if</span> (packageSettings != <span class="keyword">null</span>)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Do something here if you need to...</span></div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md9002"></a>
+Package initialization</h2>
+<p>Implementing the Package Metadata allows the <b>XR Plug-in Management</b> system to auto create and initialize your loaders and settings instances. The system will pass any new instances of your settings to the <span class="tt">PopulateNewSettingsInstance</span> function to allow your plug-in to do post creation initialization of the new instance data if needed.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9003"></a>
+Providing a custom loader UI for the loader selection screen</h2>
+<p>A package author can provide a custom UI for their loader within one or more build targets. See <span class="tt">XRCustomLoaderUI</span> for more information about the API. The image below was rendered by the sample provided in this package.</p>
+<p><img src="images/CustomLoaderUI.png" alt="Sample Loader UI" class="inline"/></p>
+<p><b>Note:</b> If you're using the samples, make sure to add them to a <a class="el" href="namespace_unity.html">Unity</a> package. Otherwise, the XR Plug-in Management UI won't work correctly. See <a class="el" href="namespace_unity.html">Unity</a> documentation on <a href="https://docs.unity3d.com/Manual/CustomPackages.html">custom packages</a> to learn more about custom package requirements.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9004"></a>
+Displaying plug-in notifications in the XR Plug-in Management window</h2>
+<p>If your package loader needs to notify the user about upcoming changes to the package, XR Plug-in Management provides an API that allows packages to display a tooltip and icon inside the XR Plug-in Management window in the <a class="el" href="namespace_unity.html">Unity</a> Editor.</p>
+<p><img src="images/XRPluginManagementNotificationIcons.png" alt="Example notification in the XR Plug-in Management windowI" class="inline"/></p>
+<p>To do this, use the <span class="tt">UnityEngine.XR.Management.PackageNotificationUtils</span> API. The code example below shows The code example below shows how to register your package with an icon, tooltip, and optionally a URL. Clicking the icon will redirect the user to a resource with more information.</p>
+<div class="fragment"><div class="line"><span class="comment">// The following sample assumes some package &quot;com.unity.xr.foobar&quot; has all</span></div>
+<div class="line"><span class="comment">// relevant package information</span></div>
+<div class="line"><span class="keyword">class </span>FoobarLoaderMetadata : IXRLoaderMetadata</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">string</span> loaderName { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">string</span> loaderType { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">    <span class="keyword">public</span> List&lt;BuildTargetGroup&gt; supportedBuildTargets { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>FoobarPackageMetadata : IXRPackageMetadata</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">string</span> packageName { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">string</span> packageId { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">string</span> settingsType { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">    <span class="keyword">public</span> List&lt;IXRLoaderMetadata&gt; loaderMetadata { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> IXRPackageMetadata s_Metadata = <span class="keyword">new</span> FoobarPackageMetadata() {</div>
+<div class="line">        packageName = <span class="stringliteral">&quot;Foobar Package&quot;</span>,</div>
+<div class="line">        packageId = <span class="stringliteral">&quot;com.unity.xr.foobar&quot;</span>,</div>
+<div class="line">        settingsType = typeof(SampleSettings).FullName,</div>
+<div class="line"> </div>
+<div class="line">        loaderMetadata = <span class="keyword">new</span> List&lt;IXRLoaderMetadata&gt;() {</div>
+<div class="line">            <span class="keyword">new</span> FoobarLoaderMetadata() {</div>
+<div class="line">                loaderName = <span class="stringliteral">&quot;Foobar Loader&quot;</span>,</div>
+<div class="line">                loaderType = typeof(SampleLoader).FullName,</div>
+<div class="line">                supportedBuildTargets = <span class="keyword">new</span> List&lt;BuildTargetGroup&gt;() {</div>
+<div class="line">                    BuildTargetGroup.Standalone,</div>
+<div class="line">                    BuildTargetGroup.WSA</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// This is the tooltip string that will be shown in the XR Plug-in Management window when the user</span></div>
+<div class="line"><span class="comment">// mouses over the icon</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">string</span> k_PackageNotificationTooltip =</div>
+<div class="line"><span class="stringliteral">@&quot;This is a sample and will not work if copied verbatim.&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// This is a string that links to the Unity Editor built-in icon for a warning symbol.</span></div>
+<div class="line"><span class="keyword">const</span> GUIContent k_PackageNotificationIcon = EditorGUIUtility.IconContent(<span class="stringliteral">&quot;console.warnicon.sml&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// This is the link that opens when the user clicks on the icon in the XR Plug-in Management window.</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">string</span> k_PackageNotificationManagementDocsURL = <span class="stringliteral">@&quot;https://docs.unity3d.com/Packages/com.unity.xr.management@latest/index.html&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> IXRPackageMetadata metadata</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">get</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Register package notification information any time the metadata is</span></div>
+<div class="line">        <span class="comment">// requested. This prevents domain reloads from losing your notification.</span></div>
+<div class="line">        var packageNotificationInfo = <span class="keyword">new</span> PackageNotificationInfo(</div>
+<div class="line">            EditorGUIUtility.IconContent(k_PackageNotificationIcon),</div>
+<div class="line">            k_PackageNotificationTooltip,</div>
+<div class="line">            k_PackageNotificationManagementDocsURL);</div>
+<div class="line"> </div>
+<div class="line">        PackageNotificationUtils.RegisterPackageNotificationInformation(</div>
+<div class="line">            s_Metadata.packageId,</div>
+<div class="line">            packageNotificationInfo);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> s_Metadata;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The code above should display a notification in the XR Plug-in Management window.</p>
+<p><b>Note:</b> The code samples in <span class="tt">SampleMetadata.cs</span> contain further examples of how to use this API.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9005"></a>
+Installing the XR Plug-in Management package</h2>
+<p>Most XR SDK Provider packages typically include XR Plug-in Management, so you shouldn't need to install it. If you do need to install it, follow the instructions in the <a href="https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest/index.html">Package Manager documentation</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

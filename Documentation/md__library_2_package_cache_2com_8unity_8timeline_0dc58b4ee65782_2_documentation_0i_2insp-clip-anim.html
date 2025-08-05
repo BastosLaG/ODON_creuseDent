@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Animation clip properties</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-clip-anim.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Animation clip properties </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5955"></a></p>
+<p>Use the Inspector window to change the properties of an Animation clip. An Animation clip has two sets of properties:</p><ul>
+<li><a class="el" href="#animcommon">Common properties</a></li>
+<li><a class="el" href="#animplayable">Animation Playable Asset properties</a></li>
+</ul>
+<p><a class="anchor" id="animcommon"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5956"></a>
+Common properties</h1>
+<p>The common properties of an Animation clip include its display name, clip timing, extrapolation, and blend curves.</p>
+<p><img src="images/insp-clip-anim-common.png" alt="" class="inline"/></p>
+<p><em>Inspector window when selecting an Animation clip in the <a class="el" href="namespace_timeline.html">Timeline</a> window</em></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5957"></a>
+Display Name</h2>
+<p>The name of the Animation clip displayed in the <a class="el" href="namespace_timeline.html">Timeline</a> window.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5958"></a>
+Clip Timing properties</h2>
+<p>Use the <b>Clip Timing</b> properties to position, change the duration, change the ease-in and ease-out duration, choose the extrapolation mode, and adjust the play speed of the Animation clip.</p>
+<p>Most timing properties are expressed in both seconds (<b>s</b>) and frames (<b>f</b>). When specifying seconds, a <b>Clip Timing</b> property accepts decimal values. When specifying frames, a property only accepts integer values. For example, if you attempt to enter 12.5 in a frames (f) field, the Inspector window sets the value to 12 frames.</p>
+<p>Depending on the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-overview.html">selected Edit mode</a>, changing the <b>Start</b>, <b>End</b>, or <b>Duration</b> may blend, ripple, or replace Animation clips on the same track.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property</b>  </th><th class="markdownTableHeadLeft"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Start</b>  </td><td class="markdownTableBodyLeft">The frame or time (in seconds) when the clip starts. Changing the Start changes the position of the clip on its track in the <a class="el" href="namespace_timeline.html">Timeline</a> asset.<br  />
+Changing the Start also affects the End. Changing the Start sets the End to the new Start value plus the Duration.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>End</b>  </td><td class="markdownTableBodyLeft">The frame or time (in seconds) when the clip ends.<br  />
+Changing the End also affects the Start. Changing the End sets the Start to the new End value minus the Duration.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Duration</b>  </td><td class="markdownTableBodyLeft">The duration of the clip in frames or seconds.<br  />
+Changing the Duration also affects the End. Changing the Duration sets the End to the Start value plus the new Duration.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Ease In Duration</b><br  />
+or<br  />
+<b>Blend In Duration</b>  </td><td class="markdownTableBodyLeft">Sets the number of seconds or frames that it takes for the clip to ease in. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-ease.html">Easing-in and Easing-out Clips</a>.<br  />
+<br  />
+If the beginning of the clip overlaps and blends with another clip, the name of this property changes to <b>Blend In Duration</b> and it displays the duration of the blend between clips. The <b>Blend In Duration</b> can only be edited in the Content view. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-blend.html">Blending clips</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Ease Out Duration</b><br  />
+or<br  />
+<b>Blend Out Duration</b>  </td><td class="markdownTableBodyLeft">Sets the number of seconds or frames that it takes for the clip to ease out. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-ease.html">Easing-in and Easing-out Clips</a>.<br  />
+<br  />
+If the end of the clip overlaps and blends with another clip, the name of this property changes to <b>Blend Out Duration</b> and it displays the duration of the blend between clips. The <b>Blend Out Duration</b> can only be edited in the Content view.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Clip In</b>  </td><td class="markdownTableBodyLeft">Sets the offset for when the source asset starts playing. For example, to play the last 10 seconds of a 30 second Animation clip, set Clip In to 20 seconds.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Speed Multiplier</b>  </td><td class="markdownTableBodyLeft">A multiplier on the playback speed of the clip. This value must be greater than 0. Changing this value changes the duration of the clip. You cannot use this property to reverse playback. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-speed.html">Changing Clip Play Speed</a>.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5959"></a>
+Animation Extrapolation</h2>
+<p>Use the <b>Animation Extrapolation</b> properties to set the gap extrapolation before and after an Animation clip. The term <b>gap extrapolation</b> refers to how an Animation track approximates or extends animation data in the gaps before, between, and after the Animation clips on a track.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property</b>  </th><th class="markdownTableHeadLeft"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Pre-Extrapolate</b>  </td><td class="markdownTableBodyLeft">Controls how animation data is approximated in the gap before an Animation clip. The Pre-Extrapolate property affects the easing-in of an Animation clip.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Post-Extrapolate</b>  </td><td class="markdownTableBodyLeft">Controls how animation data extends in the gap after an Animation clip. The Post-Extrapolate property affects the easing-out of an Animation clip.  </td></tr>
+</table>
+<p>Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-gap-extrap.html">Setting the gap extrapolation</a> for more information on each gap extrapolation mode and how they affect other Animation clips on the same Animation track.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5960"></a>
+Blend Curves</h2>
+<p>Use the <b>Blend Curves</b> to customize the transition between the outgoing and incoming Animation clips. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-blend.html">Blending clips</a> for details on how to blend clips and customize blend curves.</p>
+<p>When easing-in or easing-out clips, use the <b>Blend Curves</b> to customize the curve that eases-in or eases-out an Animation clip. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-ease.html">Easing-in and Easing-out clips</a> for details.</p>
+<p><a class="anchor" id="animplayable"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5961"></a>
+Animation Playable Asset properties</h1>
+<p>Use the Inspector window to change the Playable Asset properties of an Animation clip. These properties include properties for selecting the source asset used by the Animation clip, controls for manually applying position and rotation clip offsets, and options for overriding default clip matching.</p>
+<p>To view the Playable Asset properties for an Animation clip, expand <b>Animation Playable Asset</b>.</p>
+<p><img src="images/insp-clip-anim-playable.png" alt="" class="inline"/></p>
+<p><em>Inspector window with the <b>Animation Playable Asset</b> properties expanded</em></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5962"></a>
+Animation Clip</h2>
+<p>Use the <b>Animation Clip</b> to choose the source asset used by the Animation clip on the Animation track. The source asset is either a <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-record-anim.html">recorded Infinite clip</a> or an <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-anim-human.html">external motion clip</a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5963"></a>
+Clip Transform Offsets</h2>
+<p>Use the <b>Clip Transform Offsets</b> area to manually apply position and rotation offsets to the selected Animation clip. The tools and properties underneath the Clip Transform Offsets provide two methods of manually applying offsets based on the selected source:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Property:</b>  </th><th class="markdownTableHeadLeft"><b>Description:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Move tool</b>  </td><td class="markdownTableBodyLeft">Displays a Move Gizmo in the Scene view. Use the Move Gizmo to manually position the clip offset for the selected Animation clip. Using the Move Gizmo changes the Position coordinates.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b><a class="el" href="class_rotate.html">Rotate</a> tool</b>  </td><td class="markdownTableBodyLeft">Displays a <a class="el" href="class_rotate.html">Rotate</a> Gizmo in the Scene view. Use the <a class="el" href="class_rotate.html">Rotate</a> Gizmo to manually rotate the clip offset for the selected Animation clip. Using the <a class="el" href="class_rotate.html">Rotate</a> Gizmo changes the Rotation coordinates.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Position</b>  </td><td class="markdownTableBodyLeft">Manually sets the clip offset in X, Y, and Z coordinates. By default, the Position coordinates are set to zero and are relative to the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-trk-anim.html">track offsets</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Rotation</b>  </td><td class="markdownTableBodyLeft">Manually sets the clip rotation offset around the X, Y, and Z axes. By default, the Rotation axes are set to zero and are relative to the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-trk-anim.html">track offsets</a>.  </td></tr>
+</table>
+<p>You can also <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-match.html">automatically match the clip offsets</a> based on the end of the previous Animation clip, or the start of the next Animation clip. The transforms that are matched depends on the <b>Offset Match Fields</b>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5964"></a>
+Offsets Match Fields</h2>
+<p>Use <b>Offsets Match Fields</b> to choose which transforms to match when <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-match.html">matching clip offsets</a>. By default, <b>Use Defaults</b> is enabled and uses the default matching options set for the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-trk-anim.html">Animation track</a>.</p>
+<p>Disable <b>Use Defaults</b> to override the track matching options and choose which transformations to match when performing a Match Offsets to Previous Clip or Match Offsets to Next Clip for the selected Animation clip. When you disable <b>Offsets Match Fields</b>, a series of additional checkboxes appear. Use these additional checkboxes to enable or disable matching per coordinate, for both position and rotation.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5965"></a>
+Remove Start Offset</h2>
+<p>Enable <b>Remove Start Offset</b> to make the Animation clip begin at position zero and rotation zero. The rest of the position and rotation keyframes in the Animation clip follow from zero. Enabling <b>Remove Start Offset</b> makes it easier to match the Animation clip with the previous Animation clip.</p>
+<p>Disable <b>Remove Start Offset</b> to keep the starting position and rotation. The Animation clip starts from its original position and rotation.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5966"></a>
+Foot IK</h2>
+<p>Enable <b>Foot IK</b> if the Animation clip is animating a humanoid and you want to use inverse kinematics for foot solving. Inverse kinematics attempts to remedy foot sliding by solving and influencing foot placement from the foot to the hip of the humanoid.</p>
+<p>Disable Foot IK if the Animation clip is animating a non-humanoid object such as a moving platform or a quadruped character with a non-human bone structure.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5967"></a>
+Loop</h2>
+<p>Use the <b>Loop</b> property to set how <a class="el" href="namespace_timeline.html">Timeline</a> handles the extra clip area when an Animation clip is longer than its source asset. For example, if you <a href="clip-trim.md#trimloop">trim the end of an Animation clip</a> past the end of its source asset, the extra clip area either holds or loops its content.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><b>Value:</b>  </th><th class="markdownTableHeadLeft"><b>Description:</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Use Source Asset</b>  </td><td class="markdownTableBodyLeft">Sets the Animation clip to loop or hold based on the <b>Loop Time</b> property of its source asset.If the source asset is imported from an FBX file, <a href="https://docs.unity3d.com/Manual/class-AnimationClip.html#ClipProperties">the <b>Loop Time</b> property is set in the Animation tab</a>. If the source asset is recorded keyframe animation, the Loop Time property displays when you select <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2tl-overview.html">the Recorded clip saved under the Timeline Asset</a> in the Project window.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>On</b>  </td><td class="markdownTableBodyLeft">Loops the extra clip area, ignoring the Loop Time property of the source asset. When the extra clip area loops, the entire source asset loops. Each full loop is labelled sequentially as L1, L2, L3, and so on.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>Off</b>  </td><td class="markdownTableBodyLeft">Sets the extra clip area to hold, ignoring the Loop Time property of the source asset. When the extra clip area holds, the last value of the source asset is held until the end of the extra clip area. The label <span class="tt">Hold</span> displays in the extra clip area.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

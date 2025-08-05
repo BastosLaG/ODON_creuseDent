@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Animate a humanoid</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-anim-human.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Animate a humanoid </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6068"></a></p>
+<p>This workflow demonstrates how to use a <a class="el" href="namespace_timeline.html">Timeline</a> instance to animate a humanoid model so that it turns left and begins to walk.</p>
+<p>Although this workflow uses a humanoid, you can use this animation method for any GameObject.</p>
+<p>This workflow uses the humanoid model named <span class="tt">DefaultMale</span> and animation source assets from the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2samp-gameplay-demo.html">Gameplay Sequence sample</a> for its examples. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2samp-overview.html">Timeline Samples</a> for information on the samples available from the <a class="el" href="namespace_timeline.html">Timeline</a> package and how to import these samples into your projects.</p>
+<p>This workflow starts with a <a class="el" href="namespace_timeline.html">Timeline</a> instance that has an empty Animation track bound to the <span class="tt">DefaultMale</span> humanoid model.</p>
+<p><img src="images/tl-human-start.png" alt="" class="inline"/></p>
+<p><em>The <span class="tt">DefaultMale</span> humanoid model linked to a <a class="el" href="namespace_timeline.html">Timeline</a> instance (<span class="tt">HumanTL</span>) with an empty Animation track bound to the same model</em></p>
+<p>While animating the humanoid model, this workflow demonstrates how to do the following:</p><ol type="1">
+<li><a class="el" href="#addclips">Add and position Animation clips</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#matchclips">Match clip offsets</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#blendclips">Create blends between clips</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#reduceslide">Manually adjust clip offsets to reduce foot sliding</a>.</li>
+</ol>
+<p><a class="anchor" id="addclips"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6069"></a>
+Add and position Animation clips</h1>
+<ol type="1">
+<li><p class="startli">From your Project, drag an animation source asset into the Animation track to add a new Animation clip.</p>
+<p class="startli">Dragging a source asset adds an Animation clip on the same track. The duration of the Animation clip matches the source asset.</p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">To position, resize, or trim the Animation clip in the Content view, select <b>Mix mode</b> as the Edit mode.</p>
+<p class="startli">There are <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-overview.html">three Edit modes</a> that affect the editing behavior of the <a class="el" href="namespace_timeline.html">Timeline</a> window. When the <a class="el" href="namespace_timeline.html">Timeline</a> window is in <b>Mix mode</b>, you can drag to position, trim, and blend clips.</p>
+<p class="startli">You can also select an Animation clip to modify its <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2insp-clip-anim.html">Animation clip properties</a>, including its Start, End, and Duration, in the Inspector window.</p>
+<p class="startli"><img src="images/tl-mix-mode-turnleft-clip.png" alt="" class="inline"/></p>
+<p class="startli"><em>The Mix mode (red) is the selected Edit mode. The <span class="tt">TurnLeft</span> clip is positioned to start at frame 0.</em></p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Add a second Animation clip. This workflow adds a walk clip (<span class="tt">Walk</span>), positions the clip so it starts immediately after the first clip, and it resizes the second clip to include one loop.</p>
+<p class="startli"><img src="images/tl-human-all-clips.png" alt="" class="inline"/></p>
+<p class="startli"><em>Animation track with the <span class="tt">TurnLeft</span> and <span class="tt">Walk</span> Animation clips</em></p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Play the <a class="el" href="namespace_timeline.html">Timeline</a> instance. In this example, the <span class="tt">DefaultMale</span> animation jumps between each Animation clip because its position and rotation at the end of each clip does not match the position and rotation at the start of the next Animation clip.</p>
+<p class="startli"><img src="images/spec-human-before-match.png" alt="" class="inline"/></p>
+<p class="startli"><em>The <span class="tt">DefaultMale</span> jumps between the <span class="tt">TurnLeft</span> Animation clip, which ends at frame 105 (A), and the <span class="tt">Walk</span> Animation clip, ghost model which starts at frame 106 (B)</em></p>
+</li>
+</ol>
+<p><a class="anchor" id="matchclips"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6070"></a>
+Match clip offsets</h1>
+<p>To fix animation jumping between clips, match the offset of each Animation clip. The <a class="el" href="namespace_timeline.html">Timeline</a> window provides <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-match.html">different methods for matching offsets</a>. This workflow demonstrates how to match an Animation clip with the previous clip.</p>
+<p>In this workflow, to match the TurnLeft clip with the previous clip, follow these steps:</p>
+<ol type="1">
+<li>Select the TurnLeft clip.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Right-click the selected clip and choose <b>Match Offsets to Previous Clip</b> from the context menu.</p>
+<p class="startli">The position and rotation of the humanoid at the start of the second Animation clip (<span class="tt">Walk</span>) matches the position and rotation of the humanoid at the end of the first Animation clip.</p>
+<p class="startli"><img src="images/spec-human-after-match.png" alt="" class="inline"/></p>
+<p class="startli"><em>The ghosted <span class="tt">DefaultMale</span> at the start of the <span class="tt">Walk</span> Animation clip, which starts at frame 106 (B), matches the position and rotation of the <span class="tt">DefaultMale</span> at the end of the <span class="tt">TurnLeft</span> Animation clip, which ends at frame 105 (A)</em></p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Play the <a class="el" href="namespace_timeline.html">Timeline</a> instance again. Although the position and rotation of the humanoid matches, there is still a jump between the two Animation clips because the humanoid is in different poses:</p><ul>
+<li>At the end of the <span class="tt">TurnLeft</span> Animation clip, the feet are on the ground and the arms are slightly raised.</li>
+<li>At the start of the <span class="tt">Walk</span> Animation clip, the left leg is off the ground and the arms are in a relaxed position.</li>
+</ul>
+<p class="startli">To remove the jump and to transition between these two poses, you can <a class="el" href="#blendclips">create a blend</a>.</p>
+</li>
+</ol>
+<p><a class="anchor" id="blendclips"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6071"></a>
+Create blends between clips</h1>
+<p>Create a blend to seamlessly mix between two different animations or poses. The <a class="el" href="namespace_timeline.html">Timeline</a> window includes many different ways to <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2clip-blend.html">create a blend</a> between Animation clips.</p>
+<p>To create a blend, move an Animation clip until it overlaps another Animation clip.</p>
+<p>You might need to adjust the size of the Animation clips, the Blend Area, the Clip In value, and the shape of each Blend Curve to create a smoother transition between the two poses.</p>
+<p>For example, in the transition between the <span class="tt">TurnLeft</span> clip and the <span class="tt">Walk</span> clip, the <span class="tt">Walk</span> clip was repositioned to start at frame 83. The rest of the clip properties are unchanged from their default values.</p>
+<p><img src="images/tl-human-blend.png" alt="" class="inline"/></p>
+<p><em>Overlap two clips to create a smooth transition between two Animation clips</em></p>
+<p>As the <span class="tt">TurnLeft</span> clip transitions to the <span class="tt">Walk</span> clip, the blend removes the obvious jump between poses. The transition between most body parts appears natural, however in this case, the blend between the different positions of the foot results in an unnatural slide.</p>
+<p><a class="anchor" id="reduceslide"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6072"></a>
+Reduce foot sliding</h1>
+<p>To reduce foot sliding, manually adjust the offset of an Animation clip so that the position of the foot changes less drastically.</p>
+<p>To manually adjust the offset, follow these steps:</p>
+<ol type="1">
+<li><p class="startli">Select the Animation clip in the <a class="el" href="namespace_timeline.html">Timeline</a> window and, in the Inspector window, expand <b>Animation Playable Asset</b>.</p>
+<p class="startli"><img src="images/insp-clip-anim-playable-walk.png" alt="" class="inline"/></p>
+<p class="startli"><em>The <b>Animation Playable Asset</b> properties include the <b>Clip Transform Offsets</b></em></p>
+<p class="startli">In this example, the X Position. Z Position, and Y Rotation of the <b>Clip Transform Offsets</b> for the Walk Animation clip is not zero because a <b>Match Offsets to Previous Clip</b> was performed earlier in this workflow. Match to a previous clip sets these values to match the root of the humanoid at the end of the previous Animation clip.</p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">With the Animation clip selected, use one of the following methods:</p><ul>
+<li>In the Inspector window, under <b>Clip Transform Offsets</b>, change the value of the appropriate <b>Position</b> property.</li>
+<li>In the Inspector window, under <b>Clip Transform Offsets</b>, enable the Move tool. The Move Gizmo appears in the Scene view at the root of the Animation clip. In the Scene view, drag the Move Gizmo.</li>
+</ul>
+<p class="startli"><img src="images/spec-scene-insp-move-gizmo.png" alt="" class="inline"/></p>
+<p class="startli"><em>Enable the Move tool (A) to view the Move Gizmo (B)</em> </p>
+</li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

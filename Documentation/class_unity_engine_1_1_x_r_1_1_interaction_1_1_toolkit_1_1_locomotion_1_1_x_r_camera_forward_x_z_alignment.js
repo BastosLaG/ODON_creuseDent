@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_camera_forward_x_z_alignment =
+[
+    [ "Apply", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_camera_forward_x_z_alignment.html#ac098d3e59ec2ea57ce3cb4801d22d3db", null ],
+    [ "targetDirection", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_camera_forward_x_z_alignment.html#a88111741ec82a6b3199daac69fcd48a2", null ]
+];

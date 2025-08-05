@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: xr-device-simulator</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2xr-device-simulator.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">xr-device-simulator </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8633"></a>
+autotoc_md8633</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8634"></a>
+uid: xri-xr-device-simulator</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8635"></a>
+XR Device Simulator</h1>
+<p>The XR Device Simulator component which handles mouse and keyboard input from the user and uses it to drive simulated XR controllers and an XR head mounted display (HMD).</p>
+<p>This class does not directly manipulate the camera or controllers which are part of the XR Origin, but rather moves them indirectly through simulated input devices.</p>
+<p>Use the Package Manager window to install the <b>XR Device Simulator</b> sample into your project to get sample mouse and keyboard bindings for Input System actions that this component expects. The sample also includes a prefab of a <span class="tt">GameObject</span> with this component attached that has references to those sample actions already set. To make use of this simulator, add the prefab to your scene.</p>
+<p>For more information about how to install and how to set it up in a scene, refer to the <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation18f6e311f92d3422cfa43fd22d1a0daa.html">XR Device Simulator overview</a>.</p>
+<p><img src="images/xr-device-simulator.png" alt="XRDeviceSimulator component" class="inline"/></p>
+<dl class="section note"><dt>Note</dt><dd>The XR Origin must read the position and rotation of the HMD and controllers by using Input System actions (such as by using <span class="tt">ActionBasedController</span> and <span class="tt">TrackedPoseDriver</span>) for this simulator to work as expected. Attempting to use XR input subsystem device methods (such as by using <span class="tt">XRController</span> and <span class="tt">SpatialTracking.TrackedPoseDriver</span>) will not work as expected since this simulator depends on the Input System to drive the simulated devices.</dd></dl>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Property</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Global Actions</b>  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Device Simulator Action Asset</b>  </td><td class="markdownTableBodyNone">The Input Action Asset that contains the actions used in the global actions section.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Keyboard X Translate Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to translate in the x-axis (left/right) while held. Must be a <span class="tt">InputActionType.Value</span> <span class="tt">AxisControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the A key (left/negative) and D key (right/positive).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Keyboard Y Translate Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to translate in the y-axis (up/down) while held. Must be a <span class="tt">InputActionType.Value</span> <span class="tt">AxisControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the S key (backward/negative) and W key (forward/positive).  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Keyboard Z Translate Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to translate in the z-axis (forward/back) while held. Must be a <span class="tt">InputActionType.Value</span> <span class="tt">AxisControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the S key (backward/negative) and D key (forward/positive).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Toggle Manipulate Left Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to enable manipulation of the left-hand controller when toggled. Must be a <span class="tt">ButtonControl</span>.<br  />
+Note that if controls on the left-hand controller are actuated when this action is released, those controls will continue to remain actuated. This is to allow for multi-hand interactions without needing to have dedicated bindings for manipulating each controller separately and concurrently.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the T key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Toggle Manipulate Right Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to enable manipulation of the right-hand controller when toggled. Must be a <span class="tt">ButtonControl</span>.<br  />
+Note that if controls on the right-hand controller are actuated when this action is released, those controls will continue to remain actuated. This is to allow for multi-hand interactions without needing to have dedicated bindings for manipulating each controller separately and concurrently.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the Y key.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Toggle Manipulate Body Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to toggle enable looking around with the HMD and controllers. Must be a <span class="tt">ButtonControl</span>.<br  />
+<br  />
+The prefab in the XR Device Simulator sample has this action bound to the U key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Manipulate Left Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to enable manipulation of the left-hand controller while held. Must be a <span class="tt">ButtonControl</span>. Holding this action key when the right-hand controller is toggled enables to use both controllers simultaneously.<br  />
+Note that if controls on the left-hand controller are actuated when this action is released, those controls will continue to remain actuated. This is to allow for multi-hand interactions without needing to have dedicated bindings for manipulating each controller separately and concurrently.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the Left Shift key.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Manipulate Right Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to enable manipulation of the right-hand controller while held/toggled. Must be a <span class="tt">ButtonControl</span>. Holding this action key when the left-hand controller is toggled enables to use both controllers simultaneously.<br  />
+Note that if controls on the right-hand controller are actuated when this action is released, those controls will continue to remain actuated. This is to allow for multi-hand interactions without needing to have dedicated bindings for manipulating each controller separately and concurrently.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the Space key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Manipulate Head Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to enable manipulation of the HMD while held. Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the right mouse button.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Hand Controller Mode Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to change between hand and controller mode. Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the <span class="tt">H</span> key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Cycle Devices Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to cycle between the available devices (controllers and head) when pressed. Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the <span class="tt">Tab</span> key.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Stop Manipulation Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to stop all manipulation of the controllers and head when pressed. Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the <span class="tt">Escape</span> key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Mouse Delta Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to translate or rotate by a scaled amount along or about the x- and y-axes. Must be a <span class="tt">InputActionType.Value</span> <span class="tt">Vector2Control</span>.<br  />
+Typically bound to the screen-space motion delta of the mouse in pixels. This is how the prefab in the XR Device Simulator sample is set up.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Mouse Scroll Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to translate or rotate by a scaled amount along or about the z-axis. Must be a <span class="tt">InputActionType.Value</span> <span class="tt">Vector2Control</span>.<br  />
+Typically bound to the horizontal and vertical scroll wheels, though only the vertical is used. This is how the prefab in the XR Device Simulator sample is set up.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><a class="el" href="class_rotate.html">Rotate</a> Mode Override Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to cause the manipulated device(s) to rotate when moving the mouse when held. Must be a <span class="tt">ButtonControl</span>.<br  />
+Forces rotation mode when held, no matter what the current mouse transformation mode is.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Toggle Mouse Transformation Mode Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to toggle between translating or rotating the manipulated device(s). Must be a <span class="tt">ButtonControl</span>. <br  />
+The prefab in the XR Device Simulator sample has this action bound to the <span class="tt">R</span> key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Negate Mode Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to cause the manipulated device(s) to rotate when moving the mouse while held when it would normally translate, and vice-versa. Must be a <span class="tt">ButtonControl</span>.<br  />
+Can be used to temporarily change the mouse transformation mode to the other mode while held for making quick adjustments.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>X Constraint Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to constrain the translation or rotation to the x-axis when moving the mouse or resetting. May be combined with another axis constraint to constrain to a plane. Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the <span class="tt">X</span> key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Y Constraint Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to constrain the translation or rotation to the y-axis when moving the mouse or resetting. May be combined with another axis constraint to constrain to a plane. Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the <span class="tt">C</span> key.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Z Constraint Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to constrain the translation or rotation to the z-axis when moving the mouse or resetting. May be combined with another axis constraint to constrain to a plane. Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the <span class="tt">Z</span> key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Reset Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to cause the manipulated device(s) to reset position or rotation (depending on the effective manipulation mode). Must be a <span class="tt">ButtonControl</span>.<br  />
+Resets position to <span class="tt">Vector3.zero</span> and rotation to <span class="tt">Quaternion.identity</span>. May be combined with axis constraints (see above three actions).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Toggle Cursor Lock Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to toggle the cursor lock mode for the game window when pressed. Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the \ key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Toggle Primary 2D Axis Target Action</b>  </td><td class="markdownTableBodyNone">The Input System action used to toggle enable manipulation of the <span class="tt">Axis2DTargets.Primary2DAxis</span> of the controllers when pressed. Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the <span class="tt">1</span> key.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Toggle Secondary 2D Axis Target Action</b>  </td><td class="markdownTableBodyNone">The Input System action used to toggle enable manipulation of the <span class="tt">Axis2DTargets.Secondary2DAxis</span> of the controllers when pressed. Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the <span class="tt">2</span> key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Toggle Device Position Target Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to toggle enable translation from keyboard inputs when pressed. Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the <span class="tt">3</span> key.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Controller Actions</b>  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Controller Action Asset</b>  </td><td class="markdownTableBodyNone">The Input Action Asset that contains the actions used in the controller actions section. This asset is enabled/disabled automatically as needed.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Axis 2D Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the value of one or more 2D Axis controls on the manipulated controller device(s). Must be a <span class="tt">InputActionType.Value</span> <span class="tt">Vector2Control</span>.<br  />
+The above two actions' toggles enable the ability to manipulate 2D Axis controls on the simulated controllers, and this action actually controls the value of them while those controller devices are being manipulated.<br  />
+Typically bound to WASD on a keyboard, and controls the primary and/or secondary 2D Axis controls on them.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Resting Hand Axis 2D Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control one or more 2D Axis controls on the opposite hand of the exclusively manipulated controller device. Must be a <span class="tt">InputActionType.Value</span> <span class="tt">Vector2Control</span>.<br  />
+Typically bound to Q and E on a keyboard for the horizontal component, and controls the opposite hand's 2D Axis controls when manipulating one (and only one) controller. Can be used to quickly and simultaneously control the 2D Axis on the other hand's controller. In a typical setup of continuous movement bound on the left-hand controller stick, and turning bound on the right-hand controller stick, while exclusively manipulating the left-hand controller to move, this action can be used to trigger turning.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Grip Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the Grip control of the manipulated controller device(s). Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the G key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Trigger Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the Trigger control of the manipulated controller device(s). Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to Mouse 1 (the left mouse button).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Primary Button Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the PrimaryButton control of the manipulated controller device(s). Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the B key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Secondary Button Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the SecondaryButton control of the manipulated controller device(s). Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the N key.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Menu Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the Menu control of the manipulated controller device(s). Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the M key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Primary 2D Axis Click Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the Primary2DAxisClick control of the manipulated controller device(s). Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the 4 key.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Secondary 2D Axis Click Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the Secondary2DAxisClick control of the manipulated controller device(s). Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the 5 key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Primary 2D Axis Touch Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the Primary2DAxisTouch control of the manipulated controller device(s). Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the 6 key.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Secondary 2D Axis Touch Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the Secondary2DAxisTouch control of the manipulated controller device(s). Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the 7 key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Primary Touch Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the PrimaryTouch control of the manipulated controller device(s). Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the 8 key.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Secondary Touch Action</b>  </td><td class="markdownTableBodyNone">The Input System Action used to control the SecondaryTouch control of the manipulated controller device(s). Must be a <span class="tt">ButtonControl</span>.<br  />
+The prefab in the XR Device Simulator sample has this action bound to the 9 key.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Hand Actions</b>  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Hand Action Asset</b>  </td><td class="markdownTableBodyNone">The Input Action Asset that contains the actions used in the hand actions section. This asset is enabled/disabled automatically as needed.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Resting Hand Expression Capture</b>  </td><td class="markdownTableBodyNone">The resting hand expression to use when no other hand expression is active.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Simulated Hand Expressions</b>  </td><td class="markdownTableBodyNone">The list of hand expressions to simulate. The prefab in the XR Device Simulator sample has the following poses and key bindings: Poke (N), Pinch (M), Grab (K), Thumbs Up (L), Open (O), Fist (P). Each entry in the list defines:<br  />
+<ul>
+<li>
+<b>Name</b> The unique name for the hand expression.</li>
+<li>
+<b>Toggle Action</b> The input action to trigger the hand expression.</li>
+<li>
+<b>Capture</b> The captured hand expression to simulate when the input action is performed.</li>
+</ul>
+</td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Simulator Settings</b>  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Camera Transform</b>  </td><td class="markdownTableBodyNone">The <span class="tt">Transform</span> that contains the <span class="tt">Camera</span>. This is usually the "Head" of XR Origins. Automatically set to <span class="tt">Camera.main</span> if unset.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Keyboard Translate Space</b>  </td><td class="markdownTableBodyNone">The coordinate space in which keyboard translation should operate.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Local  </td><td class="markdownTableBodyNone">Set <b>Keyboard Translate Space</b> to <b>Local</b> to apply translations of a controller or HMD relative to its own coordinate space, considering its own rotations. Will translate a controller relative to itself, independent of the camera.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;Parent  </td><td class="markdownTableBodyNone">Set <b>Keyboard Translate Space</b> to <b>Parent</b> to apply translations of a controller or HMD relative to its parent. If the object does not have a parent, meaning it is a root object, the parent coordinate space is the same as the world coordinate space. This is the same as <b>Local</b> but without considering its own rotations.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Screen  </td><td class="markdownTableBodyNone">Set <b>Keyboard Translate Space</b> to <b>Screen</b> to apply translations of a controller or HMD relative to the screen. Will translate a controller relative to the camera, independent of the controller's orientation.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Mouse Translate Space</b>  </td><td class="markdownTableBodyNone">The coordinate space in which mouse translation should operate.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Local  </td><td class="markdownTableBodyNone">Set <b>Mouse Translate Space</b> to <b>Local</b> to apply translations of a controller or HMD relative to its own coordinate space, considering its own rotations. Will translate a controller relative to itself, independent of the camera.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;Parent  </td><td class="markdownTableBodyNone">Set <b>Mouse Translate Space</b> to <b>Parent</b> to apply translations of a controller or HMD relative to its parent. If the object does not have a parent, meaning it is a root object, the parent coordinate space is the same as the world coordinate space. This is the same as <b>Local</b> but without considering its own rotations.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Screen  </td><td class="markdownTableBodyNone">Set <b>Mouse Translate Space</b> to <b>Screen</b> to apply translations of a controller or HMD relative to the screen. Will translate a controller relative to the camera, independent of the controller's orientation.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Desired Cursor Lock Mode</b>  </td><td class="markdownTableBodyNone">The desired cursor lock mode to toggle to from <span class="tt">CursorLockMode.None</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&emsp;Locked  </td><td class="markdownTableBodyNone">Set <b>Desired Cursor Lock Mode</b> to <b>Locked</b> to toggle between <span class="tt">CursorLockMode.None</span> and locking the cursor to the center of the game window.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&emsp;Confined  </td><td class="markdownTableBodyNone">Set <b>Desired Cursor Lock Mode</b> to <b>Confined</b> to toggle between <span class="tt">CursorLockMode.None</span> and confining the cursor to the game window.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Remove Other HMD Devices</b>  </td><td class="markdownTableBodyNone">Whether or not to remove other XR HMD devices in this session so that they don't conflict with the XR Device Simulator.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Hand Tracking Capability</b>  </td><td class="markdownTableBodyNone">Whether to create a simulated Hand Tracking Subsystem and provider on startup. Requires the XR Hands package.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Device Simulator UI</b>  </td><td class="markdownTableBodyNone">The prefab containing the UI to show for the XR Device Simulator. By default, the prefab in the XR Device Simulator sample is using the <span class="tt">XR Device Simulator UI</span> prefab. Removing this field will remove the UI in the Game view.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Sensitivity</b>  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Keyboard X Translate Speed</b>  </td><td class="markdownTableBodyNone">Speed of translation in the x-axis (left/right) when triggered by keyboard input.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Keyboard Y Translate Speed</b>  </td><td class="markdownTableBodyNone">Speed of translation in the y-axis (up/down) when triggered by keyboard input.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Keyboard Z Translate Speed</b>  </td><td class="markdownTableBodyNone">Speed of translation in the z-axis (forward/back) when triggered by keyboard input.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Keyboard Body Translate Multiplier</b>  </td><td class="markdownTableBodyNone">Speed multiplier applied for body translation when triggered by keyboard input.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Mouse X Translate Sensitivity</b>  </td><td class="markdownTableBodyNone">Sensitivity of translation in the x-axis (left/right) when triggered by mouse input.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Mouse Y Translate Sensitivity</b>  </td><td class="markdownTableBodyNone">Sensitivity of translation in the y-axis (up/down) when triggered by mouse input.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Mouse Scroll Translate Sensitivity</b>  </td><td class="markdownTableBodyNone">Sensitivity of translation in the z-axis (forward/back) when triggered by mouse scroll input.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Mouse X <a class="el" href="class_rotate.html">Rotate</a> Sensitivity</b>  </td><td class="markdownTableBodyNone">Sensitivity of rotation along the x-axis (pitch) when triggered by mouse input.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Mouse Y <a class="el" href="class_rotate.html">Rotate</a> Sensitivity</b>  </td><td class="markdownTableBodyNone">Sensitivity of rotation along the y-axis (yaw) when triggered by mouse input.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Mouse Scroll <a class="el" href="class_rotate.html">Rotate</a> Sensitivity</b>  </td><td class="markdownTableBodyNone">Sensitivity of rotation along the z-axis (roll) when triggered by mouse scroll input.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Mouse Y <a class="el" href="class_rotate.html">Rotate</a> Invert</b>  </td><td class="markdownTableBodyNone">A boolean value of whether to invert the y-axis of mouse input when rotating by mouse input.<br  />
+A <span class="tt">false</span> value (default) means typical FPS style where moving the mouse up/down pitches up/down.<br  />
+A <span class="tt">true</span> value means flight control style where moving the mouse up/down pitches down/up.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Analog Configuration</b>  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Grip Amount</b>  </td><td class="markdownTableBodyNone">The amount of the simulated grip on the controller when the Grip control is pressed.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Trigger Amount</b>  </td><td class="markdownTableBodyNone">The amount of the simulated trigger pull on the controller when the Trigger control is pressed.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Tracking State</b>  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>HMD Is Tracked</b>  </td><td class="markdownTableBodyNone">Whether the HMD should report the pose as fully tracked or unavailable/inferred.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>HMD Tracking State</b>  </td><td class="markdownTableBodyNone">Which tracking values the HMD should report as being valid or meaningful to use, which could mean either tracked or inferred.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Left Controller Is Tracked</b>  </td><td class="markdownTableBodyNone">Whether the left-hand controller should report the pose as fully tracked or unavailable/inferred.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Left Controller Tracking State</b>  </td><td class="markdownTableBodyNone">Which tracking values the left-hand controller should report as being valid or meaningful to use, which could mean either tracked or inferred.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Right Controller Is Tracked</b>  </td><td class="markdownTableBodyNone">Whether the right-hand controller should report the pose as fully tracked or unavailable/inferred.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Right Controller Tracking State</b>  </td><td class="markdownTableBodyNone">Which tracking values the right-hand controller should report as being valid or meaningful to use, which could mean either tracked or inferred.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Left Hand Is Tracked</b>  </td><td class="markdownTableBodyNone">Whether the left hand should report the pose as fully tracked or unavailable/inferred.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Right Hand Is Tracked</b>  </td><td class="markdownTableBodyNone">Whether the right hand should report the pose as fully tracked or unavailable/inferred.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8636"></a>
+Sample Controls</h2>
+<p>Each simulated XR HMD or XR Controller must be manipulated before controls/values will be modified. If controls on a manipulated controller are actuated when you stop manipulating, those controls will continue to remain actuated. This is to allow for multi-hand interactions without needing to have dedicated bindings for manipulating each controller separately and concurrently.</p>
+<ul>
+<li>Mouse2 (Right Mouse Button) [Hold]<ul>
+<li>Manipulate the HMD<ul>
+<li>You can use mouse input (moving and scroll wheel delta) to either <b>Translate</b> or <b><a class="el" href="class_rotate.html">Rotate</a></b> manipulated device(s) (see <span class="tt">R</span>).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>T [Toggle]<ul>
+<li>Toggle to manipulate the left-hand controller only<ul>
+<li>You can use mouse input (moving and scroll wheel delta) to either <b>Translate</b> or <b><a class="el" href="class_rotate.html">Rotate</a></b> manipulated device(s) (see <span class="tt">R</span>) and use controls associated to that controller.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Left Shift [Hold]<ul>
+<li>Hold to temporary manipulate the left-hand controller (can be used while manipulating the right-hand controller simultaneously)<ul>
+<li>You can use mouse input (moving and scroll wheel delta) to either <b>Translate</b> or <b><a class="el" href="class_rotate.html">Rotate</a></b> manipulated device(s) (see <span class="tt">R</span>) and use controls associated to that controller.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Y [Toggle]<ul>
+<li>Toggle to manipulate the right-hand controller only<ul>
+<li>You can use mouse input (moving and scroll wheel delta) to either <b>Translate</b> or <b><a class="el" href="class_rotate.html">Rotate</a></b> manipulated device(s) (see <span class="tt">R</span>) and use controls associated to that controller.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Space [Hold]<ul>
+<li>Hold to temporary manipulate the right-hand controller (can be used while manipulating the left-hand controller simultaneously)<ul>
+<li>You can use mouse input (moving and scroll wheel delta) to either <b>Translate</b> or <b><a class="el" href="class_rotate.html">Rotate</a></b> manipulated device(s) (see <span class="tt">R</span>) and use controls associated to that controller.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>U [Toggle]<ul>
+<li>Toggle to enable looking around with the HMD and controllers.</li>
+</ul>
+</li>
+<li>Tab [Press]<ul>
+<li>Cycle though available devices (in the following order Left Controller &gt; Right Controller &gt; Head)</li>
+</ul>
+</li>
+<li>R [Toggle]<ul>
+<li>Toggle between Translate or <a class="el" href="class_rotate.html">Rotate</a> mode for mouse input</li>
+</ul>
+</li>
+<li>Ctrl [Hold]<ul>
+<li>Temporarily forces into <a class="el" href="class_rotate.html">Rotate</a> mode while held</li>
+</ul>
+</li>
+<li>Mouse 3 (Middle Mouse Button) [Hold]<ul>
+<li>Temporarily forces into <a class="el" href="class_rotate.html">Rotate</a> mode while held</li>
+</ul>
+</li>
+<li>Z [Hold]<ul>
+<li>Constrain translation/rotation/reset to z-axis</li>
+</ul>
+</li>
+<li>X [Hold]<ul>
+<li>Constrain translation/rotation/reset to x-axis</li>
+</ul>
+</li>
+<li>C [Hold]<ul>
+<li>Constrain translation/rotation/reset to y-axis</li>
+</ul>
+</li>
+<li>V [Press]<ul>
+<li>Reset position or rotation (depending on current mode being Translate or <a class="el" href="class_rotate.html">Rotate</a>)</li>
+</ul>
+</li>
+<li>\ [Toggle]<ul>
+<li>Toggles between the mouse cursor being unlocked or locked to the game window. There is a value dropdown in the inspector to choose between Locked or Confined.</li>
+</ul>
+</li>
+<li>G [Hold]<ul>
+<li>Grip</li>
+</ul>
+</li>
+<li>Mouse 1 (Left Mouse Button) [Hold]<ul>
+<li>Trigger</li>
+</ul>
+</li>
+<li>B [Hold]<ul>
+<li>Primary Button</li>
+</ul>
+</li>
+<li>N [Hold]<ul>
+<li>Secondary Button</li>
+</ul>
+</li>
+<li>M [Hold]<ul>
+<li>Menu</li>
+</ul>
+</li>
+<li>4 [Hold]<ul>
+<li>Primary 2D Axis Click</li>
+</ul>
+</li>
+<li>5 [Hold]<ul>
+<li>Secondary 2D Axis Click</li>
+</ul>
+</li>
+<li>6 [Hold]<ul>
+<li>Primary 2D Axis Touch</li>
+</ul>
+</li>
+<li>7 [Hold]<ul>
+<li>Secondary 2D Axis Touch</li>
+</ul>
+</li>
+<li>8 [Hold]<ul>
+<li>Primary Touch</li>
+</ul>
+</li>
+<li>9 [Hold]<ul>
+<li>Secondary Touch The <span class="tt">Vector2</span> controls on the controllers and device position use the WASD keys, and which ones of those will take input are enabled through toggles (more than one can be active):</li>
+</ul>
+</li>
+<li>1 [Toggle]<ul>
+<li>Toggles whether keyboard inputs apply to <b>Primary 2D Axis</b> (the thumbstick for manipulating controller(s))</li>
+</ul>
+</li>
+<li>2 [Toggle]<ul>
+<li>Toggles whether keyboard inputs apply to <b>Secondary 2D Axis</b> (the touchpad on the manipulating controller(s))</li>
+</ul>
+</li>
+<li>3 [Toggle]<ul>
+<li>Toggles whether keyboard inputs apply to HMD/Controller <b>Position</b></li>
+</ul>
+</li>
+</ul>
+<p>Default behavior or when <b>Position</b> is enabled:</p><ul>
+<li>WASD [Hold]<ul>
+<li>Forward/Left/Backward/Right translation of HMD/Controller (mimics <a class="el" href="namespace_unity.html">Unity</a> Editor Scene view)</li>
+</ul>
+</li>
+<li>QE [Hold]<ul>
+<li>Down/Up translation of the HMD/Controller (mimics <a class="el" href="namespace_unity.html">Unity</a> Editor Scene view)</li>
+</ul>
+</li>
+</ul>
+<p>When <b>Primary/Secondary 2D Axis</b> is enabled:</p><ul>
+<li>WASD [Hold]<ul>
+<li>Forward/Left/Backward/Right push of the Controller Primary/Secondary 2D Axis</li>
+</ul>
+</li>
+<li>QE [Hold]<ul>
+<li>Left/Right of the opposite controller Primary/Secondary 2D Axis (only works when manipulating a single controller)</li>
+</ul>
+</li>
+<li>Mouse4 (Forward Button) and Mouse 5 (Backward Button) [Hold]<ul>
+<li>Up/Down of the opposite controller Primary/Secondary 2D Axis (only works when manipulating a single controller)</li>
+</ul>
+</li>
+<li>IJKL [Hold]<ul>
+<li>Alternate input for Forward/Left/Backward/Right push of the opposite controller Primary/Secondary 2D Axis (only works when manipulating a single controller) </li>
+</ul>
+</li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

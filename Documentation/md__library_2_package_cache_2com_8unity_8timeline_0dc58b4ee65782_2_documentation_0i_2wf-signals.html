@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Use markers and signals for footsteps</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-signals.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Use markers and signals for footsteps </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md6090"></a></p>
+<p>This workflow demonstrates how to use <a class="el" href="namespace_timeline.html">Timeline</a> markers, Signal assets, and Signal Receiver components to play audio sources for footsteps.</p>
+<p>This workflow uses the humanoid model named <span class="tt">DefaultMale</span> and animation source assets from the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2samp-gameplay-demo.html">Gameplay Sequence sample</a> for its walk and walk to jog cycles. Consult <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2samp-overview.html">Timeline Samples</a> for information on the samples available from the <a class="el" href="namespace_timeline.html">Timeline</a> package and how to import these samples into your projects.</p>
+<p>To demonstrate how to use markers and signals, this workflow is divided into the following main tasks:</p><ol type="1">
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-subtimeline.html#setupinstance">Set up the Timeline instance</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#addfiles">Add files, assets, and components</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#addwhere">Decide where to add markers</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#add1stleft">Add a marker and signal for the first left footstep</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#add1stright">Add a marker and signal for the first right footstep</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#addrem">Add markers and signals for remaining footsteps</a>.</li>
+</ol>
+<ol type="1">
+<li><a class="el" href="#playadjust">Preview and adjust each marker</a>.</li>
+</ol>
+<p><a class="anchor" id="setupinstance"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6091"></a>
+Set up the Timeline instance</h1>
+<p>To follow along with this workflow, create a <a class="el" href="namespace_timeline.html">Timeline</a> instance with a single track that animates a character with a walk cycle or any animation where the character's feet occasionally contact the floor. You can also use the result of the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2wf-anim-human.html">Animate a humanoid</a> workflow.</p>
+<p>The <a class="el" href="namespace_timeline.html">Timeline</a> instance in this workflow, named <span class="tt">SignalsTL</span>, has a single Animation track bound to the <span class="tt">DefaultMale</span> model. The Animation track starts with a walk cycle and blends into a walk to jog cycle. The <a class="el" href="namespace_timeline.html">Timeline</a> instance is associated with an empty GameObject named <span class="tt"><a class="el" href="namespace_timeline.html">Timeline</a></span>.</p>
+<p><img src="images/tl-signal-start.png" alt="" class="inline"/></p>
+<p><em>This workflow uses a <a class="el" href="namespace_timeline.html">Timeline</a> instance (SignalsTL) with the <span class="tt">DefaultMale</span> model walking then jogging</em></p>
+<p><a class="anchor" id="addfiles"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6092"></a>
+Add files, assets, and components</h1>
+<p>Before adding markers and signals, depending on what you want your <a class="el" href="namespace_timeline.html">Timeline</a> instance to interact with, you may need to add additional files, assets, and components to your project.</p>
+<p>For example, this workflow plays one of two different audio sources depending on which foot of the <span class="tt">DefaultMale</span> character contacts the floor. Before adding markers and signals to play footsteps, you must do the following:</p>
+<ol type="1">
+<li><a class="el" href="#addaudio">Add audio files</a> to your project.</li>
+<li><a class="el" href="#leftsrc">Add an audio source to the `LeftFoot`</a> to play the left footstep audio file.</li>
+<li><a class="el" href="#rightsrc">Add an audio source to the `RightFoot`</a> to play the right footstep audio file.</li>
+</ol>
+<p><a class="anchor" id="addaudio"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6093"></a>
+Add Audio files to your project</h2>
+<p>This workflow uses the audio files named <span class="tt">footsteps1.wav</span> and <span class="tt">footsteps2.wav</span>. These are freeware footstep sounds downloaded from a royalty free website.</p>
+<p>Before you can use audio files in your project, you must add them to the <span class="tt">Assets</span> folder. You can do this using one of the following methods:</p><ul>
+<li>Use your operating system to copy or move the audio files to the <span class="tt">Assets</span> folder within your Project folder.</li>
+<li>Drag the file from your operating system onto the <span class="tt">Assets</span> folder in the Project window.</li>
+<li>In the Project window, select the <span class="tt">Assets</span> folder then right-click and choose <b>Import New Asset</b> from the context menu. Use the Import dialog that displays to select which files to move to the <span class="tt">Assets</span> folder.</li>
+</ul>
+<p>To keep your assets organized, it is recommended that you create additional folders within your <span class="tt">Assets</span> folder for each type of asset, file, or resource. For example, you could create a folder named <span class="tt">Audio</span> to store your audio files. <a class="el" href="namespace_unity.html">Unity</a> recognizes assets and files in child folders within the <span class="tt">Assets</span> folder.</p>
+<p><img src="images/proj-signals-audio.png" alt="" class="inline"/></p>
+<p><em>The audio files <span class="tt">footsteps1.wav</span> and <span class="tt">footsteps2.wav</span> are copied or moved to the <span class="tt">Audio</span> folder within the <span class="tt">Assets</span> folder</em></p>
+<p><a class="anchor" id="leftsrc"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6094"></a>
+Add an Audio Source for the left footstep</h2>
+<p>After you add audio files to your project, add an Audio Source component to play the audio file for the <span class="tt">LeftFoot</span>.</p>
+<ol type="1">
+<li><p class="startli">In the Scene Hierarchy, navigate and choose <span class="tt">LeftFoot</span> in the <span class="tt">DefaultMale</span> character hierarchy.</p>
+<p class="startli"><img src="images/hier-leftfoot.png" alt="" class="inline"/></p>
+<p class="startli"><em><span class="tt">LeftFoot</span> selected in the <span class="tt">DefaultMale</span> hierarchy</em></p>
+</li>
+<li>With <span class="tt">LeftFoot</span> selected, in the Inspector window, click Add Component.</li>
+<li>From the list of components, select <b>Audio</b> &gt; <b>Audio Source</b>.</li>
+<li>In the AudioClip field, select the picker (circle) and choose the audio file to play when the <span class="tt">LeftFoot</span> touches the floor.</li>
+<li><p class="startli">In the Audio Source component for <span class="tt">LeftFoot</span>, disable <b>Play On Awake</b> so that the Audio Source does not automatically play when switching to <a href="https://docs.unity3d.com/Manual/GameView.html">Play mode in the Game view</a>.</p>
+<p class="startli"><img src="images/insp-leftfoot-audiosrc.png" alt="" class="inline"/></p>
+<p class="startli"><em>Audio Source for <span class="tt">LeftFoot</span> with the audio file selected and Play On Awake disabled</em></p>
+</li>
+</ol>
+<p><a class="anchor" id="rightsrc"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6095"></a>
+Add an Audio Source for the right footstep</h2>
+<p>After the <span class="tt">LeftFoot</span> has an Audio Source component, follow the same steps but for the <span class="tt">RightFoot</span>.</p>
+<ol type="1">
+<li><p class="startli">In the Scene Hierarchy, navigate and choose <span class="tt">RightFoot</span> in the <span class="tt">DefaultMale</span> character hierarchy.</p>
+<p class="startli"><img src="images/hier-rightfoot.png" alt="" class="inline"/></p>
+<p class="startli"><em><span class="tt">RightFoot</span> selected in the <span class="tt">DefaultMale</span> hierarchy</em></p>
+</li>
+<li>With <span class="tt">RightFoot</span> selected, in the Inspector window, click Add Component.</li>
+<li>From the list of components, select <b>Audio</b> &gt; <b>Audio Source</b>.</li>
+<li>In the AudioClip field, select the picker (circle) and choose the audio file to play when the <span class="tt">RightFoot</span> touches the floor.</li>
+<li><p class="startli">In the Audio Source component for <span class="tt">RightFoot</span>, disable <b>Play On Awake</b> so that the Audio Source does not automatically play when switching to <a href="https://docs.unity3d.com/Manual/GameView.html">Play mode in the Game view</a>.</p>
+<p class="startli"><img src="images/insp-rightfoot-audiosrc.png" alt="" class="inline"/></p>
+<p class="startli"><em>Audio Source for <span class="tt">RightFoot</span> with the audio file selected and Play On Awake disabled</em></p>
+</li>
+</ol>
+<p><a class="anchor" id="addwhere"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6096"></a>
+Decide where to add markers</h1>
+<p>After audio files are imported and Audio Source components are created, the next step is to add <a class="el" href="namespace_timeline.html">Timeline</a> markers that play these audio sources at specific points in time.</p>
+<p>In the <a class="el" href="namespace_timeline.html">Timeline</a> window, you can add <a class="el" href="namespace_timeline.html">Timeline</a> markers to any track associated with a GameObject. The most appropriate track to add <a class="el" href="namespace_timeline.html">Timeline</a> markers depends on what you want these markers to interact with.</p>
+<p>In this workflow, you want these <a class="el" href="namespace_timeline.html">Timeline</a> markers to play the audio sources that have been added to the <span class="tt">LeftFoot</span> and <span class="tt">RightFoot</span> GameObjects. These GameObjects are in the <span class="tt">DefaultMale</span> hierarchy. For this reason, you should add <a class="el" href="namespace_timeline.html">Timeline</a> markers to the Animation track bound to the <span class="tt">DefaultMale</span> hierarchy.</p>
+<p><a class="anchor" id="add1stleft"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6097"></a>
+Add a marker and signal for the first left footstep</h1>
+<p>In this step, you add a marker, set its properties, and create a Signal Asset for the first left footstep on the <span class="tt">DefaultMale</span> Animation track. You will also add a Signal Receiver component to the <span class="tt">DefaultMale</span> GameObject.</p>
+<ol type="1">
+<li>Move the <a class="el" href="namespace_timeline.html">Timeline</a> Playhead to where the <span class="tt">DefaultMale</span> character's left foot first touches the floor. The Playhead Location field displays the time in frames. In this workflow, the left foot first touches the floor at frame 27.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">On the Track Header for the <span class="tt">DefaultMale</span> Animation track, click the More menu (⋮) and choose <b>Add Signal Emitter</b>. This adds a <a class="el" href="namespace_timeline.html">Timeline</a> marker to the Animation track, at the location of the <a class="el" href="namespace_timeline.html">Timeline</a> Playhead.</p>
+<p class="startli">When you add a <a class="el" href="namespace_timeline.html">Timeline</a> marker, you choose the Signal Emitter type for the <a class="el" href="namespace_timeline.html">Timeline</a> marker being added. By default, the Signal Emitter type is the only available type of emitter.</p>
+<p class="startli">When you add a <a class="el" href="namespace_timeline.html">Timeline</a> marker, it is automatically selected and its properties display in the Inspector window. If the Inspector window does not display the <a class="el" href="namespace_timeline.html">Timeline</a> marker properties, click the <a class="el" href="namespace_timeline.html">Timeline</a> marker to select it.</p>
+<p class="startli"><img src="images/insp-first-left.png" alt="" class="inline"/></p>
+<p class="startli"><em>Inspector window with the Create Signal and Add Signal Receiver buttons</em></p>
+<p class="startli">In the <a class="el" href="namespace_timeline.html">Timeline</a> window, notice that this <a class="el" href="namespace_timeline.html">Timeline</a> marker is drawn with a warning icon. This indicates that the <a class="el" href="namespace_timeline.html">Timeline</a> marker is not yet linked to a Signal Asset.</p>
+<p class="startli"><img src="images/tl-signal-warning.png" alt="" class="inline"/></p>
+<p class="startli"><em><a class="el" href="namespace_timeline.html">Timeline</a> marker added to the <span class="tt">DefaultMale</span> Animation track with a warning icon</em></p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">To remove the warning icon, you can either create a new Signal Asset or associate the marker with an existing Signal Asset. In this workflow, since you have yet to create a Signal Asset for the left foot, do one of the following:</p><ul>
+<li>If your project contains no Signal assets, the Inspector window prompts you to click the <b>Create Signal</b> button.</li>
+<li>If your project contains at least one Signal Asset, choose <b>Create Signal</b> from the <b>Emit Signal</b> dropdown menu.</li>
+</ul>
+<p class="startli">A dialog box prompts you for the name and location of the Signal asset you are creating. You can also specify tags to identify the Signal asset.</p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Name the Signal Asset, choose a location, and click <b>Save</b>.</p>
+<p class="startli">A Signal Asset defines the relationship between the <a class="el" href="namespace_timeline.html">Timeline</a> Marker and the Signal Receiver. You can reuse a Signal Asset multiple times for many different <a class="el" href="namespace_timeline.html">Timeline</a> Markers.</p>
+<p class="startli">This workflow names the Signal Asset <span class="tt">LeftFootSignal.Signal</span> to differentiate it from the Signal Asset for the right foot and to distinguish it from the <span class="tt">LeftFoot</span> GameObject.</p>
+<p class="startli">This workflow also saves Signal Assets to the folder named <span class="tt">Signals</span>, within the <span class="tt">Assets</span> folder. The <span class="tt">Signals</span> folder is optional. It is used to organize the assets in the Assets folder.</p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Click <b>Add Signal Receiver</b> to create and define a Signal Receiver component.</p>
+<p class="startli">The Signal Receiver component is added to the GameObject bound to the track with the selected <a class="el" href="namespace_timeline.html">Timeline</a> marker. In this workflow, the Signal Receiver component is added to the <span class="tt">DefaultMale</span> GameObject.</p>
+<p class="startli">With the <a class="el" href="namespace_timeline.html">Timeline</a> marker selected, the Inspector window displays the same properties as the Signal Receiver component except for the <b>Receiver Component on</b> property.</p>
+<p class="startli">The table in the Signal Receiver properties include a Signal column and a Reaction column. The Signal column lists the signals that the Signal Receiver receives. The Reaction column defines the actions that are performed when a signal is received.</p>
+<p class="startli"><img src="images/insp-first-left-signal.png" alt="" class="inline"/> <em>blah</em></p>
+<p class="startli"><b>(A)</b> The GameObject with this Signal Receiver component<br  />
+ <b>(B)</b> Reaction type<br  />
+ <b>(C)</b> Destination function<br  />
+ <b>(D)</b> Reaction destination<br  />
+</p>
+</li>
+</ol>
+<ol type="1">
+<li>In the Reaction column, select <b>Editor and Runtime</b> as the Reaction type. This ensures that the Signal Receiver reacts to the emitted signal during <a class="el" href="namespace_timeline.html">Timeline</a> preview, Editor Play mode, and during Runtime.</li>
+</ol>
+<ol type="1">
+<li>Below the reaction type, select the GameObject that receives the signal. Since this Signal Receiver is meant to play the footstep Audio Source associated with the <span class="tt">LeftFoot</span>, select <span class="tt">LeftFoot</span> as the Reaction destination instead of <span class="tt">DefaultMale</span>.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">To define the reaction, click <b>No Function</b> and select <b>Audio Source</b> &gt; <b>Play()</b> to play the footstep sound from the Audio Source component.</p>
+<p class="startli">Defining the reaction chooses which method is called and from which component. The available methods depends on the components added to the GameObject that receives the signal.</p>
+<p class="startli">In this workflow, the <span class="tt">Play()</span> method does not accept parameters. If you select a method that accepts parameters, the parameters would be listed beneath the select component and function.</p>
+</li>
+</ol>
+<ol type="1">
+<li>Lastly, make sure <b>Retroactive</b> and <b>Emit Once</b> are disabled. These properties are disabled by default.</li>
+</ol>
+<p><a class="anchor" id="add1stright"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6098"></a>
+Add a marker and signal for first right footstep</h1>
+<p>In this step, you add a marker, set its properties, and define a Signal Asset for the first right footstep. These steps are simplified because they are similar to adding a <a class="el" href="#add1stleft">marker and signal for the first left footstep</a>.</p>
+<ol type="1">
+<li>Move the <a class="el" href="namespace_timeline.html">Timeline</a> Playhead to where the <span class="tt">DefaultMale</span> character's right foot first touches the floor. In this workflow, the right foot first touches the floor at frame 64.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">On the Track Header for the <span class="tt">DefaultMale</span> Animation track, click the More menu (⋮) and choose <b>Add Signal Emitter</b>. This adds a <a class="el" href="namespace_timeline.html">Timeline</a> marker to the Animation track, at the location of the <a class="el" href="namespace_timeline.html">Timeline</a> Playhead.</p>
+<p class="startli">When you add a <a class="el" href="namespace_timeline.html">Timeline</a> marker, it is automatically selected and its properties display in the Inspector window. If the Inspector window does not display the <a class="el" href="namespace_timeline.html">Timeline</a> marker properties, click the <a class="el" href="namespace_timeline.html">Timeline</a> marker to select it.</p>
+</li>
+</ol>
+<ol type="1">
+<li>In the Inspector window, make sure <b>Retroactive</b> and <b>Emit Once</b> are disabled. These properties are disabled by default.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">In the Inspector window, to remove the warning icon from the <a class="el" href="namespace_timeline.html">Timeline</a> marker and create a new Signal Asset, choose <b>Create Signal</b> from the <b>Emit Signal</b> dropdown menu.</p>
+<p class="startli">A dialog box prompts you for the name and location of the Signal asset you are creating. You can also specify tags to identify the Signal asset.</p>
+</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Name the Signal Asset <span class="tt">RightFootSignal.Signal</span> to differentiate it from the Signal Asset for the left foot and to distinguish it from the <span class="tt">RightFoot</span> GameObject. Choose a location and click <b>Save</b>.</p>
+<p class="startli">This workflow saves Signal Assets to the folder named <span class="tt">Signals</span>, within the <span class="tt">Assets</span> folder. The <span class="tt">Signals</span> folder is optional. It is used to organize the assets in the Assets folder.</p>
+<p class="startli">When the <span class="tt">RightFootSignal.Signal</span> is saved, a new row is added to the table in Signal Receiver properties. You don't have to add a new Signal Receiver component because this component was added to the <span class="tt">DefaultMale</span> GameObject when you created the first signal for the left foot.</p>
+</li>
+</ol>
+<ol type="1">
+<li>In the Reaction column for the <span class="tt">RightFootSignal</span> row, select <b>Editor and Runtime</b> as the Reaction type and select the <span class="tt">RightFoot</span> GameObject as the Reaction destination.</li>
+</ol>
+<ol type="1">
+<li><p class="startli">Click <b>No Function</b> and select <b>Audio Source</b> &gt; <b>Play()</b> to play the footstep sound from the Audio Source component.</p>
+<p class="startli"><img src="images/insp-first-right-signal.png" alt="" class="inline"/> <em>Inspector window for the first right footstep <a class="el" href="namespace_timeline.html">Timeline</a> marker</em></p>
+</li>
+</ol>
+<p><a class="anchor" id="addrem"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6099"></a>
+Add markers and signals for additional footsteps</h1>
+<p>In this step, for the additional footsteps, you reuse each created Signal Asset based on which foot touches the floor. This is similar to adding a marker and signal in the previous steps.</p>
+<p>The difference is that the Signal Assets for playing either footstep sound has already been created. Instead of creating new Signal Assets, you will reuse previous assets.</p>
+<ol type="1">
+<li>Move the <a class="el" href="namespace_timeline.html">Timeline</a> Playhead until the character's next foot touches the floor. In this workflow, this occurs at frame 100.</li>
+<li>On the Track Header for the <span class="tt">DefaultMale</span> Animation track, click the More (⋮) menu and choose <b>Add Signal Emitter from Signal Asset</b>. An Object Picker window displays prompting you to select a Signal Asset.</li>
+<li><p class="startli">Because the <span class="tt">LeftFoot</span> touches the floor, select the <span class="tt">LeftFootSignal</span> Signal Asset and close the Object Picker window.</p>
+<p class="startli">This adds a new <a class="el" href="namespace_timeline.html">Timeline</a> marker of the Signal Emitter type to the <span class="tt">DefaultMale</span> Animation track. The new <a class="el" href="namespace_timeline.html">Timeline</a> marker is selected and its properties display in the Inspector window.</p>
+<p class="startli"><img src="images/insp-second-left.png" alt="" class="inline"/></p>
+<p class="startli"><em>Inspector window for the second left footstep <a class="el" href="namespace_timeline.html">Timeline</a> marker which reuses the LeftFootSignal Asset</em></p>
+</li>
+<li><p class="startli">Repeat these steps for each remaining frame where either the <span class="tt">LeftFoot</span> or <span class="tt">RightFoot</span> of the <span class="tt">DefaultMale</span> character contacts the floor.</p>
+<p class="startli"><img src="images/tl-signals-done.png" alt="" class="inline"/></p>
+<p class="startli"><em>The SignalsTL <a class="el" href="namespace_timeline.html">Timeline</a> instance with markers for each foot contact</em></p>
+<p class="startli">For example, in this workflow, after adding <a class="el" href="namespace_timeline.html">Timeline</a> markers for the first two foot steps, there are four additional frames where either foot of the <span class="tt">DefaultMale</span> character contacts the floor:</p><ul>
+<li><span class="tt">LeftFoot</span> at frame 100 (set above)</li>
+<li><span class="tt">RightFoot</span> at frame 137</li>
+<li><span class="tt">LeftFoot</span> at frame 164</li>
+<li><span class="tt">RightFoot</span> at frame 188</li>
+</ul>
+</li>
+</ol>
+<p><a class="anchor" id="playadjust"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6100"></a>
+Play and adjust each marker</h1>
+<p>After you add a marker for every occurrence where the <span class="tt">LeftFoot</span> or <span class="tt">RightFoot</span> of the <span class="tt">DefaultMale</span> character touches the floor, click the Play button in the <a class="el" href="md__library_2_package_cache_2com_8unity_8timeline_0dc58b4ee65782_2_documentation_0i_2tl-play-ctrls.html">Timeline Playback Controls</a> to preview the result.</p>
+<p>As each foot touches the floor, you might need to adjust the location of each <a class="el" href="namespace_timeline.html">Timeline</a> marker to ensure that the footstep sound corresponds with each footstep. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

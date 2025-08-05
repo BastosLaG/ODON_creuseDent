@@ -1,0 +1,15 @@
+var class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8 =
+[
+    [ "FinishSetup", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#a8b9b1ba7ca3799d5c253a58433bf8a2b", null ],
+    [ "devicePose", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#acfab05da8dbf6d7876bb22390c9581c6", null ],
+    [ "devicePosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#af61bff8f0ef5f716124e0b4edaf66434", null ],
+    [ "deviceRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#afb27074b5df58903fd0af0e6ef64e77b", null ],
+    [ "haptic", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#a25e961b012a6e201fa21160c8e87fcb3", null ],
+    [ "isTracked", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#acf2695370ad322e8589afa02bc322ef0", null ],
+    [ "menu", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#acbf6edbc173b7334f2c36e6bd8937fb0", null ],
+    [ "pointer", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#a246a3ceb7a0d3d7708d65a6807674a86", null ],
+    [ "pointerPosition", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#a27192edf262c3a68513a8c1f66410716", null ],
+    [ "pointerRotation", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#abc788adf3deb9952d7b7f484bb738529", null ],
+    [ "select", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#a96db6bebd43981d8754ebe3c810d658e", null ],
+    [ "trackingState", "class_unity_engine_1_1_x_r_1_1_open_x_r_1_1_features_1_1_interactions_1_1_k_h_r_simple_controllecc49be73507ac921b69eb92b052492a8.html#a9c1a680985f976a5beeacbe9ab34ffd2", null ]
+];

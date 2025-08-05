@@ -1,0 +1,4 @@
+var struct_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_hands_1_1_x_r_simulated_hand_state =
+[
+    [ "Reset", "struct_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_hands_1_1_x_r_simulated_hand_state.html#a7aeffab7a380272bf25e056a422a9d4a", null ]
+];

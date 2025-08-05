@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Writing a simple test</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8test-framework_8performance_0d92d1d09a72ed_2_documentation_0i_2writing-tests.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Writing a simple test </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5170"></a></p>
+<p>This example uses <span class="tt">Measure.Method</span> to measure the performance of Vector2 operations. This executes the provided method and samples performance. Increasing <span class="tt">MeasurementCount</span> from the default of 7 to 20 improves performance test stability. You can execute a <span class="tt">Vector2.MoveTowards</span> test in Edit Mode or Play Mode.</p>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">[Test, Performance]</div>
+<div class="line">public void Vector2_operations()</div>
+<div class="line">{</div>
+<div class="line">    var a = Vector2.one;</div>
+<div class="line">    var b = Vector2.zero;</div>
+<div class="line"> </div>
+<div class="line">    Measure.Method(() =&gt;</div>
+<div class="line">    {</div>
+<div class="line">            Vector2.MoveTowards(a, b, 0.5f);</div>
+<div class="line">            Vector2.ClampMagnitude(a, 0.5f);</div>
+<div class="line">            Vector2.Reflect(a, b);</div>
+<div class="line">            Vector2.SignedAngle(a, b);</div>
+<div class="line">    })</div>
+<div class="line">        .MeasurementCount(20)</div>
+<div class="line">        .Run();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>To view the results, go to <b>Window &gt; Analysis &gt; Performance Test Report</b>.</p>
+<p><img src="images/example01.png" alt="Performance test example01" class="inline"/></p>
+<p>In this example, the results show that the first method execution took five times longer than the subsequent methods, and those subsequent method executions were unstable. Also, you can't tell from these test results how long it took for each Vector2 operation to execute.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5171"></a>
+Improving test stability</h1>
+<p>Now we'll look at how to improve the stability of our test. Instability can occur at the beginning of a test for several reasons, such as entering Play Mode or method initialization, because the tested method is quite fast and more sensitive to other running background processes.</p>
+<p>To improve stability, use <span class="tt">WarmupCount(n)</span>. This allows you to execute methods before recording data, so <a class="el" href="namespace_unity.html">Unity</a> doesn't record method initialization. The simplest way to increase test execution time is to repeat the method in a loop. Avoid having measurements that are less than 1ms because they are usually more sensitive to unstable environments.</p>
+<p>To help you track the execution time for each operation, split the Vector2 operations into several tests. Often, when writing tests, we use setup and clean up methods to isolate the test environment. However, in this case, methods are isolated and do not affect other methods, so we don't need a cleanup or setup. The following code example shows a performance test for the <span class="tt">Vector2.MoveTowards</span> operation. Other Vector2 performance tests are identical.</p>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">[Test, Performance]</div>
+<div class="line">public void Vector2_MoveTowards()</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">    Measure.Method(() =&gt;</div>
+<div class="line">    {</div>
+<div class="line">        Vector2.MoveTowards(Vector2.one, Vector2.zero, 0.5f);</div>
+<div class="line">    })</div>
+<div class="line">        .WarmupCount(5)</div>
+<div class="line">        .IterationsPerMeasurement(10000)</div>
+<div class="line">        .MeasurementCount(20)</div>
+<div class="line">        .Run();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>With 100000 iterations in this test, we see a small fluctuation in method execution time but the standard deviation is low, which means the test is reasonably stable.</p>
+<p><img src="images/example02.png" alt="Performance test example02" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5172"></a>
+Measure a Play Mode only method</h1>
+<p>To measure a method that only runs in Play Mode (for example <span class="tt">Physics.Raycast</span>), you can use <span class="tt">Measure.Frames()</span>, which records time per frame by default. To only measure <span class="tt">Physics.Raycast</span> time, you can disable frame time measurements with <span class="tt">DontRecordFrametime</span> and just measure the <span class="tt">Physics.Raycast</span> profiler marker. This test creates objects that you need to dispose of at the end of each test, because multiple unnecessary objects can affect the next test results. Use the SetUp method to create GameObjects, and the TearDown method to destroy the created GameObjects after each test.</p>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">[SetUp]</div>
+<div class="line">public void SetUp()</div>
+<div class="line">{</div>
+<div class="line">    for (int i = 0; i &lt; 100; ++i)</div>
+<div class="line">    {</div>
+<div class="line">        GameObject raycaster = new GameObject(&quot;raycast&quot;, typeof(Raycast));</div>
+<div class="line">        raycaster.transform.SetParent(_parent.transform);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">[UnityTest, Performance]</div>
+<div class="line">public IEnumerator Physics_RaycastTests()</div>
+<div class="line">{</div>
+<div class="line">    string profilierMarker = &quot;Physics.Raycast&quot;;</div>
+<div class="line">    </div>
+<div class="line">    yield return Measure.Frames()</div>
+<div class="line">        .WarmupCount(3)</div>
+<div class="line">        .DontRecordFrametime()</div>
+<div class="line">        .MeasurementCount(10)</div>
+<div class="line">        .ProfilerMarkers(profilierMarker)</div>
+<div class="line">        .Run();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">public class Raycast : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    private void Update()</div>
+<div class="line">    {</div>
+<div class="line">        RaycastHit hit;</div>
+<div class="line">        bool ray = Physics.Raycast(</div>
+<div class="line">            transform.position, </div>
+<div class="line">            Vector3.forward, </div>
+<div class="line">            out hit, </div>
+<div class="line">            Mathf.Infinity);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">[TearDown]</div>
+<div class="line">public void TearDown()</div>
+<div class="line">{</div>
+<div class="line">    GameObject.DestroyImmediate(_parent);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>To record your own measurements, create a new sample group and record a custom metric. The following example measures <span class="tt">Allocated</span> and <span class="tt">Reserved</span> memory.</p>
+<div class="fragment"><div class="line"> csharp</div>
+<div class="line">[Test, Performance]</div>
+<div class="line">public void Empty()</div>
+<div class="line">{</div>
+<div class="line">    var allocated = new SampleGroup(&quot;TotalAllocatedMemory&quot;, SampleUnit.Megabyte);</div>
+<div class="line">    var reserved = new SampleGroup(&quot;TotalReservedMemory&quot;, SampleUnit.Megabyte);</div>
+<div class="line"> </div>
+<div class="line">    using (Measure.Scope())</div>
+<div class="line">    {</div>
+<div class="line">        Measure.Custom(allocated, UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong() / 1048576f);</div>
+<div class="line">        Measure.Custom(reserved, UnityEngine.Profiling.Profiler.GetTotalReservedMemoryLong() / 1048576f);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Before you start to collect package performance data, make sure the tests you run locally are stable (the data set deviation is &lt;5%). In the <b>Performance Test Report</b> window, ensure the test isn't fluctuating and that the results between runs are similar.</p>
+<p>Results of performance tests run on a local machine can be significantly different to previous test runs because of other applications running in the background, CPU overheating, or CPU boosting. Make sure that CPU intensive applications are turned off where possible. You can disable CPU boost in the BIOS or with third-party software such as Real Temp.</p>
+<p>For comparing performance data between runs, use the <a href="https://github.com/Unity-Technologies/PerformanceBenchmarkReporter/wiki">Unity Performance Benchmark Reporter</a>, which provides a graphical HTML report that enables you to compare performance metric baselines and subsequent performance metrics.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5173"></a>
+Further examples</h1>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md5174"></a>
+Example 1: Measure Frame Time For Scene</h3>
+<div class="fragment"><div class="line">csharp</div>
+<div class="line">   [UnityTest, Performance, Version(&quot;4&quot;)]</div>
+<div class="line">   public IEnumerator MainSceneFrameTime_StartPosition()</div>
+<div class="line">   { </div>
+<div class="line">       SceneManager.LoadScene(&quot;Demo&quot;, LoadSceneMode.Single);</div>
+<div class="line">       </div>
+<div class="line">       // Measure initial time of first 25 frames after loading the scene</div>
+<div class="line">       using(Measure.Frames().Scope(&quot;FrameTime.FirstFramesAfterLoadingScene&quot;))</div>
+<div class="line">       {</div>
+<div class="line">           for (var i = 0; i &lt; 25; i++)</div>
+<div class="line">           {</div>
+<div class="line">               yield return null;</div>
+<div class="line">           }</div>
+<div class="line">       }</div>
+<div class="line"> </div>
+<div class="line">       // Measure frame times for ten seconds during rest of the &quot;Demo&quot; scene</div>
+<div class="line">       using (Measure.Frames().Scope(&quot;FrameTime.Main&quot;))</div>
+<div class="line">       {</div>
+<div class="line">           yield return new WaitForSeconds(10);</div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md5175"></a>
+Example 2: Measure execution time to serialize simple object to JSON</h3>
+<div class="fragment"><div class="line">csharp</div>
+<div class="line">   [Test, Performance, Version(&quot;2&quot;)]</div>
+<div class="line">   public void Serialize_SimpleObject()</div>
+<div class="line">   {</div>
+<div class="line">       var obj = new SimpleObject();</div>
+<div class="line">       obj.Init();</div>
+<div class="line"> </div>
+<div class="line">       Measure.Method(() =&gt; JsonUtility.ToJson(obj)).Run();</div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   [Serializable]</div>
+<div class="line">   public class SimpleObject</div>
+<div class="line">   {</div>
+<div class="line">       public int IntField;</div>
+<div class="line">       public string StringField;</div>
+<div class="line">       public float FloatField;</div>
+<div class="line">       public bool BoolField;</div>
+<div class="line"> </div>
+<div class="line">       [Serializable]</div>
+<div class="line">       public struct NestedStruct</div>
+<div class="line">       {</div>
+<div class="line">           public int A, B;</div>
+<div class="line">       }</div>
+<div class="line"> </div>
+<div class="line">       public NestedStruct Str;</div>
+<div class="line"> </div>
+<div class="line">       public Vector3 Position;</div>
+<div class="line"> </div>
+<div class="line">       public void Init()</div>
+<div class="line">       {</div>
+<div class="line">           IntField = 1;</div>
+<div class="line">           StringField = &quot;Test&quot;;</div>
+<div class="line">           FloatField = 2.0f;</div>
+<div class="line">           BoolField = false;</div>
+<div class="line">           Str.A = 15;</div>
+<div class="line">           Str.B = 20;</div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md5176"></a>
+Example 3: Measure execution time to create 5000 simple cubes</h3>
+<div class="fragment"><div class="line">csharp</div>
+<div class="line">   string[] markers =</div>
+<div class="line">   {</div>
+<div class="line">       &quot;Instantiate&quot;,</div>
+<div class="line">       &quot;Instantiate.Copy&quot;,</div>
+<div class="line">       &quot;Instantiate.Produce&quot;,</div>
+<div class="line">       &quot;Instantiate.Awake&quot;</div>
+<div class="line">   };</div>
+<div class="line"> </div>
+<div class="line">   [Test, Performance]</div>
+<div class="line">   public void Instantiate_CreateCubes()</div>
+<div class="line">   {</div>
+<div class="line">       using (Measure.ProfilerMarkers(markers))</div>
+<div class="line">       {</div>
+<div class="line">           using(Measure.Scope())</div>
+<div class="line">           {</div>
+<div class="line">               var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);</div>
+<div class="line">               for (var i = 0; i &lt; 5000; i++)</div>
+<div class="line">               {</div>
+<div class="line">                   UnityEngine.Object.Instantiate(cube);</div>
+<div class="line">               }</div>
+<div class="line">           }</div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md5177"></a>
+Example 4: Custom measurement to capture total allocated and reserved memory</h3>
+<div class="fragment"><div class="line">csharp</div>
+<div class="line">   [Test, Performance, Version(&quot;1&quot;)]</div>
+<div class="line">   public void Measure_Empty()</div>
+<div class="line">   {</div>
+<div class="line">       var allocated = new SampleGroup(&quot;TotalAllocatedMemory&quot;, SampleUnit.Megabyte);</div>
+<div class="line">       var reserved = new SampleGroup(&quot;TotalReservedMemory&quot;, SampleUnit.Megabyte);</div>
+<div class="line">       Measure.Custom(allocated, UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong() / 1048576f);</div>
+<div class="line">       Measure.Custom(reserved, UnityEngine.Profiling.Profiler.GetTotalReservedMemoryLong() / 1048576f);</div>
+<div class="line">   }</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Optimize for fixed-timestep or physics-based scenarios</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2timing-optimize-fixed-update.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Optimize for fixed-timestep or physics-based scenarios </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2325"></a></p>
+<p>If you are working with the physics system or using <span class="tt">FixedUpdate</span> to control your game in a scenario where a small amount of input latency is acceptable (for example, a few frames), the simplest approach is to set the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2timing-select-mode.html">input system update mode</a> to <b>Process Events in Fixed Update</b>. This means your input code in <span class="tt">FixedUpdate</span> will operate as expected.</p>
+<p>To get the minimum possible latency from the Input System and minimize lag, set the input system update mode to <b>Process Events in Dynamic Update</b>. However in doing this, you must understand how to avoid the problems which can arise when using this strategy. Although it might seem incorrect if you have code in <span class="tt">FixedUpdate</span>, for most cases, this approach minimizes lag compared with processing events in Fixed Update. The reasons for this are explained in detail on this page. Having a good understanding of how input is processed in each mode allows you to make your own decision about how best to process input for your particular project.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2326"></a>
+Input in Fixed Update mode</h1>
+<p>When you set the input system update mode to <b>Process Events in Fixed Update</b>, input events are processed in groups according to whether their timestamp falls within the current fixed time step. There might be none, one, or multiple <span class="tt">FixedUpdate</span> calls processed per frame depending on how fast the game's frame rate is updating compared with the fixed update time step period.</p>
+<p>If your game’s frame rate is running faster than the fixed time step period, you will have either zero or one <span class="tt">FixedUpdate</span> call per frame, depending whether the previous fixed time step has completed or not. If your game’s frame rate is running slower than the fixed time step period, you will have one or more <span class="tt">FixedUpdate</span> calls per frame - as many as are required to catch up with the number of completed fixed time step periods that have elapsed.</p>
+<p>You can learn more about how the player loop processes fixed update time steps in <a href="https://docs.unity3d.com/Manual/TimeFrameManagement.html">Time and Framerate Management</a>.</p>
+<p>It’s important to understand that Fixed Update provides a simulation of code running at fixed time deltas (the fixed time step), however it does not actually run at regular time intervals. Instead, at the start of each frame loop, <a class="el" href="namespace_unity.html">Unity</a> will run as many Fixed Update steps as is needed to catch-up to the current frame’s time. If a whole fixed time step hasn't completed yet, no Fixed Update steps occur. If more than one whole fixed time step has elapsed, more than one Fixed Update step occurs. This means that on each frame, the <span class="tt">FixedUpdate</span> method can be called a variable number of times (or even not at all) depending on how much time has elapsed since the last frame and the value set for the Fixed Update time step.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2327"></a>
+When the frame rate runs faster than fixed time step duration</h2>
+<p><img src="./Images/TimingFastFPS.png" alt="image alt text" class="inline"/></p>
+<p>This diagram shows the frame rate running faster than the fixed update time step rate. Time progresses to the right, each frame is numbered, and shows its <span class="tt">Update</span> call at the start of the frame in orange. The fixed time step here is 0.02 seconds (50 times per second), and the game is running faster, at about 80 frames per second. In this situation there are some frames with one fixed update call, and some frames with none, depending on whether a full fixed update time step has completed by the time the frame starts. The fixed time step periods are marked with letters A, B, C, D, E, and the frames in which their corresponding fixed update calls occur are marked in green. The fixed update call for time step A occurs at the start of frame 4, the FixedUpdate call for time step B occurs at the start of frame 7, and so on.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2328"></a>
+When the frame rate runs slower than the fixed time step duration</h2>
+<p><img src="./Images/TimingSlowFPS.png" alt="image alt text" class="inline"/></p>
+<p>This diagram shows the opposite scenario, when the fixed update cycle is running faster than the frame rate. The fixed time step here is 0.01 seconds (100 times per second), and the game frame rate is running slower, at about 40 frames per second. In this situation most frames have multiple fixed update calls before each update call, the number depending on how many whole update time steps have elapsed since the previous frame. The fixed update time step periods are marked with letters A, B, C, and so on, and frames in which their corresponding fixed update calls occur are marked in green. The fixed update call for time step A and B occurs at the start of frame 2, the fixed update call for frames C, D &amp; E occur at the start of frame 3, and so on.</p>
+<p>In both types of situation, whether the frame rate is running either faster or slower than the fixed time step, the start of the frame usually occurs somewhere part-way through a fixed time step interval. This means a portion of the most recent fixed time step period occurs before the frame, and some during the frame. Partially elapsed fixed time step periods like this aren't processed until the frame after they have fully elapsed.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2329"></a>
+Implications for input lag in fixed time step mode</h1>
+<p>Because input that occurs during partially elapsed time steps isn't processed until the frame after the time step has fully completed, this has implications for increased input lag in fixed time step mode. There's almost always some amount of unprocessed time left between the end of the last fixed time step, and the start of the next frame. This means it's possible for input events to occur within that unprocessed time.</p>
+<p>An example of an input event occurring during such unprocessed time is shown in this diagram:</p>
+<p><img src="./Images/TimingUnprocessedTime.png" alt="image alt text" class="inline"/></p>
+<p>This diagram shows the frame rate running faster than the fixed update time step rate. Each frame is numbered (1 to 7), and shows its <span class="tt">Update</span> call at the start of the frame in orange. The fixed time step here is 0.02s (50 steps per second), and the game is running faster, at about 80 frames per second. In this situation there are some frames with one fixed update call, and some frames with none.</p>
+<p>The diagram shows an input event (shown as a blue dot) that occurs during some unprocessed time during frame 3. Although the event occurs during frame 3, it's not processed in the fixed update input processing step at the start of frame 4 because it didn't occur during fixed time step (<b>A</b>). Instead, it occurred during fixed time step (<b>B</b>), which is processed at the start of frame 7 - the first frame to occur after fixed time step (<b>B</b>) has completely elapsed.</p>
+<p>This has the counterintuitive effect that the processing of input on frame 4 actually ignores some input that has already occurred on frame 3, because it's only processing events that occurred in the last complete fixed time step: (<b>A</b>).</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2330"></a>
+Minimize latency when using fixed update code</h1>
+<p>To minimize input latency in input code in <span class="tt">FixedUpdate</span> calls, set the input system update mode to <b>Process Events in Dynamic Update</b>, which eliminates the problem of unprocessed time described previously. You can then use an event-driven or polling technique to read your input without missing events that occurred after the last fixed timestep but before the current frame.</p>
+<p>However, the <b>Process Events in Dynamic Update</b> mode might introduce the problem of missed or duplicate discrete events, such as attempting to read whether a button was pressed in a given frame. If you use this strategy, you must understand how to <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2timing-missed-duplicate-events.html">avoid missed or duplicate events</a> in mixed timing scenarios requiring fixed and dynamic input.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2331"></a>
+Event-driven input with fixed update code</h2>
+<p>For event-driven input, where the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input.html">Player Input component</a> calls events in your code, you should store the input values in variables which you can then read in your <span class="tt">FixedUpdate</span> call. For example:</p>
+<div class="fragment"><div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.InputSystem;</div>
+<div class="line"> </div>
+<div class="line">public class ExampleScript : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    Vector2 moveInputValue;</div>
+<div class="line">    Rigidbody rigidBody;</div>
+<div class="line">    public float moveForce = 10;</div>
+<div class="line"> </div>
+<div class="line">    private void Start()</div>
+<div class="line">    {</div>
+<div class="line">        rigidBody = GetComponent&lt;Rigidbody&gt;();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    public void OnMove(InputAction.CallbackContext context)</div>
+<div class="line">    {</div>
+<div class="line">        // in the event callback, we store the input value</div>
+<div class="line">        moveInputValue = context.ReadValue&lt;Vector2&gt;();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private void FixedUpdate()</div>
+<div class="line">    {</div>
+<div class="line">        // in fixed update, we use the stored value for</div>
+<div class="line">        // applying physics forces</div>
+<div class="line">        rigidBody.AddForce(moveInputValue * moveForce);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md2332"></a>
+Polling input with fixed update code</h2>
+<p>For code where you're polling input action values, you can read the values directly from <span class="tt">FixedUpdate</span>:</p>
+<div class="fragment"><div class="line">using UnityEngine;</div>
+<div class="line">using UnityEngine.InputSystem;</div>
+<div class="line"> </div>
+<div class="line">public class ExampleScript : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    InputAction moveAction;</div>
+<div class="line">    Rigidbody rigidBody;</div>
+<div class="line">    public float moveForce = 10;</div>
+<div class="line"> </div>
+<div class="line">    private void Start()</div>
+<div class="line">    {</div>
+<div class="line">        moveAction = InputSystem.actions.FindAction(&quot;move&quot;);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    private void FixedUpdate()</div>
+<div class="line">    {</div>
+<div class="line">        Vector2 moveInputValue = moveAction.ReadValue&lt;Vector2&gt;();</div>
+<div class="line">        rigidBody.AddForce(moveInputValue * moveForce);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

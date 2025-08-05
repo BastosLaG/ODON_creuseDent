@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Processor specific SIMD extensions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-burst-intrinsics-processors.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Processor specific SIMD extensions </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md842"></a></p>
+<p><a class="el" href="namespace_burst.html">Burst</a> exposes all Intel SIMD intrinsics from SSE up to and including AVX2 in the <a href="xref:Unity.Burst.Intrinsics.X86"><span class="tt">Unity.Burst.Intrinsics.X86</span></a> family of nested classes. The <a href="xref:Unity.Burst.Intrinsics.Arm.Neon"><span class="tt">Unity.Burst.Intrinsics.Arm.Neon</span></a> class provides intrinsics for Arm Neon's Armv7, Armv8, and Armv8.2 (RDMA, crypto, dotprod).</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md843"></a>
+Organizing your code</h1>
+<p>You should statically import these intrinsics because they contain plain static functions:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse.html">Sse</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse2.html">Sse2</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse3.html">Sse3</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_ssse3.html">Ssse3</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse4__1.html">Sse4_1</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse4__2.html">Sse4_2</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_popcnt.html">Popcnt</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_avx.html">Avx</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_avx2.html">Avx2</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_fma.html">Fma</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_f16_c.html">F16C</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_bmi1.html">Bmi1</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">X86</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_bmi2.html">Bmi2</a>;</div>
+<div class="line"><span class="keyword">using </span>static <a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_intrinsics.html">Intrinsics</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_arm.html">Arm</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_intrinsics_1_1_arm_1_1_neon.html">Neon</a>;</div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_arm_1_1_neon_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_arm_1_1_neon.html">Unity.Burst.Intrinsics.Arm.Neon</a></div><div class="ttdoc">Neon intrinsics.</div><div class="ttdef"><b>Definition</b> NEON.cs:18</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_arm_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_arm.html">Unity.Burst.Intrinsics.Arm</a></div><div class="ttdef"><b>Definition</b> NEON.cs:10</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_avx2_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_avx2.html">Unity.Burst.Intrinsics.X86.Avx2</a></div><div class="ttdef"><b>Definition</b> Avx2.cs:12</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_avx_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_avx.html">Unity.Burst.Intrinsics.X86.Avx</a></div><div class="ttdef"><b>Definition</b> Avx.cs:12</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_bmi1_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_bmi1.html">Unity.Burst.Intrinsics.X86.Bmi1</a></div><div class="ttdef"><b>Definition</b> Bmi1.cs:11</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_bmi2_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_bmi2.html">Unity.Burst.Intrinsics.X86.Bmi2</a></div><div class="ttdef"><b>Definition</b> Bmi2.cs:11</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_f16_c_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_f16_c.html">Unity.Burst.Intrinsics.X86.F16C</a></div><div class="ttdef"><b>Definition</b> F16C.cs:11</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_fma_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_fma.html">Unity.Burst.Intrinsics.X86.Fma</a></div><div class="ttdef"><b>Definition</b> Fma.cs:13</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_popcnt_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_popcnt.html">Unity.Burst.Intrinsics.X86.Popcnt</a></div><div class="ttdef"><b>Definition</b> Popcnt.cs:11</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse2_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse2.html">Unity.Burst.Intrinsics.X86.Sse2</a></div><div class="ttdef"><b>Definition</b> Sse2.cs:12</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse3_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse3.html">Unity.Burst.Intrinsics.X86.Sse3</a></div><div class="ttdef"><b>Definition</b> Sse3.cs:12</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse4__1_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse4__1.html">Unity.Burst.Intrinsics.X86.Sse4_1</a></div><div class="ttdef"><b>Definition</b> Sse4_1.cs:12</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse4__2_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse4__2.html">Unity.Burst.Intrinsics.X86.Sse4_2</a></div><div class="ttdef"><b>Definition</b> Sse4_2.cs:13</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse.html">Unity.Burst.Intrinsics.X86.Sse</a></div><div class="ttdef"><b>Definition</b> Sse.cs:12</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_ssse3_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_ssse3.html">Unity.Burst.Intrinsics.X86.Ssse3</a></div><div class="ttdef"><b>Definition</b> Ssse3.cs:12</div></div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_intrinsics_1_1_x86_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_intrinsics_1_1_x86.html">Unity.Burst.Intrinsics.X86</a></div><div class="ttdef"><b>Definition</b> Avx.cs:7</div></div>
+<div class="ttc" id="anamespace_unity_1_1_burst_1_1_intrinsics_html"><div class="ttname"><a href="namespace_unity_1_1_burst_1_1_intrinsics.html">Unity.Burst.Intrinsics</a></div><div class="ttdef"><b>Definition</b> NEON.cs:5</div></div>
+<div class="ttc" id="anamespace_unity_1_1_burst_html"><div class="ttname"><a href="namespace_unity_1_1_burst.html">Unity.Burst</a></div><div class="ttdef"><b>Definition</b> BurstDisassembler.Core.ARM64.info.cs:5</div></div>
+<div class="ttc" id="anamespace_unity_html"><div class="ttname"><a href="namespace_unity.html">Unity</a></div><div class="ttdef"><b>Definition</b> ConverterItemDescriptor.cs:4</div></div>
+</div><!-- fragment --><p><a class="el" href="namespace_burst.html">Burst</a> CPU intrinsics are translated into specific CPU instructions. However, <a class="el" href="namespace_burst.html">Burst</a> has a special compiler pass which makes sure that your CPU target set in <span class="tt"><a class="el" href="namespace_burst.html">Burst</a> AOT Settings</span> is compatible with the intrinsics used in your code. This ensures you don't try to call unsupported instructions (for example, AArch64 Neon on an Intel CPU or AVX2 instructions on an SSE4 CPU), which causes the process to abort with an "Invalid instruction" exception. A compiler error is generated if the check fails.</p>
+<p>However, if you want to provide several code paths with different CPU targets, or to make sure your intrinsics code is compatible with any target CPU, you can wrap your intrinsics code with the following property checks:</p>
+<ul>
+<li><a href="xref:Unity.Burst.Intrinsics.Arm.Neon.IsNeonSupported">IsNeonSupported</a></li>
+<li><a href="xref:Unity.Burst.Intrinsics.Arm.Neon.IsNeonArmv82FeaturesSupported">IsNeonArmv82FeaturesSupported</a></li>
+<li><a href="xref:Unity.Burst.Intrinsics.Arm.Neon.IsNeonCryptoSupported">IsNeonCryptoSupported</a></li>
+<li><a href="xref:Unity.Burst.Intrinsics.Arm.Neon.IsNeonDotProdSupported">IsNeonDotProdSupported</a></li>
+<li><a href="xref:Unity.Burst.Intrinsics.Arm.Neon.IsNeonRDMASupported">IsNeonRDMASupported</a></li>
+</ul>
+<p>For example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keywordflow">if</span> (IsAvx2Supported)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Code path for AVX2 instructions</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> <span class="keywordflow">if</span> (IsSse42Supported)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Code path for SSE4.2 instructions</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> <span class="keywordflow">if</span> (IsNeonArmv82FeaturesSupported)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Code path for Armv8.2 Neon instructions</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> <span class="keywordflow">if</span> (IsNeonSupported)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Code path for Arm Neon instructions</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Fallback path for everything else</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>These branches don't affect performance. <a class="el" href="namespace_burst.html">Burst</a> evaluates the <span class="tt">IsXXXSupported</span> properties at compile-time and eliminates unsupported branches as dead code, while the active branch stays there without the if check. Later feature levels implicitly include the previous ones, so you should organize tests from most recent to oldest. <a class="el" href="namespace_burst.html">Burst</a> emits compile-time errors if you've used intrinsics that aren't part of the current compilation target. <a class="el" href="namespace_burst.html">Burst</a> doesn't bracket these with a feature level test, which helps you to narrow in on what to put inside a feature test.</p>
+<p>If you run your application in .NET, <a class="el" href="namespace_mono.html">Mono</a> or IL2CPP without <a class="el" href="namespace_burst.html">Burst</a> enabled, all the <span class="tt">IsXXXSupported</span> properties return <span class="tt">false</span>. However, if you skip the test you can still run a reference version of most intrinsics in <a class="el" href="namespace_mono.html">Mono</a> (exceptions listed below), which is helpful if you need to use the managed debugger. Reference implementations are slow and only intended for managed debugging.</p>
+<p>&gt;[!IMPORTANT] &gt;There isn't a reference managed implementation of Arm Neon intrinsics. This means that you can't use the technique mentioned in the previous paragraph to step through the intrinsics in <a class="el" href="namespace_mono.html">Mono</a>. FMA intrinsics that operate on doubles don't have a software fallback because of the inherent complexity of emulating fused 64-bit floating point math.</p>
+<p>Intrinsics use the types <span class="tt">v64</span> (Arm only), <span class="tt">v128</span> and <span class="tt">v256</span>, which represent a 64-bit, 128-bit or 256-bit vector respectively. For example, given a <span class="tt">NativeArray&lt;float&gt;</span> and a <span class="tt">Lut</span> lookup table of v128 shuffle masks, a code fragment like this performs lane left packing, demonstrating the use of vector load/store reinterpretation and direct intrinsic calls:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">v128 a = Input.ReinterpretLoad&lt;v128&gt;(i);</div>
+<div class="line">v128 mask = cmplt_ps(a, Limit);</div>
+<div class="line"><span class="keywordtype">int</span> m = movemask_ps(a);</div>
+<div class="line">v128 packed = shuffle_epi8(a, Lut[m]);</div>
+<div class="line">Output.ReinterpretStore(outputIndex, packed);</div>
+<div class="line">outputIndex += popcnt_u32((uint)m);</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md844"></a>
+Intel intrinsics</h1>
+<p>The Intel intrinsics API mirrors the <a href="https://software.intel.com/sites/landingpage/IntrinsicsGuide/">C/C++ Intel instrinsics API</a>, with the following differences:</p>
+<ul>
+<li>All 128-bit vector types (<span class="tt">__m128</span>, <span class="tt">__m128i</span> and <span class="tt">__m128d</span>) are collapsed into <span class="tt">v128</span></li>
+<li>All 256-bit vector types (<span class="tt">__m256</span>, <span class="tt">__m256i</span> and <span class="tt">__m256d</span>) are collapsed into <span class="tt">v256</span></li>
+<li>All <span class="tt">_mm</span> prefixes on instructions and macros are dropped, because C# has namespaces</li>
+<li>All bitfield constants (for example, rounding mode selection) are replaced with C# bitflag enum values</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md845"></a>
+Arm Neon intrinsics</h1>
+<p>The Arm Neon intrinsics API mirrors the <a href="https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics">Arm C Language Extensions</a>, with the following differences:</p>
+<ul>
+<li>All vector types are collapsed into <span class="tt">v64</span> and <span class="tt">v128</span>, becoming typeless. This means that the vector type must contain expected element types and count when calling an API.</li>
+<li>The <span class="tt">*x2</span>, <span class="tt">*x3</span>, <span class="tt">*x4</span> vector types aren't supported.</li>
+<li><span class="tt">poly*</span> types aren't supported.</li>
+<li><span class="tt">reinterpret*</span> functions aren't supported (they aren't needed because of the usage of <span class="tt">v64</span> and <span class="tt">v128</span> vector types).</li>
+<li>Intrinsic usage is only supported on Armv8 (64-bit) hardware.</li>
+</ul>
+<p><a class="el" href="namespace_burst.html">Burst</a>'s CPU intrinsics use typeless vectors. Because of this, <a class="el" href="namespace_burst.html">Burst</a> doesn't perform any type checks. For example, if you call an intrinsic which processes 4 ints on a vector that was initialized with 4 floats, then there's no compiler error. The vector types have fields that represent every element type, in a union-like struct, which gives you flexibility to use these intrinsics in a way that best fits your code.</p>
+<p>Arm Neon C intrinsics (ACLE) use typed vectors, for example int32x4_t, and has special APIs (for example, <span class="tt">reinterpret_\*</span>) to convert to a vector of another element type. <a class="el" href="namespace_burst.html">Burst</a> CPU intrinsics vectors are typeless, so these APIs are not needed. The following APIs provide the equivalent functionality:</p>
+<ul>
+<li><a href="xref:Unity.Burst.Intrinsics.v64">v64 (Arm Neon only)</a></li>
+<li><a href="xref:Unity.Burst.Intrinsics.v128">v128</a></li>
+<li><a href="xref:Unity.Burst.Intrinsics.v256">v256</a></li>
+</ul>
+<p>For a categorized index of Arm Neon intrinsics supported in <a class="el" href="namespace_burst.html">Burst</a>, refer to the <a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-burst-intrinsics-neon.html">Arm Neon intrinsics reference</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md846"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-burst-intrinsics-neon.html">Arm Neon intrinsics reference</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

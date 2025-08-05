@@ -1,0 +1,32 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable =
+[
+    [ "TeleportTrigger", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0b3f5787438abfc105eff32e40eb6cc7", [
+      [ "OnSelectExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0b3f5787438abfc105eff32e40eb6cc7a4b01db796020cc95a086ebff70f6b942", null ],
+      [ "OnSelectEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0b3f5787438abfc105eff32e40eb6cc7aac5ff35b5261e454a8c5c55936cda459", null ],
+      [ "OnActivated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0b3f5787438abfc105eff32e40eb6cc7a17487150ee5d2cb9f969b9265c59ac88", null ],
+      [ "OnDeactivated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0b3f5787438abfc105eff32e40eb6cc7aede74da26ead596e9a2fee521704fb5a", null ],
+      [ "OnSelectExit", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0b3f5787438abfc105eff32e40eb6cc7a5fb1cab5f0a5b37010695885d63a761b", null ],
+      [ "OnSelectEnter", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0b3f5787438abfc105eff32e40eb6cc7abf2a24fe38380ac2f7e1c624877aeccb", null ],
+      [ "OnActivate", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0b3f5787438abfc105eff32e40eb6cc7a7d059bcec4a191c35b58bc706bddf9bd", null ],
+      [ "OnDeactivate", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0b3f5787438abfc105eff32e40eb6cc7a8c4ccd9856d3bdef773fe70c42132319", null ]
+    ] ],
+    [ "Awake", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a184569a02d5de494bb12aa35b97a2e05", null ],
+    [ "GenerateTeleportRequest", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#abfff093cd96c5f12f715555dda44f433", null ],
+    [ "GenerateTeleportRequest", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0304d61ae867163c7e0a3a703596e876", null ],
+    [ "GetReticleDirection", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#aefc78eac3a3b2ca6dc187f9f733f5589", null ],
+    [ "IsSelectableBy", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#ae2cb8c995f64b537e031545cb786c4c8", null ],
+    [ "OnActivated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0041674eea12f2f81167d9eae93b3851", null ],
+    [ "OnDeactivated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#adb7353f8b3c01438af8cac676d3f9898", null ],
+    [ "OnSelectEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#ade6ee09029e9081af86d6306e59be16f", null ],
+    [ "OnSelectExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a0329cdf8b5e162d724d59dd56c7f4d77", null ],
+    [ "ProcessInteractable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#af8090d0efdcaee22177c20259f614968", null ],
+    [ "Reset", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#ae6876205b195a3110ccae5c3b851bde9", null ],
+    [ "SendTeleportRequest", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a3cb9da8f182d48d13744c0a49c9374ee", null ],
+    [ "filterSelectionByHitNormal", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a4e87148f381abd3535c6515d2dd2804b", null ],
+    [ "matchDirectionalInput", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a186f581136863078515e2eaa4dd56555", null ],
+    [ "matchOrientation", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#ab6061da32de20fe685b81f429a32caf4", null ],
+    [ "teleportationProvider", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a6b5ae67c14258f075038bd63868deb17", null ],
+    [ "teleporting", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a5ae4fad7d48e221ae074f520767850b2", null ],
+    [ "teleportTrigger", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#a2668521a5e7eb537bdaa34f91e25c27a", null ],
+    [ "upNormalToleranceDegrees", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_base_teleportation_interactable.html#ad5ffc09fe59aec0d276257d08c83ca1e", null ]
+];

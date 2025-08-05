@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Create an Off-mesh Link</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_create_off_mesh_link.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Create an Off-mesh Link </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md275"></a></p>
+<dl class="section important"><dt>Important</dt><dd>The OffMesh Link component is deprecated and no longer supported. The <b>Add Component</b> menu no longer contains the Off-Mesh Link component. Use the <a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_mesh_link.html">NavMesh Link component</a> instead.</dd></dl>
+<p>Off-Mesh Links are used to create paths crossing outside the walkable navigation <a href="./Glossary.md#mesh" title="The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons."><b>mesh</b></a> surface. For example, jumping over a ditch or a fence, or opening a door before walking through it, can be all described as Off-mesh links.</p>
+<p>We’re going to add an Off-Mesh Link component to describe a jump from the upper platform to the ground.</p>
+<p><img src="./Images/OffMeshLinkSetup.svg" alt="" style="pointer-events: none;" class="inline"/></p>
+<ol type="1">
+<li>First create <b>two cylinders</b>: <b>Game Object &gt; 3D Object &gt; cylinder</b>.</li>
+<li>You can scale the cylinders to <em>(0.1, 0.5, 0.1)</em> to make it easier to work with them.</li>
+<li>Move the <b>first cylinder</b> at the edge of the top platform, close to the <a href="./Glossary.md#navmesh" title="A mesh that Unity generates to approximate the walkable areas and obstacles in your environment for path finding and AI-controlled navigation."><b>NavMesh</b></a> surface.</li>
+<li>Place the <b>second cylinder</b> on the ground, close to the NavMesh, at the location where the link should land.</li>
+<li>Select the <b>first cylinder</b> cylinder and add an Off-Mesh Link component to it. Choose <b>Add Component</b> from the inspector and choose <b>Navigation &gt; OffMesh Link</b>.</li>
+<li>Assign the <b>first cylinder</b> in the <b>Start</b> field and the <b>second cylinder</b> in the <b>End</b> field.</li>
+</ol>
+<p>Now you have a functioning Off-Mesh Link set up! If the path via the off-mesh link is shorter than via walking along the NavMesh, the off-mesh link will be used.</p>
+<p>You can use any game object in the <a href="./Glossary.md#scene" title="A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces."><b>Scene</b></a> to hold the Off-Mesh link component, for example a fence <a href="./Glossary.md#prefab" title="An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene."><b>prefab</b></a> could contain the off-mesh link component. Similarly you can use any game object with a Transform as the start and end marker.</p>
+<p>The NavMesh bake process can detect and create common jump-across and drop-down links automatically. Take a look at Building Off-Mesh Links Automatically for more details.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md276"></a>
+Details</h1>
+<p><img src="./Images/OffMeshLinkDebug.svg" alt="" style="pointer-events: none;" class="inline"/></p>
+<p>If the agent does not traverse an OffMesh link make sure that both end points are connected correctly. A properly connected end point should show a circle around the access point.</p>
+<p>Another common cause is that the NavMesh Agent’s <em>Area Mask</em> does not have the OffMesh Link’s area included.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md277"></a>
+Additional resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_how_tos.html">Common use cases for NavMesh Agent, with source code.</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_off_mesh_link.html">Full description of all the legacy Off-Mesh Link properties.</a></li>
+<li><a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.OffMeshLink.html" title="Full description of the legacy Off-Mesh Link scripting API.">Off-Mesh Link (deprecated) scripting reference</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

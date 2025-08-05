@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Scene Color Node</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_scene-_color-_node.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Scene Color Node </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4288"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4289"></a>
+Description</h1>
+<p>Provides access to the current <b>Camera</b>'s color buffer using input <b>UV</b>, which is expected to be normalized screen coordinates.</p>
+<p>The behavior of the Scene Color node isn't defined globally. The executed HLSL code for the Scene Color node is defined per <b>Render Pipeline</b>, and different <b>Render Pipelines</b> can produce different results. Custom <b>Render Pipelines</b> that wish to support the Scene Color node need to explicitly define the behavior for it. If the behavior is undefined, the Scene Color node returns 0 (black).</p>
+<p>In the <b>Universal Render Pipeline</b> the Scene Color node returns the value of the <b>Camera Opaque Texture</b>. Refer to the <b>Universal Render Pipeline</b> for more documentation on this feature. The contents of this texture are only available for <b>Transparent</b> objects. Set the <b>Surface Type</b> dropdown on the <b>Material Options</b> panel of the Master Node to <b>Transparent</b> to receive the correct values from this node.</p>
+<p>&gt;[!NOTE] &gt;You can only use the Scene Color node in the <b>Fragment</b> <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_shader-_stage.html">Shader Stage</a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md4290"></a>
+Supported Unity render pipelines</h3>
+<p>The following table indicates which render pipelines support the Scene Color node. When used with unsupported render pipelines, the Scene Color node returns 0 (black).</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Pipeline  </th><th class="markdownTableHeadLeft">Supported  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Built-in Render Pipeline  </td><td class="markdownTableBodyLeft">No  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Universal Render Pipeline  </td><td class="markdownTableBodyLeft">Yes  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">High Definition Render Pipeline  </td><td class="markdownTableBodyLeft">Yes  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4291"></a>
+Ports</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name  </th><th class="markdownTableHeadLeft">Direction  </th><th class="markdownTableHeadLeft">Type  </th><th class="markdownTableHeadLeft">Binding  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">UV  </td><td class="markdownTableBodyLeft">Input  </td><td class="markdownTableBodyLeft">Vector 4  </td><td class="markdownTableBodyLeft">Screen Position  </td><td class="markdownTableBodyLeft">Normalized screen coordinates  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Out  </td><td class="markdownTableBodyLeft">Output  </td><td class="markdownTableBodyLeft">Vector 3  </td><td class="markdownTableBodyLeft">None  </td><td class="markdownTableBodyLeft">Output value  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4292"></a>
+Generated Code Example</h1>
+<p>The following example code represents one possible outcome of this node.</p>
+<div class="fragment"><div class="line">void Unity_SceneColor_float(float4 UV, out float3 Out)</div>
+<div class="line">{</div>
+<div class="line">    Out = SHADERGRAPH_SAMPLE_SCENE_COLOR(UV);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

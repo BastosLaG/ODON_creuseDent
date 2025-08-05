@@ -1,0 +1,6 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_primitiv72c86a4d35b1465877955bb349b36021 =
+[
+    [ "IsNearlyEqual", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_primitiv72c86a4d35b1465877955bb349b36021.html#aa92207fb8f4cec615b4914a85b738ba3", null ],
+    [ "Lerp", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_primitiv72c86a4d35b1465877955bb349b36021.html#a1aae1ae92cc5905330eecce57a890865", null ],
+    [ "angleEqualityThreshold", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_utilities_1_1_tweenables_1_1_primitiv72c86a4d35b1465877955bb349b36021.html#ad6e18132843f751f04315182ce956f26", null ]
+];

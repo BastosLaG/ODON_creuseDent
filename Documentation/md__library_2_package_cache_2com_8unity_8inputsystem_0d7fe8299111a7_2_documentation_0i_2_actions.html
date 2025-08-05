@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Actions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Actions </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md1946"></a>
+autotoc_md1946</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1947"></a>
+uid: input-system-actions</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1948"></a>
+Actions</h1>
+<p><b>Actions</b> are an important concept in the Input System. They allow you to separate the purpose of an input from the device controls which perform that input. Actions allow you to associate the purpose and device controls together in a flexible way.</p>
+<p>For example, the purpose of an input in a game might be to make the player's character move around. The device control associated with that action might be the motion of the left gamepad stick.</p>
+<p>The association between an Action and the device controls which perform that input is a <b>binding</b>, and you can set up bindings in the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions editor</a>. When you use Actions in your code, you do not need to refer to specific devices because the binding defines which device's controls are used to perform the action.</p>
+<p>To use actions in your code, you must use the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions editor</a> to establish the mapping between the Action and one or more device controls. For example in this screenshot, the "Move" action is displayed, showing its bindings the left gamepad stick, and the keyboard's arrow keys.</p>
+<p><img src="Images/ActionsBinding.png" alt="Actions Bindings" class="inline"/><br  />
+ <em>The Actions panel of the Input Actions Editor in Project Settings</em></p>
+<p>You can then get a reference to this action in your code, and check its value, or attach a callback method to be notified when it is performed. See the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_workflow-_actions.html">Actions Workflow page</a> for a simple example script demonstrating this.</p>
+<p>Actions also make it simpler to create a system that lets your players <a href="ActionBindings.md#interactive-rebinding">customize their bindings at runtime</a>, which is a common requirement for games.</p>
+<p>&gt;<b>Notes:</b> </p><blockquote class="doxtable">
+<ul>
+<li>Actions are a runtime only feature. You can't use them in <a href="https://docs.unity3d.com/ScriptReference/EditorWindow.html">Editor window code</a>.</li>
+<li>You can read input without using Actions and Bindings by directly reading specific device controls. This is less flexible, but can be quicker to implement for certain situations. Read more about <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_workflow-_direct.html">directly reading devices from script</a>.</li>
+<li>Although you can reorder actions in this window, the ordering is for visual convenience only, and does not affect the order in which the actions are triggered in your code. If multiple actions are performed in the same frame, the order in which they are reported by the input system is undefined. To avoid problems, you should not write code that assumes they will be reported in a particular order. <br  />
+&#160; </li>
+</ul>
+</blockquote>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1949"></a>
+Overview</h2>
+<p>When scripting with Actions in the Input System, there are number of important API you can use, which are described here:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">API name  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputSystem.html"><span class="tt">InputSystem.actions</span></a>  </td><td class="markdownTableBodyNone">A reference to the set of actions assigned as the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_project_wide_actions.html">project-wide Actions</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputActionMap.html"><span class="tt">InputActionMap</span></a>  </td><td class="markdownTableBodyNone">A named collection of Actions. The API equivalent to an entry in the "Action Maps" column of the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions editor</a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputAction.html"><span class="tt">InputAction</span></a>  </td><td class="markdownTableBodyNone">A named Action that can return the current value of the controls that it is bound to, or can trigger callbacks in response to input. The API equivalent to an entry in the "Actions" column of the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions editor</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.InputBinding.html"><span class="tt">InputBinding</span></a>  </td><td class="markdownTableBodyNone">The relationship between an Action and the specific device controls for which it receives input. For more information about Bindings and how to use them, see <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_action_bindings.html">Action Bindings</a>.  </td></tr>
+</table>
+<p>Each Action has a name (<a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_name"><span class="tt">InputAction.name</span></a>), which must be unique within the Action Map that the Action belongs to, if any (see <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_actionMap"><span class="tt">InputAction.actionMap</span></a>). Each Action also has a unique ID (<a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_id"><span class="tt">InputAction.id</span></a>), which you can use to reference the Action. The ID remains the same even if you rename the Action.</p>
+<p>Each Action Map has a name (<a href="../api/UnityEngine.InputSystem.InputActionMap.html#UnityEngine_InputSystem_InputActionMap_name"><span class="tt">InputActionMap.name</span></a>), which must also be unique with respect to the other Action Maps present, if any. Each Action Map also has a unique ID (<a href="../api/UnityEngine.InputSystem.InputActionMap.html#UnityEngine_InputSystem_InputActionMap_id"><span class="tt">InputActionMap.id</span></a>), which you can use to reference the Action Map. The ID remains the same even if you rename the Action Map.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1950"></a>
+Creating Actions</h2>
+<p>The simplest way to create actions is to use the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions editor</a> in the Project Settings window. This is the primary recommended workflow and suitable for most scenarios.</p>
+<p>However, because the input system API is very open, there are many other ways to create actions which may suit less common scenarios. For example, by loading actions from JSON data, or creating actions entirely in code.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1951"></a>
+Creating Actions using the Action editor</h3>
+<p>For information on how to create and edit Input Actions in the editor, see the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions editor</a>. This is the recommended workflow if you want to organise all your input actions and bindings in one place, which applies across the whole of your project. This often the case for most types of game or app.</p>
+<p><img src="Images/ProjectSettingsInputActionsSimpleShot.png" alt="Action Editor Window" class="inline"/> <em>The Input Actions Editor in the Project Settings window</em></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1952"></a>
+Other ways to create Actions</h1>
+<p>The simplest way to create actions is to use the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Input Actions editor</a> to configure a set of actions in an asset, as described above. However, because the Input System package API is open and flexible, you can create actions using alternative techniques. These alternatives might be more suitable if you want to customize your project beyond the standard workflow.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1953"></a>
+Creating Actions by declaring them in MonoBehaviours</h3>
+<p>As an alternative workflow, you can declare individual <a href="../api/UnityEngine.InputSystem.InputAction.html">Input Action</a> and <a href="../api/UnityEngine.InputSystem.InputActionMap.html">Input Action Maps</a> as fields directly inside <span class="tt">MonoBehaviour</span> components.</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>ExampleScript : MonoBehaviour</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a> move;</div>
+<div class="line">    <span class="keyword">public</span> <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a> jump;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_html"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action.html">UnityEngine.InputSystem.InputAction</a></div><div class="ttdoc">A named input signal that can flexibly decide which input data to tap.</div><div class="ttdef"><b>Definition</b> InputAction.cs:169</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_input_system_html"><div class="ttname"><a href="namespace_unity_engine_1_1_input_system.html">UnityEngine.InputSystem</a></div><div class="ttdef"><b>Definition</b> AxisComposite.cs:14</div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition</b> HandProcessor.cs:5</div></div>
+</div><!-- fragment --><p>The result is similar to using an Actions defined in the Input Actions editor, except the Actions are defined in the GameObject's properties and saved as Scene or Prefab data, instead of in a dedicated Asset.</p>
+<p>When you embed actions like this, by defining serialized InputAction fields in a MonoBehaviour, the GameObject's Inspector window displays an interface similar to the Actions column of the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_actions_editor.html">Actions Editor</a>, which allows you to set up the bindings for those actions. For example:</p>
+<p><img src="Images/Workflow-EmbeddedActionsInspector.png" alt="MyBehavior Inspector" class="inline"/></p>
+<ul>
+<li>To add or remove Actions or Bindings, click the Add (+) or Remove (-) icon in the header.</li>
+<li>To edit Bindings, double-click them.<br  />
+</li>
+<li>To edit Actions, double-click them in an Action Map, or click the gear icon on individual Action properties.<br  />
+</li>
+<li>You can also right-click entries to bring up a context menu, and you can drag them. Hold the Alt key and drag an entry to duplicate it.</li>
+</ul>
+<p>Unlike the project-wide actions in the Project Settings window, you must manually enable and disable Actions and Action Maps that are embedded in MonoBehaviour components.</p>
+<p>When you use this workflow, the serialised action configurations are stored with the parent GameObject as part of the scene, opposite to being serialised with an Action Asset. This can be useful if you want to bundle the control bindings and behaviour together in a single monobehaviour or prefab, so it can be distributed together. However, this can also make it harder to organize your full set of control bindings if they are distributed across multiple prefabs or scenes.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md1954"></a>
+Loading Actions from JSON</h3>
+<p>You can load Actions as JSON in the form of a set of Action Maps or as a full <a href="../api/UnityEngine.InputSystem.InputActionAsset.html"><span class="tt">InputActionAsset</span></a>. This also works at runtime in the Player.</p>
+<div class="fragment"><div class="line"><span class="comment">// Load a set of action maps from JSON.</span></div>
+<div class="line">var maps = <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action_map.html">InputActionMap</a>.<a class="code hl_function" href="class_unity_engine_1_1_input_system_1_1_input_action_map.html#a7a724c1e16864a4f675fcf89732fcd6c">FromJson</a>(json);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Load an entire InputActionAsset from JSON.</span></div>
+<div class="line">var asset = <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action_asset.html">InputActionAsset</a>.<a class="code hl_function" href="class_unity_engine_1_1_input_system_1_1_input_action_asset.html#a85dffa2d7f4e53a8a2b15e1ac53d4411">FromJson</a>(json);</div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action_asset.html">UnityEngine.InputSystem.InputActionAsset</a></div><div class="ttdoc">An asset that contains action maps and control schemes.</div><div class="ttdef"><b>Definition</b> InputActionAsset.cs:75</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_asset_html_a85dffa2d7f4e53a8a2b15e1ac53d4411"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action_asset.html#a85dffa2d7f4e53a8a2b15e1ac53d4411">UnityEngine.InputSystem.InputActionAsset.FromJson</a></div><div class="ttdeci">static InputActionAsset FromJson(string json)</div><div class="ttdoc">Replace the contents of the asset with the data in the given JSON string.</div><div class="ttdef"><b>Definition</b> InputActionAsset.cs:459</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_map_html"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action_map.html">UnityEngine.InputSystem.InputActionMap</a></div><div class="ttdoc">A mechanism for collecting a series of input actions (see InputAction) and treating them as a group.</div><div class="ttdef"><b>Definition</b> InputActionMap.cs:74</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_input_system_1_1_input_action_map_html_a7a724c1e16864a4f675fcf89732fcd6c"><div class="ttname"><a href="class_unity_engine_1_1_input_system_1_1_input_action_map.html#a7a724c1e16864a4f675fcf89732fcd6c">UnityEngine.InputSystem.InputActionMap.FromJson</a></div><div class="ttdeci">static InputActionMap[] FromJson(string json)</div><div class="ttdoc">Load one or more action maps from JSON.</div><div class="ttdef"><b>Definition</b> InputActionMap.cs:1937</div></div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md1955"></a>
+Creating Actions in code</h3>
+<p>You can manually create and configure Actions entirely in code, including assigning the bindings. This also works at runtime in the Player. For example:</p>
+<div class="fragment"><div class="line"><span class="comment">// Create free-standing Actions.</span></div>
+<div class="line">var lookAction = <span class="keyword">new</span> <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a>(<span class="stringliteral">&quot;look&quot;</span>, binding: <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick&quot;</span>);</div>
+<div class="line">var moveAction = <span class="keyword">new</span> <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action.html">InputAction</a>(<span class="stringliteral">&quot;move&quot;</span>, binding: <span class="stringliteral">&quot;&lt;Gamepad&gt;/rightStick&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">lookAction.AddBinding(<span class="stringliteral">&quot;&lt;Mouse&gt;/delta&quot;</span>);</div>
+<div class="line">moveAction.AddCompositeBinding(<span class="stringliteral">&quot;Dpad&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Up&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/w&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Down&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/s&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Left&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/a&quot;</span>)</div>
+<div class="line">    .With(<span class="stringliteral">&quot;Right&quot;</span>, <span class="stringliteral">&quot;&lt;Keyboard&gt;/d&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create an Action Map with Actions.</span></div>
+<div class="line">var map = <span class="keyword">new</span> <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action_map.html">InputActionMap</a>(<span class="stringliteral">&quot;Gameplay&quot;</span>);</div>
+<div class="line">var lookAction = map.AddAction(<span class="stringliteral">&quot;look&quot;</span>);</div>
+<div class="line">lookAction.AddBinding(<span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create an Action Asset.</span></div>
+<div class="line">var asset = ScriptableObject.CreateInstance&lt;<a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action_asset.html">InputActionAsset</a>&gt;();</div>
+<div class="line">var gameplayMap = <span class="keyword">new</span> <a class="code hl_class" href="class_unity_engine_1_1_input_system_1_1_input_action_map.html">InputActionMap</a>(<span class="stringliteral">&quot;gameplay&quot;</span>);</div>
+<div class="line">asset.AddActionMap(gameplayMap);</div>
+<div class="line">var lookAction = gameplayMap.AddAction(<span class="stringliteral">&quot;look&quot;</span>, <span class="stringliteral">&quot;&lt;Gamepad&gt;/leftStick&quot;</span>);</div>
+</div><!-- fragment --><p>Any action that you create in this way during Play mode do not persist in the Input Action Asset after you exit Play mode. This means you can test your application in a realistic manner in the Editor without having to worry about inadvertently modifying the asset.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md1956"></a>
+Enabling actions</h2>
+<p>Actions have an <b>enabled</b> state, meaning you can enable or disable them to suit different situations.</p>
+<p>If you have an Action Asset assigned as <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_project_wide_actions.html">project-wide</a>, the actions it contains are enabled by default and ready to use.</p>
+<p>For actions defined elsewhere, such as in an Action Asset not assigned as project-wide, or defined your own code, they begin in a disabled state, and you must enable them before they will respond to input.</p>
+<p>You can enable actions individually, or as a group by enabling the Action Map which contains them.</p>
+<div class="fragment"><div class="line"><span class="comment">// Enable a single action.</span></div>
+<div class="line">lookAction.Enable();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Enable an en entire action map.</span></div>
+<div class="line">gameplayActions.Enable();</div>
+</div><!-- fragment --><p>When you enable an Action, the Input System resolves its bindings, unless it has done so already, or if the set of devices that the Action can use has not changed. For more details about this process, see the documentation on <a href="ActionBindings.md#binding-resolution">binding resolution</a>.</p>
+<p>You can't change certain aspects of the configuration, such Action Bindings, while an Action is enabled. To stop Actions or Action Maps from responding to input, call <a href="../api/UnityEngine.InputSystem.InputAction.html#UnityEngine_InputSystem_InputAction_Disable"><span class="tt">Disable</span></a>.</p>
+<p>While enabled, an Action actively monitors the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_controls.html">Control(s)</a> it's bound to. If a bound Control changes state, the Action processes the change. If the Control's change represents an <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_interactions.html">Interaction</a> change, the Action creates a response. All of this happens during the Input System update logic. Depending on the <a href="Settings.md#update-mode">update mode</a> selected in the input settings, this happens once every frame, once every fixed update, or manually if updates are set to manual. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

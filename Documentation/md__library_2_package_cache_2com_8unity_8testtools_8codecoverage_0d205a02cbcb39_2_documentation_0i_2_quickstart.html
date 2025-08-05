@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Quickstart - Code Coverage tutorial</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_quickstart.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Quickstart - Code Coverage tutorial </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md5739"></a></p>
+<p>The Quickstart guide will give you an insight into what Code Coverage is and how you can identify areas of your code that need more testing, even if you haven't written any automated tests. It takes about 30 minutes to complete.</p>
+<p><img src="images/quickguide/asteroids.png" alt="Code Coverage Workshop" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5740"></a>
+Tasks</h1>
+<ol type="1">
+<li>What is Code Coverage (2 min) <br  />
+</li>
+<li>Install the Code Coverage package (2 min) <br  />
+</li>
+<li>Install the Asteroids sample project (1 min) <br  />
+</li>
+<li>Enable Code Coverage (1 min) <br  />
+</li>
+<li>Understanding the game code: Shoot() function (4 min) <br  />
+</li>
+<li>Generate a Coverage report from PlayMode tests (3 min) <br  />
+</li>
+<li>Add Weapon tests to improve coverage (3 min) <br  />
+</li>
+<li>Add a test for the LaserController (4 min) <br  />
+</li>
+<li>Clear the coverage data (1 min) <br  />
+</li>
+<li>Generate a Coverage report using Coverage Recording (4 min)</li>
+</ol>
+<p><b>Note:</b> Estimated times are shown for each task to give you a better understanding of the time required. These times are rough guidelines - it is fine to take as much or as little time as needed.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5741"></a>
+1. What is Code Coverage <sub>(2 min)</sub></h1>
+<p><a href="https://en.wikipedia.org/wiki/Code_coverage">Code Coverage</a> is a measure of how much of your code has been executed. It is normally associated with automated tests, but you can gather coverage data in <a class="el" href="namespace_unity.html">Unity</a> at any time when the Editor is running.</p>
+<p>It is typically presented as a <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_how_to_interpret_results.html">report</a> that shows the percentage of the code that has been executed. For automated testing the report does not measure the quality of tests, only whether your code is executed by PlayMode and EditMode tests. It is especially useful to check that critical or high risk areas of your code are covered, because they should receive the most rigorous testing.</p>
+<p>It is much easier to accidentally introduce bugs into code that is not covered by tests, because those bugs are not detected straight away by the tests and can instead cause problems later — such as after you have published your game or app.</p>
+<p>Additionally, the Code Coverage package offers a <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_coverage_recording.html">Coverage Recording</a> feature which allows capturing coverage data on demand, in case you do not have tests in your project or doing manual testing.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5742"></a>
+2. Install the Code Coverage package <sub>(2 min)</sub></h1>
+<p><b>Note:</b> Skip this task if the package is already installed.</p>
+<p>Use the <a href="https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest">Unity Package Manager</a> to find and install the <b>Code Coverage</b> package.</p>
+<p><img src="images/install_package.png" alt="Install Code Coverage package" class="inline"/></p>
+<p>Alternatively, use the <b>Add (+)</b> dropdown and select <b>Add package from git URL...</b> or <b>Add package by name...</b> and type <span class="tt">com.unity.testtools.codecoverage</span>.</p>
+<p><img src="images/install_package_url.png" alt="Install Code Coverage package from URL" class="inline"/></p>
+<p>To verify that Code Coverage has been installed correctly, open the Code Coverage window (go to <b>Window</b> &gt; <b>Analysis</b> &gt; <b>Code Coverage</b>). If you don't see the <b>Code Coverage</b> menu item, then Code Coverage did not install correctly.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5743"></a>
+3. Install the Asteroids sample project <sub>(1 min)</sub></h1>
+<ol type="1">
+<li>In the <a href="https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest">Unity Package Manager</a> (<b>Window</b> &gt; <b>Package Manager</b>) select the <b>Code Coverage</b> package, if not already selected.</li>
+<li>Find the <b><a class="el" href="class_samples.html">Samples</a></b> section in the package details (right hand side) and select <b>Import</b> next to <b>Code Coverage Tutorial</b>.<br  />
+<br  />
+ <img src="images/quickguide/import_sample.png" alt="Import Asteroids project" class="inline"/></li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5744"></a>
+4. Enable Code Coverage <sub>(1 min)</sub></h1>
+<p>To enable Code Coverage open the <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_code_coverage_window.html">Code Coverage window</a> (go to <b>Window</b> &gt; <b>Analysis</b> &gt; <b>Code Coverage</b>) and select <b>Enable Code Coverage</b> if not already selected, to be able to generate Coverage data and reports.</p>
+<p><img src="images/using_coverage/enable_code_coverage.png" alt="Enable Code Coverage" class="inline"/></p>
+<p><b>Note:</b> Enabling Code Coverage adds some overhead to the editor and can affect the performance.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5745"></a>
+5. Understanding the game code: Shoot() function <sub>(4 min)</sub></h1>
+<ol type="1">
+<li>Go to <span class="tt">Asteroids/Scenes</span> in Project View and open the <b>Asteroids</b> scene.<br  />
+ This is located in <span class="tt">Assets/Samples/Code Coverage/&lt;version&gt;/Code Coverage Tutorial</span>.</li>
+<li>Hit <b>Play</b> and play the game for a minute or two.<br  />
+ <img src="images/quickguide/press_play.png" alt="Enter Play mode" class="inline"/> Use the arrow keys to move and the spacebar to shoot.</li>
+<li>Exit PlayMode.</li>
+<li>Open the <span class="tt">Scripts/Controllers/SpaceshipController.cs</span> script.</li>
+<li>Study the <b>Shoot</b> function. <div class="fragment"><div class="line">If Weapon is Basic, the Prefabs/Weapons/Projectile prefab is instantiated</div>
+<div class="line">If Weapon is Laser, the Prefabs/Weapons/Laser prefab is instantiated</div>
+</div><!-- fragment --></li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5746"></a>
+6. Generate a Coverage report from PlayMode tests <sub>(3 min)</sub></h1>
+<ol type="1">
+<li>Open the <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_code_coverage_window.html">Code Coverage window</a> (go to <b>Window</b> &gt; <b>Analysis</b> &gt; <b>Code Coverage</b>).<br  />
+<br  />
+ <img src="images/quickguide/coverage_window.png" alt="Code Coverage Window" class="inline"/></li>
+<li>If you see this warning select <b>Switch to debug mode</b>.<br  />
+ <img src="images/quickguide/code_optimization.png" alt="Code Optimization" class="inline"/> <a href="https://docs.unity3d.com/2020.1/Documentation/Manual/ManagedCodeDebugging.html#CodeOptimizationMode">Code Optimization</a> was introduced in <a class="el" href="namespace_unity.html">Unity</a> 2020.1; in <em>Release mode</em> the code is optimized and therefore not directly represented by the original code. Therefore, <em>Debug mode</em> is required in order to obtain accurate code coverage information.</li>
+<li>Click the <b>Included Assemblies</b> dropdown to make sure only<br  />
+ <span class="tt">Unity.TestTools.CodeCoverage.Sample.Asteroids</span> and<br  />
+ <span class="tt">Unity.TestTools.CodeCoverage.Sample.Asteroids.Tests</span> are selected.<br  />
+<br  />
+ <img src="images/quickguide/included_assemblies.png" alt="Included Assemblies" class="inline"/></li>
+<li>Make sure <b>HTML Report</b>, <b>Report History</b>, <b>Auto Generate Report</b> and <b>Auto Open Report</b> are all checked. <img src="images/quickguide/auto_generate_report.png" alt="Auto Generate Report" class="inline"/></li>
+<li>Switch to the <a href="https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html?subfolder=/manual/workflow-run-test.html">Test Runner</a> window, select the <b>PlayMode</b> tab and hit <b>Run All</b> tests.<br  />
+<br  />
+ <img src="images/quickguide/test_runner.png" alt="Run PlayMode tests" class="inline"/></li>
+<li>When the tests finish running, a file viewer window will open up containing the coverage report. Select <span class="tt">index.htm</span>.</li>
+<li>Look for the classes with low coverage, especially <b><a class="el" href="class_laser_controller.html">LaserController</a></b>, <b><a class="el" href="class_base_projectile.html">BaseProjectile</a></b> and <b><a class="el" href="class_projectile_controller.html">ProjectileController</a></b>.</li>
+</ol>
+<p>You can sort the results by <em>Line coverage</em>.</p>
+<p><img src="images/quickguide/report_tests.png" alt="Code Coverage Report" class="inline"/></p>
+<p>See also <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_how_to_interpret_results.html">How to interpret the results</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5747"></a>
+7. Add Weapon tests to improve coverage <sub>(3 min)</sub></h1>
+<ol type="1">
+<li>Open the <span class="tt">Tests/WeaponTests.cs</span> script.</li>
+<li>Uncomment all the tests (from <em>line 35</em> down to <em>line 237</em>).</li>
+<li>Back in the <b>Test Runner</b>, hit <b>Run All</b> tests again.</li>
+<li>When the tests finish running, a file viewer window will open up containing the coverage report. Select <span class="tt">index.htm</span>.</li>
+<li>Notice that now <b><a class="el" href="class_base_projectile.html">BaseProjectile</a></b> and <b><a class="el" href="class_projectile_controller.html">ProjectileController</a></b> coverage is considerably higher, but <b><a class="el" href="class_laser_controller.html">LaserController</a></b> has not improved much.</li>
+</ol>
+<p><img src="images/quickguide/report_tests_after.png" alt="Code Coverage Report" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5748"></a>
+8. Add a test for the LaserController <sub>(4 min)</sub></h1>
+<ol type="1">
+<li>Open the <span class="tt">Tests/WeaponTests.cs</span> script.</li>
+<li>Go to the **_18_LaserFiresSuccessfully** test in line 225.</li>
+<li>Uncomment and study the code.</li>
+<li>Back in the <b>Test Runner</b>, hit <b>Run All</b> tests again.</li>
+<li>When the tests finish running, a file viewer window will open up containing the coverage report. Select <span class="tt">index.htm</span>.</li>
+<li>Notice how the coverage for <b><a class="el" href="class_laser_controller.html">LaserController</a></b> has improved.<br  />
+ <img src="images/quickguide/report_laser_controller.png" alt="LaserController Coverage" class="inline"/></li>
+<li>Select the <b><a class="el" href="class_laser_controller.html">LaserController</a></b> class to enter the class view and notice that about 2/3 (65%) of the code is now covered (green).</li>
+</ol>
+<p><img src="images/quickguide/report_laser_controller_class.png" alt="LaserController Class Coverage" class="inline"/></p>
+<p>Complete the Bonus Task at the end of the tutorial to get 100% coverage!</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5749"></a>
+9. Clear the coverage data <sub>(1 min)</sub></h1>
+<ol type="1">
+<li>Open the <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_code_coverage_window.html">Code Coverage window</a> (go to <b>Window</b> &gt; <b>Analysis</b> &gt; <b>Code Coverage</b>).</li>
+<li>Select <b>Clear Results</b> and confirm.</li>
+<li>Select <b>Clear History</b> and confirm.</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5750"></a>
+10. Generate a Coverage report using Coverage Recording <sub>(4 min)</sub></h1>
+<ol type="1">
+<li>Go to <span class="tt">Asteroids/Scenes</span> in Project View and open the <b>Asteroids</b> scene, if not opened already.</li>
+<li>Open the <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_code_coverage_window.html">Code Coverage window</a>. Make sure <b>HTML Report</b>, <b>Report History</b>, <b>Auto Generate Report</b> and <b>Auto Open Report</b> all are checked.<br  />
+ <img src="images/quickguide/auto_generate_report.png" alt="Auto Generate Report" class="inline"/></li>
+<li>Select <b>Start Recording</b>.<br  />
+ <img src="images/coverage_recording/start_recording.png" alt="Start Recording" class="inline"/></li>
+<li>Hit <b>Play</b> to play the game and <b>exit</b> PlayMode before you get <b>8000</b> points. <img src="images/quickguide/press_play.png" alt="Enter Play mode" class="inline"/></li>
+<li>Select <b>Stop Recording</b>.<br  />
+ <img src="images/coverage_recording/stop_recording.png" alt="Stop Recording" class="inline"/></li>
+<li>A file viewer window will open up containing the coverage report. Select <span class="tt">index.htm</span>.</li>
+<li>Notice that <b><a class="el" href="class_laser_controller.html">LaserController</a></b> has 0% coverage.<br  />
+ <img src="images/quickguide/report_laser_controller_recording.png" alt="LaserController Coverage" class="inline"/></li>
+<li>Go back to the <b>Code Coverage window</b>.</li>
+<li>Select <b>Start Recording</b>.</li>
+<li>Now hit <b>Play</b> to play the game again but this time <b>exit</b> PlayMode when you get <b>8000</b> points.</li>
+<li>Select <b>Stop Recording</b>.</li>
+<li>Notice that <b><a class="el" href="class_laser_controller.html">LaserController</a></b> coverage is now 100%.<br  />
+ <img src="images/quickguide/report_laser_controller_recording_after.png" alt="LaserController Coverage" class="inline"/></li>
+</ol>
+<p>See also <a class="el" href="md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d205a02cbcb39_2_documentation_0i_2_how_to_interpret_results.html">How to interpret the results</a>. <br  />
+<br  />
+</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5751"></a>
+11. Bonus task <sub>(5-8 min)</sub></h1>
+<p>Write a new test that checks that the laser gets destroyed after 2 seconds, which will also cover the rest of the code in <b><a class="el" href="class_laser_controller.html">LaserController</a></b>.</p>
+<p><b>Suggested name:</b> _19_LaserFiresAndIsDestroyedAfterTwoSeconds. <br  />
+ <b>Hint:</b> You can use <span class="tt">yield return new WaitForSeconds(2f);</span> to wait for 2 seconds.</p>
+<p><br  />
+</p>
+<hr  />
+<p><br  />
+</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5753"></a>
+Well done for finishing the Code Coverage tutorial!</h2>
+<p>For questions and feedback please visit the <a href="https://forum.unity.com/forums/testing-automation.211/">Testing &amp; Automation</a> forum section to browse current conversations or start a new thread. Please use the <b>code coverage</b> tag. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

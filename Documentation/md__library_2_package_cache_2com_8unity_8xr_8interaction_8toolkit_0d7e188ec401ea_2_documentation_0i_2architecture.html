@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: architecture</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2architecture.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">architecture </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md8081"></a>
+autotoc_md8081</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8082"></a>
+uid: xri-architecture</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8083"></a>
+Interaction overview</h1>
+<p>This section describes the relationship between the core components of the interaction system and the states that make up the lifecycle of an interaction.</p>
+<p><a class="anchor" id="states"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8084"></a>
+States</h2>
+<p>The Interaction system has four common states: Hover, Select, Focus, and Activate. These states can mean different things to different objects. Hover, Select, and Focus are loosely related to the traditional GUI concepts of mouse-over, mouse-down, and UI focus. Activate is specific to XR and is entered and exited via a contextual command.</p>
+<p>These interaction states always involve both an Interactor and Interactable, and both are notified upon entering or exiting the state.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">State  </th><th class="markdownTableHeadNone">Function  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Hover</b>  </td><td class="markdownTableBodyNone">If an Interactable is a valid target for the Interactor its state changes to Hover. Hovering on an object signifies an intention to interact with it, but doesn't typically change the behavior of that object, though it might create a visual indicator for this change of state, like how a hovered button changes tint.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Select</b>  </td><td class="markdownTableBodyNone">Selection requires an action such as a button or trigger press from the user to enable the Select state. When an Interactable is in the Select state, <a class="el" href="namespace_unity.html">Unity</a> considers the selecting Interactor to be interacting with it. For example, Selection can simulate picking up a grabbable object, holding a lever, or preparing to push a door that has focus via hovering.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Focus</b>  </td><td class="markdownTableBodyNone">An Interactable is focused when it is selected by an Interactor. This focus persists until another Interactable is selected or the Interactor explicitly attempts to select nothing. This state is useful for performing actions on an object. For example - gaining focus of an object and then manipulating its color in a menu.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Activate</b>  </td><td class="markdownTableBodyNone">Activation is an extra action, typically mapped to a button or trigger that affects the currently selected object. This lets the user further interact with an object they've selected. The Activate action depends on the Interactable. For example, you can use Activate to toggle a grabbable flashlight on/off or shoot a ball launcher. You can hook the component to process Activate into an action without any additional code by hooking an existing callback using the Inspector window under <b>Interactable Events</b> and then add to <b>Activated</b> via UnityEvents.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8085"></a>
+Components</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8086"></a>
+Interactors</h3>
+<p>Interactor components handle the actions of hovering and selecting Interactable objects in the world. This component is responsible for creating a list of Interactables (called Valid Target) that it could potentially hover or select each frame. The Valid Target list is sorted by priority, and by default the closest Interactables have highest priority. This priority criteria can be changed or extended using <a class="el" href="md__library_2_package_cache_2com_8unity_8xr_8interaction_8toolkit_0d7e188ec401ea_2_documentation_0i_2target-filters.html">Target filters</a>.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8087"></a>
+Interactables</h3>
+<p>Interactables are objects in a scene that an Interactor can hover, select, focus, and/or activate. This component is responsible for defining the behavior of those interaction states. The same Interactor might be able to pick up and throw a ball, shoot a gun, or press a 3D button on a keypad.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8088"></a>
+Interaction Manager</h3>
+<p>The Interaction Manager acts as an intermediary between Interactors and Interactables. This component is responsible for actually causing the interaction state changes among its group of registered Interactors and Interactables.</p>
+<p>The typical setup is to have a single Interaction Manager, where all Interactables can potentially be affected by all Interactors. You can have multiple complementary Interaction Managers, each with their own set of Interactors and Interactables, and turn them on and off to enable or disable sets of interaction. The collection of loaded scenes needs to have at least one Interaction Manager for interactions to work.</p>
+<p>Upon being enabled (during the behavior's <span class="tt">OnEnable</span>), both Interactors and Interactables register with an Interaction Manager automatically. They will use the first found Interaction Manager if you don't specify one in the Inspector window. Upon being disabled (during the behavior's <span class="tt">OnDisable</span>), both Interactors and Interactables unregister from the Interaction Manager they are registered with.</p>
+<p>For more detail about the exact mechanism the Interaction Manager uses to trigger the state changes, see Update loop.</p>
+<p><a class="anchor" id="interaction-groups"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8089"></a>
+Interaction Groups</h3>
+<p>Interaction Groups are mediators for Interactors. A Group contains multiple member Interactors, sorted by priority, and only allows one Interactor in the Group to interact (hover or select) at a time. Groups first prioritize continuous selection - so if a member Interactor was interacting the previous frame and can start or continue selection in the current frame, then that Interactor will be chosen for interaction even if a higher priority Interactor tries to interact.</p>
+<p>An Interaction Group can also contain other Groups in its sorted list of members. A Group within a Group is treated like a single Interactor when it comes to how the containing Group prioritizes interactions. The Interactor chosen for interaction within a Group is bubbled up to the next containing Group, until it is ultimately either chosen for interaction in the top-level Group or skipped over just like other Interactors.</p>
+<p>Interaction Groups also register with an Interaction Manager. A member Interactor or Group must be registered with the same Interaction Manager as its containing Group for the member to function as part of the Group. A Group first registers with an Interaction Manager during the behavior's <span class="tt">Awake</span>. Upon being disabled (during the behavior's <span class="tt">OnDisable</span>) the Group will unregister from the Interaction Manager. If the Group is then re-enabled (during the behavior's <span class="tt">OnEnable</span>) it again registers with an Interaction Manager. If an Interactor or Group is added to a Group at runtime, it will unregister from and then re-registers with its Interaction Manager so that it can be treated as a Group member in the update loop.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8090"></a>
+Input Readers</h3>
+<p>The input properties on interactor components and locomotion provider components provides a way to abstract the source of input data, which Interactors then use to translate into interaction states, notably for selection and activation. The input actions are bound to a tracked device's controls and are read from each frame they are needed. Interactor like the XR Ray Interactor that depend on controller or hand input then query to determine if they should select or activate.</p>
+<p>You may want different inputs to be used for a ray-based teleportation interactor and a ray-based interactor for grabbing, and both Interactor components can reference different input actions to read different input values from the same tracked controller device.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8091"></a>
+Tracked Pose Driver</h3>
+<p>This component in the Input System package is responsible for reading the position and rotation of the tracked device, and applying it to the Transform component.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8092"></a>
+Update loop</h2>
+<p>The update loop of the Interaction Manager queries Interactors and Interactables, and handles the hover, focus and selection states. First, it asks Interactors for a valid list of targets (used for both hover and selection). It then checks both Interactors and Interactables to see if their existing hover, focus and selection objects are still valid. After invalid previous states have been cleared (exited via <span class="tt">OnSelectExiting</span> and <span class="tt">OnSelectExited</span>/<span class="tt">OnHoverExiting</span> and <span class="tt">OnHoverExited</span>/<span class="tt">OnFocusExiting</span> and <span class="tt">OnFocusExited</span>), it queries both objects for valid selection, focus and hover states, and the objects enter a new state via <span class="tt">OnSelectEntering</span> and <span class="tt">OnSelectEntered</span>/<span class="tt">OnHoverEntering</span> and <span class="tt">OnHoverEntered</span>/<span class="tt">OnFocusEntering</span> and <span class="tt">OnFocusEntered</span>.</p>
+<p><img src="images/interaction-update.svg" alt="interaction-update" style="pointer-events: none;" class="inline"/></p>
+<p>All registered Interactables and Interactors are updated before and after interaction state changes by the Interaction Manager explicitly using <span class="tt">PreprocessInteractor</span>, <span class="tt">ProcessInteractor</span>, and <span class="tt">ProcessInteractable</span>. Interactors are always notified before Interactables for both processing and state changes, and Interactors contained within Interaction Groups are always notified before Interactors that are not contained within Groups. Interactables and Interactors are not limited from using the normal <span class="tt">MonoBehaviour</span> <span class="tt">Update</span> call, but per-frame logic should typically be done in one of the process methods instead so that Interactors are able to update before Interactables.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8093"></a>
+Interaction strength</h3>
+<p>Interactors and Interactables can report a variable (that is, analog) selection interaction strength, which is a normalized <span class="tt">[0.0, 1.0]</span> amount of selection that the interactor is performing. For interactors that use motion controller input, this is typically the analog trigger or grip press amount. For interactables that can be poked, it can be based on the depth of a poke interactor.</p>
+<p>Interaction strength values are updated after all interaction state changes have occurred by the Interaction Manager explicitly using <span class="tt">ProcessInteractionStrength</span>. In this case, Interactables are notified before Interactors to allow a poke depth to be computed before gathering the overall interaction strength in the interactor. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

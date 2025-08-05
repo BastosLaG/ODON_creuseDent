@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: PlayerInputManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input_manager.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">PlayerInputManager </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md2209"></a>
+autotoc_md2209</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2210"></a>
+uid: input-system-player-input-manager</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2211"></a>
+The Player Input Manager component</h1>
+<p>&gt;NOTE: The Input System package comes with a sample called <span class="tt">Simple Multiplayer</span> which you can install from the package manager UI in the <a class="el" href="namespace_unity.html">Unity</a> editor. The sample demonstrates how to use <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html"><span class="tt">PlayerInputManager</span></a> to set up a simple local multiplayer scenario.</p>
+<p>The <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input.html"><span class="tt">Player Input</span></a> system facilitates setting up local multiplayer games, where multiple players share a single screen and multiple controllers. You can set this up using the <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html"><span class="tt">PlayerInputManager</span></a> component, which automatically manages the creation and lifetime of <span class="tt">PlayerInput</span> instances as players join and leave the game.</p>
+<p><img src="Images/PlayerInputManager.png" alt="PlayerInputManager" class="inline"/></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_notificationBehavior"><span class="tt">Notification Behavior</span></a>  </td><td class="markdownTableBodyNone">How the <a href="../api/UnityEngine.InputSystem.PlayerInput.html"><span class="tt">PlayerInputManager</span></a> component notifies game code about changes to the connected players. <a href="PlayerInput.md#notification-behaviors">This works the same way as for the <span class="tt">PlayerInput</span> component</a>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_joinBehavior"><span class="tt">Join Behavior</span></a>  </td><td class="markdownTableBodyNone">Determines the mechanism by which players can join when joining is enabled. See documentation on join behaviors.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_playerPrefab"><span class="tt">Player Prefab</span></a>  </td><td class="markdownTableBodyNone">A prefab that represents a player in the game. The <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html"><span class="tt">PlayerInputManager</span></a> component creates an instance of this prefab whenever a new player joins. This prefab must have one <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input.html"><span class="tt">PlayerInput</span></a> component in its hierarchy.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_joiningEnabled"><span class="tt">Joining Enabled By Default</span></a>  </td><td class="markdownTableBodyNone">While this is enabled, new players can join via the mechanism determined by <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_joinBehavior"><span class="tt">Join Behavior</span></a>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_maxPlayerCount"><span class="tt">Limit Number of Players</span></a>  </td><td class="markdownTableBodyNone">Enable this if you want to limit the number of players who can join the game.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_maxPlayerCount"><span class="tt">Max Player Count</span></a>(Only shown when <span class="tt">Limit number of Players</span> is enabled.)  </td><td class="markdownTableBodyNone">The maximum number of players allowed to join the game.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_splitScreen"><span class="tt">Enable Split-Screen</span></a>  </td><td class="markdownTableBodyNone">If enabled, each player is automatically assigned a portion of the available screen area. See documentation on split-screen multiplayer.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2212"></a>
+Join behaviors</h3>
+<p>You can use the <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_joinBehavior"><span class="tt">Join Behavior</span></a> property in the Inspector to determine how a <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html"><span class="tt">PlayerInputManager</span></a> component decides when to add new players to the game. The following options are available to choose the specific mechanism that <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html"><span class="tt">PlayerInputManager</span></a> employs.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Behavior  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerJoinBehavior.html"><span class="tt">Join Players When Button IsPressed</span></a>  </td><td class="markdownTableBodyNone">Listen for button presses on Devices that are not paired to any player. If a player presses a button and joining is allowed, join the new player using the Device they pressed the button on.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerJoinBehavior.html"><span class="tt">Join Players When Join Action Is Triggered</span></a>  </td><td class="markdownTableBodyNone">Similar to <span class="tt">Join Players When Button IsPressed</span>, but this only joins a player if the control they triggered matches a specific action you define. For example, you can set up players to join when pressing a specific gamepad button.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerJoinBehavior.html"><span class="tt">Join Players Manually</span></a>  </td><td class="markdownTableBodyNone">Don't join players automatically. Call <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_JoinPlayer_System_Int32_System_Int32_System_String_UnityEngine_InputSystem_InputDevice_"><span class="tt">JoinPlayer</span></a> explicitly to join new players. Alternatively, create GameObjects with <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input.html"><span class="tt">PlayerInput</span></a> components directly and the Input System will automatically join them.  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2213"></a>
+Split-screen</h3>
+<p>If you enable the <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_splitScreen"><span class="tt">Split-Screen</span></a> option, the <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html"><span class="tt">PlayerInputManager</span></a> automatically splits the available screen space between the active players. For this to work, you must set the <a href="../api/UnityEngine.InputSystem.PlayerInput.html#UnityEngine_InputSystem_PlayerInput_camera"><span class="tt">Camera</span></a> property on the <span class="tt">PlayerInput</span> prefab. The <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html"><span class="tt">PlayerInputManager</span></a> then automatically resizes and repositions each camera instance to let each player have their own part of the screen.</p>
+<p>If you enable the <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_splitScreen"><span class="tt">Split-Screen</span></a> option, you can configure the following additional properties in the Inspector:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Property  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_maintainAspectRatioInSplitScreen"><span class="tt">Maintain Aspect Ratio</span></a>  </td><td class="markdownTableBodyNone">A <span class="tt">false</span> value enables the game to produce screen areas that have an aspect ratio different from the screen resolution when subdividing the screen.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_fixedNumberOfSplitScreens"><span class="tt">Set Fixed Number</span></a>  </td><td class="markdownTableBodyNone">If this value is greater than zero, the <a href="../api/UnityEngine.InputSystem.PlayerInputManager.html"><span class="tt">PlayerInputManager</span></a> always splits the screen into a fixed number of rectangles, regardless of the actual number of players.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_splitScreenArea"><span class="tt">Screen Rectangle</span></a>  </td><td class="markdownTableBodyNone">The normalized screen rectangle available for allocating player split-screens into.  </td></tr>
+</table>
+<p>By default, any player in the game can interact with any UI elements. However, in split-screen setups, your game can have screen-space UIs that are restricted to just one specific camera. See the <a href="PlayerInput.md#ui-input">UI Input</a> section on the Player Input component page on how to set this up using the Player Input component, <a href="UISupport.md#setting-up-ui-input"><span class="tt">InputSystemUIInputModule</span></a> and <a href="UISupport.md#multiplayer-uis"><span class="tt">MultiplayerEventSystem</span></a> components.</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md2214"></a>
+<span class="tt">PlayerInputManager</span> notifications</h3>
+<p><span class="tt">PlayerInputManager</span> sends notifications when something notable happens with the current player setup. These notifications are delivered according to the <span class="tt">Notification Behavior</span> property, in the <a href="PlayerInput.md#notification-behaviors">same way as for <span class="tt">PlayerInput</span></a>.</p>
+<p>Your game can listen to the following notifications:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Notification  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_PlayerJoinedMessage"><span class="tt">PlayerJoinedMessage</span></a>  </td><td class="markdownTableBodyNone">A new player joined the game. Passes the [<span class="tt">PlayerInput</span>](PlayerInput.md<span class="tt">PlayerInputManager</span> sends a <span class="tt">Player Joined</span> notification for each of these.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="../api/UnityEngine.InputSystem.PlayerInputManager.html#UnityEngine_InputSystem_PlayerInputManager_PlayerLeftMessage"><span class="tt">PlayerLeftMessage</span></a>  </td><td class="markdownTableBodyNone">A player left the game. Passes the <a class="el" href="md__library_2_package_cache_2com_8unity_8inputsystem_0d7fe8299111a7_2_documentation_0i_2_player_input.html"><span class="tt">PlayerInput</span></a> instance of the player who left.  </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

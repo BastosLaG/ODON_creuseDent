@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Use NavMesh Agent with Other Components</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_mixing_components.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Use NavMesh Agent with Other Components </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md305"></a></p>
+<p>You can use <a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_mesh_agent.html"><b>NavMesh Agent</b></a>, <a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_mesh_obstacle.html"><b>NavMesh Obstacle</b></a> and <a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_nav_mesh_link.html"><b>NavMesh Link</b></a> components with other <a class="el" href="namespace_unity.html">Unity</a> components too. Here’s a list of dos and don’ts when mixing different components together.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md306"></a>
+NavMesh Agent and Physics</h1>
+<ul>
+<li>You don’t need to add physics <a href="./Glossary.md#collider" title="An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay."><b>colliders</b></a> to NavMesh Agents for them to avoid each other<ul>
+<li>That is, the navigation system simulates agents and their reaction to obstacles and the static world. Here the static world is the baked NavMesh.</li>
+</ul>
+</li>
+<li>If you want a NavMesh Agent to push around physics objects or use physics triggers:<ul>
+<li>Add a Collider component (if not present)</li>
+<li>Add <a href="./Glossary.md#rigidbody" title="A component that allows a GameObject to be affected by simulated gravity and other forces."><b>Rigidbody</b></a> component<ul>
+<li>Turn on kinematic (Is Kinematic) - this is important!</li>
+<li>Kinematic means that the rigid body is controlled by something else than the physics simulation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If both NavMesh Agent and Rigidbody (non-kinematic) are active at the same time, you have race condition<ul>
+<li>Both components may try to move the agent at the same time which leads to undefined behavior</li>
+</ul>
+</li>
+<li>You can use a NavMesh Agent to move e.g. a player character, without physics<ul>
+<li>Set players agent’s avoidance priority to a small number (high priority), to allow the player to brush through crowds</li>
+<li>Move the player agent using <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.NavMeshAgent-velocity.html">NavMeshAgent.velocity</a>, so that other agents can predict the player movement to avoid the player.</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md307"></a>
+NavMesh Agent and Animator</h1>
+<ul>
+<li>NavMesh Agent and Animator with <a href="./Glossary.md#root-motion" title="Motion of character’s root node, whether it’s controlled by the animation itself or externally."><b>Root Motion</b></a> can cause race condition<ul>
+<li>Both components try to move the transform each frame</li>
+<li>Two possible solutions</li>
+</ul>
+</li>
+<li>Information should always flow in one direction<ul>
+<li>Either agent moves the character and animations follows</li>
+<li>Or animation moves the character based on simulated result</li>
+<li>Otherwise you’ll end up having a hard to debug feedback loop</li>
+</ul>
+</li>
+<li><em>Animation follows agent</em><ul>
+<li>Use the <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.NavMeshAgent-velocity.html">NavMeshAgent.velocity</a> as input to the Animator to roughly match the agent’s movement to the animations</li>
+<li>Robust and simple to implement, will result in foot sliding where animations cannot match the velocity</li>
+</ul>
+</li>
+<li><em>Agent follows animation</em><ul>
+<li>Disable <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.NavMeshAgent-updatePosition.html">NavMeshAgent.updatePosition</a> and <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.NavMeshAgent-updateRotation.html">NavMeshAgent.updateRotation</a> to detach the simulation from the game objects locations</li>
+<li>Use the difference between the simulated agent’s position (<a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.NavMeshAgent-nextPosition.html">NavMeshAgent.nextPosition</a>) and animation root (<a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Animator-rootPosition.html">Animator.rootPosition</a>) to calculate controls for the animations</li>
+<li>See <a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_coupling_animation_and_navigation.html">Coupling Animation and Navigation</a> for more details</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md308"></a>
+NavMesh Agent and NavMesh Obstacle</h1>
+<ul>
+<li>Do not mix well!<ul>
+<li>Enabling both will make the agent trying to avoid itself</li>
+<li>If carving is enabled in addition, the agent tries to constantly remap to the edge of the carved hole, even more erroneous behavior ensues</li>
+</ul>
+</li>
+<li>Make sure only one of them are active at any given time<ul>
+<li>Deceased state, you may turn off the agent and turn on the obstacle to force other agents to avoid it</li>
+<li>Alternatively you can use priorities to make certain agents to be avoided more</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md309"></a>
+NavMesh Obstacle and Physics</h1>
+<ul>
+<li>If you want physics controlled object to affect NavMesh Agent’s behavior<ul>
+<li>Add NavMesh Obstacle component to the object which agent should be aware of, this allows the avoidance system to reason about the obstacle</li>
+</ul>
+</li>
+<li>If a game object has a Rigidbody and a NavMesh Obstacle attached, the obstacle’s velocity is obtained from the Rigidbody automatically<ul>
+<li>This allows NavMesh Agents to predict and avoid the moving obstacle </li>
+</ul>
+</li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Référence de la classe UnityEngine.XR.Management.XRManagerSettings</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la classe UnityEngine.XR.Management.XRManagerSettings<span class="mlabels"><span class="mlabel sealed">sealed</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Class to handle active loader and subsystem management for <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a>. This class is to be added as a ScriptableObject asset in your project and should only be referenced by the <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html" title="General settings container used to house the instance of the active settings as well as the manager i...">XRGeneralSettings</a> instance for its use.  
+ <a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe d'héritage de UnityEngine.XR.Management.XRManagerSettings:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:acc5ff54fccb6d11d4ca9c4707bb7093e" id="r_acc5ff54fccb6d11d4ca9c4707bb7093e"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc5ff54fccb6d11d4ca9c4707bb7093e">ActiveLoaderAs&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:acc5ff54fccb6d11d4ca9c4707bb7093e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current active loader, cast to the requested type. Useful shortcut when you need to get the active loader as something less generic than <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html" title="XR Loader abstract class used as a base class for specific provider implementations....">XRLoader</a>.  <br /></td></tr>
+<tr class="memitem:a8869a17014183fb5a01f280045c5ad43" id="r_a8869a17014183fb5a01f280045c5ad43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8869a17014183fb5a01f280045c5ad43">InitializeLoaderSync</a> ()</td></tr>
+<tr class="memdesc:a8869a17014183fb5a01f280045c5ad43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over the configured list of loaders and attempt to initialize each one. The first one that succeeds is set as the active loader and initialization immediately terminates.  <br /></td></tr>
+<tr class="memitem:a0790610f50f9bda32b67b0e869a7af3a" id="r_a0790610f50f9bda32b67b0e869a7af3a"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0790610f50f9bda32b67b0e869a7af3a">InitializeLoader</a> ()</td></tr>
+<tr class="memdesc:a0790610f50f9bda32b67b0e869a7af3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over the configured list of loaders and attempt to initialize each one. The first one that succeeds is set as the active loader and initialization immediately terminates.  <br /></td></tr>
+<tr class="memitem:a1187cd1161dc52c790cc2141541bf2b3" id="r_a1187cd1161dc52c790cc2141541bf2b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1187cd1161dc52c790cc2141541bf2b3">TryAddLoader</a> (<a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a> loader, int index=-1)</td></tr>
+<tr class="memdesc:a1187cd1161dc52c790cc2141541bf2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to append the given loader to the list of loaders at the given index.  <br /></td></tr>
+<tr class="memitem:ac2aceedbbc1741710b4f942d2ae997bb" id="r_ac2aceedbbc1741710b4f942d2ae997bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2aceedbbc1741710b4f942d2ae997bb">TryRemoveLoader</a> (<a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a> loader)</td></tr>
+<tr class="memdesc:ac2aceedbbc1741710b4f942d2ae997bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to remove the first instance of a given loader from the list of loaders.  <br /></td></tr>
+<tr class="memitem:ac1571ce6108ee9f2fe0fd7ea4119978d" id="r_ac1571ce6108ee9f2fe0fd7ea4119978d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1571ce6108ee9f2fe0fd7ea4119978d">TrySetLoaders</a> (List&lt; <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a> &gt; reorderedLoaders)</td></tr>
+<tr class="memdesc:ac1571ce6108ee9f2fe0fd7ea4119978d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to set the given loader list as the list of loaders managed by this instance.  <br /></td></tr>
+<tr class="memitem:a1fe490ab20d68c574ec64d6397dd34ab" id="r_a1fe490ab20d68c574ec64d6397dd34ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fe490ab20d68c574ec64d6397dd34ab">StartSubsystems</a> ()</td></tr>
+<tr class="memdesc:a1fe490ab20d68c574ec64d6397dd34ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">If there is an active loader, this will request the loader to start all the subsystems that it is managing.  <br /></td></tr>
+<tr class="memitem:a2991cb670b0721521b5cf14e401659ed" id="r_a2991cb670b0721521b5cf14e401659ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2991cb670b0721521b5cf14e401659ed">StopSubsystems</a> ()</td></tr>
+<tr class="memdesc:a2991cb670b0721521b5cf14e401659ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">If there is an active loader, this will request the loader to stop all the subsystems that it is managing.  <br /></td></tr>
+<tr class="memitem:afadca744e0061cd80de9f22bfde86366" id="r_afadca744e0061cd80de9f22bfde86366"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afadca744e0061cd80de9f22bfde86366">DeinitializeLoader</a> ()</td></tr>
+<tr class="memdesc:afadca744e0061cd80de9f22bfde86366"><td class="mdescLeft">&#160;</td><td class="mdescRight">If there is an active loader, this function will deinitialize it and remove the active loader instance from management. We will automatically call <a class="el" href="#a2991cb670b0721521b5cf14e401659ed" title="If there is an active loader, this will request the loader to stop all the subsystems that it is mana...">StopSubsystems</a> prior to deinitialization to make sure that things are cleaned up appropriately.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Propriétés</h2></td></tr>
+<tr class="memitem:a15fcb6ebc8e6ef794fb49535f5f6e76f" id="r_a15fcb6ebc8e6ef794fb49535f5f6e76f"><td class="memItemLeft" align="right" valign="top"><a id="a15fcb6ebc8e6ef794fb49535f5f6e76f" name="a15fcb6ebc8e6ef794fb49535f5f6e76f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>automaticLoading</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a15fcb6ebc8e6ef794fb49535f5f6e76f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get and set Automatic Loading state for this manager. When this is true, the manager will automatically call <a class="el" href="#a0790610f50f9bda32b67b0e869a7af3a" title="Iterate over the configured list of loaders and attempt to initialize each one. The first one that su...">InitializeLoader</a> and <a class="el" href="#afadca744e0061cd80de9f22bfde86366" title="If there is an active loader, this function will deinitialize it and remove the active loader instanc...">DeinitializeLoader</a> for you. When false <a class="el" href="#a0f52a7c053c18784fc2a23a413e085d1" title="Get and set automatic running state for this manager. When set to true the manager will call StartSub...">automaticRunning</a> is also set to false and remains that way. This means that disabling automatic loading disables all automatic behavior for the manager. <br /></td></tr>
+<tr class="memitem:a0f52a7c053c18784fc2a23a413e085d1" id="r_a0f52a7c053c18784fc2a23a413e085d1"><td class="memItemLeft" align="right" valign="top"><a id="a0f52a7c053c18784fc2a23a413e085d1" name="a0f52a7c053c18784fc2a23a413e085d1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>automaticRunning</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a0f52a7c053c18784fc2a23a413e085d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get and set automatic running state for this manager. When set to true the manager will call <a class="el" href="#a1fe490ab20d68c574ec64d6397dd34ab" title="If there is an active loader, this will request the loader to start all the subsystems that it is man...">StartSubsystems</a> and <a class="el" href="#a2991cb670b0721521b5cf14e401659ed" title="If there is an active loader, this will request the loader to stop all the subsystems that it is mana...">StopSubsystems</a> APIs at appropriate times. When set to false, or when <a class="el" href="#a15fcb6ebc8e6ef794fb49535f5f6e76f" title="Get and set Automatic Loading state for this manager. When this is true, the manager will automatical...">automaticLoading</a> is false then it is up to the user of the manager to handle that same functionality. <br /></td></tr>
+<tr class="memitem:a6343c0ecd748bad96f580e09b1c5c95f" id="r_a6343c0ecd748bad96f580e09b1c5c95f"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6343c0ecd748bad96f580e09b1c5c95f">loaders</a><code> [get]</code></td></tr>
+<tr class="memdesc:a6343c0ecd748bad96f580e09b1c5c95f"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of loaders currently managed by this <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> Manager instance.  <br /></td></tr>
+<tr class="memitem:a8a47d80ff512bf691e2a1963c0cb30aa" id="r_a8a47d80ff512bf691e2a1963c0cb30aa"><td class="memItemLeft" align="right" valign="top">IReadOnlyList&lt; <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a47d80ff512bf691e2a1963c0cb30aa">activeLoaders</a><code> [get]</code></td></tr>
+<tr class="memdesc:a8a47d80ff512bf691e2a1963c0cb30aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A shallow copy of the list of loaders currently managed by this <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> Manager instance.  <br /></td></tr>
+<tr class="memitem:a0eab77270e4b3783a388531a44908ed6" id="r_a0eab77270e4b3783a388531a44908ed6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0eab77270e4b3783a388531a44908ed6">isInitializationComplete</a><code> [get]</code></td></tr>
+<tr class="memdesc:a0eab77270e4b3783a388531a44908ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read only boolean letting us know if initialization is completed. Because initialization is handled as a Coroutine, people taking advantage of the auto-lifecycle management of XRManager will need to wait for init to complete before checking for an ActiveLoader and calling StartSubsystems.  <br /></td></tr>
+<tr class="memitem:a6bc285e7503cf66fa8382bffd05a8839" id="r_a6bc285e7503cf66fa8382bffd05a8839"><td class="memItemLeft" align="right" valign="top"><a id="a6bc285e7503cf66fa8382bffd05a8839" name="a6bc285e7503cf66fa8382bffd05a8839"></a>
+<a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>activeLoader</b><code> [get]</code></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Class to handle active loader and subsystem management for <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a>. This class is to be added as a ScriptableObject asset in your project and should only be referenced by the <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_general_settings.html" title="General settings container used to house the instance of the active settings as well as the manager i...">XRGeneralSettings</a> instance for its use. </p>
+<p>Given a list of loaders, it will attempt to load each loader in the given order. The first loader that is successful wins and all remaining loaders are ignored. The loader that succeeds is accessible through the activeLoader property on the manager.</p>
+<p>Depending on configuration the <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings.html" title="Class to handle active loader and subsystem management for XR. This class is to be added as a Scripta...">XRManagerSettings</a> instance will automatically manage the active loader at correct points in the application lifecycle. The user can override certain points in the active loader lifecycle and manually manage them by toggling the <a class="el" href="#a15fcb6ebc8e6ef794fb49535f5f6e76f" title="Get and set Automatic Loading state for this manager. When this is true, the manager will automatical...">automaticLoading</a> and <a class="el" href="#a0f52a7c053c18784fc2a23a413e085d1" title="Get and set automatic running state for this manager. When set to true the manager will call StartSub...">automaticRunning</a> properties. Disabling <a class="el" href="#a15fcb6ebc8e6ef794fb49535f5f6e76f" title="Get and set Automatic Loading state for this manager. When this is true, the manager will automatical...">automaticLoading</a> implies the the user is responsible for the full lifecycle of the <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> session normally handled by the <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings.html" title="Class to handle active loader and subsystem management for XR. This class is to be added as a Scripta...">XRManagerSettings</a> instance. Toggling this to false also toggles <a class="el" href="#a0f52a7c053c18784fc2a23a413e085d1" title="Get and set automatic running state for this manager. When set to true the manager will call StartSub...">automaticRunning</a> false.</p>
+<p>Disabling <a class="el" href="#a0f52a7c053c18784fc2a23a413e085d1" title="Get and set automatic running state for this manager. When set to true the manager will call StartSub...">automaticRunning</a> only implies that the user is responsible for starting and stopping the activeLoader through the <a class="el" href="#a1fe490ab20d68c574ec64d6397dd34ab" title="If there is an active loader, this will request the loader to start all the subsystems that it is man...">StartSubsystems</a> and <a class="el" href="#a2991cb670b0721521b5cf14e401659ed" title="If there is an active loader, this will request the loader to stop all the subsystems that it is mana...">StopSubsystems</a> APIs.</p>
+<p>Automatic lifecycle management is executed as follows</p>
+<ul>
+<li>Runtime Initialize -&gt; <a class="el" href="#a0790610f50f9bda32b67b0e869a7af3a" title="Iterate over the configured list of loaders and attempt to initialize each one. The first one that su...">InitializeLoader</a>. The loader list will be iterated over and the first successful loader will be set as the active loader.</li>
+<li>Start -&gt; <a class="el" href="#a1fe490ab20d68c574ec64d6397dd34ab" title="If there is an active loader, this will request the loader to start all the subsystems that it is man...">StartSubsystems</a>. Ask the active loader to start all subsystems.</li>
+<li>OnDisable -&gt; <a class="el" href="#a2991cb670b0721521b5cf14e401659ed" title="If there is an active loader, this will request the loader to stop all the subsystems that it is mana...">StopSubsystems</a>. Ask the active loader to stop all subsystems.</li>
+<li>OnDestroy -&gt; <a class="el" href="#afadca744e0061cd80de9f22bfde86366" title="If there is an active loader, this function will deinitialize it and remove the active loader instanc...">DeinitializeLoader</a>. Deinitialize and remove the active loader. </li>
+</ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="acc5ff54fccb6d11d4ca9c4707bb7093e" name="acc5ff54fccb6d11d4ca9c4707bb7093e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5ff54fccb6d11d4ca9c4707bb7093e">&#9670;&#160;</a></span>ActiveLoaderAs&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T UnityEngine.XR.Management.XRManagerSettings.ActiveLoaderAs&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the current active loader, cast to the requested type. Useful shortcut when you need to get the active loader as something less generic than <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html" title="XR Loader abstract class used as a base class for specific provider implementations....">XRLoader</a>. </p>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Requested type of the loader</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The active loader as requested type, or null.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Contraintes de type</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>XRLoader</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="afadca744e0061cd80de9f22bfde86366" name="afadca744e0061cd80de9f22bfde86366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afadca744e0061cd80de9f22bfde86366">&#9670;&#160;</a></span>DeinitializeLoader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Management.XRManagerSettings.DeinitializeLoader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If there is an active loader, this function will deinitialize it and remove the active loader instance from management. We will automatically call <a class="el" href="#a2991cb670b0721521b5cf14e401659ed" title="If there is an active loader, this will request the loader to stop all the subsystems that it is mana...">StopSubsystems</a> prior to deinitialization to make sure that things are cleaned up appropriately. </p>
+<p>You must wait for <a class="el" href="#a0eab77270e4b3783a388531a44908ed6" title="Read only boolean letting us know if initialization is completed. Because initialization is handled a...">isInitializationComplete</a> to be set to true before calling this API.</p>
+<p>Upon return <a class="el" href="#a0eab77270e4b3783a388531a44908ed6" title="Read only boolean letting us know if initialization is completed. Because initialization is handled a...">isInitializationComplete</a> will be rest to false; </p>
+
+</div>
+</div>
+<a id="a0790610f50f9bda32b67b0e869a7af3a" name="a0790610f50f9bda32b67b0e869a7af3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0790610f50f9bda32b67b0e869a7af3a">&#9670;&#160;</a></span>InitializeLoader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator UnityEngine.XR.Management.XRManagerSettings.InitializeLoader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterate over the configured list of loaders and attempt to initialize each one. The first one that succeeds is set as the active loader and initialization immediately terminates. </p>
+<p>When complete <a class="el" href="#a0eab77270e4b3783a388531a44908ed6" title="Read only boolean letting us know if initialization is completed. Because initialization is handled a...">isInitializationComplete</a> will be set to true. This will mark that it is safe to call other parts of the API. This does not guarantee that init successfully created a loader. For that you need to check that ActiveLoader is not null.</p>
+<p>Note that there can only be one active loader. Any attempt to initialize a new active loader with one already set will cause a warning to be logged and immediate exit of this function.</p>
+<p>Iteration is done asynchronously and this method must be called within the context of a Coroutine.</p>
+<p><b>If manual initialization of <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> is being done, this method can not be called before Start completes as it depends on graphics initialization within <a class="el" href="namespace_unity.html">Unity</a> completing.</b></p>
+<dl class="section return"><dt>Renvoie</dt><dd>Enumerator marking the next spot to continue execution at.</dd></dl>
+
+</div>
+</div>
+<a id="a8869a17014183fb5a01f280045c5ad43" name="a8869a17014183fb5a01f280045c5ad43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8869a17014183fb5a01f280045c5ad43">&#9670;&#160;</a></span>InitializeLoaderSync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Management.XRManagerSettings.InitializeLoaderSync </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterate over the configured list of loaders and attempt to initialize each one. The first one that succeeds is set as the active loader and initialization immediately terminates. </p>
+<p>When complete <a class="el" href="#a0eab77270e4b3783a388531a44908ed6" title="Read only boolean letting us know if initialization is completed. Because initialization is handled a...">isInitializationComplete</a> will be set to true. This will mark that it is safe to call other parts of the API. This does not guarantee that init successfully created a loader. For that you need to check that ActiveLoader is not null.</p>
+<p>Note that there can only be one active loader. Any attempt to initialize a new active loader with one already set will cause a warning to be logged and immediate exit of this function.</p>
+<p>This method is synchronous and on return all state should be immediately checkable.</p>
+<p><b>If manual initialization of <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> is being done, this method can not be called before Start completes as it depends on graphics initialization within <a class="el" href="namespace_unity.html">Unity</a> completing.</b> </p>
+
+</div>
+</div>
+<a id="a1fe490ab20d68c574ec64d6397dd34ab" name="a1fe490ab20d68c574ec64d6397dd34ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe490ab20d68c574ec64d6397dd34ab">&#9670;&#160;</a></span>StartSubsystems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Management.XRManagerSettings.StartSubsystems </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If there is an active loader, this will request the loader to start all the subsystems that it is managing. </p>
+<p>You must wait for <a class="el" href="#a0eab77270e4b3783a388531a44908ed6" title="Read only boolean letting us know if initialization is completed. Because initialization is handled a...">isInitializationComplete</a> to be set to true prior to calling this API. </p>
+
+</div>
+</div>
+<a id="a2991cb670b0721521b5cf14e401659ed" name="a2991cb670b0721521b5cf14e401659ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2991cb670b0721521b5cf14e401659ed">&#9670;&#160;</a></span>StopSubsystems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Management.XRManagerSettings.StopSubsystems </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If there is an active loader, this will request the loader to stop all the subsystems that it is managing. </p>
+<p>You must wait for <a class="el" href="#a0eab77270e4b3783a388531a44908ed6" title="Read only boolean letting us know if initialization is completed. Because initialization is handled a...">isInitializationComplete</a> to be set to true before calling this API. </p>
+
+</div>
+</div>
+<a id="a1187cd1161dc52c790cc2141541bf2b3" name="a1187cd1161dc52c790cc2141541bf2b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1187cd1161dc52c790cc2141541bf2b3">&#9670;&#160;</a></span>TryAddLoader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Management.XRManagerSettings.TryAddLoader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attempts to append the given loader to the list of loaders at the given index. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loader</td><td>The <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html" title="XR Loader abstract class used as a base class for specific provider implementations....">XRLoader</a> to be added to this manager's instance of loaders. </td></tr>
+    <tr><td class="paramname">index</td><td>The index at which the given <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html" title="XR Loader abstract class used as a base class for specific provider implementations....">XRLoader</a> should be added. If you set a negative or otherwise invalid index, the loader will be appended to the end of the list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><code>true</code> if the loader is not a duplicate and was added to the list successfully, <code>false</code> otherwise. </dd></dl>
+<p>This method behaves differently in the Editor and during runtime/Play mode. While your app runs in the Editor and not in Play mode, attempting to add an <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html" title="XR Loader abstract class used as a base class for specific provider implementations....">XRLoader</a> will always succeed and register that loader's type internally. Attempting to add a loader during runtime/Play mode will trigger a check to see whether a loader of that type was registered. If the check is successful, the loader is added. If not, the loader is not added and the method returns <code>false</code>. </p>
+
+</div>
+</div>
+<a id="ac2aceedbbc1741710b4f942d2ae997bb" name="ac2aceedbbc1741710b4f942d2ae997bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2aceedbbc1741710b4f942d2ae997bb">&#9670;&#160;</a></span>TryRemoveLoader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Management.XRManagerSettings.TryRemoveLoader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a></td>          <td class="paramname"><span class="paramname"><em>loader</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attempts to remove the first instance of a given loader from the list of loaders. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loader</td><td>The <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html" title="XR Loader abstract class used as a base class for specific provider implementations....">XRLoader</a> to be removed from this manager's instance of loaders. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><code>true</code> if the loader was successfully removed from the list, <code>false</code> otherwise. </dd></dl>
+<p>This method behaves differently in the Editor and during runtime/Play mode. During runtime/Play mode, the loader will be removed with no additional side effects if it is in the list managed by this instance. While in the Editor and not in Play mode, the loader will be removed if it exists and it will be unregistered from this instance and any attempts to add it during runtime/Play mode will fail. You can re-add the loader in the Editor while not in Play mode. </p>
+
+</div>
+</div>
+<a id="ac1571ce6108ee9f2fe0fd7ea4119978d" name="ac1571ce6108ee9f2fe0fd7ea4119978d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1571ce6108ee9f2fe0fd7ea4119978d">&#9670;&#160;</a></span>TrySetLoaders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Management.XRManagerSettings.TrySetLoaders </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>reorderedLoaders</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attempts to set the given loader list as the list of loaders managed by this instance. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reorderedLoaders</td><td>The list of <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html" title="XR Loader abstract class used as a base class for specific provider implementations....">XRLoader</a>s to be managed by this manager instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><code>true</code> if the loader list was set successfully, <code>false</code> otherwise. </dd></dl>
+<p>This method behaves differently in the Editor and during runtime/Play mode. While in the Editor and not in Play mode, any attempts to set the list of loaders will succeed without any additional checks. During runtime/Play mode, the new loader list will be validated against the registered <a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html" title="XR Loader abstract class used as a base class for specific provider implementations....">XRLoader</a> types. If any loaders exist in the list that were not registered at startup, the attempt will fail. </p>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Documentation des propriétés</h2>
+<a id="a8a47d80ff512bf691e2a1963c0cb30aa" name="a8a47d80ff512bf691e2a1963c0cb30aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a47d80ff512bf691e2a1963c0cb30aa">&#9670;&#160;</a></span>activeLoaders</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IReadOnlyList&lt;<a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a>&gt; UnityEngine.XR.Management.XRManagerSettings.activeLoaders</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A shallow copy of the list of loaders currently managed by this <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> Manager instance. </p>
+<p>This property returns a read only list. Any changes made to the list itself will not affect the list used by this <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> Manager instance. To mutate the list of loaders currently managed by this instance, use <a class="el" href="#a1187cd1161dc52c790cc2141541bf2b3" title="Attempts to append the given loader to the list of loaders at the given index.">TryAddLoader</a>, <a class="el" href="#ac2aceedbbc1741710b4f942d2ae997bb" title="Attempts to remove the first instance of a given loader from the list of loaders.">TryRemoveLoader</a>, and/or <a class="el" href="#ac1571ce6108ee9f2fe0fd7ea4119978d" title="Attempts to set the given loader list as the list of loaders managed by this instance.">TrySetLoaders</a>. </p>
+
+</div>
+</div>
+<a id="a0eab77270e4b3783a388531a44908ed6" name="a0eab77270e4b3783a388531a44908ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eab77270e4b3783a388531a44908ed6">&#9670;&#160;</a></span>isInitializationComplete</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Management.XRManagerSettings.isInitializationComplete</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read only boolean letting us know if initialization is completed. Because initialization is handled as a Coroutine, people taking advantage of the auto-lifecycle management of XRManager will need to wait for init to complete before checking for an ActiveLoader and calling StartSubsystems. </p>
+<p>summary&gt; Return the current singleton active loader instance. /summary&gt; </p>
+
+</div>
+</div>
+<a id="a6343c0ecd748bad96f580e09b1c5c95f" name="a6343c0ecd748bad96f580e09b1c5c95f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6343c0ecd748bad96f580e09b1c5c95f">&#9670;&#160;</a></span>loaders</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_loader.html">XRLoader</a>&gt; UnityEngine.XR.Management.XRManagerSettings.loaders</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of loaders currently managed by this <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> Manager instance. </p>
+<p>Modifying the list of loaders at runtime is undefined behavior and could result in a crash or memory leak. Use <a class="el" href="#a8a47d80ff512bf691e2a1963c0cb30aa" title="A shallow copy of the list of loaders currently managed by this XR Manager instance.">activeLoaders</a> to retrieve the currently ordered list of loaders. If you need to mutate the list at runtime, use <a class="el" href="#a1187cd1161dc52c790cc2141541bf2b3" title="Attempts to append the given loader to the list of loaders at the given index.">TryAddLoader</a>, <a class="el" href="#ac2aceedbbc1741710b4f942d2ae997bb" title="Attempts to remove the first instance of a given loader from the list of loaders.">TryRemoveLoader</a>, and <a class="el" href="#ac1571ce6108ee9f2fe0fd7ea4119978d" title="Attempts to set the given loader list as the list of loaders managed by this instance.">TrySetLoaders</a>. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r.html">XR</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r_1_1_management.html">Management</a></li><li class="navelem"><a href="class_unity_engine_1_1_x_r_1_1_management_1_1_x_r_manager_settings.html">XRManagerSettings</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

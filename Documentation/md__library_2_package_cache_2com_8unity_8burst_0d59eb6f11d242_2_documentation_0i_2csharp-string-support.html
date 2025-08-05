@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: String support</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-string-support.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">String support </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md873"></a></p>
+<p><a class="el" href="namespace_burst.html">Burst</a> supports string usage in the following scenarios:</p>
+<ul>
+<li><a href="https://docs.unity3d.com/ScriptReference/Debug.Log.html"><span class="tt">Debug.Log</span></a></li>
+<li>Assigning a string to the <a href="https://docs.unity3d.com/Packages/com.unity.collections@2.2/api/Unity.Collections.FixedString.html"><span class="tt">FixedString</span></a> structs that <span class="tt"><a class="el" href="namespace_unity_1_1_collections.html">Unity.Collections</a></span> provides, for example <a href="https://docs.unity3d.com/Packages/com.unity.collections@2.2/api/Unity.Collections.FixedString128Bytes.html"><span class="tt">FixedString128Bytes</span></a>.</li>
+<li>The <a href="https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices?view=net-6.0"><span class="tt">System.Runtime.CompilerServices</span></a> attributes <span class="tt">[CallerLineNumber]</span>, <span class="tt">[CallerMemberName]</span>, and <span class="tt">[CallerFilePath]</span> on arguments to <a class="el" href="namespace_burst.html">Burst</a> functions. However, you can only pass the strings directly to calls to <span class="tt">Debug.Log</span>.</li>
+</ul>
+<p>A string can be either:</p><ul>
+<li>A string literal. For example: <span class="tt">"This is a string literal"</span>.</li>
+<li>An interpolated string using <span class="tt">$"This is an integer {value}&lt;/tt&gt; or using &lt;tt&gt;string.Format&lt;/tt&gt;, where the string to format is also a string literal.
+
+For example, Burst supports the following constructions:
+
+* Logging with a string literal:
+
+    @icode{c} #
+    Debug.Log("This a string literal");
+   @endicode 
+
+* Logging using string interpolation:
+
+    @icode{c} #
+    int value = 256;
+    Debug.Log($"This is an integer value {value}"); 
+    @endicode 
+
+    This is the same as using &lt;tt&gt;string.Format&lt;/tt&gt; directly:
+
+    @icode{c} #
+    int value = 256;
+    Debug.Log(string.Format("This is an integer value {0}", value));
+    @endicode 
+
+@section autotoc_md874 Supported &lt;tt&gt;Debug.Log&lt;/tt&gt; methods
+
+Burst supports the following &lt;a href="<a href="https://docs.unity3d.com/ScriptReference/Debug.Log.html">https://docs.unity3d.com/ScriptReference/Debug.Log.html</a>" &gt;&lt;tt&gt;Debug.Log&lt;/tt&gt;&lt;/a&gt; methods:
+
+* &lt;tt&gt;Debug.Log(object)&lt;/tt&gt;
+* &lt;tt&gt;Debug.LogWarning(object)&lt;/tt&gt;
+* &lt;tt&gt;Debug.LogError(object)&lt;/tt&gt;
+
+@section autotoc_md875 String interpolation support
+
+String interpolation has the following restrictions:
+
+* The string must be a string literal
+* Burst supports the following &lt;tt&gt;string.Format&lt;/tt&gt; methods:
+    * &lt;tt&gt;string.Format(string, object)&lt;/tt&gt; 
+    * &lt;tt&gt;string.Format(string, object, object)&lt;/tt&gt; 
+    * &lt;tt&gt;string.Format(string, object, object, object)&lt;/tt&gt;
+    * &lt;tt&gt;string.Format(string, object[])&lt;/tt&gt;. Use this for a string interpolation that contains more than three arguments, for example &lt;tt&gt;\$"{arg1} {arg2} {arg3} {arg4} {arg5}"&lt;/tt&gt;. In this case, the &lt;tt&gt;object[]&lt;/tt&gt; array needs to be a constant size and no arguments should involve control flows (for example, &lt;tt&gt;\$"This is a {(cond ? arg1 : arg2)}"&lt;/tt&gt;).
+* The string must only use value types
+* The string must take only built-in type arguments:
+    * &lt;tt&gt;char&lt;/tt&gt;
+    * &lt;tt&gt;boolean&lt;/tt&gt; 
+    * &lt;tt&gt;byte&lt;/tt&gt; / &lt;tt&gt;sbyte&lt;/tt&gt;
+    * &lt;tt&gt;double&lt;/tt&gt;
+    * &lt;tt&gt;float&lt;/tt&gt;
+    * &lt;tt&gt;short&lt;/tt&gt; / &lt;tt&gt;ushort&lt;/tt&gt;
+    * &lt;tt&gt;int&lt;/tt&gt; / &lt;tt&gt;uint&lt;/tt&gt;
+    * &lt;tt&gt;long&lt;/tt&gt; / &lt;tt&gt;ulong&lt;/tt&gt;
+* Burst supports all vector types (for example &lt;tt&gt;int2&lt;/tt&gt;, &lt;tt&gt;float3&lt;/tt&gt;), except &lt;tt&gt;half&lt;/tt&gt; vector types. For example:
+
+    @icode{c} #
+    var value = new float3(1.0f, 2.0f, 3.0f);
+    // Logs "This value float3(1f, 2f, 3f)"
+    Debug.Log($"This value `{value}`");
+* Burst doesn't support `ToString()` of structs. It displays the full name of the struct instead.
+
+For more information, refer to the .NET documentation on [String interpolation](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated) and [Standard numeric format strings](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings).
+
+## Managed strings
+
+You can pass a managed `string` literal or an interpolated string directly to `Debug.Log`, but you can't pass a string to a user method or use them as fields in a struct. To pass around or store strings, use one of the [`FixedString`](https://docs.unity3d.com/Packages/com.unity.collections@1.2/api/Unity.Collections.FixedString.html) structs in the `Unity.Collections` package:
+
+@endicode c#
+int value = 256;
+FixedString128 text = $"This is an integer value {value} used with FixedString128";
+MyCustomLog(text);
+
+// ...
+
+// String can be passed as an argument to a method using a FixedString, 
+// but not using directly a managed &lt;tt&gt;string&lt;/tt&gt;:
+public static void MyCustomLog(in FixedString128 log)
+{
+    Debug.Log(text);
+}
+@icode 
+
+## Arguments and specifiers
+
+Burst has limited support for string format arguments and specifiers:
+
+@endicode c#
+int value = 256;
+
+// Padding left: "This value `  256`
+Debug.Log($"This value &lt;tt&gt;{value,5}&lt;/tt&gt;");</span></li>
+</ul>
+<p><span class="tt">// Padding right: "This value `256  `
+Debug.Log($"This value <span class="tt">{value,-5}</span>");
+
+// Hexadecimal uppercase: "This value `00FF` Debug.Log($"This value &lt;tt&gt;{value:X4}&lt;/tt&gt;");</span></p>
+<p><span class="tt">// Hexadecimal lowercase: "This value `00ff`
+Debug.Log($"This value <span class="tt">{value:x4}</span>");
+
+// Decimal with leading-zero: "This value `0256` Debug.Log($"This value &lt;tt&gt;{value:D4}&lt;/tt&gt;"); ```</span></p>
+<p><span class="tt"></span></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md876"></a>
+<span class="tt">Additional resources</span></h1>
+<p><span class="tt"></span></p>
+<p><span class="tt"></p><ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-hpc-overview.html">HPC# Overview</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-type-support.html">C#/.NET type support</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-system-support.html">C#/.NET System namespace support</a>
+</li>
+</ul>
+<p></span></p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: performance-settings</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8xr_8openxr_0d3903c1059bcf_2_documentation_0i_2features_2performance-settings.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">performance-settings </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2 class="doxsection"><a class="anchor" id="autotoc_md9443"></a>
+autotoc_md9443</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9444"></a>
+uid: openxr-performance-settings</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9445"></a>
+XR performance settings</h1>
+<p>The OpenXR performance settings feature lets you provide performance hints to an OpenXR runtime and allows you to get notification when an important aspect of device performance changes.</p>
+<p>XR devices must balance power and thermal state against performance to achieve an optimal user experience. You can provide performance hints to an OpenXR runtime to help it make the best tradeoffs for the task your application is running. For example, if your application is displaying a scene consisting of a loading graphic or simple menu without significant rendering requirements, you could tell the runtime to operate at a lower power level to save energy and thermal capacity for a later, more complex scene. Likewise, if you have a sequence that is very demanding, you could tell the runtime to operate at max capacity for a short time. You can provide hints separately for the CPU and the GPU. Refer to <a class="el" href="#performance-settings-level-hints">Performance level hints</a> for more information.</p>
+<p>You can subscribe to notifications that report changes in important aspects of device performance. These aspects include compositing, rendering, and thermal capacity. The performance notifications inform you when one of these performance categories changes between the normal, warning, and impaired states. The OpenXR runtime reports performance changes separately for the CPU and GPU. Your application can respond to these notifications by reducing the application workload. Refer to <a class="el" href="#performance-settings-notifications">Performance notifications</a> for more information.</p>
+<p>Refer to <a class="el" href="#enable-performance-feature">Enable the performance settings OpenXR feature</a> for instructions about enabling the feature in your project.</p>
+<dl class="section note"><dt>Note</dt><dd>The target XR platform must support the OpenXR "XR\_EXT\_performance\_settings" extension. Otherwise, the XR Performance Settings won't be activated at runtime. Be sure to confirm that your target platform supports the extension.</dd></dl>
+<p>For more information about the OpenXR Performance Settings extension, refer to the <a href="https://registry.khronos.org/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_performance_settings">OpenXR Specification</a>.</p>
+<p><a class="anchor" id="enable-performance-feature"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9446"></a>
+Enable the performance settings OpenXR feature</h2>
+<p>To use the performance settings API, you must enable it in the <b>OpenXR Project Settings</b>:</p>
+<ol type="1">
+<li>Open the <b>Project Settings</b> window (menu: <b>Edit &gt; Project Settings</b>).</li>
+<li>Expand the <b>XR Plug-in Management</b> section, if necessary.</li>
+<li>Select the <b>OpenXR</b> area under <b>XR Plug-in Management</b>.</li>
+<li>Choose the <b>Platform Build Target</b> from the tabs along the top of the <b>OpenXR</b> settings page.</li>
+<li>Check the box next to <b>XR Performance Settings</b> (in the <b>All Features</b> group) to enable the feature.</li>
+<li>Repeat for other platforms, if desired.</li>
+</ol>
+<p><img src="../images/performance-settings-feature.png" alt="" class="inline"/></p>
+<p><a class="anchor" id="performance-settings-level-hints"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9447"></a>
+Performance level hints</h2>
+<p>The performance level hints help an OpenXR runtime balance the tradeoffs it must make between energy usage, thermal state, and your application's performance needs. You can provide separate hints for the CPU and GPU hardware domains.</p>
+<p>You can set the following levels as hints about your application's current performance needs:</p>
+<ul>
+<li><b>Power Savings</b>: At this level, the OpenXR runtime prioritizes energy conservation over consistent frame rendering and latency.</li>
+<li><b>Sustained Low</b>: At this level, the OpenXR runtime tries to balance resource usage and high performance, prioritizing the former. Energy savings are prioritized over low latency, but the runtime tries to maintain a relatively stable frame rendering and XR compositing flow, as long as it's thermally sustainable.</li>
+<li><b>Sustained High</b>: This level is the default hint, if none is set by your application. At this level, the OpenXR runtime prioritizes consistent rendering, XR compositing and latency in a thermal range that is sustainable.</li>
+<li><b>Boost</b>: At this level, the OpenXR runtime allows maximum resource usage without trying to keep the device operating in a thermally sustainable range. If the device hardware exceeds its thermal limits, the runtime must throttle performance, so you should limit use of this performance level to short durations (less that 30 seconds).</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>When setting the Performance Level Hint to <b>Sustained Low</b> or <b>Sustained High</b> levels, your application can still experience performance throttling. For example, a device might exceed thermal limits due to external circumstances, such as operating in a high-temperature environment or for an extended amount of time. You can use <a class="el" href="#performance-settings-notifications">Performance Notifications</a> to detect such impending performance issues and lower application workload before the runtime must impose throttling.</dd></dl>
+<p>Use the static method, <a href="xref:UnityEngine.XR.OpenXR.Features.Extensions.PerformanceSettings.XrPerformanceSettingsFeature.SetPerformanceLevelHint*">XrPerformanceSettingsFeature.SetPerformanceLevelHint</a> to set a given performance level hint for a specific CPU or GPU performance domain.</p>
+<p>By choosing the lowest level that gives your application good performance, you can extend the device's battery life and avoid overheating. For example, you could set the <b>Power Savings</b> hint during loading screens. For normal operation, you could set <b>Sustained Low</b> for less demanding sequences, and <b>Sustained High</b> for more complex scenes. When appropriate, you could set the <b>Boost</b> hint to achieve maximum performance for a brief time.</p>
+<p>Here are some examples of how you might use performance level hints in different scenarios:</p>
+<ul>
+<li><p class="startli">The application shows static pictures without any interactive elements:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line"> XrPerformanceSettingsFeature.SetPerformanceLevelHint(PerformanceDomain.CPU, PerformanceLevelHint.PowerSavings);</div>
+<div class="line"> XrPerformanceSettingsFeature.SetPerformanceLevelHint(PerformanceDomain.GPU, PerformanceLevelHint.PowerSavings);</div>
+<div class="line"> </div>
+<div class="line"> <span class="comment">// Show a picture sequence and continue with app loading</span></div>
+</div><!-- fragment --></li>
+<li><p class="startli">The application is in a normal state, with simple interactivity and low complexity scenes:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line"> XrPerformanceSettingsFeature.SetPerformanceLevelHint(PerformanceDomain.CPU, PerformanceLevelHint.SustainedLow);</div>
+<div class="line"> XrPerformanceSettingsFeature.SetPerformanceLevelHint(PerformanceDomain.GPU, PerformanceLevelHint.SustainedLow);</div>
+<div class="line"> </div>
+<div class="line"> <span class="comment">// Run regular app process</span></div>
+</div><!-- fragment --></li>
+<li><p class="startli">The application needs to render a complex scene with multiple, interactive composition layers:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line"> XrPerformanceSettingsFeature.SetPerformanceLevelHint(PerformanceDomain.GPU, PerformanceLevelHint.SustainedHigh);</div>
+<div class="line"> </div>
+<div class="line"> <span class="comment">// Load and process action scene</span></div>
+</div><!-- fragment --></li>
+<li><p class="startli">The application needs to process a large amount of data on device:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#</span></div>
+<div class="line"> XrPerformanceSettingsFeature.SetPerformanceLevelHint(PerformanceDomain.CPU, PerformanceLevelHint.Boost);</div>
+<div class="line"> </div>
+<div class="line"> <span class="comment">// Run complex logic</span></div>
+</div><!-- fragment --></li>
+</ul>
+<p><a class="anchor" id="performance-settings-notifications"></a> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9448"></a>
+Performance notifications</h2>
+<p>The OpenXR runtime can inform your application about performance changes, so you can react and adjust the current workload, if desired.</p>
+<p>Performance is categorized as one of the following performance states:</p>
+<ul>
+<li><b>Normal</b>: No performance degradation is expected and the app can run as usual.</li>
+<li><b>Warning</b>: The OpenXR runtime is expecting performance degradation if device conditions do not improve.</li>
+<li><b>Impaired</b>: The device is suffering performance degradation.</li>
+</ul>
+<p>An OpenXR runtime monitors performance of the device CPU and GPU across a set of key performance areas, called subdomains. These subdomains include:</p>
+<ul>
+<li><a class="el" href="#compositing-subdomain">Compositing</a>: A runtime task that takes all rendered layers and combines them for display.</li>
+<li><a class="el" href="#rendering-subdomain">Rendering</a>: Your application's timely submission of frames to the compositor.</li>
+<li><a class="el" href="#thermal-subdomain">Thermal</a>: The hardware device's temperature compared to its thermal limits.</li>
+</ul>
+<p>If the performance state of a subdomain changes, the <a href="xref:UnityEngine.XR.OpenXR.Features.Extensions.PerformanceSettings.XrPerformanceSettingsFeature.OnXrPerformanceChangeNotification">XrPerformanceSettingsFeature</a> object dispatches an event that describes the change. Refer to <a class="el" href="#subscribe">Subscribe to performance notifications</a> for information about handling this event.</p>
+<p>When the performance state of a domain and subdomain changes for the worse, you should take mitigation measures that reduce application workload in that area. If you do not, the OpenXR runtime might impose its own, more drastic, measures.</p>
+<p>After a sufficient period (determined by the runtime) of improved performance, a performance state can change from impaired to warning, and from warning to normal. Leaving the impaired state means that the runtime has stopped its own mitigation measures.</p>
+<dl class="section remark"><dt>Remarques</dt><dd>Performance impairment may not be caused directly by your application, but by situational causes, such as high room temperature or a large amount of background tasks running on the device. Even so, the better you can tune your app to avoid performance degradation, the better the user experience will be across variable operating conditions.</dd></dl>
+<p><a class="anchor" id="compositing-subdomain"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9449"></a>
+Compositing subdomain</h3>
+<p>Compositing is a task performed by the OpenXR runtime to combine submitted frames for final display. The runtime must share CPU and GPU resources with your application while performing this task. If the runtime can't complete compositing in time, visual artifacts can occur. When in the impaired state, the OpenXR runtime might take actions that interfere with your application, such as limiting frame rate, ignoring submitted layers, or even shutting down the application.</p>
+<ul>
+<li>In the <b>Normal</b> state, the compositor can consistently finish with sufficient margin.</li>
+<li>In the <b>Warning</b> state, the compositor is finishing its task in time, but the margin is considered insufficient.</li>
+<li>In the <b>Impaired</b> state, the compositor cannot finish its task in time.</li>
+</ul>
+<p><a class="anchor" id="rendering-subdomain"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9450"></a>
+Rendering subdomain</h3>
+<p>Your application's rendering pipeline must submit rendered layers to the compositor for display. If frames aren't submitted in time for the compositor to use them, dropped frames and other artifacts can occur. In the impaired state, the OpenXR runtime might take actions that interfere with your application, such as telling the user that the application is unresponsive or displaying a tracking environment to maintain user orientation.</p>
+<ul>
+<li>In the <b>Normal</b> state, your application is consistently submitting rendered frames to the compositor in time to be used.</li>
+<li>In the <b>Warning</b> state, at least one layer is regularly submitted past the compositor deadline.</li>
+<li>In the <b>Impaired</b> state, late submission of frames has reached a critical threshold.</li>
+</ul>
+<p><a class="anchor" id="thermal-subdomain"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9451"></a>
+Thermal subdomain</h3>
+<p>XR devices must stay within a safe operating temperature. When a device reaches its thermal limits, the OpenXR runtime must take drastic measures to lower heat generation. These mitigations can severely impact the user experience.</p>
+<ul>
+<li>In the <b>Normal</b> state, the device is operating within a sustainable thermal range.</li>
+<li>In the <b>Warning</b> state, the OpenXR runtime anticipates that the device will soon overheat under the current load.</li>
+<li>In the <b>Impaired</b> state, the OpenXR is taking measures such as throttling performance, to reduce the device temperature.</li>
+</ul>
+<p><a class="anchor" id="subscribe"></a> </p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md9452"></a>
+Subscribe to performance notifications</h3>
+<p>Subscribe to the <a href="xref:UnityEngine.XR.OpenXR.Features.Extensions.PerformanceSettings.XrPerformanceSettingsFeature.OnXrPerformanceChangeNotification">XrPerformanceSettingsFeature.OnXrPerformanceChangeNotification</a> event to receive an event when the performance state of a domain and subdomain changes.</p>
+<p>A notification event provides the following data (as a <a href="xref:UnityEngine.XR.OpenXR.Features.Extensions.PerformanceSettings.PerformanceChangeNotification">PerformanceChangeNotification</a> struct):</p>
+<ul>
+<li>Old performance state (normal, warning, or impaired)</li>
+<li>New performance state (normal, warning, or impaired)</li>
+<li>Affected domain (CPU or GPU)</li>
+<li>Affected subdomain (compositing, rendering, or thermal)</li>
+</ul>
+<p>The following code snippet illustrates how you can subscribe to the performance notification event and handle performance changes (by calling your own application-defined functions that modify performance):</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="comment">// Subscribe to the performance notification event at runtime</span></div>
+<div class="line">XrPerformanceSettingsFeature.OnXrPerformanceChangeNotification += OnPerformanceChangeNotification;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Process the notification when it happens</span></div>
+<div class="line"><span class="keywordtype">void</span> OnPerformanceChangeNotification(PerformanceChangeNotification notification)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">switch</span> (notification.toLevel)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">case</span> PerformanceNotificationLevel.Normal:</div>
+<div class="line">            <span class="comment">// Let the application run as normal execution</span></div>
+<div class="line">            RestorePerformance(notification.domain, notification.subDomain);</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> PerformanceNotificationLevel.Warning:</div>
+<div class="line">            <span class="comment">// Reduce workload of low priority tasks</span></div>
+<div class="line">            LimitPerformance(notification.domain, notification.subDomain);</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> PerformanceNotificationLevel.Impaired:</div>
+<div class="line">            <span class="comment">// Execute app with the minimum required processes for the given domain and subdomain</span></div>
+<div class="line">            ReducePerformance(notification.domain, notification.subDomain);</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

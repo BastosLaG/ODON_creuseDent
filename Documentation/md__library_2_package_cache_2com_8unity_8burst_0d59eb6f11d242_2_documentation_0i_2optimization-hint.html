@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Hint intrinsics</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2optimization-hint.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Hint intrinsics </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md948"></a></p>
+<p>Use the <a href="xref:Unity.Burst.CompilerServices.Hint"><span class="tt">Hint</span></a> intrinsics to add information to your code which helps with <a class="el" href="namespace_burst.html">Burst</a> optimization. It has the following methods:</p>
+<ul>
+<li><a href="xref:Unity.Burst.CompilerServices.Hint.Likely*"><span class="tt">Unity.Burst.CompilerServices.Hint.Likely</span></a>: Tells <a class="el" href="namespace_burst.html">Burst</a> that a Boolean condition is likely to be true.</li>
+<li><a href="xref:Unity.Burst.CompilerServices.Hint.Unlikely*"><span class="tt">Unity.Burst.CompilerServices.Hint.Unlikely</span></a>: Tells <a class="el" href="namespace_burst.html">Burst</a> that a Boolean condition is unlikely to be true.</li>
+<li><a href="xref:Unity.Burst.CompilerServices.Hint.Assume*"><span class="tt">Unity.Burst.CompilerServices.Hint.Assume</span></a>: Tells <a class="el" href="namespace_burst.html">Burst</a> that it can assume a Boolean condition is true.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md949"></a>
+Likely intrinsic</h1>
+<p>The <span class="tt">Likely</span> intrinsic is most useful to tell <a class="el" href="namespace_burst.html">Burst</a> which branch condition has a high probability of being true. This means that <a class="el" href="namespace_burst.html">Burst</a> can focus on the branch in question for optimization purposes:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_compiler_services.html">CompilerServices</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_compiler_services_1_1_hint.html">Hint</a>.Likely(b))</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Any code in here will be optimized by Burst with the assumption that we&#39;ll probably get here!</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Whereas the code in here will be kept out of the way of the optimizer.</span></div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_unity_1_1_burst_1_1_compiler_services_1_1_hint_html"><div class="ttname"><a href="class_unity_1_1_burst_1_1_compiler_services_1_1_hint.html">Unity.Burst.CompilerServices.Hint</a></div><div class="ttdef"><b>Definition</b> Hint.cs:7</div></div>
+<div class="ttc" id="anamespace_unity_1_1_burst_1_1_compiler_services_html"><div class="ttname"><a href="namespace_unity_1_1_burst_1_1_compiler_services.html">Unity.Burst.CompilerServices</a></div><div class="ttdef"><b>Definition</b> Aliasing.cs:2</div></div>
+<div class="ttc" id="anamespace_unity_1_1_burst_html"><div class="ttname"><a href="namespace_unity_1_1_burst.html">Unity.Burst</a></div><div class="ttdef"><b>Definition</b> BurstDisassembler.Core.ARM64.info.cs:5</div></div>
+<div class="ttc" id="anamespace_unity_html"><div class="ttname"><a href="namespace_unity.html">Unity</a></div><div class="ttdef"><b>Definition</b> ConverterItemDescriptor.cs:4</div></div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md950"></a>
+Unlikely intrinsic</h1>
+<p>The <span class="tt">Unlikely</span> intrinsic tells <a class="el" href="namespace_burst.html">Burst</a> the opposite of the <span class="tt">Likely</span> intrinsic: the condition is unlikely to be true, and it should optimize against it:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_compiler_services.html">CompilerServices</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_compiler_services_1_1_hint.html">Hint</a>.Unlikely(b))</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Whereas the code in here will be kept out of the way of the optimizer.</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Any code in here will be optimized by Burst with the assumption that we&#39;ll probably get here!</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The <span class="tt">Likely</span> and <span class="tt">Unlikely</span> intrinsics make sure that <a class="el" href="namespace_burst.html">Burst</a> places the code most likely to be hit after the branching condition in the binary. This means that the code has a high probability of being in the instruction cache. <a class="el" href="namespace_burst.html">Burst</a> can also hoist the code out of the likely branch and spend extra time optimizing it, and not spend as much time looking at the unlikely code.</p>
+<p>An example of an unlikely branch is to check if the result of an allocation is valid. The allocation is valid most of the time, so you want the code to be fast with that assumption, but you want an error case to fall back to.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md951"></a>
+Assume intrinsic</h1>
+<p>The <span class="tt">Assume</span> intrinsic is powerful. Use it with caution because it tells <a class="el" href="namespace_burst.html">Burst</a> that a condition is always true.</p>
+<p>&gt;[!WARNING] &gt;When you use <span class="tt">Assume</span>, <a class="el" href="namespace_burst.html">Burst</a> assumes the value is true without checking whether it's true.</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line"><a class="code hl_namespace" href="namespace_unity.html">Unity</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst.html">Burst</a>.<a class="code hl_namespace" href="namespace_unity_1_1_burst_1_1_compiler_services.html">CompilerServices</a>.<a class="code hl_class" href="class_unity_1_1_burst_1_1_compiler_services_1_1_hint.html">Hint</a>.Assume(b);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (b)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Burst has been told that b is always true, so this branch will always be taken.</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Any code in here will be removed from the program because b is always true!</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Use the <span class="tt">Assume</span> intrinsic to arbitrarily tell <a class="el" href="namespace_burst.html">Burst</a> that something is true. For example, you can use <span class="tt">Assume</span> to tell <a class="el" href="namespace_burst.html">Burst</a> to assume that a loop end is always a multiple of 16, which means that it can provide perfect vectorization without any scalar spilling for that loop. You could also use it to tell <a class="el" href="namespace_burst.html">Burst</a> that a value isn't <span class="tt">NaN</span>, or it's negative.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md952"></a>
+Additional resources</h1>
+<ul>
+<li><a href="xref:Unity.Burst.CompilerServices.Hint"><span class="tt">[Hint]</span> API reference</a></li>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8burst_0d59eb6f11d242_2_documentation_0i_2csharp-burst-intrinsics.html">Burst intrinsics overview</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Keywords</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_keywords.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Keywords </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md3888"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3889"></a>
+Description</h1>
+<p>Use Keywords to create different variants for your Shader Graph.</p>
+<p>Keywords enable you to create shaders:</p>
+<ul>
+<li>With features that you can turn on or off for each Material instance.</li>
+<li>With features that behave differently on certain platforms.</li>
+<li>That scale in complexity based on conditions you set.</li>
+</ul>
+<p>There are three types of Keywords: Boolean, Enum, and Built-in. <a class="el" href="namespace_unity.html">Unity</a> defines a Keyword in the graph, shader, and optionally, the Material Inspector based on its type. See <a class="el" href="#BooleanKeywords">Boolean Keyword</a>, <a class="el" href="#EnumKeywords">Enum Keyword</a>, and <a class="el" href="#BuiltinKeywords">Built-in Keyword</a> for more information about Keyword types. For more information about how these Keywords affect the final shader, see documentation on <a href="https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html">Making multiple shader program variants</a>.</p>
+<p>In Shader Graph, you first define a Keyword on the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_blackboard.html">Blackboard</a>, then use a <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_keyword-_node.html">Keyword Node</a> to create a branch in the graph.</p>
+<p>The Editor is able to compile variants on demand when it needs them to render content. If you declare many different variants, you can end up with millions or trillions of possibilities. However, the Player needs to determine at build time which variants are in use and include them when it pre-compiles your shaders. To manage memory effectively, the Player strips unused variants based on their keyword and Editor settings. See the next section, Common parameters, to learn more about how you can give the Player hints about what it needs to compile and what it can ignore. When the Player strips out a variant in the build process, it displays the pink error shader.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3890"></a>
+Common parameters</h1>
+<p>Although some fields are specific to certain types of Keywords, all Keywords have the following parameters.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><b>Type</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Display Name</b>  </td><td class="markdownTableBodyNone">String  </td><td class="markdownTableBodyNone">The display name of the Keyword. <a class="el" href="namespace_unity.html">Unity</a> shows this name in the title bar of nodes that reference the corresponding Keyword, and also in the Material Inspector if you expose that Keyword.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Exposed</b>  </td><td class="markdownTableBodyNone">Boolean  </td><td class="markdownTableBodyNone">When you set this parameter to <b>true</b>, <a class="el" href="namespace_unity.html">Unity</a> displays this Keyword in the Material Inspector. If you set it to <b>false</b>, the Keyword does not appear in the Material Inspector.<br  />
+<br  />
+If you intend to access a GLOBAL shader variable, be sure to add it as you would normally add an input variable, but deselect <b>Exposed</b>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Reference Name</b>  </td><td class="markdownTableBodyNone">String  </td><td class="markdownTableBodyNone">The internal name for the Keyword in the shader.<br  />
+<br  />
+If you overwrite the Reference Name parameter, take note of the following:<ul>
+<li>
+Keyword Reference Names are always in full capitals, so <a class="el" href="namespace_unity.html">Unity</a> converts all lowercase letters to uppercase.</li>
+<li>
+If the Reference Name contains any characters that HLSL does not support, <a class="el" href="namespace_unity.html">Unity</a> replaces those characters with underscores.</li>
+<li>
+Right-click on a Reference Name, and select <b>Reset Reference</b> to revert to the default Reference Name.  </li>
+</ul>
+</td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Definition</b>  </td><td class="markdownTableBodyNone">Enum  </td><td class="markdownTableBodyNone">Sets how the Keyword is defined in the shader. Determines when to compile keyword variants.<br  />
+<br  />
+There are three available options:<ul>
+<li>
+<b>Shader Feature</b>: <a class="el" href="namespace_unity.html">Unity</a> only compiles keyword variants when a Material selects the relevant option. For this option to be available in the Player, a Material selecting it must exist at build-time.</li>
+<li>
+<b>Multi Compile</b>: Pre-compiles all the variant possibilities. This is slower and uses more memory, but allows the option to be dynamically switched in the Player.</li>
+<li>
+<b>Predefined</b>: The render pipeline defines this keyword and controls the settings for it.  </li>
+</ul>
+</td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Scope</b>  </td><td class="markdownTableBodyNone">Enum  </td><td class="markdownTableBodyNone">Sets the scope at which to define the Keyword.<br  />
+<br  />
+The following options are available:<ul>
+<li>
+<b>Global Keywords</b>: Defines Keyword for the entire project, and it counts towards the global keyword limit.</li>
+<li>
+<b>Local Keywords</b>: Defines Keyword for only one shader, which has its own local keyword limit.When you use Predefined Keywords, <a class="el" href="namespace_unity.html">Unity</a> disables this field.  </li>
+</ul>
+</td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Stages</b>  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Set the stage the keyword applies to.<br  />
+<br  />
+The following options are available:<ul>
+<li>
+<b>All</b> - Applies this keyword to all shader stages.</li>
+<li>
+<b>Vertex</b> - Applies this keyword to the vertex stage.</li>
+<li>
+<b>Fragment</b> - Applies this keyword to the fragment stage.  </li>
+</ul>
+</td></tr>
+</table>
+<p><a class="anchor" id="BooleanKeywords"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3891"></a>
+Boolean Keywords</h1>
+<p>Boolean Keywords are either on or off. This results in two shader variants. <a class="el" href="namespace_unity.html">Unity</a> exposes Boolean Keywords in the Material Inspector if the Exposed parameter is set to is true. To enable the keyword from a script, use EnableKeyword on the keyword's Reference name. DisableKeyword disables the keyword. To learn more about Boolean Keywords, see <a href="https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html">Shader variants and keywords</a>.</p>
+<p><img src="images/keywords_boolean.png" alt="" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md3892"></a>
+Type-specific parameters</h2>
+<p>Boolean Keywords have one Boolean-specific parameter in addition to the common parameters listed above.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><b>Type</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Default</b>  </td><td class="markdownTableBodyNone">Boolean  </td><td class="markdownTableBodyNone">Enable this parameter to set the Keyword's default state to on, and disable it to set the Keyword's default state to off.<br  />
+<br  />
+This parameter determines the value to use for the Keyword when Shader Graph generates previews. It also defines the Keyword's default value when you use this shader to create a new Material.  </td></tr>
+</table>
+<p><a class="anchor" id="EnumKeywords"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3893"></a>
+Enum Keywords</h1>
+<p>Enum Keywords can have two or more states, which you define in the <b>Entries</b> list. If you expose an Enum Keyword, the <b>Display Names</b> in its <b>Entries</b> list appear in a dropdown menu in the Material Inspector.</p>
+<p>Special characters such as ( ) or ! @ are not valid in the <b>Entry Name</b> of an Enum Keyword. Shader Graph converts invalid characters to underscores ( _ ).</p>
+<p>When you define an Enum Keyword, Shader Graph displays labels for each state consisting of a sanitized version of the Enum's <b>Entry Name</b> appended to the main <b>Reference</b> name. When controlling a keyword via script with a, <code>Material.EnableKeyword</code> or <code>Shader.EnableKeyword function</code>, enter the state label in the format <code>{REFERENCE}_{REFERENCESUFFIX}</code>. For example, if your reference name is MYENUM and the desired entry is OPTION1, then you would call <code>Material.EnableKeyword("MYENUM_OPTION1")</code>. When you select an option, this disables the other options.</p>
+<p><img src="images/keywords_enum.png" alt="" class="inline"/></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md3894"></a>
+Type-specific parameters</h2>
+<p>In addition to the common parameters listed above, Enum Keywords have the following additional parameters.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Name</b>  </th><th class="markdownTableHeadNone"><b>Type</b>  </th><th class="markdownTableHeadNone"><b>Description</b>  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Default</b>  </td><td class="markdownTableBodyNone">Enum  </td><td class="markdownTableBodyNone">Select an entry from the drop-down menu to determine which value to use for the Keyword when Shader Graph generates previews. This also defines the Keyword's default value when you use this shader to create a new Material. When you edit the Entries list, Shader Graph automatically updates the options in this control.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Entries</b>  </td><td class="markdownTableBodyNone">Reorderable List  </td><td class="markdownTableBodyNone">This list defines all the states for the Keyword. Each state has a separate <b>Display Name</b> and <b>Reference Suffix</b>.<br  />
+<br  />
+&amp;#8226; <b>Display Name</b>: Appears in drop-down menus for the Keyword on the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_internal-_inspector.html">Internal Inspector</a> and the Material Inspector. Shader Graph also uses this name for port labels on nodes that reference the Keyword.<br  />
+&amp;#8226; <b>Reference Suffix</b>: This is the final keyword, presented in the format <code>Reference_ReferenceSuffix</code>.  </td></tr>
+</table>
+<p><a class="anchor" id="BuiltinKeywords"></a> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3895"></a>
+Built-in Keywords</h1>
+<p>Built-in Keywords are always of either the Boolean or Enum type, but they behave slightly differently from Boolean or Enum Keywords that you create. The <a class="el" href="namespace_unity.html">Unity</a> Editor or active Render Pipeline sets their values, and you cannot edit these.</p>
+<p>All Built-in Keyword fields in the <b>Node Settings</b> tab of the <a class="el" href="md__library_2_package_cache_2com_8unity_8shadergraph_0df10877fbf761_2_documentation_0i_2_internal-_inspector.html">Graph Inspector</a> are grayed out except for the <b>Default</b> field, which you can enable or disable to show the differences in Shader Graph previews. You also cannot expose Built-in Keywords in the Material Inspector.</p>
+<p>In an HDRP project, you can find the current quality level in the Material section of the <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest/manual/quality-settings.html#using-the-current-quality-settings-parameters">HDRP Asset</a>. For URP projects, the feature is not supported, but you can use the <span class="tt">SetGloalShaderKeywords</span> command to set the <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.core@latest/api/UnityEngine.Rendering.MaterialQuality.html">MaterialQuality</a> Enum in the script. For example, the following line would set Material Quality to High:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #</span></div>
+<div class="line">MaterialQualityUtilities.SetGlobalShaderKeywords( MaterialQuality.High );</div>
+</div><!-- fragment --><p><img src="images/keywords_built-in.png" alt="" class="inline"/> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

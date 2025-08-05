@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['makecurrent_0',['MakeCurrent',['../class_unity_engine_1_1_input_system_1_1_switch_1_1_switch_controller_h_i_d.html#a8c6f3b8abc8de3a42ba79884b5106811',1,'UnityEngine.InputSystem.Switch.SwitchControllerHID.MakeCurrent()'],['../class_unity_engine_1_1_input_system_1_1_switch_1_1_switch_joy_con_l_h_i_d.html#a46934794bf4745b7a02be648eaa2b417',1,'UnityEngine.InputSystem.Switch.SwitchJoyConLHID.MakeCurrent()'],['../class_unity_engine_1_1_input_system_1_1_switch_1_1_switch_joy_con_r_h_i_d.html#a7ebfe71334c3f0836999ba293d4e85e5',1,'UnityEngine.InputSystem.Switch.SwitchJoyConRHID.MakeCurrent()'],['../class_unity_engine_1_1_input_system_1_1_switch_1_1_switch_pro_controller_new_h_i_d.html#a21e9b0dcffc654ffdd69922c2543096f',1,'UnityEngine.InputSystem.Switch.SwitchProControllerNewHID.MakeCurrent()']]]
+];

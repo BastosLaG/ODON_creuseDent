@@ -1,0 +1,5 @@
+var interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_interaction_strength_filter =
+[
+    [ "Process", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_interaction_strength_filter.html#a04e945c470c8d1c8df56763873d2ec97", null ],
+    [ "canProcess", "interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_i_x_r_interaction_strength_filter.html#af43dd932d7d24a63224a9b1b904aaa2e", null ]
+];

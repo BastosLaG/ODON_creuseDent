@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: About NavMesh Obstacles</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_about_obstacles.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">About NavMesh Obstacles </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md247"></a></p>
+<p><img src="./Images/NavMeshObstacleCarving.svg" alt="On the left, carving isn't turned on, and the agent tries to steer around the obstacle. When carving is turned on, the agent plans a route around the blocked location." style="pointer-events: none;" class="inline"/></p>
+<p>NavMesh Obstacles can affect the NavMesh Agent’s navigation during the game in two ways:</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md248"></a>
+Obstructing</h1>
+<p>When <b>Carve</b> is not enabled, the default behavior of the NavMesh Obstacle is similar to that of a <a href="./Glossary.md#colliders" title="An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay."><b>Collider</b></a>. NavMesh Agents try to avoid <a href="./Glossary.md#collision" title="A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, and at least one has a Rigidbody component and is in motion."><b>collisions</b></a> with the NavMesh Obstacle, and when close, they collide with the NavMesh Obstacle. Obstacle avoidance behavior is very basic, and has a short radius. As such, the NavMesh Agent might not be able to find its way around in an environment cluttered with NavMesh Obstacles. This mode is best used in cases where the obstacle is constantly moving (for example, a vehicle or player character).</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md249"></a>
+Carving</h1>
+<p>When <b>Carve</b> is enabled, the obstacle carves a hole in the NavMesh when stationary. When moving, the obstacle is an obstruction. When a hole is carved into the NavMesh, the pathfinder is able to navigate the NavMesh Agent around locations cluttered with obstacles, or find another route if the current path gets blocked by an obstacle. It’s good practice to turn on carving for NavMesh Obstacles that generally block navigation but can be moved by the player or other game events like explosions (for example, crates or barrels).</p>
+<p><img src="./Images/NavMeshObstacleTrap.svg" alt="An agent trying to navigate a cluttered environment with carving disabled" style="pointer-events: none;" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md250"></a>
+Logic for moving NavMesh Obstacles</h1>
+<p><a class="el" href="namespace_unity.html">Unity</a> treats the NavMesh Obstacle as moving when it has moved more than the distance set by the <b>Carve</b> &gt; <b>Move Threshold</b>. When the NavMesh Obstacle moves, the carved hole also moves. However, to reduce CPU overhead, the hole is only recalculated when necessary. The result of this calculation is available in the next frame update. The recalculation logic has two options:</p>
+<ul>
+<li>Only carve when the NavMesh Obstacle is stationary</li>
+<li>Carve when the NavMesh Obstacle has moved</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md251"></a>
+Only carve when the NavMesh Obstacle is stationary</h2>
+<p>This is the default behavior. To enable it, tick the NavMesh Obstacle component’s <b>Carve Only Stationary</b> checkbox. In this mode, when the NavMesh Obstacle moves, the carved hole is removed. When the NavMesh Obstacle has stopped moving and has been stationary for more than the time set by <b>Carving Time To Stationary</b>, it is treated as stationary and the carved hole is updated again. While the NavMesh Obstacle is moving, the NavMesh Agents avoid it using collision avoidance, but don’t plan paths around it.</p>
+<p><b>Carve Only Stationary</b> is generally the best choice in terms of performance, and is a good match when the <a href="./Glossary.md#GameObject" title="The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more."><b>GameObject</b></a> associated with the NavMesh Obstacle is controlled by physics.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md252"></a>
+Carve when the NavMesh Obstacle has moved</h2>
+<p>To enable this mode, clear the NavMesh Obstacle component’s <b>Carve Only Stationary</b> checkbox. When this is cleared, the carved hole is updated when the obstacle has moved more than the distance set by <b>Carving Move Threshold</b>. This mode is useful for large, slowly moving obstacles (for example, a tank that is being avoided by infantry).</p>
+<dl class="section note"><dt>Note</dt><dd>When using NavMesh query methods, you should take into account that there is a one-frame delay between changing a NavMesh Obstacle and the effect that change has on the NavMesh.</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md253"></a>
+Additional Resources</h1>
+<ul>
+<li><a class="el" href="md__library_2_package_cache_2com_8unity_8ai_8navigation_0deb5635ad590d_2_documentation_0i_2_create_nav_mesh_obstacle.html">Guidance on creating NavMesh Obstacles.</a></li>
+<li><a href="./NavInnerWorkings.md#two-cases-for-obstacles" title="Learn more about how NavMesh Obstacles are used as part of navigation.">Inner Workings of the Navigation System</a></li>
+<li><a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/AI.NavMeshObstacle.html" title="Full description of the NavMesh Obstacle scripting API.">NavMesh Obstacle scripting reference</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
