@@ -1,0 +1,35 @@
+var class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering =
+[
+    [ "TaaDebugMode", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#ac9451a7dae30269ffbf202d387f66126", [
+      [ "None", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#ac9451a7dae30269ffbf202d387f66126a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "ShowRawFrame", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#ac9451a7dae30269ffbf202d387f66126a44cd9e37b7a8271a91db4389bdfb24cb", null ],
+      [ "ShowRawFrameNoJitter", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#ac9451a7dae30269ffbf202d387f66126ab16e6450c935aea625bed0c14eecc412", null ],
+      [ "ShowClampedHistory", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#ac9451a7dae30269ffbf202d387f66126a41946374c3065a35de3594dfb68c27ff", null ]
+    ] ],
+    [ "TryGetScreenClearColor", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#aaaab3435a61eef27ed6b90431008dad7", null ],
+    [ "AreAnySettingsActive", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#ad0255205564e4c47e8343267c60cdc12", null ],
+    [ "enableHDR", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#abd6b662ee4512fcf1a4aabd2ae0133d9", null ],
+    [ "enableMsaa", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a91726c19a5c95ea268ed19541b69ac2a", null ],
+    [ "fullScreenDebugMode", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a932eb2c3ae5fa291f652229b39afc6b6", null ],
+    [ "fullScreenDebugModeOutputSizeScreenPercent", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a74236de55aaf6017180de0c7ddbf745e", null ],
+    [ "IsLightingActive", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a6ca8d18e0ff9bc54a386c899add71d27", null ],
+    [ "IsPostProcessingAllowed", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#ad01a36951f5eaf202fd36720979ce986", null ],
+    [ "maxOverdrawCount", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a4448f5a2f56658a1360dd91d666bf6d6", null ],
+    [ "mipDebugMaterialTextureSlot", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a919c0b1188962730e43afee938c91ec5", null ],
+    [ "mipDebugOpacity", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#ab6c2a418d7edfe612eb8c6a9939db011", null ],
+    [ "mipDebugRecentUpdateCooldown", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a14f62cca7fb950691c1c33ea1ef3c1be", null ],
+    [ "mipDebugStatusMode", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a959518ca731882f6a2d51391a00ecab9", null ],
+    [ "mipDebugStatusShowCode", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a77c3524ed98f423b9492146273f6f85a", null ],
+    [ "mipDebugTerrainTexture", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#aa472c1d2446356750e2c6f76ff834048", null ],
+    [ "mipInfoMode", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#abc4b4c770307cb9e0c5f00b7a1ae667c", null ],
+    [ "overdraw", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a58251aa9ddea48b7c11784dcacb14bb6", null ],
+    [ "overdrawMode", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#ae6689a6452c865df4bbd8ed913b01dc6", null ],
+    [ "postProcessingDebugMode", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a9d0f3c6b2dbcf771a9913c641480b6a7", null ],
+    [ "showInfoForAllSlots", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a4248b5bc44d30a86448af094a24fc385", null ],
+    [ "taaDebugMode", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#ae01da84baeca2695316957122e9a875e", null ],
+    [ "validationChannels", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a1431211b339bd5ded4a168d309ac8558", null ],
+    [ "validationMode", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a1225fd623b18e4e388cc6f39f996a3c7", null ],
+    [ "validationRangeMax", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a8f64384a8ea815b23383dc7324060625", null ],
+    [ "validationRangeMin", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#aa0e8ebb509e4be3388805261c2cbf7cb", null ],
+    [ "wireframeMode", "class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering.html#a7b08c9737b6e11d2745b15a26f0f3cbc", null ]
+];

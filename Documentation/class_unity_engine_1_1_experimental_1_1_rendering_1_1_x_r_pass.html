@@ -1,0 +1,661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Référence de la classe UnityEngine.Experimental.Rendering.XRPass</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la classe UnityEngine.Experimental.Rendering.XRPass</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html" title="XRPass holds the render target information and a list of XRView. XRView contains the parameters requi...">XRPass</a> holds the render target information and a list of XRView. XRView contains the parameters required to render (projection and view matrices, viewport, etc) When a pass has 2 views or more, single-pass will be active if the platform supports it. To avoid allocating every frame, XRView is a struct and <a class="el" href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html" title="XRPass holds the render target information and a list of XRView. XRView contains the parameters requi...">XRPass</a> is pooled.  
+ <a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a1a2e1c927ca9d368d2d0422d18dd792b" id="r_a1a2e1c927ca9d368d2d0422d18dd792b"><td class="memItemLeft" align="right" valign="top"><a id="a1a2e1c927ca9d368d2d0422d18dd792b" name="a1a2e1c927ca9d368d2d0422d18dd792b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>XRPass</b> ()</td></tr>
+<tr class="memdesc:a1a2e1c927ca9d368d2d0422d18dd792b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterless constructor. Note: in order to avoid GC, the render pipeline should use XRPass.Create instead of this method. <br /></td></tr>
+<tr class="memitem:ae200a38dd009db39da6d0f262b7f5560" id="r_ae200a38dd009db39da6d0f262b7f5560"><td class="memItemLeft" align="right" valign="top"><a id="ae200a38dd009db39da6d0f262b7f5560" name="ae200a38dd009db39da6d0f262b7f5560"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> ()</td></tr>
+<tr class="memdesc:ae200a38dd009db39da6d0f262b7f5560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default release method. Can be overridden by render pipelines. <br /></td></tr>
+<tr class="memitem:a7cd44575be9eb67f49194d6300cc2432" id="r_a7cd44575be9eb67f49194d6300cc2432"><td class="memItemLeft" align="right" valign="top">Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cd44575be9eb67f49194d6300cc2432">GetProjMatrix</a> (int viewIndex=0)</td></tr>
+<tr class="memdesc:a7cd44575be9eb67f49194d6300cc2432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the projection matrix for a given view.  <br /></td></tr>
+<tr class="memitem:a3315a5fedf0ce8617036c0c0885a3e4e" id="r_a3315a5fedf0ce8617036c0c0885a3e4e"><td class="memItemLeft" align="right" valign="top">Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3315a5fedf0ce8617036c0c0885a3e4e">GetViewMatrix</a> (int viewIndex=0)</td></tr>
+<tr class="memdesc:a3315a5fedf0ce8617036c0c0885a3e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the view matrix for a given view.  <br /></td></tr>
+<tr class="memitem:a4156717123443bb3d0ec4240d38e4559" id="r_a4156717123443bb3d0ec4240d38e4559"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4156717123443bb3d0ec4240d38e4559">GetPrevViewValid</a> (int viewIndex=0)</td></tr>
+<tr class="memdesc:a4156717123443bb3d0ec4240d38e4559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the previous frame view matrix for a given view is valid.  <br /></td></tr>
+<tr class="memitem:a00b11a25449bb2d1c23db64e89d83766" id="r_a00b11a25449bb2d1c23db64e89d83766"><td class="memItemLeft" align="right" valign="top">Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00b11a25449bb2d1c23db64e89d83766">GetPrevViewMatrix</a> (int viewIndex=0)</td></tr>
+<tr class="memdesc:a00b11a25449bb2d1c23db64e89d83766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the previous frame view matrix for a given view.  <br /></td></tr>
+<tr class="memitem:a2fbeee4da42e3a8c083c4a32ce80a27d" id="r_a2fbeee4da42e3a8c083c4a32ce80a27d"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fbeee4da42e3a8c083c4a32ce80a27d">GetViewport</a> (int viewIndex=0)</td></tr>
+<tr class="memdesc:a2fbeee4da42e3a8c083c4a32ce80a27d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the viewport for a given view.  <br /></td></tr>
+<tr class="memitem:ad4040b8cc1173985d647cacb33a16efe" id="r_ad4040b8cc1173985d647cacb33a16efe"><td class="memItemLeft" align="right" valign="top">Mesh&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4040b8cc1173985d647cacb33a16efe">GetOcclusionMesh</a> (int viewIndex=0)</td></tr>
+<tr class="memdesc:ad4040b8cc1173985d647cacb33a16efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the occlusion mesh for a given view.  <br /></td></tr>
+<tr class="memitem:ac2d694c69ca3bb2956e381c30e3dc054" id="r_ac2d694c69ca3bb2956e381c30e3dc054"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2d694c69ca3bb2956e381c30e3dc054">GetTextureArraySlice</a> (int viewIndex=0)</td></tr>
+<tr class="memdesc:ac2d694c69ca3bb2956e381c30e3dc054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the destination slice index (for texture array) for a given view.  <br /></td></tr>
+<tr class="memitem:a6575055d92b1563edc44e46afcec70e9" id="r_a6575055d92b1563edc44e46afcec70e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6575055d92b1563edc44e46afcec70e9">StartSinglePass</a> (CommandBuffer cmd)</td></tr>
+<tr class="memdesc:a6575055d92b1563edc44e46afcec70e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue up render commands to enable single-pass techniques. Note: depending on the platform and settings, either single-pass instancing or the multiview extension will be used.  <br /></td></tr>
+<tr class="memitem:ab75792057fb7b0cf3cde7f2ab863573d" id="r_ab75792057fb7b0cf3cde7f2ab863573d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab75792057fb7b0cf3cde7f2ab863573d">StartSinglePass</a> (<a class="el" href="interface_unity_engine_1_1_rendering_1_1_i_raster_command_buffer.html">IRasterCommandBuffer</a> cmd)</td></tr>
+<tr class="memdesc:ab75792057fb7b0cf3cde7f2ab863573d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue up render commands to disable single-pass techniques.  <br /></td></tr>
+<tr class="memitem:a028459cbfa06601bb8489a0c94552224" id="r_a028459cbfa06601bb8489a0c94552224"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a028459cbfa06601bb8489a0c94552224">StopSinglePass</a> (CommandBuffer cmd)</td></tr>
+<tr class="memdesc:a028459cbfa06601bb8489a0c94552224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue up render commands to disable single-pass techniques.  <br /></td></tr>
+<tr class="memitem:aab02fb8d8240ded747bb4475e7c96778" id="r_aab02fb8d8240ded747bb4475e7c96778"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab02fb8d8240ded747bb4475e7c96778">StopSinglePass</a> (<a class="el" href="class_unity_engine_1_1_rendering_1_1_base_command_buffer.html">BaseCommandBuffer</a> cmd)</td></tr>
+<tr class="memdesc:aab02fb8d8240ded747bb4475e7c96778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue up render commands to disable single-pass techniques.  <br /></td></tr>
+<tr class="memitem:aa0c0fb35d62fbe04289a5f2120f43e6e" id="r_aa0c0fb35d62fbe04289a5f2120f43e6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0c0fb35d62fbe04289a5f2120f43e6e">RenderOcclusionMesh</a> (CommandBuffer cmd, bool renderIntoTexture=false)</td></tr>
+<tr class="memdesc:aa0c0fb35d62fbe04289a5f2120f43e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate commands to render the occlusion mesh for this pass. In single-pass mode : the meshes for all views are combined into one mesh, where the corresponding view index is encoded into each vertex. The keyword "XR_OCCLUSION_MESH_COMBINED" is also enabled when rendering the combined mesh.  <br /></td></tr>
+<tr class="memitem:aea490da13225e94e268edc90d6a2de03" id="r_aea490da13225e94e268edc90d6a2de03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea490da13225e94e268edc90d6a2de03">RenderOcclusionMesh</a> (<a class="el" href="class_unity_engine_1_1_rendering_1_1_raster_command_buffer.html">RasterCommandBuffer</a> cmd, bool renderIntoTexture=false)</td></tr>
+<tr class="memdesc:aea490da13225e94e268edc90d6a2de03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate commands to render the occlusion mesh for this pass. In single-pass mode : the meshes for all views are combined into one mesh, where the corresponding view index is encoded into each vertex. The keyword "XR_OCCLUSION_MESH_COMBINED" is also enabled when rendering the combined mesh.  <br /></td></tr>
+<tr class="memitem:a8f4205af1d87338c7ea2ba19e451e623" id="r_a8f4205af1d87338c7ea2ba19e451e623"><td class="memItemLeft" align="right" valign="top"><a id="a8f4205af1d87338c7ea2ba19e451e623" name="a8f4205af1d87338c7ea2ba19e451e623"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderDebugXRViewsFrustum</b> ()</td></tr>
+<tr class="memdesc:a8f4205af1d87338c7ea2ba19e451e623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw debug line for all <a class="el" href="namespace_unity_engine_1_1_experimental_1_1_x_r.html">XR</a> views. <br /></td></tr>
+<tr class="memitem:a210f9e7592350968e1c431b2e60ad84e" id="r_a210f9e7592350968e1c431b2e60ad84e"><td class="memItemLeft" align="right" valign="top">Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a210f9e7592350968e1c431b2e60ad84e">ApplyXRViewCenterOffset</a> (Vector2 center)</td></tr>
+<tr class="memdesc:a210f9e7592350968e1c431b2e60ad84e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take a point that is center-relative (0.5, 0.5) and modify it to be placed relative to the view's center instead, respecting the asymmetric FOV (if it is used)  <br /></td></tr>
+<tr class="memitem:ac03ae357cab05309e6c31bece2372e4a" id="r_ac03ae357cab05309e6c31bece2372e4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac03ae357cab05309e6c31bece2372e4a">InitBase</a> (<a class="el" href="struct_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_create_info.html">XRPassCreateInfo</a> createInfo)</td></tr>
+<tr class="memdesc:ac03ae357cab05309e6c31bece2372e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the base class fields.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Fonctions membres publiques statiques</h2></td></tr>
+<tr class="memitem:a8b2370b3f6ab0a80176254d44a07bce2" id="r_a8b2370b3f6ab0a80176254d44a07bce2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html">XRPass</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b2370b3f6ab0a80176254d44a07bce2">CreateDefault</a> (<a class="el" href="struct_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_create_info.html">XRPassCreateInfo</a> createInfo)</td></tr>
+<tr class="memdesc:a8b2370b3f6ab0a80176254d44a07bce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default allocator method for <a class="el" href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html" title="XRPass holds the render target information and a list of XRView. XRView contains the parameters requi...">XRPass</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Propriétés</h2></td></tr>
+<tr class="memitem:aeb53b775a96c22a648f9bd9abe43f8aa" id="r_aeb53b775a96c22a648f9bd9abe43f8aa"><td class="memItemLeft" align="right" valign="top"><a id="aeb53b775a96c22a648f9bd9abe43f8aa" name="aeb53b775a96c22a648f9bd9abe43f8aa"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled</b><code> [get]</code></td></tr>
+<tr class="memdesc:aeb53b775a96c22a648f9bd9abe43f8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the pass contains at least one view. <br /></td></tr>
+<tr class="memitem:af267f58188b6f66f0b7956df89e2a240" id="r_af267f58188b6f66f0b7956df89e2a240"><td class="memItemLeft" align="right" valign="top"><a id="af267f58188b6f66f0b7956df89e2a240" name="af267f58188b6f66f0b7956df89e2a240"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>supportsFoveatedRendering</b><code> [get]</code></td></tr>
+<tr class="memdesc:af267f58188b6f66f0b7956df89e2a240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the pass can use foveated rendering commands. <br /></td></tr>
+<tr class="memitem:afe52e61b91fe647e8f38ea876c096aef" id="r_afe52e61b91fe647e8f38ea876c096aef"><td class="memItemLeft" align="right" valign="top"><a id="afe52e61b91fe647e8f38ea876c096aef" name="afe52e61b91fe647e8f38ea876c096aef"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>copyDepth</b><code> [get]</code></td></tr>
+<tr class="memdesc:afe52e61b91fe647e8f38ea876c096aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the render pipeline is expected to output a valid depth buffer to the renderTarget. <br /></td></tr>
+<tr class="memitem:aab09078096babdd0aa714abba12593a4" id="r_aab09078096babdd0aa714abba12593a4"><td class="memItemLeft" align="right" valign="top"><a id="aab09078096babdd0aa714abba12593a4" name="aab09078096babdd0aa714abba12593a4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasMotionVectorPass</b><code> [get]</code></td></tr>
+<tr class="memdesc:aab09078096babdd0aa714abba12593a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the render pipeline is expected to generate motion data and output to the motionVectorRenderTarget. <br /></td></tr>
+<tr class="memitem:abc0b3b708f3be1b0acb478ab20136654" id="r_abc0b3b708f3be1b0acb478ab20136654"><td class="memItemLeft" align="right" valign="top"><a id="abc0b3b708f3be1b0acb478ab20136654" name="abc0b3b708f3be1b0acb478ab20136654"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFirstCameraPass</b><code> [get]</code></td></tr>
+<tr class="memdesc:abc0b3b708f3be1b0acb478ab20136654"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, is the first pass of a xr camera. <br /></td></tr>
+<tr class="memitem:a2991d21893090cbb284d153aeef0a34e" id="r_a2991d21893090cbb284d153aeef0a34e"><td class="memItemLeft" align="right" valign="top"><a id="a2991d21893090cbb284d153aeef0a34e" name="a2991d21893090cbb284d153aeef0a34e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLastCameraPass</b><code> [get]</code></td></tr>
+<tr class="memdesc:a2991d21893090cbb284d153aeef0a34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, is the last pass of a xr camera Multipass last pass: pass ID == 1, viewCount == 1 Singlepass last pass: pass ID == 0, viewCount ==2 Emptypass(non-XR) last pass: pass ID == 0, viewCount == 0. <br /></td></tr>
+<tr class="memitem:a13fb32f36016f0dc1f16f28a9800d980" id="r_a13fb32f36016f0dc1f16f28a9800d980"><td class="memItemLeft" align="right" valign="top"><a id="a13fb32f36016f0dc1f16f28a9800d980" name="a13fb32f36016f0dc1f16f28a9800d980"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>multipassId</b><code> [get]</code></td></tr>
+<tr class="memdesc:a13fb32f36016f0dc1f16f28a9800d980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the pass inside the frame. <br /></td></tr>
+<tr class="memitem:afeb7d0380d23128463d8c5de12d159dd" id="r_afeb7d0380d23128463d8c5de12d159dd"><td class="memItemLeft" align="right" valign="top"><a id="afeb7d0380d23128463d8c5de12d159dd" name="afeb7d0380d23128463d8c5de12d159dd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>cullingPassId</b><code> [get]</code></td></tr>
+<tr class="memdesc:afeb7d0380d23128463d8c5de12d159dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index used for culling. It can be shared between multiple passes. <br /></td></tr>
+<tr class="memitem:a8122c5b1fb0d41c7f4871a71b563052f" id="r_a8122c5b1fb0d41c7f4871a71b563052f"><td class="memItemLeft" align="right" valign="top"><a id="a8122c5b1fb0d41c7f4871a71b563052f" name="a8122c5b1fb0d41c7f4871a71b563052f"></a>
+RenderTargetIdentifier&#160;</td><td class="memItemRight" valign="bottom"><b>renderTarget</b><code> [get]</code></td></tr>
+<tr class="memdesc:a8122c5b1fb0d41c7f4871a71b563052f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destination render target. <br /></td></tr>
+<tr class="memitem:ab3ba27f1d2781fbc2ebd026b78506c3c" id="r_ab3ba27f1d2781fbc2ebd026b78506c3c"><td class="memItemLeft" align="right" valign="top"><a id="ab3ba27f1d2781fbc2ebd026b78506c3c" name="ab3ba27f1d2781fbc2ebd026b78506c3c"></a>
+RenderTextureDescriptor&#160;</td><td class="memItemRight" valign="bottom"><b>renderTargetDesc</b><code> [get]</code></td></tr>
+<tr class="memdesc:ab3ba27f1d2781fbc2ebd026b78506c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destination render target descriptor. <br /></td></tr>
+<tr class="memitem:a588d783914769f2ec50131e038a5a2bf" id="r_a588d783914769f2ec50131e038a5a2bf"><td class="memItemLeft" align="right" valign="top"><a id="a588d783914769f2ec50131e038a5a2bf" name="a588d783914769f2ec50131e038a5a2bf"></a>
+RenderTargetIdentifier&#160;</td><td class="memItemRight" valign="bottom"><b>motionVectorRenderTarget</b><code> [get]</code></td></tr>
+<tr class="memdesc:a588d783914769f2ec50131e038a5a2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destination render target for motion vectors. <br /></td></tr>
+<tr class="memitem:a39e2dda68335c9ae2e0816f41c011df3" id="r_a39e2dda68335c9ae2e0816f41c011df3"><td class="memItemLeft" align="right" valign="top"><a id="a39e2dda68335c9ae2e0816f41c011df3" name="a39e2dda68335c9ae2e0816f41c011df3"></a>
+RenderTextureDescriptor&#160;</td><td class="memItemRight" valign="bottom"><b>motionVectorRenderTargetDesc</b><code> [get]</code></td></tr>
+<tr class="memdesc:a39e2dda68335c9ae2e0816f41c011df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destination render target descriptor for motion vectors. <br /></td></tr>
+<tr class="memitem:a2e75f17ec1b45e50892fa239289c8f53" id="r_a2e75f17ec1b45e50892fa239289c8f53"><td class="memItemLeft" align="right" valign="top"><a id="a2e75f17ec1b45e50892fa239289c8f53" name="a2e75f17ec1b45e50892fa239289c8f53"></a>
+ScriptableCullingParameters&#160;</td><td class="memItemRight" valign="bottom"><b>cullingParams</b><code> [get]</code></td></tr>
+<tr class="memdesc:a2e75f17ec1b45e50892fa239289c8f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters used for culling. <br /></td></tr>
+<tr class="memitem:a6f57f54e7517679288fd671ebb7774d7" id="r_a6f57f54e7517679288fd671ebb7774d7"><td class="memItemLeft" align="right" valign="top"><a id="a6f57f54e7517679288fd671ebb7774d7" name="a6f57f54e7517679288fd671ebb7774d7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>viewCount</b><code> [get]</code></td></tr>
+<tr class="memdesc:a6f57f54e7517679288fd671ebb7774d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of views inside this pass. <br /></td></tr>
+<tr class="memitem:aaec6bf7c7cb69080231c32fb6ea3d4fd" id="r_aaec6bf7c7cb69080231c32fb6ea3d4fd"><td class="memItemLeft" align="right" valign="top"><a id="aaec6bf7c7cb69080231c32fb6ea3d4fd" name="aaec6bf7c7cb69080231c32fb6ea3d4fd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>singlePassEnabled</b><code> [get]</code></td></tr>
+<tr class="memdesc:aaec6bf7c7cb69080231c32fb6ea3d4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the render pipeline is expected to use single-pass techniques to save CPU time. <br /></td></tr>
+<tr class="memitem:a35a5771808b6083f4e059a193c298b21" id="r_a35a5771808b6083f4e059a193c298b21"><td class="memItemLeft" align="right" valign="top"><a id="a35a5771808b6083f4e059a193c298b21" name="a35a5771808b6083f4e059a193c298b21"></a>
+IntPtr&#160;</td><td class="memItemRight" valign="bottom"><b>foveatedRenderingInfo</b><code> [get]</code></td></tr>
+<tr class="memdesc:a35a5771808b6083f4e059a193c298b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Native pointer from the <a class="el" href="namespace_unity_engine_1_1_experimental_1_1_x_r.html">XR</a> plugin to be consumed by ConfigureFoveatedRendering. <br /></td></tr>
+<tr class="memitem:aa4cbbe0f5db68acbed2162651f84fe35" id="r_aa4cbbe0f5db68acbed2162651f84fe35"><td class="memItemLeft" align="right" valign="top"><a id="aa4cbbe0f5db68acbed2162651f84fe35" name="aa4cbbe0f5db68acbed2162651f84fe35"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHDRDisplayOutputActive</b><code> [get]</code></td></tr>
+<tr class="memdesc:aa4cbbe0f5db68acbed2162651f84fe35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true when the active display has HDR enabled. <br /></td></tr>
+<tr class="memitem:a709ea1792ff172c8d8ffd4e2df8e6135" id="r_a709ea1792ff172c8d8ffd4e2df8e6135"><td class="memItemLeft" align="right" valign="top"><a id="a709ea1792ff172c8d8ffd4e2df8e6135" name="a709ea1792ff172c8d8ffd4e2df8e6135"></a>
+ColorGamut&#160;</td><td class="memItemRight" valign="bottom"><b>hdrDisplayOutputColorGamut</b><code> [get]</code></td></tr>
+<tr class="memdesc:a709ea1792ff172c8d8ffd4e2df8e6135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns color gamut of the active HDR display. <br /></td></tr>
+<tr class="memitem:ace232eb46d5d10c64abef9c9b2ecc55c" id="r_ace232eb46d5d10c64abef9c9b2ecc55c"><td class="memItemLeft" align="right" valign="top"><a id="ace232eb46d5d10c64abef9c9b2ecc55c" name="ace232eb46d5d10c64abef9c9b2ecc55c"></a>
+<a class="el" href="struct_unity_engine_1_1_rendering_1_1_h_d_r_output_utils_1_1_h_d_r_display_information.html">HDROutputUtils.HDRDisplayInformation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hdrDisplayOutputInformation</b><code> [get]</code></td></tr>
+<tr class="memdesc:ace232eb46d5d10c64abef9c9b2ecc55c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns HDR display information of the active HDR display. <br /></td></tr>
+<tr class="memitem:a7f48d07be6005a41e0cfb047793069a1" id="r_a7f48d07be6005a41e0cfb047793069a1"><td class="memItemLeft" align="right" valign="top"><a id="a7f48d07be6005a41e0cfb047793069a1" name="a7f48d07be6005a41e0cfb047793069a1"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>occlusionMeshScale</b><code> [get]</code></td></tr>
+<tr class="memdesc:a7f48d07be6005a41e0cfb047793069a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scaling factor used when drawing the occlusion mesh. <br /></td></tr>
+<tr class="memitem:a1aad2edfb57aa1d39c99e4e25d48e2da" id="r_a1aad2edfb57aa1d39c99e4e25d48e2da"><td class="memItemLeft" align="right" valign="top"><a id="a1aad2edfb57aa1d39c99e4e25d48e2da" name="a1aad2edfb57aa1d39c99e4e25d48e2da"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasValidOcclusionMesh</b><code> [get]</code></td></tr>
+<tr class="memdesc:a1aad2edfb57aa1d39c99e4e25d48e2da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the pass was setup with expected mesh and material. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p><a class="el" href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html" title="XRPass holds the render target information and a list of XRView. XRView contains the parameters requi...">XRPass</a> holds the render target information and a list of XRView. XRView contains the parameters required to render (projection and view matrices, viewport, etc) When a pass has 2 views or more, single-pass will be active if the platform supports it. To avoid allocating every frame, XRView is a struct and <a class="el" href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html" title="XRPass holds the render target information and a list of XRView. XRView contains the parameters requi...">XRPass</a> is pooled. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="a210f9e7592350968e1c431b2e60ad84e" name="a210f9e7592350968e1c431b2e60ad84e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210f9e7592350968e1c431b2e60ad84e">&#9670;&#160;</a></span>ApplyXRViewCenterOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector4 UnityEngine.Experimental.Rendering.XRPass.ApplyXRViewCenterOffset </td>
+          <td>(</td>
+          <td class="paramtype">Vector2</td>          <td class="paramname"><span class="paramname"><em>center</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Take a point that is center-relative (0.5, 0.5) and modify it to be placed relative to the view's center instead, respecting the asymmetric FOV (if it is used) </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>Center relative point for symmetric FOV. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>View center relative points. First view center is stored in x,y components and second view center is stored in z,w components. </dd></dl>
+
+</div>
+</div>
+<a id="a8b2370b3f6ab0a80176254d44a07bce2" name="a8b2370b3f6ab0a80176254d44a07bce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b2370b3f6ab0a80176254d44a07bce2">&#9670;&#160;</a></span>CreateDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html">XRPass</a> UnityEngine.Experimental.Rendering.XRPass.CreateDefault </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_create_info.html">XRPassCreateInfo</a></td>          <td class="paramname"><span class="paramname"><em>createInfo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default allocator method for <a class="el" href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html" title="XRPass holds the render target information and a list of XRView. XRView contains the parameters requi...">XRPass</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">createInfo</td><td>A descriptor used to create and initialize the <a class="el" href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html" title="XRPass holds the render target information and a list of XRView. XRView contains the parameters requi...">XRPass</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Default <a class="el" href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html" title="XRPass holds the render target information and a list of XRView. XRView contains the parameters requi...">XRPass</a> created from createInfo descriptor. </dd></dl>
+
+</div>
+</div>
+<a id="ad4040b8cc1173985d647cacb33a16efe" name="ad4040b8cc1173985d647cacb33a16efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4040b8cc1173985d647cacb33a16efe">&#9670;&#160;</a></span>GetOcclusionMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mesh UnityEngine.Experimental.Rendering.XRPass.GetOcclusionMesh </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>viewIndex</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the occlusion mesh for a given view. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewIndex</td><td>Index of XRView to retrieve the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="namespace_unity_engine_1_1_experimental_1_1_x_r.html">XR</a> occlusion mesh for the specified XRView. </dd></dl>
+
+</div>
+</div>
+<a id="a00b11a25449bb2d1c23db64e89d83766" name="a00b11a25449bb2d1c23db64e89d83766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00b11a25449bb2d1c23db64e89d83766">&#9670;&#160;</a></span>GetPrevViewMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix4x4 UnityEngine.Experimental.Rendering.XRPass.GetPrevViewMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>viewIndex</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the previous frame view matrix for a given view. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewIndex</td><td>Index of XRView to retrieve the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Previous frame <a class="el" href="namespace_unity_engine_1_1_experimental_1_1_x_r.html">XR</a> view matrix for the specified XRView. </dd></dl>
+
+</div>
+</div>
+<a id="a4156717123443bb3d0ec4240d38e4559" name="a4156717123443bb3d0ec4240d38e4559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4156717123443bb3d0ec4240d38e4559">&#9670;&#160;</a></span>GetPrevViewValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Experimental.Rendering.XRPass.GetPrevViewValid </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>viewIndex</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the previous frame view matrix for a given view is valid. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewIndex</td><td>Index of XRView to retrieve the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Boolean describing if previous frame view matrix for a given view is valid. </dd></dl>
+
+</div>
+</div>
+<a id="a7cd44575be9eb67f49194d6300cc2432" name="a7cd44575be9eb67f49194d6300cc2432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd44575be9eb67f49194d6300cc2432">&#9670;&#160;</a></span>GetProjMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix4x4 UnityEngine.Experimental.Rendering.XRPass.GetProjMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>viewIndex</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the projection matrix for a given view. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewIndex</td><td>Index of XRView to retrieve the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="namespace_unity_engine_1_1_experimental_1_1_x_r.html">XR</a> projection matrix for the specified XRView. </dd></dl>
+
+</div>
+</div>
+<a id="ac2d694c69ca3bb2956e381c30e3dc054" name="ac2d694c69ca3bb2956e381c30e3dc054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d694c69ca3bb2956e381c30e3dc054">&#9670;&#160;</a></span>GetTextureArraySlice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEngine.Experimental.Rendering.XRPass.GetTextureArraySlice </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>viewIndex</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the destination slice index (for texture array) for a given view. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewIndex</td><td>Index of XRView to retrieve the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="namespace_unity_engine_1_1_experimental_1_1_x_r.html">XR</a> target slice index for the specified XRView. </dd></dl>
+
+</div>
+</div>
+<a id="a3315a5fedf0ce8617036c0c0885a3e4e" name="a3315a5fedf0ce8617036c0c0885a3e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3315a5fedf0ce8617036c0c0885a3e4e">&#9670;&#160;</a></span>GetViewMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix4x4 UnityEngine.Experimental.Rendering.XRPass.GetViewMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>viewIndex</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the view matrix for a given view. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewIndex</td><td>Index of XRView to retrieve the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="namespace_unity_engine_1_1_experimental_1_1_x_r.html">XR</a> view matrix for the specified XRView. </dd></dl>
+
+</div>
+</div>
+<a id="a2fbeee4da42e3a8c083c4a32ce80a27d" name="a2fbeee4da42e3a8c083c4a32ce80a27d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fbeee4da42e3a8c083c4a32ce80a27d">&#9670;&#160;</a></span>GetViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect UnityEngine.Experimental.Rendering.XRPass.GetViewport </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>viewIndex</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the viewport for a given view. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewIndex</td><td>Index of XRView to retrieve the data from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="namespace_unity_engine_1_1_experimental_1_1_x_r.html">XR</a> viewport rect for the specified XRView. </dd></dl>
+
+</div>
+</div>
+<a id="ac03ae357cab05309e6c31bece2372e4a" name="ac03ae357cab05309e6c31bece2372e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac03ae357cab05309e6c31bece2372e4a">&#9670;&#160;</a></span>InitBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Experimental.Rendering.XRPass.InitBase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_create_info.html">XRPassCreateInfo</a></td>          <td class="paramname"><span class="paramname"><em>createInfo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the base class fields. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">createInfo</td><td>A descriptor used to create and initialize the <a class="el" href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html" title="XRPass holds the render target information and a list of XRView. XRView contains the parameters requi...">XRPass</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa0c0fb35d62fbe04289a5f2120f43e6e" name="aa0c0fb35d62fbe04289a5f2120f43e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c0fb35d62fbe04289a5f2120f43e6e">&#9670;&#160;</a></span>RenderOcclusionMesh() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Experimental.Rendering.XRPass.RenderOcclusionMesh </td>
+          <td>(</td>
+          <td class="paramtype">CommandBuffer</td>          <td class="paramname"><span class="paramname"><em>cmd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>renderIntoTexture</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate commands to render the occlusion mesh for this pass. In single-pass mode : the meshes for all views are combined into one mesh, where the corresponding view index is encoded into each vertex. The keyword "XR_OCCLUSION_MESH_COMBINED" is also enabled when rendering the combined mesh. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>CommandBuffer to modify</td></tr>
+    <tr><td class="paramname">renderIntoTexture</td><td>Set to true when rendering into a render texture. Used for handling <a class="el" href="namespace_unity.html">Unity</a> yflip.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea490da13225e94e268edc90d6a2de03" name="aea490da13225e94e268edc90d6a2de03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea490da13225e94e268edc90d6a2de03">&#9670;&#160;</a></span>RenderOcclusionMesh() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Experimental.Rendering.XRPass.RenderOcclusionMesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_raster_command_buffer.html">RasterCommandBuffer</a></td>          <td class="paramname"><span class="paramname"><em>cmd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>renderIntoTexture</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate commands to render the occlusion mesh for this pass. In single-pass mode : the meshes for all views are combined into one mesh, where the corresponding view index is encoded into each vertex. The keyword "XR_OCCLUSION_MESH_COMBINED" is also enabled when rendering the combined mesh. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td><a class="el" href="class_unity_engine_1_1_rendering_1_1_raster_command_buffer.html" title="A command buffer that is used with a rasterization render graph pass.">RasterCommandBuffer</a> to modify</td></tr>
+    <tr><td class="paramname">renderIntoTexture</td><td>Set to true when rendering into a render texture. Used for handling <a class="el" href="namespace_unity.html">Unity</a> yflip.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6575055d92b1563edc44e46afcec70e9" name="a6575055d92b1563edc44e46afcec70e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6575055d92b1563edc44e46afcec70e9">&#9670;&#160;</a></span>StartSinglePass() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Experimental.Rendering.XRPass.StartSinglePass </td>
+          <td>(</td>
+          <td class="paramtype">CommandBuffer</td>          <td class="paramname"><span class="paramname"><em>cmd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Queue up render commands to enable single-pass techniques. Note: depending on the platform and settings, either single-pass instancing or the multiview extension will be used. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>CommandBuffer to modify</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab75792057fb7b0cf3cde7f2ab863573d" name="ab75792057fb7b0cf3cde7f2ab863573d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab75792057fb7b0cf3cde7f2ab863573d">&#9670;&#160;</a></span>StartSinglePass() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Experimental.Rendering.XRPass.StartSinglePass </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_i_raster_command_buffer.html">IRasterCommandBuffer</a></td>          <td class="paramname"><span class="paramname"><em>cmd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Queue up render commands to disable single-pass techniques. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td><a class="el" href="interface_unity_engine_1_1_rendering_1_1_i_raster_command_buffer.html" title="This interface declares functions that are specific to a rasterization command buffer.">IRasterCommandBuffer</a> compatible command buffer to modify (This can be a <a class="el" href="class_unity_engine_1_1_rendering_1_1_raster_command_buffer.html" title="A command buffer that is used with a rasterization render graph pass.">RasterCommandBuffer</a> or an <a class="el" href="class_unity_engine_1_1_rendering_1_1_unsafe_command_buffer.html" title="A command buffer that is used with an unsafe render graph pass.">UnsafeCommandBuffer</a>)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab02fb8d8240ded747bb4475e7c96778" name="aab02fb8d8240ded747bb4475e7c96778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab02fb8d8240ded747bb4475e7c96778">&#9670;&#160;</a></span>StopSinglePass() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Experimental.Rendering.XRPass.StopSinglePass </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_base_command_buffer.html">BaseCommandBuffer</a></td>          <td class="paramname"><span class="paramname"><em>cmd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Queue up render commands to disable single-pass techniques. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td><a class="el" href="class_unity_engine_1_1_rendering_1_1_base_command_buffer.html" title="Render graph command buffer types inherit from this base class. It provides some shared functionality...">BaseCommandBuffer</a> to modify</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a028459cbfa06601bb8489a0c94552224" name="a028459cbfa06601bb8489a0c94552224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a028459cbfa06601bb8489a0c94552224">&#9670;&#160;</a></span>StopSinglePass() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Experimental.Rendering.XRPass.StopSinglePass </td>
+          <td>(</td>
+          <td class="paramtype">CommandBuffer</td>          <td class="paramname"><span class="paramname"><em>cmd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Queue up render commands to disable single-pass techniques. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>CommandBuffer to modify.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_experimental.html">Experimental</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_experimental_1_1_rendering.html">Rendering</a></li><li class="navelem"><a href="class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass.html">XRPass</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

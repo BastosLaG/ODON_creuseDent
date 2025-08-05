@@ -1,0 +1,5 @@
+var class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute =
+[
+    [ "ElementAdderMenuCommandAttribute", "class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute.html#ac25a71332ee2f4287ee70fecf55107f0", null ],
+    [ "ContractType", "class_unity_1_1_visual_scripting_1_1_reorderable_list_1_1_element___adder___menu_1_1_element_adder_menu_command_attribute.html#acce678641f12e6d931ad9f1744334c76", null ]
+];

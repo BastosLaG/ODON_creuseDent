@@ -1,0 +1,8 @@
+var class_unity_editor_1_1_rendering_1_1_tests_1_1_rendering_debugger_tests_1_1_test_debug_display_sea45957d39b0d7147986526b0ff5e6c2 =
+[
+    [ "CreatePanel", "class_unity_editor_1_1_rendering_1_1_tests_1_1_rendering_debugger_tests_1_1_test_debug_display_sea45957d39b0d7147986526b0ff5e6c2.html#a07862133d19263d354e82f15fb200cf6", null ],
+    [ "TryGetScreenClearColor", "class_unity_editor_1_1_rendering_1_1_tests_1_1_rendering_debugger_tests_1_1_test_debug_display_sea45957d39b0d7147986526b0ff5e6c2.html#ac8355c9bb6015c6553f9ce93c75a112f", null ],
+    [ "AreAnySettingsActive", "class_unity_editor_1_1_rendering_1_1_tests_1_1_rendering_debugger_tests_1_1_test_debug_display_sea45957d39b0d7147986526b0ff5e6c2.html#abe52f4fe39aad054a0dff35d39b3d335", null ],
+    [ "IsLightingActive", "class_unity_editor_1_1_rendering_1_1_tests_1_1_rendering_debugger_tests_1_1_test_debug_display_sea45957d39b0d7147986526b0ff5e6c2.html#a702b32b3d0abfdceff6692896824937d", null ],
+    [ "IsPostProcessingAllowed", "class_unity_editor_1_1_rendering_1_1_tests_1_1_rendering_debugger_tests_1_1_test_debug_display_sea45957d39b0d7147986526b0ff5e6c2.html#abb51bdade90632fdcf867bfcc4960a65", null ]
+];

@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_util_1_1_render_graph_utils_resources =
+[
+    [ "coreCopyPS", "class_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_util_1_1_render_graph_utils_resources.html#a6ba889fb1283c9f068b818e7a29e4743", null ]
+];

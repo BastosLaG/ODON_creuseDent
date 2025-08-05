@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON:  Fichier source de Assets/Samples/XR Interaction Toolkit/3.0.8/Starter Assets/Scripts/ObjectSpawner.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_object_spawner_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ObjectSpawner.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine.XR.Interaction.Toolkit.Utilities;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets.html">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html">   10</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html">ObjectSpawner</a> : MonoBehaviour</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [SerializeField]</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        [Tooltip(<span class="stringliteral">&quot;The camera that objects will face when spawned. If not set, defaults to the main camera.&quot;</span>)]</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        Camera m_CameraToFace;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a4c6a22d06476fab77058c5ec60076559">   19</a></span>        <span class="keyword">public</span> Camera <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a4c6a22d06476fab77058c5ec60076559">cameraToFace</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keyword">get</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                EnsureFacingCamera();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                <span class="keywordflow">return</span> m_CameraToFace;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keyword">set</span> =&gt; m_CameraToFace = value;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        [SerializeField]</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        [Tooltip(<span class="stringliteral">&quot;The list of prefabs available to spawn.&quot;</span>)]</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        List&lt;GameObject&gt; m_ObjectPrefabs = <span class="keyword">new</span> List&lt;GameObject&gt;();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a4d0519ecfdbfc5b8c69a4d7dc85195e3">   36</a></span>        <span class="keyword">public</span> List&lt;GameObject&gt; <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a4d0519ecfdbfc5b8c69a4d7dc85195e3">objectPrefabs</a></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keyword">get</span> =&gt; m_ObjectPrefabs;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keyword">set</span> =&gt; m_ObjectPrefabs = value;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        [SerializeField]</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        [Tooltip(<span class="stringliteral">&quot;Optional prefab to spawn for each spawned object. Use a prefab with the Destroy Self component to make &quot;</span> +</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="stringliteral">&quot;sure the visualization only lives temporarily.&quot;</span>)]</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        GameObject m_SpawnVisualizationPrefab;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a0322bb090bcf38b6237199fedf5e9df4">   51</a></span>        <span class="keyword">public</span> GameObject <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a0322bb090bcf38b6237199fedf5e9df4">spawnVisualizationPrefab</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keyword">get</span> =&gt; m_SpawnVisualizationPrefab;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keyword">set</span> =&gt; m_SpawnVisualizationPrefab = value;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        [SerializeField]</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        [Tooltip(<span class="stringliteral">&quot;The index of the prefab to spawn. If outside the range of the list, this behavior will select &quot;</span> +</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="stringliteral">&quot;a random object each time it spawns.&quot;</span>)]</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">int</span> m_SpawnOptionIndex = -1;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="};">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#ad7eca206ffd5419767bc8042447d91ce">   67</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#ad7eca206ffd5419767bc8042447d91ce">spawnOptionIndex</a></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keyword">get</span> =&gt; m_SpawnOptionIndex;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keyword">set</span> =&gt; m_SpawnOptionIndex = value;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a00e95c2a5739a1b977c88b5e6bfeea1f">   78</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a00e95c2a5739a1b977c88b5e6bfeea1f">isSpawnOptionRandomized</a> =&gt; m_SpawnOptionIndex &lt; 0 || m_SpawnOptionIndex &gt;= m_ObjectPrefabs.Count;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        [SerializeField]</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        [Tooltip(<span class="stringliteral">&quot;Whether to only spawn an object if the spawn point is within view of the camera.&quot;</span>)]</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">bool</span> m_OnlySpawnInView = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="};">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a15c1c3cd8d6fb26160d0059cba5f14b0">   87</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a15c1c3cd8d6fb26160d0059cba5f14b0">onlySpawnInView</a></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keyword">get</span> =&gt; m_OnlySpawnInView;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keyword">set</span> =&gt; m_OnlySpawnInView = value;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        [SerializeField]</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        [Tooltip(<span class="stringliteral">&quot;The size, in viewport units, of the periphery inside the viewport that will not be considered in view.&quot;</span>)]</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordtype">float</span> m_ViewportPeriphery = 0.15f;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="};">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a789c74309879e68cbd1fcf65a6b4058e">  100</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a789c74309879e68cbd1fcf65a6b4058e">viewportPeriphery</a></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keyword">get</span> =&gt; m_ViewportPeriphery;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keyword">set</span> =&gt; m_ViewportPeriphery = value;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        [SerializeField]</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        [Tooltip(<span class="stringliteral">&quot;When enabled, the object will be rotated about the y-axis when spawned by Spawn Angle Range, &quot;</span> +</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="stringliteral">&quot;in relation to the direction of the spawn point to the camera.&quot;</span>)]</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">bool</span> m_ApplyRandomAngleAtSpawn = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="};">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a76d4cd4eafa2d39249c0ba8b0271533c">  115</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a76d4cd4eafa2d39249c0ba8b0271533c">applyRandomAngleAtSpawn</a></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keyword">get</span> =&gt; m_ApplyRandomAngleAtSpawn;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keyword">set</span> =&gt; m_ApplyRandomAngleAtSpawn = value;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        }</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        [SerializeField]</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        [Tooltip(<span class="stringliteral">&quot;The range in degrees that the object will randomly be rotated about the y axis when spawned, &quot;</span> +</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="stringliteral">&quot;in relation to the direction of the spawn point to the camera.&quot;</span>)]</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordtype">float</span> m_SpawnAngleRange = 45f;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span></div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="};">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#acf4cc61fe49d47ee50085aae1236a56e">  130</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#acf4cc61fe49d47ee50085aae1236a56e">spawnAngleRange</a></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keyword">get</span> =&gt; m_SpawnAngleRange;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keyword">set</span> =&gt; m_SpawnAngleRange = value;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        }</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        [SerializeField]</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        [Tooltip(<span class="stringliteral">&quot;Whether to spawn each object as a child of this object.&quot;</span>)]</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordtype">bool</span> m_SpawnAsChildren;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="};">
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#aa3ee29406907817d553b73363225141a">  143</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#aa3ee29406907817d553b73363225141a">spawnAsChildren</a></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keyword">get</span> =&gt; m_SpawnAsChildren;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keyword">set</span> =&gt; m_SpawnAsChildren = value;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        }</div>
+</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a82eb7e7bdbb7c5738feb16ac2b0c7c04">  153</a></span>        <span class="keyword">public</span> <span class="keyword">event</span> Action&lt;GameObject&gt; <a class="code hl_event" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a82eb7e7bdbb7c5738feb16ac2b0c7c04">objectSpawned</a>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordtype">void</span> Awake()</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            EnsureFacingCamera();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordtype">void</span> EnsureFacingCamera()</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            <span class="keywordflow">if</span> (m_CameraToFace == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                m_CameraToFace = Camera.main;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span></div>
+<div class="foldopen" id="foldopen00174" data-start="{" data-end="}">
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#ae3ec1eb9c0095139b5239f845ccbd6e1">  174</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#ae3ec1eb9c0095139b5239f845ccbd6e1">RandomizeSpawnOption</a>()</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            m_SpawnOptionIndex = -1;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        }</div>
+</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span></div>
+<div class="foldopen" id="foldopen00193" data-start="{" data-end="}">
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a9dd2f221d20c3f3891cf6e68211ab90e">  193</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a9dd2f221d20c3f3891cf6e68211ab90e">TrySpawnObject</a>(Vector3 spawnPoint, Vector3 spawnNormal)</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            <span class="keywordflow">if</span> (m_OnlySpawnInView)</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                var inViewMin = m_ViewportPeriphery;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                var inViewMax = 1f - m_ViewportPeriphery;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                var pointInViewportSpace = <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a4c6a22d06476fab77058c5ec60076559">cameraToFace</a>.WorldToViewportPoint(spawnPoint);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                <span class="keywordflow">if</span> (pointInViewportSpace.z &lt; 0f || pointInViewportSpace.x &gt; inViewMax || pointInViewportSpace.x &lt; inViewMin ||</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                    pointInViewportSpace.y &gt; inViewMax || pointInViewportSpace.y &lt; inViewMin)</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            var objectIndex = <a class="code hl_property" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a00e95c2a5739a1b977c88b5e6bfeea1f">isSpawnOptionRandomized</a> ? Random.Range(0, m_ObjectPrefabs.Count) : m_SpawnOptionIndex;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            var newObject = Instantiate(m_ObjectPrefabs[objectIndex]);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="keywordflow">if</span> (m_SpawnAsChildren)</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                newObject.transform.parent = transform;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            newObject.transform.position = spawnPoint;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            EnsureFacingCamera();</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            var facePosition = m_CameraToFace.transform.position;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            var forward = facePosition - spawnPoint;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            BurstMathUtility.ProjectOnPlane(forward, spawnNormal, out var projectedForward);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            newObject.transform.rotation = Quaternion.LookRotation(projectedForward, spawnNormal);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">if</span> (m_ApplyRandomAngleAtSpawn)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                var randomRotation = Random.Range(-m_SpawnAngleRange, m_SpawnAngleRange);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                newObject.transform.Rotate(Vector3.up, randomRotation);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keywordflow">if</span> (m_SpawnVisualizationPrefab != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                var visualizationTrans = Instantiate(m_SpawnVisualizationPrefab).transform;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                visualizationTrans.position = spawnPoint;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                visualizationTrans.rotation = newObject.transform.rotation;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <a class="code hl_event" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a82eb7e7bdbb7c5738feb16ac2b0c7c04">objectSpawned</a>?.Invoke(newObject);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        }</div>
+</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
+</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner</a></div><div class="ttdoc">Behavior with an API for spawning objects from a given set of prefabs.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">ObjectSpawner.cs:11</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_a00e95c2a5739a1b977c88b5e6bfeea1f"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a00e95c2a5739a1b977c88b5e6bfeea1f">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.isSpawnOptionRandomized</a></div><div class="ttdeci">bool isSpawnOptionRandomized</div><div class="ttdoc">Whether this behavior will select a random object from objectPrefabs each time it spawns.</div><div class="ttdef"><b>Definition</b> <a href="#l00078">ObjectSpawner.cs:78</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_a0322bb090bcf38b6237199fedf5e9df4"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a0322bb090bcf38b6237199fedf5e9df4">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.spawnVisualizationPrefab</a></div><div class="ttdeci">GameObject spawnVisualizationPrefab</div><div class="ttdoc">Optional prefab to spawn for each spawned object.</div><div class="ttdef"><b>Definition</b> <a href="#l00051">ObjectSpawner.cs:52</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_a15c1c3cd8d6fb26160d0059cba5f14b0"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a15c1c3cd8d6fb26160d0059cba5f14b0">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.onlySpawnInView</a></div><div class="ttdeci">bool onlySpawnInView</div><div class="ttdoc">Whether to only spawn an object if the spawn point is within view of the cameraToFace.</div><div class="ttdef"><b>Definition</b> <a href="#l00087">ObjectSpawner.cs:88</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_a4c6a22d06476fab77058c5ec60076559"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a4c6a22d06476fab77058c5ec60076559">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.cameraToFace</a></div><div class="ttdeci">Camera cameraToFace</div><div class="ttdoc">The camera that objects will face when spawned. If not set, defaults to the Camera....</div><div class="ttdef"><b>Definition</b> <a href="#l00019">ObjectSpawner.cs:20</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_a4d0519ecfdbfc5b8c69a4d7dc85195e3"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a4d0519ecfdbfc5b8c69a4d7dc85195e3">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.objectPrefabs</a></div><div class="ttdeci">List&lt; GameObject &gt; objectPrefabs</div><div class="ttdoc">The list of prefabs available to spawn.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">ObjectSpawner.cs:37</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_a76d4cd4eafa2d39249c0ba8b0271533c"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a76d4cd4eafa2d39249c0ba8b0271533c">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.applyRandomAngleAtSpawn</a></div><div class="ttdeci">bool applyRandomAngleAtSpawn</div><div class="ttdoc">When enabled, the object will be rotated about the y-axis when spawned by spawnAngleRange in relation...</div><div class="ttdef"><b>Definition</b> <a href="#l00115">ObjectSpawner.cs:116</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_a789c74309879e68cbd1fcf65a6b4058e"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a789c74309879e68cbd1fcf65a6b4058e">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.viewportPeriphery</a></div><div class="ttdeci">float viewportPeriphery</div><div class="ttdoc">The size, in viewport units, of the periphery inside the viewport that will not be considered in view...</div><div class="ttdef"><b>Definition</b> <a href="#l00100">ObjectSpawner.cs:101</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_a82eb7e7bdbb7c5738feb16ac2b0c7c04"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a82eb7e7bdbb7c5738feb16ac2b0c7c04">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.objectSpawned</a></div><div class="ttdeci">Action&lt; GameObject &gt; objectSpawned</div><div class="ttdoc">Event invoked after an object is spawned.</div><div class="ttdef"><b>Definition</b> <a href="#l00153">ObjectSpawner.cs:153</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_a9dd2f221d20c3f3891cf6e68211ab90e"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a9dd2f221d20c3f3891cf6e68211ab90e">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.TrySpawnObject</a></div><div class="ttdeci">bool TrySpawnObject(Vector3 spawnPoint, Vector3 spawnNormal)</div><div class="ttdoc">Attempts to spawn an object from objectPrefabs at the given position. The object will have a yaw rota...</div><div class="ttdef"><b>Definition</b> <a href="#l00193">ObjectSpawner.cs:193</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_aa3ee29406907817d553b73363225141a"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#aa3ee29406907817d553b73363225141a">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.spawnAsChildren</a></div><div class="ttdeci">bool spawnAsChildren</div><div class="ttdoc">Whether to spawn each object as a child of this object.</div><div class="ttdef"><b>Definition</b> <a href="#l00143">ObjectSpawner.cs:144</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_acf4cc61fe49d47ee50085aae1236a56e"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#acf4cc61fe49d47ee50085aae1236a56e">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.spawnAngleRange</a></div><div class="ttdeci">float spawnAngleRange</div><div class="ttdoc">The range in degrees that the object will randomly be rotated about the y axis when spawned,...</div><div class="ttdef"><b>Definition</b> <a href="#l00130">ObjectSpawner.cs:131</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_ad7eca206ffd5419767bc8042447d91ce"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#ad7eca206ffd5419767bc8042447d91ce">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.spawnOptionIndex</a></div><div class="ttdeci">int spawnOptionIndex</div><div class="ttdoc">The index of the prefab to spawn. If outside the range of objectPrefabs, this behavior will select a ...</div><div class="ttdef"><b>Definition</b> <a href="#l00067">ObjectSpawner.cs:68</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner_html_ae3ec1eb9c0095139b5239f845ccbd6e1"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#ae3ec1eb9c0095139b5239f845ccbd6e1">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner.RandomizeSpawnOption</a></div><div class="ttdeci">void RandomizeSpawnOption()</div><div class="ttdoc">Sets this behavior to select a random object from objectPrefabs each time it spawns.</div><div class="ttdef"><b>Definition</b> <a href="#l00174">ObjectSpawner.cs:174</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_html"><div class="ttname"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets.html">UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets</a></div><div class="ttdef"><b>Definition</b> <a href="_increment_u_i_text_8cs_source.html#l00003">IncrementUIText.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a href="dir_9fd0b45d7164cbf67e9cf2673df0ffb6.html">Samples</a></li><li class="navelem"><a href="dir_9f837038c816967355e56b28af574441.html">XR Interaction Toolkit</a></li><li class="navelem"><a href="dir_9e433df934f6d8baa713d897ebc592ec.html">3.0.8</a></li><li class="navelem"><a href="dir_62d4293ee4d088933f9c890e09119a95.html">Starter Assets</a></li><li class="navelem"><a href="dir_dda4a6ff7f78095ac4caea3419864903.html">Scripts</a></li><li class="navelem"><b>ObjectSpawner.cs</b></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

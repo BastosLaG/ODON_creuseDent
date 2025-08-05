@@ -1,0 +1,4 @@
+var class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_x_r_base_input_reader_property_drawer_1_g =
+[
+    [ "BaseSerializedPropertyFields", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_x_r_base_input_reader_prop9c22a25446f74207f788e469b2088d26.html", null ]
+];

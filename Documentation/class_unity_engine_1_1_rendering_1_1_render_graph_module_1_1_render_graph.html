@@ -1,0 +1,1787 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Référence de la classe UnityEngine.Rendering.RenderGraphModule.RenderGraph</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la classe UnityEngine.Rendering.RenderGraphModule.RenderGraph</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class is the main entry point of the Render Graph system.  
+ <a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:CompiledGraph" id="r_CompiledGraph"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>CompiledGraph</b></td></tr>
+<tr class="memitem:CompiledPassInfo" id="r_CompiledPassInfo"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><b>CompiledPassInfo</b></td></tr>
+<tr class="memitem:CompiledResourceInfo" id="r_CompiledResourceInfo"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><b>CompiledResourceInfo</b></td></tr>
+<tr class="memitem:DebugData" id="r_DebugData"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>DebugData</b></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debug data interface shared by HDRP RG Compiler and NRP RG Compiler. Some data is optional, depending on the value of isNRPCompiler. <br /></td></tr>
+<tr class="memitem:ICompiledGraph" id="r_ICompiledGraph"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><b>ICompiledGraph</b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:ad41582a90c0c24365547e15bf03491a7" id="r_ad41582a90c0c24365547e15bf03491a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad41582a90c0c24365547e15bf03491a7">RenderGraph</a> (string <a class="el" href="#a56aa8398c58ac7530140c0e33c60c937">name</a>=&quot;RenderGraph&quot;)</td></tr>
+<tr class="memdesc:ad41582a90c0c24365547e15bf03491a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render Graph constructor.  <br /></td></tr>
+<tr class="memitem:ad154f993e53502d7ce6d5c5aa02c1a92" id="r_ad154f993e53502d7ce6d5c5aa02c1a92"><td class="memItemLeft" align="right" valign="top"><a id="ad154f993e53502d7ce6d5c5aa02c1a92" name="ad154f993e53502d7ce6d5c5aa02c1a92"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Cleanup</b> ()</td></tr>
+<tr class="memdesc:ad154f993e53502d7ce6d5c5aa02c1a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleanup the Render Graph. <br /></td></tr>
+<tr class="memitem:a56e6fbec738c628efbfb8b30a42e5eae" id="r_a56e6fbec738c628efbfb8b30a42e5eae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56e6fbec738c628efbfb8b30a42e5eae">RegisterDebug</a> (DebugUI.Panel panel=null)</td></tr>
+<tr class="memdesc:a56e6fbec738c628efbfb8b30a42e5eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register the render graph to the debug window.  <br /></td></tr>
+<tr class="memitem:a06ed32e0bd92487e5fbc8a02d652b169" id="r_a06ed32e0bd92487e5fbc8a02d652b169"><td class="memItemLeft" align="right" valign="top"><a id="a06ed32e0bd92487e5fbc8a02d652b169" name="a06ed32e0bd92487e5fbc8a02d652b169"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UnRegisterDebug</b> ()</td></tr>
+<tr class="memdesc:a06ed32e0bd92487e5fbc8a02d652b169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister render graph from the debug window. <br /></td></tr>
+<tr class="memitem:ac2b7ed09161deab695208ebf65364dcf" id="r_ac2b7ed09161deab695208ebf65364dcf"><td class="memItemLeft" align="right" valign="top"><a id="ac2b7ed09161deab695208ebf65364dcf" name="ac2b7ed09161deab695208ebf65364dcf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>EndFrame</b> ()</td></tr>
+<tr class="memdesc:ac2b7ed09161deab695208ebf65364dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">End frame processing. Purge resources that have been used since last frame and resets internal states. This need to be called once per frame. <br /></td></tr>
+<tr class="memitem:a5e74a7b77ceac6313c04cd7dd6d08eae" id="r_a5e74a7b77ceac6313c04cd7dd6d08eae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e74a7b77ceac6313c04cd7dd6d08eae">ImportTexture</a> (<a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a> rt)</td></tr>
+<tr class="memdesc:a5e74a7b77ceac6313c04cd7dd6d08eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import an external texture to the Render Graph. Any pass writing to an imported texture will be considered having side effects and can't be automatically culled.  <br /></td></tr>
+<tr class="memitem:a1142992f07835b0206a099678c03d07c" id="r_a1142992f07835b0206a099678c03d07c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1142992f07835b0206a099678c03d07c">ImportTexture</a> (<a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a> rt, <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_import_resource_params.html">ImportResourceParams</a> importParams)</td></tr>
+<tr class="memdesc:a1142992f07835b0206a099678c03d07c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import an external texture to the Render Graph. Any pass writing to an imported texture will be considered having side effects and can't be automatically culled.  <br /></td></tr>
+<tr class="memitem:a52e8d9352be45e02ca1dc3ecc0aaabbf" id="r_a52e8d9352be45e02ca1dc3ecc0aaabbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52e8d9352be45e02ca1dc3ecc0aaabbf">ImportTexture</a> (<a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a> rt, <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html">RenderTargetInfo</a> info, <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_import_resource_params.html">ImportResourceParams</a> importParams=new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_import_resource_params.html">ImportResourceParams</a>())</td></tr>
+<tr class="memdesc:a52e8d9352be45e02ca1dc3ecc0aaabbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import an external texture to the Render Graph. This overload should be used for RTHandles wrapping a RenderTargetIdentifier. If the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> is wrapping a RenderTargetIdentifer, Rendergrpah can't derive the render texture's properties so the user has to provide this info to the graph through <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html" title="Basic properties of a RTHandle needed by the render graph compiler. It is not always possible to deri...">RenderTargetInfo</a>.  <br /></td></tr>
+<tr class="memitem:aee3aeba41693124f56611ba7b9dd867d" id="r_aee3aeba41693124f56611ba7b9dd867d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee3aeba41693124f56611ba7b9dd867d">ImportBackbuffer</a> (RenderTargetIdentifier rt, <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html">RenderTargetInfo</a> info, <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_import_resource_params.html">ImportResourceParams</a> importParams=new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_import_resource_params.html">ImportResourceParams</a>())</td></tr>
+<tr class="memdesc:aee3aeba41693124f56611ba7b9dd867d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import the final backbuffer to render graph. The rendergraph can't derive the properties of a RenderTargetIdentifier as it is an opaque handle so the user has to pass them in through the info argument.  <br /></td></tr>
+<tr class="memitem:ac52567c9f1656e24d30f8074720d31d6" id="r_ac52567c9f1656e24d30f8074720d31d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac52567c9f1656e24d30f8074720d31d6">ImportBackbuffer</a> (RenderTargetIdentifier rt)</td></tr>
+<tr class="memdesc:ac52567c9f1656e24d30f8074720d31d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import the final backbuffer to render graph. This function can only be used when nativeRenderPassesEnabled is false.  <br /></td></tr>
+<tr class="memitem:ad5323da1dc2bdcd466200302bc34e4d2" id="r_ad5323da1dc2bdcd466200302bc34e4d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5323da1dc2bdcd466200302bc34e4d2">CreateTexture</a> (in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_desc.html">TextureDesc</a> desc)</td></tr>
+<tr class="memdesc:ad5323da1dc2bdcd466200302bc34e4d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new Render Graph Texture resource.  <br /></td></tr>
+<tr class="memitem:a88f191264789151ee45e725fa0860ce6" id="r_a88f191264789151ee45e725fa0860ce6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88f191264789151ee45e725fa0860ce6">CreateSharedTexture</a> (in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_desc.html">TextureDesc</a> desc, bool explicitRelease=false)</td></tr>
+<tr class="memdesc:a88f191264789151ee45e725fa0860ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new Render Graph Shared Texture resource. This texture will be persistent across render graph executions.  <br /></td></tr>
+<tr class="memitem:a564a3bf044dfaac7cdfc36de9ff8acc6" id="r_a564a3bf044dfaac7cdfc36de9ff8acc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a564a3bf044dfaac7cdfc36de9ff8acc6">RefreshSharedTextureDesc</a> (<a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> handle, in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_desc.html">TextureDesc</a> desc)</td></tr>
+<tr class="memdesc:a564a3bf044dfaac7cdfc36de9ff8acc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh a shared texture with a new descriptor.  <br /></td></tr>
+<tr class="memitem:a8b196a23448423ab9d6c96c8700c485d" id="r_a8b196a23448423ab9d6c96c8700c485d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b196a23448423ab9d6c96c8700c485d">ReleaseSharedTexture</a> (<a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> texture)</td></tr>
+<tr class="memdesc:a8b196a23448423ab9d6c96c8700c485d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release a Render Graph shared texture resource.  <br /></td></tr>
+<tr class="memitem:aa3da79bd416cc7b09d17ab80a9b7edf7" id="r_aa3da79bd416cc7b09d17ab80a9b7edf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3da79bd416cc7b09d17ab80a9b7edf7">CreateTexture</a> (<a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> texture)</td></tr>
+<tr class="memdesc:aa3da79bd416cc7b09d17ab80a9b7edf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new Render Graph Texture resource using the descriptor from another texture.  <br /></td></tr>
+<tr class="memitem:a6a5cd2d4e2f2647e945ff13d14cc809e" id="r_a6a5cd2d4e2f2647e945ff13d14cc809e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a5cd2d4e2f2647e945ff13d14cc809e">CreateTextureIfInvalid</a> (in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_desc.html">TextureDesc</a> desc, ref <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> texture)</td></tr>
+<tr class="memdesc:a6a5cd2d4e2f2647e945ff13d14cc809e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new Render Graph Texture if the passed handle is invalid and use said handle as output. If the passed handle is valid, no texture is created.  <br /></td></tr>
+<tr class="memitem:a1fc9a0377f52c1a9256cf9f52bf359f2" id="r_a1fc9a0377f52c1a9256cf9f52bf359f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_desc.html">TextureDesc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fc9a0377f52c1a9256cf9f52bf359f2">GetTextureDesc</a> (<a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> texture)</td></tr>
+<tr class="memdesc:a1fc9a0377f52c1a9256cf9f52bf359f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the descriptor of the specified Texture resource.  <br /></td></tr>
+<tr class="memitem:ac4fbe68942e6d36fca851eb678831647" id="r_ac4fbe68942e6d36fca851eb678831647"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html">RenderTargetInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4fbe68942e6d36fca851eb678831647">GetRenderTargetInfo</a> (<a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> texture)</td></tr>
+<tr class="memdesc:ac4fbe68942e6d36fca851eb678831647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the descriptor of the specified Texture resource.  <br /></td></tr>
+<tr class="memitem:a9be1dc3525bd1b33108fe718b8ab7ee0" id="r_a9be1dc3525bd1b33108fe718b8ab7ee0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9be1dc3525bd1b33108fe718b8ab7ee0">CreateRendererList</a> (in CoreRendererListDesc desc)</td></tr>
+<tr class="memdesc:a9be1dc3525bd1b33108fe718b8ab7ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Renderer List Render Graph resource.  <br /></td></tr>
+<tr class="memitem:ab983a63ebffcda336ac31c81542e1594" id="r_ab983a63ebffcda336ac31c81542e1594"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab983a63ebffcda336ac31c81542e1594">CreateRendererList</a> (in RendererListParams desc)</td></tr>
+<tr class="memdesc:ab983a63ebffcda336ac31c81542e1594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Renderer List Render Graph resource.  <br /></td></tr>
+<tr class="memitem:afe72dab46ef33ed54bd43f4549998478" id="r_afe72dab46ef33ed54bd43f4549998478"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe72dab46ef33ed54bd43f4549998478">CreateShadowRendererList</a> (ref ShadowDrawingSettings shadowDrawingSettings)</td></tr>
+<tr class="memdesc:afe72dab46ef33ed54bd43f4549998478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Shadow Renderer List Render Graph resource.  <br /></td></tr>
+<tr class="memitem:aad91249db29fa712f70f086966abe90a" id="r_aad91249db29fa712f70f086966abe90a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad91249db29fa712f70f086966abe90a">CreateGizmoRendererList</a> (in Camera camera, in GizmoSubset gizmoSubset)</td></tr>
+<tr class="memdesc:aad91249db29fa712f70f086966abe90a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Gizmo Renderer List Render Graph resource.  <br /></td></tr>
+<tr class="memitem:ad895572e6624d19e972dd275a8a2499b" id="r_ad895572e6624d19e972dd275a8a2499b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad895572e6624d19e972dd275a8a2499b">CreateUIOverlayRendererList</a> (in Camera camera)</td></tr>
+<tr class="memdesc:ad895572e6624d19e972dd275a8a2499b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new UIOverlay Renderer List Render Graph resource.  <br /></td></tr>
+<tr class="memitem:af88c82ac7f33f2fd881df14948c4715a" id="r_af88c82ac7f33f2fd881df14948c4715a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af88c82ac7f33f2fd881df14948c4715a">CreateUIOverlayRendererList</a> (in Camera camera, in UISubset uiSubset)</td></tr>
+<tr class="memdesc:af88c82ac7f33f2fd881df14948c4715a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new UIOverlay Renderer List Render Graph resource.  <br /></td></tr>
+<tr class="memitem:ab9a8adeb7daa8e062330f3b852b0cdc2" id="r_ab9a8adeb7daa8e062330f3b852b0cdc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9a8adeb7daa8e062330f3b852b0cdc2">CreateWireOverlayRendererList</a> (in Camera camera)</td></tr>
+<tr class="memdesc:ab9a8adeb7daa8e062330f3b852b0cdc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new WireOverlay Renderer List Render Graph resource.  <br /></td></tr>
+<tr class="memitem:a70ba295494498a5df67e8884aeea328d" id="r_a70ba295494498a5df67e8884aeea328d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70ba295494498a5df67e8884aeea328d">CreateSkyboxRendererList</a> (in Camera camera)</td></tr>
+<tr class="memdesc:a70ba295494498a5df67e8884aeea328d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Skybox Renderer List Render Graph resource.  <br /></td></tr>
+<tr class="memitem:a66851b3db120b93caf262d20aeb744b8" id="r_a66851b3db120b93caf262d20aeb744b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66851b3db120b93caf262d20aeb744b8">CreateSkyboxRendererList</a> (in Camera camera, Matrix4x4 projectionMatrix, Matrix4x4 viewMatrix)</td></tr>
+<tr class="memdesc:a66851b3db120b93caf262d20aeb744b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Skybox Renderer List Render Graph resource.  <br /></td></tr>
+<tr class="memitem:a9767f8efe3d0cfa915bb470c8bdcbb5d" id="r_a9767f8efe3d0cfa915bb470c8bdcbb5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9767f8efe3d0cfa915bb470c8bdcbb5d">CreateSkyboxRendererList</a> (in Camera camera, Matrix4x4 projectionMatrixL, Matrix4x4 viewMatrixL, Matrix4x4 projectionMatrixR, Matrix4x4 viewMatrixR)</td></tr>
+<tr class="memdesc:a9767f8efe3d0cfa915bb470c8bdcbb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Skybox Renderer List Render Graph resource.  <br /></td></tr>
+<tr class="memitem:a80582bce3fe8347a39e74c288167a9ed" id="r_a80582bce3fe8347a39e74c288167a9ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_handle.html">BufferHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80582bce3fe8347a39e74c288167a9ed">ImportBuffer</a> (GraphicsBuffer graphicsBuffer, bool forceRelease=false)</td></tr>
+<tr class="memdesc:a80582bce3fe8347a39e74c288167a9ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import an external <a class="el" href="namespace_graphics.html">Graphics</a> Buffer to the Render Graph. Any pass writing to an imported graphics buffer will be considered having side effects and can't be automatically culled.  <br /></td></tr>
+<tr class="memitem:ab14fb3d4a23c229cbb03eb569a58f679" id="r_ab14fb3d4a23c229cbb03eb569a58f679"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_handle.html">BufferHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab14fb3d4a23c229cbb03eb569a58f679">CreateBuffer</a> (in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_desc.html">BufferDesc</a> desc)</td></tr>
+<tr class="memdesc:ab14fb3d4a23c229cbb03eb569a58f679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new Render Graph <a class="el" href="namespace_graphics.html">Graphics</a> Buffer resource.  <br /></td></tr>
+<tr class="memitem:a9c1bdad2f1b16aac845ed7a978ff3942" id="r_a9c1bdad2f1b16aac845ed7a978ff3942"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_handle.html">BufferHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c1bdad2f1b16aac845ed7a978ff3942">CreateBuffer</a> (in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_handle.html">BufferHandle</a> graphicsBuffer)</td></tr>
+<tr class="memdesc:a9c1bdad2f1b16aac845ed7a978ff3942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new Render Graph <a class="el" href="namespace_graphics.html">Graphics</a> Buffer resource using the descriptor from another graphics buffer.  <br /></td></tr>
+<tr class="memitem:a5be14881551cd29a9486bfc32fa8be1d" id="r_a5be14881551cd29a9486bfc32fa8be1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_desc.html">BufferDesc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5be14881551cd29a9486bfc32fa8be1d">GetBufferDesc</a> (in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_handle.html">BufferHandle</a> graphicsBuffer)</td></tr>
+<tr class="memdesc:a5be14881551cd29a9486bfc32fa8be1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the descriptor of the specified <a class="el" href="namespace_graphics.html">Graphics</a> Buffer resource.  <br /></td></tr>
+<tr class="memitem:a01db6c4e3769b9e9bf3b78982c8b8e39" id="r_a01db6c4e3769b9e9bf3b78982c8b8e39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_ray_tracing_acceleration_structure_handle.html">RayTracingAccelerationStructureHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01db6c4e3769b9e9bf3b78982c8b8e39">ImportRayTracingAccelerationStructure</a> (in RayTracingAccelerationStructure accelStruct, string <a class="el" href="#a56aa8398c58ac7530140c0e33c60c937">name</a>=null)</td></tr>
+<tr class="memdesc:a01db6c4e3769b9e9bf3b78982c8b8e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Import an external RayTracingAccelerationStructure to the Render Graph. Any pass writing to (building) an imported RayTracingAccelerationStructure will be considered having side effects and can't be automatically culled.  <br /></td></tr>
+<tr class="memitem:ae3a69ab07763d0f928a693ac24c3706f" id="r_ae3a69ab07763d0f928a693ac24c3706f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_raster_render_graph_builder.html">IRasterRenderGraphBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3a69ab07763d0f928a693ac24c3706f">AddRasterRenderPass&lt; PassData &gt;</a> (string passName, out PassData passData, [CallerFilePath] string file=&quot;&quot;, [CallerLineNumber] int line=0)</td></tr>
+<tr class="memdesc:ae3a69ab07763d0f928a693ac24c3706f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new Raster Render Pass to the Render Graph. Raster passes can execute rasterization workloads but cannot do other GPU work like copies or compute.  <br /></td></tr>
+<tr class="memitem:a48de75003475d76f8406187170ce9bd2" id="r_a48de75003475d76f8406187170ce9bd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_raster_render_graph_builder.html">IRasterRenderGraphBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48de75003475d76f8406187170ce9bd2">AddRasterRenderPass&lt; PassData &gt;</a> (string passName, out PassData passData, <a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a> sampler, [CallerFilePath] string file=&quot;&quot;, [CallerLineNumber] int line=0)</td></tr>
+<tr class="memdesc:a48de75003475d76f8406187170ce9bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new Raster Render Pass to the Render Graph. Raster passes can execute rasterization workloads but cannot do other GPU work like copies or compute.  <br /></td></tr>
+<tr class="memitem:abf9b4d88aa1eb869ba133f2475c3a8b2" id="r_abf9b4d88aa1eb869ba133f2475c3a8b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_compute_render_graph_builder.html">IComputeRenderGraphBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf9b4d88aa1eb869ba133f2475c3a8b2">AddComputePass&lt; PassData &gt;</a> (string passName, out PassData passData, [CallerFilePath] string file=&quot;&quot;, [CallerLineNumber] int line=0)</td></tr>
+<tr class="memdesc:abf9b4d88aa1eb869ba133f2475c3a8b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new Compute Render Pass to the Render Graph. Raster passes can execute rasterization workloads but cannot do other GPU work like copies or compute.  <br /></td></tr>
+<tr class="memitem:a09558d48a78a12bf18351580058b7ff8" id="r_a09558d48a78a12bf18351580058b7ff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_compute_render_graph_builder.html">IComputeRenderGraphBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09558d48a78a12bf18351580058b7ff8">AddComputePass&lt; PassData &gt;</a> (string passName, out PassData passData, <a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a> sampler, [CallerFilePath] string file=&quot;&quot;, [CallerLineNumber] int line=0)</td></tr>
+<tr class="memdesc:a09558d48a78a12bf18351580058b7ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new Compute Render Pass to the Render Graph. Compute passes can execute compute workloads but cannot do rasterization.  <br /></td></tr>
+<tr class="memitem:a80105fd8845cef1307233b11d316ef46" id="r_a80105fd8845cef1307233b11d316ef46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_unsafe_render_graph_builder.html">IUnsafeRenderGraphBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80105fd8845cef1307233b11d316ef46">AddUnsafePass&lt; PassData &gt;</a> (string passName, out PassData passData, [CallerFilePath] string file=&quot;&quot;, [CallerLineNumber] int line=0)</td></tr>
+<tr class="memdesc:a80105fd8845cef1307233b11d316ef46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new Unsafe Render Pass to the Render Graph. Unsafe passes can do certain operations compute/raster render passes cannot do and have access to the full command buffer API. The unsafe API should be used sparingly as it has the following downsides:  <br /></td></tr>
+<tr class="memitem:a380b265781f4a1ef926dc85e1cdbbb96" id="r_a380b265781f4a1ef926dc85e1cdbbb96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_unsafe_render_graph_builder.html">IUnsafeRenderGraphBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a380b265781f4a1ef926dc85e1cdbbb96">AddUnsafePass&lt; PassData &gt;</a> (string passName, out PassData passData, <a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a> sampler, [CallerFilePath] string file=&quot;&quot;, [CallerLineNumber] int line=0)</td></tr>
+<tr class="memdesc:a380b265781f4a1ef926dc85e1cdbbb96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new unsafe Render Pass to the Render Graph. Unsafe passes can do certain operations compute/raster render passes cannot do and have access to the full command buffer API. The unsafe API should be used sparingly as it has the following downsides:  <br /></td></tr>
+<tr class="memitem:a55a8c99d5016112741de7a2a40f04336" id="r_a55a8c99d5016112741de7a2a40f04336"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph_builder.html">RenderGraphBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55a8c99d5016112741de7a2a40f04336">AddRenderPass&lt; PassData &gt;</a> (string passName, out PassData passData, <a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a> sampler, [CallerFilePath] string file=&quot;&quot;, [CallerLineNumber] int line=0)</td></tr>
+<tr class="memdesc:a55a8c99d5016112741de7a2a40f04336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new Render Pass to the Render Graph.  <br /></td></tr>
+<tr class="memitem:a8107234ad0748212d3855ce01a957419" id="r_a8107234ad0748212d3855ce01a957419"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph_builder.html">RenderGraphBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8107234ad0748212d3855ce01a957419">AddRenderPass&lt; PassData &gt;</a> (string passName, out PassData passData, [CallerFilePath] string file=&quot;&quot;, [CallerLineNumber] int line=0)</td></tr>
+<tr class="memdesc:a8107234ad0748212d3855ce01a957419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new Render Pass to the Render Graph.  <br /></td></tr>
+<tr class="memitem:abbe51687c38efcdbf062f7ec2e8c4223" id="r_abbe51687c38efcdbf062f7ec2e8c4223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbe51687c38efcdbf062f7ec2e8c4223">BeginRecording</a> (in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph_parameters.html">RenderGraphParameters</a> parameters)</td></tr>
+<tr class="memdesc:abbe51687c38efcdbf062f7ec2e8c4223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the recording of the render graph. This must be called before adding any pass to the render graph.  <br /></td></tr>
+<tr class="memitem:a53284a9f1b915ccecfd37323fed422e5" id="r_a53284a9f1b915ccecfd37323fed422e5"><td class="memItemLeft" align="right" valign="top"><a id="a53284a9f1b915ccecfd37323fed422e5" name="a53284a9f1b915ccecfd37323fed422e5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>EndRecordingAndExecute</b> ()</td></tr>
+<tr class="memdesc:a53284a9f1b915ccecfd37323fed422e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the recording and executes the render graph. This must be called once all passes have been added to the render graph. <br /></td></tr>
+<tr class="memitem:a7434296fcdebee3eba5d2a386c895a86" id="r_a7434296fcdebee3eba5d2a386c895a86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7434296fcdebee3eba5d2a386c895a86">BeginProfilingSampler</a> (<a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a> sampler, [CallerFilePath] string file=&quot;&quot;, [CallerLineNumber] int line=0)</td></tr>
+<tr class="memdesc:a7434296fcdebee3eba5d2a386c895a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin a profiling scope.  <br /></td></tr>
+<tr class="memitem:acf7b8478ee2f83693e32a1921e0fbb97" id="r_acf7b8478ee2f83693e32a1921e0fbb97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf7b8478ee2f83693e32a1921e0fbb97">EndProfilingSampler</a> (<a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a> sampler, [CallerFilePath] string file=&quot;&quot;, [CallerLineNumber] int line=0)</td></tr>
+<tr class="memdesc:acf7b8478ee2f83693e32a1921e0fbb97"><td class="mdescLeft">&#160;</td><td class="mdescRight">End a profiling scope.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Fonctions membres publiques statiques</h2></td></tr>
+<tr class="memitem:a4457c993ad84f931482995c26e1ed3e5" id="r_a4457c993ad84f931482995c26e1ed3e5"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph.html">RenderGraph</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4457c993ad84f931482995c26e1ed3e5">GetRegisteredRenderGraphs</a> ()</td></tr>
+<tr class="memdesc:a4457c993ad84f931482995c26e1ed3e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of all registered render graphs.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Attributs publics statiques</h2></td></tr>
+<tr class="memitem:a0f26ae31b3a0460c801dbc6eec757a5f" id="r_a0f26ae31b3a0460c801dbc6eec757a5f"><td class="memItemLeft" align="right" valign="top"><a id="a0f26ae31b3a0460c801dbc6eec757a5f" name="a0f26ae31b3a0460c801dbc6eec757a5f"></a>
+static readonly int&#160;</td><td class="memItemRight" valign="bottom"><b>kMaxMRTCount</b> = 8</td></tr>
+<tr class="memdesc:a0f26ae31b3a0460c801dbc6eec757a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of MRTs supported by Render Graph. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Propriétés</h2></td></tr>
+<tr class="memitem:ae6bda44e0355fa4a8bed896773882774" id="r_ae6bda44e0355fa4a8bed896773882774"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6bda44e0355fa4a8bed896773882774">nativeRenderPassesEnabled</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae6bda44e0355fa4a8bed896773882774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the use of the render pass API by the graph instead of traditional SetRenderTarget. This is an advanced feature and users have to be aware of the specific impact it has on rendergraph/graphics APIs below.  <br /></td></tr>
+<tr class="memitem:a56aa8398c58ac7530140c0e33c60c937" id="r_a56aa8398c58ac7530140c0e33c60c937"><td class="memItemLeft" align="right" valign="top"><a id="a56aa8398c58ac7530140c0e33c60c937" name="a56aa8398c58ac7530140c0e33c60c937"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = &quot;RenderGraph&quot;<code> [get]</code></td></tr>
+<tr class="memdesc:a56aa8398c58ac7530140c0e33c60c937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the Render Graph. <br /></td></tr>
+<tr class="memitem:a875ed9bf8ca3f73eaa32191aada92ac7" id="r_a875ed9bf8ca3f73eaa32191aada92ac7"><td class="memItemLeft" align="right" valign="top"><a id="a875ed9bf8ca3f73eaa32191aada92ac7" name="a875ed9bf8ca3f73eaa32191aada92ac7"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRenderGraphViewerActive</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a875ed9bf8ca3f73eaa32191aada92ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the Render Graph Viewer is active. <br /></td></tr>
+<tr class="memitem:af3dc91b01bb085fd2dd68e8c549b8fc0" id="r_af3dc91b01bb085fd2dd68e8c549b8fc0"><td class="memItemLeft" align="right" valign="top"><a id="af3dc91b01bb085fd2dd68e8c549b8fc0" name="af3dc91b01bb085fd2dd68e8c549b8fc0"></a>
+<a class="el" href="class_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph_default_resources.html">RenderGraphDefaultResources</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultResources</b><code> [get]</code></td></tr>
+<tr class="memdesc:af3dc91b01bb085fd2dd68e8c549b8fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of default resources usable in a pass rendering code. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>This class is the main entry point of the Render Graph system. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="ad41582a90c0c24365547e15bf03491a7" name="ad41582a90c0c24365547e15bf03491a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad41582a90c0c24365547e15bf03491a7">&#9670;&#160;</a></span>RenderGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEngine.Rendering.RenderGraphModule.RenderGraph.RenderGraph </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;RenderGraph&quot;</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Render Graph constructor. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Optional name used to identify the render graph instnace.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="abf9b4d88aa1eb869ba133f2475c3a8b2" name="abf9b4d88aa1eb869ba133f2475c3a8b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9b4d88aa1eb869ba133f2475c3a8b2">&#9670;&#160;</a></span>AddComputePass&lt; PassData &gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_compute_render_graph_builder.html">IComputeRenderGraphBuilder</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.AddComputePass&lt; PassData &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>passName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out PassData</td>          <td class="paramname"><span class="paramname"><em>passData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>line</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new Compute Render Pass to the Render Graph. Raster passes can execute rasterization workloads but cannot do other GPU work like copies or compute. </p>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PassData</td><td>Type of the class to use to provide data to the Render Pass.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">passName</td><td>Name of the new Render Pass (this is also be used to generate a GPU profiling marker).</td></tr>
+    <tr><td class="paramname">passData</td><td>Instance of PassData that is passed to the render function and you must fill.</td></tr>
+    <tr><td class="paramname">file</td><td>File name of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+    <tr><td class="paramname">line</td><td>File line of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new instance of a <a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_raster_render_graph_builder.html" title="A builder for a raster render pass RenderGraph.AddRasterRenderPass">IRasterRenderGraphBuilder</a> used to setup the new Rasterization Render Pass.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Contraintes de type</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a09558d48a78a12bf18351580058b7ff8" name="a09558d48a78a12bf18351580058b7ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09558d48a78a12bf18351580058b7ff8">&#9670;&#160;</a></span>AddComputePass&lt; PassData &gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_compute_render_graph_builder.html">IComputeRenderGraphBuilder</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.AddComputePass&lt; PassData &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>passName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out PassData</td>          <td class="paramname"><span class="paramname"><em>passData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a></td>          <td class="paramname"><span class="paramname"><em>sampler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>line</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new Compute Render Pass to the Render Graph. Compute passes can execute compute workloads but cannot do rasterization. </p>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PassData</td><td>Type of the class to use to provide data to the Render Pass.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">passName</td><td>Name of the new Render Pass (this is also be used to generate a GPU profiling marker).</td></tr>
+    <tr><td class="paramname">passData</td><td>Instance of PassData that is passed to the render function and you must fill.</td></tr>
+    <tr><td class="paramname">sampler</td><td>Profiling sampler used around the pass.</td></tr>
+    <tr><td class="paramname">file</td><td>File name of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+    <tr><td class="paramname">line</td><td>File line of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new instance of a <a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_compute_render_graph_builder.html" title="A builder for a compute render pass RenderGraph.AddComputePass">IComputeRenderGraphBuilder</a> used to setup the new Compute Render Pass.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Contraintes de type</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="ae3a69ab07763d0f928a693ac24c3706f" name="ae3a69ab07763d0f928a693ac24c3706f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a69ab07763d0f928a693ac24c3706f">&#9670;&#160;</a></span>AddRasterRenderPass&lt; PassData &gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_raster_render_graph_builder.html">IRasterRenderGraphBuilder</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.AddRasterRenderPass&lt; PassData &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>passName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out PassData</td>          <td class="paramname"><span class="paramname"><em>passData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>line</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new Raster Render Pass to the Render Graph. Raster passes can execute rasterization workloads but cannot do other GPU work like copies or compute. </p>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PassData</td><td>Type of the class to use to provide data to the Render Pass.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">passName</td><td>Name of the new Render Pass (this is also be used to generate a GPU profiling marker).</td></tr>
+    <tr><td class="paramname">passData</td><td>Instance of PassData that is passed to the render function and you must fill.</td></tr>
+    <tr><td class="paramname">file</td><td>File name of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+    <tr><td class="paramname">line</td><td>File line of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new instance of a <a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_raster_render_graph_builder.html" title="A builder for a raster render pass RenderGraph.AddRasterRenderPass">IRasterRenderGraphBuilder</a> used to setup the new Rasterization Render Pass.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Contraintes de type</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a48de75003475d76f8406187170ce9bd2" name="a48de75003475d76f8406187170ce9bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48de75003475d76f8406187170ce9bd2">&#9670;&#160;</a></span>AddRasterRenderPass&lt; PassData &gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_raster_render_graph_builder.html">IRasterRenderGraphBuilder</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.AddRasterRenderPass&lt; PassData &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>passName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out PassData</td>          <td class="paramname"><span class="paramname"><em>passData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a></td>          <td class="paramname"><span class="paramname"><em>sampler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>line</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new Raster Render Pass to the Render Graph. Raster passes can execute rasterization workloads but cannot do other GPU work like copies or compute. </p>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PassData</td><td>Type of the class to use to provide data to the Render Pass.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">passName</td><td>Name of the new Render Pass (this is also be used to generate a GPU profiling marker).</td></tr>
+    <tr><td class="paramname">passData</td><td>Instance of PassData that is passed to the render function and you must fill.</td></tr>
+    <tr><td class="paramname">sampler</td><td>Profiling sampler used around the pass.</td></tr>
+    <tr><td class="paramname">file</td><td>File name of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+    <tr><td class="paramname">line</td><td>File line of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new instance of a <a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_raster_render_graph_builder.html" title="A builder for a raster render pass RenderGraph.AddRasterRenderPass">IRasterRenderGraphBuilder</a> used to setup the new Rasterization Render Pass.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Contraintes de type</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a8107234ad0748212d3855ce01a957419" name="a8107234ad0748212d3855ce01a957419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8107234ad0748212d3855ce01a957419">&#9670;&#160;</a></span>AddRenderPass&lt; PassData &gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph_builder.html">RenderGraphBuilder</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.AddRenderPass&lt; PassData &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>passName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out PassData</td>          <td class="paramname"><span class="paramname"><em>passData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>line</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new Render Pass to the Render Graph. </p>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PassData</td><td>Type of the class to use to provide data to the Render Pass.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">passName</td><td>Name of the new Render Pass (this is also be used to generate a GPU profiling marker).</td></tr>
+    <tr><td class="paramname">passData</td><td>Instance of PassData that is passed to the render function and you must fill.</td></tr>
+    <tr><td class="paramname">file</td><td>File name of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+    <tr><td class="paramname">line</td><td>File line of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new instance of a <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph_builder.html" title="Use this struct to set up a new Render Pass.">RenderGraphBuilder</a> used to setup the new Render Pass.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Contraintes de type</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a55a8c99d5016112741de7a2a40f04336" name="a55a8c99d5016112741de7a2a40f04336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55a8c99d5016112741de7a2a40f04336">&#9670;&#160;</a></span>AddRenderPass&lt; PassData &gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph_builder.html">RenderGraphBuilder</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.AddRenderPass&lt; PassData &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>passName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out PassData</td>          <td class="paramname"><span class="paramname"><em>passData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a></td>          <td class="paramname"><span class="paramname"><em>sampler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>line</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new Render Pass to the Render Graph. </p>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PassData</td><td>Type of the class to use to provide data to the Render Pass.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">passName</td><td>Name of the new Render Pass (this is also be used to generate a GPU profiling marker).</td></tr>
+    <tr><td class="paramname">passData</td><td>Instance of PassData that is passed to the render function and you must fill.</td></tr>
+    <tr><td class="paramname">sampler</td><td>Profiling sampler used around the pass.</td></tr>
+    <tr><td class="paramname">file</td><td>File name of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+    <tr><td class="paramname">line</td><td>File line of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new instance of a <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph_builder.html" title="Use this struct to set up a new Render Pass.">RenderGraphBuilder</a> used to setup the new Render Pass.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Contraintes de type</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a80105fd8845cef1307233b11d316ef46" name="a80105fd8845cef1307233b11d316ef46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80105fd8845cef1307233b11d316ef46">&#9670;&#160;</a></span>AddUnsafePass&lt; PassData &gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_unsafe_render_graph_builder.html">IUnsafeRenderGraphBuilder</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.AddUnsafePass&lt; PassData &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>passName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out PassData</td>          <td class="paramname"><span class="paramname"><em>passData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>line</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new Unsafe Render Pass to the Render Graph. Unsafe passes can do certain operations compute/raster render passes cannot do and have access to the full command buffer API. The unsafe API should be used sparingly as it has the following downsides: </p>
+<ul>
+<li>Limited automatic validation of the commands and resource dependencies. The user is responsible to ensure that all dependencies are correctly declared.</li>
+<li>All native render passes will be serialized out.</li>
+<li>In the future the render graph compiler may generate a sub-optimal command stream for unsafe passes. When using a unsafe pass the graph will also not automatically set up graphics state like rendertargets. The pass should do this itself using cmd.SetRenderTarget and related commands.</li>
+</ul>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PassData</td><td>Type of the class to use to provide data to the Render Pass.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">passName</td><td>Name of the new Render Pass (this is also be used to generate a GPU profiling marker).</td></tr>
+    <tr><td class="paramname">passData</td><td>Instance of PassData that is passed to the render function and you must fill.</td></tr>
+    <tr><td class="paramname">file</td><td>File name of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+    <tr><td class="paramname">line</td><td>File line of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new instance of a <a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_unsafe_render_graph_builder.html" title="A builder for an unsafe render pass. RenderGraph.AddUnsafePass">IUnsafeRenderGraphBuilder</a> used to setup the new Unsafe Render Pass.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Contraintes de type</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a380b265781f4a1ef926dc85e1cdbbb96" name="a380b265781f4a1ef926dc85e1cdbbb96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a380b265781f4a1ef926dc85e1cdbbb96">&#9670;&#160;</a></span>AddUnsafePass&lt; PassData &gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_unsafe_render_graph_builder.html">IUnsafeRenderGraphBuilder</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.AddUnsafePass&lt; PassData &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>passName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out PassData</td>          <td class="paramname"><span class="paramname"><em>passData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a></td>          <td class="paramname"><span class="paramname"><em>sampler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>line</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new unsafe Render Pass to the Render Graph. Unsafe passes can do certain operations compute/raster render passes cannot do and have access to the full command buffer API. The unsafe API should be used sparingly as it has the following downsides: </p>
+<ul>
+<li>Limited automatic validation of the commands and resource dependencies. The user is responsible to ensure that all dependencies are correctly declared.</li>
+<li>All native render passes will be serialized out.</li>
+<li>In the future the render graph compiler may generate a sub-optimal command stream for unsafe passes. When using an unsafe pass the graph will also not automatically set up graphics state like rendertargets. The pass should do this itself using cmd.SetRenderTarget and related commands.</li>
+</ul>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PassData</td><td>Type of the class to use to provide data to the Render Pass.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">passName</td><td>Name of the new Render Pass (this is also be used to generate a GPU profiling marker).</td></tr>
+    <tr><td class="paramname">passData</td><td>Instance of PassData that is passed to the render function and you must fill.</td></tr>
+    <tr><td class="paramname">sampler</td><td>Profiling sampler used around the pass.</td></tr>
+    <tr><td class="paramname">file</td><td>File name of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+    <tr><td class="paramname">line</td><td>File line of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new instance of a <a class="el" href="interface_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_i_unsafe_render_graph_builder.html" title="A builder for an unsafe render pass. RenderGraph.AddUnsafePass">IUnsafeRenderGraphBuilder</a> used to setup the new unsafe Render Pass.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Contraintes de type</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>PassData</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a7434296fcdebee3eba5d2a386c895a86" name="a7434296fcdebee3eba5d2a386c895a86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7434296fcdebee3eba5d2a386c895a86">&#9670;&#160;</a></span>BeginProfilingSampler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.RenderGraphModule.RenderGraph.BeginProfilingSampler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a></td>          <td class="paramname"><span class="paramname"><em>sampler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>line</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Begin a profiling scope. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sampler</td><td>Sampler used for profiling.</td></tr>
+    <tr><td class="paramname">file</td><td>File name of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+    <tr><td class="paramname">line</td><td>File line of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abbe51687c38efcdbf062f7ec2e8c4223" name="abbe51687c38efcdbf062f7ec2e8c4223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbe51687c38efcdbf062f7ec2e8c4223">&#9670;&#160;</a></span>BeginRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.RenderGraphModule.RenderGraph.BeginRecording </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph_parameters.html">RenderGraphParameters</a></td>          <td class="paramname"><span class="paramname"><em>parameters</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts the recording of the render graph. This must be called before adding any pass to the render graph. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameters</td><td>Parameters necessary for the render graph execution.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Begin recording the Render Graph.</p>
+<div class="fragment"><div class="line">renderGraph.BeginRecording(parameters)</div>
+<div class="line"><span class="comment">// Add your render graph passes here.</span></div>
+<div class="line">renderGraph.EndRecordingAndExecute()</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ab14fb3d4a23c229cbb03eb569a58f679" name="ab14fb3d4a23c229cbb03eb569a58f679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab14fb3d4a23c229cbb03eb569a58f679">&#9670;&#160;</a></span>CreateBuffer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_handle.html">BufferHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateBuffer </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_desc.html">BufferDesc</a></td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new Render Graph <a class="el" href="namespace_graphics.html">Graphics</a> Buffer resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">desc</td><td><a class="el" href="namespace_graphics.html">Graphics</a> Buffer descriptor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new GraphicsBufferHandle.</dd></dl>
+
+</div>
+</div>
+<a id="a9c1bdad2f1b16aac845ed7a978ff3942" name="a9c1bdad2f1b16aac845ed7a978ff3942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c1bdad2f1b16aac845ed7a978ff3942">&#9670;&#160;</a></span>CreateBuffer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_handle.html">BufferHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateBuffer </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_handle.html">BufferHandle</a></td>          <td class="paramname"><span class="paramname"><em>graphicsBuffer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new Render Graph <a class="el" href="namespace_graphics.html">Graphics</a> Buffer resource using the descriptor from another graphics buffer. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphicsBuffer</td><td><a class="el" href="namespace_graphics.html">Graphics</a> Buffer from which the descriptor should be used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new GraphicsBufferHandle.</dd></dl>
+
+</div>
+</div>
+<a id="aad91249db29fa712f70f086966abe90a" name="aad91249db29fa712f70f086966abe90a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad91249db29fa712f70f086966abe90a">&#9670;&#160;</a></span>CreateGizmoRendererList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateGizmoRendererList </td>
+          <td>(</td>
+          <td class="paramtype">in Camera</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in GizmoSubset</td>          <td class="paramname"><span class="paramname"><em>gizmoSubset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new Gizmo Renderer List Render Graph resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The camera that is used for rendering the Gizmo.</td></tr>
+    <tr><td class="paramname">gizmoSubset</td><td>GizmoSubset that specifies whether gizmos render before or after postprocessing for a camera render. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html" title="Renderer List resource handle.">RendererListHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="a9be1dc3525bd1b33108fe718b8ab7ee0" name="a9be1dc3525bd1b33108fe718b8ab7ee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be1dc3525bd1b33108fe718b8ab7ee0">&#9670;&#160;</a></span>CreateRendererList() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateRendererList </td>
+          <td>(</td>
+          <td class="paramtype">in CoreRendererListDesc</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new Renderer List Render Graph resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">desc</td><td>Renderer List descriptor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html" title="Renderer List resource handle.">RendererListHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="ab983a63ebffcda336ac31c81542e1594" name="ab983a63ebffcda336ac31c81542e1594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab983a63ebffcda336ac31c81542e1594">&#9670;&#160;</a></span>CreateRendererList() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateRendererList </td>
+          <td>(</td>
+          <td class="paramtype">in RendererListParams</td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new Renderer List Render Graph resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">desc</td><td>Renderer List descriptor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html" title="Renderer List resource handle.">RendererListHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="afe72dab46ef33ed54bd43f4549998478" name="afe72dab46ef33ed54bd43f4549998478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe72dab46ef33ed54bd43f4549998478">&#9670;&#160;</a></span>CreateShadowRendererList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateShadowRendererList </td>
+          <td>(</td>
+          <td class="paramtype">ref ShadowDrawingSettings</td>          <td class="paramname"><span class="paramname"><em>shadowDrawingSettings</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new Shadow Renderer List Render Graph resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shadowDrawingSettings</td><td>DrawSettings that describe the shadow drawcall.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html" title="Renderer List resource handle.">RendererListHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="a88f191264789151ee45e725fa0860ce6" name="a88f191264789151ee45e725fa0860ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88f191264789151ee45e725fa0860ce6">&#9670;&#160;</a></span>CreateSharedTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateSharedTexture </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_desc.html">TextureDesc</a></td>          <td class="paramname"><span class="paramname"><em>desc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>explicitRelease</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new Render Graph Shared Texture resource. This texture will be persistent across render graph executions. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">desc</td><td>Creation descriptor of the texture.</td></tr>
+    <tr><td class="paramname">explicitRelease</td><td>Set to true if you want to manage the lifetime of the resource yourself. Otherwise the resource will be released automatically if unused for a time.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html" title="An abstract handle representing a texture resource as known by one particular record + execute of the...">TextureHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="a70ba295494498a5df67e8884aeea328d" name="a70ba295494498a5df67e8884aeea328d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70ba295494498a5df67e8884aeea328d">&#9670;&#160;</a></span>CreateSkyboxRendererList() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateSkyboxRendererList </td>
+          <td>(</td>
+          <td class="paramtype">in Camera</td>          <td class="paramname"><span class="paramname"><em>camera</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new Skybox Renderer List Render Graph resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The camera that is used for rendering the Skybox.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html" title="Renderer List resource handle.">RendererListHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="a66851b3db120b93caf262d20aeb744b8" name="a66851b3db120b93caf262d20aeb744b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66851b3db120b93caf262d20aeb744b8">&#9670;&#160;</a></span>CreateSkyboxRendererList() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateSkyboxRendererList </td>
+          <td>(</td>
+          <td class="paramtype">in Camera</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matrix4x4</td>          <td class="paramname"><span class="paramname"><em>projectionMatrix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matrix4x4</td>          <td class="paramname"><span class="paramname"><em>viewMatrix</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new Skybox Renderer List Render Graph resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The camera that is used for rendering the Skybox.</td></tr>
+    <tr><td class="paramname">projectionMatrix</td><td>The projection matrix used during <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> rendering of the skybox.</td></tr>
+    <tr><td class="paramname">viewMatrix</td><td>The view matrix used during <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> rendering of the skybox.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html" title="Renderer List resource handle.">RendererListHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="a9767f8efe3d0cfa915bb470c8bdcbb5d" name="a9767f8efe3d0cfa915bb470c8bdcbb5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9767f8efe3d0cfa915bb470c8bdcbb5d">&#9670;&#160;</a></span>CreateSkyboxRendererList() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateSkyboxRendererList </td>
+          <td>(</td>
+          <td class="paramtype">in Camera</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matrix4x4</td>          <td class="paramname"><span class="paramname"><em>projectionMatrixL</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matrix4x4</td>          <td class="paramname"><span class="paramname"><em>viewMatrixL</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matrix4x4</td>          <td class="paramname"><span class="paramname"><em>projectionMatrixR</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matrix4x4</td>          <td class="paramname"><span class="paramname"><em>viewMatrixR</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new Skybox Renderer List Render Graph resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The camera that is used for rendering the Skybox.</td></tr>
+    <tr><td class="paramname">projectionMatrixL</td><td>The left eye projection matrix used during Legacy single pass <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> rendering of the skybox.</td></tr>
+    <tr><td class="paramname">viewMatrixL</td><td>The left eye view matrix used during Legacy single pass <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> rendering of the skybox.</td></tr>
+    <tr><td class="paramname">projectionMatrixR</td><td>The right eye projection matrix used during Legacy single pass <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> rendering of the skybox.</td></tr>
+    <tr><td class="paramname">viewMatrixR</td><td>The right eye view matrix used during Legacy single pass <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> rendering of the skybox.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html" title="Renderer List resource handle.">RendererListHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="ad5323da1dc2bdcd466200302bc34e4d2" name="ad5323da1dc2bdcd466200302bc34e4d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5323da1dc2bdcd466200302bc34e4d2">&#9670;&#160;</a></span>CreateTexture() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateTexture </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_desc.html">TextureDesc</a></td>          <td class="paramname"><span class="paramname"><em>desc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new Render Graph Texture resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">desc</td><td>Texture descriptor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html" title="An abstract handle representing a texture resource as known by one particular record + execute of the...">TextureHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="aa3da79bd416cc7b09d17ab80a9b7edf7" name="aa3da79bd416cc7b09d17ab80a9b7edf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3da79bd416cc7b09d17ab80a9b7edf7">&#9670;&#160;</a></span>CreateTexture() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a></td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new Render Graph Texture resource using the descriptor from another texture. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>Texture from which the descriptor should be used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html" title="An abstract handle representing a texture resource as known by one particular record + execute of the...">TextureHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="a6a5cd2d4e2f2647e945ff13d14cc809e" name="a6a5cd2d4e2f2647e945ff13d14cc809e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a5cd2d4e2f2647e945ff13d14cc809e">&#9670;&#160;</a></span>CreateTextureIfInvalid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateTextureIfInvalid </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_desc.html">TextureDesc</a></td>          <td class="paramname"><span class="paramname"><em>desc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a></td>          <td class="paramname"><span class="paramname"><em>texture</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new Render Graph Texture if the passed handle is invalid and use said handle as output. If the passed handle is valid, no texture is created. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">desc</td><td>Desc used to create the texture.</td></tr>
+    <tr><td class="paramname">texture</td><td>Texture from which the descriptor should be used.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad895572e6624d19e972dd275a8a2499b" name="ad895572e6624d19e972dd275a8a2499b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad895572e6624d19e972dd275a8a2499b">&#9670;&#160;</a></span>CreateUIOverlayRendererList() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateUIOverlayRendererList </td>
+          <td>(</td>
+          <td class="paramtype">in Camera</td>          <td class="paramname"><span class="paramname"><em>camera</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new UIOverlay Renderer List Render Graph resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The camera that is used for rendering the full UIOverlay.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html" title="Renderer List resource handle.">RendererListHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="af88c82ac7f33f2fd881df14948c4715a" name="af88c82ac7f33f2fd881df14948c4715a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88c82ac7f33f2fd881df14948c4715a">&#9670;&#160;</a></span>CreateUIOverlayRendererList() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateUIOverlayRendererList </td>
+          <td>(</td>
+          <td class="paramtype">in Camera</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in UISubset</td>          <td class="paramname"><span class="paramname"><em>uiSubset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new UIOverlay Renderer List Render Graph resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The camera that is used for rendering some subset of the UIOverlay.</td></tr>
+    <tr><td class="paramname">uiSubset</td><td>Enum flag that specifies which subset to render.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html" title="Renderer List resource handle.">RendererListHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="ab9a8adeb7daa8e062330f3b852b0cdc2" name="ab9a8adeb7daa8e062330f3b852b0cdc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9a8adeb7daa8e062330f3b852b0cdc2">&#9670;&#160;</a></span>CreateWireOverlayRendererList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html">RendererListHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.CreateWireOverlayRendererList </td>
+          <td>(</td>
+          <td class="paramtype">in Camera</td>          <td class="paramname"><span class="paramname"><em>camera</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new WireOverlay Renderer List Render Graph resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The camera that is used for rendering the WireOverlay.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_renderer_list_handle.html" title="Renderer List resource handle.">RendererListHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="acf7b8478ee2f83693e32a1921e0fbb97" name="acf7b8478ee2f83693e32a1921e0fbb97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7b8478ee2f83693e32a1921e0fbb97">&#9670;&#160;</a></span>EndProfilingSampler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.RenderGraphModule.RenderGraph.EndProfilingSampler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_profiling_sampler.html">ProfilingSampler</a></td>          <td class="paramname"><span class="paramname"><em>sampler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>line</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>End a profiling scope. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sampler</td><td>Sampler used for profiling.</td></tr>
+    <tr><td class="paramname">file</td><td>File name of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+    <tr><td class="paramname">line</td><td>File line of the source file this function is called from. Used for debugging. This parameter is automatically generated by the compiler. Users do not need to pass it.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5be14881551cd29a9486bfc32fa8be1d" name="a5be14881551cd29a9486bfc32fa8be1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be14881551cd29a9486bfc32fa8be1d">&#9670;&#160;</a></span>GetBufferDesc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_desc.html">BufferDesc</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.GetBufferDesc </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_handle.html">BufferHandle</a></td>          <td class="paramname"><span class="paramname"><em>graphicsBuffer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the descriptor of the specified <a class="el" href="namespace_graphics.html">Graphics</a> Buffer resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphicsBuffer</td><td><a class="el" href="namespace_graphics.html">Graphics</a> Buffer resource from which the descriptor is requested.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The input graphics buffer descriptor.</dd></dl>
+
+</div>
+</div>
+<a id="a4457c993ad84f931482995c26e1ed3e5" name="a4457c993ad84f931482995c26e1ed3e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4457c993ad84f931482995c26e1ed3e5">&#9670;&#160;</a></span>GetRegisteredRenderGraphs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="class_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph.html">RenderGraph</a> &gt; UnityEngine.Rendering.RenderGraphModule.RenderGraph.GetRegisteredRenderGraphs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the list of all registered render graphs. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>The list of all registered render graphs.</dd></dl>
+
+</div>
+</div>
+<a id="ac4fbe68942e6d36fca851eb678831647" name="ac4fbe68942e6d36fca851eb678831647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4fbe68942e6d36fca851eb678831647">&#9670;&#160;</a></span>GetRenderTargetInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html">RenderTargetInfo</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.GetRenderTargetInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a></td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the descriptor of the specified Texture resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>Texture resource from which the descriptor is requested.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The input texture descriptor.</dd></dl>
+
+</div>
+</div>
+<a id="a1fc9a0377f52c1a9256cf9f52bf359f2" name="a1fc9a0377f52c1a9256cf9f52bf359f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc9a0377f52c1a9256cf9f52bf359f2">&#9670;&#160;</a></span>GetTextureDesc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_desc.html">TextureDesc</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.GetTextureDesc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a></td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the descriptor of the specified Texture resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>Texture resource from which the descriptor is requested.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The input texture descriptor.</dd></dl>
+
+</div>
+</div>
+<a id="ac52567c9f1656e24d30f8074720d31d6" name="ac52567c9f1656e24d30f8074720d31d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac52567c9f1656e24d30f8074720d31d6">&#9670;&#160;</a></span>ImportBackbuffer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.ImportBackbuffer </td>
+          <td>(</td>
+          <td class="paramtype">RenderTargetIdentifier</td>          <td class="paramname"><span class="paramname"><em>rt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Import the final backbuffer to render graph. This function can only be used when nativeRenderPassesEnabled is false. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rt</td><td>Backbuffer render target identifier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html" title="An abstract handle representing a texture resource as known by one particular record + execute of the...">TextureHandle</a> that represents the imported texture in the context of this rendergraph.</dd></dl>
+
+</div>
+</div>
+<a id="aee3aeba41693124f56611ba7b9dd867d" name="aee3aeba41693124f56611ba7b9dd867d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee3aeba41693124f56611ba7b9dd867d">&#9670;&#160;</a></span>ImportBackbuffer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.ImportBackbuffer </td>
+          <td>(</td>
+          <td class="paramtype">RenderTargetIdentifier</td>          <td class="paramname"><span class="paramname"><em>rt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html">RenderTargetInfo</a></td>          <td class="paramname"><span class="paramname"><em>info</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_import_resource_params.html">ImportResourceParams</a></td>          <td class="paramname"><span class="paramname"><em>importParams</em></span><span class="paramdefsep"> = </span><span class="paramdefval">new&#160;<a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_import_resource_params.html">ImportResourceParams</a>()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Import the final backbuffer to render graph. The rendergraph can't derive the properties of a RenderTargetIdentifier as it is an opaque handle so the user has to pass them in through the info argument. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rt</td><td>Backbuffer render target identifier.</td></tr>
+    <tr><td class="paramname">info</td><td>The properties of the passed in <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>.</td></tr>
+    <tr><td class="paramname">importParams</td><td>Info describing the clear behavior of imported textures. Clearing textures using importParams may be more efficient than manually clearing the texture using <span class="tt">cmd.Clear</span> on some hardware.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html" title="An abstract handle representing a texture resource as known by one particular record + execute of the...">TextureHandle</a> that represents the imported texture in the context of this rendergraph.</dd></dl>
+
+</div>
+</div>
+<a id="a80582bce3fe8347a39e74c288167a9ed" name="a80582bce3fe8347a39e74c288167a9ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80582bce3fe8347a39e74c288167a9ed">&#9670;&#160;</a></span>ImportBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_buffer_handle.html">BufferHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.ImportBuffer </td>
+          <td>(</td>
+          <td class="paramtype">GraphicsBuffer</td>          <td class="paramname"><span class="paramname"><em>graphicsBuffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>forceRelease</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Import an external <a class="el" href="namespace_graphics.html">Graphics</a> Buffer to the Render Graph. Any pass writing to an imported graphics buffer will be considered having side effects and can't be automatically culled. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphicsBuffer</td><td>External <a class="el" href="namespace_graphics.html">Graphics</a> Buffer that needs to be imported.</td></tr>
+    <tr><td class="paramname">forceRelease</td><td>The imported graphics buffer will be released after usage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new GraphicsBufferHandle.</dd></dl>
+
+</div>
+</div>
+<a id="a01db6c4e3769b9e9bf3b78982c8b8e39" name="a01db6c4e3769b9e9bf3b78982c8b8e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01db6c4e3769b9e9bf3b78982c8b8e39">&#9670;&#160;</a></span>ImportRayTracingAccelerationStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_ray_tracing_acceleration_structure_handle.html">RayTracingAccelerationStructureHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.ImportRayTracingAccelerationStructure </td>
+          <td>(</td>
+          <td class="paramtype">in RayTracingAccelerationStructure</td>          <td class="paramname"><span class="paramname"><em>accelStruct</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Import an external RayTracingAccelerationStructure to the Render Graph. Any pass writing to (building) an imported RayTracingAccelerationStructure will be considered having side effects and can't be automatically culled. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">accelStruct</td><td>External RayTracingAccelerationStructure that needs to be imported.</td></tr>
+    <tr><td class="paramname">name</td><td>Optional name for identifying the RayTracingAccelerationStructure in the Render Graph.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_ray_tracing_acceleration_structure_handle.html" title="RayTracingAccelerationStructure resource handle.">RayTracingAccelerationStructureHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="a5e74a7b77ceac6313c04cd7dd6d08eae" name="a5e74a7b77ceac6313c04cd7dd6d08eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e74a7b77ceac6313c04cd7dd6d08eae">&#9670;&#160;</a></span>ImportTexture() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.ImportTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a></td>          <td class="paramname"><span class="paramname"><em>rt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Import an external texture to the Render Graph. Any pass writing to an imported texture will be considered having side effects and can't be automatically culled. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rt</td><td>External <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> that needs to be imported.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html" title="An abstract handle representing a texture resource as known by one particular record + execute of the...">TextureHandle</a> that represents the imported texture in the context of this rendergraph.</dd></dl>
+
+</div>
+</div>
+<a id="a1142992f07835b0206a099678c03d07c" name="a1142992f07835b0206a099678c03d07c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1142992f07835b0206a099678c03d07c">&#9670;&#160;</a></span>ImportTexture() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.ImportTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a></td>          <td class="paramname"><span class="paramname"><em>rt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_import_resource_params.html">ImportResourceParams</a></td>          <td class="paramname"><span class="paramname"><em>importParams</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Import an external texture to the Render Graph. Any pass writing to an imported texture will be considered having side effects and can't be automatically culled. </p>
+<p>Note: RTHandles that wrap RenderTargetIdentifier will fail to import using this overload as render graph can't derive the render texture's properties. In that case the overload taking a <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html" title="Basic properties of a RTHandle needed by the render graph compiler. It is not always possible to deri...">RenderTargetInfo</a> argument should be used instead.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rt</td><td>External <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> that needs to be imported.</td></tr>
+    <tr><td class="paramname">importParams</td><td>Info describing the clear behavior of imported textures. Clearing textures using importParams may be more efficient than manually clearing the texture using <span class="tt">cmd.Clear</span> on some hardware.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html" title="An abstract handle representing a texture resource as known by one particular record + execute of the...">TextureHandle</a> that represents the imported texture in the context of this rendergraph.</dd></dl>
+
+</div>
+</div>
+<a id="a52e8d9352be45e02ca1dc3ecc0aaabbf" name="a52e8d9352be45e02ca1dc3ecc0aaabbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e8d9352be45e02ca1dc3ecc0aaabbf">&#9670;&#160;</a></span>ImportTexture() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a> UnityEngine.Rendering.RenderGraphModule.RenderGraph.ImportTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a></td>          <td class="paramname"><span class="paramname"><em>rt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html">RenderTargetInfo</a></td>          <td class="paramname"><span class="paramname"><em>info</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_import_resource_params.html">ImportResourceParams</a></td>          <td class="paramname"><span class="paramname"><em>importParams</em></span><span class="paramdefsep"> = </span><span class="paramdefval">new&#160;<a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_import_resource_params.html">ImportResourceParams</a>()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Import an external texture to the Render Graph. This overload should be used for RTHandles wrapping a RenderTargetIdentifier. If the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> is wrapping a RenderTargetIdentifer, Rendergrpah can't derive the render texture's properties so the user has to provide this info to the graph through <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html" title="Basic properties of a RTHandle needed by the render graph compiler. It is not always possible to deri...">RenderTargetInfo</a>. </p>
+<p>Any pass writing to an imported texture will be considered having side effects and can't be automatically culled.</p>
+<p>Note: To avoid inconsistencies between the passed in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html" title="Basic properties of a RTHandle needed by the render graph compiler. It is not always possible to deri...">RenderTargetInfo</a> and render texture this overload can only be used when the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> is wrapping a RenderTargetIdentifier. If this is not the case, the overload of ImportTexture without a <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html" title="Basic properties of a RTHandle needed by the render graph compiler. It is not always possible to deri...">RenderTargetInfo</a> argument should be used instead.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rt</td><td>External <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> that needs to be imported.</td></tr>
+    <tr><td class="paramname">info</td><td>The properties of the passed in <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>.</td></tr>
+    <tr><td class="paramname">importParams</td><td>Info describing the clear behavior of imported textures. Clearing textures using importParams may be more efficient than manually clearing the texture using <span class="tt">cmd.Clear</span> on some hardware.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>A new <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html" title="An abstract handle representing a texture resource as known by one particular record + execute of the...">TextureHandle</a> that represents the imported texture in the context of this rendergraph.</dd></dl>
+
+</div>
+</div>
+<a id="a564a3bf044dfaac7cdfc36de9ff8acc6" name="a564a3bf044dfaac7cdfc36de9ff8acc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a564a3bf044dfaac7cdfc36de9ff8acc6">&#9670;&#160;</a></span>RefreshSharedTextureDesc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.RenderGraphModule.RenderGraph.RefreshSharedTextureDesc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a></td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_desc.html">TextureDesc</a></td>          <td class="paramname"><span class="paramname"><em>desc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Refresh a shared texture with a new descriptor. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>Shared texture that needs to be updated.</td></tr>
+    <tr><td class="paramname">desc</td><td>New Descriptor for the texture.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a56e6fbec738c628efbfb8b30a42e5eae" name="a56e6fbec738c628efbfb8b30a42e5eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e6fbec738c628efbfb8b30a42e5eae">&#9670;&#160;</a></span>RegisterDebug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.RenderGraphModule.RenderGraph.RegisterDebug </td>
+          <td>(</td>
+          <td class="paramtype">DebugUI.Panel</td>          <td class="paramname"><span class="paramname"><em>panel</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register the render graph to the debug window. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">panel</td><td>Optional debug panel to which the render graph debug parameters will be registered.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b196a23448423ab9d6c96c8700c485d" name="a8b196a23448423ab9d6c96c8700c485d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b196a23448423ab9d6c96c8700c485d">&#9670;&#160;</a></span>ReleaseSharedTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.RenderGraphModule.RenderGraph.ReleaseSharedTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_texture_handle.html">TextureHandle</a></td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Release a Render Graph shared texture resource. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>The handle to the texture that needs to be release.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Documentation des propriétés</h2>
+<a id="ae6bda44e0355fa4a8bed896773882774" name="ae6bda44e0355fa4a8bed896773882774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6bda44e0355fa4a8bed896773882774">&#9670;&#160;</a></span>nativeRenderPassesEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Rendering.RenderGraphModule.RenderGraph.nativeRenderPassesEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable the use of the render pass API by the graph instead of traditional SetRenderTarget. This is an advanced feature and users have to be aware of the specific impact it has on rendergraph/graphics APIs below. </p>
+<p>When enabled, the render graph try to use render passes and supasses instead of relying on SetRendertarget. It will try to aggressively optimize the number of BeginRenderPass+EndRenderPass calls as well as calls to NextSubPass. This with the aim to maximize the time spent "on chip" on tile based renderers.</p>
+<p>The Graph will automatically determine when to break render passes as well as the load and store actions to apply to these render passes. To do this, the graph will analyze the use of textures. E.g. when a texture is used twice in a row as a active render target, the two render graph passes will be merged in a single render pass with two surpasses. On the other hand if a render target is sampled as a texture in a later pass this render target will be stored (and possibly resolved) and the render pass will be broken up.</p>
+<p>When setting this setting to true some existing render graph API is no longer valid as it can't express detailed frame information needed to emit native render pases. In particular:</p><ul>
+<li>The ImportBackbuffer overload without a <a class="el" href="struct_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_target_info.html" title="Basic properties of a RTHandle needed by the render graph compiler. It is not always possible to deri...">RenderTargetInfo</a> argument.</li>
+<li>Any AddRenderPass overloads. The more specific AddRasterRenderPass/AddComputePass/AddUnsafePass functions should be used to register passes.</li>
+</ul>
+<p>In addition to this, additional validation will be done on the correctness of arguments of existing API that was not previously done. This could lead to new errors when using existing render graph code with nativeRenderPassesEnabled.</p>
+<p>Note: that CommandBuffer.BeginRenderPass/EndRenderPass calls are different by design from SetRenderTarget so this could also have effects outside of render graph (e.g. for code relying on the currently active render target as this will not be updated when using render passes). </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_rendering.html">Rendering</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_rendering_1_1_render_graph_module.html">RenderGraphModule</a></li><li class="navelem"><a href="class_unity_engine_1_1_rendering_1_1_render_graph_module_1_1_render_graph.html">RenderGraph</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

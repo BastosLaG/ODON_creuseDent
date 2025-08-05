@@ -1,0 +1,28 @@
+var class_unity_1_1_visual_scripting_1_1_bolt_core_configuration =
+[
+    [ "aotSafeMode", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a4d2a640a2157c241fa9cd62ec5c1e489", null ],
+    [ "assemblyOptions", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a53f70da4041c19c9dafc9597ed8a851d", null ],
+    [ "carryChildren", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a7d693e2489418f7cf491f5d8f3e62721", null ],
+    [ "clearGraphSelection", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#aeeaf03c95611929a7fec41d5658a7aba", null ],
+    [ "controlScheme", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a37acf28cc99dc7d05da257876090c54f", null ],
+    [ "createSceneVariables", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#ab83a97135b73edcf61411a751b354c4c", null ],
+    [ "debug", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a453d4e53457e857a42871924930a43d8", null ],
+    [ "debugInspectorGUI", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#af680d9809a51a782c253a2f0150f0170", null ],
+    [ "developerMode", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#ad6a80cf6e0c109ad0f5642b07ad56b1d", null ],
+    [ "dimInactiveNodes", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a603f77ca2d5a2e15a74d031144a26d45", null ],
+    [ "dimIncompatibleNodes", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a222655fbfe09ab980c5100650a150f25", null ],
+    [ "disablePlaymodeTint", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a68e42f726fec1c59483995b42a184e59", null ],
+    [ "dragPanSpeed", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a44963005d558a0fddc4463752e7a63a4", null ],
+    [ "groupInheritedMembers", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#accfe47510d09648bc4ec9d99dbfb88c1", null ],
+    [ "humanNaming", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a55aaf4bdd9bf7d238b29bed43c4d4340", null ],
+    [ "limitFuzzyFinderHeight", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#af1c374808ddd713a445057b906ceaf00", null ],
+    [ "maxSearchResults", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a56ed8cb6a65802c6986c94f84596b9bc", null ],
+    [ "overviewSmoothing", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a13ea5fc35e9c3bb645dc965bdd7d8c07", null ],
+    [ "panSpeed", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a3816cd45536a68db8ebbe283d3a1b1e0", null ],
+    [ "showGrid", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#acc18fc8e05ec361278457cafd93ac79f", null ],
+    [ "showVariablesHelp", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a3d5a8b7962cf660ef93527ae56748d2f", null ],
+    [ "snapToGrid", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#aaad1f9ae03157e8e77a4946db4588938", null ],
+    [ "trackMetadataState", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#aa2014aeb5be88e579d152c1acffb3a9d", null ],
+    [ "typeOptions", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#a9e6586b75b660c250e8185d62fcc5bf8", null ],
+    [ "zoomSpeed", "class_unity_1_1_visual_scripting_1_1_bolt_core_configuration.html#ab30c248c921e6389860b417bbd85d957", null ]
+];

@@ -1,0 +1,15 @@
+var class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor =
+[
+    [ "DrawBeforeProperties", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#ad289503ad93062f6ace25c1ae84764b5", null ],
+    [ "DrawInspector", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#a7af7f9c8dd28e35988f2da4151b2303c", null ],
+    [ "DrawOptimizationControls", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#a08ce79e20fb89b4b86daa0172e32e7f8", null ],
+    [ "DrawProperties", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#af10f522d033a8104f0b12c09797461e5", null ],
+    [ "OnEnable", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#a85588cbb4c0564f28359cecf9a3191eb", null ],
+    [ "m_BatchGroupParentTransform", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#a6fb5878f6e65016d4a9269f9ddf12ade", null ],
+    [ "m_ButtonParentTransform", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#aaefcc1ba3bd139ee0b4b180fc4017ed9", null ],
+    [ "m_HighlightParentTransform", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#a4b83e45ecbf5ff6db012720551fc501f", null ],
+    [ "m_IconParentTransform", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#ae6846888aa1da002eea3be352e64db92", null ],
+    [ "m_ImageParentTransform", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#a7ab5c5496388d9b5ac977cfeef8e8d12", null ],
+    [ "m_OptimizeOnStart", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#a67df1d71b732bd65bd3799b6c4c4c24e", null ],
+    [ "m_TextParentTransform", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_spatial_keyboard_1_1_keyboard_optimizer_editor.html#ab11cb03d6dd1a10b312a0a325f6f79b8", null ]
+];

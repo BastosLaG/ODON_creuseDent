@@ -1,0 +1,4 @@
+var class_unity_editor_1_1_animations_1_1_rigging_1_1_multi_referential_inverse_constraint =
+[
+    [ "MultiReferentialInverseConstraint", "class_unity_editor_1_1_animations_1_1_rigging_1_1_multi_referential_inverse_constraint.html#ad612c23407d2b453247ffdfc06474e82", null ]
+];

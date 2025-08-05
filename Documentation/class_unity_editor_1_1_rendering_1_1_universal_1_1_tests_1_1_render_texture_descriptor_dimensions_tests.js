@@ -1,0 +1,5 @@
+var class_unity_editor_1_1_rendering_1_1_universal_1_1_tests_1_1_render_texture_descriptor_dimensions_tests =
+[
+    [ "RenderScaleTestCase", "class_unity_editor_1_1_rendering_1_1_universal_1_1_tests_1_1_render_texture_descriptor_dimensionc8e4faba68fe50a38de41794e2d6ddb8.html", null ],
+    [ "TestRTDimensionNativeRenderPass", "class_unity_editor_1_1_rendering_1_1_universal_1_1_tests_1_1_render_texture_descriptor_dimension00d93ca33f2595cfd537b3b8927018b5.html", null ]
+];

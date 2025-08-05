@@ -1,0 +1,4 @@
+var class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_x_r_input_hapta21d7ae3d569a2a23831287b0cc28cb1 =
+[
+    [ "FindProperties", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_x_r_input_hapta21d7ae3d569a2a23831287b0cc28cb1.html#a4e3ff176155d2f71d0546bc4cf02294e", null ]
+];

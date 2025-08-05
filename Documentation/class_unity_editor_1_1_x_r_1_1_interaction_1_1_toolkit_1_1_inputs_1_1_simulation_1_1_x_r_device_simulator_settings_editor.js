@@ -1,0 +1,4 @@
+var class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_x_r_device_simulator_settings_editor =
+[
+    [ "OnInspectorGUI", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_x_r_device_simulator_settings_editor.html#a43c3ef6e2ca5ed05fb22d7ba2c7540f8", null ]
+];

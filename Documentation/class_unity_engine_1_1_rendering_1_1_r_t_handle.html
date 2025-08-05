@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Référence de la classe UnityEngine.Rendering.RTHandle</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_unity_engine_1_1_rendering_1_1_r_t_handle.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la classe UnityEngine.Rendering.RTHandle</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> is a RenderTexture that scales automatically with the camera size. This allows proper reutilization of RenderTexture memory when different cameras with various sizes are used during rendering. <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle_system.html" title="System managing a set of RTHandle textures.">RTHandleSystem</a>  
+ <a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a4d750846a7b66269bf2daf8d7387700d" id="r_a4d750846a7b66269bf2daf8d7387700d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d750846a7b66269bf2daf8d7387700d">SetCustomHandleProperties</a> (in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_r_t_handle_properties.html">RTHandleProperties</a> properties)</td></tr>
+<tr class="memdesc:a4d750846a7b66269bf2daf8d7387700d"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default, rtHandleProperties gets the global state of scalers against the global reference mode. This method lets the current <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> use a local custom <a class="el" href="struct_unity_engine_1_1_rendering_1_1_r_t_handle_properties.html" title="List of properties of the RTHandle System for the current frame.">RTHandleProperties</a>. This function is being used by scalers such as TAAU and DLSS, which require to have a different resolution for color (independent of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle_system.html" title="System managing a set of RTHandle textures.">RTHandleSystem</a>).  <br /></td></tr>
+<tr class="memitem:a2010162ee53ddaa5a753e216d9d96d5d" id="r_a2010162ee53ddaa5a753e216d9d96d5d"><td class="memItemLeft" align="right" valign="top"><a id="a2010162ee53ddaa5a753e216d9d96d5d" name="a2010162ee53ddaa5a753e216d9d96d5d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearCustomHandleProperties</b> ()</td></tr>
+<tr class="memdesc:a2010162ee53ddaa5a753e216d9d96d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that clears any custom handle property being set. <br /></td></tr>
+<tr class="memitem:aeb4fb12b1a11358075299fa613c76239" id="r_aeb4fb12b1a11358075299fa613c76239"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb4fb12b1a11358075299fa613c76239">GetInstanceID</a> ()</td></tr>
+<tr class="memdesc:aeb4fb12b1a11358075299fa613c76239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Instance ID of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>.  <br /></td></tr>
+<tr class="memitem:a54dcb7d7d149714fa8d80c9f68046f12" id="r_a54dcb7d7d149714fa8d80c9f68046f12"><td class="memItemLeft" align="right" valign="top"><a id="a54dcb7d7d149714fa8d80c9f68046f12" name="a54dcb7d7d149714fa8d80c9f68046f12"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> ()</td></tr>
+<tr class="memdesc:a54dcb7d7d149714fa8d80c9f68046f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>. <br /></td></tr>
+<tr class="memitem:ae328bc0ae75120161ba05c5c50e77ae1" id="r_ae328bc0ae75120161ba05c5c50e77ae1"><td class="memItemLeft" align="right" valign="top">Vector2Int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae328bc0ae75120161ba05c5c50e77ae1">GetScaledSize</a> (Vector2Int refSize)</td></tr>
+<tr class="memdesc:ae328bc0ae75120161ba05c5c50e77ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the input size, scaled by the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> scale factor.  <br /></td></tr>
+<tr class="memitem:a10312798bd894d7b5fc45a62c0db778c" id="r_a10312798bd894d7b5fc45a62c0db778c"><td class="memItemLeft" align="right" valign="top">Vector2Int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10312798bd894d7b5fc45a62c0db778c">GetScaledSize</a> ()</td></tr>
+<tr class="memdesc:a10312798bd894d7b5fc45a62c0db778c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scaled size of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Fonctions membres publiques statiques</h2></td></tr>
+<tr class="memitem:a1e31f1a184b95cdf87d3cb8c9840b20f" id="r_a1e31f1a184b95cdf87d3cb8c9840b20f"><td class="memItemLeft" align="right" valign="top">static implicit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e31f1a184b95cdf87d3cb8c9840b20f">operator RenderTargetIdentifier</a> (<a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a> handle)</td></tr>
+<tr class="memdesc:a1e31f1a184b95cdf87d3cb8c9840b20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion operator to RenderTargetIdentifier.  <br /></td></tr>
+<tr class="memitem:a54be2e9127fbc36b11049362d4526b24" id="r_a54be2e9127fbc36b11049362d4526b24"><td class="memItemLeft" align="right" valign="top">static implicit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54be2e9127fbc36b11049362d4526b24">operator Texture</a> (<a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a> handle)</td></tr>
+<tr class="memdesc:a54be2e9127fbc36b11049362d4526b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion operator to Texture.  <br /></td></tr>
+<tr class="memitem:a3b0b825a0f98af45a48ece5378feb615" id="r_a3b0b825a0f98af45a48ece5378feb615"><td class="memItemLeft" align="right" valign="top">static implicit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b0b825a0f98af45a48ece5378feb615">operator RenderTexture</a> (<a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a> handle)</td></tr>
+<tr class="memdesc:a3b0b825a0f98af45a48ece5378feb615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion operator to RenderTexture.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Propriétés</h2></td></tr>
+<tr class="memitem:a042927a756d4db1216f065e48dd9d55c" id="r_a042927a756d4db1216f065e48dd9d55c"><td class="memItemLeft" align="right" valign="top"><a id="a042927a756d4db1216f065e48dd9d55c" name="a042927a756d4db1216f065e48dd9d55c"></a>
+Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>scaleFactor</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a042927a756d4db1216f065e48dd9d55c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale factor applied to the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> reference size. <br /></td></tr>
+<tr class="memitem:a84a2671be7864c9191be8ba1046d83bd" id="r_a84a2671be7864c9191be8ba1046d83bd"><td class="memItemLeft" align="right" valign="top"><a id="a84a2671be7864c9191be8ba1046d83bd" name="a84a2671be7864c9191be8ba1046d83bd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>useScaling</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a84a2671be7864c9191be8ba1046d83bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> uses automatic scaling. <br /></td></tr>
+<tr class="memitem:a99354f91c1e7cf4b01c931a582cc843a" id="r_a99354f91c1e7cf4b01c931a582cc843a"><td class="memItemLeft" align="right" valign="top"><a id="a99354f91c1e7cf4b01c931a582cc843a" name="a99354f91c1e7cf4b01c931a582cc843a"></a>
+Vector2Int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceSize</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a99354f91c1e7cf4b01c931a582cc843a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference size of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> System associated with the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>. <br /></td></tr>
+<tr class="memitem:a558321fcf0ae751a04e2117259c3aa11" id="r_a558321fcf0ae751a04e2117259c3aa11"><td class="memItemLeft" align="right" valign="top"><a id="a558321fcf0ae751a04e2117259c3aa11" name="a558321fcf0ae751a04e2117259c3aa11"></a>
+<a class="el" href="struct_unity_engine_1_1_rendering_1_1_r_t_handle_properties.html">RTHandleProperties</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rtHandleProperties</b><code> [get]</code></td></tr>
+<tr class="memdesc:a558321fcf0ae751a04e2117259c3aa11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current properties of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> System. If a custom property has been set through SetCustomHandleProperties method, it will be used that one instead. <br /></td></tr>
+<tr class="memitem:a810420dcc00f42513ad760062f886095" id="r_a810420dcc00f42513ad760062f886095"><td class="memItemLeft" align="right" valign="top"><a id="a810420dcc00f42513ad760062f886095" name="a810420dcc00f42513ad760062f886095"></a>
+RenderTexture&#160;</td><td class="memItemRight" valign="bottom"><b>rt</b><code> [get]</code></td></tr>
+<tr class="memdesc:a810420dcc00f42513ad760062f886095"><td class="mdescLeft">&#160;</td><td class="mdescRight">RenderTexture associated with the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>. <br /></td></tr>
+<tr class="memitem:a113b5e9673fb97a292c7bc2a3dac9abe" id="r_a113b5e9673fb97a292c7bc2a3dac9abe"><td class="memItemLeft" align="right" valign="top"><a id="a113b5e9673fb97a292c7bc2a3dac9abe" name="a113b5e9673fb97a292c7bc2a3dac9abe"></a>
+Texture&#160;</td><td class="memItemRight" valign="bottom"><b>externalTexture</b><code> [get]</code></td></tr>
+<tr class="memdesc:a113b5e9673fb97a292c7bc2a3dac9abe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture associated with the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> when constructed from an external Texture or RenderTexture. <br /></td></tr>
+<tr class="memitem:a8321dd19f6b427d6281cc670eef9cbf6" id="r_a8321dd19f6b427d6281cc670eef9cbf6"><td class="memItemLeft" align="right" valign="top"><a id="a8321dd19f6b427d6281cc670eef9cbf6" name="a8321dd19f6b427d6281cc670eef9cbf6"></a>
+RenderTargetIdentifier&#160;</td><td class="memItemRight" valign="bottom"><b>nameID</b><code> [get]</code></td></tr>
+<tr class="memdesc:a8321dd19f6b427d6281cc670eef9cbf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">RenderTargetIdentifier associated with the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>. <br /></td></tr>
+<tr class="memitem:a37011f9b9dd05dcfaa85bf937b936a4d" id="r_a37011f9b9dd05dcfaa85bf937b936a4d"><td class="memItemLeft" align="right" valign="top"><a id="a37011f9b9dd05dcfaa85bf937b936a4d" name="a37011f9b9dd05dcfaa85bf937b936a4d"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b><code> [get]</code></td></tr>
+<tr class="memdesc:a37011f9b9dd05dcfaa85bf937b936a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>. <br /></td></tr>
+<tr class="memitem:a5dfb3245ecf84e88389994e800f91445" id="r_a5dfb3245ecf84e88389994e800f91445"><td class="memItemLeft" align="right" valign="top"><a id="a5dfb3245ecf84e88389994e800f91445" name="a5dfb3245ecf84e88389994e800f91445"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isMSAAEnabled</b><code> [get]</code></td></tr>
+<tr class="memdesc:a5dfb3245ecf84e88389994e800f91445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true is MSAA is enabled, false otherwise. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>A <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> is a RenderTexture that scales automatically with the camera size. This allows proper reutilization of RenderTexture memory when different cameras with various sizes are used during rendering. <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle_system.html" title="System managing a set of RTHandle textures.">RTHandleSystem</a> </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="aeb4fb12b1a11358075299fa613c76239" name="aeb4fb12b1a11358075299fa613c76239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb4fb12b1a11358075299fa613c76239">&#9670;&#160;</a></span>GetInstanceID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEngine.Rendering.RTHandle.GetInstanceID </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Instance ID of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>The <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> Instance ID.</dd></dl>
+
+</div>
+</div>
+<a id="a10312798bd894d7b5fc45a62c0db778c" name="a10312798bd894d7b5fc45a62c0db778c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10312798bd894d7b5fc45a62c0db778c">&#9670;&#160;</a></span>GetScaledSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2Int UnityEngine.Rendering.RTHandle.GetScaledSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the scaled size of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>The scaled size of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="ae328bc0ae75120161ba05c5c50e77ae1" name="ae328bc0ae75120161ba05c5c50e77ae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae328bc0ae75120161ba05c5c50e77ae1">&#9670;&#160;</a></span>GetScaledSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2Int UnityEngine.Rendering.RTHandle.GetScaledSize </td>
+          <td>(</td>
+          <td class="paramtype">Vector2Int</td>          <td class="paramname"><span class="paramname"><em>refSize</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the input size, scaled by the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> scale factor. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">refSize</td><td>Input size</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Input size scaled by the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> scale factor.</dd></dl>
+
+</div>
+</div>
+<a id="a1e31f1a184b95cdf87d3cb8c9840b20f" name="a1e31f1a184b95cdf87d3cb8c9840b20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e31f1a184b95cdf87d3cb8c9840b20f">&#9670;&#160;</a></span>operator RenderTargetIdentifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">implicit UnityEngine.Rendering.RTHandle.operator RenderTargetIdentifier </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a></td>          <td class="paramname"><span class="paramname"><em>handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implicit conversion operator to RenderTargetIdentifier. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>Input <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>RenderTargetIdentifier representation of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="a3b0b825a0f98af45a48ece5378feb615" name="a3b0b825a0f98af45a48ece5378feb615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b0b825a0f98af45a48ece5378feb615">&#9670;&#160;</a></span>operator RenderTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">implicit UnityEngine.Rendering.RTHandle.operator RenderTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a></td>          <td class="paramname"><span class="paramname"><em>handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implicit conversion operator to RenderTexture. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>Input <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>RenderTexture representation of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="a54be2e9127fbc36b11049362d4526b24" name="a54be2e9127fbc36b11049362d4526b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54be2e9127fbc36b11049362d4526b24">&#9670;&#160;</a></span>operator Texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">implicit UnityEngine.Rendering.RTHandle.operator Texture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a></td>          <td class="paramname"><span class="paramname"><em>handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implicit conversion operator to Texture. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>Input <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Texture representation of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a>.</dd></dl>
+
+</div>
+</div>
+<a id="a4d750846a7b66269bf2daf8d7387700d" name="a4d750846a7b66269bf2daf8d7387700d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d750846a7b66269bf2daf8d7387700d">&#9670;&#160;</a></span>SetCustomHandleProperties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.RTHandle.SetCustomHandleProperties </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="struct_unity_engine_1_1_rendering_1_1_r_t_handle_properties.html">RTHandleProperties</a></td>          <td class="paramname"><span class="paramname"><em>properties</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>By default, rtHandleProperties gets the global state of scalers against the global reference mode. This method lets the current <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html" title="A RTHandle is a RenderTexture that scales automatically with the camera size. This allows proper reut...">RTHandle</a> use a local custom <a class="el" href="struct_unity_engine_1_1_rendering_1_1_r_t_handle_properties.html" title="List of properties of the RTHandle System for the current frame.">RTHandleProperties</a>. This function is being used by scalers such as TAAU and DLSS, which require to have a different resolution for color (independent of the <a class="el" href="class_unity_engine_1_1_rendering_1_1_r_t_handle_system.html" title="System managing a set of RTHandle textures.">RTHandleSystem</a>). </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">properties</td><td>Properties to set.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_rendering.html">Rendering</a></li><li class="navelem"><a href="class_unity_engine_1_1_rendering_1_1_r_t_handle.html">RTHandle</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

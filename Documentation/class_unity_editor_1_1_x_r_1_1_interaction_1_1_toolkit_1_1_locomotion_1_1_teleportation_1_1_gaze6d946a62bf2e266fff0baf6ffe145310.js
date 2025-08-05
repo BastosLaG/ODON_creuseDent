@@ -1,0 +1,9 @@
+var class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze6d946a62bf2e266fff0baf6ffe145310 =
+[
+    [ "OnEnable", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze6d946a62bf2e266fff0baf6ffe145310.html#ad50d99d961593eab7056bf01a74cecfb", null ],
+    [ "OnInspectorGUI", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze6d946a62bf2e266fff0baf6ffe145310.html#aa3ccd2661488ceae1eb9d469a06ec9b1", null ],
+    [ "m_DistanceWeightCurve", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze6d946a62bf2e266fff0baf6ffe145310.html#ac0999b0cc9195a201f30869c5eabfaa0", null ],
+    [ "m_EnableDistanceWeighting", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze6d946a62bf2e266fff0baf6ffe145310.html#abde47420fda98e37c4e82ba68f109a86", null ],
+    [ "m_GazeAngleScoreCurve", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze6d946a62bf2e266fff0baf6ffe145310.html#ad7e31159c9d55952de57135d1759057b", null ],
+    [ "m_MaxGazeAngle", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_teleportation_1_1_gaze6d946a62bf2e266fff0baf6ffe145310.html#aa20d56853f1d5838e1754a319a983f79", null ]
+];

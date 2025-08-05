@@ -1,0 +1,10 @@
+var class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_tunneling_vignette_controller_editor =
+[
+    [ "VignetteParameterProperties", "struct_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_tunneling231474c3b1e02979b9e4fe43bf99ae1a.html", null ],
+    [ "DrawInspector", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_tunneling_vignette_controller_editor.html#a096b645ab84e592957c376767a08cb15", null ],
+    [ "OnDisable", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_tunneling_vignette_controller_editor.html#a7e0e24527132e0c2c368a49b3f0bf649", null ],
+    [ "OnEnable", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_tunneling_vignette_controller_editor.html#af148e65301f3297ac3f62fe5d5f73677", null ],
+    [ "m_CurrentParameters", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_tunneling_vignette_controller_editor.html#a0c1d833af48874dd39bd308f2d253e5e", null ],
+    [ "m_DefaultParameters", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_tunneling_vignette_controller_editor.html#a227bc1dec188f6b9852f60076a91885d", null ],
+    [ "m_LocomotionVignetteProviders", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_comfort_1_1_tunneling_vignette_controller_editor.html#abc825e02165ae3cead3f61c3d4fc5794", null ]
+];

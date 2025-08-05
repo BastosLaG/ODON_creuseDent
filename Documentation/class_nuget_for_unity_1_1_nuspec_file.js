@@ -1,0 +1,26 @@
+var class_nuget_for_unity_1_1_nuspec_file =
+[
+    [ "NuspecFile", "class_nuget_for_unity_1_1_nuspec_file.html#a0777783f35495bd34c5f577105c3f560", null ],
+    [ "GetLocalPackageFilePath", "class_nuget_for_unity_1_1_nuspec_file.html#a62f2d2a70c743b1196acb650d8b40d69", null ],
+    [ "Save", "class_nuget_for_unity_1_1_nuspec_file.html#a8a916a247b6c0c3ee578502b625e5c3c", null ],
+    [ "Authors", "class_nuget_for_unity_1_1_nuspec_file.html#ae4a4c6c5cc6df9c5cb87bf231ff2d81f", null ],
+    [ "Copyright", "class_nuget_for_unity_1_1_nuspec_file.html#a9d9e956134031763778d6fd993fedc1b", null ],
+    [ "Dependencies", "class_nuget_for_unity_1_1_nuspec_file.html#a76681861ac247720ce0f670ddd737b3f", null ],
+    [ "Description", "class_nuget_for_unity_1_1_nuspec_file.html#aed010937ac72476d83bdb03e80521903", null ],
+    [ "Files", "class_nuget_for_unity_1_1_nuspec_file.html#ab2ba69191c3b3a358ace0dacf6d1a11e", null ],
+    [ "Icon", "class_nuget_for_unity_1_1_nuspec_file.html#a58f7dbdc44efcc3f2d3faf6d2b4fed70", null ],
+    [ "IconFilePath", "class_nuget_for_unity_1_1_nuspec_file.html#a9b510d6c798517edf24b74dae4c0e17b", null ],
+    [ "IconUrl", "class_nuget_for_unity_1_1_nuspec_file.html#ac0a709778f1caebd9ab08227a9c71911", null ],
+    [ "LicenseUrl", "class_nuget_for_unity_1_1_nuspec_file.html#ac0eccb5f9e9871d95ced6da0232a20e5", null ],
+    [ "Owners", "class_nuget_for_unity_1_1_nuspec_file.html#a90320cf139590fc805feb1d6d5b8f3d0", null ],
+    [ "ProjectUrl", "class_nuget_for_unity_1_1_nuspec_file.html#a311982ebd0e82714fd649d7bd0bd1ffa", null ],
+    [ "ReleaseNotes", "class_nuget_for_unity_1_1_nuspec_file.html#a9737028f3de917192b4b58c2a48db6fd", null ],
+    [ "RepositoryBranch", "class_nuget_for_unity_1_1_nuspec_file.html#a1d7fcf80da225d200e51fd6b66c43b72", null ],
+    [ "RepositoryCommit", "class_nuget_for_unity_1_1_nuspec_file.html#ad1d867c3ac09bf46fcce74cf30d226fe", null ],
+    [ "RepositoryType", "class_nuget_for_unity_1_1_nuspec_file.html#ab60ff95bae9bb8f498fd5525354c1272", null ],
+    [ "RepositoryUrl", "class_nuget_for_unity_1_1_nuspec_file.html#a48531cde43f703c6db40e3f64e112fb8", null ],
+    [ "RequireLicenseAcceptance", "class_nuget_for_unity_1_1_nuspec_file.html#ae12e6def6783010f0e5ee12aefd212f7", null ],
+    [ "Summary", "class_nuget_for_unity_1_1_nuspec_file.html#a60a7ce9b317f05af8165be5040865739", null ],
+    [ "Tags", "class_nuget_for_unity_1_1_nuspec_file.html#a238b1aa2d52763813483da2674c8162f", null ],
+    [ "Title", "class_nuget_for_unity_1_1_nuspec_file.html#a54d40ca2beb162f811e95113df5d6627", null ]
+];

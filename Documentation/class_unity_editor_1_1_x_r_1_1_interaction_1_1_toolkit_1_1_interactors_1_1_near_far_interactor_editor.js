@@ -1,0 +1,27 @@
+var class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor =
+[
+    [ "DrawAttachTransformController", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a8013ae11f24a0972d5462b2a3175b4d1", null ],
+    [ "DrawFarInteractionCaster", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a87368f5991cfbb77588161e662afb139", null ],
+    [ "DrawInteractorEventsNested", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a2178e0cba7d57ce8ba580ca6ce1fd8e0", null ],
+    [ "DrawNearInteractionCaster", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#aa78b4afa2505302853a7ac642521c419", null ],
+    [ "DrawProperties", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#ae513e83bcf0db3a6d8cae973fcb662b8", null ],
+    [ "DrawSelectionConfiguration", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a6890e9ddf652cb1d3e2524127444e05d", null ],
+    [ "DrawUIInteraction", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a93e1191234e2c303a16491b070915848", null ],
+    [ "DrawUIInteractionInputConfiguration", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#ad6f279654282236a1479875fd391555b", null ],
+    [ "OnEnable", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#aae04ae152683798fb873fc5c694d75a1", null ],
+    [ "m_BlockUIOnInteractableSelection", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a35156fa21d52598c7fd215be3f50c2fb", null ],
+    [ "m_EnableFarCasting", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#ac7c9c7cf8bfdb993454affe41b13db19", null ],
+    [ "m_EnableNearCasting", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#ab805be995721d641b6854eb953802268", null ],
+    [ "m_EnableUIInteraction", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a2ad1dfb01c5cd5bc0893036a7d3c87a9", null ],
+    [ "m_FarAttachMode", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a15f9491f787779b4226c8e1d1d9f2c17", null ],
+    [ "m_FarInteractionCaster", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a133de34488bff00299b9805c36794024", null ],
+    [ "m_InteractionAttachController", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a383589244f9d3ca31d44db285f24d740", null ],
+    [ "m_NearCasterSortingStrategy", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#adb42b28cd254e941ccac91890ba87548", null ],
+    [ "m_NearInteractionCaster", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a88637ab48a792f8ac5b9068579d6e1f5", null ],
+    [ "m_SortNearTargetsAfterTargetFilter", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#aa2bd71c0a5bb3d9be01185099d0baacd", null ],
+    [ "m_UIHoverEntered", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#ad7ab92f2328b5f351ef8c1fcbc6b8553", null ],
+    [ "m_UIHoverExited", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a6a8a69e74e1fbae16725e0edffb9413f", null ],
+    [ "m_UIPressInput", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#a2ab22aab2e9e4a245646dc6b03a8a6bb", null ],
+    [ "m_UIScrollInput", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#aa0bdddae07d6cbcb4d3fdf241f14bfe1", null ],
+    [ "showDeprecatedProperties", "class_unity_editor_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor_editor.html#ab7f518bc01d071625e393a488af4d747", null ]
+];

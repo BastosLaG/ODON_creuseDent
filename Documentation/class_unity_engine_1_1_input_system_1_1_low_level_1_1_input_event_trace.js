@@ -1,0 +1,27 @@
+var class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace =
+[
+    [ "DeviceInfo", "struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace_1_1_device_info.html", "struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace_1_1_device_info" ],
+    [ "ReplayController", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace_1_1_replay_controller.html", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace_1_1_replay_controller" ],
+    [ "InputEventTrace", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#aaefe4df46fb0daedd8f50517f3c1d741", null ],
+    [ "Clear", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a53dd34af0576144a1f73f6422c657964", null ],
+    [ "Disable", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a8a05ae4f06393c5076fa1869a90d3c5b", null ],
+    [ "Dispose", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a38416148dcc4329ebfc2c537542d86c7", null ],
+    [ "Enable", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a344819cc47e7aeecd1ea87e3ac328880", null ],
+    [ "GetNextEvent", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a389c27b9b59144ef508e2baf80a417ca", null ],
+    [ "ReadFrom", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a2cb6eb7f3f82876d054f12cc7ae6a7e2", null ],
+    [ "ReadFrom", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#af239515a348e56225bb9a96c4fd939a9", null ],
+    [ "Replay", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a8f5f8e3b1ca67ed277023e9b670da1fd", null ],
+    [ "Resize", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a76cf9e6950f9c5ee0b7d4405c9b2bef6", null ],
+    [ "WriteTo", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a9f9e1ff02f51da3740ad5ed9d7d51348", null ],
+    [ "WriteTo", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#ae0b0ae808fe5e8aeeb4e3f8c9dae8486", null ],
+    [ "allocatedSizeInBytes", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#ac4c88e3ed4402cb096254885ffb18823", null ],
+    [ "deviceId", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#ac7d2edaed94c4e2ee31c4d0451ea1fd3", null ],
+    [ "deviceInfos", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a4646f29edd98704a812df95876e11702", null ],
+    [ "enabled", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#add9cdf1ef07103c3c8c5adb662970009", null ],
+    [ "eventCount", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a072e79a90bffafb52878bf31f83e67be", null ],
+    [ "maxSizeInBytes", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a721dd658a426a22482f151d3980e18fe", null ],
+    [ "onFilterEvent", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a310bfee9e29195358d566ec04d893b2c", null ],
+    [ "recordFrameMarkers", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#a2fc7ce50548c7469178f3cf869332072", null ],
+    [ "totalEventSizeInBytes", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#aee8a497e1ee2cc3c3a4e63e99b6d4285", null ],
+    [ "onEvent", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace.html#aaa5390e47a2180763e7309ffc8d8be25", null ]
+];

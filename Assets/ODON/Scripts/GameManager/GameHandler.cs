@@ -12,6 +12,7 @@ namespace ODON.GameManager
         /// <remarks>
         /// This class manages the game state, including patient data, interactive items, and security items.
         /// It ensures that only one instance of GameHandler exists throughout the game.
+        /// </remarks>
         private static GameHandler instance;
         public static GameHandler Instance => instance;
         #endregion

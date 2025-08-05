@@ -1,0 +1,26 @@
+var class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history_1_g =
+[
+    [ "Record", "struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g_1_1_record.html", null ],
+    [ "AddRecord", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a9ec3fe9a4aa682af8cb96672e04eb8c2", null ],
+    [ "CopyFrom", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a261156429da0f5c7271a71af15d8c08b", null ],
+    [ "Equals", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a007d17e671e258c9c9c985d09ef311b9", null ],
+    [ "Equals", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a8190c3f5ed4ecf54fc28e6b3f1403675", null ],
+    [ "GetEnumerator", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a82423f54cfee88a0040ceb6c5854ce4d", null ],
+    [ "GetHashCode", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#aab839bc23d2fea9348f391cbf29cd617", null ],
+    [ "GetUnsafeExtraMemoryPtr", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a29a11b008e5c28685a838132244c5eb2", null ],
+    [ "GetUnsafeMemoryPtr", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#ab9001905b2d901b7581f0a0a6507e228", null ],
+    [ "InputStateHistory", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a470269544e555b71d07f7885757ea627", null ],
+    [ "InputStateHistory", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a90974b3f6f1114cebc6962b34e1f2a1a", null ],
+    [ "InputStateHistory", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a40861b60ab7dc60fe32ba9f2d760220f", null ],
+    [ "ReadValue", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#aa64ad656674827e54327bd139dc15f53", null ],
+    [ "RecordStateChange", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#aefdaabdcb9fc6e92fdb8abb53cabe45b", null ],
+    [ "ToString", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a4e1449c12bc9e5c8fc07da50d8f9322d", null ],
+    [ "control", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#af9f20d5500eba0fc01915c919e18070f", null ],
+    [ "index", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a5f886eed4ecf3d934b2d1bbfedd6d1eb", null ],
+    [ "next", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a53987b44aac5d78a738ecd1375336cf6", null ],
+    [ "owner", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#aa46e0adfb5c32a085ccfd0c59a07655d", null ],
+    [ "previous", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a336e1962966095d69cf39c2979eb78e4", null ],
+    [ "this[int index]", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a11799da4648cd13569c1ab46582e27f9", null ],
+    [ "time", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a577cde363c882bd0a44fcc86c47372ce", null ],
+    [ "valid", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history-1-g.html#a7b7987518c57383eccecfff5710e4737", null ]
+];

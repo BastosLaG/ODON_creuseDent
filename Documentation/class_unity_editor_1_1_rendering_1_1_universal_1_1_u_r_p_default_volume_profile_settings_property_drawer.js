@@ -1,0 +1,4 @@
+var class_unity_editor_1_1_rendering_1_1_universal_1_1_u_r_p_default_volume_profile_settings_property_drawer =
+[
+    [ "URPDefaultVolumeProfileSettingsContextMenu", "class_unity_editor_1_1_rendering_1_1_universal_1_1_u_r_p_default_volume_profile_settings_propert7beef72816b285f01bcedb958f126600.html", null ]
+];

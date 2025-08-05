@@ -1,0 +1,757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Référence de la classe UnityEngine.Rendering.DynamicResolutionHandler</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_unity_engine_1_1_rendering_1_1_dynamic_resolution_handler.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la classe UnityEngine.Rendering.DynamicResolutionHandler</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>The class responsible to handle dynamic resolution.  
+ <a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Types publics</h2></td></tr>
+<tr class="memitem:af848e503328306eb04e9a1eec421899d" id="r_af848e503328306eb04e9a1eec421899d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af848e503328306eb04e9a1eec421899d">UpsamplerScheduleType</a> { <a class="el" href="#af848e503328306eb04e9a1eec421899da7e8a79fa1ff0b963ca09919f40c86101">BeforePost</a>
+, <a class="el" href="#af848e503328306eb04e9a1eec421899dae08995074380182a777ea5fa012acd64">AfterDepthOfField</a>
+, <a class="el" href="#af848e503328306eb04e9a1eec421899da6415a3f4986108d1658bc65c1639d236">AfterPost</a>
+ }</td></tr>
+<tr class="memdesc:af848e503328306eb04e9a1eec421899d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scheduling mechanism to apply upscaling.  <a href="#af848e503328306eb04e9a1eec421899d">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a59e17871b084222623b42a67c8f7b177" id="r_a59e17871b084222623b42a67c8f7b177"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59e17871b084222623b42a67c8f7b177">GetResolvedScale</a> ()</td></tr>
+<tr class="memdesc:a59e17871b084222623b42a67c8f7b177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the resolved scale.  <br /></td></tr>
+<tr class="memitem:a2c1a48d7f217d565dcd64a52e66b7cfe" id="r_a2c1a48d7f217d565dcd64a52e66b7cfe"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c1a48d7f217d565dcd64a52e66b7cfe">CalculateMipBias</a> (Vector2Int inputResolution, Vector2Int outputResolution, bool forceApply=false)</td></tr>
+<tr class="memdesc:a2c1a48d7f217d565dcd64a52e66b7cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mip bias to apply in the rendering pipeline. This mip bias helps bring detail since sampling of textures occurs at the target rate.  <br /></td></tr>
+<tr class="memitem:a7a70ee62d06cd4dd5c0119fe4542964a" id="r_a7a70ee62d06cd4dd5c0119fe4542964a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a70ee62d06cd4dd5c0119fe4542964a">SetCurrentCameraRequest</a> (bool cameraRequest)</td></tr>
+<tr class="memdesc:a7a70ee62d06cd4dd5c0119fe4542964a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the camera that is currently processed by the pipeline has requested dynamic resolution or not.  <br /></td></tr>
+<tr class="memitem:aca31aedbd110d844a266c6415db997cc" id="r_aca31aedbd110d844a266c6415db997cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca31aedbd110d844a266c6415db997cc">Update</a> (<a class="el" href="struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings.html">GlobalDynamicResolutionSettings</a> settings, Action OnResolutionChange=null)</td></tr>
+<tr class="memdesc:aca31aedbd110d844a266c6415db997cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the state of the dynamic resolution system.  <br /></td></tr>
+<tr class="memitem:a127bae9b67531fc5fb30cc7d199bcf00" id="r_a127bae9b67531fc5fb30cc7d199bcf00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a127bae9b67531fc5fb30cc7d199bcf00">SoftwareDynamicResIsEnabled</a> ()</td></tr>
+<tr class="memdesc:a127bae9b67531fc5fb30cc7d199bcf00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether software dynamic resolution is enabled or not.  <br /></td></tr>
+<tr class="memitem:acd10cce64c1f19a85225a2103fc36e68" id="r_acd10cce64c1f19a85225a2103fc36e68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd10cce64c1f19a85225a2103fc36e68">HardwareDynamicResIsEnabled</a> ()</td></tr>
+<tr class="memdesc:acd10cce64c1f19a85225a2103fc36e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether hardware dynamic resolution is enabled or not.  <br /></td></tr>
+<tr class="memitem:a6eebece58883b533b5f3307ec101e614" id="r_a6eebece58883b533b5f3307ec101e614"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6eebece58883b533b5f3307ec101e614">RequestsHardwareDynamicResolution</a> ()</td></tr>
+<tr class="memdesc:a6eebece58883b533b5f3307ec101e614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies whether hardware dynamic resolution has been requested and is going to be used.  <br /></td></tr>
+<tr class="memitem:a29b97007cede92de45343d002cf439cb" id="r_a29b97007cede92de45343d002cf439cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29b97007cede92de45343d002cf439cb">DynamicResolutionEnabled</a> ()</td></tr>
+<tr class="memdesc:a29b97007cede92de45343d002cf439cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies whether dynamic resolution is enabled and scaling the render targets.  <br /></td></tr>
+<tr class="memitem:a7ac001698cf9a91e61642d140a32e2dd" id="r_a7ac001698cf9a91e61642d140a32e2dd"><td class="memItemLeft" align="right" valign="top"><a id="a7ac001698cf9a91e61642d140a32e2dd" name="a7ac001698cf9a91e61642d140a32e2dd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ForceSoftwareFallback</b> ()</td></tr>
+<tr class="memdesc:a7ac001698cf9a91e61642d140a32e2dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces software fallback for dynamic resolution. Needs to be called in case Hardware dynamic resolution is requested by the user, but not supported by the platform. <br /></td></tr>
+<tr class="memitem:a6d7c537870e47ee54de3cac240b98118" id="r_a6d7c537870e47ee54de3cac240b98118"><td class="memItemLeft" align="right" valign="top">Vector2Int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d7c537870e47ee54de3cac240b98118">GetScaledSize</a> (Vector2Int size)</td></tr>
+<tr class="memdesc:a6d7c537870e47ee54de3cac240b98118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies to the passed size the scale imposed by the dynamic resolution system. Note: this function has the side effect of caching the last scale size, and the output is always smaller or equal then the input.  <br /></td></tr>
+<tr class="memitem:a7807d8325a47169776b940538e09ba19" id="r_a7807d8325a47169776b940538e09ba19"><td class="memItemLeft" align="right" valign="top">Vector2Int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7807d8325a47169776b940538e09ba19">ApplyScalesOnSize</a> (Vector2Int size)</td></tr>
+<tr class="memdesc:a7807d8325a47169776b940538e09ba19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies to the passed size the scale imposed by the dynamic resolution system. This function uses the internal resolved scale from the dynamic resolution system. Note: this function is pure (has no side effects), this function does not cache the pre-scale size.  <br /></td></tr>
+<tr class="memitem:a2a104e2beded9011d9e223c7c28669aa" id="r_a2a104e2beded9011d9e223c7c28669aa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a104e2beded9011d9e223c7c28669aa">GetCurrentScale</a> ()</td></tr>
+<tr class="memdesc:a2a104e2beded9011d9e223c7c28669aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the scale that is currently applied by the dynamic resolution system.  <br /></td></tr>
+<tr class="memitem:a3765f47834670f78dd1dd405395759a3" id="r_a3765f47834670f78dd1dd405395759a3"><td class="memItemLeft" align="right" valign="top">Vector2Int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3765f47834670f78dd1dd405395759a3">GetLastScaledSize</a> ()</td></tr>
+<tr class="memdesc:a3765f47834670f78dd1dd405395759a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the latest scaled size that has been produced by GetScaledSize.  <br /></td></tr>
+<tr class="memitem:a170fef26573c1c47bf369c33569530ad" id="r_a170fef26573c1c47bf369c33569530ad"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a170fef26573c1c47bf369c33569530ad">GetLowResMultiplier</a> (float targetLowRes)</td></tr>
+<tr class="memdesc:a170fef26573c1c47bf369c33569530ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the resolved low res multiplier based on the low res transparency threshold settings. Note: The pipeline can use this to drive the scale for low res transparency if available.  <br /></td></tr>
+<tr class="memitem:acf95839ab15d084ebb38fc6746297716" id="r_acf95839ab15d084ebb38fc6746297716"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf95839ab15d084ebb38fc6746297716">GetLowResMultiplier</a> (float targetLowRes, float minimumThreshold)</td></tr>
+<tr class="memdesc:acf95839ab15d084ebb38fc6746297716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the resolved low res multiplier based on the a low res threshold.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Fonctions membres publiques statiques</h2></td></tr>
+<tr class="memitem:aed409318ec9404bf5728556c90c40f63" id="r_aed409318ec9404bf5728556c90c40f63"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed409318ec9404bf5728556c90c40f63">SetDynamicResScaler</a> (<a class="el" href="namespace_unity_engine_1_1_rendering.html#a3940807d171e678eb7f1a0155c8a1ed4">PerformDynamicRes</a> scaler, <a class="el" href="namespace_unity_engine_1_1_rendering.html#af97944239ceb58aea5849d3893c169bc">DynamicResScalePolicyType</a> scalerType=<a class="el" href="namespace_unity_engine_1_1_rendering.html#af97944239ceb58aea5849d3893c169bca0b8e6ca425da564d533de4d5767d5a38">DynamicResScalePolicyType.ReturnsMinMaxLerpFactor</a>)</td></tr>
+<tr class="memdesc:aed409318ec9404bf5728556c90c40f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the scaler method used to drive dynamic resolution by the user.  <br /></td></tr>
+<tr class="memitem:a0706414da26ad89df6ea3243a5fb4cd9" id="r_a0706414da26ad89df6ea3243a5fb4cd9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0706414da26ad89df6ea3243a5fb4cd9">SetSystemDynamicResScaler</a> (<a class="el" href="namespace_unity_engine_1_1_rendering.html#a3940807d171e678eb7f1a0155c8a1ed4">PerformDynamicRes</a> scaler, <a class="el" href="namespace_unity_engine_1_1_rendering.html#af97944239ceb58aea5849d3893c169bc">DynamicResScalePolicyType</a> scalerType=<a class="el" href="namespace_unity_engine_1_1_rendering.html#af97944239ceb58aea5849d3893c169bca0b8e6ca425da564d533de4d5767d5a38">DynamicResScalePolicyType.ReturnsMinMaxLerpFactor</a>)</td></tr>
+<tr class="memdesc:a0706414da26ad89df6ea3243a5fb4cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the scaler method used to drive dynamic resolution internally from the Scriptable <a class="el" href="namespace_unity_engine_1_1_rendering.html">Rendering</a> Pipeline. This function should only be called by Scriptable <a class="el" href="namespace_unity_engine_1_1_rendering.html">Rendering</a> Pipeline.  <br /></td></tr>
+<tr class="memitem:a627e4edd45a832191b0f5eabeb49d9b9" id="r_a627e4edd45a832191b0f5eabeb49d9b9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a627e4edd45a832191b0f5eabeb49d9b9">SetActiveDynamicScalerSlot</a> (<a class="el" href="namespace_unity_engine_1_1_rendering.html#a12098208643568be5e6fb47eb5161bb7">DynamicResScalerSlot</a> slot)</td></tr>
+<tr class="memdesc:a627e4edd45a832191b0f5eabeb49d9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the active dynamic scaler slot to be used by the runtime when calculating frame resolutions. See <a class="el" href="namespace_unity_engine_1_1_rendering.html#a12098208643568be5e6fb47eb5161bb7" title="The source slots for dynamic resolution scaler. Defines registers were the scalers assigned are store...">DynamicResScalerSlot</a> for more information.  <br /></td></tr>
+<tr class="memitem:a08ddcdc4c1875cebf9a3804d25b6c7e0" id="r_a08ddcdc4c1875cebf9a3804d25b6c7e0"><td class="memItemLeft" align="right" valign="top"><a id="a08ddcdc4c1875cebf9a3804d25b6c7e0" name="a08ddcdc4c1875cebf9a3804d25b6c7e0"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearSelectedCamera</b> ()</td></tr>
+<tr class="memdesc:a08ddcdc4c1875cebf9a3804d25b6c7e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will clear the currently used camera. Use this function to restore the default instance when UpdateAndUseCamera is called. <br /></td></tr>
+<tr class="memitem:a07b777f5360562d2db434572bc42195e" id="r_a07b777f5360562d2db434572bc42195e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07b777f5360562d2db434572bc42195e">SetUpscaleFilter</a> (Camera camera, <a class="el" href="namespace_unity_engine_1_1_rendering.html#a36393c4bbe5c13c0087b769cd9fb04e6">DynamicResUpscaleFilter</a> <a class="el" href="#a8327478aea71b473c19698f5ab6bceb5">filter</a>)</td></tr>
+<tr class="memdesc:a07b777f5360562d2db434572bc42195e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Upscale filter used by the camera when dynamic resolution is run.  <br /></td></tr>
+<tr class="memitem:afcc4cd2bb5b0cab59e0797501080b6d9" id="r_afcc4cd2bb5b0cab59e0797501080b6d9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcc4cd2bb5b0cab59e0797501080b6d9">UpdateAndUseCamera</a> (Camera camera, <a class="el" href="struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings.html">GlobalDynamicResolutionSettings</a>? settings=null, Action OnResolutionChange=null)</td></tr>
+<tr class="memdesc:afcc4cd2bb5b0cab59e0797501080b6d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the state of the dynamic resolution system for a specific camera. Call this function also to switch context between cameras (will set the current camera as active). Passing a null camera has the same effect as calling Update without the camera parameter.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Propriétés</h2></td></tr>
+<tr class="memitem:a8327478aea71b473c19698f5ab6bceb5" id="r_a8327478aea71b473c19698f5ab6bceb5"><td class="memItemLeft" align="right" valign="top"><a id="a8327478aea71b473c19698f5ab6bceb5" name="a8327478aea71b473c19698f5ab6bceb5"></a>
+<a class="el" href="namespace_unity_engine_1_1_rendering.html#a36393c4bbe5c13c0087b769cd9fb04e6">DynamicResUpscaleFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>filter</b><code> [get]</code></td></tr>
+<tr class="memdesc:a8327478aea71b473c19698f5ab6bceb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The filter that is used to upscale the rendering result to the native resolution. <br /></td></tr>
+<tr class="memitem:a4faacdfa8959f028ad0eef7384b136d6" id="r_a4faacdfa8959f028ad0eef7384b136d6"><td class="memItemLeft" align="right" valign="top"><a id="a4faacdfa8959f028ad0eef7384b136d6" name="a4faacdfa8959f028ad0eef7384b136d6"></a>
+Vector2Int&#160;</td><td class="memItemRight" valign="bottom"><b>finalViewport</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a4faacdfa8959f028ad0eef7384b136d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The viewport of the final buffer. This is likely the resolution the dynamic resolution starts from before any scaling. Note this is NOT the target resolution the rendering will happen in but the resolution the scaled rendered result will be upscaled to. <br /></td></tr>
+<tr class="memitem:a23a7cbe0ca06cef8dfe086e5cc66960a" id="r_a23a7cbe0ca06cef8dfe086e5cc66960a"><td class="memItemLeft" align="right" valign="top"><a id="a23a7cbe0ca06cef8dfe086e5cc66960a" name="a23a7cbe0ca06cef8dfe086e5cc66960a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>runUpscalerFilterOnFullResolution</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a23a7cbe0ca06cef8dfe086e5cc66960a"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default, dynamic resolution scaling is turned off automatically when the source matches the final viewport (100% scale). That is, DynamicResolutionEnabled and SoftwareDynamicResIsEnabled will return false if the scale is 100%. For certain upscalers, we dont want this behavior since they could possibly include anti aliasing and other quality improving post processes. Setting this to true will eliminate this behavior. Note: when the EdgeAdaptiveScalingUpres (FSR 1.0) filter is set, this will cause this parameter to always be true. <br /></td></tr>
+<tr class="memitem:adbbc25dab3bfcdf36d5648a70607ccac" id="r_adbbc25dab3bfcdf36d5648a70607ccac"><td class="memItemLeft" align="right" valign="top"><a id="adbbc25dab3bfcdf36d5648a70607ccac" name="adbbc25dab3bfcdf36d5648a70607ccac"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>forcingResolution</b><code> [get]</code></td></tr>
+<tr class="memdesc:adbbc25dab3bfcdf36d5648a70607ccac"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the resolution is being forced to a fixed value rather than varying dynamically within a range. Otherwise, false. <br /></td></tr>
+<tr class="memitem:a48b5e1de982ad772fe50e83015ba6068" id="r_a48b5e1de982ad772fe50e83015ba6068"><td class="memItemLeft" align="right" valign="top"><a id="a48b5e1de982ad772fe50e83015ba6068" name="a48b5e1de982ad772fe50e83015ba6068"></a>
+<a class="el" href="#af848e503328306eb04e9a1eec421899d">UpsamplerScheduleType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>upsamplerSchedule</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a48b5e1de982ad772fe50e83015ba6068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Property that sets / gets the state of the upscaling schedule. This must be set at the beginning of the frame, once per camera. <br /></td></tr>
+<tr class="memitem:ae4ac0e1bcf9f43d416146107c1383dd8" id="r_ae4ac0e1bcf9f43d416146107c1383dd8"><td class="memItemLeft" align="right" valign="top"><a id="ae4ac0e1bcf9f43d416146107c1383dd8" name="ae4ac0e1bcf9f43d416146107c1383dd8"></a>
+static <a class="el" href="class_unity_engine_1_1_rendering_1_1_dynamic_resolution_handler.html">DynamicResolutionHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b><code> [get]</code></td></tr>
+<tr class="memdesc:ae4ac0e1bcf9f43d416146107c1383dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the instance of the global dynamic resolution handler. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>The class responsible to handle dynamic resolution. </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation des énumérations membres</h2>
+<a id="af848e503328306eb04e9a1eec421899d" name="af848e503328306eb04e9a1eec421899d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af848e503328306eb04e9a1eec421899d">&#9670;&#160;</a></span>UpsamplerScheduleType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#af848e503328306eb04e9a1eec421899d">UnityEngine.Rendering.DynamicResolutionHandler.UpsamplerScheduleType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The scheduling mechanism to apply upscaling. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="af848e503328306eb04e9a1eec421899da7e8a79fa1ff0b963ca09919f40c86101" name="af848e503328306eb04e9a1eec421899da7e8a79fa1ff0b963ca09919f40c86101"></a>BeforePost&#160;</td><td class="fielddoc"><p>Indicates that upscaling must happen before post processing. This means that everything runs at the source resolution during rasterization, and post processes will run at full resolution. Ideal for temporal upscalers. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af848e503328306eb04e9a1eec421899dae08995074380182a777ea5fa012acd64" name="af848e503328306eb04e9a1eec421899dae08995074380182a777ea5fa012acd64"></a>AfterDepthOfField&#160;</td><td class="fielddoc"><p>Indicates that upscaling should happen after depth of field but before other post processing. This means that everything runs at the source resolution during rasterization and depth of field, and other post processes will run at full resolution. More performant alternative for temporal upscalers at the expense of reduced image quality. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af848e503328306eb04e9a1eec421899da6415a3f4986108d1658bc65c1639d236" name="af848e503328306eb04e9a1eec421899da6415a3f4986108d1658bc65c1639d236"></a>AfterPost&#160;</td><td class="fielddoc"><p>Indicates that upscaling must happen after post processing. This means that everything in the frame runs at the source resolution, and upscaling happens after the final pass. This is ideal for spatial upscalers. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="a7807d8325a47169776b940538e09ba19" name="a7807d8325a47169776b940538e09ba19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7807d8325a47169776b940538e09ba19">&#9670;&#160;</a></span>ApplyScalesOnSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2Int UnityEngine.Rendering.DynamicResolutionHandler.ApplyScalesOnSize </td>
+          <td>(</td>
+          <td class="paramtype">Vector2Int</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies to the passed size the scale imposed by the dynamic resolution system. This function uses the internal resolved scale from the dynamic resolution system. Note: this function is pure (has no side effects), this function does not cache the pre-scale size. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size to apply the scaling</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The parameter size scaled by the dynamic resolution system.</dd></dl>
+
+</div>
+</div>
+<a id="a2c1a48d7f217d565dcd64a52e66b7cfe" name="a2c1a48d7f217d565dcd64a52e66b7cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c1a48d7f217d565dcd64a52e66b7cfe">&#9670;&#160;</a></span>CalculateMipBias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEngine.Rendering.DynamicResolutionHandler.CalculateMipBias </td>
+          <td>(</td>
+          <td class="paramtype">Vector2Int</td>          <td class="paramname"><span class="paramname"><em>inputResolution</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2Int</td>          <td class="paramname"><span class="paramname"><em>outputResolution</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>forceApply</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the mip bias to apply in the rendering pipeline. This mip bias helps bring detail since sampling of textures occurs at the target rate. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputResolution</td><td>The input width x height resolution in pixels.</td></tr>
+    <tr><td class="paramname">outputResolution</td><td>The output width x height resolution in pixels.</td></tr>
+    <tr><td class="paramname">forceApply</td><td>False by default. If true, we ignore the useMipBias setting and return a mip bias regardless.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The calculated mip bias</dd></dl>
+
+</div>
+</div>
+<a id="a29b97007cede92de45343d002cf439cb" name="a29b97007cede92de45343d002cf439cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29b97007cede92de45343d002cf439cb">&#9670;&#160;</a></span>DynamicResolutionEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Rendering.DynamicResolutionHandler.DynamicResolutionEnabled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identifies whether dynamic resolution is enabled and scaling the render targets. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>True: Dynamic resolution is enabled.</dd></dl>
+
+</div>
+</div>
+<a id="a2a104e2beded9011d9e223c7c28669aa" name="a2a104e2beded9011d9e223c7c28669aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a104e2beded9011d9e223c7c28669aa">&#9670;&#160;</a></span>GetCurrentScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEngine.Rendering.DynamicResolutionHandler.GetCurrentScale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the scale that is currently applied by the dynamic resolution system. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>The scale that is currently applied by the dynamic resolution system.</dd></dl>
+
+</div>
+</div>
+<a id="a3765f47834670f78dd1dd405395759a3" name="a3765f47834670f78dd1dd405395759a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3765f47834670f78dd1dd405395759a3">&#9670;&#160;</a></span>GetLastScaledSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2Int UnityEngine.Rendering.DynamicResolutionHandler.GetLastScaledSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the latest scaled size that has been produced by GetScaledSize. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>The latest scaled size that has been produced by GetScaledSize.</dd></dl>
+
+</div>
+</div>
+<a id="a170fef26573c1c47bf369c33569530ad" name="a170fef26573c1c47bf369c33569530ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a170fef26573c1c47bf369c33569530ad">&#9670;&#160;</a></span>GetLowResMultiplier() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEngine.Rendering.DynamicResolutionHandler.GetLowResMultiplier </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>targetLowRes</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the resolved low res multiplier based on the low res transparency threshold settings. Note: The pipeline can use this to drive the scale for low res transparency if available. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetLowRes</td><td>the target low resolution. If by any chance thresholding is disabled or clamped, the exact same resolution is returned. This allows the caller to directly compare the float result safely with the floating point target resolution. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns the resolved low res multiplier based on the low transparency threshold settings.</dd></dl>
+
+</div>
+</div>
+<a id="acf95839ab15d084ebb38fc6746297716" name="acf95839ab15d084ebb38fc6746297716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf95839ab15d084ebb38fc6746297716">&#9670;&#160;</a></span>GetLowResMultiplier() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEngine.Rendering.DynamicResolutionHandler.GetLowResMultiplier </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>targetLowRes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>minimumThreshold</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the resolved low res multiplier based on the a low res threshold. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetLowRes</td><td>the target low resolution. If by any chance thresholding is disabled or clamped, the exact same resolution is returned. This allows the caller to directly compare the float result safely with the floating point target resolution. </td></tr>
+    <tr><td class="paramname">minimumThreshold</td><td>The custom threshold used to clamp the effect's resolution. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns the resolved low res multiplier based on the minimumThreshold threshold settings.</dd></dl>
+
+</div>
+</div>
+<a id="a59e17871b084222623b42a67c8f7b177" name="a59e17871b084222623b42a67c8f7b177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e17871b084222623b42a67c8f7b177">&#9670;&#160;</a></span>GetResolvedScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 UnityEngine.Rendering.DynamicResolutionHandler.GetResolvedScale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the resolved scale. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>The resolved scale in form of Vector2</dd></dl>
+
+</div>
+</div>
+<a id="a6d7c537870e47ee54de3cac240b98118" name="a6d7c537870e47ee54de3cac240b98118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d7c537870e47ee54de3cac240b98118">&#9670;&#160;</a></span>GetScaledSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2Int UnityEngine.Rendering.DynamicResolutionHandler.GetScaledSize </td>
+          <td>(</td>
+          <td class="paramtype">Vector2Int</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies to the passed size the scale imposed by the dynamic resolution system. Note: this function has the side effect of caching the last scale size, and the output is always smaller or equal then the input. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The starting size of the render target that will be scaled by dynamic resolution.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The parameter size scaled by the dynamic resolution system.</dd></dl>
+
+</div>
+</div>
+<a id="acd10cce64c1f19a85225a2103fc36e68" name="acd10cce64c1f19a85225a2103fc36e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd10cce64c1f19a85225a2103fc36e68">&#9670;&#160;</a></span>HardwareDynamicResIsEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Rendering.DynamicResolutionHandler.HardwareDynamicResIsEnabled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines whether hardware dynamic resolution is enabled or not. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>True: Hardware dynamic resolution is enabled</dd></dl>
+
+</div>
+</div>
+<a id="a6eebece58883b533b5f3307ec101e614" name="a6eebece58883b533b5f3307ec101e614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eebece58883b533b5f3307ec101e614">&#9670;&#160;</a></span>RequestsHardwareDynamicResolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Rendering.DynamicResolutionHandler.RequestsHardwareDynamicResolution </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identifies whether hardware dynamic resolution has been requested and is going to be used. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>True: Hardware dynamic resolution is requested by user and software fallback has not been forced</dd></dl>
+
+</div>
+</div>
+<a id="a627e4edd45a832191b0f5eabeb49d9b9" name="a627e4edd45a832191b0f5eabeb49d9b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a627e4edd45a832191b0f5eabeb49d9b9">&#9670;&#160;</a></span>SetActiveDynamicScalerSlot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.DynamicResolutionHandler.SetActiveDynamicScalerSlot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_engine_1_1_rendering.html#a12098208643568be5e6fb47eb5161bb7">DynamicResScalerSlot</a></td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the active dynamic scaler slot to be used by the runtime when calculating frame resolutions. See <a class="el" href="namespace_unity_engine_1_1_rendering.html#a12098208643568be5e6fb47eb5161bb7" title="The source slots for dynamic resolution scaler. Defines registers were the scalers assigned are store...">DynamicResScalerSlot</a> for more information. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slot</td><td>The scaler to be selected and used by the runtime.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7a70ee62d06cd4dd5c0119fe4542964a" name="a7a70ee62d06cd4dd5c0119fe4542964a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a70ee62d06cd4dd5c0119fe4542964a">&#9670;&#160;</a></span>SetCurrentCameraRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.DynamicResolutionHandler.SetCurrentCameraRequest </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>cameraRequest</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set whether the camera that is currently processed by the pipeline has requested dynamic resolution or not. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cameraRequest</td><td>Determines whether the camera has requested dynamic resolution or not.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed409318ec9404bf5728556c90c40f63" name="aed409318ec9404bf5728556c90c40f63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed409318ec9404bf5728556c90c40f63">&#9670;&#160;</a></span>SetDynamicResScaler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.DynamicResolutionHandler.SetDynamicResScaler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_engine_1_1_rendering.html#a3940807d171e678eb7f1a0155c8a1ed4">PerformDynamicRes</a></td>          <td class="paramname"><span class="paramname"><em>scaler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_unity_engine_1_1_rendering.html#af97944239ceb58aea5849d3893c169bc">DynamicResScalePolicyType</a></td>          <td class="paramname"><span class="paramname"><em>scalerType</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_unity_engine_1_1_rendering.html#af97944239ceb58aea5849d3893c169bca0b8e6ca425da564d533de4d5767d5a38">DynamicResScalePolicyType::ReturnsMinMaxLerpFactor</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the scaler method used to drive dynamic resolution by the user. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scaler</td><td>The delegate used to determine the resolution percentage used by the dynamic resolution system.</td></tr>
+    <tr><td class="paramname">scalerType</td><td>The type of scaler that is used, this is used to indicate the return type of the scaler to the dynamic resolution system.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0706414da26ad89df6ea3243a5fb4cd9" name="a0706414da26ad89df6ea3243a5fb4cd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0706414da26ad89df6ea3243a5fb4cd9">&#9670;&#160;</a></span>SetSystemDynamicResScaler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.DynamicResolutionHandler.SetSystemDynamicResScaler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_engine_1_1_rendering.html#a3940807d171e678eb7f1a0155c8a1ed4">PerformDynamicRes</a></td>          <td class="paramname"><span class="paramname"><em>scaler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_unity_engine_1_1_rendering.html#af97944239ceb58aea5849d3893c169bc">DynamicResScalePolicyType</a></td>          <td class="paramname"><span class="paramname"><em>scalerType</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_unity_engine_1_1_rendering.html#af97944239ceb58aea5849d3893c169bca0b8e6ca425da564d533de4d5767d5a38">DynamicResScalePolicyType::ReturnsMinMaxLerpFactor</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the scaler method used to drive dynamic resolution internally from the Scriptable <a class="el" href="namespace_unity_engine_1_1_rendering.html">Rendering</a> Pipeline. This function should only be called by Scriptable <a class="el" href="namespace_unity_engine_1_1_rendering.html">Rendering</a> Pipeline. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scaler</td><td>The delegate used to determine the resolution percentage used by the dynamic resolution system.</td></tr>
+    <tr><td class="paramname">scalerType</td><td>The type of scaler that is used, this is used to indicate the return type of the scaler to the dynamic resolution system.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a07b777f5360562d2db434572bc42195e" name="a07b777f5360562d2db434572bc42195e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b777f5360562d2db434572bc42195e">&#9670;&#160;</a></span>SetUpscaleFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.DynamicResolutionHandler.SetUpscaleFilter </td>
+          <td>(</td>
+          <td class="paramtype">Camera</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_unity_engine_1_1_rendering.html#a36393c4bbe5c13c0087b769cd9fb04e6">DynamicResUpscaleFilter</a></td>          <td class="paramname"><span class="paramname"><em>filter</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Upscale filter used by the camera when dynamic resolution is run. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The camera for which the upscale filter is set.</td></tr>
+    <tr><td class="paramname">filter</td><td>The filter to be used by the camera to upscale to final resolution.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a127bae9b67531fc5fb30cc7d199bcf00" name="a127bae9b67531fc5fb30cc7d199bcf00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127bae9b67531fc5fb30cc7d199bcf00">&#9670;&#160;</a></span>SoftwareDynamicResIsEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Rendering.DynamicResolutionHandler.SoftwareDynamicResIsEnabled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines whether software dynamic resolution is enabled or not. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>True: Software dynamic resolution is enabled</dd></dl>
+
+</div>
+</div>
+<a id="aca31aedbd110d844a266c6415db997cc" name="aca31aedbd110d844a266c6415db997cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca31aedbd110d844a266c6415db997cc">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.DynamicResolutionHandler.Update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings.html">GlobalDynamicResolutionSettings</a></td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action</td>          <td class="paramname"><span class="paramname"><em>OnResolutionChange</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the state of the dynamic resolution system. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">settings</td><td>The settings that are to be used by the dynamic resolution system.</td></tr>
+    <tr><td class="paramname">OnResolutionChange</td><td>An action that will be called every time the dynamic resolution system triggers a change in resolution.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afcc4cd2bb5b0cab59e0797501080b6d9" name="afcc4cd2bb5b0cab59e0797501080b6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc4cd2bb5b0cab59e0797501080b6d9">&#9670;&#160;</a></span>UpdateAndUseCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Rendering.DynamicResolutionHandler.UpdateAndUseCamera </td>
+          <td>(</td>
+          <td class="paramtype">Camera</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings.html">GlobalDynamicResolutionSettings</a>?</td>          <td class="paramname"><span class="paramname"><em>settings</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action</td>          <td class="paramname"><span class="paramname"><em>OnResolutionChange</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update the state of the dynamic resolution system for a specific camera. Call this function also to switch context between cameras (will set the current camera as active). Passing a null camera has the same effect as calling Update without the camera parameter. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>Camera used to select a specific instance tied to this <a class="el" href="class_unity_engine_1_1_rendering_1_1_dynamic_resolution_handler.html" title="The class responsible to handle dynamic resolution.">DynamicResolutionHandler</a> instance.</td></tr>
+    <tr><td class="paramname">settings</td><td>(optional) The settings that are to be used by the dynamic resolution system. passing null for the settings will result in the last update's settings used.</td></tr>
+    <tr><td class="paramname">OnResolutionChange</td><td>An action that will be called every time the dynamic resolution system triggers a change in resolution.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_rendering.html">Rendering</a></li><li class="navelem"><a href="class_unity_engine_1_1_rendering_1_1_dynamic_resolution_handler.html">DynamicResolutionHandler</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

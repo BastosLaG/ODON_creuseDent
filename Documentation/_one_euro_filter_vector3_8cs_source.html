@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON:  Fichier source de Assets/Samples/XR Interaction Toolkit/3.0.8/Hands Interaction Demo/Scripts/OneEuroFilterVector3.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_one_euro_filter_vector3_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">OneEuroFilterVector3.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine.XR.Interaction.Toolkit.Utilities;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands.html">UnityEngine.XR.Interaction.Toolkit.Samples.Hands</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html">   23</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a6f8fcc845b4987fcd114abb084ffe485">OneEuroFilterVector3</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        Vector3 m_LastRawValue;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        Vector3 m_LastFilteredValue;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        readonly <span class="keywordtype">float</span> m_MinCutoff;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        readonly <span class="keywordtype">float</span> m_Beta;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a6f8fcc845b4987fcd114abb084ffe485">   60</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a6f8fcc845b4987fcd114abb084ffe485">OneEuroFilterVector3</a>(Vector3 initialRawValue, <span class="keywordtype">float</span> minCutoff = 0.1f, <span class="keywordtype">float</span> beta = 0.02f)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            m_LastRawValue = initialRawValue;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            m_LastFilteredValue = initialRawValue;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            m_MinCutoff = minCutoff;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            m_Beta = beta;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a25a86c8a13afab1a75ccd56a9e25175f">   72</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a25a86c8a13afab1a75ccd56a9e25175f">Initialize</a>(Vector3 initialRawValue)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            m_LastRawValue = initialRawValue;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            m_LastFilteredValue = initialRawValue;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a4ca71e566d1fefe97fae3df57e7cd1f9">   84</a></span>        <span class="keyword">public</span> Vector3 <a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a4ca71e566d1fefe97fae3df57e7cd1f9">Filter</a>(Vector3 rawValue, <span class="keywordtype">float</span> deltaTime)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a4ca71e566d1fefe97fae3df57e7cd1f9">Filter</a>(rawValue, deltaTime, m_MinCutoff, m_Beta);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#ae5b3473098bf5875dc5b877e0251a937">   99</a></span>        <span class="keyword">public</span> Vector3 <a class="code hl_function" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#ae5b3473098bf5875dc5b877e0251a937">Filter</a>(Vector3 rawValue, <span class="keywordtype">float</span> deltaTime, <span class="keywordtype">float</span> minCutoff, <span class="keywordtype">float</span> beta)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="comment">// Calculate speed as a Vector3</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            Vector3 speed = (rawValue - m_LastRawValue) / deltaTime;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="comment">// Compute cutoffs for x, y, and z</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            Vector3 cutoffs = <span class="keyword">new</span> Vector3(minCutoff, minCutoff, minCutoff);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            Vector3 betaValues = <span class="keyword">new</span> Vector3(beta, beta, beta);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="comment">// Incorporate speed into the cutoffs</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            Vector3 combinedCutoffs = cutoffs + Vector3.Scale(betaValues, speed);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="comment">// Compute alpha for x, y, and z</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            BurstMathUtility.FastSafeDivide(Vector3.one, Vector3.one + combinedCutoffs, out Vector3 alpha);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            Vector3 rawFiltered = Vector3.Scale(alpha, rawValue);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            Vector3 lastFiltered = Vector3.Scale(Vector3.one - alpha, m_LastFilteredValue);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="comment">// Calculate the final filtered value</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            Vector3 filteredValue = rawFiltered + lastFiltered;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            m_LastRawValue = rawValue;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            m_LastFilteredValue = filteredValue;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordflow">return</span> filteredValue;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        }</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3_html_a25a86c8a13afab1a75ccd56a9e25175f"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a25a86c8a13afab1a75ccd56a9e25175f">UnityEngine.XR.Interaction.Toolkit.Samples.Hands.OneEuroFilterVector3.Initialize</a></div><div class="ttdeci">void Initialize(Vector3 initialRawValue)</div><div class="ttdoc">Resets the initial raw value. Useful to recover from tracking loss.</div><div class="ttdef"><b>Definition</b> <a href="#l00072">OneEuroFilterVector3.cs:72</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3_html_a4ca71e566d1fefe97fae3df57e7cd1f9"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a4ca71e566d1fefe97fae3df57e7cd1f9">UnityEngine.XR.Interaction.Toolkit.Samples.Hands.OneEuroFilterVector3.Filter</a></div><div class="ttdeci">Vector3 Filter(Vector3 rawValue, float deltaTime)</div><div class="ttdoc">Filters the given Vector3 rawValue using the internal minCutoff and beta parameters.</div><div class="ttdef"><b>Definition</b> <a href="#l00084">OneEuroFilterVector3.cs:84</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3_html_a6f8fcc845b4987fcd114abb084ffe485"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a6f8fcc845b4987fcd114abb084ffe485">UnityEngine.XR.Interaction.Toolkit.Samples.Hands.OneEuroFilterVector3.OneEuroFilterVector3</a></div><div class="ttdeci">OneEuroFilterVector3(Vector3 initialRawValue, float minCutoff=0.1f, float beta=0.02f)</div><div class="ttdoc">Initializes a new instance of the OneEuroFilterVector3 with specified cutoff and beta values.</div><div class="ttdef"><b>Definition</b> <a href="#l00060">OneEuroFilterVector3.cs:60</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3_html_ae5b3473098bf5875dc5b877e0251a937"><div class="ttname"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#ae5b3473098bf5875dc5b877e0251a937">UnityEngine.XR.Interaction.Toolkit.Samples.Hands.OneEuroFilterVector3.Filter</a></div><div class="ttdeci">Vector3 Filter(Vector3 rawValue, float deltaTime, float minCutoff, float beta)</div><div class="ttdoc">Filters the given Vector3 rawValue using provided minCutoff and beta parameters. This method computes...</div><div class="ttdef"><b>Definition</b> <a href="#l00099">OneEuroFilterVector3.cs:99</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_html"><div class="ttname"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands.html">UnityEngine.XR.Interaction.Toolkit.Samples.Hands</a></div><div class="ttdef"><b>Definition</b> <a href="_object_reset_plane_8cs_source.html#l00004">ObjectResetPlane.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a href="dir_9fd0b45d7164cbf67e9cf2673df0ffb6.html">Samples</a></li><li class="navelem"><a href="dir_9f837038c816967355e56b28af574441.html">XR Interaction Toolkit</a></li><li class="navelem"><a href="dir_9e433df934f6d8baa713d897ebc592ec.html">3.0.8</a></li><li class="navelem"><a href="dir_d6ddabe601c53aa86d4698f45388c86d.html">Hands Interaction Demo</a></li><li class="navelem"><a href="dir_74fc2ffb446d3cc5673ac04c7a1a9e27.html">Scripts</a></li><li class="navelem"><b>OneEuroFilterVector3.cs</b></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

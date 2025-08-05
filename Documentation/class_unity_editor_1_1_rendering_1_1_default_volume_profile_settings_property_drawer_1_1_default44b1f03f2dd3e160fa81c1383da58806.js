@@ -1,0 +1,4 @@
+var class_unity_editor_1_1_rendering_1_1_default_volume_profile_settings_property_drawer_1_1_default44b1f03f2dd3e160fa81c1383da58806 =
+[
+    [ "defaultVolumeProfilePath", "class_unity_editor_1_1_rendering_1_1_default_volume_profile_settings_property_drawer_1_1_default44b1f03f2dd3e160fa81c1383da58806.html#a9de62095d36c82e74c6e6907fa71f05c", null ]
+];

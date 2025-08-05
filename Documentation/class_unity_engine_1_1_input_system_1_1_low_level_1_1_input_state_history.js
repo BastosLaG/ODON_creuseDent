@@ -1,0 +1,28 @@
+var class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history =
+[
+    [ "Record", "struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history_1_1_record.html", "struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history_1_1_record" ],
+    [ "InputStateHistory", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a3006efe69a6f08e2cfb64f9be780561c", null ],
+    [ "InputStateHistory", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a9f93c8bd2cbbe803395aaab77950ac56", null ],
+    [ "InputStateHistory", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a450abe94a4896d0abd39b8a6f1f2480e", null ],
+    [ "InputStateHistory", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#ad15591a26c7ce8e366348bd93dfc843d", null ],
+    [ "AddRecord", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#ac08e0a8a841a1f6fcb0ce1bbd7793f4c", null ],
+    [ "Clear", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#aa1cac32d1234588b1874379a995bfbcc", null ],
+    [ "Destroy", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#aea693e9581b015921eab9175681e0134", null ],
+    [ "Dispose", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a1aba2e8282ef41171fe30d31e18a9e42", null ],
+    [ "GetEnumerator", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#ac620a8b76ac707618ced09d8763c7bfc", null ],
+    [ "ReadValue< TValue >", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#adda33887f3adaa83b0faa9e4c714b3b0", null ],
+    [ "ReadValueAsObject", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a43531612803beb36bf9869201198febd", null ],
+    [ "RecordStateChange", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#aeb76677927da0fdb6db7ba129e7246bd", null ],
+    [ "RecordStateChange", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#afd4c6085aac6195693b8c305c2030feb", null ],
+    [ "StartRecording", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#aa11a96ea37e1fb71420f78bfa056db8d", null ],
+    [ "StopRecording", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#aa33357c169a3a5b01b20b4c7897d6d85", null ],
+    [ "controls", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#ad5387a03f0f90a6f0da9fb176609b755", null ],
+    [ "Count", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a0acfc864a9eff6712e97ebb5e4ee3a02", null ],
+    [ "extraMemoryPerRecord", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a915854820ce95d286a2edf730efa7512", null ],
+    [ "historyDepth", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a685f8c99999bc9582158733ba98daa21", null ],
+    [ "onRecordAdded", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#af2af39c8c35ff3138b44f8198f9b1179", null ],
+    [ "onShouldRecordStateChange", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a7f1018a72d10882c7107ccd1b883f438", null ],
+    [ "this[int index]", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a1a2133f77b5723603a69974c94ccbbc6", null ],
+    [ "updateMask", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a8abd155e620575764a154b5da354c941", null ],
+    [ "version", "class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history.html#a241f5b61b68f9dd554121da907931ae7", null ]
+];
