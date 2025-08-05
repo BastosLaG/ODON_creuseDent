@@ -1,0 +1,10 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_prae3ebcca6f386d27b743b0bc87de1173 =
+[
+    [ "GenerateNewAffordanceThemeInstance", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_prae3ebcca6f386d27b743b0bc87de1173.html#ae0853053b66449f374f037395b94086a", null ],
+    [ "OnAffordanceValueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_prae3ebcca6f386d27b743b0bc87de1173.html#a7a1c94c447bbf1a8e01beee7f02bd599", null ],
+    [ "ScheduleTweenJob", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_prae3ebcca6f386d27b743b0bc87de1173.html#aca991499e0e91d7970bd307a4a7e1400", null ],
+    [ "affordanceThemeDatum", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_prae3ebcca6f386d27b743b0bc87de1173.html#ad9d7d18f4a52cbb207927020dbb7cd6b", null ],
+    [ "affordanceValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_prae3ebcca6f386d27b743b0bc87de1173.html#add9ddff8535f77366f1023f850c4d48d", null ],
+    [ "defaultAffordanceTheme", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_prae3ebcca6f386d27b743b0bc87de1173.html#a8cdc6e623de1fdd5c4d6d3187af5a688", null ],
+    [ "valueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_prae3ebcca6f386d27b743b0bc87de1173.html#a5e7baf5346cde5966d2207ddf4512652", null ]
+];

@@ -1,0 +1,24 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17 =
+[
+    [ "Awake", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#ac6260db6388ae7a0d287cd7be60a79f9", null ],
+    [ "CaptureInitialValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#acdc151610f5f38ad20677e095593ccb3", null ],
+    [ "ConsumeAffordance", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a1de67295a801db3d1fea361aafd4158e", null ],
+    [ "GenerateNewAffordanceThemeInstance", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#ad8c98809ed7c486811b88561f4aae847", null ],
+    [ "GetCurrentValueForCapture", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a991db2c2ee54eda28833faf8d80c46b4", null ],
+    [ "OnAffordanceStateUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#aa2c40b39dcc0ba2c134a35cb754e40b9", null ],
+    [ "OnAffordanceThemeChanged", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a0dcda7de3718068bbc6109f3aa3c3a1d", null ],
+    [ "OnAffordanceValueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#aea75dfc6fb6cbeef6595c1b7fe7fda29", null ],
+    [ "OnDisable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a56e4cfe3b9bfa88eb57e3666f426f3ba", null ],
+    [ "OnEnable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a6d2df1ec077891475f33bd5ee0e3c8cb", null ],
+    [ "ProcessTargetAffordanceValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#ad855e276499531da800a6b2a2fce8d5f", null ],
+    [ "Start", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a12f96f3a646e422624d62aac2371e7d1", null ],
+    [ "affordanceStateProvider", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#afba648e823555ae68b1a88846da1e40f", null ],
+    [ "affordanceTheme", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a289af5c14cfd138cacbb1f0baa5d0e34", null ],
+    [ "affordanceValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#ac3bd291949bdd5bdc8f1945d8b20cf06", null ],
+    [ "currentAffordanceStateData", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a6cfd846e3496dcc94ecfec4834667e78", null ],
+    [ "currentAffordanceValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a20a73d2acc0ef08d55e35d419c7c0fc9", null ],
+    [ "defaultAffordanceTheme", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a537631c70a864ce68d983f5ee83ce49c", null ],
+    [ "initialValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a7bc79c3e8fb36bb99177d5737e9aa69d", null ],
+    [ "initialValueCaptured", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a69584b7b7d78c2ddfda77c5d4aa01b01", null ],
+    [ "replaceIdleStateValueWithInitialValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_baebcb19c3674920c8566f2113ba8f1b17.html#a7ed7918d9b363e51e026391dfed95c62", null ]
+];

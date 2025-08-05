@@ -1,0 +1,15 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210 =
+[
+    [ "LineColorProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210.html#ab0e75288912cf51cc66aab4d455a0511", [
+      [ "StartColor", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210.html#ab0e75288912cf51cc66aab4d455a0511a2e2df0009302d308c0b5ecf2175d3a2b", null ],
+      [ "EndColor", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210.html#ab0e75288912cf51cc66aab4d455a0511a3cf2c4f1030c2974a1b3028ed71b5783", null ]
+    ] ],
+    [ "Awake", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210.html#a62ce0be192f625169c361f6de201f85f", null ],
+    [ "CaptureInitialValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210.html#a5d4af58a2ae4910eac14a4cff8700319", null ],
+    [ "GetCurrentValueForCapture", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210.html#a9202a98a2e6314aebb484dd66751faa3", null ],
+    [ "OnAffordanceValueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210.html#a284f25e12d2569a22eb826ca39ada5db", null ],
+    [ "Start", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210.html#a5cf57f38b5820a07461d614ed112ba27", null ],
+    [ "disableXRInteractorLineVisualColorControlIfPresent", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210.html#ab5b60992e6dfbcdd5de18cce09f30bb2", null ],
+    [ "lineColorProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210.html#af0679c8389f0ed87bd7c17d435b55fad", null ],
+    [ "lineRenderer", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_reb37b6777a1c0ce7bb1331c4b6d9a0210.html#acd01f7b860a595aa12095fd4f20269ed", null ]
+];

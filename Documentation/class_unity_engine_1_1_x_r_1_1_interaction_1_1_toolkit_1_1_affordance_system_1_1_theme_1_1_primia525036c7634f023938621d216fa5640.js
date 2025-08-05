@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primia525036c7634f023938621d216fa5640 =
+[
+    [ "FloatAffordanceThemeDatumProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primia525036c7634f023938621d216fa5640.html#aa19ebba37f06558aac98c7e7d4a43049", null ],
+    [ "FloatAffordanceThemeDatumProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primia525036c7634f023938621d216fa5640.html#af859abe5a04d5c2e65a4ba3086d7179b", null ]
+];

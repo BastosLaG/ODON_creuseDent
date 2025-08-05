@@ -1,0 +1,7 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_tr15c81de64ea770d4044e4589c9b8d9e1 =
+[
+    [ "GetCurrentValueForCapture", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_tr15c81de64ea770d4044e4589c9b8d9e1.html#aceb20ba2b735ad88d6de4b0cf3b553c4", null ],
+    [ "OnAffordanceValueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_tr15c81de64ea770d4044e4589c9b8d9e1.html#abb35f6227eb425fff7c06220ba07f66a", null ],
+    [ "OnEnable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_tr15c81de64ea770d4044e4589c9b8d9e1.html#a8e9aa739e5b9c73bf0d03402cb112a1b", null ],
+    [ "transformToScale", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_tr15c81de64ea770d4044e4589c9b8d9e1.html#aba11ad7941b80adee15a8c69ec90767f", null ]
+];

@@ -1,0 +1,6 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_audiof4bba7eca1dd052bfaf18546d529ccbe =
+[
+    [ "stateEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_audiof4bba7eca1dd052bfaf18546d529ccbe.html#a8e26bfe03359e71b328f4736f4d687f8", null ],
+    [ "stateExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_audiof4bba7eca1dd052bfaf18546d529ccbe.html#a44fa9678d8ed2c8891c1a4f6bd21e8e7", null ],
+    [ "stateName", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_audiof4bba7eca1dd052bfaf18546d529ccbe.html#a6ce498a4d72b154bb82c31818e2b609a", null ]
+];

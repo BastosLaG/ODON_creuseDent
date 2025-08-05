@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_climbing_1_1_climb_settings_datum_property =
+[
+    [ "ClimbSettingsDatumProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_climbing_1_1_climb_settings_datum_property.html#a94062675f1bf4ea499a3d195d601ab08", null ],
+    [ "ClimbSettingsDatumProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_climbing_1_1_climb_settings_datum_property.html#a1a19de62a27c8b64337d85eec51f8c3f", null ]
+];

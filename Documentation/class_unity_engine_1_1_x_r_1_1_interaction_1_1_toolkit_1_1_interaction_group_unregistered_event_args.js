@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interaction_group_unregistered_event_args =
+[
+    [ "interactionGroupObject", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interaction_group_unregistered_event_args.html#afd3a358b4af50f833007b571b6392449", null ]
+];

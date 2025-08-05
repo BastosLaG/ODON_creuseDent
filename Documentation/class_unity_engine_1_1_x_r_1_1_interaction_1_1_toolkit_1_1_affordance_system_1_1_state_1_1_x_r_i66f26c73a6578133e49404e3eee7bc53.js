@@ -1,0 +1,47 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53 =
+[
+    [ "ActivateClickAnimationMode", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a42a760f397c9f89f856ec2be9f2add1f", [
+      [ "None", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a42a760f397c9f89f856ec2be9f2add1fa6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Activated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a42a760f397c9f89f856ec2be9f2add1facb456215c3333db0551bd0788bc258c7", null ],
+      [ "Deactivated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a42a760f397c9f89f856ec2be9f2add1fa43c7582c40594c3fe32a6634ef9dcb07", null ]
+    ] ],
+    [ "SelectClickAnimationMode", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ab6d0e3da4c876e39612d35b59942916e", [
+      [ "None", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ab6d0e3da4c876e39612d35b59942916ea6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "SelectEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ab6d0e3da4c876e39612d35b59942916ea884b4070ad4ce77d833b9d8aebdfba40", null ],
+      [ "SelectExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ab6d0e3da4c876e39612d35b59942916eaea2150ab95c0298d74aff8c5f52e5bdb", null ]
+    ] ],
+    [ "ActivatedClickBehavior", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#aec402083b12a96e511492418a43131d8", null ],
+    [ "Awake", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a05490eded729c199c7fe0ac305b22b34", null ],
+    [ "BindToProviders", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a52fbfcafbbf0294ef07c097bbd7c1aa8", null ],
+    [ "ClearBindings", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ac137e07f3ea832501f6ca3dd1e536dc2", null ],
+    [ "ClickAnimation", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a20780342bcf9447aab3488f9218ab239", null ],
+    [ "GenerateNewAffordanceState", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a0d282381b29265a526b8e929714afdfa", null ],
+    [ "OnHoverEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#af5f9818978ca8f0719eb6d8d08a72ded", null ],
+    [ "OnHoverExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ad32cdbd8154996a4e9188d385cdd76ae", null ],
+    [ "OnLargestInteractionStrengthChanged", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a07a9a0a4a940ce3103819b16261bbb30", null ],
+    [ "OnRegistered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a7cd14b3f479a5460cb41e6868fb4c862", null ],
+    [ "OnSelectEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ab466206fc5c69c9c0cbf5fd92fad39d6", null ],
+    [ "OnSelectExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a3f3d07fa3812ddaee68b59421887b620", null ],
+    [ "OnUnregistered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a61b4155d248f6ac707493db49d12f347", null ],
+    [ "RefreshState", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a820d58ef45cfa5f2a018e4eb879d5e4d", null ],
+    [ "SelectedClickBehavior", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#aae4b5a0f6c1a773b483bd9ab84b0bfea", null ],
+    [ "SetBoundInteractionReceiver", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ac3de7a2bf381dab82b33583077fe6798", null ],
+    [ "activateClickAnimationMode", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ab700f73209a52400b24e8afed11b7231", null ],
+    [ "clickAnimationCurve", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ae50448ee6f32ffccbe9b2fa9d00ef0c6", null ],
+    [ "clickAnimationDuration", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ab24b64f426209d70fa2dcef7ff88c42b", null ],
+    [ "hasUIHover", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#af62214d8ad489896990d00b03c7e3a87", null ],
+    [ "hasUISelection", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a9ef368a20a68f25100019484d167cb85", null ],
+    [ "hasXRHover", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ac72900497a3328d4370ac84da566ee91", null ],
+    [ "hasXRSelection", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#aae5b42ac09f081ec918288a10f003c06", null ],
+    [ "ignoreActivateEvents", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a550295f6697e4506c1b29805a0e5166b", null ],
+    [ "ignoreHoverEvents", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a043a3cd6757c4dd5c3a40835eb45abf6", null ],
+    [ "ignoreSelectEvents", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#af0510d05e6e530ec17f2f9ede0179b44", null ],
+    [ "ignoreUGUIHover", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ac6ed54932ab25d37731f38ab738a149f", null ],
+    [ "ignoreUGUISelect", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#adf0b356b67339cee3d328a36780cf1df", null ],
+    [ "ignoreXRInteractionEvents", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#acd902b85519d4b951bec071a35d15584", null ],
+    [ "interactorSource", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#aa19ad31d77affd239c34afbcdd233355", null ],
+    [ "isActivated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#af8aae06b0153df61c2fa59a21ad5c6d6", null ],
+    [ "isBlockedByGroup", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#a6770ad099345a0fed28bbc7cf7751d34", null ],
+    [ "isRegistered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#afa30ff20c0b06aa833cae076dce7daa5", null ],
+    [ "selectClickAnimationMode", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_x_r_i66f26c73a6578133e49404e3eee7bc53.html#ae1a5214d647599a2e0fb8576abd65a4d", null ]
+];

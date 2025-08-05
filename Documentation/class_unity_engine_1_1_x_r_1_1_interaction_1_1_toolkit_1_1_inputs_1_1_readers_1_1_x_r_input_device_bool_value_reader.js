@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_device_bool_value_reader =
+[
+    [ "ReadValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_device_bool_value_reader.html#a8866b529a656a9bc950ad3f2ce091fdc", null ],
+    [ "TryReadValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_device_bool_value_reader.html#a1aa5949ff67d0933bb9d67b5f9de3560", null ]
+];

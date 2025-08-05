@@ -1,0 +1,6 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_rendering_1_1_material_instance_helper =
+[
+    [ "Initialize", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_rendering_1_1_material_instance_helper.html#ab9f3acc949df6d14c5c183e17a69d4da", null ],
+    [ "OnDestroy", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_rendering_1_1_material_instance_helper.html#ad4df09b139a60cbd997d12b3b8cd0f60", null ],
+    [ "TryGetMaterialInstance", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_rendering_1_1_material_instance_helper.html#a99940f81daac07246c07b192a39ae702", null ]
+];

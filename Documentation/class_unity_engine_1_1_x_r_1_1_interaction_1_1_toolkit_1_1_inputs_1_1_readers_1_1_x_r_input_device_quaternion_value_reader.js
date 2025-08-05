@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_device_quaternion_value_reader =
+[
+    [ "ReadValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_device_quaternion_value_reader.html#ae64a1bd8b1105ff4d4f610e09693a6a1", null ],
+    [ "TryReadValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_device_quaternion_value_reader.html#a3796595326c0392b06a997683771dab4", null ]
+];

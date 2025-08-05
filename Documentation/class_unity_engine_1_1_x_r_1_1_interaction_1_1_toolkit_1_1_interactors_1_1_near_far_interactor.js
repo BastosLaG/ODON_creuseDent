@@ -1,0 +1,48 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor =
+[
+    [ "NearCasterSortingStrategy", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a24403fc635eb82cae87e80b69c964f4f", [
+      [ "None", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a24403fc635eb82cae87e80b69c964f4fa6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "SquareDistance", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a24403fc635eb82cae87e80b69c964f4fa52d173ff5a089c9b5df496a54d14a3fd", null ],
+      [ "InteractableBased", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a24403fc635eb82cae87e80b69c964f4fa0b77bcb54349e8855f09d83e66185145", null ],
+      [ "ClosestPointOnCollider", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a24403fc635eb82cae87e80b69c964f4fa8d36930f5f21f0abc8d2970e3a4aec0f", null ]
+    ] ],
+    [ "Region", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a68da053f581aa409d96c6238a2a66204", [
+      [ "None", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a68da053f581aa409d96c6238a2a66204a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Near", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a68da053f581aa409d96c6238a2a66204aa535711d028372f87fdbce03cd43b25d", null ],
+      [ "Far", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a68da053f581aa409d96c6238a2a66204acfcd41f0c1804fb7778f8f01301223f6", null ]
+    ] ],
+    [ "Awake", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#ae7c27051aa345321936b0c07dd35b4d6", null ],
+    [ "GetEvaluatorForSortingStrategy", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a965c6ef639b42ce93719d30f98e3b7bd", null ],
+    [ "GetValidTargets", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a504f3d2e758f5f8324f9e0b2ebd19ef8", null ],
+    [ "InitializeReferences", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a43f3722806457e5059327c572a07b6dc", null ],
+    [ "OnDisable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a0f74dcf67fee3af7d9a7c85cd6732c9d", null ],
+    [ "OnEnable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#ad69147b0c7f98eb2ac9a175f879f9773", null ],
+    [ "OnSelectEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#abb9703fd61b4a89781901423b2c8b768", null ],
+    [ "OnSelectEntering", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#ab59b917bb76d115fa0190a7c7e9b74b2", null ],
+    [ "OnSelectExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a59bfb2b2bc81466cff8bb3732dc55a01", null ],
+    [ "OnSelectExiting", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#ab9c9cab74aa682d11e3b162005d2763e", null ],
+    [ "OnUIHoverEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#af00c4f01132bc50bb23590106d591fe7", null ],
+    [ "OnUIHoverExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a1dd7f8b389828bb90d539d10c31e679f", null ],
+    [ "PreprocessInteractor", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#af2c7824238ea440aec8f5d69662f194c", null ],
+    [ "TryGetCurrentUIRaycastResult", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a2b32fdde30726f94516238ed97a0108f", null ],
+    [ "TryGetCurveEndNormal", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#ab267579a38865c3565073e0e94a7ca0c", null ],
+    [ "TryGetCurveEndPoint", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a78fd6eaef33240f2af53e046b826a63a", null ],
+    [ "TryGetUIModel", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a6b11b4a0928cc7cc69153d58a6e3ff1c", null ],
+    [ "UpdateUIModel", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a59cbd7311ecdc30542320afdaf3ba910", null ],
+    [ "blockUIOnInteractableSelection", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a6570f1c57c4600e1ace5bbc342a344f1", null ],
+    [ "curveOrigin", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#aba48a8d7f79ded078ab4343ac92fb73a", null ],
+    [ "enableFarCasting", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a5f91cb6e4f03ebcfeb0118edb78a8a7a", null ],
+    [ "enableNearCasting", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#abc5b026fae7f33c8e61bc24c44c040ae", null ],
+    [ "enableUIInteraction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a65cfdecdbbcde6cc56da15f433f84f31", null ],
+    [ "farAttachMode", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a2819c31409f37a5ae6168a67b8ae5e4f", null ],
+    [ "farInteractionCaster", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#ad7d3e968e149b54ab4861a3fe44cb033", null ],
+    [ "interactionAttachController", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a22e37819d61bfbe017e4faff0bbdac94", null ],
+    [ "nearCasterSortingStrategy", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#abd6f2d427e6840caff6966b382bc1687", null ],
+    [ "nearInteractionCaster", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#aa23d8a8e703bf21a95fffb6fed87d770", null ],
+    [ "selectionRegion", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a4d8e352b70f0567a22e86055de717b1b", null ],
+    [ "sortNearTargetsAfterTargetFilter", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a38963ca88b097b963f5cc7ce1e2f8587", null ],
+    [ "uiHoverEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a18c094a1fd4da58ac58cae1a8ccdc121", null ],
+    [ "uiHoverExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a2e45b5ffff93e19c5d58a0617faeb7ba", null ],
+    [ "uiPressInput", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a774770027b73b91fa8f6a7bd3400e4f6", null ],
+    [ "uiScrollInput", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_near_far_interactor.html#a3be7c217538db97698c9450817042c6d", null ]
+];

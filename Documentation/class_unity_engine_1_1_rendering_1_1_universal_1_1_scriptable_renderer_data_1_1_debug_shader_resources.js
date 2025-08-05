@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_data_1_1_debug_shader_resources =
+[
+    [ "debugReplacementPS", "class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_data_1_1_debug_shader_resources.html#ad299f57c9f2378b00efd4b1e82724475", null ],
+    [ "hdrDebugViewPS", "class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_data_1_1_debug_shader_resources.html#a92f00350a9dfa13d10e81187e644b7e6", null ]
+];

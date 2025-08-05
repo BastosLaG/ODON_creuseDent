@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_control_action_manager =
+[
+    [ "HapticControlActionManager", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_control_action_manager.html#abc29dc93be533e2bc48b35aabb6eb68b", null ],
+    [ "GetChannelGroup", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_control_action_manager.html#ae4694544800dfc88c6477065d7e584c9", null ]
+];

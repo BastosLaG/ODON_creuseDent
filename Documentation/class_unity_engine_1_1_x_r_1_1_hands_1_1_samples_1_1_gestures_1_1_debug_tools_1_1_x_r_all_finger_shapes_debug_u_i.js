@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_gestures_1_1_debug_tools_1_1_x_r_all_finger_shapes_debug_u_i =
+[
+    [ "xrFingerShapeDebugGraphs", "class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_gestures_1_1_debug_tools_1_1_x_r_all_finger_shapes_debug_u_i.html#a5480f6f8026fe8c1261beae85b282a80", null ]
+];

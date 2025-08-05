@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_devi8d69ae742198b76c83928eb2e1a5b20f =
+[
+    [ "ReadValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_devi8d69ae742198b76c83928eb2e1a5b20f.html#a7fbbfa433bc0bcd115bffec60d6cccb0", null ],
+    [ "TryReadValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_devi8d69ae742198b76c83928eb2e1a5b20f.html#adf1de7c99888b6936755d9f276849765", null ]
+];

@@ -1,0 +1,16 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider =
+[
+    [ "AddBinding", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#af3766d04c7f40c2d643e3496bb3ed613", null ],
+    [ "BindToProviders", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#a3a95d1f2e95f69b9c3ff49206c6e5900", null ],
+    [ "ClearBindings", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#adbf1d2791cee10bc6b616359f8be0b3f", null ],
+    [ "OnDisable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#a2317a6ac376bbe336933315961f9100b", null ],
+    [ "OnEnable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#a191e4edad1c897e88a7864951db181ce", null ],
+    [ "OnValidate", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#abb298ecbd17a21cb63aac9ee425ec66c", null ],
+    [ "RegisterAffordanceReceiver", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#adc1d13a1582db6b6948f773cebecae01", null ],
+    [ "UnregisterAffordanceReceiver", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#a0964e961ec831c5cf870525af1fc88f1", null ],
+    [ "Update", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#aa9d3e412d9dcbb15e3ca1175ccf770b6", null ],
+    [ "UpdateAffordanceState", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#a416f0c87970843bc9f53424c3acd9ab6", null ],
+    [ "currentAffordanceStateData", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#afdc6886f05af847fb9ee9c96b4397e52", null ],
+    [ "isCurrentlyTransitioning", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#a6651574c3f8d38d565c2af71014ff322", null ],
+    [ "transitionDuration", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_state_1_1_base_affordance_state_provider.html#a552851dab80246ae615a4915edeaffdc", null ]
+];

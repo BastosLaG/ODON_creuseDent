@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_device_float_value_reader =
+[
+    [ "ReadValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_device_float_value_reader.html#a694888d0f4c86c9066a1a69ea7b7e968", null ],
+    [ "TryReadValue", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_device_float_value_reader.html#a94280724ae7d89b1631ad14116c43a5c", null ]
+];

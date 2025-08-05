@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_visualizer_sample_1_1_material_pipeline_handler =
+[
+    [ "SetPipelineShaders", "class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_visualizer_sample_1_1_material_pipeline_handler.html#ad329bbe9273a65a9970aff7bc987ed28", null ]
+];

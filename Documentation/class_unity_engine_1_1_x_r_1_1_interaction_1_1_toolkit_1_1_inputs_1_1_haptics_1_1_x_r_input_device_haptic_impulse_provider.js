@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_x_r_input_device_haptic_impulse_provider =
+[
+    [ "GetChannelGroup", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_x_r_input_device_haptic_impulse_provider.html#ad90e91fdd300a75e2786bf3ab6962eaf", null ]
+];

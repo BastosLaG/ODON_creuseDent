@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Référence de la classe UnityEngine.XR.Interaction.Toolkit.Locomotion.CharacterControllerBodyManipulator</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_character_controller_body_manipulator.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la classe UnityEngine.XR.Interaction.Toolkit.Locomotion.CharacterControllerBodyManipulator</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Scriptable object that can perform constrained movement of an <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html" title="Container for an XROrigin that can be transformed using the user&#39;s body as a frame of reference.">XRMovableBody</a> by using a CharacterController that follows the user's body. Each time this object is about to call CharacterController.Move on the <a class="el" href="#ae67cff3cd648215dc866e7e426e275a6" title="The character controller attached to the XRMovableBody.originTransform of the IConstrainedXRBodyManip...">characterController</a>, it first ensures that the CharacterController.center and CharacterController.height are set such that the bottom of the capsule matches the position determined by <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html#ab847ecbae2bcc94b64bc11fe5d48b750" title="Gets the position of where the user&#39;s body is grounded (e.g. their feet), in the local space of the o...">XRMovableBody.GetBodyGroundLocalPosition</a> and the height of the capsule matches <a class="el" href="class_unity_1_1_x_r_1_1_core_utils_1_1_x_r_origin.html#ae7e85246008bebe395dda9bd1cd3c4e7" title="(Read Only) The camera&#39;s height relative to the origin.">XROrigin.CameraInOriginSpaceHeight</a>.  
+ <a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe d'héritage de UnityEngine.XR.Interaction.Toolkit.Locomotion.CharacterControllerBodyManipulator:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_character_controller_body_manipulator.png" usemap="#UnityEngine_2EXR_2EInteraction_2EToolkit_2ELocomotion_2ECharacterControllerBodyManipulator_map" alt=""/>
+  <map id="UnityEngine_2EXR_2EInteraction_2EToolkit_2ELocomotion_2ECharacterControllerBodyManipulator_map" name="UnityEngine_2EXR_2EInteraction_2EToolkit_2ELocomotion_2ECharacterControllerBodyManipulator_map">
+<area href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator.html" title="Base for a scriptable object that can perform movement of an XRMovableBody that is constrained by col..." alt="UnityEngine.XR.Interaction.Toolkit.Locomotion.ScriptableConstrainedBodyManipulator" shape="rect" coords="253,56,749,80"/>
+<area href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html" title="Interface for an object that can perform movement of an XRMovableBody that is constrained by collisio..." alt="UnityEngine.XR.Interaction.Toolkit.Locomotion.IConstrainedXRBodyManipulator" shape="rect" coords="506,0,1002,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a55beda5a672b63bc00f592a537196f84" id="r_a55beda5a672b63bc00f592a537196f84"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55beda5a672b63bc00f592a537196f84">OnLinkedToBody</a> (<a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html">XRMovableBody</a> body)</td></tr>
+<tr class="memdesc:a55beda5a672b63bc00f592a537196f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after the given body links this manipulator to it. The implementation should ensure that <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">linkedBody</a> points to <em>body</em>  after this method is called.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body</td><td>The body linked with this manipulator.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html#a6628381fce46f7a217537b23eb3a6374" title="Links the given constrained manipulator to this body. This sets constrainedManipulator to manipulator...">XRMovableBody.LinkConstrainedManipulator</a>, <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#a6b130cbb364c16da72b18b93b77274aa" title="Called when a body unlinks this manipulator from it. The implementation should ensure that linkedBody...">OnUnlinkedFromBody</a></dd></dl>
+  <br /></td></tr>
+<tr class="memitem:ae57a37752506a6d4cfa1a9ec08be1493" id="r_ae57a37752506a6d4cfa1a9ec08be1493"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae57a37752506a6d4cfa1a9ec08be1493">OnUnlinkedFromBody</a> ()</td></tr>
+<tr class="memdesc:ae57a37752506a6d4cfa1a9ec08be1493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a body unlinks this manipulator from it. The implementation should ensure that <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">linkedBody</a> returns <code>null</code> after this method is called.<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html#a99c43e87d92fcef09dc3c60c01b2b72d" title="Unlinks the assigned constrained manipulator from this body, if there is one. This calls IConstrained...">XRMovableBody.UnlinkConstrainedManipulator</a>, <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#a1955b87a2ced7513e3807fd1a90740e3" title="Called after the given body links this manipulator to it. The implementation should ensure that linke...">OnLinkedToBody</a></dd></dl>
+  <br /></td></tr>
+<tr class="memitem:ac54bb28cd429aca12bcb7ddf39599bc8" id="r_ac54bb28cd429aca12bcb7ddf39599bc8"><td class="memItemLeft" align="right" valign="top">override CollisionFlags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac54bb28cd429aca12bcb7ddf39599bc8">MoveBody</a> (Vector3 motion)</td></tr>
+<tr class="memdesc:ac54bb28cd429aca12bcb7ddf39599bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the given motion to <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">linkedBody</a>. A collision can constrain the movement from taking place.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">motion</td><td>Amount of translation to apply.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns flags that indicate the direction of the collision, if there was one.</dd></dl>
+  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Fonctions membres publiques hérités de <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator.html">UnityEngine.XR.Interaction.Toolkit.Locomotion.ScriptableConstrainedBodyManipulator</a></td></tr>
+<tr class="memitem:a61c1b18f3fa945291d30b5118cf15fd7 inherit pub_methods_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator" id="r_a61c1b18f3fa945291d30b5118cf15fd7"><td class="memItemLeft" align="right" valign="top">CollisionFlags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator.html#a61c1b18f3fa945291d30b5118cf15fd7">MoveBody</a> (Vector3 motion)</td></tr>
+<tr class="memdesc:a61c1b18f3fa945291d30b5118cf15fd7 inherit pub_methods_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the given motion to <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">linkedBody</a>. A collision can constrain the movement from taking place.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">motion</td><td>Amount of translation to apply.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns flags that indicate the direction of the collision, if there was one.</dd></dl>
+  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Propriétés</h2></td></tr>
+<tr class="memitem:ab8c15edb81cf65d9933e43c13f3acd78" id="r_ab8c15edb81cf65d9933e43c13f3acd78"><td class="memItemLeft" align="right" valign="top">override CollisionFlags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8c15edb81cf65d9933e43c13f3acd78">lastCollisionFlags</a><code> [get]</code></td></tr>
+<tr class="memdesc:ab8c15edb81cf65d9933e43c13f3acd78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags indicating the direction of the collision from the most recent call to <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ad631a36cf648de174276d8d970b417ce" title="Applies the given motion to linkedBody. A collision can constrain the movement from taking place.">MoveBody</a>.  <br /></td></tr>
+<tr class="memitem:a5d20c85d89418872e0f55b9047395126" id="r_a5d20c85d89418872e0f55b9047395126"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d20c85d89418872e0f55b9047395126">isGrounded</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5d20c85d89418872e0f55b9047395126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">linkedBody</a> is touching the ground, as of the most recent call to <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ad631a36cf648de174276d8d970b417ce" title="Applies the given motion to linkedBody. A collision can constrain the movement from taking place.">MoveBody</a>.  <br /></td></tr>
+<tr class="memitem:ae67cff3cd648215dc866e7e426e275a6" id="r_ae67cff3cd648215dc866e7e426e275a6"><td class="memItemLeft" align="right" valign="top"><a id="ae67cff3cd648215dc866e7e426e275a6" name="ae67cff3cd648215dc866e7e426e275a6"></a>
+CharacterController&#160;</td><td class="memItemRight" valign="bottom"><b>characterController</b><code> [get]</code></td></tr>
+<tr class="memdesc:ae67cff3cd648215dc866e7e426e275a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The character controller attached to the <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html#a37b09b27cd29989513fe471bb4b8746e" title="The Transform component of the XROrigin.Origin of the xrOrigin. This is the Transform component that ...">XRMovableBody.originTransform</a> of the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">IConstrainedXRBodyManipulator.linkedBody</a>. This is <code>null</code> if <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">IConstrainedXRBodyManipulator.linkedBody</a> is <code>null</code>. <br /></td></tr>
+<tr class="inherit_header properties_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Propriétés hérités de <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator.html">UnityEngine.XR.Interaction.Toolkit.Locomotion.ScriptableConstrainedBodyManipulator</a></td></tr>
+<tr class="memitem:adaab82a54fc1a057512e3cd9320b015a inherit properties_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator" id="r_adaab82a54fc1a057512e3cd9320b015a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html">XRMovableBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator.html#adaab82a54fc1a057512e3cd9320b015a">linkedBody</a><code> [get]</code></td></tr>
+<tr class="memdesc:adaab82a54fc1a057512e3cd9320b015a inherit properties_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">The body whose <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html#a37b09b27cd29989513fe471bb4b8746e" title="The Transform component of the XROrigin.Origin of the xrOrigin. This is the Transform component that ...">XRMovableBody.originTransform</a> to move.<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#a1955b87a2ced7513e3807fd1a90740e3" title="Called after the given body links this manipulator to it. The implementation should ensure that linke...">OnLinkedToBody</a>, <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#a6b130cbb364c16da72b18b93b77274aa" title="Called when a body unlinks this manipulator from it. The implementation should ensure that linkedBody...">OnUnlinkedFromBody</a></dd></dl>
+  <br /></td></tr>
+<tr class="memitem:a9ed26ecf91e8b0906bc7c604d9041b79 inherit properties_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator" id="r_a9ed26ecf91e8b0906bc7c604d9041b79"><td class="memItemLeft" align="right" valign="top">CollisionFlags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator.html#a9ed26ecf91e8b0906bc7c604d9041b79">lastCollisionFlags</a><code> [get]</code></td></tr>
+<tr class="memdesc:a9ed26ecf91e8b0906bc7c604d9041b79 inherit properties_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags indicating the direction of the collision from the most recent call to <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ad631a36cf648de174276d8d970b417ce" title="Applies the given motion to linkedBody. A collision can constrain the movement from taking place.">MoveBody</a>.  <br /></td></tr>
+<tr class="memitem:a8d3c32dc5564980add4aa051ac765e25 inherit properties_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator" id="r_a8d3c32dc5564980add4aa051ac765e25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator.html#a8d3c32dc5564980add4aa051ac765e25">isGrounded</a><code> [get]</code></td></tr>
+<tr class="memdesc:a8d3c32dc5564980add4aa051ac765e25 inherit properties_class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">linkedBody</a> is touching the ground, as of the most recent call to <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ad631a36cf648de174276d8d970b417ce" title="Applies the given motion to linkedBody. A collision can constrain the movement from taking place.">MoveBody</a>.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Scriptable object that can perform constrained movement of an <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html" title="Container for an XROrigin that can be transformed using the user&#39;s body as a frame of reference.">XRMovableBody</a> by using a CharacterController that follows the user's body. Each time this object is about to call CharacterController.Move on the <a class="el" href="#ae67cff3cd648215dc866e7e426e275a6" title="The character controller attached to the XRMovableBody.originTransform of the IConstrainedXRBodyManip...">characterController</a>, it first ensures that the CharacterController.center and CharacterController.height are set such that the bottom of the capsule matches the position determined by <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html#ab847ecbae2bcc94b64bc11fe5d48b750" title="Gets the position of where the user&#39;s body is grounded (e.g. their feet), in the local space of the o...">XRMovableBody.GetBodyGroundLocalPosition</a> and the height of the capsule matches <a class="el" href="class_unity_1_1_x_r_1_1_core_utils_1_1_x_r_origin.html#ae7e85246008bebe395dda9bd1cd3c4e7" title="(Read Only) The camera&#39;s height relative to the origin.">XROrigin.CameraInOriginSpaceHeight</a>. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="ac54bb28cd429aca12bcb7ddf39599bc8" name="ac54bb28cd429aca12bcb7ddf39599bc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54bb28cd429aca12bcb7ddf39599bc8">&#9670;&#160;</a></span>MoveBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override CollisionFlags UnityEngine.XR.Interaction.Toolkit.Locomotion.CharacterControllerBodyManipulator.MoveBody </td>
+          <td>(</td>
+          <td class="paramtype">Vector3</td>          <td class="paramname"><span class="paramname"><em>motion</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies the given motion to <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">linkedBody</a>. A collision can constrain the movement from taking place.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">motion</td><td>Amount of translation to apply.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns flags that indicate the direction of the collision, if there was one.</dd></dl>
+ </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ad631a36cf648de174276d8d970b417ce">UnityEngine.XR.Interaction.Toolkit.Locomotion.IConstrainedXRBodyManipulator</a>.</p>
+
+</div>
+</div>
+<a id="a55beda5a672b63bc00f592a537196f84" name="a55beda5a672b63bc00f592a537196f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55beda5a672b63bc00f592a537196f84">&#9670;&#160;</a></span>OnLinkedToBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEngine.XR.Interaction.Toolkit.Locomotion.CharacterControllerBodyManipulator.OnLinkedToBody </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html">XRMovableBody</a></td>          <td class="paramname"><span class="paramname"><em>body</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called after the given body links this manipulator to it. The implementation should ensure that <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">linkedBody</a> points to <em>body</em>  after this method is called.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body</td><td>The body linked with this manipulator.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html#a6628381fce46f7a217537b23eb3a6374" title="Links the given constrained manipulator to this body. This sets constrainedManipulator to manipulator...">XRMovableBody.LinkConstrainedManipulator</a>, <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#a6b130cbb364c16da72b18b93b77274aa" title="Called when a body unlinks this manipulator from it. The implementation should ensure that linkedBody...">OnUnlinkedFromBody</a></dd></dl>
+ </p>
+
+<p>Réimplémentée à partir de <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator.html#aa13a286bc3050af7e494527a349b4635">UnityEngine.XR.Interaction.Toolkit.Locomotion.ScriptableConstrainedBodyManipulator</a>.</p>
+
+</div>
+</div>
+<a id="ae57a37752506a6d4cfa1a9ec08be1493" name="ae57a37752506a6d4cfa1a9ec08be1493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae57a37752506a6d4cfa1a9ec08be1493">&#9670;&#160;</a></span>OnUnlinkedFromBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void UnityEngine.XR.Interaction.Toolkit.Locomotion.CharacterControllerBodyManipulator.OnUnlinkedFromBody </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when a body unlinks this manipulator from it. The implementation should ensure that <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">linkedBody</a> returns <code>null</code> after this method is called.<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_x_r_movable_body.html#a99c43e87d92fcef09dc3c60c01b2b72d" title="Unlinks the assigned constrained manipulator from this body, if there is one. This calls IConstrained...">XRMovableBody.UnlinkConstrainedManipulator</a>, <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#a1955b87a2ced7513e3807fd1a90740e3" title="Called after the given body links this manipulator to it. The implementation should ensure that linke...">OnLinkedToBody</a></dd></dl>
+ </p>
+
+<p>Réimplémentée à partir de <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_scriptable_constrained_body_manipulator.html#ae677ccb10bf6957dbaa20758c9fd944c">UnityEngine.XR.Interaction.Toolkit.Locomotion.ScriptableConstrainedBodyManipulator</a>.</p>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Documentation des propriétés</h2>
+<a id="a5d20c85d89418872e0f55b9047395126" name="a5d20c85d89418872e0f55b9047395126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d20c85d89418872e0f55b9047395126">&#9670;&#160;</a></span>isGrounded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool UnityEngine.XR.Interaction.Toolkit.Locomotion.CharacterControllerBodyManipulator.isGrounded</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ab033a8ec9b94649359949457c4dfbf47" title="The body whose XRMovableBody.originTransform to move.">linkedBody</a> is touching the ground, as of the most recent call to <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ad631a36cf648de174276d8d970b417ce" title="Applies the given motion to linkedBody. A collision can constrain the movement from taking place.">MoveBody</a>. </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#a6328d1949d1b031b6518dd1f405beaa8">UnityEngine.XR.Interaction.Toolkit.Locomotion.IConstrainedXRBodyManipulator</a>.</p>
+
+</div>
+</div>
+<a id="ab8c15edb81cf65d9933e43c13f3acd78" name="ab8c15edb81cf65d9933e43c13f3acd78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8c15edb81cf65d9933e43c13f3acd78">&#9670;&#160;</a></span>lastCollisionFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override CollisionFlags UnityEngine.XR.Interaction.Toolkit.Locomotion.CharacterControllerBodyManipulator.lastCollisionFlags</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flags indicating the direction of the collision from the most recent call to <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#ad631a36cf648de174276d8d970b417ce" title="Applies the given motion to linkedBody. A collision can constrain the movement from taking place.">MoveBody</a>. </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_i_constrained_x_r_body_manipulator.html#a620c2f7b7c215274f7e99c50fc55ea69">UnityEngine.XR.Interaction.Toolkit.Locomotion.IConstrainedXRBodyManipulator</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r.html">XR</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit.html">Toolkit</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion.html">Locomotion</a></li><li class="navelem"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_locomotion_1_1_character_controller_body_manipulator.html">CharacterControllerBodyManipulator</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

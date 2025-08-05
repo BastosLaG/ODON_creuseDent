@@ -1,0 +1,6 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_impulse_command_channel =
+[
+    [ "SendHapticImpulse", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_impulse_command_channel.html#aba44d107922c8022f7db66fbfd5c658d", null ],
+    [ "device", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_impulse_command_channel.html#a65be6c3e5fe7005ec1386b44bc24e30b", null ],
+    [ "motorChannel", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_impulse_command_channel.html#aa94e322a338b6e12c29e3257ec21a485", null ]
+];

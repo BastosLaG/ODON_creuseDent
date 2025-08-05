@@ -1,0 +1,7 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_impulse_single_channel_group =
+[
+    [ "HapticImpulseSingleChannelGroup", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_impulse_single_channel_group.html#a68b10f7e845c49e03c3fc84d388066fb", null ],
+    [ "GetChannel", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_impulse_single_channel_group.html#a5a773ce6659b8e1b6a6dd11127d7ed32", null ],
+    [ "channelCount", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_impulse_single_channel_group.html#ac6fe51b238b375f7f3433374b5ac1451", null ],
+    [ "impulseChannel", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_haptics_1_1_haptic_impulse_single_channel_group.html#af58048546043d76bc9c94fdf0551b890", null ]
+];

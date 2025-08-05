@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_ba51181fd1599c12b4bba88a144dfe13c4 =
+[
+    [ "HandleTween", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_ba51181fd1599c12b4bba88a144dfe13c4.html#aed3a81793e225b2f0dd9282895b0d182", null ],
+    [ "OnAffordanceThemeChanged", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_ba51181fd1599c12b4bba88a144dfe13c4.html#a7e634718d4723f6be4ae243345fbd9ce", null ],
+    [ "OnDestroy", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_ba51181fd1599c12b4bba88a144dfe13c4.html#ac5a160d88297959cb81cf12b858a9e0e", null ],
+    [ "ScheduleTweenJob", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_ba51181fd1599c12b4bba88a144dfe13c4.html#ace7c459a42a248f0e2adcbb9ce8b84af", null ],
+    [ "UpdateStateFromCompletedJob", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_ba51181fd1599c12b4bba88a144dfe13c4.html#aa997bdfec4729cd7fb66514c128a8020", null ]
+];

@@ -1,0 +1,9 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_x_r_base_input_interactor_1_1_logical_input_state =
+[
+    [ "active", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_x_r_base_input_interactor_1_1_logical_input_state.html#af467a33f9035e910accae42500fbc7bf", null ],
+    [ "isPerformed", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_x_r_base_input_interactor_1_1_logical_input_state.html#a3e2cd860b1bf981d76c7a51e64bdea13", null ],
+    [ "mode", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_x_r_base_input_interactor_1_1_logical_input_state.html#a290ce9540a2690d91987ea81b6f15571", null ],
+    [ "wasCompletedThisFrame", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_x_r_base_input_interactor_1_1_logical_input_state.html#a448656817aa118dceec95b87284d1c63", null ],
+    [ "wasPerformedThisFrame", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_x_r_base_input_interactor_1_1_logical_input_state.html#ae79293d32ac932fae47198357e9adef4", null ],
+    [ "wasUnperformedThisFrame", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_x_r_base_input_interactor_1_1_logical_input_state.html#a1e103fa52c4a3223c993102ec73e3b9f", null ]
+];

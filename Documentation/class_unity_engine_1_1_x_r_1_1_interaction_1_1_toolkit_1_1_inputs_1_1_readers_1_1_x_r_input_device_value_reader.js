@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_device_value_reader =
+[
+    [ "characteristics", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_readers_1_1_x_r_input_device_value_reader.html#a00973942a50dd90898c65ac4600680f2", null ]
+];

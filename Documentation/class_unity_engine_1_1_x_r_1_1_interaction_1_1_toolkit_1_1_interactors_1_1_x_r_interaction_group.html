@@ -1,0 +1,936 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Référence de la classe UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_x_r_interaction_group.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la classe UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Behaviour implementation of <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html" title="An interface that represents an Interaction Group component that enforces that only one IXRGroupMembe...">IXRInteractionGroup</a>. An <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group hooks into the interaction system (via <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html" title="The Interaction Manager acts as an intermediary between Interactors and Interactables....">XRInteractionManager</a>) and enforces that only one <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html" title="An interface that represents an object that can be contained as a member in an IXRInteractionGroup....">IXRGroupMember</a> within the Group can interact at a time. Each Group member must be either an <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html" title="An interface that represents an Interactor component that controls how a GameObject interacts with an...">IXRInteractor</a> or an <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html" title="An interface that represents an Interaction Group component that enforces that only one IXRGroupMembe...">IXRInteractionGroup</a>.  
+ <a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe d'héritage de UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_x_r_interaction_group.png" usemap="#UnityEngine_2EXR_2EInteraction_2EToolkit_2EInteractors_2EXRInteractionGroup_map" alt=""/>
+  <map id="UnityEngine_2EXR_2EInteraction_2EToolkit_2EInteractors_2EXRInteractionGroup_map" name="UnityEngine_2EXR_2EInteraction_2EToolkit_2EInteractors_2EXRInteractionGroup_map">
+<area href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html" title="An interface that represents an Interaction Group component that is capable of overriding the interac..." alt="UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionOverrideGroup" shape="rect" coords="446,56,882,80"/>
+<area href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html" title="An interface that represents an object that can be contained as a member in an IXRInteractionGroup...." alt="UnityEngine.XR.Interaction.Toolkit.Interactors.IXRGroupMember" shape="rect" coords="892,56,1328,80"/>
+<area href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html" title="An interface that represents an Interaction Group component that enforces that only one IXRGroupMembe..." alt="UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup" shape="rect" coords="446,0,882,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:GroupMemberAndOverridesPair" id="r_GroupMemberAndOverridesPair"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>GroupMemberAndOverridesPair</b></td></tr>
+<tr class="memitem:GroupNames" id="r_GroupNames"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>GroupNames</b></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">These correspond to the default names of the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Groups in the sample <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> Rig. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a70d8636f3a1f89d1e0514999110a6ce9" id="r_a70d8636f3a1f89d1e0514999110a6ce9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70d8636f3a1f89d1e0514999110a6ce9">AddStartingInteractionOverride</a> (Object sourceGroupMember, Object overrideGroupMember)</td></tr>
+<tr class="memdesc:a70d8636f3a1f89d1e0514999110a6ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <em>overrideGroupMember</em>  to the list of Group members that are to be added as interaction overrides for <em>sourceGroupMember</em>  on Awake. Both objects must already be included in the <a class="el" href="#a90fec232da7149c159f7cdcdb584676f" title="Ordered list of Interactors or Interaction Groups that are registered with the Group on Awake....">startingGroupMembers</a> list. The override object should implement either the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_select_interactor.html" title="An interface that represents an Interactor component that can select an Interactable component.">IXRSelectInteractor</a> interface or the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html" title="An interface that represents an Interaction Group component that is capable of overriding the interac...">IXRInteractionOverrideGroup</a> interface.  <br /></td></tr>
+<tr class="memitem:a0fa6e23db3597dafeb01a96180b1ef06" id="r_a0fa6e23db3597dafeb01a96180b1ef06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fa6e23db3597dafeb01a96180b1ef06">RemoveStartingInteractionOverride</a> (Object sourceGroupMember, Object overrideGroupMember)</td></tr>
+<tr class="memdesc:a0fa6e23db3597dafeb01a96180b1ef06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes <em>overrideGroupMember</em>  from the list of Group members that are to be added as interaction overrides for <em>sourceGroupMember</em>  on Awake.  <br /></td></tr>
+<tr class="memitem:abdcb39a54b41b6841e6f3783aa58cf63" id="r_abdcb39a54b41b6841e6f3783aa58cf63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdcb39a54b41b6841e6f3783aa58cf63">AddGroupMember</a> (<a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> groupMember)</td></tr>
+<tr class="memdesc:abdcb39a54b41b6841e6f3783aa58cf63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the given Group member to the end of the ordered list of members in the Group. Causes no change if the Group member is already added.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupMember</td><td>The Group member to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<em>groupMember</em>  must implement either <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html" title="An interface that represents an Interactor component that controls how a GameObject interacts with an...">IXRInteractor</a> or <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html" title="An interface that represents an Interaction Group component that enforces that only one IXRGroupMembe...">IXRInteractionGroup</a>.   <br /></td></tr>
+<tr class="memitem:ae3d413c4b6fba743f2f5d45c22cc5295" id="r_ae3d413c4b6fba743f2f5d45c22cc5295"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3d413c4b6fba743f2f5d45c22cc5295">MoveGroupMemberTo</a> (<a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> groupMember, int newIndex)</td></tr>
+<tr class="memdesc:ae3d413c4b6fba743f2f5d45c22cc5295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the given Group member to the specified index in the ordered list of members in the Group. If the member is not in the list, this can be used to insert the member at the specified index.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupMember</td><td>The Group member to move or add.</td></tr>
+    <tr><td class="paramname">newIndex</td><td>New index of the Group member.</td></tr>
+  </table>
+  </dd>
+</dl>
+<em>groupMember</em>  must implement either <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html" title="An interface that represents an Interactor component that controls how a GameObject interacts with an...">IXRInteractor</a> or <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html" title="An interface that represents an Interaction Group component that enforces that only one IXRGroupMembe...">IXRInteractionGroup</a>.   <br /></td></tr>
+<tr class="memitem:ad804eeb5dfbb3c594b6929954d2cd860" id="r_ad804eeb5dfbb3c594b6929954d2cd860"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad804eeb5dfbb3c594b6929954d2cd860">RemoveGroupMember</a> (<a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> groupMember)</td></tr>
+<tr class="memdesc:ad804eeb5dfbb3c594b6929954d2cd860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the given Group member from the list of members.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupMember</td><td>The Group member to remove.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if <em>groupMember</em>  was removed from the list. Otherwise, returns <code>false</code> if <em>groupMember</em>  was not found in the list. </dd></dl>
+  <br /></td></tr>
+<tr class="memitem:abeaa0ac6f3c1d09cf4f56ea980955218" id="r_abeaa0ac6f3c1d09cf4f56ea980955218"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abeaa0ac6f3c1d09cf4f56ea980955218">ClearGroupMembers</a> ()</td></tr>
+<tr class="memdesc:abeaa0ac6f3c1d09cf4f56ea980955218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all Group members from the list of members.  <br /></td></tr>
+<tr class="memitem:afed6a3c0e7f49f4f8bfdfa675dd7f4fe" id="r_afed6a3c0e7f49f4f8bfdfa675dd7f4fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afed6a3c0e7f49f4f8bfdfa675dd7f4fe">ContainsGroupMember</a> (<a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> groupMember)</td></tr>
+<tr class="memdesc:afed6a3c0e7f49f4f8bfdfa675dd7f4fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the given Group member exists in the list of members.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupMember</td><td>The Group member to check for in the list.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if <em>groupMember</em>  exists in the list. Otherwise, returns <code>false</code>. </dd></dl>
+  <br /></td></tr>
+<tr class="memitem:a24b9b22ddbc676f9ab8809b01be8ce89" id="r_a24b9b22ddbc676f9ab8809b01be8ce89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24b9b22ddbc676f9ab8809b01be8ce89">GetGroupMembers</a> (List&lt; <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> &gt; results)</td></tr>
+<tr class="memdesc:a24b9b22ddbc676f9ab8809b01be8ce89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all members in the ordered list of Group members into List <em>results</em> .<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">results</td><td>List to receive Group members.</td></tr>
+  </table>
+  </dd>
+</dl>
+This method populates the list with the Group members at the time the method is called. It is not a live view, meaning Group members added or removed afterward will not be reflected in the results of this method. Clears <em>results</em>  before adding to it.   <br /></td></tr>
+<tr class="memitem:a59bed34ca15d912c69898095edf8ac65" id="r_a59bed34ca15d912c69898095edf8ac65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59bed34ca15d912c69898095edf8ac65">HasDependencyOnGroup</a> (<a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html">IXRInteractionGroup</a> group)</td></tr>
+<tr class="memdesc:a59bed34ca15d912c69898095edf8ac65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the given Group is either the same as this Group or a dependency of any member Group.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>The Group to check for as a dependency.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if <em>group</em>  is either the same as this Group or a dependency of this Group. Otherwise, returns <code>false</code>. </dd></dl>
+  <br /></td></tr>
+<tr class="memitem:a349ce4cfc9765a978b9b622966c837ce" id="r_a349ce4cfc9765a978b9b622966c837ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a349ce4cfc9765a978b9b622966c837ce">AddInteractionOverrideForGroupMember</a> (<a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> sourceGroupMember, <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> overrideGroupMember)</td></tr>
+<tr class="memdesc:a349ce4cfc9765a978b9b622966c837ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <em>overrideGroupMember</em>  as a possible interaction override for <em>sourceGroupMember</em> .<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The Group member whose interaction can be potentially overridden by <em>overrideGroupMember</em> .</td></tr>
+    <tr><td class="paramname">overrideGroupMember</td><td>The Group member to add as a possible interaction override.</td></tr>
+  </table>
+  </dd>
+</dl>
+Both members must be registered with the Group. Additionally, <em>overrideGroupMember</em>  must implement either <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_select_interactor.html" title="An interface that represents an Interactor component that can select an Interactable component.">IXRSelectInteractor</a> or <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html" title="An interface that represents an Interaction Group component that is capable of overriding the interac...">IXRInteractionOverrideGroup</a>. This method must not create a loop in the chain of overrides for <em>sourceGroupMember</em> . Use the implementation of <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#a53d8ae95d92f244da1952a8a19fb6375" title="Checks whether potentialOverrideGroupMember  is either the same as sourceGroupMember  or part of a ch...">GroupMemberIsPartOfOverrideChain</a> to ensure there is no loop before adding override.   <br /></td></tr>
+<tr class="memitem:aa5c3a4f9f7190f99a01d5aed02143bde" id="r_aa5c3a4f9f7190f99a01d5aed02143bde"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5c3a4f9f7190f99a01d5aed02143bde">GroupMemberIsPartOfOverrideChain</a> (<a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> sourceGroupMember, <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> potentialOverrideGroupMember)</td></tr>
+<tr class="memdesc:aa5c3a4f9f7190f99a01d5aed02143bde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether <em>potentialOverrideGroupMember</em>  is either the same as <em>sourceGroupMember</em>  or part of a chain of its override Group members and their overrides.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The source Group member for the potential chain of override members.</td></tr>
+    <tr><td class="paramname">potentialOverrideGroupMember</td><td>The Group member to check for as part of a chain of overrides.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if <em>potentialOverrideGroupMember</em>  is either the same as <em>sourceGroupMember</em>  or part of a chain of its override Group members and their overrides. Otherwise, returns <code>false</code>. </dd></dl>
+  <br /></td></tr>
+<tr class="memitem:a25281090a48cedcd50f5dfbb3a31f2b9" id="r_a25281090a48cedcd50f5dfbb3a31f2b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25281090a48cedcd50f5dfbb3a31f2b9">RemoveInteractionOverrideForGroupMember</a> (<a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> sourceGroupMember, <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> overrideGroupMember)</td></tr>
+<tr class="memdesc:a25281090a48cedcd50f5dfbb3a31f2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes <em>overrideGroupMember</em>  as a possible interaction override for <em>sourceGroupMember</em> .<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The Group member whose interaction can no longer be overridden by <em>overrideGroupMember</em> .</td></tr>
+    <tr><td class="paramname">overrideGroupMember</td><td>The Group member to remove as a possible interaction override.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if <em>overrideGroupMember</em>  was removed from the set of potential overrides for <em>sourceGroupMember</em> . Otherwise, returns <code>false</code> if <em>overrideGroupMember</em>  was not part of the set. </dd></dl>
+<em>sourceGroupMember</em>  must be registered with the Group.   <br /></td></tr>
+<tr class="memitem:af000130ca428d4bb776e32c98e428a69" id="r_af000130ca428d4bb776e32c98e428a69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af000130ca428d4bb776e32c98e428a69">ClearInteractionOverridesForGroupMember</a> (<a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> sourceGroupMember)</td></tr>
+<tr class="memdesc:af000130ca428d4bb776e32c98e428a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the set of possible interaction overrides for <em>sourceGroupMember</em> .<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The Group member whose interaction can no longer be overridden.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if there is a set of overrides for <em>sourceGroupMember</em> . Otherwise, returns <code>false</code>. </dd></dl>
+<em>sourceGroupMember</em>  must be registered with the Group.   <br /></td></tr>
+<tr class="memitem:a4ee8663a35bc6f1795d6d6e0acf94f71" id="r_a4ee8663a35bc6f1795d6d6e0acf94f71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ee8663a35bc6f1795d6d6e0acf94f71">GetInteractionOverridesForGroupMember</a> (<a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> sourceGroupMember, HashSet&lt; <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> &gt; results)</td></tr>
+<tr class="memdesc:a4ee8663a35bc6f1795d6d6e0acf94f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all members in the set of possible interaction overrides for <em>sourceGroupMember</em>  into set <em>results</em> .<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The Group member whose overrides to get.</td></tr>
+    <tr><td class="paramname">results</td><td>Set to receive override Group members.</td></tr>
+  </table>
+  </dd>
+</dl>
+<em>sourceGroupMember</em>  must be registered with the Group. This method populates the set with the Group members at the time the method is called. It is not a live view, meaning override Group members added or removed afterward will not be reflected in the results of this method. Clears <em>results</em>  before adding to it.   <br /></td></tr>
+<tr class="memitem:ac081badc326518b236a29f63065d400d" id="r_ac081badc326518b236a29f63065d400d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac081badc326518b236a29f63065d400d">OnFocusEntering</a> (<a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_focus_enter_event_args.html">FocusEnterEventArgs</a> args)</td></tr>
+<tr class="memdesc:ac081badc326518b236a29f63065d400d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html" title="The Interaction Manager acts as an intermediary between Interactors and Interactables....">XRInteractionManager</a> calls this method right before the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> group first gains focus of an Interactable in a first pass.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Event data containing the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> group that is initiating the focus.</td></tr>
+  </table>
+  </dd>
+</dl>
+<em>args</em>  is only valid during this method call, do not hold a reference to it.   <br /></td></tr>
+<tr class="memitem:a9247411dcbf432f18bcc0b2d8229fd96" id="r_a9247411dcbf432f18bcc0b2d8229fd96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9247411dcbf432f18bcc0b2d8229fd96">OnFocusExiting</a> (<a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_focus_exit_event_args.html">FocusExitEventArgs</a> args)</td></tr>
+<tr class="memdesc:a9247411dcbf432f18bcc0b2d8229fd96"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html" title="The Interaction Manager acts as an intermediary between Interactors and Interactables....">XRInteractionManager</a> calls this method right before the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> group loses focus of an Interactable in a first pass.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Event data containing the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> group that is losing focus.</td></tr>
+  </table>
+  </dd>
+</dl>
+<em>args</em>  is only valid during this method call, do not hold a reference to it.   <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Fonctions membres protégées</h2></td></tr>
+<tr class="memitem:ab14c35d052e899720534818ca452b27c" id="r_ab14c35d052e899720534818ca452b27c"><td class="memItemLeft" align="right" valign="top"><a id="ab14c35d052e899720534818ca452b27c" name="ab14c35d052e899720534818ca452b27c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr>
+<tr class="memdesc:ab14c35d052e899720534818ca452b27c"><td class="mdescLeft">&#160;</td><td class="mdescRight">See MonoBehaviour. <br /></td></tr>
+<tr class="memitem:a21d9866620a195ddba1e2bd9e3bb6a80" id="r_a21d9866620a195ddba1e2bd9e3bb6a80"><td class="memItemLeft" align="right" valign="top"><a id="a21d9866620a195ddba1e2bd9e3bb6a80" name="a21d9866620a195ddba1e2bd9e3bb6a80"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()</td></tr>
+<tr class="memdesc:a21d9866620a195ddba1e2bd9e3bb6a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">See MonoBehaviour. <br /></td></tr>
+<tr class="memitem:aacb7d0abe66c1134fb4155b7b2ab90f8" id="r_aacb7d0abe66c1134fb4155b7b2ab90f8"><td class="memItemLeft" align="right" valign="top"><a id="aacb7d0abe66c1134fb4155b7b2ab90f8" name="aacb7d0abe66c1134fb4155b7b2ab90f8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEnable</b> ()</td></tr>
+<tr class="memdesc:aacb7d0abe66c1134fb4155b7b2ab90f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">See MonoBehaviour. <br /></td></tr>
+<tr class="memitem:a01dee2432ec221486266dc6367754175" id="r_a01dee2432ec221486266dc6367754175"><td class="memItemLeft" align="right" valign="top"><a id="a01dee2432ec221486266dc6367754175" name="a01dee2432ec221486266dc6367754175"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisable</b> ()</td></tr>
+<tr class="memdesc:a01dee2432ec221486266dc6367754175"><td class="mdescLeft">&#160;</td><td class="mdescRight">See MonoBehaviour. <br /></td></tr>
+<tr class="memitem:a2d260d45ca8ee25e30b0336d816dc7ad" id="r_a2d260d45ca8ee25e30b0336d816dc7ad"><td class="memItemLeft" align="right" valign="top"><a id="a2d260d45ca8ee25e30b0336d816dc7ad" name="a2d260d45ca8ee25e30b0336d816dc7ad"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td></tr>
+<tr class="memdesc:a2d260d45ca8ee25e30b0336d816dc7ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">See MonoBehaviour. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Propriétés</h2></td></tr>
+<tr class="memitem:a9835fc47e1149aa1a692323a24191e07" id="r_a9835fc47e1149aa1a692323a24191e07"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9835fc47e1149aa1a692323a24191e07">groupName</a><code> [get]</code></td></tr>
+<tr class="memdesc:a9835fc47e1149aa1a692323a24191e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the interaction group, which can be used to retrieve it from the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Manager.  <br /></td></tr>
+<tr class="memitem:aea6ba73fc9ebf39ec10439bf5196390c" id="r_aea6ba73fc9ebf39ec10439bf5196390c"><td class="memItemLeft" align="right" valign="top"><a id="aea6ba73fc9ebf39ec10439bf5196390c" name="aea6ba73fc9ebf39ec10439bf5196390c"></a>
+<a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html">XRInteractionManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>interactionManager</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:aea6ba73fc9ebf39ec10439bf5196390c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html" title="The Interaction Manager acts as an intermediary between Interactors and Interactables....">XRInteractionManager</a> that this <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group will communicate with (will find one if <code>null</code>). <br /></td></tr>
+<tr class="memitem:a30847b22aaabea79bf388667470d3cf3" id="r_a30847b22aaabea79bf388667470d3cf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html">IXRInteractionGroup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30847b22aaabea79bf388667470d3cf3">containingGroup</a><code> [get]</code></td></tr>
+<tr class="memdesc:a30847b22aaabea79bf388667470d3cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group that contains this member.  <br /></td></tr>
+<tr class="memitem:a90fec232da7149c159f7cdcdb584676f" id="r_a90fec232da7149c159f7cdcdb584676f"><td class="memItemLeft" align="right" valign="top">List&lt; Object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90fec232da7149c159f7cdcdb584676f">startingGroupMembers</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a90fec232da7149c159f7cdcdb584676f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordered list of <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors.html">Interactors</a> or <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Groups that are registered with the Group on Awake. All objects in this list should implement the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html" title="An interface that represents an object that can be contained as a member in an IXRInteractionGroup....">IXRGroupMember</a> interface and either the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html" title="An interface that represents an Interactor component that controls how a GameObject interacts with an...">IXRInteractor</a> interface or the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html" title="An interface that represents an Interaction Group component that enforces that only one IXRGroupMembe...">IXRInteractionGroup</a> interface.  <br /></td></tr>
+<tr class="memitem:aa68a85fbbe2e6ada4b9fda191326ee80" id="r_aa68a85fbbe2e6ada4b9fda191326ee80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html">IXRInteractor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa68a85fbbe2e6ada4b9fda191326ee80">activeInteractor</a><code> [get]</code></td></tr>
+<tr class="memdesc:aa68a85fbbe2e6ada4b9fda191326ee80"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Interactor in this <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group or any of its member Groups that is currently performing interaction.  <br /></td></tr>
+<tr class="memitem:a5a22490c3095ef7fafb4acbaa0e9628f" id="r_a5a22490c3095ef7fafb4acbaa0e9628f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html">IXRInteractor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a22490c3095ef7fafb4acbaa0e9628f">focusInteractor</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5a22490c3095ef7fafb4acbaa0e9628f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Interactor in this <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group or any of its member Groups that initiated the last focus event.  <br /></td></tr>
+<tr class="memitem:ae7c58e3765606ac6a5c69fba82943653" id="r_ae7c58e3765606ac6a5c69fba82943653"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_i_x_r_focus_interactable.html">IXRFocusInteractable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7c58e3765606ac6a5c69fba82943653">focusInteractable</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae7c58e3765606ac6a5c69fba82943653"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Interactable that is currently being focused by an Interactor in this <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group or any of its member Groups.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-events" class="groupheader"><a id="events" name="events"></a>
+Événements</h2></td></tr>
+<tr class="memitem:ab0299bc59e49d8af0e08287cf60f51d6" id="r_ab0299bc59e49d8af0e08287cf60f51d6"><td class="memItemLeft" align="right" valign="top"><a id="ab0299bc59e49d8af0e08287cf60f51d6" name="ab0299bc59e49d8af0e08287cf60f51d6"></a>
+Action&lt; <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interaction_group_registered_event_args.html">InteractionGroupRegisteredEventArgs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>registered</b></td></tr>
+<tr class="memitem:a7d0dd33d99d1f1977f1db2fb9e171000" id="r_a7d0dd33d99d1f1977f1db2fb9e171000"><td class="memItemLeft" align="right" valign="top"><a id="a7d0dd33d99d1f1977f1db2fb9e171000" name="a7d0dd33d99d1f1977f1db2fb9e171000"></a>
+Action&lt; <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interaction_group_unregistered_event_args.html">InteractionGroupUnregisteredEventArgs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>unregistered</b></td></tr>
+<tr class="inherit_header events_interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group"><td colspan="2" onclick="javascript:dynsection.toggleInherit('events_interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Événements hérités de <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a></td></tr>
+<tr class="memitem:a85f40cef75b219f4373eaa7fd39bb953 inherit events_interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group" id="r_a85f40cef75b219f4373eaa7fd39bb953"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interaction_group_registered_event_args.html">InteractionGroupRegisteredEventArgs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a85f40cef75b219f4373eaa7fd39bb953">registered</a></td></tr>
+<tr class="memdesc:a85f40cef75b219f4373eaa7fd39bb953 inherit events_interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the methods in its invocation list when this <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group is registered with an <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Manager.  <br /></td></tr>
+<tr class="memitem:a955b65e9e83df472d5d57daa5c02afba inherit events_interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group" id="r_a955b65e9e83df472d5d57daa5c02afba"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interaction_group_unregistered_event_args.html">InteractionGroupUnregisteredEventArgs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a955b65e9e83df472d5d57daa5c02afba">unregistered</a></td></tr>
+<tr class="memdesc:a955b65e9e83df472d5d57daa5c02afba inherit events_interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the methods in its invocation list when this <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group is unregistered from an <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Manager.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Behaviour implementation of <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html" title="An interface that represents an Interaction Group component that enforces that only one IXRGroupMembe...">IXRInteractionGroup</a>. An <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group hooks into the interaction system (via <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html" title="The Interaction Manager acts as an intermediary between Interactors and Interactables....">XRInteractionManager</a>) and enforces that only one <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html" title="An interface that represents an object that can be contained as a member in an IXRInteractionGroup....">IXRGroupMember</a> within the Group can interact at a time. Each Group member must be either an <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html" title="An interface that represents an Interactor component that controls how a GameObject interacts with an...">IXRInteractor</a> or an <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html" title="An interface that represents an Interaction Group component that enforces that only one IXRGroupMembe...">IXRInteractionGroup</a>. </p>
+<p>The member prioritized for interaction in any given frame is whichever member was interacting the previous frame if it can select in the current frame. If there is no such member, then the interacting member is whichever one in the ordered list of members interacts first. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="abdcb39a54b41b6841e6f3783aa58cf63" name="abdcb39a54b41b6841e6f3783aa58cf63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdcb39a54b41b6841e6f3783aa58cf63">&#9670;&#160;</a></span>AddGroupMember()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.AddGroupMember </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>groupMember</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the given Group member to the end of the ordered list of members in the Group. Causes no change if the Group member is already added.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupMember</td><td>The Group member to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<em>groupMember</em>  must implement either <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html" title="An interface that represents an Interactor component that controls how a GameObject interacts with an...">IXRInteractor</a> or <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html" title="An interface that represents an Interaction Group component that enforces that only one IXRGroupMembe...">IXRInteractionGroup</a>.  </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#ace3168ac97b7518caa2e6cd4be69b5f6">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="a349ce4cfc9765a978b9b622966c837ce" name="a349ce4cfc9765a978b9b622966c837ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a349ce4cfc9765a978b9b622966c837ce">&#9670;&#160;</a></span>AddInteractionOverrideForGroupMember()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.AddInteractionOverrideForGroupMember </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>sourceGroupMember</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>overrideGroupMember</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds <em>overrideGroupMember</em>  as a possible interaction override for <em>sourceGroupMember</em> .<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The Group member whose interaction can be potentially overridden by <em>overrideGroupMember</em> .</td></tr>
+    <tr><td class="paramname">overrideGroupMember</td><td>The Group member to add as a possible interaction override.</td></tr>
+  </table>
+  </dd>
+</dl>
+Both members must be registered with the Group. Additionally, <em>overrideGroupMember</em>  must implement either <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_select_interactor.html" title="An interface that represents an Interactor component that can select an Interactable component.">IXRSelectInteractor</a> or <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html" title="An interface that represents an Interaction Group component that is capable of overriding the interac...">IXRInteractionOverrideGroup</a>. This method must not create a loop in the chain of overrides for <em>sourceGroupMember</em> . Use the implementation of <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#a53d8ae95d92f244da1952a8a19fb6375" title="Checks whether potentialOverrideGroupMember  is either the same as sourceGroupMember  or part of a ch...">GroupMemberIsPartOfOverrideChain</a> to ensure there is no loop before adding override.  </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#af5cb27e09cf93fab6a19839c9086bc2b">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionOverrideGroup</a>.</p>
+
+</div>
+</div>
+<a id="a70d8636f3a1f89d1e0514999110a6ce9" name="a70d8636f3a1f89d1e0514999110a6ce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d8636f3a1f89d1e0514999110a6ce9">&#9670;&#160;</a></span>AddStartingInteractionOverride()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.AddStartingInteractionOverride </td>
+          <td>(</td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>sourceGroupMember</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>overrideGroupMember</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds <em>overrideGroupMember</em>  to the list of Group members that are to be added as interaction overrides for <em>sourceGroupMember</em>  on Awake. Both objects must already be included in the <a class="el" href="#a90fec232da7149c159f7cdcdb584676f" title="Ordered list of Interactors or Interaction Groups that are registered with the Group on Awake....">startingGroupMembers</a> list. The override object should implement either the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_select_interactor.html" title="An interface that represents an Interactor component that can select an Interactable component.">IXRSelectInteractor</a> interface or the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html" title="An interface that represents an Interaction Group component that is capable of overriding the interac...">IXRInteractionOverrideGroup</a> interface. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The Group member whose interaction can be potentially overridden by <em>overrideGroupMember</em> .</td></tr>
+    <tr><td class="paramname">overrideGroupMember</td><td>The Group member to add as a possible interaction override.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Use <a class="el" href="#a349ce4cfc9765a978b9b622966c837ce" title="Adds overrideGroupMember  as a possible interaction override for sourceGroupMember ....">AddInteractionOverrideForGroupMember</a> to add to the interaction overrides used after Awake. </p>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="#a0fa6e23db3597dafeb01a96180b1ef06" title="Removes overrideGroupMember  from the list of Group members that are to be added as interaction overr...">RemoveStartingInteractionOverride</a>, <a class="el" href="#a349ce4cfc9765a978b9b622966c837ce" title="Adds overrideGroupMember  as a possible interaction override for sourceGroupMember ....">AddInteractionOverrideForGroupMember</a></dd></dl>
+
+</div>
+</div>
+<a id="abeaa0ac6f3c1d09cf4f56ea980955218" name="abeaa0ac6f3c1d09cf4f56ea980955218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeaa0ac6f3c1d09cf4f56ea980955218">&#9670;&#160;</a></span>ClearGroupMembers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.ClearGroupMembers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes all Group members from the list of members. </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#ace301fb13fbe4dfbee913d4ffa16560b">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="af000130ca428d4bb776e32c98e428a69" name="af000130ca428d4bb776e32c98e428a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af000130ca428d4bb776e32c98e428a69">&#9670;&#160;</a></span>ClearInteractionOverridesForGroupMember()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.ClearInteractionOverridesForGroupMember </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>sourceGroupMember</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the set of possible interaction overrides for <em>sourceGroupMember</em> .<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The Group member whose interaction can no longer be overridden.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if there is a set of overrides for <em>sourceGroupMember</em> . Otherwise, returns <code>false</code>. </dd></dl>
+<em>sourceGroupMember</em>  must be registered with the Group.  </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#a2ad2a7c15deaecbf7f584de0a6821fef">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionOverrideGroup</a>.</p>
+
+</div>
+</div>
+<a id="afed6a3c0e7f49f4f8bfdfa675dd7f4fe" name="afed6a3c0e7f49f4f8bfdfa675dd7f4fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afed6a3c0e7f49f4f8bfdfa675dd7f4fe">&#9670;&#160;</a></span>ContainsGroupMember()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.ContainsGroupMember </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>groupMember</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks whether the given Group member exists in the list of members.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupMember</td><td>The Group member to check for in the list.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if <em>groupMember</em>  exists in the list. Otherwise, returns <code>false</code>. </dd></dl>
+ </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a867d510fa50892db31849d679fe4324a">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="a24b9b22ddbc676f9ab8809b01be8ce89" name="a24b9b22ddbc676f9ab8809b01be8ce89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24b9b22ddbc676f9ab8809b01be8ce89">&#9670;&#160;</a></span>GetGroupMembers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.GetGroupMembers </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>results</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns all members in the ordered list of Group members into List <em>results</em> .<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">results</td><td>List to receive Group members.</td></tr>
+  </table>
+  </dd>
+</dl>
+This method populates the list with the Group members at the time the method is called. It is not a live view, meaning Group members added or removed afterward will not be reflected in the results of this method. Clears <em>results</em>  before adding to it.  </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a8438eb29a0c62cec9a1192288d4042eb">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="a4ee8663a35bc6f1795d6d6e0acf94f71" name="a4ee8663a35bc6f1795d6d6e0acf94f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee8663a35bc6f1795d6d6e0acf94f71">&#9670;&#160;</a></span>GetInteractionOverridesForGroupMember()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.GetInteractionOverridesForGroupMember </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>sourceGroupMember</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HashSet&lt; <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>results</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns all members in the set of possible interaction overrides for <em>sourceGroupMember</em>  into set <em>results</em> .<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The Group member whose overrides to get.</td></tr>
+    <tr><td class="paramname">results</td><td>Set to receive override Group members.</td></tr>
+  </table>
+  </dd>
+</dl>
+<em>sourceGroupMember</em>  must be registered with the Group. This method populates the set with the Group members at the time the method is called. It is not a live view, meaning override Group members added or removed afterward will not be reflected in the results of this method. Clears <em>results</em>  before adding to it.  </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#a96c7ea03214fb7b6cf5d58d09784243f">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionOverrideGroup</a>.</p>
+
+</div>
+</div>
+<a id="aa5c3a4f9f7190f99a01d5aed02143bde" name="aa5c3a4f9f7190f99a01d5aed02143bde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5c3a4f9f7190f99a01d5aed02143bde">&#9670;&#160;</a></span>GroupMemberIsPartOfOverrideChain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.GroupMemberIsPartOfOverrideChain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>sourceGroupMember</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>potentialOverrideGroupMember</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks whether <em>potentialOverrideGroupMember</em>  is either the same as <em>sourceGroupMember</em>  or part of a chain of its override Group members and their overrides.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The source Group member for the potential chain of override members.</td></tr>
+    <tr><td class="paramname">potentialOverrideGroupMember</td><td>The Group member to check for as part of a chain of overrides.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if <em>potentialOverrideGroupMember</em>  is either the same as <em>sourceGroupMember</em>  or part of a chain of its override Group members and their overrides. Otherwise, returns <code>false</code>. </dd></dl>
+ </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#a53d8ae95d92f244da1952a8a19fb6375">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionOverrideGroup</a>.</p>
+
+</div>
+</div>
+<a id="a59bed34ca15d912c69898095edf8ac65" name="a59bed34ca15d912c69898095edf8ac65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59bed34ca15d912c69898095edf8ac65">&#9670;&#160;</a></span>HasDependencyOnGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.HasDependencyOnGroup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html">IXRInteractionGroup</a></td>          <td class="paramname"><span class="paramname"><em>group</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks whether the given Group is either the same as this Group or a dependency of any member Group.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>The Group to check for as a dependency.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if <em>group</em>  is either the same as this Group or a dependency of this Group. Otherwise, returns <code>false</code>. </dd></dl>
+ </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a6d6f8d648c659cc108c9c1c58644cddd">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="ae3d413c4b6fba743f2f5d45c22cc5295" name="ae3d413c4b6fba743f2f5d45c22cc5295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d413c4b6fba743f2f5d45c22cc5295">&#9670;&#160;</a></span>MoveGroupMemberTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.MoveGroupMemberTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>groupMember</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>newIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Moves the given Group member to the specified index in the ordered list of members in the Group. If the member is not in the list, this can be used to insert the member at the specified index.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupMember</td><td>The Group member to move or add.</td></tr>
+    <tr><td class="paramname">newIndex</td><td>New index of the Group member.</td></tr>
+  </table>
+  </dd>
+</dl>
+<em>groupMember</em>  must implement either <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html" title="An interface that represents an Interactor component that controls how a GameObject interacts with an...">IXRInteractor</a> or <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html" title="An interface that represents an Interaction Group component that enforces that only one IXRGroupMembe...">IXRInteractionGroup</a>.  </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#addb517ff2eccea71991378581cb7dcc2">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="ac081badc326518b236a29f63065d400d" name="ac081badc326518b236a29f63065d400d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac081badc326518b236a29f63065d400d">&#9670;&#160;</a></span>OnFocusEntering()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.OnFocusEntering </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_focus_enter_event_args.html">FocusEnterEventArgs</a></td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html" title="The Interaction Manager acts as an intermediary between Interactors and Interactables....">XRInteractionManager</a> calls this method right before the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> group first gains focus of an Interactable in a first pass.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Event data containing the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> group that is initiating the focus.</td></tr>
+  </table>
+  </dd>
+</dl>
+<em>args</em>  is only valid during this method call, do not hold a reference to it.  </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a5ae3db8e7637621fa4b399884792524d">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="a9247411dcbf432f18bcc0b2d8229fd96" name="a9247411dcbf432f18bcc0b2d8229fd96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9247411dcbf432f18bcc0b2d8229fd96">&#9670;&#160;</a></span>OnFocusExiting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.OnFocusExiting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_focus_exit_event_args.html">FocusExitEventArgs</a></td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_x_r_interaction_manager.html" title="The Interaction Manager acts as an intermediary between Interactors and Interactables....">XRInteractionManager</a> calls this method right before the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> group loses focus of an Interactable in a first pass.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Event data containing the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> group that is losing focus.</td></tr>
+  </table>
+  </dd>
+</dl>
+<em>args</em>  is only valid during this method call, do not hold a reference to it.  </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#abd9760ad927cf2878ec7f5eee1ad8f0a">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="ad804eeb5dfbb3c594b6929954d2cd860" name="ad804eeb5dfbb3c594b6929954d2cd860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad804eeb5dfbb3c594b6929954d2cd860">&#9670;&#160;</a></span>RemoveGroupMember()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.RemoveGroupMember </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>groupMember</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the given Group member from the list of members.<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupMember</td><td>The Group member to remove.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if <em>groupMember</em>  was removed from the list. Otherwise, returns <code>false</code> if <em>groupMember</em>  was not found in the list. </dd></dl>
+ </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#aca2e416de9d7a05fb1a4779202146573">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="a25281090a48cedcd50f5dfbb3a31f2b9" name="a25281090a48cedcd50f5dfbb3a31f2b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25281090a48cedcd50f5dfbb3a31f2b9">&#9670;&#160;</a></span>RemoveInteractionOverrideForGroupMember()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.RemoveInteractionOverrideForGroupMember </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>sourceGroupMember</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html">IXRGroupMember</a></td>          <td class="paramname"><span class="paramname"><em>overrideGroupMember</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes <em>overrideGroupMember</em>  as a possible interaction override for <em>sourceGroupMember</em> .<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The Group member whose interaction can no longer be overridden by <em>overrideGroupMember</em> .</td></tr>
+    <tr><td class="paramname">overrideGroupMember</td><td>The Group member to remove as a possible interaction override.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if <em>overrideGroupMember</em>  was removed from the set of potential overrides for <em>sourceGroupMember</em> . Otherwise, returns <code>false</code> if <em>overrideGroupMember</em>  was not part of the set. </dd></dl>
+<em>sourceGroupMember</em>  must be registered with the Group.  </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_override_group.html#a90e792caf3d7ad8098f5a437eb5851b0">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionOverrideGroup</a>.</p>
+
+</div>
+</div>
+<a id="a0fa6e23db3597dafeb01a96180b1ef06" name="a0fa6e23db3597dafeb01a96180b1ef06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa6e23db3597dafeb01a96180b1ef06">&#9670;&#160;</a></span>RemoveStartingInteractionOverride()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.RemoveStartingInteractionOverride </td>
+          <td>(</td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>sourceGroupMember</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>overrideGroupMember</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes <em>overrideGroupMember</em>  from the list of Group members that are to be added as interaction overrides for <em>sourceGroupMember</em>  on Awake. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceGroupMember</td><td>The Group member whose interaction can no longer be overridden by <em>overrideGroupMember</em> .</td></tr>
+    <tr><td class="paramname">overrideGroupMember</td><td>The Group member to remove as a possible interaction override.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if <em>overrideGroupMember</em>  was removed from the list of potential overrides for <em>sourceGroupMember</em> . Otherwise, returns <code>false</code> if <em>overrideGroupMember</em>  was not part of the list. </dd></dl>
+<p>Use <a class="el" href="#a25281090a48cedcd50f5dfbb3a31f2b9" title="Removes overrideGroupMember  as a possible interaction override for sourceGroupMember ....">RemoveInteractionOverrideForGroupMember</a> to remove from the interaction overrides used after Awake. </p>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="#a70d8636f3a1f89d1e0514999110a6ce9" title="Adds overrideGroupMember  to the list of Group members that are to be added as interaction overrides ...">AddStartingInteractionOverride</a>, <a class="el" href="#a25281090a48cedcd50f5dfbb3a31f2b9" title="Removes overrideGroupMember  as a possible interaction override for sourceGroupMember ....">RemoveInteractionOverrideForGroupMember</a></dd></dl>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Documentation des propriétés</h2>
+<a id="aa68a85fbbe2e6ada4b9fda191326ee80" name="aa68a85fbbe2e6ada4b9fda191326ee80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa68a85fbbe2e6ada4b9fda191326ee80">&#9670;&#160;</a></span>activeInteractor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html">IXRInteractor</a> UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.activeInteractor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The Interactor in this <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group or any of its member Groups that is currently performing interaction. </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#aca471be24cc1b5d5c3d0c9e34e6a162a">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="a30847b22aaabea79bf388667470d3cf3" name="a30847b22aaabea79bf388667470d3cf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30847b22aaabea79bf388667470d3cf3">&#9670;&#160;</a></span>containingGroup</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html">IXRInteractionGroup</a> UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.containingGroup</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group that contains this member. </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html#ab873867c565df6040c356bc8ac9b2ade">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRGroupMember</a>.</p>
+
+</div>
+</div>
+<a id="ae7c58e3765606ac6a5c69fba82943653" name="ae7c58e3765606ac6a5c69fba82943653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7c58e3765606ac6a5c69fba82943653">&#9670;&#160;</a></span>focusInteractable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactables_1_1_i_x_r_focus_interactable.html">IXRFocusInteractable</a> UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.focusInteractable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The Interactable that is currently being focused by an Interactor in this <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group or any of its member Groups. </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#ac0cf8a368f3126df35b64c9f764fe8b1">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="a5a22490c3095ef7fafb4acbaa0e9628f" name="a5a22490c3095ef7fafb4acbaa0e9628f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a22490c3095ef7fafb4acbaa0e9628f">&#9670;&#160;</a></span>focusInteractor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html">IXRInteractor</a> UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.focusInteractor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The Interactor in this <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Group or any of its member Groups that initiated the last focus event. </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a7e06c8680130f7ff01aa56d54f3782cb">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="a9835fc47e1149aa1a692323a24191e07" name="a9835fc47e1149aa1a692323a24191e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9835fc47e1149aa1a692323a24191e07">&#9670;&#160;</a></span>groupName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.groupName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The name of the interaction group, which can be used to retrieve it from the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Manager. </p>
+
+<p>Implémente <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html#a9bbd2ffcb00a7515a3bef3118e31f179">UnityEngine.XR.Interaction.Toolkit.Interactors.IXRInteractionGroup</a>.</p>
+
+</div>
+</div>
+<a id="a90fec232da7149c159f7cdcdb584676f" name="a90fec232da7149c159f7cdcdb584676f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90fec232da7149c159f7cdcdb584676f">&#9670;&#160;</a></span>startingGroupMembers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Object&gt; UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup.startingGroupMembers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ordered list of <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors.html">Interactors</a> or <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a> Groups that are registered with the Group on Awake. All objects in this list should implement the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_group_member.html" title="An interface that represents an object that can be contained as a member in an IXRInteractionGroup....">IXRGroupMember</a> interface and either the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interactor.html" title="An interface that represents an Interactor component that controls how a GameObject interacts with an...">IXRInteractor</a> interface or the <a class="el" href="interface_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_i_x_r_interaction_group.html" title="An interface that represents an Interaction Group component that enforces that only one IXRGroupMembe...">IXRInteractionGroup</a> interface. </p>
+<p>There are separate methods to access and modify the Group members used after Awake. </p>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="#abdcb39a54b41b6841e6f3783aa58cf63" title="Adds the given Group member to the end of the ordered list of members in the Group....">AddGroupMember</a>, <a class="el" href="#ae3d413c4b6fba743f2f5d45c22cc5295" title="Moves the given Group member to the specified index in the ordered list of members in the Group....">MoveGroupMemberTo</a>, <a class="el" href="#ad804eeb5dfbb3c594b6929954d2cd860" title="Removes the given Group member from the list of members.Returns true if groupMember  was removed from...">RemoveGroupMember</a>, <a class="el" href="#abeaa0ac6f3c1d09cf4f56ea980955218" title="Removes all Group members from the list of members.">ClearGroupMembers</a>, <a class="el" href="#afed6a3c0e7f49f4f8bfdfa675dd7f4fe" title="Checks whether the given Group member exists in the list of members.Returns true if groupMember  exis...">ContainsGroupMember</a>, <a class="el" href="#a24b9b22ddbc676f9ab8809b01be8ce89" title="Returns all members in the ordered list of Group members into List results .This method populates the...">GetGroupMembers</a></dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r.html">XR</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction.html">Interaction</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit.html">Toolkit</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors.html">Interactors</a></li><li class="navelem"><a href="class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interactors_1_1_x_r_interaction_group.html">XRInteractionGroup</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

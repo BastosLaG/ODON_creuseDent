@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_common_hand_gestures_1_1_aim_activate_value_updated_event_args =
+[
+    [ "TryGetAimActivateValue", "class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_common_hand_gestures_1_1_aim_activate_value_updated_event_args.html#a594b1f10d7c3d03495092905a785f40d", null ],
+    [ "handedness", "class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_common_hand_gestures_1_1_aim_activate_value_updated_event_args.html#a9f95437b090543d90a0e0cd94fcf17fa", null ]
+];

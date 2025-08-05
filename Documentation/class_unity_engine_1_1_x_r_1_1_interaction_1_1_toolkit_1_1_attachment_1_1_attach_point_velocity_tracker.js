@@ -1,0 +1,7 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_attachment_1_1_attach_point_velocity_tracker =
+[
+    [ "GetAttachPointAngularVelocity", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_attachment_1_1_attach_point_velocity_tracker.html#a946509b4ec175077b8221ee2d6fce791", null ],
+    [ "GetAttachPointVelocity", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_attachment_1_1_attach_point_velocity_tracker.html#a51bd0f3372edd88e2eb71681537d9e56", null ],
+    [ "UpdateAttachPointVelocityData", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_attachment_1_1_attach_point_velocity_tracker.html#a5d9c71434144137247a30ed2a18b5de7", null ],
+    [ "UpdateAttachPointVelocityData", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_attachment_1_1_attach_point_velocity_tracker.html#a325589c1395c8b05179512f185685abc", null ]
+];

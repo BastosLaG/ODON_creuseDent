@@ -1,0 +1,7 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_rendering_1_1_material_property_block_helper =
+[
+    [ "GetMaterialPropertyBlock", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_rendering_1_1_material_property_block_helper.html#a3668be65a1e46785eddfc6a138fc32af", null ],
+    [ "Initialize", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_rendering_1_1_material_property_block_helper.html#a721ccbcea221331cfd7ad614901a7111", null ],
+    [ "LateUpdate", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_rendering_1_1_material_property_block_helper.html#acb64aea77e8d6c838787c568852af278", null ],
+    [ "OnDestroy", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_rendering_1_1_material_property_block_helper.html#afd6f13deb8d39eff4e3c07260ad3c5e7", null ]
+];

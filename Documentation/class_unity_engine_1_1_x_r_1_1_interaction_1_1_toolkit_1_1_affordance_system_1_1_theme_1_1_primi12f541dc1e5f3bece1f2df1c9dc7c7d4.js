@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primi12f541dc1e5f3bece1f2df1c9dc7c7d4 =
+[
+    [ "Vector3AffordanceThemeDatumProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primi12f541dc1e5f3bece1f2df1c9dc7c7d4.html#a0247204b5d99990f33e7d9ac054adf22", null ],
+    [ "Vector3AffordanceThemeDatumProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primi12f541dc1e5f3bece1f2df1c9dc7c7d4.html#a9b7993c3f49c6f577f8be4a2b1bc61b0", null ]
+];

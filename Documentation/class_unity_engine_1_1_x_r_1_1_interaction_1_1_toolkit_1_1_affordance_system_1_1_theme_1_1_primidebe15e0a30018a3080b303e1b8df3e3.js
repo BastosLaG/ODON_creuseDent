@@ -1,0 +1,6 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primidebe15e0a30018a3080b303e1b8df3e3 =
+[
+    [ "CopyFrom", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primidebe15e0a30018a3080b303e1b8df3e3.html#a2aadffb15951ccc12237bccaeeb172ae", null ],
+    [ "blendAmount", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primidebe15e0a30018a3080b303e1b8df3e3.html#a42d23d460a5eb82da0ca7dc0745750b6", null ],
+    [ "colorBlendMode", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primidebe15e0a30018a3080b303e1b8df3e3.html#a2d4ffd3e92346515212ae40669f34c07", null ]
+];

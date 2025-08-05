@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_gesture_sample_1_1_hand_shape_completeness_calculator =
+[
+    [ "TryCalculateHandShapeCompletenessScore", "class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_gesture_sample_1_1_hand_shape_completeness_calculator.html#ad0e970adc23862e4f7ae83e82d443234", null ]
+];

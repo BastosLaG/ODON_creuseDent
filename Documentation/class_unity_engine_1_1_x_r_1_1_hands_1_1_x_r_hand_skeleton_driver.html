@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Référence de la classe UnityEngine.XR.Hands.XRHandSkeletonDriver</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_skeleton_driver.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la classe UnityEngine.XR.Hands.XRHandSkeletonDriver</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Controls a hierarchy of Transforms driven by joints in an <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html" title="Represents a hand from an XRHandSubsystem. Do not create this yourself - get hand objects from the XR...">XRHand</a>. This component subscribes to events from an <a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_tracking_events.html" title="Component that subscribes to hand tracking events from the XRHandSubsystem for a particular Handednes...">XRHandTrackingEvents</a> component to move and rotate the joints when the hand is updated.  
+ <a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe d'héritage de UnityEngine.XR.Hands.XRHandSkeletonDriver:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_skeleton_driver.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a4c460ff17e15afd1a6d06aecf91133d7" id="r_a4c460ff17e15afd1a6d06aecf91133d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c460ff17e15afd1a6d06aecf91133d7">ApplyRootPoseOffset</a> (Vector3 rootPoseOffset)</td></tr>
+<tr class="memdesc:a4c460ff17e15afd1a6d06aecf91133d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies an offset to the root pose of the hand skeleton. This can be used to adjust the position of the hand in situations where you want the hand visual to stop moving when interacting with an object. The offset is applied in the local space of the hand's root transform.  <br /></td></tr>
+<tr class="memitem:a7cc9020ab966882543680e6273572ca9" id="r_a7cc9020ab966882543680e6273572ca9"><td class="memItemLeft" align="right" valign="top"><a id="a7cc9020ab966882543680e6273572ca9" name="a7cc9020ab966882543680e6273572ca9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetRootPoseOffset</b> ()</td></tr>
+<tr class="memdesc:a7cc9020ab966882543680e6273572ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the offset of the root pose of the hand skeleton back to zero. This can be used to remove any previously applied offset, restoring the hand's root pose to its original position. <br /></td></tr>
+<tr class="memitem:a0c404d78b37c4ec18dd37a82b2a4e992" id="r_a0c404d78b37c4ec18dd37a82b2a4e992"><td class="memItemLeft" align="right" valign="top"><a id="a0c404d78b37c4ec18dd37a82b2a4e992" name="a0c404d78b37c4ec18dd37a82b2a4e992"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeFromSerializedReferences</b> ()</td></tr>
+<tr class="memdesc:a0c404d78b37c4ec18dd37a82b2a4e992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the serialized list <a class="el" href="#a81a47b0eb8d2509e4fca4053e734e569" title="The serialized list of XRHandJointID with a reference to a transform to drive. After this list is fin...">jointTransformReferences</a> to a mapping of Transforms to drive. This method is called automatically via ISerializationCallbackReceiver.OnAfterDeserialize. It can be called manually after the list of Transform references is modified at runtime to apply the changes. <br /></td></tr>
+<tr class="memitem:a7ea2d3818474ec0199d8c523dfb54e64" id="r_a7ea2d3818474ec0199d8c523dfb54e64"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ea2d3818474ec0199d8c523dfb54e64">FindJointsFromRoot</a> (List&lt; string &gt; missingJointNames)</td></tr>
+<tr class="memdesc:a7ea2d3818474ec0199d8c523dfb54e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the joint transform references from the root.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Fonctions membres protégées</h2></td></tr>
+<tr class="memitem:a2254064d58c1732d5698e93e88d3de23" id="r_a2254064d58c1732d5698e93e88d3de23"><td class="memItemLeft" align="right" valign="top"><a id="a2254064d58c1732d5698e93e88d3de23" name="a2254064d58c1732d5698e93e88d3de23"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr>
+<tr class="memdesc:a2254064d58c1732d5698e93e88d3de23"><td class="mdescLeft">&#160;</td><td class="mdescRight">See MonoBehaviour. <br /></td></tr>
+<tr class="memitem:aa6b08c6fe4ee3c78dc8fc44599c24bc6" id="r_aa6b08c6fe4ee3c78dc8fc44599c24bc6"><td class="memItemLeft" align="right" valign="top"><a id="aa6b08c6fe4ee3c78dc8fc44599c24bc6" name="aa6b08c6fe4ee3c78dc8fc44599c24bc6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEnable</b> ()</td></tr>
+<tr class="memdesc:aa6b08c6fe4ee3c78dc8fc44599c24bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">See MonoBehaviour. MonoBehaviour OnEnable method that subscribes to hand tracking events and allocates the joint local poses array. <br /></td></tr>
+<tr class="memitem:ad1f02f9fb952a7359f0b73dc82f71c1d" id="r_ad1f02f9fb952a7359f0b73dc82f71c1d"><td class="memItemLeft" align="right" valign="top"><a id="ad1f02f9fb952a7359f0b73dc82f71c1d" name="ad1f02f9fb952a7359f0b73dc82f71c1d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisable</b> ()</td></tr>
+<tr class="memdesc:ad1f02f9fb952a7359f0b73dc82f71c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">See MonoBehaviour. MonoBehaviour OnDisable method that unsubscribes from hand tracking events and disposes the joint local poses array. <br /></td></tr>
+<tr class="memitem:a1923ecbabb80a11d5c852c43d1d0898f" id="r_a1923ecbabb80a11d5c852c43d1d0898f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1923ecbabb80a11d5c852c43d1d0898f">OnRootPoseUpdated</a> (<a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a57673a664482a97b3555977140c8316aa8109c9c9d6a2ca3bec3e006fe51a5f3e">Pose</a> rootPose)</td></tr>
+<tr class="memdesc:a1923ecbabb80a11d5c852c43d1d0898f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the <a class="el" href="#ada16111575f9ad49b8d5f44e6cdd97bc" title="The Transform that will be driven by the hand&#39;s root position and rotation.">rootTransform</a>'s local position and rotation with the hand's root pose.  <br /></td></tr>
+<tr class="memitem:a438782684b0c4263eeb5bee29453492c" id="r_a438782684b0c4263eeb5bee29453492c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a438782684b0c4263eeb5bee29453492c">OnJointsUpdated</a> (<a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_joints_updated_event_args.html">XRHandJointsUpdatedEventArgs</a> args)</td></tr>
+<tr class="memdesc:a438782684b0c4263eeb5bee29453492c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates all the joints of the hand. This method calls <a class="el" href="#a107ee873941a21f3856ba9407f356945" title="Calculates the local poses for all the joints in the hand using the standard parent hierarchy....">UpdateJointLocalPoses</a> to calculate the local poses of the joints and then immediately calls <a class="el" href="#ae0df9ad28ddc634b1d5b12d4f45846a4" title="Applies the values in the m_JointLocalPoses array to the m_JointTransforms array.">ApplyUpdatedTransformPoses</a> to apply the changes to the joint Transforms.  <br /></td></tr>
+<tr class="memitem:ae0df9ad28ddc634b1d5b12d4f45846a4" id="r_ae0df9ad28ddc634b1d5b12d4f45846a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0df9ad28ddc634b1d5b12d4f45846a4">ApplyUpdatedTransformPoses</a> ()</td></tr>
+<tr class="memdesc:ae0df9ad28ddc634b1d5b12d4f45846a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the values in the <a class="el" href="#a909b4315055df33ae0754f2fb02d9a0b" title="The array of joint local poses indexed by the XRHandJointID which is updated by the method UpdateJoin...">m_JointLocalPoses</a> array to the <a class="el" href="#adff840544e75183f14f92f6e05507ece" title="The array of joint data indexed by the XRHandJointID which is accessible via XRHandJointIDUtility....">m_JointTransforms</a> array.  <br /></td></tr>
+<tr class="memitem:a107ee873941a21f3856ba9407f356945" id="r_a107ee873941a21f3856ba9407f356945"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a107ee873941a21f3856ba9407f356945">UpdateJointLocalPoses</a> (<a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_joints_updated_event_args.html">XRHandJointsUpdatedEventArgs</a> args)</td></tr>
+<tr class="memdesc:a107ee873941a21f3856ba9407f356945"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the local poses for all the joints in the hand using the standard parent hierarchy. Call this method to update the <a class="el" href="#a909b4315055df33ae0754f2fb02d9a0b" title="The array of joint local poses indexed by the XRHandJointID which is updated by the method UpdateJoin...">m_JointLocalPoses</a> array with the latest joint data.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Attributs protégés</h2></td></tr>
+<tr class="memitem:aae3e93af4c02e5308b76e61168b7e9d3" id="r_aae3e93af4c02e5308b76e61168b7e9d3"><td class="memItemLeft" align="right" valign="top"><a id="aae3e93af4c02e5308b76e61168b7e9d3" name="aae3e93af4c02e5308b76e61168b7e9d3"></a>
+List&lt; <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_joint_to_transform_reference.html">JointToTransformReference</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_JointTransformReferences</b></td></tr>
+<tr class="memdesc:aae3e93af4c02e5308b76e61168b7e9d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of joint to transform references. <br /></td></tr>
+<tr class="memitem:adff840544e75183f14f92f6e05507ece" id="r_adff840544e75183f14f92f6e05507ece"><td class="memItemLeft" align="right" valign="top"><a id="adff840544e75183f14f92f6e05507ece" name="adff840544e75183f14f92f6e05507ece"></a>
+Transform[]&#160;</td><td class="memItemRight" valign="bottom"><b>m_JointTransforms</b></td></tr>
+<tr class="memdesc:adff840544e75183f14f92f6e05507ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">The array of joint data indexed by the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a2e705d3e8008a58c1dd55b10c1f52ed3" title="Represents the type of a hand joint. If you wish to convert it to an index, call ....">XRHandJointID</a> which is accessible via XRHandJointIDUtility.ToIndex. <br /></td></tr>
+<tr class="memitem:ac2ca4a185c614107cd86c6252687ea26" id="r_ac2ca4a185c614107cd86c6252687ea26"><td class="memItemLeft" align="right" valign="top"><a id="ac2ca4a185c614107cd86c6252687ea26" name="ac2ca4a185c614107cd86c6252687ea26"></a>
+bool[]&#160;</td><td class="memItemRight" valign="bottom"><b>m_HasJointTransformMask</b></td></tr>
+<tr class="memdesc:ac2ca4a185c614107cd86c6252687ea26"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of booleans tracking which joint indexes have a valid transform to drive. This is calculated once when the references change to avoid a null check every time the joint is updated. <br /></td></tr>
+<tr class="memitem:a994cad94408c8f89765f60f26feae955" id="r_a994cad94408c8f89765f60f26feae955"><td class="memItemLeft" align="right" valign="top"><a id="a994cad94408c8f89765f60f26feae955" name="a994cad94408c8f89765f60f26feae955"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_HasRootTransform</b></td></tr>
+<tr class="memdesc:a994cad94408c8f89765f60f26feae955"><td class="mdescLeft">&#160;</td><td class="mdescRight">A boolean tracking whether the root transform is valid. This is calculated once when the root transform changes to avoid a null check every time the root is updated. <br /></td></tr>
+<tr class="memitem:a909b4315055df33ae0754f2fb02d9a0b" id="r_a909b4315055df33ae0754f2fb02d9a0b"><td class="memItemLeft" align="right" valign="top"><a id="a909b4315055df33ae0754f2fb02d9a0b" name="a909b4315055df33ae0754f2fb02d9a0b"></a>
+NativeArray&lt; <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a57673a664482a97b3555977140c8316aa8109c9c9d6a2ca3bec3e006fe51a5f3e">Pose</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_JointLocalPoses</b></td></tr>
+<tr class="memdesc:a909b4315055df33ae0754f2fb02d9a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The array of joint local poses indexed by the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a2e705d3e8008a58c1dd55b10c1f52ed3" title="Represents the type of a hand joint. If you wish to convert it to an index, call ....">XRHandJointID</a> which is updated by the method <a class="el" href="#a107ee873941a21f3856ba9407f356945" title="Calculates the local poses for all the joints in the hand using the standard parent hierarchy....">UpdateJointLocalPoses</a> and then applied to the joint transforms by the method <a class="el" href="#ae0df9ad28ddc634b1d5b12d4f45846a4" title="Applies the values in the m_JointLocalPoses array to the m_JointTransforms array.">ApplyUpdatedTransformPoses</a>. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Propriétés</h2></td></tr>
+<tr class="memitem:abd0710fe3d664ead87ca01c2f6c18211" id="r_abd0710fe3d664ead87ca01c2f6c18211"><td class="memItemLeft" align="right" valign="top"><a id="abd0710fe3d664ead87ca01c2f6c18211" name="abd0710fe3d664ead87ca01c2f6c18211"></a>
+virtual Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>rootOffset</b><code> [get]</code></td></tr>
+<tr class="memdesc:abd0710fe3d664ead87ca01c2f6c18211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset translation applied to hand root position. <br /></td></tr>
+<tr class="memitem:af9d284982b99b224c97460cb73431de5" id="r_af9d284982b99b224c97460cb73431de5"><td class="memItemLeft" align="right" valign="top"><a id="af9d284982b99b224c97460cb73431de5" name="af9d284982b99b224c97460cb73431de5"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasRootOffset</b><code> [get]</code></td></tr>
+<tr class="memdesc:af9d284982b99b224c97460cb73431de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bool tracking whether the root requires an offset to be applied to it. <br /></td></tr>
+<tr class="memitem:a81a47b0eb8d2509e4fca4053e734e569" id="r_a81a47b0eb8d2509e4fca4053e734e569"><td class="memItemLeft" align="right" valign="top"><a id="a81a47b0eb8d2509e4fca4053e734e569" name="a81a47b0eb8d2509e4fca4053e734e569"></a>
+List&lt; <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_joint_to_transform_reference.html">JointToTransformReference</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>jointTransformReferences</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a81a47b0eb8d2509e4fca4053e734e569"><td class="mdescLeft">&#160;</td><td class="mdescRight">The serialized list of <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a2e705d3e8008a58c1dd55b10c1f52ed3" title="Represents the type of a hand joint. If you wish to convert it to an index, call ....">XRHandJointID</a> with a reference to a transform to drive. After this list is finished being assigned or modified, use the method <a class="el" href="#a0c404d78b37c4ec18dd37a82b2a4e992" title="Converts the serialized list jointTransformReferences to a mapping of Transforms to drive....">InitializeFromSerializedReferences</a> to update the runtime mapping of transforms to drive. <br /></td></tr>
+<tr class="memitem:ada16111575f9ad49b8d5f44e6cdd97bc" id="r_ada16111575f9ad49b8d5f44e6cdd97bc"><td class="memItemLeft" align="right" valign="top"><a id="ada16111575f9ad49b8d5f44e6cdd97bc" name="ada16111575f9ad49b8d5f44e6cdd97bc"></a>
+Transform&#160;</td><td class="memItemRight" valign="bottom"><b>rootTransform</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:ada16111575f9ad49b8d5f44e6cdd97bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Transform that will be driven by the hand's root position and rotation. <br /></td></tr>
+<tr class="memitem:a7e24a36ee9c40d67e2e0a2f90a2ce9d8" id="r_a7e24a36ee9c40d67e2e0a2f90a2ce9d8"><td class="memItemLeft" align="right" valign="top"><a id="a7e24a36ee9c40d67e2e0a2f90a2ce9d8" name="a7e24a36ee9c40d67e2e0a2f90a2ce9d8"></a>
+<a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_tracking_events.html">XRHandTrackingEvents</a>&#160;</td><td class="memItemRight" valign="bottom"><b>handTrackingEvents</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a7e24a36ee9c40d67e2e0a2f90a2ce9d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_tracking_events.html" title="Component that subscribes to hand tracking events from the XRHandSubsystem for a particular Handednes...">XRHandTrackingEvents</a> component that will be the source of hand tracking events for this driver. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Controls a hierarchy of Transforms driven by joints in an <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html" title="Represents a hand from an XRHandSubsystem. Do not create this yourself - get hand objects from the XR...">XRHand</a>. This component subscribes to events from an <a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_tracking_events.html" title="Component that subscribes to hand tracking events from the XRHandSubsystem for a particular Handednes...">XRHandTrackingEvents</a> component to move and rotate the joints when the hand is updated. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="a4c460ff17e15afd1a6d06aecf91133d7" name="a4c460ff17e15afd1a6d06aecf91133d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c460ff17e15afd1a6d06aecf91133d7">&#9670;&#160;</a></span>ApplyRootPoseOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Hands.XRHandSkeletonDriver.ApplyRootPoseOffset </td>
+          <td>(</td>
+          <td class="paramtype">Vector3</td>          <td class="paramname"><span class="paramname"><em>rootPoseOffset</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies an offset to the root pose of the hand skeleton. This can be used to adjust the position of the hand in situations where you want the hand visual to stop moving when interacting with an object. The offset is applied in the local space of the hand's root transform. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rootPoseOffset</td><td>A Vector3 representing the offset to apply to the root pose of the hand skeleton.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae0df9ad28ddc634b1d5b12d4f45846a4" name="ae0df9ad28ddc634b1d5b12d4f45846a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0df9ad28ddc634b1d5b12d4f45846a4">&#9670;&#160;</a></span>ApplyUpdatedTransformPoses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UnityEngine.XR.Hands.XRHandSkeletonDriver.ApplyUpdatedTransformPoses </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies the values in the <a class="el" href="#a909b4315055df33ae0754f2fb02d9a0b" title="The array of joint local poses indexed by the XRHandJointID which is updated by the method UpdateJoin...">m_JointLocalPoses</a> array to the <a class="el" href="#adff840544e75183f14f92f6e05507ece" title="The array of joint data indexed by the XRHandJointID which is accessible via XRHandJointIDUtility....">m_JointTransforms</a> array. </p>
+<p>Override this method to change how the local hand joint poses affect the transforms, such as ignoring position, or converting to a different coordinate space. </p>
+
+</div>
+</div>
+<a id="a7ea2d3818474ec0199d8c523dfb54e64" name="a7ea2d3818474ec0199d8c523dfb54e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ea2d3818474ec0199d8c523dfb54e64">&#9670;&#160;</a></span>FindJointsFromRoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UnityEngine.XR.Hands.XRHandSkeletonDriver.FindJointsFromRoot </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; string &gt;</td>          <td class="paramname"><span class="paramname"><em>missingJointNames</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the joint transform references from the root. </p>
+<p>Override this method to change how the joint transform references are found from the root and setup in the <a class="el" href="#aae3e93af4c02e5308b76e61168b7e9d3" title="The list of joint to transform references.">m_JointTransformReferences</a>. This method is called from the default inspector editor <a class="el" href="namespace_unity_engine_1_1_u_i.html">UI</a> when the Find Joints button is clicked. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">missingJointNames</td><td>A list of strings to list the joints that were not found.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a438782684b0c4263eeb5bee29453492c" name="a438782684b0c4263eeb5bee29453492c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a438782684b0c4263eeb5bee29453492c">&#9670;&#160;</a></span>OnJointsUpdated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UnityEngine.XR.Hands.XRHandSkeletonDriver.OnJointsUpdated </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_joints_updated_event_args.html">XRHandJointsUpdatedEventArgs</a></td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates all the joints of the hand. This method calls <a class="el" href="#a107ee873941a21f3856ba9407f356945" title="Calculates the local poses for all the joints in the hand using the standard parent hierarchy....">UpdateJointLocalPoses</a> to calculate the local poses of the joints and then immediately calls <a class="el" href="#ae0df9ad28ddc634b1d5b12d4f45846a4" title="Applies the values in the m_JointLocalPoses array to the m_JointTransforms array.">ApplyUpdatedTransformPoses</a> to apply the changes to the joint Transforms. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The event arguments for the <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html" title="Represents a hand from an XRHandSubsystem. Do not create this yourself - get hand objects from the XR...">XRHand</a> joints updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Override this method to change either how or when the <a class="el" href="#a909b4315055df33ae0754f2fb02d9a0b" title="The array of joint local poses indexed by the XRHandJointID which is updated by the method UpdateJoin...">m_JointLocalPoses</a> array is updated and applied to the transforms. </p>
+
+</div>
+</div>
+<a id="a1923ecbabb80a11d5c852c43d1d0898f" name="a1923ecbabb80a11d5c852c43d1d0898f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1923ecbabb80a11d5c852c43d1d0898f">&#9670;&#160;</a></span>OnRootPoseUpdated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UnityEngine.XR.Hands.XRHandSkeletonDriver.OnRootPoseUpdated </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a57673a664482a97b3555977140c8316aa8109c9c9d6a2ca3bec3e006fe51a5f3e">Pose</a></td>          <td class="paramname"><span class="paramname"><em>rootPose</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update the <a class="el" href="#ada16111575f9ad49b8d5f44e6cdd97bc" title="The Transform that will be driven by the hand&#39;s root position and rotation.">rootTransform</a>'s local position and rotation with the hand's root pose. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rootPose</td><td>The root pose of the hand.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Override this method to change how to the root pose is applied to the skeleton. </p>
+
+</div>
+</div>
+<a id="a107ee873941a21f3856ba9407f356945" name="a107ee873941a21f3856ba9407f356945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a107ee873941a21f3856ba9407f356945">&#9670;&#160;</a></span>UpdateJointLocalPoses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Hands.XRHandSkeletonDriver.UpdateJointLocalPoses </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_joints_updated_event_args.html">XRHandJointsUpdatedEventArgs</a></td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the local poses for all the joints in the hand using the standard parent hierarchy. Call this method to update the <a class="el" href="#a909b4315055df33ae0754f2fb02d9a0b" title="The array of joint local poses indexed by the XRHandJointID which is updated by the method UpdateJoin...">m_JointLocalPoses</a> array with the latest joint data. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The event arguments for the <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html" title="Represents a hand from an XRHandSubsystem. Do not create this yourself - get hand objects from the XR...">XRHand</a> joints updated.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r.html">XR</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r_1_1_hands.html">Hands</a></li><li class="navelem"><a href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_skeleton_driver.html">XRHandSkeletonDriver</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

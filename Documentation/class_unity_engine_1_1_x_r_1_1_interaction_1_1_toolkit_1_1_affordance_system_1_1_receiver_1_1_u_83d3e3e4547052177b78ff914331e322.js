@@ -1,0 +1,9 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_u_83d3e3e4547052177b78ff914331e322 =
+[
+    [ "GetCurrentValueForCapture", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_u_83d3e3e4547052177b78ff914331e322.html#aa4564e9dc764f2e93e1e818ed85adaa7", null ],
+    [ "OnAffordanceValueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_u_83d3e3e4547052177b78ff914331e322.html#a5c01990a53cd21ddfc161b2de9fcafbd", null ],
+    [ "OnEnable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_u_83d3e3e4547052177b78ff914331e322.html#a6bd251afa5a22e407bd0bb19d34cf1d2", null ],
+    [ "canvasGroup", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_u_83d3e3e4547052177b78ff914331e322.html#a1c221fdae40070704a65e1a7f0f0efb2", null ],
+    [ "ignoreAlpha", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_u_83d3e3e4547052177b78ff914331e322.html#ad7c885f7533078633c37726d5e4b67fe", null ],
+    [ "image", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_u_83d3e3e4547052177b78ff914331e322.html#aec1ca93a09022d7a3b65a526e357ea00", null ]
+];

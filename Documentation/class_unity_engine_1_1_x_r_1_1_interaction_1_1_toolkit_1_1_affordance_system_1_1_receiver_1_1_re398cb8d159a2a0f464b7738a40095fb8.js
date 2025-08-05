@@ -1,0 +1,8 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re398cb8d159a2a0f464b7738a40095fb8 =
+[
+    [ "GetCurrentValueForCapture", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re398cb8d159a2a0f464b7738a40095fb8.html#ac4034e284b6b339a9c76f64511e8d028", null ],
+    [ "OnAffordanceValueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re398cb8d159a2a0f464b7738a40095fb8.html#afa82e274b92777aafad9ac7c62bfe3fa", null ],
+    [ "OnEnable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re398cb8d159a2a0f464b7738a40095fb8.html#a6581b914743b8eef0a674bd1166371a3", null ],
+    [ "blendShapeIndex", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re398cb8d159a2a0f464b7738a40095fb8.html#addc0b4715c33a4d921c4e5f53b18ffcd", null ],
+    [ "skinnedMeshRenderer", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re398cb8d159a2a0f464b7738a40095fb8.html#a100103aa1d055f67177565d784e02e3e", null ]
+];

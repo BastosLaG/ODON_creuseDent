@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project ODON: Référence de la classe UnityEngine.XR.Hands.XRHandSubsystem</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Project ODON<span id="projectnumber">&#160;V.0.5.0(EPSILON)</span>
+   </div>
+   <div id="projectbrief">Permet aux jeunes dentistes d&#39;apprendre en s&#39;amusant avec de la VR</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la classe UnityEngine.XR.Hands.XRHandSubsystem</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A subsystem for detecting and tracking hands and their corresponding joint pose data.  
+ <a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe d'héritage de UnityEngine.XR.Hands.XRHandSubsystem:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Types publics</h2></td></tr>
+<tr class="memitem:ad3e63e758479ee99cd8906f56622776c" id="r_ad3e63e758479ee99cd8906f56622776c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3e63e758479ee99cd8906f56622776c">UpdateSuccessFlags</a> { <br />
+&#160;&#160;<a class="el" href="#ad3e63e758479ee99cd8906f56622776ca6adf97f83acf6453d4a6a4b1070f3754">None</a> = 0
+, <a class="el" href="#ad3e63e758479ee99cd8906f56622776cac9bacfc1d07536d0ce8faa6ce6a67051">LeftHandRootPose</a> = 1 &lt;&lt; 0
+, <a class="el" href="#ad3e63e758479ee99cd8906f56622776cac10d942328d34d5bd59362ba136258dc">LeftHandJoints</a> = 1 &lt;&lt; 1
+, <a class="el" href="#ad3e63e758479ee99cd8906f56622776cae63a1c22c1c15f158b2e46d8f4c65aa5">RightHandRootPose</a> = 1 &lt;&lt; 2
+, <br />
+&#160;&#160;<a class="el" href="#ad3e63e758479ee99cd8906f56622776ca9992e5ca52420936ae484c22252e07fd">RightHandJoints</a> = 1 &lt;&lt; 3
+, <a class="el" href="#ad3e63e758479ee99cd8906f56622776cab1c94ca2fbc3e78fc30069c8d0f01680">All</a> = LeftHandRootPose | LeftHandJoints | RightHandRootPose | RightHandJoints
+<br />
+ }</td></tr>
+<tr class="memdesc:ad3e63e758479ee99cd8906f56622776c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes what data on either hand was updated during the call.  <a href="#ad3e63e758479ee99cd8906f56622776c">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:ad871be92e0dee1f3a2f48a10d9f03bc7" id="r_ad871be92e0dee1f3a2f48a10d9f03bc7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7">UpdateType</a> { <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7a971fd8cc345d8bd9f92e9f7d88fdf20c">Dynamic</a>
+, <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7adc18627d8298782478d7588b8223702e">BeforeRender</a>
+ }</td></tr>
+<tr class="memdesc:ad871be92e0dee1f3a2f48a10d9f03bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The timing of a hand update during a frame.  <a href="#ad871be92e0dee1f3a2f48a10d9f03bc7">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a8daa8c3162504cb363fa7f97074c3c3f" id="r_a8daa8c3162504cb363fa7f97074c3c3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8daa8c3162504cb363fa7f97074c3c3f">XRHandSubsystem</a> ()</td></tr>
+<tr class="memdesc:a8daa8c3162504cb363fa7f97074c3c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a subsystem. Do not invoke directly.  <br /></td></tr>
+<tr class="memitem:a82cfb1f7e01eb4f96e65cdc076faf339" id="r_a82cfb1f7e01eb4f96e65cdc076faf339"><td class="memItemLeft" align="right" valign="top">virtual unsafe <a class="el" href="#ad3e63e758479ee99cd8906f56622776c">UpdateSuccessFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82cfb1f7e01eb4f96e65cdc076faf339">TryUpdateHands</a> (<a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7">UpdateType</a> updateType)</td></tr>
+<tr class="memdesc:a82cfb1f7e01eb4f96e65cdc076faf339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request an update from the hand data provider. Application developers consuming hand tracking data should not call this function.  <br /></td></tr>
+<tr class="memitem:a549f48f02c3837b93173fcfb64b5d2fe" id="r_a549f48f02c3837b93173fcfb64b5d2fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a549f48f02c3837b93173fcfb64b5d2fe">TryGetMeshData</a> (out <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_meshing_1_1_x_r_hand_mesh_data_query_result.html">XRHandMeshDataQueryResult</a> result, ref <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_meshing_1_1_x_r_hand_mesh_data_query_params.html">XRHandMeshDataQueryParams</a> queryParams)</td></tr>
+<tr class="memdesc:a549f48f02c3837b93173fcfb64b5d2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to retrieve hand mesh data from the platform. Only called when <a class="el" href="#a549f48f02c3837b93173fcfb64b5d2fe" title="Attempt to retrieve hand mesh data from the platform. Only called when XRHandSubsystem....">XRHandSubsystem.TryGetMeshData</a> is called.  <br /></td></tr>
+<tr class="memitem:a1ba964779a8799d7b1fc61b0e3567720" id="r_a1ba964779a8799d7b1fc61b0e3567720"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ba964779a8799d7b1fc61b0e3567720">RegisterProcessor&lt; TProcessor &gt;</a> (TProcessor processor)</td></tr>
+<tr class="memdesc:a1ba964779a8799d7b1fc61b0e3567720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a processor for hand joint data.  <br /></td></tr>
+<tr class="memitem:a1cb60c3852ccb67b8e342375293ab612" id="r_a1cb60c3852ccb67b8e342375293ab612"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cb60c3852ccb67b8e342375293ab612">UnregisterProcessor&lt; TProcessor &gt;</a> (TProcessor processor)</td></tr>
+<tr class="memdesc:a1cb60c3852ccb67b8e342375293ab612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters a processor for hand joint data.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Champs de données</h2></td></tr>
+<tr class="memitem:a5c93ce3180f449720c7d00a995951839" id="r_a5c93ce3180f449720c7d00a995951839"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html">XRHandSubsystem</a>, <a class="el" href="#ad3e63e758479ee99cd8906f56622776c">UpdateSuccessFlags</a>, <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7">UpdateType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c93ce3180f449720c7d00a995951839">updatedHands</a></td></tr>
+<tr class="memdesc:a5c93ce3180f449720c7d00a995951839"><td class="mdescLeft">&#160;</td><td class="mdescRight">A callback invoked for each hand update.  <br /></td></tr>
+<tr class="memitem:a4691f5b20f1fa79b0c1041fe0f98a4e3" id="r_a4691f5b20f1fa79b0c1041fe0f98a4e3"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html">XRHand</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4691f5b20f1fa79b0c1041fe0f98a4e3">trackingAcquired</a></td></tr>
+<tr class="memdesc:a4691f5b20f1fa79b0c1041fe0f98a4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">A callback invoked when the subsystem begins tracking a hand's root pose and joints.  <br /></td></tr>
+<tr class="memitem:aeb8f2154a39339cf9cfa400a7188806e" id="r_aeb8f2154a39339cf9cfa400a7188806e"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html">XRHand</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb8f2154a39339cf9cfa400a7188806e">trackingLost</a></td></tr>
+<tr class="memdesc:aeb8f2154a39339cf9cfa400a7188806e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A callback invoked when the subsystem stops tracking a hand's root pose and joints.  <br /></td></tr>
+<tr class="memitem:a2bb53daa1c913f5d8d61215b16bf21a1" id="r_a2bb53daa1c913f5d8d61215b16bf21a1"><td class="memItemLeft" align="right" valign="top"><a id="a2bb53daa1c913f5d8d61215b16bf21a1" name="a2bb53daa1c913f5d8d61215b16bf21a1"></a>
+Action&lt; <a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html">XRHandSubsystem</a>, <a class="el" href="#ad3e63e758479ee99cd8906f56622776c">UpdateSuccessFlags</a>, <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7">UpdateType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>preprocessJoints</b></td></tr>
+<tr class="memdesc:a2bb53daa1c913f5d8d61215b16bf21a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is called after the subsystem retrieves joint data from the provider, and before and <a class="el" href="interface_unity_engine_1_1_x_r_1_1_hands_1_1_processing_1_1_i_x_r_hand_processor.html" title="Derive from this interface with a class to intercept and alter hand and joint data....">IXRHandProcessor</a>s' <a class="el" href="interface_unity_engine_1_1_x_r_1_1_hands_1_1_processing_1_1_i_x_r_hand_processor.html#a1c76c28127758f6bdf2d27927d1f51ac" title="Called after XRHandSubsystem.preprocessJoints is invoked and before XRHandSubsystem....">IXRHandProcessor.ProcessJoints</a> are called. <br /></td></tr>
+<tr class="memitem:ae2cc3956cb7da4c71aa95075d41ff3c0" id="r_ae2cc3956cb7da4c71aa95075d41ff3c0"><td class="memItemLeft" align="right" valign="top"><a id="ae2cc3956cb7da4c71aa95075d41ff3c0" name="ae2cc3956cb7da4c71aa95075d41ff3c0"></a>
+Action&lt; <a class="el" href="#ad3e63e758479ee99cd8906f56622776c">UpdateSuccessFlags</a>, <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7">UpdateType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>handsUpdated</b></td></tr>
+<tr class="memdesc:ae2cc3956cb7da4c71aa95075d41ff3c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete. Use <a class="el" href="#a5c93ce3180f449720c7d00a995951839" title="A callback invoked for each hand update.">updatedHands</a> instead. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Fonctions membres protégées</h2></td></tr>
+<tr class="memitem:a4114d899664be0cd985d1d21411959d5" id="r_a4114d899664be0cd985d1d21411959d5"><td class="memItemLeft" align="right" valign="top"><a id="a4114d899664be0cd985d1d21411959d5" name="a4114d899664be0cd985d1d21411959d5"></a>
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCreate</b> ()</td></tr>
+<tr class="memdesc:a4114d899664be0cd985d1d21411959d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by <a class="el" href="namespace_unity.html">Unity</a> before the subsystem is returned from a call to <code>XRHandSubsystemDescriptor.Create</code>. <br /></td></tr>
+<tr class="memitem:a2a4c8e4baf03031656c52c0ab33ce6aa" id="r_a2a4c8e4baf03031656c52c0ab33ce6aa"><td class="memItemLeft" align="right" valign="top"><a id="a2a4c8e4baf03031656c52c0ab33ce6aa" name="a2a4c8e4baf03031656c52c0ab33ce6aa"></a>
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td></tr>
+<tr class="memdesc:a2a4c8e4baf03031656c52c0ab33ce6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by <a class="el" href="namespace_unity.html">Unity</a> before the subsystem is fully destroyed during a call to <code>XRHandSubsystem.Destroy</code>. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Propriétés</h2></td></tr>
+<tr class="memitem:a06d1636c8524983cc0f80e91bcc557ca" id="r_a06d1636c8524983cc0f80e91bcc557ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html">XRHand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06d1636c8524983cc0f80e91bcc557ca">leftHand</a><code> [get]</code></td></tr>
+<tr class="memdesc:a06d1636c8524983cc0f80e91bcc557ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the left <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html" title="Represents a hand from an XRHandSubsystem. Do not create this yourself - get hand objects from the XR...">XRHand</a> that is being tracked by this subsystem.  <br /></td></tr>
+<tr class="memitem:a54cd6fca6284f6b8bbd63920a6e657a0" id="r_a54cd6fca6284f6b8bbd63920a6e657a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html">XRHand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54cd6fca6284f6b8bbd63920a6e657a0">rightHand</a><code> [get]</code></td></tr>
+<tr class="memdesc:a54cd6fca6284f6b8bbd63920a6e657a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the right <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html" title="Represents a hand from an XRHandSubsystem. Do not create this yourself - get hand objects from the XR...">XRHand</a> that is being tracked by this subsystem.  <br /></td></tr>
+<tr class="memitem:a4f45ce920a85b4868687be0d3dc775ff" id="r_a4f45ce920a85b4868687be0d3dc775ff"><td class="memItemLeft" align="right" valign="top">NativeArray&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f45ce920a85b4868687be0d3dc775ff">jointsInLayout</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4f45ce920a85b4868687be0d3dc775ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates which joints in the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a2e705d3e8008a58c1dd55b10c1f52ed3" title="Represents the type of a hand joint. If you wish to convert it to an index, call ....">XRHandJointID</a> list are supported by the current hand data provider.  <br /></td></tr>
+<tr class="memitem:a4f379d249bf846e0e6657d8e83e6afef" id="r_a4f379d249bf846e0e6657d8e83e6afef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad3e63e758479ee99cd8906f56622776c">UpdateSuccessFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f379d249bf846e0e6657d8e83e6afef">updateSuccessFlags</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:a4f379d249bf846e0e6657d8e83e6afef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes what data on either hand was updated during the most recent hand update.  <br /></td></tr>
+<tr class="memitem:a9b46df5fe92877c156806b1de7521173" id="r_a9b46df5fe92877c156806b1de7521173"><td class="memItemLeft" align="right" valign="top"><a id="a9b46df5fe92877c156806b1de7521173" name="a9b46df5fe92877c156806b1de7521173"></a>
+<a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_common_hand_gestures.html">XRCommonHandGestures</a>&#160;</td><td class="memItemRight" valign="bottom"><b>leftHandCommonGestures</b><code> [get]</code></td></tr>
+<tr class="memdesc:a9b46df5fe92877c156806b1de7521173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets common hand gestures getters and callbacks for the left hand. <br /></td></tr>
+<tr class="memitem:ab8ed2486dc3e389485ac9b7055b61206" id="r_ab8ed2486dc3e389485ac9b7055b61206"><td class="memItemLeft" align="right" valign="top"><a id="ab8ed2486dc3e389485ac9b7055b61206" name="ab8ed2486dc3e389485ac9b7055b61206"></a>
+<a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_common_hand_gestures.html">XRCommonHandGestures</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rightHandCommonGestures</b><code> [get]</code></td></tr>
+<tr class="memdesc:ab8ed2486dc3e389485ac9b7055b61206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets common hand gestures getters and callbacks for the right hand. <br /></td></tr>
+<tr class="memitem:ae006582fcc4677e51448d723f34e1841" id="r_ae006582fcc4677e51448d723f34e1841"><td class="memItemLeft" align="right" valign="top"><a id="ae006582fcc4677e51448d723f34e1841" name="ae006582fcc4677e51448d723f34e1841"></a>
+<a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a0bfe15419aa4b1b9f70af67ec74b7403">XRDetectedHandMeshLayout</a>&#160;</td><td class="memItemRight" valign="bottom"><b>detectedHandMeshLayout</b><code> [get]</code></td></tr>
+<tr class="memdesc:ae006582fcc4677e51448d723f34e1841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes which version of authored hand meshes is detected for use. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>A subsystem for detecting and tracking hands and their corresponding joint pose data. </p>
+<p>The <code><a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html" title="A subsystem for detecting and tracking hands and their corresponding joint pose data.">XRHandSubsystem</a></code> class is the main entry point for accessing hand tracking data provided by an <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> device. A provider implementation that reads tracking data from the user's device and provides updates to this subsystem must also be available. The <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html">Hands</a> package includes a provider implementation for <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands_1_1_open_x_r.html">OpenXR</a>.</p>
+<p>Get an instance for this <code><a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html" title="A subsystem for detecting and tracking hands and their corresponding joint pose data.">XRHandSubsystem</a></code> from the active <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> loader, as described in <a href="xref:xrhands-access-data#get-instance">Get the XRHandSubsystem instance</a>.</p>
+<p>For lowest latency, read the tracking data available from the <a class="el" href="#a06d1636c8524983cc0f80e91bcc557ca" title="Gets the left XRHand that is being tracked by this subsystem.">leftHand</a> and <a class="el" href="#a54cd6fca6284f6b8bbd63920a6e657a0" title="Gets the right XRHand that is being tracked by this subsystem.">rightHand</a> properties in a delegate function assigned to the <a class="el" href="#a5c93ce3180f449720c7d00a995951839" title="A callback invoked for each hand update.">updatedHands</a> callback. This callback is invoked twice per frame, once near the <code>MonoBehaviour.Update</code> event and once near the Application.onBeforeRender event. The <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7adc18627d8298782478d7588b8223702e" title="Corresponds to timing similar or close to Application.onBeforeRender.">UpdateType.BeforeRender</a> update provides the lowest latency between hand motion and rendering, but occurs too late to affect physics. In addition, trying to perform too much work during the <code>BeforeRender</code> callback can negatively impact framerate. For best results, update game logic affected by hand tracking in a <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7a971fd8cc345d8bd9f92e9f7d88fdf20c" title="Corresponds to timing similar or close to MonoBehaviour.Update.">UpdateType.Dynamic</a> update and perform a final update of hand visuals in a <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7adc18627d8298782478d7588b8223702e" title="Corresponds to timing similar or close to Application.onBeforeRender.">UpdateType.BeforeRender</a> update.</p>
+<p>Refer to [Hand tracking data](xref:xrhands-tracking-data) for more information. </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation des énumérations membres</h2>
+<a id="ad3e63e758479ee99cd8906f56622776c" name="ad3e63e758479ee99cd8906f56622776c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e63e758479ee99cd8906f56622776c">&#9670;&#160;</a></span>UpdateSuccessFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ad3e63e758479ee99cd8906f56622776c">UnityEngine.XR.Hands.XRHandSubsystem.UpdateSuccessFlags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Describes what data on either hand was updated during the call. </p>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="#a4f379d249bf846e0e6657d8e83e6afef" title="Describes what data on either hand was updated during the most recent hand update.">updateSuccessFlags</a></dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="ad3e63e758479ee99cd8906f56622776ca6adf97f83acf6453d4a6a4b1070f3754" name="ad3e63e758479ee99cd8906f56622776ca6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>No data was successfully updated for either hand. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad3e63e758479ee99cd8906f56622776cac9bacfc1d07536d0ce8faa6ce6a67051" name="ad3e63e758479ee99cd8906f56622776cac9bacfc1d07536d0ce8faa6ce6a67051"></a>LeftHandRootPose&#160;</td><td class="fielddoc"><p>The root pose of <a class="el" href="#a06d1636c8524983cc0f80e91bcc557ca" title="Gets the left XRHand that is being tracked by this subsystem.">XRHandSubsystem.leftHand</a> was updated. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad3e63e758479ee99cd8906f56622776cac10d942328d34d5bd59362ba136258dc" name="ad3e63e758479ee99cd8906f56622776cac10d942328d34d5bd59362ba136258dc"></a>LeftHandJoints&#160;</td><td class="fielddoc"><p>The joints in <a class="el" href="#a06d1636c8524983cc0f80e91bcc557ca" title="Gets the left XRHand that is being tracked by this subsystem.">XRHandSubsystem.leftHand</a> were updated. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad3e63e758479ee99cd8906f56622776cae63a1c22c1c15f158b2e46d8f4c65aa5" name="ad3e63e758479ee99cd8906f56622776cae63a1c22c1c15f158b2e46d8f4c65aa5"></a>RightHandRootPose&#160;</td><td class="fielddoc"><p>The root pose of <a class="el" href="#a54cd6fca6284f6b8bbd63920a6e657a0" title="Gets the right XRHand that is being tracked by this subsystem.">XRHandSubsystem.rightHand</a> was updated. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad3e63e758479ee99cd8906f56622776ca9992e5ca52420936ae484c22252e07fd" name="ad3e63e758479ee99cd8906f56622776ca9992e5ca52420936ae484c22252e07fd"></a>RightHandJoints&#160;</td><td class="fielddoc"><p>The joints in <a class="el" href="#a54cd6fca6284f6b8bbd63920a6e657a0" title="Gets the right XRHand that is being tracked by this subsystem.">XRHandSubsystem.rightHand</a> were updated. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad3e63e758479ee99cd8906f56622776cab1c94ca2fbc3e78fc30069c8d0f01680" name="ad3e63e758479ee99cd8906f56622776cab1c94ca2fbc3e78fc30069c8d0f01680"></a>All&#160;</td><td class="fielddoc"><p>All possible valid data retrieved (hand root poses, and joints for both hands). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ad871be92e0dee1f3a2f48a10d9f03bc7" name="ad871be92e0dee1f3a2f48a10d9f03bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad871be92e0dee1f3a2f48a10d9f03bc7">&#9670;&#160;</a></span>UpdateType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7">UnityEngine.XR.Hands.XRHandSubsystem.UpdateType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The timing of a hand update during a frame. </p>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="#a5c93ce3180f449720c7d00a995951839" title="A callback invoked for each hand update.">updatedHands</a>, <a class="el" href="#a82cfb1f7e01eb4f96e65cdc076faf339" title="Request an update from the hand data provider. Application developers consuming hand tracking data sh...">TryUpdateHands(UpdateType)</a></dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="ad871be92e0dee1f3a2f48a10d9f03bc7a971fd8cc345d8bd9f92e9f7d88fdf20c" name="ad871be92e0dee1f3a2f48a10d9f03bc7a971fd8cc345d8bd9f92e9f7d88fdf20c"></a>Dynamic&#160;</td><td class="fielddoc"><p>Corresponds to timing similar or close to <code>MonoBehaviour.Update</code>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad871be92e0dee1f3a2f48a10d9f03bc7adc18627d8298782478d7588b8223702e" name="ad871be92e0dee1f3a2f48a10d9f03bc7adc18627d8298782478d7588b8223702e"></a>BeforeRender&#160;</td><td class="fielddoc"><p>Corresponds to timing similar or close to Application.onBeforeRender. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a8daa8c3162504cb363fa7f97074c3c3f" name="a8daa8c3162504cb363fa7f97074c3c3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8daa8c3162504cb363fa7f97074c3c3f">&#9670;&#160;</a></span>XRHandSubsystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityEngine.XR.Hands.XRHandSubsystem.XRHandSubsystem </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a subsystem. Do not invoke directly. </p>
+<p>Do not call this constructor if you are an application developer consuming hand tracking data. Instead, get an instance for this <code>XRHandTrackingSubsystem</code> from the active <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> loader, as described in <a href="xref:xrhands-access-data#get-instance">Get the XRHandSubsystem instance</a>.</p>
+<p>If you are implementing an <a class="el" href="namespace_unity_engine_1_1_x_r.html">XR</a> hand data provider, call <code>Create</code> on the <a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem_descriptor.html" title="Describes the capabilities of an XRHandSubsystem.">XRHandSubsystemDescriptor</a> or call UnityEngine.XR.Management.XRLoaderHelper.CreateSubsystem instead of invoking this constructor. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="a1ba964779a8799d7b1fc61b0e3567720" name="a1ba964779a8799d7b1fc61b0e3567720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba964779a8799d7b1fc61b0e3567720">&#9670;&#160;</a></span>RegisterProcessor&lt; TProcessor &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Hands.XRHandSubsystem.RegisterProcessor&lt; TProcessor &gt; </td>
+          <td>(</td>
+          <td class="paramtype">TProcessor</td>          <td class="paramname"><span class="paramname"><em>processor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers a processor for hand joint data. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">processor</td><td>The processor to register for this <a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html" title="A subsystem for detecting and tracking hands and their corresponding joint pose data.">XRHandSubsystem</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TProcessor</td><td>The type of the processor to register. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Contraintes de type</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>TProcessor</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>TProcessor</em></td><td>&#160;:</td><td valign="top"><em>IXRHandProcessor</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a549f48f02c3837b93173fcfb64b5d2fe" name="a549f48f02c3837b93173fcfb64b5d2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a549f48f02c3837b93173fcfb64b5d2fe">&#9670;&#160;</a></span>TryGetMeshData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.XR.Hands.XRHandSubsystem.TryGetMeshData </td>
+          <td>(</td>
+          <td class="paramtype">out <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_meshing_1_1_x_r_hand_mesh_data_query_result.html">XRHandMeshDataQueryResult</a></td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_meshing_1_1_x_r_hand_mesh_data_query_params.html">XRHandMeshDataQueryParams</a></td>          <td class="paramname"><span class="paramname"><em>queryParams</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attempt to retrieve hand mesh data from the platform. Only called when <a class="el" href="#a549f48f02c3837b93173fcfb64b5d2fe" title="Attempt to retrieve hand mesh data from the platform. Only called when XRHandSubsystem....">XRHandSubsystem.TryGetMeshData</a> is called. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>Output data for hand meshes. </td></tr>
+    <tr><td class="paramname">queryParams</td><td>Input data for hand meshes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <code>true</code> if successful and either hand has valid data. Otherwise, returns <code>false</code>. </dd></dl>
+<p>If this returns <code>true</code>, it is your responsibility to to clean up the data by calling <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_meshing_1_1_x_r_hand_mesh_data.html#a9e3bbbc11e4310a740a63afdaf4a18e6" title="Dispose of array data in this object.">XRHandMeshData.Dispose</a> on each of those contained in the the filled-out <em>result</em> , or by calling <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_meshing_1_1_x_r_hand_mesh_data_query_result.html#a7fc8527ddf3556aca8ddadf4a1246157" title="Dispose of array data in the contained objects.">XRHandMeshDataQueryResult.Dispose</a> on the <em>result</em>  itself. </p>
+
+</div>
+</div>
+<a id="a82cfb1f7e01eb4f96e65cdc076faf339" name="a82cfb1f7e01eb4f96e65cdc076faf339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82cfb1f7e01eb4f96e65cdc076faf339">&#9670;&#160;</a></span>TryUpdateHands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsafe <a class="el" href="#ad3e63e758479ee99cd8906f56622776c">UpdateSuccessFlags</a> UnityEngine.XR.Hands.XRHandSubsystem.TryUpdateHands </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7">UpdateType</a></td>          <td class="paramname"><span class="paramname"><em>updateType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Request an update from the hand data provider. Application developers consuming hand tracking data should not call this function. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">updateType</td><td>Informs the provider which kind of timing the update is being requested under. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Returns <a class="el" href="#ad3e63e758479ee99cd8906f56622776c" title="Describes what data on either hand was updated during the call.">UpdateSuccessFlags</a> to describe what data was updated successfully. </dd></dl>
+<p>This function must be called by the subsystem implementation to request an update from the hand data provider.</p>
+<p>When an update is complete, the updated data is available from the <a class="el" href="#a06d1636c8524983cc0f80e91bcc557ca" title="Gets the left XRHand that is being tracked by this subsystem.">leftHand</a> and <a class="el" href="#a54cd6fca6284f6b8bbd63920a6e657a0" title="Gets the right XRHand that is being tracked by this subsystem.">rightHand</a> properties. The <a class="el" href="#a5c93ce3180f449720c7d00a995951839" title="A callback invoked for each hand update.">updatedHands</a> callback is invoked.</p>
+<p>The update is performed immediately. If you request an update timing that occurs in the future, for example, requesting <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7adc18627d8298782478d7588b8223702e" title="Corresponds to timing similar or close to Application.onBeforeRender.">UpdateType.BeforeRender</a> from a <code>MonoBehaviour.Update</code> function, then the provider predicts what the hand data will be at the requested time.</p>
+<p>If overriding this method in a derived type, it is expected that you call <code>base.TryUpdateHands(updateType)</code> and return what it returns. </p>
+
+</div>
+</div>
+<a id="a1cb60c3852ccb67b8e342375293ab612" name="a1cb60c3852ccb67b8e342375293ab612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb60c3852ccb67b8e342375293ab612">&#9670;&#160;</a></span>UnregisterProcessor&lt; TProcessor &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.XR.Hands.XRHandSubsystem.UnregisterProcessor&lt; TProcessor &gt; </td>
+          <td>(</td>
+          <td class="paramtype">TProcessor</td>          <td class="paramname"><span class="paramname"><em>processor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unregisters a processor for hand joint data. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">processor</td><td>The processor to unregister from this <a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html" title="A subsystem for detecting and tracking hands and their corresponding joint pose data.">XRHandSubsystem</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Paramètres du template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TProcessor</td><td>The type of the processor to register. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Contraintes de type</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>TProcessor</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>TProcessor</em></td><td>&#160;:</td><td valign="top"><em>IXRHandProcessor</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentation des champs</h2>
+<a id="a4691f5b20f1fa79b0c1041fe0f98a4e3" name="a4691f5b20f1fa79b0c1041fe0f98a4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4691f5b20f1fa79b0c1041fe0f98a4e3">&#9670;&#160;</a></span>trackingAcquired</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;<a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html">XRHand</a>&gt; UnityEngine.XR.Hands.XRHandSubsystem.trackingAcquired</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A callback invoked when the subsystem begins tracking a hand's root pose and joints. </p>
+<p>This is called before <a class="el" href="#a5c93ce3180f449720c7d00a995951839" title="A callback invoked for each hand update.">updatedHands</a>.</p>
+<p>The delegate assigned to this property must take one parameter of type <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html" title="Represents a hand from an XRHandSubsystem. Do not create this yourself - get hand objects from the XR...">XRHand</a>, which is assigned a reference to the hand whose tracking was acquired. </p>
+
+</div>
+</div>
+<a id="aeb8f2154a39339cf9cfa400a7188806e" name="aeb8f2154a39339cf9cfa400a7188806e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb8f2154a39339cf9cfa400a7188806e">&#9670;&#160;</a></span>trackingLost</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;<a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html">XRHand</a>&gt; UnityEngine.XR.Hands.XRHandSubsystem.trackingLost</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A callback invoked when the subsystem stops tracking a hand's root pose and joints. </p>
+<p>This is called before <a class="el" href="#a5c93ce3180f449720c7d00a995951839" title="A callback invoked for each hand update.">updatedHands</a>.</p>
+<p>The delegate assigned to this property must take one parameter of type <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html" title="Represents a hand from an XRHandSubsystem. Do not create this yourself - get hand objects from the XR...">XRHand</a>, which is assigned a reference to the hand whose tracking was lost. </p>
+
+</div>
+</div>
+<a id="a5c93ce3180f449720c7d00a995951839" name="a5c93ce3180f449720c7d00a995951839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c93ce3180f449720c7d00a995951839">&#9670;&#160;</a></span>updatedHands</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;<a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html">XRHandSubsystem</a>, <a class="el" href="#ad3e63e758479ee99cd8906f56622776c">UpdateSuccessFlags</a>, <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7">UpdateType</a>&gt; UnityEngine.XR.Hands.XRHandSubsystem.updatedHands</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A callback invoked for each hand update. </p>
+<p>This callback is invoked twice per frame, once near the <code>MonoBehaviour.Update</code> event and once near the Application.onBeforeRender event. The <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7adc18627d8298782478d7588b8223702e" title="Corresponds to timing similar or close to Application.onBeforeRender.">UpdateType.BeforeRender</a> update provides the lowest latency between hand motion and rendering, but occurs too late to affect physics. In addition, trying to perform too much work during the <code>BeforeRender</code> callback can negatively impact framerate. For best results, update game logic affected by hand tracking in a <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7a971fd8cc345d8bd9f92e9f7d88fdf20c" title="Corresponds to timing similar or close to MonoBehaviour.Update.">UpdateType.Dynamic</a> update and update hand visuals in a <a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7adc18627d8298782478d7588b8223702e" title="Corresponds to timing similar or close to Application.onBeforeRender.">UpdateType.BeforeRender</a> update.</p>
+<p>The delegate assigned to this property must take three parameters, which have the following types and assigned values when the callback is invoked:</p>
+<ul>
+<li><a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html" title="A subsystem for detecting and tracking hands and their corresponding joint pose data.">XRHandSubsystem</a>: contains a reference to this subsystem.</li>
+<li><a class="el" href="#ad3e63e758479ee99cd8906f56622776c" title="Describes what data on either hand was updated during the call.">UpdateSuccessFlags</a>: the flags indicating which data could be updated.</li>
+<li><a class="el" href="#ad871be92e0dee1f3a2f48a10d9f03bc7" title="The timing of a hand update during a frame.">UpdateType</a>: the update timing. </li>
+</ul>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Documentation des propriétés</h2>
+<a id="a4f45ce920a85b4868687be0d3dc775ff" name="a4f45ce920a85b4868687be0d3dc775ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f45ce920a85b4868687be0d3dc775ff">&#9670;&#160;</a></span>jointsInLayout</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NativeArray&lt;bool&gt; UnityEngine.XR.Hands.XRHandSubsystem.jointsInLayout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates which joints in the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a2e705d3e8008a58c1dd55b10c1f52ed3" title="Represents the type of a hand joint. If you wish to convert it to an index, call ....">XRHandJointID</a> list are supported by the current hand data provider. </p>
+<p>Hand data providers might not support tracking every joint in the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a2e705d3e8008a58c1dd55b10c1f52ed3" title="Represents the type of a hand joint. If you wish to convert it to an index, call ....">XRHandJointID</a> list. This array contains an element for each possible joint. A value of true indicates the current provider supports tracking the associated joint.</p>
+<p>To get the correct array index for a joint, call XRHandJointIDUtility.ToIndex(XRHandJointID) on the <a class="el" href="namespace_unity_engine_1_1_x_r_1_1_hands.html#a2e705d3e8008a58c1dd55b10c1f52ed3" title="Represents the type of a hand joint. If you wish to convert it to an index, call ....">XRHandJointID</a> in question.</p>
+<p>Refer to <a href="xref:xrhands-access-data#joint-layout">Get supported joints array</a> for additional information.</p>
+<p>This array will already be valid as soon as you have a reference to a subsystem (in other words, it's filled out before the subsystem is returned by a call to <code>XRHandSubsystemDescriptor.Create</code>). </p>
+
+</div>
+</div>
+<a id="a06d1636c8524983cc0f80e91bcc557ca" name="a06d1636c8524983cc0f80e91bcc557ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d1636c8524983cc0f80e91bcc557ca">&#9670;&#160;</a></span>leftHand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html">XRHand</a> UnityEngine.XR.Hands.XRHandSubsystem.leftHand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the left <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html" title="Represents a hand from an XRHandSubsystem. Do not create this yourself - get hand objects from the XR...">XRHand</a> that is being tracked by this subsystem. </p>
+<p>Check the <a class="el" href="#a4f379d249bf846e0e6657d8e83e6afef" title="Describes what data on either hand was updated during the most recent hand update.">updateSuccessFlags</a> property to determine what data associated with this hand was successfully updated in the last update, if any. The <a class="el" href="#a4f379d249bf846e0e6657d8e83e6afef" title="Describes what data on either hand was updated during the most recent hand update.">updateSuccessFlags</a> value is also passed to the callback function assigned to <a class="el" href="#a5c93ce3180f449720c7d00a995951839" title="A callback invoked for each hand update.">updatedHands</a>.</p>
+<p>Refer to [Hand data model](xref:xrhands-data-model) for a description of the available hand tracking data. </p>
+
+</div>
+</div>
+<a id="a54cd6fca6284f6b8bbd63920a6e657a0" name="a54cd6fca6284f6b8bbd63920a6e657a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54cd6fca6284f6b8bbd63920a6e657a0">&#9670;&#160;</a></span>rightHand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html">XRHand</a> UnityEngine.XR.Hands.XRHandSubsystem.rightHand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the right <a class="el" href="struct_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand.html" title="Represents a hand from an XRHandSubsystem. Do not create this yourself - get hand objects from the XR...">XRHand</a> that is being tracked by this subsystem. </p>
+<p>Check the <a class="el" href="#a4f379d249bf846e0e6657d8e83e6afef" title="Describes what data on either hand was updated during the most recent hand update.">updateSuccessFlags</a> property to determine what data associated with this hand was successfully updated in the last update, if any. The <a class="el" href="#a4f379d249bf846e0e6657d8e83e6afef" title="Describes what data on either hand was updated during the most recent hand update.">updateSuccessFlags</a> value is also passed to the callback function assigned to <a class="el" href="#a5c93ce3180f449720c7d00a995951839" title="A callback invoked for each hand update.">updatedHands</a>.</p>
+<p>Refer to [Hand data model](xref:xrhands-data-model) for a description of the available hand tracking data. </p>
+
+</div>
+</div>
+<a id="a4f379d249bf846e0e6657d8e83e6afef" name="a4f379d249bf846e0e6657d8e83e6afef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f379d249bf846e0e6657d8e83e6afef">&#9670;&#160;</a></span>updateSuccessFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ad3e63e758479ee99cd8906f56622776c">UpdateSuccessFlags</a> UnityEngine.XR.Hands.XRHandSubsystem.updateSuccessFlags</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel protected-set">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Describes what data on either hand was updated during the most recent hand update. </p>
+<p>This property updated every time the hand data is updated, which only occurs while this <a class="el" href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html" title="A subsystem for detecting and tracking hands and their corresponding joint pose data.">XRHandSubsystem</a> is running.</p>
+<p>The <a class="el" href="#a4f379d249bf846e0e6657d8e83e6afef" title="Describes what data on either hand was updated during the most recent hand update.">updateSuccessFlags</a> value is also passed to the callback function assigned to <a class="el" href="#a5c93ce3180f449720c7d00a995951839" title="A callback invoked for each hand update.">updatedHands</a>. </p>
+<p>The flags for the most recent update. Applies to the <a class="el" href="#a06d1636c8524983cc0f80e91bcc557ca" title="Gets the left XRHand that is being tracked by this subsystem.">leftHand</a> and <a class="el" href="#a54cd6fca6284f6b8bbd63920a6e657a0" title="Gets the right XRHand that is being tracked by this subsystem.">rightHand</a> properties.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_unity_engine.html">UnityEngine</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r.html">XR</a></li><li class="navelem"><a href="namespace_unity_engine_1_1_x_r_1_1_hands.html">Hands</a></li><li class="navelem"><a href="class_unity_engine_1_1_x_r_1_1_hands_1_1_x_r_hand_subsystem.html">XRHandSubsystem</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

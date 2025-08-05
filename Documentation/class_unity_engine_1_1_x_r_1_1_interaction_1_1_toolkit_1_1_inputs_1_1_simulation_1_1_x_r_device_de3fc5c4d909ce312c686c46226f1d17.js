@@ -1,0 +1,7 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_x_r_device_de3fc5c4d909ce312c686c46226f1d17 =
+[
+    [ "icon", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_x_r_device_de3fc5c4d909ce312c686c46226f1d17.html#a3769918d838e574e29904f36b00bb46b", null ],
+    [ "name", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_x_r_device_de3fc5c4d909ce312c686c46226f1d17.html#ab52bf1ccb5ee5c771c042e8c441c1d92", null ],
+    [ "toggleAction", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_x_r_device_de3fc5c4d909ce312c686c46226f1d17.html#a272f7f0ea3acf9d312c507deff8e65c1", null ],
+    [ "performed", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_x_r_device_de3fc5c4d909ce312c686c46226f1d17.html#abe08c3851992aaa476abc79b1b389e67", null ]
+];

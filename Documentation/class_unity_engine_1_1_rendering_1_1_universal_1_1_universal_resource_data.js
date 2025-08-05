@@ -1,0 +1,26 @@
+var class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data =
+[
+    [ "Reset", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a4525f05adf8e1cdedf1adcd4706e2837", null ],
+    [ "activeColorTexture", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a071599ef0c0d72186dc6a458effa0ab2", null ],
+    [ "activeDepthTexture", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a0363949e189edd89f93228c820809b0e", null ],
+    [ "additionalShadowsTexture", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#ac18ac15db3c4671253997dc19ef700e1", null ],
+    [ "afterPostProcessColor", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a587f1a58155b1538595d5b738bdf1c83", null ],
+    [ "backBufferColor", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a8b9c224fb4b09d9710a4345ce4e0ed48", null ],
+    [ "backBufferDepth", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a6e9453c5196afd101f695bbbb152d6ee", null ],
+    [ "cameraColor", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#ab9e309abf164ff1c90dae9132a52997c", null ],
+    [ "cameraDepth", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#aa56d0cd93ae058032c2979c3075ea206", null ],
+    [ "cameraDepthTexture", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#add56d9e3d9c731a0090a1597275f73c1", null ],
+    [ "cameraNormalsTexture", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a61bd527d6b7c640364002e72569684ff", null ],
+    [ "cameraOpaqueTexture", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a2d71b4cfe638f92451b06d9b7a0523c1", null ],
+    [ "dBuffer", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a62f94fcf11f61ebfc2c8ae842b60feb3", null ],
+    [ "dBufferDepth", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a91e5228a7ef3dbb8dd59e12b89d78a4d", null ],
+    [ "gBuffer", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#abcec61db42aef0e3badcee5a84df8cc3", null ],
+    [ "internalColorLut", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#ab86891ca745d7c116eadbd6fc7a9df4a", null ],
+    [ "isActiveTargetBackBuffer", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a55bbc0803e8eab952cd4b26e20ab8222", null ],
+    [ "mainShadowsTexture", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a5b72face49de45e888739d136a07f4b1", null ],
+    [ "motionVectorColor", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#aa9c1c610beb0e867f0a75d6c27e28c01", null ],
+    [ "motionVectorDepth", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a8f83a8f8eb160f4191031f0897989fd6", null ],
+    [ "overlayUITexture", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a6951d440321c9a8b648f56619e9bde8c", null ],
+    [ "renderingLayersTexture", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a271804d910ba33cfce3345317ee4f4cf", null ],
+    [ "ssaoTexture", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_resource_data.html#a994472403f172705af6470534eb6cba0", null ]
+];

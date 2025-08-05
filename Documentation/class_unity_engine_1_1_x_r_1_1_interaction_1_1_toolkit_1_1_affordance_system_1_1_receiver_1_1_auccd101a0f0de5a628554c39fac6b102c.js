@@ -1,0 +1,10 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_auccd101a0f0de5a628554c39fac6b102c =
+[
+    [ "Awake", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_auccd101a0f0de5a628554c39fac6b102c.html#a4da8edd87d5a5dff2cab6ad1bf545edc", null ],
+    [ "OnDisable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_auccd101a0f0de5a628554c39fac6b102c.html#ab1ef425a347ac6ac5c80e38dc35addc1", null ],
+    [ "OnEnable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_auccd101a0f0de5a628554c39fac6b102c.html#add17f7300d81e07ec1c2d68020ccd54f", null ],
+    [ "OnValidate", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_auccd101a0f0de5a628554c39fac6b102c.html#ac5cda491339259f9d8a0040b6e1a46df", null ],
+    [ "affordanceStateProvider", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_auccd101a0f0de5a628554c39fac6b102c.html#abcb072044cf798c74d4043ab1b80f441", null ],
+    [ "affordanceThemeDatum", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_auccd101a0f0de5a628554c39fac6b102c.html#a0207f54ab9637b2eab2b092937a4e4e3", null ],
+    [ "audioSource", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_auccd101a0f0de5a628554c39fac6b102c.html#ae25f938e6a025643e1134193ba329121", null ]
+];

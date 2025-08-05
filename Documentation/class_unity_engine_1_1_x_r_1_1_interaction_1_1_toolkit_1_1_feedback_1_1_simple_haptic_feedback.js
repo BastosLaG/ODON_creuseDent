@@ -1,0 +1,25 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback =
+[
+    [ "Awake", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a54eef299eca1837fd2837f33ab2d5db0", null ],
+    [ "GetInteractorSource", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a2c129fd59239a6a5660f53baaa7a75f9", null ],
+    [ "OnDisable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a283a4cc55d30cfaf4614d7b7a984adcd", null ],
+    [ "OnEnable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a7bfc70853062bd7d3478a95327f5d345", null ],
+    [ "Reset", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#ac7653944a2f7b0f4b523ae24fa1de029", null ],
+    [ "SendHapticImpulse", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a1861832d1e383b687a32c0aca47926fb", null ],
+    [ "SendHapticImpulse", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a369a1cbeaf1a5399ec3ff04ff2c5ec6d", null ],
+    [ "SetInteractorSource", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a27d061b7059f369c0cd4495989b58113", null ],
+    [ "allowHoverHapticsWhileSelecting", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#aaaa89ccac5017165686b72d545dac6f0", null ],
+    [ "hapticImpulsePlayer", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a232d26eeeb024191ca4738c34c4ce961", null ],
+    [ "hoverCanceledData", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#afb31fccadb500ee2f7eae18b84145ea8", null ],
+    [ "hoverEnteredData", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#acb6867bbf925dd076245f6469eedbfbb", null ],
+    [ "hoverExitedData", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a1b47406a00673e0fe06c82c566701e48", null ],
+    [ "playHoverCanceled", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a0506202fad8f4cd4329cdd4603f69ecd", null ],
+    [ "playHoverEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a89ffa84355753b4b2501548d26f461af", null ],
+    [ "playHoverExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a4cddc7c23e38f8695946682dcdda2894", null ],
+    [ "playSelectCanceled", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#ab0b9385c4f4c49fe3746b1e4a73a1a29", null ],
+    [ "playSelectEntered", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a11d446cd745d4e63dc690790a02b9c99", null ],
+    [ "playSelectExited", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a84861bb063b9815274c7f27cd0c8bd24", null ],
+    [ "selectCanceledData", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#ab039cd275fc6684d7b8d99ab7eaacf7d", null ],
+    [ "selectEnteredData", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#ab1feed4c8d661b25d011e911037e7e19", null ],
+    [ "selectExitedData", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_feedback_1_1_simple_haptic_feedback.html#a0eb292c3f90e5555ecc2346a1b7d243b", null ]
+];

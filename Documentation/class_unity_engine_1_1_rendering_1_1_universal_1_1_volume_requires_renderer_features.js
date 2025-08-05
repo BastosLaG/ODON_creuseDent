@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_rendering_1_1_universal_1_1_volume_requires_renderer_features =
+[
+    [ "VolumeRequiresRendererFeatures", "class_unity_engine_1_1_rendering_1_1_universal_1_1_volume_requires_renderer_features.html#a5de65f9b764ef6278c34c112a28a8c7a", null ]
+];

@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare_resolution_parameter =
+[
+    [ "ScreenSpaceLensFlareResolutionParameter", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare_resolution_parameter.html#a69089f47f41f1f87b8e04dca8a2fd368", null ]
+];

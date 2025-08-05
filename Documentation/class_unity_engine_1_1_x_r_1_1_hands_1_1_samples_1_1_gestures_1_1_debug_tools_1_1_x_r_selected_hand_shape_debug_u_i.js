@@ -1,0 +1,6 @@
+var class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_gestures_1_1_debug_tools_1_1_x_r_selected_hand_shape_debug_u_i =
+[
+    [ "ResetUI", "class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_gestures_1_1_debug_tools_1_1_x_r_selected_hand_shape_debug_u_i.html#abdeea81a9d609ffc6fce3e87f3286366", null ],
+    [ "UpdateSelectedHandShapeTextUI", "class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_gestures_1_1_debug_tools_1_1_x_r_selected_hand_shape_debug_u_i.html#a8a7c670d71ba8d363d75dce29acec2df", null ],
+    [ "handShapeNameLabel", "class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_gestures_1_1_debug_tools_1_1_x_r_selected_hand_shape_debug_u_i.html#a6c045cd49e91ee4cbce86bd6996988c4", null ]
+];

@@ -1,0 +1,7 @@
+var class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_editor_resources =
+[
+    [ "MaterialResources", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_editor_resources_1_1_material_resources.html", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_editor_resources_1_1_material_resources" ],
+    [ "ShaderResources", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_editor_resources_1_1_shader_resources.html", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_editor_resources_1_1_shader_resources" ],
+    [ "materials", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_editor_resources.html#aa836bb797c6a0dfec9f6371198d44d6b", null ],
+    [ "shaders", "class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_editor_resources.html#a02ca23196b8820f585014351af5a8858", null ]
+];

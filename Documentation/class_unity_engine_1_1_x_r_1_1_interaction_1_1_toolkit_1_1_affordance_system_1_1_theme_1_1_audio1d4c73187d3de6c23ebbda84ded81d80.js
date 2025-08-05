@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_audio1d4c73187d3de6c23ebbda84ded81d80 =
+[
+    [ "AudioAffordanceThemeDatumProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_audio1d4c73187d3de6c23ebbda84ded81d80.html#a46814ccf64ad51371440b77247c94c73", null ],
+    [ "AudioAffordanceThemeDatumProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_audio1d4c73187d3de6c23ebbda84ded81d80.html#a716d99edf843be06cd955db769602f9a", null ]
+];

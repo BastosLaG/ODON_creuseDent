@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_pr52a789cc2ea3c9b769bbd43d6545ad8c =
+[
+    [ "OnAffordanceValueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_pr52a789cc2ea3c9b769bbd43d6545ad8c.html#a1f9e6abfdbf999f56eec07fb5d2f22be", null ],
+    [ "quaternionValueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_pr52a789cc2ea3c9b769bbd43d6545ad8c.html#a2baf3ba479be7ddf9ae4bc5a32ddc44f", null ]
+];

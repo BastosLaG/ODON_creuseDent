@@ -1,0 +1,7 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_interaction_strength_filter_delegate =
+[
+    [ "XRInteractionStrengthFilterDelegate", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_interaction_strength_filter_delegate.html#a66f29c0b8dbab8c8860ba605b7e0e01d", null ],
+    [ "Process", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_interaction_strength_filter_delegate.html#afd0be948daeca2a7b2f460f983d5a3e2", null ],
+    [ "canProcess", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_interaction_strength_filter_delegate.html#a641258e84474c0abf4dd1f3a0ce19e28", null ],
+    [ "delegateToProcess", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_filtering_1_1_x_r_interaction_strength_filter_delegate.html#aff1a4b75ba4c9844b2fdc91e82689f49", null ]
+];

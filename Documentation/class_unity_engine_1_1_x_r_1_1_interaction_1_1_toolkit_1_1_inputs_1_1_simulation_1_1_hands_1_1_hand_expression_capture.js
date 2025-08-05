@@ -1,0 +1,6 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_hands_1_1_hand_expression_capture =
+[
+    [ "icon", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_hands_1_1_hand_expression_capture.html#ae8d4aa8d35bea22367960aebc45f6346", null ],
+    [ "leftHandCapturedPoses", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_hands_1_1_hand_expression_capture.html#a2a86e5188615566692173c9ec7c056e2", null ],
+    [ "rightHandCapturedPoses", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_inputs_1_1_simulation_1_1_hands_1_1_hand_expression_capture.html#a05f65e34576498706257dd494f885f4a", null ]
+];

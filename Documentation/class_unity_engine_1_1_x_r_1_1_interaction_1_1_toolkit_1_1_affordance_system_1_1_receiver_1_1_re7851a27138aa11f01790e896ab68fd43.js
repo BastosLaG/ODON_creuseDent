@@ -1,0 +1,9 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re7851a27138aa11f01790e896ab68fd43 =
+[
+    [ "Awake", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re7851a27138aa11f01790e896ab68fd43.html#a7b6830e9e71b20d67babb114ad338639", null ],
+    [ "GetCurrentValueForCapture", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re7851a27138aa11f01790e896ab68fd43.html#a6f2bd85c7e9edfc671fbfec42dcb7dfb", null ],
+    [ "OnAffordanceValueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re7851a27138aa11f01790e896ab68fd43.html#a0f9f59ffe76ff867dadb5e1cc9158d44", null ],
+    [ "OnValidate", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re7851a27138aa11f01790e896ab68fd43.html#a3145e90925057ab8308c47e8d33c8dd7", null ],
+    [ "floatPropertyName", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re7851a27138aa11f01790e896ab68fd43.html#abdb44c135bb325493e250840001dd64a", null ],
+    [ "materialPropertyBlockHelper", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_receiver_1_1_re7851a27138aa11f01790e896ab68fd43.html#a2b5bce894a44ccdf46988b60bee11eed", null ]
+];

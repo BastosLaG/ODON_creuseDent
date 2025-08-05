@@ -1,0 +1,25 @@
+var class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare =
+[
+    [ "ScreenSpaceLensFlare", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#ab2600c934a6825b1357bc609da8f26da", null ],
+    [ "IsActive", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#a22e311263ef0103f68423ca016a4f531", null ],
+    [ "IsStreaksActive", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#a3c35320df6cbad479cab1532ee574deb", null ],
+    [ "IsTileCompatible", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#ad17f2c79d66e14f6b9c563deff10440c", null ],
+    [ "bloomMip", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#a0279b3542b00ad320a6124e8d6304390", null ],
+    [ "chromaticAbberationIntensity", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#ad4d839f87a387a8cb8b89219e2636a48", null ],
+    [ "firstFlareIntensity", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#ad1e64c58b6e03dd595e00bf8c04ed231", null ],
+    [ "intensity", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#a5c9428421fcba128156d68b282fc8f54", null ],
+    [ "resolution", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#afaad1e237d88556e47216f543d2e5d1c", null ],
+    [ "sampleDimmer", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#ac4f755b8f96bc161681ffd248c553d5d", null ],
+    [ "samples", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#a576b516dd534fb16265f134c6c70ccdf", null ],
+    [ "scale", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#a93a1aec2075f1579d811ee4d5ee23768", null ],
+    [ "secondaryFlareIntensity", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#a2579ecc2e122a29b4dbb55ded156306a", null ],
+    [ "startingPosition", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#aaaafaa5a558dc43f80bbddfff5e73188", null ],
+    [ "streaksIntensity", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#ad739c2f1a956fd6c38d832e839ba0dc2", null ],
+    [ "streaksLength", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#ad1bdfe98bdc0165712656c7dece54902", null ],
+    [ "streaksOrientation", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#a0d69eb02ea5d12d998a99e1122d38d2a", null ],
+    [ "streaksThreshold", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#aa9df074c3fb7314d942d9f13d8d5d7a1", null ],
+    [ "tintColor", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#a065eabbcc8db7fb7a5641afd5c67675d", null ],
+    [ "vignetteEffect", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#af3d585f37031389a496fac74be728f68", null ],
+    [ "warpedFlareIntensity", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#a8ab700b3418315e03e227c130e995c4f", null ],
+    [ "warpedFlareScale", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_lens_flare.html#aafc0285deeb4fd5a96dcd8f9c6431407", null ]
+];

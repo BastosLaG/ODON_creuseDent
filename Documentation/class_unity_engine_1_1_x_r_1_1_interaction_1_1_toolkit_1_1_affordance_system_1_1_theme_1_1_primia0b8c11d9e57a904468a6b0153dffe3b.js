@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primia0b8c11d9e57a904468a6b0153dffe3b =
+[
+    [ "ColorAffordanceThemeDatumProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primia0b8c11d9e57a904468a6b0153dffe3b.html#ad0239a20e237bd29a95f809e447504a5", null ],
+    [ "ColorAffordanceThemeDatumProperty", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_affordance_system_1_1_theme_1_1_primia0b8c11d9e57a904468a6b0153dffe3b.html#ab60d24719c82755b914f210d0f95302f", null ]
+];

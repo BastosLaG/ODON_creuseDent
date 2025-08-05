@@ -1,0 +1,4 @@
+var class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_ambient_occlusion_persistent_resources =
+[
+    [ "version", "class_unity_engine_1_1_rendering_1_1_universal_1_1_screen_space_ambient_occlusion_persistent_resources.html#a7c6bbd88827417bafc3f08c3bbbef594", null ]
+];

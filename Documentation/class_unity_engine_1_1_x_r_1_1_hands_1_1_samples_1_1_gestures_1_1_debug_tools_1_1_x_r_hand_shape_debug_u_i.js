@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_gestures_1_1_debug_tools_1_1_x_r_hand_shape_debug_u_i =
+[
+    [ "ClearDetectedHandShape", "class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_gestures_1_1_debug_tools_1_1_x_r_hand_shape_debug_u_i.html#a81f60af8fb22625a5939c51bf8a8b374", null ],
+    [ "handShapeOrPose", "class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_gestures_1_1_debug_tools_1_1_x_r_hand_shape_debug_u_i.html#ad469e16cd7d9d1eeed33df7bc24cacd4", null ]
+];

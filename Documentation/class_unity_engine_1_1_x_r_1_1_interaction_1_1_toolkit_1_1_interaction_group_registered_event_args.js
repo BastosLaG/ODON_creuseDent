@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interaction_group_registered_event_args =
+[
+    [ "containingGroupObject", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interaction_group_registered_event_args.html#a8f07a5bfed698d02b0aca7dc74a05f85", null ],
+    [ "interactionGroupObject", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_interaction_group_registered_event_args.html#abb0f808a8746a62b0381213b65beec40", null ]
+];
