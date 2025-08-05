@@ -41,7 +41,7 @@ namespace UnityEngine.InputSystem.Switch
         public ButtonControl select { get; private set; }
         public ButtonControl leftShoulderMini { get; private set; }
         public ButtonControl rightShoulderMini { get; private set; }
-        
+
         public StickControl leftStick { get; private set; }
         public StickControl rightStick { get; private set; }
         #endregion
@@ -61,7 +61,7 @@ namespace UnityEngine.InputSystem.Switch
             public IMUCalibrationData imuCalibData;
         }
 
-        public CalibrationData calibrationData = new CalibrationData()
+        public CalibrationData calibrationData = new ()
         {
             lStickCalibData = new StickCalibrationData()
             {
@@ -78,9 +78,11 @@ namespace UnityEngine.InputSystem.Switch
                 yMax = 2908
             }
         };
+
+        public IMUThresholdProcessor m_calibrationTools = new ();
         #endregion
 
-        private Vector3 m_currentOrientation = new Vector3();
+        private Vector3 m_currentOrientation = new ();
 
         #region Generic data
         public BatteryLevelEnum BatteryLevel { get; protected set; } = BatteryLevelEnum.Empty;
@@ -95,6 +97,7 @@ namespace UnityEngine.InputSystem.Switch
 
         #region Data re/loading
         // Are the different device informations loaded ?
+
         private bool m_IMUConfigDataLoaded = false;
         private bool m_stickConfigDataLoaded = false;
         private bool m_deviceInfoLoaded = false;
@@ -360,8 +363,10 @@ namespace UnityEngine.InputSystem.Switch
 
         public void SetVibrationEnabled(bool active)
         {
-            var s = new SwitchControllerSetVibrationEnabledSubcommand();
-            s.Enabled = active;
+            var s = new SwitchControllerSetVibrationEnabledSubcommand
+            {
+                Enabled = active
+            };
 
             var c = SwitchControllerCommand.Create(subcommand: s);
             if (ExecuteCommand(ref c) < 0)
@@ -416,6 +421,12 @@ namespace UnityEngine.InputSystem.Switch
             var c = SwitchControllerCommand.Create(subcommand: readSubcommand);
             if (ExecuteCommand(ref c) < 0)
                 Debug.LogError("Read device serial number failed");
+        }
+
+        //TODO : Improve these function.
+        public void CalibrateJoycon()
+        {
+            m_calibrationTools.Calibrate();
         }
         #endregion
 

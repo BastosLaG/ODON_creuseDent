@@ -1,5 +1,3 @@
-using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace UnityEngine.InputSystem.Switch.LowLevel
@@ -8,6 +6,8 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
     {
         private const float kGyroSensitivity = 0.070f;
         private const float kAccelSensitivity = 0.000244f;
+
+        private const float thresholdDerivationValue = 0.5f;
 
         private Vector3 gyroMaxSizeThreshold = new(float.MinValue, float.MinValue, float.MinValue);
         private Vector3 gyroMinSizeThreshold = new(float.MaxValue, float.MaxValue, float.MaxValue);
@@ -62,8 +62,10 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                 gyroMinSizeThreshold = Vector3.Min(gyroMinSizeThreshold, item);
             }
 
-            gyroMaxSizeThreshold += Vector3.one;
-            gyroMinSizeThreshold -= Vector3.one;
+            Vector3 thresholdVec3Derivation = new (thresholdDerivationValue, thresholdDerivationValue, thresholdDerivationValue);
+
+            gyroMaxSizeThreshold += thresholdVec3Derivation;
+            gyroMinSizeThreshold -= thresholdVec3Derivation;
 
             isRecording = false;
             Debug.Log($"Calibration complete. Min: {gyroMinSizeThreshold}, Max: {gyroMaxSizeThreshold}");

@@ -107,10 +107,11 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
             {
                 leftStick = leftStickVec,
                 rightStick = rightStickVec,
-                // TODO: Calibrate these bad boys
+                // TODO: Calibrate these bad boys 
+                // Know we have an experimental Threshold to calibrate these bad boys 
                 acceleration = tempAccel,
-                orientation = currentOrientation + tempGyro,
                 angularVelocity = tempGyro,
+                orientation = currentOrientation + tempGyro,
             };
 
             state.Set(SwitchControllerVirtualInputState.Button.Y, (rightButtons & 0x01) != 0);
@@ -131,11 +132,6 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
             state.Set(SwitchControllerVirtualInputState.Button.Left, (leftButtons & 0x08) != 0);
             state.Set(SwitchControllerVirtualInputState.Button.L, (leftButtons & 0x40) != 0);
             state.Set(SwitchControllerVirtualInputState.Button.ZL, (leftButtons & 0x80) != 0);
-
-            if ((rightButtons & 0x04) != 0 || (leftButtons & 0x01) != 0)
-            {
-                calibrationTool.Calibrate();
-            }
 
             return state;
         }
