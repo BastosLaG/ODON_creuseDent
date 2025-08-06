@@ -5,6 +5,7 @@ using UnityEngine.InputSystem.LowLevel;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine.XR.Interaction.Toolkit.Utilities.Tweenables.Primitives;
 
 // * https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputDevice.html
 /// <summary>
@@ -19,59 +20,44 @@ public class JoyConXRHand : MonoBehaviour
     [Tooltip("Set to true if using the Left Joy-Con, false for Right Joy-Con.")]
     public bool isLeftHand = true;
 
-    private InputDevice joyConLeft;
-    private InputDevice joyConRight;
+    [SerializeField] private SwitchControllerHID _joyCon;
 
     [Header("Target Settings")]
 
     [Tooltip("The transform that will be rotated by Joy-Con input.")]
-    [SerializeField] private Transform targetTransform;
+    [SerializeField] private Transform _targetTransform;
 
     [Tooltip("Optional rotation scaling or clamping (not used in current logic).")]
     [Range(0, 360)]
-    [SerializeField] private double rotationValue = 90.0;
+    [SerializeField] private double _rotationValue = 90.0;
+    [Tooltip("Time we need before calibration")]
+    [Range(0.0f, 5.0f)]
+    [SerializeField] private float _timer = 2.0f;
 
     #region Primary Function
     private void Start()
     {
-        if (targetTransform == null)
+        if (_targetTransform == null)
         {
-            targetTransform = transform;
+            _targetTransform = transform;
         }
 
-        joyConLeft = null;
-        joyConRight = null;
-
-        // ukfJoycon = new UnscentedKalmanFilter.UKF();
+        _joyCon = null;
 
         // Find and initialize the correct Joy-Con
         foreach (var device in InputSystem.devices)
         {
             if (isLeftHand && device is SwitchJoyConLHID left)
             {
-                left.SetLEDs(LEDStatusEnum.On);
-                bool success = left.SetIMUEnabled(true);
-                if (!success)
-                {
-                    Debug.LogWarning("Failed to enable IMU on Switch controller.");
-                }
-                left.CalibrateJoycon();
-                joyConLeft = left;
-
+                SetupJoyCon(left);
                 // Debug.Log("Joy-Con left detect !");
+                return;
             }
             else if (!isLeftHand && device is SwitchJoyConRHID right)
             {
-                right.SetLEDs(LEDStatusEnum.On);
-                right.SetIMUEnabled(true);
-                bool success = right.SetIMUEnabled(true);
-                if (!success)
-                {
-                    Debug.LogWarning("Failed to enable IMU on Switch controller.");
-                }
-                right.CalibrateJoycon();
-                joyConRight = right;
+                SetupJoyCon(right);
                 // Debug.Log("Joy-Con right detect !");
+                return;
             }
         }
     }
@@ -85,8 +71,7 @@ public class JoyConXRHand : MonoBehaviour
     {
         InputSystem.onEvent -= OnInputEventReadJoycon;
 
-        joyConLeft = null;
-        joyConRight = null;
+        _joyCon = null;
 
         // Flash LEDs to indicate disconnection
         foreach (var device in InputSystem.devices)
@@ -122,15 +107,17 @@ public class JoyConXRHand : MonoBehaviour
         }
         if (!eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>())
         {
-            Debug.Log("Event is not a StateEvent or DeltaStateEvent, returning.");
+            Debug.LogError("Event is not a StateEvent or DeltaStateEvent, returning.");
             return;
         }
 
-        
-
-        GetOrientation(eventPtr, device, out Vector3 orientation);
-        GetAcceleration(eventPtr, device, out Vector3 acceleration);
-        GetAngularVelocity(eventPtr, device, out Vector3 angularVelocity);
+        if (_joyCon == null)
+        {
+            Debug.LogError("Joycon is null");
+        }
+        GetOrientation(eventPtr, out Vector3 orientation);
+        GetAcceleration(eventPtr, out Vector3 acceleration);
+        GetAngularVelocity(eventPtr, out Vector3 angularVelocity);
 
         SetRotationAndPosition(angularVelocity, acceleration, orientation);
     }
@@ -138,8 +125,27 @@ public class JoyConXRHand : MonoBehaviour
     private void SetRotationAndPosition(Vector3 angularVelocity, Vector3 orientation, Vector3 acceleration)
     {
         // TODO : implement logic rotation here 
-        targetTransform.rotation *= Quaternion.Euler(angularVelocity * Time.deltaTime);
+        _targetTransform.rotation *= Quaternion.Euler(angularVelocity * Time.deltaTime);
     }
+
+    private void SetupJoyCon(SwitchControllerHID joyCon)
+    {
+        joyCon.SetLEDs(LEDStatusEnum.On);
+        StartCoroutine(DelayedCalibration(joyCon, _timer));
+        bool success = joyCon.SetIMUEnabled(true);
+        if (!success)
+        {
+            Debug.LogWarning("Failed to enable IMU on Switch controller.");
+        }
+        _joyCon = joyCon;
+    }
+
+    private IEnumerator DelayedCalibration(SwitchControllerHID joyCon, float timer)
+    {
+        yield return new WaitForSeconds(timer);
+        joyCon.CalibrateJoycon();
+    }
+
     #endregion
 
     #region Getter
@@ -150,122 +156,58 @@ public class JoyConXRHand : MonoBehaviour
     /// <param name="eventPtr"></param>
     /// <param name="device"></param>
     /// <returns></returns>
-    private Vector3 GetOrientation(InputEventPtr eventPtr, InputDevice device)
+    private Vector3 GetOrientation(InputEventPtr eventPtr)
     {
-        if (device is SwitchJoyConLHID leftJoyCon)
-        {
-            return leftJoyCon.orientation.ReadValueFromEvent(eventPtr);
-        }
-        else if (device is SwitchJoyConRHID rightJoyCon)
-        {
-            return rightJoyCon.orientation.ReadValueFromEvent(eventPtr);
-        }
-
-        return Vector3.zero;
+        return _joyCon.orientation.ReadValueFromEvent(eventPtr);
     }
     /// <summary>
     /// Gets the orientation vector from the Joy-Con.
     /// </summary>
     /// <param name="eventPtr"></param>
-    /// <param name="device"></param>
     /// <param name="orientation"></param>
-    private void GetOrientation(InputEventPtr eventPtr, InputDevice device, out Vector3 orientation)
+    private void GetOrientation(InputEventPtr eventPtr, out Vector3 orientation)
     {
-        if (device is SwitchJoyConLHID leftJoyCon)
-        {
-            orientation = leftJoyCon.orientation.ReadValueFromEvent(eventPtr);
-        }
-        else if (device is SwitchJoyConRHID rightJoyCon)
-        {
-            orientation = rightJoyCon.orientation.ReadValueFromEvent(eventPtr);
-        }
-        else
-        {
-            orientation = Vector3.zero;
-        }
+        orientation = _joyCon.orientation.ReadValueFromEvent(eventPtr);
     }
 
     /// <summary>
     /// Gets the angular velocity vector from the Joy-Con.
     /// </summary>
     /// <param name="eventPtr"></param>
-    /// <param name="device"></param>
     /// <returns></returns>
-    private Vector3 GetAngularVelocity(InputEventPtr eventPtr, InputDevice device)
+    private Vector3 GetAngularVelocity(InputEventPtr eventPtr)
     {
-        if (device is SwitchJoyConLHID leftJoyCon)
-        {
-            return leftJoyCon.angularVelocity.ReadValueFromEvent(eventPtr);
-        }
-        else if (device is SwitchJoyConRHID rightJoyCon)
-        {
-            return rightJoyCon.angularVelocity.ReadValueFromEvent(eventPtr);
-        }
-
-        return Vector3.zero;
+        return _joyCon.angularVelocity.ReadValueFromEvent(eventPtr);
     }
 
     /// <summary>
     /// Gets the angular velocity vector from the Joy-Con.
     /// </summary>
     /// <param name="eventPtr"></param>
-    /// <param name="device"></param>
     /// <param name="angularVelocity"></param>
-    private void GetAngularVelocity(InputEventPtr eventPtr, InputDevice device, out Vector3 angularVelocity)
+    private void GetAngularVelocity(InputEventPtr eventPtr, out Vector3 angularVelocity)
     {
-        if (device is SwitchJoyConLHID leftJoyCon)
-        {
-            angularVelocity = leftJoyCon.angularVelocity.ReadValueFromEvent(eventPtr);
-        }
-        else if (device is SwitchJoyConRHID rightJoyCon)
-        {
-            angularVelocity = rightJoyCon.angularVelocity.ReadValueFromEvent(eventPtr);
-        }
-        else
-        {
-            angularVelocity = Vector3.zero;
-        }
+        angularVelocity = _joyCon.angularVelocity.ReadValueFromEvent(eventPtr);
     }
 
     /// <summary>
     /// Gets the acceleration vector from the Joy-Con.
     /// </summary>
     /// <param name="eventPtr"></param>
-    /// <param name="device"></param>
     /// <returns></returns>
-    private Vector3 GetAcceleration(InputEventPtr eventPtr, InputDevice device)
+    private Vector3 GetAcceleration(InputEventPtr eventPtr)
     {
-        if (device is SwitchJoyConLHID leftJoyCon)
-        {
-            return leftJoyCon.acceleration.ReadValueFromEvent(eventPtr);
-        }
-        else if (device is SwitchJoyConRHID rightJoyCon)
-        {
-            return rightJoyCon.acceleration.ReadValueFromEvent(eventPtr);
-        }
-
-        return Vector3.zero;
+        return _joyCon.acceleration.ReadValueFromEvent(eventPtr);
     }
+
     /// <summary>
     /// Gets the acceleration vector from the Joy-Con.
     /// </summary>
     /// <param name="eventPtr"></param>
-    /// <param name="device"></param>
     /// <param name="acceleration"></param>
-    private void GetAcceleration(InputEventPtr eventPtr, InputDevice device, out Vector3 acceleration)
+    private void GetAcceleration(InputEventPtr eventPtr, out Vector3 acceleration)
     {
-        if (device is SwitchJoyConLHID leftJoyCon)
-        {
-            acceleration = leftJoyCon.acceleration.ReadValueFromEvent(eventPtr);
-        }
-        else if (device is SwitchJoyConRHID rightJoyCon)
-        {
-            acceleration = rightJoyCon.acceleration.ReadValueFromEvent(eventPtr);
-        }
-        else
-        {
-            acceleration = Vector3.zero;
-        }
+        acceleration = _joyCon.acceleration.ReadValueFromEvent(eventPtr);
     }
     #endregion
 }

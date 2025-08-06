@@ -86,15 +86,15 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                 // Debug.Log($"Right stick data: Raw: ({rawRightStickHoriz:X3};{rawRightStickVert:X3}) Calibration data: Center=({rStickCalibData.xCenter:X3},{rStickCalibData.yCenter:X3}); X=[{rStickCalibData.xMin:X3} - {rStickCalibData.xMax:X3}]; Y=[{rStickCalibData.yMin:X3} - {rStickCalibData.yMax:X3}]   Final data: {rightStickVec}");
             }
 
-            Vector3 tempGyro = (
+            Vector3 thresholdGyro = (
                                 calibrationTool.UncalibratedThresholdGyro(imuData0ms) +
                                 calibrationTool.UncalibratedThresholdGyro(imuData5ms) +
                                 calibrationTool.UncalibratedThresholdGyro(imuData10ms)
                                 ) / 3f;
 
-            calibrationTool.FeedGyroSample(tempGyro);
+            calibrationTool.FeedGyroSample(thresholdGyro);
 
-            Vector3 tempAccel = (
+            Vector3 thresholdAccel = (
                                 calibrationTool.UncalibratedThresholdAcceleration(imuData0ms) +
                                 calibrationTool.UncalibratedThresholdAcceleration(imuData5ms) +
                                 calibrationTool.UncalibratedThresholdAcceleration(imuData10ms)
@@ -109,9 +109,9 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                 rightStick = rightStickVec,
                 // TODO: Calibrate these bad boys 
                 // Know we have an experimental Threshold to calibrate these bad boys 
-                acceleration = tempAccel,
-                angularVelocity = tempGyro,
-                orientation = currentOrientation + tempGyro,
+                acceleration = thresholdAccel,
+                angularVelocity = thresholdGyro,
+                orientation = currentOrientation + thresholdGyro,
             };
 
             state.Set(SwitchControllerVirtualInputState.Button.Y, (rightButtons & 0x01) != 0);

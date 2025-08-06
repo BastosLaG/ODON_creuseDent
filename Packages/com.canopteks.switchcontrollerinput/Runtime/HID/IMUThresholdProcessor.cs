@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace UnityEngine.InputSystem.Switch.LowLevel
 { 
-    public class IMUThresholdProcessor : MonoBehaviour
+    public class IMUThresholdProcessor
     {
         private const float kGyroSensitivity = 0.070f;
         private const float kAccelSensitivity = 0.000244f;
@@ -12,8 +12,8 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
         private Vector3 gyroMaxSizeThreshold = new(float.MinValue, float.MinValue, float.MinValue);
         private Vector3 gyroMinSizeThreshold = new(float.MaxValue, float.MaxValue, float.MaxValue);
 
-        private readonly Queue<Vector3> gyroThresholdBuffer = new();
-        private readonly int bufferSize = 100;
+        private Queue<Vector3> gyroThresholdBuffer = new();
+        private int bufferSize = 100;
 
         public bool isRecording = false;
 
