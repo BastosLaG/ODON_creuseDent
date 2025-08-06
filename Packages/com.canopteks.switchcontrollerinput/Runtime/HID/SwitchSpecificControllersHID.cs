@@ -46,8 +46,6 @@ namespace UnityEngine.InputSystem.Switch
         }
     }
     
-    
-    
     [InputControlLayout(stateType = typeof(SwitchControllerVirtualInputState), displayName = "Joy-Con (R)")]
 #if UNITY_EDITOR
     [InitializeOnLoad]

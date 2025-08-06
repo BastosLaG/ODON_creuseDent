@@ -27,12 +27,12 @@ public class JoyConXRHand : MonoBehaviour
     [Tooltip("The transform that will be rotated by Joy-Con input.")]
     [SerializeField] private Transform _targetTransform;
 
-    [Tooltip("Optional rotation scaling or clamping (not used in current logic).")]
-    [Range(0, 360)]
-    [SerializeField] private double _rotationValue = 90.0;
-    [Tooltip("Time we need before calibration")]
-    [Range(0.0f, 5.0f)]
-    [SerializeField] private float _timer = 2.0f;
+    // [Tooltip("Optional rotation scaling or clamping (not used in current logic).")]
+    // [Range(0, 360)]
+    // [SerializeField] private double _rotationValue = 90.0;
+    // [Tooltip("Time we need before calibration")]
+    // [Range(0.0f, 5.0f)]
+    // [SerializeField] private float _timer = 2.0f;
 
     #region Primary Function
     private void Start()
@@ -41,8 +41,6 @@ public class JoyConXRHand : MonoBehaviour
         {
             _targetTransform = transform;
         }
-
-        _joyCon = null;
 
         // Find and initialize the correct Joy-Con
         foreach (var device in InputSystem.devices)
@@ -72,7 +70,6 @@ public class JoyConXRHand : MonoBehaviour
         InputSystem.onEvent -= OnInputEventReadJoycon;
 
         _joyCon.SetLEDs(LEDStatusEnum.Flashing);
-        _joyCon = null;
     }
     #endregion
 
@@ -127,23 +124,24 @@ public class JoyConXRHand : MonoBehaviour
 
     private IEnumerator DelayedCalibration()
     {
-        while (_joyCon != null && _joyCon.m_calibrationTools != null &&
-            _joyCon.m_calibrationTools.GetThresholdSampleCount() < _joyCon.m_calibrationTools.GetBufferSize() - 1)
+        // Wait until calibration tools exist
+        while (_joyCon != null && _joyCon.m_calibrationTools == null)
+        {
+            Debug.Log("Wait until calibration tools exist...");
+            yield return null;
+        }
+
+        // Wait until buffer fills
+        while (_joyCon != null && _joyCon.m_calibrationTools.GetThresholdSampleCount() < _joyCon.m_calibrationTools.GetBufferSize() - 1)
         {
             Debug.Log($"Threshold collect {_joyCon.m_calibrationTools.GetThresholdSampleCount()} / {_joyCon.m_calibrationTools.GetBufferSize()}");
             yield return null;
         }
 
-        if (_joyCon?.m_calibrationTools != null)
-        {
-            _joyCon.CalibrateJoycon();
-        }
-        else
-        {
-            Debug.LogWarning("Calibration tool is null – skipping calibration.");
-        }
+        Debug.Log("Try to calibrate joycon...");
+        _joyCon.CalibrateJoycon();
+        Debug.Log("Calibrate joycon complete");
     }
-
 
     #endregion
 

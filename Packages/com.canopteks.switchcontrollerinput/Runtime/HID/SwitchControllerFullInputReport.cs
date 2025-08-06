@@ -85,7 +85,6 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
 
                 // Debug.Log($"Right stick data: Raw: ({rawRightStickHoriz:X3};{rawRightStickVert:X3}) Calibration data: Center=({rStickCalibData.xCenter:X3},{rStickCalibData.yCenter:X3}); X=[{rStickCalibData.xMin:X3} - {rStickCalibData.xMax:X3}]; Y=[{rStickCalibData.yMin:X3} - {rStickCalibData.yMax:X3}]   Final data: {rightStickVec}");
             }
-
             Vector3 thresholdGyro = (
                                 calibrationTool.UncalibratedThresholdGyro(imuData0ms) +
                                 calibrationTool.UncalibratedThresholdGyro(imuData5ms) +
