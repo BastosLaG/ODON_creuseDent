@@ -71,23 +71,8 @@ public class JoyConXRHand : MonoBehaviour
     {
         InputSystem.onEvent -= OnInputEventReadJoycon;
 
+        _joyCon.SetLEDs(LEDStatusEnum.Flashing);
         _joyCon = null;
-
-        // Flash LEDs to indicate disconnection
-        foreach (var device in InputSystem.devices)
-        {
-            Debug.Log($"Device: {device.displayName} - Type: {device.GetType()}");
-            if (device is SwitchJoyConLHID left)
-            {
-                left.SetLEDs(LEDStatusEnum.Flashing);
-                Debug.Log("Joy-Con left detect !");
-            }
-            else if (device is SwitchJoyConRHID right)
-            {
-                right.SetLEDs(LEDStatusEnum.Flashing);
-                Debug.Log("Joy-Con right detect !");
-            }
-        }
     }
     #endregion
 
@@ -131,7 +116,7 @@ public class JoyConXRHand : MonoBehaviour
     private void SetupJoyCon(SwitchControllerHID joyCon)
     {
         joyCon.SetLEDs(LEDStatusEnum.On);
-        StartCoroutine(DelayedCalibration(joyCon, _timer));
+        StartCoroutine(DelayedCalibration());
         bool success = joyCon.SetIMUEnabled(true);
         if (!success)
         {
@@ -140,11 +125,25 @@ public class JoyConXRHand : MonoBehaviour
         _joyCon = joyCon;
     }
 
-    private IEnumerator DelayedCalibration(SwitchControllerHID joyCon, float timer)
+    private IEnumerator DelayedCalibration()
     {
-        yield return new WaitForSeconds(timer);
-        joyCon.CalibrateJoycon();
+        while (_joyCon != null && _joyCon.m_calibrationTools != null &&
+            _joyCon.m_calibrationTools.GetThresholdSampleCount() < _joyCon.m_calibrationTools.GetBufferSize() - 1)
+        {
+            Debug.Log($"Threshold collect {_joyCon.m_calibrationTools.GetThresholdSampleCount()} / {_joyCon.m_calibrationTools.GetBufferSize()}");
+            yield return null;
+        }
+
+        if (_joyCon?.m_calibrationTools != null)
+        {
+            _joyCon.CalibrateJoycon();
+        }
+        else
+        {
+            Debug.LogWarning("Calibration tool is null – skipping calibration.");
+        }
     }
+
 
     #endregion
 

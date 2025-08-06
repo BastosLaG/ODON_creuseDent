@@ -19,7 +19,7 @@ namespace UnityEngine.InputSystem.Switch
             
             InputSystem.RegisterLayout<SwitchJoyConLHID>(matches: matcher);
             
-            Debug.Log("Joy-Con (L) layout registered");
+            // Debug.Log("Joy-Con (L) layout registered");
         }
         
         [RuntimeInitializeOnLoadMethod]
@@ -63,7 +63,7 @@ namespace UnityEngine.InputSystem.Switch
             
             InputSystem.RegisterLayout<SwitchJoyConRHID>(matches: matcher);
             
-            Debug.Log("Joy-Con (R) layout registered");
+            // Debug.Log("Joy-Con (R) layout registered");
         }
         
         [RuntimeInitializeOnLoadMethod]
@@ -105,7 +105,7 @@ namespace UnityEngine.InputSystem.Switch
             
             InputSystem.RegisterLayout<SwitchProControllerNewHID>(matches: matcher);
             
-            Debug.Log("Pro Controller layout registered");
+            // Debug.Log("Pro Controller layout registered");
         }
         
         [RuntimeInitializeOnLoadMethod]

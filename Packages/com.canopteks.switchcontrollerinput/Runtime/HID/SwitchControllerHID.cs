@@ -79,10 +79,11 @@ namespace UnityEngine.InputSystem.Switch
             }
         };
 
-        public IMUThresholdProcessor m_calibrationTools = new ();
+        public IMUThresholdProcessor m_calibrationTools = new();
+        
         #endregion
 
-        private Vector3 m_currentOrientation = new ();
+        private Vector3 m_currentOrientation = new();
 
         #region Generic data
         public BatteryLevelEnum BatteryLevel { get; protected set; } = BatteryLevelEnum.Empty;

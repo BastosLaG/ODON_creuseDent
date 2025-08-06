@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 namespace UnityEngine.InputSystem.Switch.LowLevel
-{ 
+{
     public class IMUThresholdProcessor
     {
         private const float kGyroSensitivity = 0.070f;
@@ -41,7 +41,6 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
         {
             if (gyroThresholdBuffer.Count >= bufferSize)
                 gyroThresholdBuffer.Dequeue();
-
             gyroThresholdBuffer.Enqueue(sample);
         }
 
@@ -62,13 +61,21 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                 gyroMinSizeThreshold = Vector3.Min(gyroMinSizeThreshold, item);
             }
 
-            Vector3 thresholdVec3Derivation = new (thresholdDerivationValue, thresholdDerivationValue, thresholdDerivationValue);
+            Vector3 thresholdVec3Derivation = new(thresholdDerivationValue, thresholdDerivationValue, thresholdDerivationValue);
 
             gyroMaxSizeThreshold += thresholdVec3Derivation;
             gyroMinSizeThreshold -= thresholdVec3Derivation;
 
             isRecording = false;
             Debug.Log($"Calibration complete. Min: {gyroMinSizeThreshold}, Max: {gyroMaxSizeThreshold}");
+        }
+        public int GetThresholdSampleCount()
+        {
+            return gyroThresholdBuffer.Count;
+        }
+        public int GetBufferSize()
+        {
+            return bufferSize;
         }
     }
 }
