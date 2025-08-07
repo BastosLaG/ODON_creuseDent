@@ -98,14 +98,16 @@ public class JoyConXRHand : MonoBehaviour
             GetOrientation(eventPtr, _joyConLeft, out Vector3 orientation);
             GetAcceleration(eventPtr, _joyConLeft, out Vector3 acceleration);
             GetAngularVelocity(eventPtr, _joyConLeft, out Vector3 angularVelocity);
+            Debug.Log($"_joyConLeft = {_joyConLeft.name} est entrain de lire les informations suivantes :\norientation - {orientation}\nacceleration - {acceleration}\nangularVelocity - {angularVelocity}");
 
             SetRotationAndPosition(angularVelocity, acceleration, orientation);
         }
-        else if (_joyConRight != null)
+        else if (!isLeftHand && _joyConRight != null)
         {
             GetOrientation(eventPtr, _joyConRight, out Vector3 orientation);
             GetAcceleration(eventPtr, _joyConRight, out Vector3 acceleration);
             GetAngularVelocity(eventPtr, _joyConRight, out Vector3 angularVelocity);
+            Debug.Log($"_joyConRight = {_joyConRight.name} est entrain de lire les informations suivantes :\norientation - {orientation}\nacceleration - {acceleration}\nangularVelocity - {angularVelocity}");
 
             SetRotationAndPosition(angularVelocity, acceleration, orientation);
         }
@@ -113,6 +115,7 @@ public class JoyConXRHand : MonoBehaviour
 
     private void SetRotationAndPosition(Vector3 angularVelocity, Vector3 orientation, Vector3 acceleration)
     {
+        Debug.Log($"{_targetTransform.name}");
         // TODO : implement logic rotation here 
         _targetTransform.rotation *= Quaternion.Euler(angularVelocity * Time.deltaTime);
     }
@@ -172,7 +175,7 @@ public class JoyConXRHand : MonoBehaviour
         // Wait until buffer fills
         while (joyCon != null && joyCon.calibrationTools.GetThresholdSampleCount() < joyCon.calibrationTools.GetBufferSize() - 1)
         {
-            Debug.Log($"Threshold collect {joyCon.calibrationTools.GetThresholdSampleCount()} / {joyCon.calibrationTools.GetBufferSize()}");
+            // Debug.Log($"Threshold collect {joyCon.calibrationTools.GetThresholdSampleCount()} / {joyCon.calibrationTools.GetBufferSize()}");
             yield return null;
         }
 
@@ -180,7 +183,6 @@ public class JoyConXRHand : MonoBehaviour
         joyCon.CalibrateJoycon();
         Debug.Log("Calibrate joycon complete");
     }
-
     #endregion
 
     #region Getter
@@ -194,7 +196,7 @@ public class JoyConXRHand : MonoBehaviour
     {
         orientation = joycon.orientation.ReadValueFromEvent(eventPtr);
     }
-    
+
     /// <summary>
     /// Gets the orientation vector from the Joy-Con.
     /// </summary>
