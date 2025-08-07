@@ -79,8 +79,8 @@ namespace UnityEngine.InputSystem.Switch
             }
         };
 
-        public IMUThresholdProcessor m_calibrationTools = new();
-        
+        public IMUThresholdProcessor calibrationTools { get; protected set; } = new();
+
         #endregion
 
         private Vector3 m_currentOrientation = new();
@@ -97,8 +97,7 @@ namespace UnityEngine.InputSystem.Switch
         #endregion
 
         #region Data re/loading
-        // Are the different device informations loaded ?
-
+        // Are the different device information loaded ?
         private bool m_IMUConfigDataLoaded = false;
         private bool m_stickConfigDataLoaded = false;
         private bool m_deviceInfoLoaded = false;
@@ -107,7 +106,6 @@ namespace UnityEngine.InputSystem.Switch
 
         // Register the time of last request to retry to fetch them in case of timeout
         private double m_stickCalibrationTimeOfLastRequest;
-        private IMUThresholdProcessor m_calibrationTool = new();
         private double m_infoTimeOfLastRequest;
         private double m_colorsTimeOfLastRequest;
         private double m_serialNumberTimeOfLastRequest;
@@ -191,7 +189,7 @@ namespace UnityEngine.InputSystem.Switch
             // TODO: Check if it's the one that fails sometimes and if so, try to put it on NextUpdate with a timeout like the others
             SetInputReportMode(InputModeEnum.Standard);
 
-            // Let the controller breathe for a sec before asking its info, color and calibration datas
+            // Let the controller breathe for a sec before asking its info, color and calibration data
             m_colorsTimeOfLastRequest = InputRuntime.s_Instance.currentTime;
             m_infoTimeOfLastRequest = InputRuntime.s_Instance.currentTime;
             m_stickCalibrationTimeOfLastRequest = InputRuntime.s_Instance.currentTime;
@@ -427,7 +425,7 @@ namespace UnityEngine.InputSystem.Switch
         //TODO : Improve these function.
         public void CalibrateJoycon()
         {
-            m_calibrationTools.Calibrate();
+            calibrationTools.Calibrate();
         }
         #endregion
 
@@ -531,7 +529,7 @@ namespace UnityEngine.InputSystem.Switch
                 ref calibrationData,
                 SpecificControllerType,
                 m_currentOrientation,
-                m_calibrationTool
+                calibrationTools
             );
 
             *(SwitchControllerVirtualInputState*)stateEvent->state = data;

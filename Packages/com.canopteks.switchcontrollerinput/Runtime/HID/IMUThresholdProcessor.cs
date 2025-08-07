@@ -13,8 +13,7 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
         private Vector3 gyroMinSizeThreshold = new(float.MaxValue, float.MaxValue, float.MaxValue);
 
         private Queue<Vector3> gyroThresholdBuffer = new();
-        private int bufferSize = 100;
-
+        private readonly int bufferSize = 100;
         public bool isRecording = false;
 
         public Vector3 UncalibratedThresholdAcceleration(IMUData raw)

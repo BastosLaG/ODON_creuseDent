@@ -3,9 +3,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Switch;
 using UnityEngine.InputSystem.LowLevel;
 using System.Collections;
-using System.Collections.Generic;
-using System;
-using UnityEngine.XR.Interaction.Toolkit.Utilities.Tweenables.Primitives;
 
 // * https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputDevice.html
 /// <summary>
@@ -20,7 +17,8 @@ public class JoyConXRHand : MonoBehaviour
     [Tooltip("Set to true if using the Left Joy-Con, false for Right Joy-Con.")]
     public bool isLeftHand = true;
 
-    [SerializeField] private SwitchControllerHID _joyCon;
+    [SerializeField] private SwitchJoyConLHID _joyConLeft;
+    [SerializeField] private SwitchJoyConRHID _joyConRight;
 
     [Header("Target Settings")]
 
@@ -33,7 +31,6 @@ public class JoyConXRHand : MonoBehaviour
     // [Tooltip("Time we need before calibration")]
     // [Range(0.0f, 5.0f)]
     // [SerializeField] private float _timer = 2.0f;
-
     #region Primary Function
     private void Start()
     {
@@ -59,22 +56,25 @@ public class JoyConXRHand : MonoBehaviour
             }
         }
     }
-
     void OnEnable()
     {
         InputSystem.onEvent += OnInputEventReadJoycon;
     }
-
     void OnDisable()
     {
         InputSystem.onEvent -= OnInputEventReadJoycon;
 
-        _joyCon.SetLEDs(LEDStatusEnum.Flashing);
+        if (isLeftHand)
+        {
+            _joyConLeft?.SetLEDs(LEDStatusEnum.Flashing);
+        }
+        else
+        {
+            _joyConRight?.SetLEDs(LEDStatusEnum.Flashing);
+        }
     }
     #endregion
-
     #region Logic Function
-
     /// <summary>
     /// Called when input events are received from any device.
     /// Filters for Joy-Con events and applies angular velocity to rotate the target transform.
@@ -93,15 +93,22 @@ public class JoyConXRHand : MonoBehaviour
             return;
         }
 
-        if (_joyCon == null)
+        if (isLeftHand && _joyConLeft != null)
         {
-            Debug.LogError("Joycon is null");
-        }
-        GetOrientation(eventPtr, out Vector3 orientation);
-        GetAcceleration(eventPtr, out Vector3 acceleration);
-        GetAngularVelocity(eventPtr, out Vector3 angularVelocity);
+            GetOrientation(eventPtr, _joyConLeft, out Vector3 orientation);
+            GetAcceleration(eventPtr, _joyConLeft, out Vector3 acceleration);
+            GetAngularVelocity(eventPtr, _joyConLeft, out Vector3 angularVelocity);
 
-        SetRotationAndPosition(angularVelocity, acceleration, orientation);
+            SetRotationAndPosition(angularVelocity, acceleration, orientation);
+        }
+        else if (_joyConRight != null)
+        {
+            GetOrientation(eventPtr, _joyConRight, out Vector3 orientation);
+            GetAcceleration(eventPtr, _joyConRight, out Vector3 acceleration);
+            GetAngularVelocity(eventPtr, _joyConRight, out Vector3 angularVelocity);
+
+            SetRotationAndPosition(angularVelocity, acceleration, orientation);
+        }
     }
 
     private void SetRotationAndPosition(Vector3 angularVelocity, Vector3 orientation, Vector3 acceleration)
@@ -110,71 +117,93 @@ public class JoyConXRHand : MonoBehaviour
         _targetTransform.rotation *= Quaternion.Euler(angularVelocity * Time.deltaTime);
     }
 
-    private void SetupJoyCon(SwitchControllerHID joyCon)
+    private void SetupJoyCon(SwitchJoyConLHID joyCon)
     {
         joyCon.SetLEDs(LEDStatusEnum.On);
-        StartCoroutine(DelayedCalibration());
+        StartCoroutine(DelayedCalibration(joyCon));
         bool success = joyCon.SetIMUEnabled(true);
         if (!success)
         {
             Debug.LogWarning("Failed to enable IMU on Switch controller.");
         }
-        _joyCon = joyCon;
+        _joyConLeft = joyCon;
+    }
+    private void SetupJoyCon(SwitchJoyConRHID joyCon)
+    {
+        joyCon.SetLEDs(LEDStatusEnum.On);
+        StartCoroutine(DelayedCalibration(joyCon));
+        bool success = joyCon.SetIMUEnabled(true);
+        if (!success)
+        {
+            Debug.LogWarning("Failed to enable IMU on Switch controller.");
+        }
+        _joyConRight = joyCon;
     }
 
-    private IEnumerator DelayedCalibration()
+    private IEnumerator DelayedCalibration(SwitchJoyConRHID joyCon)
     {
         // Wait until calibration tools exist
-        while (_joyCon != null && _joyCon.m_calibrationTools == null)
+        while (joyCon != null && joyCon.calibrationTools == null)
         {
             Debug.Log("Wait until calibration tools exist...");
             yield return null;
         }
 
         // Wait until buffer fills
-        while (_joyCon != null && _joyCon.m_calibrationTools.GetThresholdSampleCount() < _joyCon.m_calibrationTools.GetBufferSize() - 1)
+        while (joyCon != null && joyCon.calibrationTools.GetThresholdSampleCount() < joyCon.calibrationTools.GetBufferSize() - 1)
         {
-            Debug.Log($"Threshold collect {_joyCon.m_calibrationTools.GetThresholdSampleCount()} / {_joyCon.m_calibrationTools.GetBufferSize()}");
+            Debug.Log($"Threshold collect {joyCon.calibrationTools.GetThresholdSampleCount()} / {joyCon.calibrationTools.GetBufferSize()}");
             yield return null;
         }
 
         Debug.Log("Try to calibrate joycon...");
-        _joyCon.CalibrateJoycon();
+        joyCon.CalibrateJoycon();
+        Debug.Log("Calibrate joycon complete");
+    }
+    private IEnumerator DelayedCalibration(SwitchJoyConLHID joyCon)
+    {
+        // Wait until calibration tools exist
+        while (joyCon != null && joyCon.calibrationTools == null)
+        {
+            Debug.Log("Wait until calibration tools exist...");
+            yield return null;
+        }
+
+        // Wait until buffer fills
+        while (joyCon != null && joyCon.calibrationTools.GetThresholdSampleCount() < joyCon.calibrationTools.GetBufferSize() - 1)
+        {
+            Debug.Log($"Threshold collect {joyCon.calibrationTools.GetThresholdSampleCount()} / {joyCon.calibrationTools.GetBufferSize()}");
+            yield return null;
+        }
+
+        Debug.Log("Try to calibrate joycon...");
+        joyCon.CalibrateJoycon();
         Debug.Log("Calibrate joycon complete");
     }
 
     #endregion
 
     #region Getter
-
     /// <summary>
     /// Gets the orientation vector from the Joy-Con.
     /// </summary>
     /// <param name="eventPtr"></param>
-    /// <param name="device"></param>
-    /// <returns></returns>
-    private Vector3 GetOrientation(InputEventPtr eventPtr)
-    {
-        return _joyCon.orientation.ReadValueFromEvent(eventPtr);
-    }
-    /// <summary>
-    /// Gets the orientation vector from the Joy-Con.
-    /// </summary>
-    /// <param name="eventPtr"></param>
+    /// <param name="joycon"></param>
     /// <param name="orientation"></param>
-    private void GetOrientation(InputEventPtr eventPtr, out Vector3 orientation)
+    private void GetOrientation(InputEventPtr eventPtr, SwitchJoyConLHID joycon, out Vector3 orientation)
     {
-        orientation = _joyCon.orientation.ReadValueFromEvent(eventPtr);
+        orientation = joycon.orientation.ReadValueFromEvent(eventPtr);
     }
-
+    
     /// <summary>
-    /// Gets the angular velocity vector from the Joy-Con.
+    /// Gets the orientation vector from the Joy-Con.
     /// </summary>
     /// <param name="eventPtr"></param>
-    /// <returns></returns>
-    private Vector3 GetAngularVelocity(InputEventPtr eventPtr)
+    /// <param name="joycon"></param>
+    /// <param name="orientation"></param>
+    private void GetOrientation(InputEventPtr eventPtr, SwitchJoyConRHID joycon, out Vector3 orientation)
     {
-        return _joyCon.angularVelocity.ReadValueFromEvent(eventPtr);
+        orientation = joycon.orientation.ReadValueFromEvent(eventPtr);
     }
 
     /// <summary>
@@ -182,19 +211,18 @@ public class JoyConXRHand : MonoBehaviour
     /// </summary>
     /// <param name="eventPtr"></param>
     /// <param name="angularVelocity"></param>
-    private void GetAngularVelocity(InputEventPtr eventPtr, out Vector3 angularVelocity)
+    private void GetAngularVelocity(InputEventPtr eventPtr, SwitchJoyConLHID joycon, out Vector3 angularVelocity)
     {
-        angularVelocity = _joyCon.angularVelocity.ReadValueFromEvent(eventPtr);
+        angularVelocity = joycon.angularVelocity.ReadValueFromEvent(eventPtr);
     }
-
     /// <summary>
-    /// Gets the acceleration vector from the Joy-Con.
+    /// Gets the angular velocity vector from the Joy-Con.
     /// </summary>
     /// <param name="eventPtr"></param>
-    /// <returns></returns>
-    private Vector3 GetAcceleration(InputEventPtr eventPtr)
+    /// <param name="angularVelocity"></param>
+    private void GetAngularVelocity(InputEventPtr eventPtr, SwitchJoyConRHID joycon, out Vector3 angularVelocity)
     {
-        return _joyCon.acceleration.ReadValueFromEvent(eventPtr);
+        angularVelocity = joycon.angularVelocity.ReadValueFromEvent(eventPtr);
     }
 
     /// <summary>
@@ -202,9 +230,18 @@ public class JoyConXRHand : MonoBehaviour
     /// </summary>
     /// <param name="eventPtr"></param>
     /// <param name="acceleration"></param>
-    private void GetAcceleration(InputEventPtr eventPtr, out Vector3 acceleration)
+    private void GetAcceleration(InputEventPtr eventPtr, SwitchJoyConLHID joycon, out Vector3 acceleration)
     {
-        acceleration = _joyCon.acceleration.ReadValueFromEvent(eventPtr);
+        acceleration = joycon.acceleration.ReadValueFromEvent(eventPtr);
+    }
+    /// <summary>
+    /// Gets the acceleration vector from the Joy-Con.
+    /// </summary>
+    /// <param name="eventPtr"></param>
+    /// <param name="acceleration"></param>
+    private void GetAcceleration(InputEventPtr eventPtr, SwitchJoyConRHID joycon, out Vector3 acceleration)
+    {
+        acceleration = joycon.acceleration.ReadValueFromEvent(eventPtr);
     }
     #endregion
 }
