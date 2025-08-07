@@ -45,7 +45,7 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
 
         public void Calibrate()
         {
-            if (gyroThresholdBuffer.Count < bufferSize)
+            if (gyroThresholdBuffer.Count < bufferSize-1)
             {
                 Debug.LogWarning("Not enough samples to calibrate.");
                 return;
