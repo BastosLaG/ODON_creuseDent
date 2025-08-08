@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace UnityEngine.InputSystem.Switch.LowLevel
 {
@@ -7,12 +9,15 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
         private const float kGyroSensitivity = 0.070f;
         private const float kAccelSensitivity = 0.000244f;
 
-        private const float thresholdDerivationValue = 0.5f;
+        private float adaptiveThreshold = 0.01f;
 
-        private Vector3 gyroMaxSizeThreshold = new(float.MinValue, float.MinValue, float.MinValue);
-        private Vector3 gyroMinSizeThreshold = new(float.MaxValue, float.MaxValue, float.MaxValue);
+        private Vector3 gyroNoiseMean = Vector3.zero;
+        private Vector3 gyroNoiseDeviation = Vector3.zero;
 
-        private Queue<Vector3> gyroThresholdBuffer = new();
+        private Vector3 lastControlGyro = Vector3.zero;
+        public ref Vector3 LastControlGyro => ref lastControlGyro;
+
+        private readonly Queue<Vector3> gyroThresholdBuffer = new();
         private readonly int bufferSize = 100;
         public bool isRecording = false;
 
@@ -23,17 +28,7 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
 
         public Vector3 UncalibratedThresholdGyro(IMUData raw)
         {
-            Vector3 temp = new Vector3(raw.gyro1, raw.gyro2, raw.gyro3) * kGyroSensitivity;
-            Vector3 gyro = Vector3.zero;
-
-            if (temp.x < gyroMinSizeThreshold.x || temp.x > gyroMaxSizeThreshold.x)
-                gyro.x = temp.x;
-            if (temp.y < gyroMinSizeThreshold.y || temp.y > gyroMaxSizeThreshold.y)
-                gyro.y = temp.y;
-            if (temp.z < gyroMinSizeThreshold.z || temp.z > gyroMaxSizeThreshold.z)
-                gyro.z = temp.z;
-
-            return gyro;
+            return new Vector3(raw.gyro1, raw.gyro2, raw.gyro3) * kGyroSensitivity;
         }
 
         public void FeedGyroSample(Vector3 sample)
@@ -45,36 +40,48 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
 
         public void Calibrate()
         {
-            if (gyroThresholdBuffer.Count < bufferSize-1)
+            if (gyroThresholdBuffer.Count < bufferSize - 1)
             {
                 Debug.LogWarning("Not enough samples to calibrate.");
                 return;
             }
 
-            gyroMaxSizeThreshold = new Vector3(float.MinValue, float.MinValue, float.MinValue);
-            gyroMinSizeThreshold = new Vector3(float.MaxValue, float.MaxValue, float.MaxValue);
-
+            // Calculate mean
+            Vector3 sum = Vector3.zero;
             foreach (var item in gyroThresholdBuffer)
-            {
-                gyroMaxSizeThreshold = Vector3.Max(gyroMaxSizeThreshold, item);
-                gyroMinSizeThreshold = Vector3.Min(gyroMinSizeThreshold, item);
-            }
+                sum += item;
+            gyroNoiseMean = sum / gyroThresholdBuffer.Count;
 
-            Vector3 thresholdVec3Derivation = new(thresholdDerivationValue, thresholdDerivationValue, thresholdDerivationValue);
+            // Calculate deviation (absolute average difference from mean)
+            Vector3 deviationSum = Vector3.zero;
+            foreach (var item in gyroThresholdBuffer)
+                deviationSum += new Vector3(
+                    Mathf.Abs(item.x - gyroNoiseMean.x),
+                    Mathf.Abs(item.y - gyroNoiseMean.y),
+                    Mathf.Abs(item.z - gyroNoiseMean.z)
+                );
 
-            gyroMaxSizeThreshold += thresholdVec3Derivation;
-            gyroMinSizeThreshold -= thresholdVec3Derivation;
+            gyroNoiseDeviation = deviationSum / gyroThresholdBuffer.Count;
+
+            // Adaptive threshold = average magnitude of deviation
+            adaptiveThreshold = gyroNoiseDeviation.magnitude;
 
             isRecording = false;
-            Debug.Log($"Calibration complete. Min: {gyroMinSizeThreshold}, Max: {gyroMaxSizeThreshold}");
+            Debug.Log($"Calibration complete. Noise mean: {gyroNoiseMean}, deviation: {gyroNoiseDeviation}, adaptive threshold: {adaptiveThreshold}");
         }
-        public int GetThresholdSampleCount()
+
+        public bool IsActuatedGyro(Vector3 currentAngularVelocity)
         {
-            return gyroThresholdBuffer.Count;
+            float delta = (currentAngularVelocity - lastControlGyro).magnitude;
+            if (delta >= adaptiveThreshold)
+            {
+                lastControlGyro = currentAngularVelocity;
+                return true;
+            }
+            return false;
         }
-        public int GetBufferSize()
-        {
-            return bufferSize;
-        }
+
+        public int GetThresholdSampleCount() => gyroThresholdBuffer.Count;
+        public int GetBufferSize() => bufferSize;
     }
 }

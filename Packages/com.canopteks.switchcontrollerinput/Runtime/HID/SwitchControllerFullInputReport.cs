@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using UnityEngine.InputSystem;
 
 namespace UnityEngine.InputSystem.Switch.LowLevel
 {
@@ -85,6 +86,8 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
 
                 // Debug.Log($"Right stick data: Raw: ({rawRightStickHoriz:X3};{rawRightStickVert:X3}) Calibration data: Center=({rStickCalibData.xCenter:X3},{rStickCalibData.yCenter:X3}); X=[{rStickCalibData.xMin:X3} - {rStickCalibData.xMax:X3}]; Y=[{rStickCalibData.yMin:X3} - {rStickCalibData.yMax:X3}]   Final data: {rightStickVec}");
             }
+
+            
             Vector3 thresholdGyro = (
                                 calibrationTool.UncalibratedThresholdGyro(imuData0ms) +
                                 calibrationTool.UncalibratedThresholdGyro(imuData5ms) +
@@ -92,6 +95,11 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                                 ) / 3f;
 
             calibrationTool.FeedGyroSample(thresholdGyro);
+
+            if (calibrationTool.IsActuatedGyro(thresholdGyro))
+                calibrationTool.LastControlGyro = thresholdGyro;
+            else
+                thresholdGyro = Vector3.zero;
 
             Vector3 thresholdAccel = (
                                 calibrationTool.UncalibratedThresholdAcceleration(imuData0ms) +

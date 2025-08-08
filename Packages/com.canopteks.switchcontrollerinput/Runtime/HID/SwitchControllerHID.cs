@@ -426,6 +426,7 @@ namespace UnityEngine.InputSystem.Switch
         public void CalibrateJoycon()
         {
             calibrationTools.Calibrate();
+            // TODO : Current rotation set to Vector3.zero ? 
         }
         #endregion
 
