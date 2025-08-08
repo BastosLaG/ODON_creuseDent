@@ -93,16 +93,16 @@ public class JoyConXRHand : MonoBehaviour
             return;
         }
 
-        if (isLeftHand && _joyConLeft != null)
+        if (isLeftHand && device is SwitchJoyConLHID)
         {
             GetOrientation(eventPtr, _joyConLeft, out Vector3 orientation);
             GetAcceleration(eventPtr, _joyConLeft, out Vector3 acceleration);
             GetAngularVelocity(eventPtr, _joyConLeft, out Vector3 angularVelocity);
-            // Debug.Log($"_joyConLeft = {_joyConLeft.name} est entrain de lire les informations suivantes :\norientation - {orientation}\nacceleration - {acceleration}\nangularVelocity - {angularVelocity}");
+            // Debug.Log($"_joyConLeft = {_joyConLeft.name} est entrain de lire les informations suivantes : \nangularVelocity - {angularVelocity}");
 
             SetRotationAndPosition(angularVelocity, acceleration, orientation);
         }
-        else if (!isLeftHand && _joyConRight != null)
+        else if (!isLeftHand && device is SwitchJoyConRHID)
         {
             GetOrientation(eventPtr, _joyConRight, out Vector3 orientation);
             GetAcceleration(eventPtr, _joyConRight, out Vector3 acceleration);
@@ -115,7 +115,7 @@ public class JoyConXRHand : MonoBehaviour
 
     private void SetRotationAndPosition(Vector3 angularVelocity, Vector3 orientation, Vector3 acceleration)
     {
-        Debug.Log($"{_targetTransform.name}");
+        // Debug.Log($"{_targetTransform.name}");
         // TODO : implement logic rotation here 
         _targetTransform.rotation *= Quaternion.Euler(angularVelocity * Time.deltaTime);
     }
@@ -153,15 +153,15 @@ public class JoyConXRHand : MonoBehaviour
         }
 
         // Wait until buffer fills
-        while (joyCon != null && joyCon.calibrationTools.GetThresholdSampleCount() < joyCon.calibrationTools.GetBufferSize() - 1)
+        while (joyCon != null && joyCon.calibrationTools.GetThresholdSampleCount() < joyCon.calibrationTools.GetBufferSize())
         {
-            Debug.Log($"Threshold collect {joyCon.calibrationTools.GetThresholdSampleCount()} / {joyCon.calibrationTools.GetBufferSize()}");
+            Debug.Log($"{joyCon.name} : Threshold collect {joyCon.calibrationTools.GetThresholdSampleCount()} / {joyCon.calibrationTools.GetBufferSize()}");
             yield return null;
         }
 
-        Debug.Log("Try to calibrate joycon...");
+        Debug.Log($"Try to calibrate joycon {joyCon.name}...");
         joyCon.CalibrateJoycon();
-        Debug.Log("Calibrate joycon complete");
+        Debug.Log($"Calibrate joycon complete {joyCon.name}");
     }
     private IEnumerator DelayedCalibration(SwitchJoyConLHID joyCon)
     {
@@ -173,15 +173,15 @@ public class JoyConXRHand : MonoBehaviour
         }
 
         // Wait until buffer fills
-        while (joyCon != null && joyCon.calibrationTools.GetThresholdSampleCount() < joyCon.calibrationTools.GetBufferSize() - 1)
+        while (joyCon != null && joyCon.calibrationTools.GetThresholdSampleCount() < joyCon.calibrationTools.GetBufferSize())
         {
-            // Debug.Log($"Threshold collect {joyCon.calibrationTools.GetThresholdSampleCount()} / {joyCon.calibrationTools.GetBufferSize()}");
+            Debug.Log($"{joyCon.name} : Threshold collect {joyCon.calibrationTools.GetThresholdSampleCount()} / {joyCon.calibrationTools.GetBufferSize()}");
             yield return null;
         }
 
-        Debug.Log("Try to calibrate joycon...");
+        Debug.Log($"Try to calibrate joycon {joyCon.name}...");
         joyCon.CalibrateJoycon();
-        Debug.Log("Calibrate joycon complete");
+        Debug.Log($"Calibrate joycon complete {joyCon.name}");
     }
     #endregion
 
@@ -215,7 +215,10 @@ public class JoyConXRHand : MonoBehaviour
     /// <param name="angularVelocity"></param>
     private void GetAngularVelocity(InputEventPtr eventPtr, SwitchJoyConLHID joycon, out Vector3 angularVelocity)
     {
-        angularVelocity = joycon.angularVelocity.ReadValueFromEvent(eventPtr);
+        if (isLeftHand)
+            angularVelocity = joycon.angularVelocity.ReadValueFromEvent(eventPtr);
+        else
+            angularVelocity = Vector3.zero;
     }
     /// <summary>
     /// Gets the angular velocity vector from the Joy-Con.
@@ -224,7 +227,10 @@ public class JoyConXRHand : MonoBehaviour
     /// <param name="angularVelocity"></param>
     private void GetAngularVelocity(InputEventPtr eventPtr, SwitchJoyConRHID joycon, out Vector3 angularVelocity)
     {
-        angularVelocity = joycon.angularVelocity.ReadValueFromEvent(eventPtr);
+        if (!isLeftHand)
+            angularVelocity = joycon.angularVelocity.ReadValueFromEvent(eventPtr);
+        else
+            angularVelocity = Vector3.zero;
     }
 
     /// <summary>
