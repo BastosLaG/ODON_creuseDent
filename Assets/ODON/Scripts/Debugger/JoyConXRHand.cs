@@ -117,7 +117,15 @@ public class JoyConXRHand : MonoBehaviour
     {
         // Debug.Log($"{_targetTransform.name}");
         // TODO : implement logic rotation here 
-        _targetTransform.rotation *= Quaternion.Euler(angularVelocity * Time.deltaTime);
+
+        // refer to image "Image representing axes of rotation" 
+        // * https://docs.google.com/document/d/10VK9m2KR3QEqI6O3c_fvIAioycqBt9m39Piq4ZZ_TYY/edit?tab=t.0 
+        float tempX = angularVelocity.x;
+        float tempY = angularVelocity.x;
+        float tempZ = angularVelocity.x;
+        Vector3 correctedAngularVelocity = new(tempY, tempZ, tempX);
+
+        _targetTransform.rotation *= Quaternion.Euler(90f * Time.deltaTime * acceleration);
     }
 
     private void SetupJoyCon(SwitchJoyConLHID joyCon)
