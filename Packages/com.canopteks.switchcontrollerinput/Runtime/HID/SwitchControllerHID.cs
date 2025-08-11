@@ -426,7 +426,9 @@ namespace UnityEngine.InputSystem.Switch
         public void CalibrateJoycon()
         {
             calibrationTools.Calibrate();
-            // TODO : Current rotation set to Vector3.zero ? 
+
+            // Reset current orientation
+            m_currentOrientation = Vector3.zero;
         }
         #endregion
 
@@ -535,7 +537,7 @@ namespace UnityEngine.InputSystem.Switch
 
             *(SwitchControllerVirtualInputState*)stateEvent->state = data;
             stateEvent->stateFormat = SwitchControllerVirtualInputState.Format;
-            m_currentOrientation += data.angularVelocity;
+            m_currentOrientation = data.orientation;
         }
 
 

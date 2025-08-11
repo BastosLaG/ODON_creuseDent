@@ -24,13 +24,8 @@ public class JoyConXRHand : MonoBehaviour
 
     [Tooltip("The transform that will be rotated by Joy-Con input.")]
     [SerializeField] private Transform _targetTransform;
+    private float angularVelocity_Z_Axis = 0;
 
-    // [Tooltip("Optional rotation scaling or clamping (not used in current logic).")]
-    // [Range(0, 360)]
-    // [SerializeField] private double _rotationValue = 90.0;
-    // [Tooltip("Time we need before calibration")]
-    // [Range(0.0f, 5.0f)]
-    // [SerializeField] private float _timer = 2.0f;
     #region Primary Function
     private void Start()
     {
@@ -100,7 +95,7 @@ public class JoyConXRHand : MonoBehaviour
             GetAngularVelocity(eventPtr, _joyConLeft, out Vector3 angularVelocity);
             // Debug.Log($"_joyConLeft = {_joyConLeft.name} est entrain de lire les informations suivantes : \nangularVelocity - {angularVelocity}");
 
-            SetRotationAndPosition(angularVelocity, acceleration, orientation);
+            SetRotationAndPosition(angularVelocity, orientation, acceleration);
         }
         else if (!isLeftHand && device is SwitchJoyConRHID)
         {
@@ -109,7 +104,7 @@ public class JoyConXRHand : MonoBehaviour
             GetAngularVelocity(eventPtr, _joyConRight, out Vector3 angularVelocity);
             // Debug.Log($"_joyConRight = {_joyConRight.name} est entrain de lire les informations suivantes :\norientation - {orientation}\nacceleration - {acceleration}\nangularVelocity - {angularVelocity}");
 
-            SetRotationAndPosition(angularVelocity, acceleration, orientation);
+            SetRotationAndPosition(angularVelocity, orientation, acceleration);
         }
     }
 
@@ -120,12 +115,15 @@ public class JoyConXRHand : MonoBehaviour
 
         // refer to image "Image representing axes of rotation" 
         // * https://docs.google.com/document/d/10VK9m2KR3QEqI6O3c_fvIAioycqBt9m39Piq4ZZ_TYY/edit?tab=t.0 
-        float tempX = angularVelocity.x;
-        float tempY = angularVelocity.x;
-        float tempZ = angularVelocity.x;
-        Vector3 correctedAngularVelocity = new(tempY, tempZ, tempX);
 
-        _targetTransform.rotation *= Quaternion.Euler(90f * Time.deltaTime * acceleration);
+        angularVelocity_Z_Axis += angularVelocity.z;
+
+        Vector3 correctedRotation = new(-acceleration.x * 90, angularVelocity_Z_Axis, acceleration.y * 90);
+
+        // Utiliser angularVelocity pour rotation relative
+
+        Quaternion rotationTarget = Quaternion.Euler(correctedRotation);
+        _targetTransform.localRotation = rotationTarget;
     }
 
     private void SetupJoyCon(SwitchJoyConLHID joyCon)

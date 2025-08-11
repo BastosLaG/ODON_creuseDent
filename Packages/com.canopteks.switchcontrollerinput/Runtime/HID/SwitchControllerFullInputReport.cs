@@ -88,11 +88,11 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
             }
 
             
-            Vector3 thresholdGyro = (
-                                calibrationTool.UncalibratedThresholdGyro(imuData0ms) +
-                                calibrationTool.UncalibratedThresholdGyro(imuData5ms) +
-                                calibrationTool.UncalibratedThresholdGyro(imuData10ms)
-                                ) / 3f;
+            Vector3 thresholdGyro = (calibrationTool.UncalibratedThresholdGyro(imuData0ms) +
+                                    calibrationTool.UncalibratedThresholdGyro(imuData5ms) +
+                                    calibrationTool.UncalibratedThresholdGyro(imuData10ms))
+                                    / 3f
+                                    * Time.deltaTime;
 
             calibrationTool.FeedGyroSample(thresholdGyro);
 

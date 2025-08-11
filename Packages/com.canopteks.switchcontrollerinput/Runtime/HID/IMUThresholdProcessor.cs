@@ -23,7 +23,9 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
 
         public Vector3 UncalibratedThresholdAcceleration(IMUData raw)
         {
-            return new Vector3(raw.accelX, raw.accelY, raw.accelZ) * kAccelSensitivity;
+            Vector3 thresholdAcceleration = new Vector3(raw.accelX, raw.accelY, raw.accelZ) * kAccelSensitivity;
+            thresholdAcceleration.z += 1.0f;
+            return thresholdAcceleration;
         }
 
         public Vector3 UncalibratedThresholdGyro(IMUData raw)
@@ -61,7 +63,7 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                     Mathf.Abs(item.z - gyroNoiseMean.z)
                 );
 
-            gyroNoiseDeviation = deviationSum / gyroThresholdBuffer.Count;
+            gyroNoiseDeviation = deviationSum / (gyroThresholdBuffer.Count-1);
 
             // Adaptive threshold = average magnitude of deviation
             adaptiveThreshold = gyroNoiseDeviation.magnitude;
