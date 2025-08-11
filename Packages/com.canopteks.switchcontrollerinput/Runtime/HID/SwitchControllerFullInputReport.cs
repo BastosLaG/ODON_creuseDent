@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using UnityEngine.InputSystem;
 
 namespace UnityEngine.InputSystem.Switch.LowLevel
 {
@@ -46,81 +43,69 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
 
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public SwitchControllerVirtualInputState ToHIDInputReport(ref SwitchControllerHID.CalibrationData calibData, SpecificControllerTypeEnum controllerType, Vector3 currentOrientation, IMUThresholdProcessor calibrationTool)
+        public SwitchControllerVirtualInputState ToHIDInputReport(
+            ref SwitchControllerHID.CalibrationData calibData,
+            SpecificControllerTypeEnum controllerType,
+            Quaternion currentOrientation,
+            IMUThresholdProcessor ukfFilter)
         {
+            // --- Lecture des sticks analogiques ---
+            Vector2 leftStickVec = Vector2.zero;
+            Vector2 rightStickVec = Vector2.zero;
 
-            var leftStickVec = Vector2.zero;
-            var rightStickVec = Vector2.zero;
+            // Left Stick
             if (controllerType == SpecificControllerTypeEnum.LeftJoyCon ||
                 controllerType == SpecificControllerTypeEnum.ProController)
             {
-                // Left analog stick data
-                var lStickCalibData = calibData.lStickCalibData;
+                var lCalib = calibData.lStickCalibData;
                 var l0 = leftStick[0];
                 var l1 = leftStick[1];
                 var l2 = leftStick[2];
-                var rawLeftStickHoriz = l0 | ((l1 & 0xF) << 8);
-                var rawLeftStickVert = (l1 >> 4) | (l2 << 4);
+                var rawX = l0 | ((l1 & 0xF) << 8);
+                var rawY = (l1 >> 4) | (l2 << 4);
 
-                var leftStickX = (Mathf.InverseLerp(lStickCalibData.xMin, lStickCalibData.xMax, rawLeftStickHoriz) * 2) - 1;
-                var leftStickY = (Mathf.InverseLerp(lStickCalibData.yMin, lStickCalibData.yMax, rawLeftStickVert) * 2) - 1;
-                leftStickVec = new Vector2(leftStickX, leftStickY);
-
-                // Debug.Log($"Left stick data: Raw: ({rawLeftStickHoriz:X3};{rawLeftStickVert:X3}) Calibration data: Center=({lStickCalibData.xCenter:X3},{lStickCalibData.yCenter:X3}); X=[{lStickCalibData.xMin:X3} - {lStickCalibData.xMax:X3}]; Y=[{lStickCalibData.yMin:X3} - {lStickCalibData.yMax:X3}]   Final data: {leftStickVec}");
+                float x = (Mathf.InverseLerp(lCalib.xMin, lCalib.xMax, rawX) * 2) - 1;
+                float y = (Mathf.InverseLerp(lCalib.yMin, lCalib.yMax, rawY) * 2) - 1;
+                leftStickVec = new Vector2(x, y);
             }
 
+            // Right Stick
             if (controllerType == SpecificControllerTypeEnum.RightJoyCon ||
                 controllerType == SpecificControllerTypeEnum.ProController)
             {
-                // Right analog stick data
-                var rStickCalibData = calibData.rStickCalibData;
+                var rCalib = calibData.rStickCalibData;
                 var r0 = rightStick[0];
                 var r1 = rightStick[1];
                 var r2 = rightStick[2];
-                var rawRightStickHoriz = r0 | ((r1 & 0xF) << 8);
-                var rawRightStickVert = (r1 >> 4) | (r2 << 4);
+                var rawX = r0 | ((r1 & 0xF) << 8);
+                var rawY = (r1 >> 4) | (r2 << 4);
 
-                var rightStickX = (Mathf.InverseLerp(rStickCalibData.xMin, rStickCalibData.xMax, rawRightStickHoriz) * 2) - 1;
-                var rightStickY = (Mathf.InverseLerp(rStickCalibData.yMin, rStickCalibData.yMax, rawRightStickVert) * 2) - 1;
-                rightStickVec = new Vector2(rightStickX, rightStickY);
-
-                // Debug.Log($"Right stick data: Raw: ({rawRightStickHoriz:X3};{rawRightStickVert:X3}) Calibration data: Center=({rStickCalibData.xCenter:X3},{rStickCalibData.yCenter:X3}); X=[{rStickCalibData.xMin:X3} - {rStickCalibData.xMax:X3}]; Y=[{rStickCalibData.yMin:X3} - {rStickCalibData.yMax:X3}]   Final data: {rightStickVec}");
+                float x = (Mathf.InverseLerp(rCalib.xMin, rCalib.xMax, rawX) * 2) - 1;
+                float y = (Mathf.InverseLerp(rCalib.yMin, rCalib.yMax, rawY) * 2) - 1;
+                rightStickVec = new Vector2(x, y);
             }
 
-            
-            Vector3 thresholdGyro = (calibrationTool.UncalibratedThresholdGyro(imuData0ms) +
-                                    calibrationTool.UncalibratedThresholdGyro(imuData5ms) +
-                                    calibrationTool.UncalibratedThresholdGyro(imuData10ms))
-                                    / 3f
-                                    * Time.deltaTime;
+            // --- Lecture IMU & UKF ---
+            ProcessIMUSample(imuData0ms, ukfFilter.Ukf);
+            ProcessIMUSample(imuData5ms, ukfFilter.Ukf);
+            ProcessIMUSample(imuData10ms, ukfFilter.Ukf);
 
-            calibrationTool.FeedGyroSample(thresholdGyro);
+            // Orientation estimée par le filtre
+            Quaternion fusedOrientation = ukfFilter.Ukf.GetOrientation();
 
-            if (calibrationTool.IsActuatedGyro(thresholdGyro))
-                calibrationTool.LastControlGyro = thresholdGyro;
-            else
-                thresholdGyro = Vector3.zero;
+            ukfFilter.FeedGyroSample(fusedOrientation.eulerAngles);
 
-            Vector3 thresholdAccel = (
-                                calibrationTool.UncalibratedThresholdAcceleration(imuData0ms) +
-                                calibrationTool.UncalibratedThresholdAcceleration(imuData5ms) +
-                                calibrationTool.UncalibratedThresholdAcceleration(imuData10ms)
-                                ) / 3f;
-
-            SwitchControllerVirtualInputState state;
-
-            // Debug.Log($"Creating input stuff: right stick is {rightStickVec}");
-            state = new SwitchControllerVirtualInputState
+            // --- Création état final ---
+            SwitchControllerVirtualInputState state = new SwitchControllerVirtualInputState
             {
                 leftStick = leftStickVec,
                 rightStick = rightStickVec,
-                // TODO: Calibrate these bad boys 
-                // Know we have an experimental Threshold to calibrate these bad boys 
-                acceleration = thresholdAccel,
-                angularVelocity = thresholdGyro,
-                orientation = currentOrientation + thresholdGyro,
+                acceleration = ukfFilter.Ukf.LastAccel,
+                angularVelocity = ukfFilter.Ukf.LastGyro,
+                orientation = fusedOrientation.eulerAngles
             };
 
+            // --- Boutons ---
             state.Set(SwitchControllerVirtualInputState.Button.Y, (rightButtons & 0x01) != 0);
             state.Set(SwitchControllerVirtualInputState.Button.X, (rightButtons & 0x02) != 0);
             state.Set(SwitchControllerVirtualInputState.Button.B, (rightButtons & 0x04) != 0);
@@ -142,6 +127,20 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
 
             return state;
         }
+
+        // --- Traitement d’un échantillon IMU ---
+        private void ProcessIMUSample(IMUData imu, UKFIMU ukf)
+        {
+            // Conversion en unités physiques (à adapter selon ton calibrage)
+            Vector3 accel = new Vector3(imu.accelX, imu.accelY, imu.accelZ) * 0.00025f;
+            Vector3 gyro = new Vector3(imu.gyro1, imu.gyro2, imu.gyro3) * 0.061f; // en deg/s
+
+            // Passage au UKF
+            ukf.Predict(gyro, Time.deltaTime);
+            ukf.Update(accel);
+        }
+
+
     }
 
     [StructLayout(LayoutKind.Explicit, Size = 12)]

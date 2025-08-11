@@ -83,7 +83,7 @@ namespace UnityEngine.InputSystem.Switch
 
         #endregion
 
-        private Vector3 m_currentOrientation = new();
+        private Quaternion m_currentOrientation = new();
 
         #region Generic data
         public BatteryLevelEnum BatteryLevel { get; protected set; } = BatteryLevelEnum.Empty;
@@ -423,12 +423,15 @@ namespace UnityEngine.InputSystem.Switch
         }
 
         //TODO : Improve these function.
+        public void StartRecordingCalibration()
+        {
+            calibrationTools.StartRecording();
+        }
         public void CalibrateJoycon()
         {
-            calibrationTools.Calibrate();
-
+            calibrationTools.StopAndCalibrate();
             // Reset current orientation
-            m_currentOrientation = Vector3.zero;
+            m_currentOrientation.eulerAngles = Vector3.zero;
         }
         #endregion
 
@@ -537,7 +540,7 @@ namespace UnityEngine.InputSystem.Switch
 
             *(SwitchControllerVirtualInputState*)stateEvent->state = data;
             stateEvent->stateFormat = SwitchControllerVirtualInputState.Format;
-            m_currentOrientation = data.orientation;
+            m_currentOrientation.eulerAngles = data.orientation;
         }
 
 
