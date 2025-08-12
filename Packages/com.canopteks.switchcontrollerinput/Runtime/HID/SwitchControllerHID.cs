@@ -423,13 +423,9 @@ namespace UnityEngine.InputSystem.Switch
         }
 
         //TODO : Improve these function.
-        public void StartRecordingCalibration()
-        {
-            calibrationTools.StartRecording();
-        }
         public void CalibrateJoycon()
         {
-            calibrationTools.StopAndCalibrate();
+            calibrationTools.Calibrate();
             // Reset current orientation
             m_currentOrientation.eulerAngles = Vector3.zero;
         }
@@ -534,7 +530,7 @@ namespace UnityEngine.InputSystem.Switch
             var data = fullInputReport->ToHIDInputReport(
                 ref calibrationData,
                 SpecificControllerType,
-                m_currentOrientation,
+                m_currentOrientation.eulerAngles,
                 calibrationTools
             );
 

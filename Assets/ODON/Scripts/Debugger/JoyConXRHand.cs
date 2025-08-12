@@ -129,7 +129,6 @@ public class JoyConXRHand : MonoBehaviour
     private void SetupJoyCon(SwitchJoyConLHID joyCon)
     {
         joyCon.SetLEDs(LEDStatusEnum.On);
-        joyCon.StartRecordingCalibration();
         StartCoroutine(DelayedCalibration(joyCon));
         bool success = joyCon.SetIMUEnabled(true);
         if (!success)
@@ -141,7 +140,6 @@ public class JoyConXRHand : MonoBehaviour
     private void SetupJoyCon(SwitchJoyConRHID joyCon)
     {
         joyCon.SetLEDs(LEDStatusEnum.On);
-        joyCon.StartRecordingCalibration();
         StartCoroutine(DelayedCalibration(joyCon));
         bool success = joyCon.SetIMUEnabled(true);
         if (!success)
