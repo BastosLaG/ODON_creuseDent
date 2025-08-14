@@ -108,10 +108,6 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                                 calibrationTool.UncalibratedThresholdAcceleration(imuData10ms)
                                 ) / 3f;
 
-            // TODO : check current orientation and adjust it if needed
-
-            
-
             SwitchControllerVirtualInputState state;
 
             // Debug.Log($"Creating input stuff: right stick is {rightStickVec}");

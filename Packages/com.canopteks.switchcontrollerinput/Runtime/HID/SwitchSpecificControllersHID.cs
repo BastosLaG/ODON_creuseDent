@@ -16,12 +16,12 @@ namespace UnityEngine.InputSystem.Switch
                 .WithInterface("HID")
                 .WithCapability("vendorId", 0x57E)
                 .WithCapability("productId", 0x2006);
-            
+
             InputSystem.RegisterLayout<SwitchJoyConLHID>(matches: matcher);
-            
+
             // Debug.Log("Joy-Con (L) layout registered");
         }
-        
+
         [RuntimeInitializeOnLoadMethod]
         static void Init() { }
 
@@ -45,7 +45,7 @@ namespace UnityEngine.InputSystem.Switch
                 current = null;
         }
     }
-    
+
     [InputControlLayout(stateType = typeof(SwitchControllerVirtualInputState), displayName = "Joy-Con (R)")]
 #if UNITY_EDITOR
     [InitializeOnLoad]
@@ -58,12 +58,12 @@ namespace UnityEngine.InputSystem.Switch
                 .WithInterface("HID")
                 .WithCapability("vendorId", 0x57E)
                 .WithCapability("productId", 0x2007);
-            
+
             InputSystem.RegisterLayout<SwitchJoyConRHID>(matches: matcher);
-            
+
             // Debug.Log("Joy-Con (R) layout registered");
         }
-        
+
         [RuntimeInitializeOnLoadMethod]
         static void Init() { }
 
@@ -78,7 +78,7 @@ namespace UnityEngine.InputSystem.Switch
             base.MakeCurrent();
             current = this;
         }
-        
+
         /// <inheritdoc />
         protected override void OnRemoved()
         {
@@ -87,7 +87,7 @@ namespace UnityEngine.InputSystem.Switch
                 current = null;
         }
     }
-    
+
     [InputControlLayout(stateType = typeof(SwitchControllerVirtualInputState), displayName = "Pro Controller")]
 #if UNITY_EDITOR
     [InitializeOnLoad]
@@ -100,12 +100,12 @@ namespace UnityEngine.InputSystem.Switch
                 .WithInterface("HID")
                 .WithCapability("vendorId", 0x57E)
                 .WithCapability("productId", 0x2009);
-            
+
             InputSystem.RegisterLayout<SwitchProControllerNewHID>(matches: matcher);
-            
+
             // Debug.Log("Pro Controller layout registered");
         }
-        
+
         [RuntimeInitializeOnLoadMethod]
         static void Init() { }
 
@@ -120,7 +120,7 @@ namespace UnityEngine.InputSystem.Switch
             base.MakeCurrent();
             current = this;
         }
-        
+
         /// <inheritdoc />
         protected override void OnRemoved()
         {

@@ -1,15 +1,5 @@
 using System;
-using System.ComponentModel;
 using System.Runtime.InteropServices;
-using UnityEditor;
-using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
-using UnityEngine.InputSystem.Layouts;
-using UnityEngine.InputSystem.LowLevel;
-using UnityEngine.InputSystem.Switch.LowLevel;
-using UnityEngine.InputSystem.Utilities;
-using System.Collections;
 
 namespace UnityEngine.InputSystem.Switch
 {

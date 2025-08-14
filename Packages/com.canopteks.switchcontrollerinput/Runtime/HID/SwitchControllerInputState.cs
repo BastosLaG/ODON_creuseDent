@@ -108,5 +108,5 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                 buttons &= (uint)~bit;
         }
     }
-    // #endif
+// #endif
 }
