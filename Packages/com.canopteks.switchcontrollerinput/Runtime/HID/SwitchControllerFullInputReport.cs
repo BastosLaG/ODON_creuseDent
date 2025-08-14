@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using UnityEngine.InputSystem;
 
 namespace UnityEngine.InputSystem.Switch.LowLevel
 {
@@ -46,7 +43,7 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
 
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public SwitchControllerVirtualInputState ToHIDInputReport(ref SwitchControllerHID.CalibrationData calibData, SpecificControllerTypeEnum controllerType, Vector3 currentOrientation, IMUThresholdProcessor calibrationTool)
+        public SwitchControllerVirtualInputState ToHIDInputReport(ref SwitchControllerHID.CalibrationData calibData, SpecificControllerTypeEnum controllerType, Vector3 currentOrientation, IMUThresholdProcessor calibrationTool, bool isResetAction = false)
         {
 
             var leftStickVec = Vector2.zero;
@@ -87,24 +84,33 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
                 // Debug.Log($"Right stick data: Raw: ({rawRightStickHoriz:X3};{rawRightStickVert:X3}) Calibration data: Center=({rStickCalibData.xCenter:X3},{rStickCalibData.yCenter:X3}); X=[{rStickCalibData.xMin:X3} - {rStickCalibData.xMax:X3}]; Y=[{rStickCalibData.yMin:X3} - {rStickCalibData.yMax:X3}]   Final data: {rightStickVec}");
             }
             
+            // Smoothing 
             Vector3 thresholdGyro = (calibrationTool.UncalibratedThresholdGyro(imuData0ms) +
                                     calibrationTool.UncalibratedThresholdGyro(imuData5ms) +
                                     calibrationTool.UncalibratedThresholdGyro(imuData10ms))
                                     / 3f
                                     * Time.deltaTime;
 
+            // Estimation 
             calibrationTool.FeedGyroSample(thresholdGyro);
-
+            // Prediction
             thresholdGyro.z = calibrationTool.GetLastEstimatedGyroZ();
+
+            // Threshold 
             thresholdGyro.x = calibrationTool.IsInBound(thresholdGyro.x);
             thresholdGyro.y = calibrationTool.IsInBound(thresholdGyro.y);
             thresholdGyro.z = calibrationTool.IsInBound(thresholdGyro.z);
 
+            // Smoothing 
             Vector3 thresholdAccel = (
                                 calibrationTool.UncalibratedThresholdAcceleration(imuData0ms) +
                                 calibrationTool.UncalibratedThresholdAcceleration(imuData5ms) +
                                 calibrationTool.UncalibratedThresholdAcceleration(imuData10ms)
                                 ) / 3f;
+
+            // TODO : check current orientation and adjust it if needed
+
+            
 
             SwitchControllerVirtualInputState state;
 
@@ -113,8 +119,6 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
             {
                 leftStick = leftStickVec,
                 rightStick = rightStickVec,
-                // TODO: Calibrate these bad boys 
-                // Know we have an experimental Threshold to calibrate these bad boys 
                 acceleration = thresholdAccel,
                 angularVelocity = thresholdGyro,
                 orientation = currentOrientation + thresholdGyro,

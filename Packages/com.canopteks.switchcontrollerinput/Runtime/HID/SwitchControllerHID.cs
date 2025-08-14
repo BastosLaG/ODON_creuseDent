@@ -12,9 +12,9 @@ using System.Text;
 namespace UnityEngine.InputSystem.Switch
 {
     [InputControlLayout(stateType = typeof(SwitchControllerVirtualInputState))]
-    #if UNITY_EDITOR
-    [InitializeOnLoad]
-    #endif
+    // #if UNITY_EDITOR
+    // [InitializeOnLoad]
+    // #endif
     public abstract class SwitchControllerHID : InputDevice, IInputStateCallbackReceiver, IEventPreProcessor
     {
         #region Accelerometer/gyroscope controls
@@ -79,12 +79,11 @@ namespace UnityEngine.InputSystem.Switch
             }
         };
 
-        public IMUThresholdProcessor calibrationTools { get; protected set; } = new();
+        public IMUThresholdProcessor CalibrationTools { get; protected set; } = new();
 
         #endregion
 
         private Quaternion m_currentOrientation = new();
-
         #region Generic data
         public BatteryLevelEnum BatteryLevel { get; protected set; } = BatteryLevelEnum.Empty;
         public bool BatteryIsCharging { get; protected set; } = false;
@@ -425,7 +424,7 @@ namespace UnityEngine.InputSystem.Switch
         //TODO : Improve these function.
         public void CalibrateJoycon()
         {
-            calibrationTools.Calibrate();
+            CalibrationTools.Calibrate();
             // Reset current orientation
             m_currentOrientation.eulerAngles = Vector3.zero;
         }
@@ -531,7 +530,7 @@ namespace UnityEngine.InputSystem.Switch
                 ref calibrationData,
                 SpecificControllerType,
                 m_currentOrientation.eulerAngles,
-                calibrationTools
+                CalibrationTools
             );
 
             *(SwitchControllerVirtualInputState*)stateEvent->state = data;

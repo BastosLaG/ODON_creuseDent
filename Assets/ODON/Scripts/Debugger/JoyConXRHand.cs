@@ -24,6 +24,10 @@ public class JoyConXRHand : MonoBehaviour
 
     [Tooltip("The transform that will be rotated by Joy-Con input.")]
     [SerializeField] private Transform _targetTransform;
+
+    [Range(0.0f,100.0f)]
+    [Tooltip("Speed of rotation applied to the target transform.")]
+    [SerializeField] private float rotationSpeed = 5.0f;
     private float angularVelocity_Z_Axis = 0;
 
     #region Primary Function
@@ -69,6 +73,7 @@ public class JoyConXRHand : MonoBehaviour
         }
     }
     #endregion
+
     #region Logic Function
     /// <summary>
     /// Called when input events are received from any device.
@@ -90,37 +95,60 @@ public class JoyConXRHand : MonoBehaviour
 
         if (isLeftHand && device is SwitchJoyConLHID)
         {
-            GetOrientation(eventPtr, _joyConLeft, out Vector3 orientation);
+            // GetOrientation(eventPtr, _joyConLeft, out Vector3 orientation);
             GetAcceleration(eventPtr, _joyConLeft, out Vector3 acceleration);
             GetAngularVelocity(eventPtr, _joyConLeft, out Vector3 angularVelocity);
-            // Debug.Log($"_joyConLeft = {_joyConLeft.name} est entrain de lire les informations suivantes : \nangularVelocity - {angularVelocity}");
 
-            SetRotationAndPosition(angularVelocity, orientation, acceleration);
+            SetRotationAndPosition(angularVelocity, acceleration, _joyConLeft);
+
+
         }
         else if (!isLeftHand && device is SwitchJoyConRHID)
         {
-            GetOrientation(eventPtr, _joyConRight, out Vector3 orientation);
+            // GetOrientation(eventPtr, _joyConRight, out Vector3 orientation);
             GetAcceleration(eventPtr, _joyConRight, out Vector3 acceleration);
             GetAngularVelocity(eventPtr, _joyConRight, out Vector3 angularVelocity);
-            // Debug.Log($"_joyConRight = {_joyConRight.name} est entrain de lire les informations suivantes :\norientation - {orientation}\nacceleration - {acceleration}\nangularVelocity - {angularVelocity}");
 
-            SetRotationAndPosition(angularVelocity, orientation, acceleration);
+            SetRotationAndPosition(angularVelocity, acceleration, _joyConRight);
         }
     }
 
-    private void SetRotationAndPosition(Vector3 angularVelocity, Vector3 orientation, Vector3 acceleration)
+    private void SetRotationAndPosition(Vector3 angularVelocity, Vector3 acceleration, SwitchJoyConLHID joyCon = null)
     {
-        // Debug.Log($"{_targetTransform.name}");
-        // TODO : implement logic rotation here 
-
         // refer to image "Image representing axes of rotation" 
         // * https://docs.google.com/document/d/10VK9m2KR3QEqI6O3c_fvIAioycqBt9m39Piq4ZZ_TYY/edit?tab=t.0 
+        if (-angularVelocity_Z_Axis + angularVelocity.z * rotationSpeed < 90
+            && angularVelocity_Z_Axis + angularVelocity.z * rotationSpeed > -90)
+        {
+            angularVelocity_Z_Axis += angularVelocity.z;
+        }
 
-        angularVelocity_Z_Axis += angularVelocity.z;
+        Vector3 correctedRotation = new(-acceleration.x * 90, -angularVelocity_Z_Axis * rotationSpeed, -acceleration.y * 90);
 
-        Vector3 correctedRotation = new(-acceleration.x * 90, angularVelocity_Z_Axis, acceleration.y * 90);
+        Quaternion rotationTarget = Quaternion.Euler(correctedRotation);
+        _targetTransform.localRotation = rotationTarget;
+    }
 
-        // Utiliser angularVelocity pour rotation relative
+    private void SetRotationAndPosition(Vector3 angularVelocity, Vector3 acceleration, SwitchJoyConRHID joyCon = null)
+    {
+        // refer to image "Image representing axes of rotation" 
+        // * https://docs.google.com/document/d/10VK9m2KR3QEqI6O3c_fvIAioycqBt9m39Piq4ZZ_TYY/edit?tab=t.0 
+        if (-angularVelocity_Z_Axis + angularVelocity.z * rotationSpeed < 90
+            && angularVelocity_Z_Axis + angularVelocity.z * rotationSpeed > -90)
+        {
+            angularVelocity_Z_Axis += angularVelocity.z;
+        }
+
+        Vector3 correctedRotation = new(-acceleration.x * 90, angularVelocity_Z_Axis * rotationSpeed, acceleration.y * 90);
+
+        if (correctedRotation.y >= 90)
+        {
+            correctedRotation.y = 90;
+        }
+        else if (correctedRotation.y <= -90)
+        {
+            correctedRotation.y = -90;
+        }
 
         Quaternion rotationTarget = Quaternion.Euler(correctedRotation);
         _targetTransform.localRotation = rotationTarget;
@@ -152,15 +180,15 @@ public class JoyConXRHand : MonoBehaviour
     private IEnumerator DelayedCalibration(SwitchJoyConRHID joyCon)
     {
         // Wait until calibration tools exist
-        while (joyCon != null && joyCon.calibrationTools == null)
+        while (joyCon != null && joyCon.CalibrationTools == null)
         {
             Debug.Log("Wait until calibration tools exist...");
             yield return null;
         }
         // Wait until buffer fills
-        while (joyCon != null && joyCon.calibrationTools.GetThresholdSampleCount() < joyCon.calibrationTools.GetBufferSize())
+        while (joyCon != null && joyCon.CalibrationTools.GetThresholdSampleCount() < joyCon.CalibrationTools.GetBufferSize())
         {
-            Debug.Log($"{joyCon.name} : Threshold collect {joyCon.calibrationTools.GetThresholdSampleCount()} / {joyCon.calibrationTools.GetBufferSize()}");
+            Debug.Log($"{joyCon.name} : Threshold collect {joyCon.CalibrationTools.GetThresholdSampleCount()} / {joyCon.CalibrationTools.GetBufferSize()}");
             yield return null;
         }
 
@@ -171,15 +199,15 @@ public class JoyConXRHand : MonoBehaviour
     private IEnumerator DelayedCalibration(SwitchJoyConLHID joyCon)
     {
         // Wait until calibration tools exist
-        while (joyCon != null && joyCon.calibrationTools == null)
+        while (joyCon != null && joyCon.CalibrationTools == null)
         {
             Debug.Log("Wait until calibration tools exist...");
             yield return null;
         }
         // Wait until buffer fills
-        while (joyCon != null && joyCon.calibrationTools.GetThresholdSampleCount() < joyCon.calibrationTools.GetBufferSize())
+        while (joyCon != null && joyCon.CalibrationTools.GetThresholdSampleCount() < joyCon.CalibrationTools.GetBufferSize())
         {
-            Debug.Log($"{joyCon.name} : Threshold collect {joyCon.calibrationTools.GetThresholdSampleCount()} / {joyCon.calibrationTools.GetBufferSize()}");
+            Debug.Log($"{joyCon.name} : Threshold collect {joyCon.CalibrationTools.GetThresholdSampleCount()} / {joyCon.CalibrationTools.GetBufferSize()}");
             yield return null;
         }
 
@@ -187,6 +215,7 @@ public class JoyConXRHand : MonoBehaviour
         joyCon.CalibrateJoycon();
         Debug.Log($"Calibrate joycon complete {joyCon.name}");
     }
+
     #endregion
 
     #region Getter

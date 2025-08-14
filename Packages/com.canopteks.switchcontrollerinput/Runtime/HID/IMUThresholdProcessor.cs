@@ -94,6 +94,10 @@ namespace UnityEngine.InputSystem.Switch.LowLevel
             Debug.Log($"Calibration complete. Noise mean: {gyroNoiseMean}");
         }
 
+        public Quaternion ResetRotation() {
+            return Quaternion.Euler(0, 0, 0); 
+        }
+
         public bool IsActuatedGyro(Vector3 currentAngularVelocity)
         {
             // Get latest UKF estimate for Z-axis
