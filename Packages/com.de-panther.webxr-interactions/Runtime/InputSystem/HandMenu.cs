@@ -238,9 +238,9 @@ namespace WebXR.InputSystem
             }
         }
 
-        readonly SmartFollowVector3TweenableVariable m_HandAnchorSmartFollow = new SmartFollowVector3TweenableVariable();
-        readonly QuaternionTweenableVariable m_RotTweenFollow = new QuaternionTweenableVariable();
-        readonly Vector3TweenableVariable m_MenuScaleTweenable = new Vector3TweenableVariable();
+        readonly SmartFollowVector3TweenableVariable m_HandAnchorSmartFollow = new ();
+        readonly QuaternionTweenableVariable m_RotTweenFollow = new ();
+        readonly Vector3TweenableVariable m_MenuScaleTweenable = new ();
 
         readonly BindingsGroup m_BindingsGroup = new BindingsGroup();
 

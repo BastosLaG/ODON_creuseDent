@@ -29,7 +29,7 @@ namespace WebXR.Interactions
 
     void OnMouseUp()
     {
-      m_rigidbody.velocity = m_currentVelocity;
+      m_rigidbody.linearVelocity = m_currentVelocity;
       m_currentCamera = null;
     }
 
@@ -38,7 +38,7 @@ namespace WebXR.Interactions
       if (m_currentCamera != null)
       {
         Vector3 currentScreenPoint = GetMousePosWithScreenZ(m_screenPoint.z);
-        m_rigidbody.velocity = Vector3.zero;
+        m_rigidbody.linearVelocity = Vector3.zero;
         m_rigidbody.MovePosition(m_currentCamera.ScreenToWorldPoint(currentScreenPoint) + m_offset);
         m_currentVelocity = (transform.position - m_previousPos) / Time.deltaTime;
         m_previousPos = transform.position;

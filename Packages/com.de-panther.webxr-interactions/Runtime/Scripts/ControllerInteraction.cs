@@ -566,7 +566,7 @@ namespace WebXR.Interactions
     {
       if (!currentRigidBody)
         return;
-      currentRigidBody.velocity = currentVelocity;
+      currentRigidBody.linearVelocity = currentVelocity;
       attachJoint.connectedBody = null;
       currentRigidBody = null;
     }
