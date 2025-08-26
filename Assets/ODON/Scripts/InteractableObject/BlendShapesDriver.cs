@@ -11,7 +11,7 @@ public class BlendShapesDriver : MonoBehaviour
 
     private void Update()
     {
-        GoToValue("Open", Random.Range(0,100));
+        // GoToValue("Open", Random.Range(0,100));
     }
 
 
