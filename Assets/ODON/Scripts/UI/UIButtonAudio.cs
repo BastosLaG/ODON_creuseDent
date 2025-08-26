@@ -1,7 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class UIButtonAudio : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
@@ -10,7 +8,7 @@ public class UIButtonAudio : MonoBehaviour, IPointerEnterHandler, IPointerClickH
     private AudioSource buttonAudioSource;
     private void Start()
     {
-        buttonAudioSource = transform.AddComponent<AudioSource>();
+        buttonAudioSource = transform.gameObject.AddComponent<AudioSource>();
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
