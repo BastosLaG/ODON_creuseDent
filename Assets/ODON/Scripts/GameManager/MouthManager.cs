@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using ODON.UsateManager;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -16,7 +17,7 @@ namespace ODON.GameManager
         [SerializeField] private GameObject prefabPreviewCrampon;
         [SerializeField] private GameObject prefabCramponInMouth;
 
-        [SerializeField] private UniversalSenderActionToEventManager USATEManagerPutCrampon;
+        // [SerializeField] private UniversalSenderActionToEventManager USATEManagerPutCrampon;
 
         private void Awake()
         {
@@ -74,12 +75,12 @@ namespace ODON.GameManager
                                                         cramponDictionary[key].transform
                                                     );
                         
-                        USATEManagerPutCrampon.TryValidateCurrentItem();
+                        // USATEManagerPutCrampon.TryValidateCurrentItem();
                         return;
                     }
                     else
                     {
-                        USATEManagerPutCrampon.TryValidateCurrentItem(false);
+                        // USATEManagerPutCrampon.TryValidateCurrentItem(false);
                         return;
                     }   
                 }

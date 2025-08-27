@@ -62,9 +62,8 @@ namespace ODON.GameManager
             int index = Scenario.Values.IndexOf(stepId);
             if (index >= 0 && index < Scenario.Key.List.Count)
             {
-                MonoBehaviour mB = HighlightsManager.Instance.GetStepBehaviour<MonoBehaviour>(Scenario.Key.List[index]);
-                mB.GetComponent<Outline>().enabled = false;
-                mB.enabled = false;
+                Transform target = HighlightsManager.Instance.GetStepBehaviour(Scenario.Key.List[index]);
+                target.gameObject.GetComponent<Outline>().enabled = false;
             }
             else
             {

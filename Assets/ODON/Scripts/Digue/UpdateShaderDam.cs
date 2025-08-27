@@ -54,7 +54,7 @@ namespace ODON
         [SerializeField] private float HoleFalloff = 0.01f;
         [SerializeField] private Transform pliersTransform = null;
         [SerializeField] private HighlightsTeethManager highlightsTeethManager;
-        [SerializeField] private UniversalSenderActionToEventManager uSATEManager;
+        // [SerializeField] private UniversalSenderActionToEventManager uSATEManager;
         #endregion
 
         ///////////////////////////////////////////////////////////////////////////////////////
@@ -102,13 +102,13 @@ namespace ODON
         {
             if (isActive)
             {
-                uSATEManager.TryValidateCurrentItem();
+                // uSATEManager.TryValidateCurrentItem();
                 damRenderer.material.EnableKeyword("_ACTIVEHOLE");
                 // Active cloth ? 
             }
             else
             {
-                uSATEManager.TryValidateCurrentItem(false);
+                // uSATEManager.TryValidateCurrentItem(false);
                 damRenderer.material.DisableKeyword("_ACTIVEHOLE");
             }
         }

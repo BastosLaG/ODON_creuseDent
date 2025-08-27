@@ -9,7 +9,7 @@ namespace ODON
         [SerializeField] private bool isInContact = false;
         [SerializeField] private GameObject originalObject;
         [SerializeField] private Renderer rendererComponent;
-        [SerializeField] private UniversalSenderActionToEventManager eventManager;
+        // [SerializeField] private UniversalSenderActionToEventManager eventManager;
 
         void Start()
         {
@@ -24,13 +24,13 @@ namespace ODON
             {
                 rendererComponent.enabled = true;
                 rendererComponent.material = baseMaterial;
-                eventManager.TryValidateCurrentItem();
+                // eventManager.TryValidateCurrentItem();
                 Destroy(originalObject);
                 Destroy(this);
             }
             else
             {
-                eventManager.TryValidateCurrentItem(false);
+                // eventManager.TryValidateCurrentItem(false);
             }
         }
 

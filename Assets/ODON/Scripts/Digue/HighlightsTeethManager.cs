@@ -25,8 +25,8 @@ namespace ODON.GameManager
         [Header("Pliers Settings")]
         [SerializeField] private GameObject pliers;
 
-        [Header("Sender")]
-        [SerializeField] private UniversalSenderActionToEventManager uSATEManager;
+        // [Header("Sender")]
+        // [SerializeField] private UniversalSenderActionToEventManager uSATEManager;
 
         #endregion
 
@@ -45,10 +45,10 @@ namespace ODON.GameManager
                 Destroy(gameObject);
             }
 
-            if (uSATEManager == null)
-            {
-                Debug.LogError("UniversalSenderActionToEventManager is not assigned in HighlighteManager.");
-            }
+            // if (uSATEManager == null)
+            // {
+            //     Debug.LogError("UniversalSenderActionToEventManager is not assigned in HighlighteManager.");
+            // }
         }
         void Start()
         {
@@ -81,13 +81,13 @@ namespace ODON.GameManager
                     if (goodTeethToDig.tooth.name == pDD.transform.name)
                     {
                         SetTeeth(pDD.transform.name);
-                        uSATEManager.TryValidateCurrentItem();
+                        // uSATEManager.TryValidateCurrentItem();
                         return;
                     }
                 }
                 else if (pDD.MR.enabled == true && pDD.transform.name != goodTeethToDig.tooth.name)
                 {
-                    uSATEManager.TryValidateCurrentItem(false);
+                    // uSATEManager.TryValidateCurrentItem(false);
                 }
             }
         }

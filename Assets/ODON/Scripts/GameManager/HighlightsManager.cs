@@ -5,7 +5,7 @@ namespace ODON.GameManager
 {
     public class HighlightsManager : MonoBehaviour
     {
-        private readonly Dictionary<Data.SO_Step, MonoBehaviour> stepMap = new();
+        private readonly Dictionary<Data.SO_Step, Transform> stepMap = new();
 
         private static HighlightsManager instance;
         public static HighlightsManager Instance => instance;
@@ -32,25 +32,22 @@ namespace ODON.GameManager
             EventManager.Instance.Scenario.OnSetNewAction -= OnSetNewAction;
         }
 
-
         /// <summary>
-        /// Registers a step with its corresponding behaviour.
+        /// Registers a step with its corresponding highlights target.
         /// This method ensures that the step is only registered once and initializes highlighting if necessary.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="step"></param>
-        /// <param name="behaviour"></param>
-        public void RegisterStep<T>(Data.SO_Step step, T behaviour) where T : MonoBehaviour
+        /// <param name="target"></param>
+        public void RegisterStep(Data.SO_Step step, Transform target)
         {
             if (!stepMap.ContainsKey(step))
             {
-                stepMap.Add(step, behaviour);
+                stepMap.Add(step, target);
 
-                // Debug.Log($"Registered step {step.Id} with behaviour {behaviour.GetType().Name}");
-
-                if (!behaviour.gameObject.TryGetComponent<Outline>(out _))
+                // Debug.Log($"Registered step {step.Id} with behaviour {target.GetType().Name}");
+                if (!target.TryGetComponent<Outline>(out _))
                 {
-                    GameObject obj = behaviour.gameObject;
+                    GameObject obj = target.gameObject;
                     InitHighLight(obj);
 
                     // Debug.Log($"Added outline to {obj.name} for step {step.Id}");
@@ -58,11 +55,11 @@ namespace ODON.GameManager
             }
         }
 
-        public T GetStepBehaviour<T>(Data.SO_Step step) where T : MonoBehaviour
+        public Transform GetStepBehaviour(Data.SO_Step step)
         {
-            if (stepMap.TryGetValue(step, out MonoBehaviour mb))
+            if (stepMap.TryGetValue(step, out Transform target))
             {
-                return mb as T;
+                return target;
             }
             return null;
         }
@@ -83,17 +80,16 @@ namespace ODON.GameManager
 
         public void OnSetNewAction(Data.SO_Step step)
         {
-            if (stepMap.TryGetValue(step, out MonoBehaviour behaviour))
+            if (stepMap.TryGetValue(step, out Transform target))
             {
-                Outline outline = behaviour.GetComponent<Outline>();
-                if (outline != null)
+                if (target.gameObject.TryGetComponent<Outline>(out var outline))
                 {
                     outline.enabled = true;
                     // Debug.Log($"Enabled outline for step {step.Id}");
                 }
                 else
                 {
-                    Debug.LogWarning($"No Outline component found on {behaviour.name} for step {step.Id}");
+                    Debug.LogWarning($"No Outline component found on {target.name} for step {step.Id}");
                 }
             }
             else

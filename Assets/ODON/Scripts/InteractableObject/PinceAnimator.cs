@@ -13,7 +13,7 @@ namespace ODON.InteractableObject
         [Tooltip("Animator component for controlling the pince animations.")]
         [SerializeField] private Animator animator;
 
-        [SerializeField] private UniversalSenderActionToEventManager uSATEManagerTakeCrampon;
+        // [SerializeField] private UniversalSenderActionToEventManager uSATEManagerTakeCrampon;
 
         private void Start()
         {
@@ -56,7 +56,7 @@ namespace ODON.InteractableObject
                 crampon.SetParent(transform);
                 crampon.SetPositionAndRotation(cramponAnchor.position, cramponAnchor.rotation);
 
-                uSATEManagerTakeCrampon.TryValidateCurrentItem();
+                // uSATEManagerTakeCrampon.TryValidateCurrentItem();
             }
         }
         private void DetachCrampon()
