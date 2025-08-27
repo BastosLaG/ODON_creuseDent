@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using ODON.Data;
-using UnityEditor.Callbacks;
 
 
 namespace ODON.UsateManager
@@ -43,7 +42,7 @@ namespace ODON.UsateManager
                 debugGrabMultipleButton = false;
                 foreach (Struct_VRValidatorObject item in validatorObjects)
                 {
-                    item.VRValidObject(true);
+                    item.IsValid = true;
                 }
             }
         }
@@ -59,21 +58,25 @@ namespace ODON.UsateManager
 
         private void OnSelectEntered(UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args, Struct_VRValidatorObject vRValidatorObject)
         {
-            vRValidatorObject.VRValidObject(true);
+            // TODO : Implémenter la gestion des erreurs bloquante et non bloquante
+            if (!IsValidStep())
+            {
+                Debug.Log("Le step actuel n'est pas le bon.");
+                return;
+            }
+            vRValidatorObject.IsValid = true;
         }
 
-        public void TryValidateCurrentItem()
+        public override void TryValidateCurrentItem()
         {
-            if (TargetHighlight.gameObject.GetComponent<Outline>().enabled == false) return;
             if (!IsAllValid()) return;
-            GameManager.EventManager.Instance.TryValidateCurrentItem(Step);
+            base.TryValidateCurrentItem();
         }
 
-        public void TryValidateCurrentItem(bool stepIsCorrect)
+        public override void TryValidateCurrentItem(bool stepIsCorrect)
         {
-            if (TargetHighlight.gameObject.GetComponent<Outline>().enabled == false) return;
             if (!IsAllValid()) return;
-            GameManager.EventManager.Instance.TryValidateCurrentItem(Step, stepIsCorrect);
+            base.TryValidateCurrentItem(stepIsCorrect);
         }
     }
 }

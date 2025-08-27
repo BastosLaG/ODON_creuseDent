@@ -14,14 +14,11 @@ namespace ODON.Data
         public bool IsValid
         {
             get => isValid;
-            set => isValid = value;
-        }
-
-        public void VRValidObject(bool valid)
-        {
-            isValid = valid;
-            ObjectInteractable.SetActive(!valid);
-            ObjectReplaceWhenValid.SetActive(valid);
+            set {
+                isValid = value;
+                ObjectInteractable.SetActive(!isValid);
+                ObjectReplaceWhenValid.SetActive(isValid);
+            }
         }
     }
 }

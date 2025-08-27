@@ -44,19 +44,14 @@ namespace ODON.UsateManager
 
         private void OnSelectEntered(UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args)
         {
+            // TODO : Implémenter la gestion des erreurs bloquante et non bloquante
+            if (!IsValidStep())
+            {
+                Debug.Log("Le step actuel n'est pas le bon.");
+                return;
+            }
+
             TryValidateCurrentItem();
-        }
-
-        public virtual void TryValidateCurrentItem()
-        {
-            if (TargetHighlight.gameObject.GetComponent<Outline>().enabled == false) return;
-            GameManager.EventManager.Instance.TryValidateCurrentItem(Step);
-        }
-
-        public virtual void TryValidateCurrentItem(bool stepIsCorrect)
-        {
-            if (TargetHighlight.gameObject.GetComponent<Outline>().enabled == false) return;
-            GameManager.EventManager.Instance.TryValidateCurrentItem(Step, stepIsCorrect);
         }
     }
 }

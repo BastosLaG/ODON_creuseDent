@@ -19,5 +19,20 @@ namespace ODON.UsateManager
             }
             GameManager.HighlightsManager.Instance.RegisterStep(step, TargetHighlight);
         }
+
+        public bool IsValidStep()
+        {
+            return Step == GameManager.EventManager.Instance.CurrentStep;
+        }
+
+        public virtual void TryValidateCurrentItem()
+        {
+            GameManager.EventManager.Instance.TryValidateCurrentItem(Step);
+        }
+
+        public virtual void TryValidateCurrentItem(bool stepIsCorrect)
+        {
+            GameManager.EventManager.Instance.TryValidateCurrentItem(Step, stepIsCorrect);
+        }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ODON.Data;
 using UnityEngine;
 
 
@@ -14,6 +15,7 @@ namespace ODON.GameManager
                                             : null;
 
         public static EventManager Instance { get; private set; }
+        public SO_Step CurrentStep { get; internal set; }
 
         ///////////////////////////////////////////////////////////////////////////////////
 
@@ -60,6 +62,7 @@ namespace ODON.GameManager
         {
             // TODO : Handle the action success logic here, e.g., update the scenario or trigger the next step.
             int index = Scenario.Values.IndexOf(stepId);
+            CurrentStep = Scenario.Key.List[index];
             if (index >= 0 && index < Scenario.Key.List.Count)
             {
                 Transform target = HighlightsManager.Instance.GetStepBehaviour(Scenario.Key.List[index]);
