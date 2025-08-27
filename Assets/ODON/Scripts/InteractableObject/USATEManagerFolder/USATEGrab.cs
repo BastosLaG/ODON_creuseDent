@@ -9,11 +9,22 @@ namespace ODON.UsateManager
     {
         [Header("Grab Settings")]
         [SerializeField] protected XRGrabInteractable grabInteractable;
+        [SerializeField] protected bool debugGrabButton;
 
         protected new void Start()
         {
             base.Start();
         }
+
+        protected void Update()
+        {
+            if (debugGrabButton)
+            {
+                debugGrabButton = false;
+                TryValidateCurrentItem();
+            }
+        }
+        
         protected void OnEnable()
         {
             grabInteractable = GetComponent<XRGrabInteractable>();
@@ -36,13 +47,13 @@ namespace ODON.UsateManager
             TryValidateCurrentItem();
         }
 
-        public void TryValidateCurrentItem()
+        public virtual void TryValidateCurrentItem()
         {
             if (TargetHighlight.gameObject.GetComponent<Outline>().enabled == false) return;
             GameManager.EventManager.Instance.TryValidateCurrentItem(Step);
         }
 
-        public void TryValidateCurrentItem(bool stepIsCorrect)
+        public virtual void TryValidateCurrentItem(bool stepIsCorrect)
         {
             if (TargetHighlight.gameObject.GetComponent<Outline>().enabled == false) return;
             GameManager.EventManager.Instance.TryValidateCurrentItem(Step, stepIsCorrect);

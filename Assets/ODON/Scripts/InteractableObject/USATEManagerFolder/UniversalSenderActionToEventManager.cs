@@ -19,7 +19,5 @@ namespace ODON.UsateManager
             }
             GameManager.HighlightsManager.Instance.RegisterStep(step, TargetHighlight);
         }
-
-
     }
 }

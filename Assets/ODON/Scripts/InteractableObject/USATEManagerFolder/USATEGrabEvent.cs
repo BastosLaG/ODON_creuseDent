@@ -17,13 +17,15 @@ namespace ODON.UsateManager
             base.Start();
         }
 
-        void Update()
+        protected new void Update()
         {
             if (debugPlayEventButton)
             {
                 debugPlayEventButton = false;
                 OnGrabEvent?.Invoke();
+                debugGrabButton = true;
             }
+            base.Update();
         }
 
         protected new void OnEnable()
