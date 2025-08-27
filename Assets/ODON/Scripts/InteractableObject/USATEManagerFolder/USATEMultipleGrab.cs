@@ -9,6 +9,7 @@ namespace ODON.UsateManager
     {
         [Header("Multiple GrabSettings")]
         [SerializeField] private Struct_VRValidatorObject[] validatorObjects;
+        private bool isAllValid = false;
         [SerializeField] protected bool debugGrabMultipleButton;
 
         protected new void Start()
@@ -32,18 +33,23 @@ namespace ODON.UsateManager
 
         void Update()
         {
-            if (IsAllValid())
+            if (IsAllValid() && isAllValid == false)
             {
                 TryValidateCurrentItem(true);
+                isAllValid = true;
             }
 
             if (debugGrabMultipleButton)
             {
-                debugGrabMultipleButton = false;
-                foreach (Struct_VRValidatorObject item in validatorObjects)
+                if (IsValidStep())
                 {
-                    item.IsValid = true;
+                    Debug.Log("Grab multiple triggered");
+                    foreach (Struct_VRValidatorObject item in validatorObjects)
+                    {
+                        item.IsValid = true;
+                    }
                 }
+                debugGrabMultipleButton = false;
             }
         }
 

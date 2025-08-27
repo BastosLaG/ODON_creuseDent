@@ -36,6 +36,15 @@ namespace ODON.GameManager
         void Start()
         {
             Scenario.SetScenario(Scenario.Values);
+            CurrentStep = Scenario.Key.List[0];
+        }
+
+        private void OnEnable()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
 
             Scenario.OnActionPassed += ActionCorrectlyPassed;
             Scenario.OnActionFailed += ActionFailed;
@@ -62,7 +71,6 @@ namespace ODON.GameManager
         {
             // TODO : Handle the action success logic here, e.g., update the scenario or trigger the next step.
             int index = Scenario.Values.IndexOf(stepId);
-            CurrentStep = Scenario.Key.List[index];
             if (index >= 0 && index < Scenario.Key.List.Count)
             {
                 Transform target = HighlightsManager.Instance.GetStepBehaviour(Scenario.Key.List[index]);
@@ -102,6 +110,7 @@ namespace ODON.GameManager
             if (step.Id == Scenario.Values[Scenario.CurrentValueIndex])
             {
                 step.ActionPassed();
+                CurrentStep = Scenario.Key.List[Scenario.CurrentValueIndex];
             }
             else
             {
@@ -120,6 +129,7 @@ namespace ODON.GameManager
             if (step.Id == Scenario.Values[Scenario.CurrentValueIndex] && stepIsCorrect)
             {
                 step.ActionPassed();
+                CurrentStep = Scenario.Key.List[Scenario.CurrentValueIndex];
             }
             else
             {

@@ -18,10 +18,15 @@ namespace ODON.UsateManager
 
         protected void Update()
         {
+
             if (debugGrabButton)
             {
+                if (IsValidStep())
+                {
+                    Debug.Log("Grab triggered");
+                    TryValidateCurrentItem();
+                }
                 debugGrabButton = false;
-                TryValidateCurrentItem();
             }
         }
         

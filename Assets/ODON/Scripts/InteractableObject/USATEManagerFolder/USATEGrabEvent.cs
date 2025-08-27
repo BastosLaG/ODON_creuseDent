@@ -21,9 +21,13 @@ namespace ODON.UsateManager
         {
             if (debugPlayEventButton)
             {
+                if (IsValidStep())
+                {
+                    Debug.Log("Grab event triggered");
+                    OnGrabEvent?.Invoke();
+                    debugGrabButton = true;
+                }
                 debugPlayEventButton = false;
-                OnGrabEvent?.Invoke();
-                debugGrabButton = true;
             }
             base.Update();
         }
@@ -35,7 +39,6 @@ namespace ODON.UsateManager
             grabInteractable = GetComponent<XRGrabInteractable>();
             if (grabInteractable != null)
             {
-                // Debug.Log($"XRGrabInteractable found on {gameObject.name} we add OnGrabEventHandler");
                 grabInteractable.selectEntered.AddListener(OnGrabEventHandler);
             }
         }
@@ -45,14 +48,17 @@ namespace ODON.UsateManager
             base.OnDisable();
             if (grabInteractable != null)
             {
-                // Debug.Log($"XRGrabInteractable found on {gameObject.name} we remove OnGrabEventHandler");
                 grabInteractable.selectEntered.RemoveListener(OnGrabEventHandler);
             }
         }
 
         private void OnGrabEventHandler(UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args)
         {
-            OnGrabEvent?.Invoke();
+            // TODO : Implémenter la gestion des erreurs bloquante et non bloquante
+            if (IsValidStep())
+            {
+                OnGrabEvent?.Invoke();
+            }
         }
     }
 }

@@ -22,6 +22,7 @@ namespace ODON.UsateManager
 
         public bool IsValidStep()
         {
+            Debug.Log($"IsValidStep called on {gameObject.name} for step {Step.name} and we need {GameManager.EventManager.Instance.CurrentStep} \n| Result: {Step == GameManager.EventManager.Instance.CurrentStep}");
             return Step == GameManager.EventManager.Instance.CurrentStep;
         }
 
