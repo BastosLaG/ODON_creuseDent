@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 
@@ -47,7 +48,7 @@ namespace ODON.UsateManager
             }
         }
 
-        private void OnSelectEntered(UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args)
+        private void OnSelectEntered(SelectEnterEventArgs args)
         {
             // TODO : Implémenter la gestion des erreurs bloquante et non bloquante
             if (!IsValidStep())
