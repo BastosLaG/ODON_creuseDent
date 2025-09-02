@@ -9,16 +9,7 @@ namespace ODON.Data
         [SerializeField] private GameObject ObjectInteractable;
         [SerializeField] private bool isValid = false;
 
-        [SerializeField] private GameObject ObjectReplaceWhenValid;
         public GameObject ValidateObject => ObjectInteractable;
-        public bool IsValid
-        {
-            get => isValid;
-            set {
-                isValid = value;
-                ObjectInteractable.SetActive(!isValid);
-                ObjectReplaceWhenValid.SetActive(isValid);
-            }
-        }
+        public bool IsValid { get => isValid; set => isValid = value; }
     }
 }
