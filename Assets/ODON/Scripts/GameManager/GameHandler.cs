@@ -37,8 +37,6 @@ namespace ODON.GameManager
         [SerializeField] private Data.PatientData[] patientData;
         [SerializeField] private int patientDataIndex = 0;
         [SerializeField] private Data.PatientState patientState = Data.PatientState.InWaitingRoom;
-        [SerializeField] private bool isPatientInRoom = false;
-        [SerializeField] private bool isPatientInBed = false;
         public Data.PatientData[] PatientData
         {
             get => patientData;
@@ -82,20 +80,12 @@ namespace ODON.GameManager
         #region Patient Management
         public void NewPatientEnterOnRoom()
         {
-            if (!isPatientInRoom)
-            {
-                patientState = Data.PatientState.InCabinet;
-                isPatientInRoom = true;
-            }
+            patientState = Data.PatientState.InCabinet;
         }
 
         public void PatientSitOnBed()
         {
-            if (!isPatientInBed)
-            {
-                isPatientInBed = true;
-                patientState = Data.PatientState.InBed;
-            }
+            patientState = Data.PatientState.InBed;
         }
 
         public void PatientExitFromRoom()

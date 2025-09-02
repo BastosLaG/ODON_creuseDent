@@ -24,8 +24,7 @@ namespace ODON.UsateManager
             {
                 if (IsValidStep())
                 {
-                    Debug.Log("Grab triggered");
-                    TryValidateCurrentItem();
+                    grabInteractable.selectEntered.Invoke(null);
                 }
                 debugGrabButton = false;
             }
@@ -48,7 +47,7 @@ namespace ODON.UsateManager
             }
         }
 
-        private void OnSelectEntered(SelectEnterEventArgs args)
+        protected virtual void OnSelectEntered(SelectEnterEventArgs args)
         {
             // TODO : Implémenter la gestion des erreurs bloquante et non bloquante
             if (!IsValidStep())

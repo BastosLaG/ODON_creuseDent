@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.Events;
+using System;
+using UnityEditor.Build;
 
 
 namespace ODON.UsateManager
@@ -11,7 +13,7 @@ namespace ODON.UsateManager
     {
         [Header("Grab Event Settings")]
         [SerializeField] private UnityEvent OnGrabEvent;
-        [SerializeField] private bool debugPlayEventButton; 
+        [SerializeField] private bool debugPlayEventButton;
 
         protected new void Start()
         {
@@ -22,13 +24,7 @@ namespace ODON.UsateManager
         {
             if (debugPlayEventButton)
             {
-                if (IsValidStep())
-                {
-                    Debug.Log("Grab event triggered");
-                    OnGrabEvent?.Invoke();
-                    debugGrabButton = true;
-                }
-                debugPlayEventButton = false;
+                DoEvent();
             }
             base.Update();
         }
@@ -40,7 +36,8 @@ namespace ODON.UsateManager
             grabInteractable = GetComponent<XRGrabInteractable>();
             if (grabInteractable != null)
             {
-                grabInteractable.selectEntered.AddListener(OnGrabEventHandler);
+                grabInteractable.selectEntered.RemoveListener(OnSelectEntered);
+                grabInteractable.selectEntered.AddListener(OnSelectEntered);
             }
         }
 
@@ -49,17 +46,27 @@ namespace ODON.UsateManager
             base.OnDisable();
             if (grabInteractable != null)
             {
-                grabInteractable.selectEntered.RemoveListener(OnGrabEventHandler);
+                grabInteractable.selectEntered.RemoveListener(OnSelectEntered);
             }
         }
 
-        private void OnGrabEventHandler(SelectEnterEventArgs args)
+        protected override void OnSelectEntered(SelectEnterEventArgs args)
         {
             // TODO : Implémenter la gestion des erreurs bloquante et non bloquante
+            Debug.Log("Grab event triggered");
+            DoEvent();
+
+            base.OnSelectEntered(args);
+        }
+
+        private void DoEvent()
+        {
             if (IsValidStep())
             {
                 OnGrabEvent?.Invoke();
+                debugPlayEventButton = true;
             }
+            debugPlayEventButton = false;
         }
     }
 }
