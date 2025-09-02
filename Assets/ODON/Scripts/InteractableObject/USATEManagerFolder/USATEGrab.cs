@@ -57,6 +57,7 @@ namespace ODON.UsateManager
             }
 
             TryValidateCurrentItem();
+            this.enabled = false; // Désactive ce script pour éviter de valider plusieurs fois le même objet
         }
     }
 }

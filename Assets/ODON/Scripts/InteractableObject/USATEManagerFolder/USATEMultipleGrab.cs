@@ -87,6 +87,7 @@ namespace ODON.UsateManager
                 vRValidatorObject.ObjectToActivate.SetActive(true);
                 vRValidatorObject.ValidateObject.SetActive(false);
                 vRValidatorObject.IsValid = true;
+                this.enabled = false; // Désactive ce script pour éviter de valider plusieurs fois le même objet
             }
         }
 
