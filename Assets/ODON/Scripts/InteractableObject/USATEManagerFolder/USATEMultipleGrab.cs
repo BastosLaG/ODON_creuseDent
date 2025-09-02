@@ -32,6 +32,17 @@ namespace ODON.UsateManager
             }
         }
 
+        private void OnDisable()
+        {
+            foreach (var validator in validatorObjects)
+            {
+                if (validator.ValidateObject.TryGetComponent<XRGrabInteractable>(out var grabInteractable))
+                {
+                    grabInteractable.selectEntered.RemoveListener(args => OnSelectEntered(args, validator));
+                }
+            }
+        }
+
         void Update()
         {
             if (IsAllValid() && isAllValid == false)
@@ -71,7 +82,12 @@ namespace ODON.UsateManager
                 Debug.Log("Le step actuel n'est pas le bon.");
                 return;
             }
-            vRValidatorObject.IsValid = true;
+            if (vRValidatorObject.ObjectToActivate != null && vRValidatorObject.ValidateObject != null)
+            {
+                vRValidatorObject.ObjectToActivate.SetActive(true);
+                vRValidatorObject.ValidateObject.SetActive(false);
+                vRValidatorObject.IsValid = true;
+            }
         }
 
         public override void TryValidateCurrentItem()

@@ -8,8 +8,10 @@ namespace ODON.Data
     {
         [SerializeField] private GameObject ObjectInteractable;
         [SerializeField] private bool isValid = false;
+        [SerializeField] private GameObject ObjectToActivateOnValid;
 
         public GameObject ValidateObject => ObjectInteractable;
         public bool IsValid { get => isValid; set => isValid = value; }
+        public GameObject ObjectToActivate => ObjectToActivateOnValid;
     }
 }
