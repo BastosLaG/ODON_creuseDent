@@ -51,12 +51,12 @@ namespace ODON.GameManager
                 cramponDictionary.Add(key, crampon);
             }
 
-            Debug.Log($"teeth needed is the number {GameHandler.Instance.PatientData[GameHandler.Instance.PatientDataIndex].TreatedToothWithSection}");
+            Debug.Log($"teeth needed is the number {GameHandler.Instance.PatientData.TreatedToothWithSection}");
         }
 
         public void SwapPrefabs()
         {
-            int GoodKey = GameHandler.Instance.PatientData[GameHandler.Instance.PatientDataIndex].TreatedToothWithSection;
+            int GoodKey = GameHandler.Instance.PatientData.TreatedToothWithSection;
 
             foreach (CramponPreview crampon in CramponList)
             {

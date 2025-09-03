@@ -52,5 +52,13 @@ namespace ODON.Data
 
         [Tooltip("Indicates if a zirconia prosthesis is used.")]
         public bool Zirconia;
+
+
+        public void LoadMetaData(string name, int age, Gender gender)
+        {
+            PatientName = name;
+            Age = age;
+            Gender = gender;
+        }
     }
 }

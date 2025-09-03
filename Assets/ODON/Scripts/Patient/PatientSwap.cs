@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -9,11 +10,10 @@ namespace ODON
         private static readonly WaitForSeconds _waitForSeconds10 = new(10);
 
         private PatientPathFollower patientPathFollower;
-        [SerializeField] private Data.PatientNames patientToSwap;
 
         [SerializeField] private BlendShapesDriver jawDriver;
         [SerializeField] private Transform digue;
-        [SerializeField] private Data.PatientMeta[] patientMouths;
+        [SerializeField] private Data.PatientMeta[] patientsMeta;
 
         [SerializeField] private Data.PatientState patientState;
         [SerializeField] private Data.PatientState currentPatientState;
@@ -63,35 +63,38 @@ namespace ODON
 
         private void BentFingers()
         {
-            foreach (Data.PatientMeta mouth in patientMouths)
+            foreach (Data.PatientMeta patientMeta in patientsMeta)
             {
-                mouth.patientBody.GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(50, 100);
+                patientMeta.patientBody.GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(50, 100);
             }
         }
 
         private Data.PatientNames RandomPatient()
         {
-            return (Data.PatientNames)Random.Range(0, System.Enum.GetNames(typeof(Data.PatientNames)).Length - 1);
+            return (Data.PatientNames)UnityEngine.Random.Range(0, Enum.GetNames(typeof(Data.PatientNames)).Length);
         }
 
         public void SetPatientMouth(Data.PatientNames patientNames)
         {
-            foreach (Data.PatientMeta patientMouth in patientMouths)
+            Data.PatientMeta patientMeta = Array.Find(patientsMeta, meta => meta.patientMetaData.PatientName == patientNames);
+
+            Debug.Log($"Setting mouth for patient: {patientNames} | PatientMeta: {patientMeta.patientMetaData.PatientName.ToString()}");
+
+            foreach (Data.PatientMeta item in patientsMeta)
             {
-                if (patientMouth.patientMetaData.PatientName == patientNames)
+                if (item.patientBody != patientMeta.patientBody)
                 {
-                    jawDriver.transform.localPosition = patientMouth.patientMetaData.JawPos;
-                    digue.localPosition = patientMouth.patientMetaData.DiguePos;
-                    patientMouth.patientBody.SetActive(true);
-                }
-                else
-                {
-                    patientMouth.patientBody.SetActive(false);
-                    patientMouth.patientBody.GetComponent<SkinnedMeshRenderer>().updateWhenOffscreen = false;
+                    item.patientBody.SetActive(false);
+                    item.patientBody.GetComponent<SkinnedMeshRenderer>().updateWhenOffscreen = false;
                 }
             }
+            jawDriver.transform.localPosition = patientMeta.patientMetaData.JawPos;
+            digue.localPosition = patientMeta.patientMetaData.DiguePos;
+            patientMeta.patientBody.SetActive(true);
 
-            GameManager.GameHandler.Instance.PatientData[GameManager.GameHandler.Instance.PatientDataIndex].PatientName = System.Enum.GetName(typeof(Data.PatientNames), patientToSwap);
+            GameManager.GameHandler.Instance.PatientData.LoadMetaData(patientMeta.patientMetaData.PatientName.ToString(), patientMeta.patientMetaData.Age, patientMeta.patientMetaData.Gender);
+            
+            GameManager.UIManager.Instance.InitClipBoard();
         }
 
         public void ChangeMouseState()
@@ -105,29 +108,8 @@ namespace ODON
         {
             Data.PatientNames randomPatientName = RandomPatient();
             SetPatientMouth(randomPatientName);
-            LoadPatientData(randomPatientName);
-
             BentFingers();
-
             patientPathFollower.GoToPoint(0);
-        }
-
-        public void LoadPatientData(Data.PatientNames patientName)
-        {
-            Data.PatientData patientData = GameManager.GameHandler.Instance.PatientData[GameManager.GameHandler.Instance.PatientDataIndex];
-
-            foreach (Data.PatientMeta patientMouth in patientMouths)
-            {
-                if (patientMouth.patientMetaData.PatientName == patientName)
-                {
-                    // Name
-                    patientData.PatientName = System.Enum.GetName(typeof(Data.PatientNames), patientMouth.patientMetaData.PatientName);
-                    // Age
-                    patientData.Age = patientMouth.patientMetaData.Age;
-                    // Gender
-                    patientData.Gender = patientMouth.patientMetaData.Gender;
-                }
-            }
         }
     }
 }

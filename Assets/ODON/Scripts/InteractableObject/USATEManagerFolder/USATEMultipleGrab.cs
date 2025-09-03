@@ -44,19 +44,14 @@ namespace ODON.UsateManager
 
         void Update()
         {
-            if (IsAllValid())
-            {
-                TryValidateCurrentItem(true);
-            }
 
             if (debugGrabMultipleButton)
             {
-                if (IsValidStep())
+                foreach (Struct_VRValidatorObject item in validatorObjects)
                 {
-                    Debug.Log("Grab multiple triggered");
-                    foreach (Struct_VRValidatorObject item in validatorObjects)
+                    if (item.ValidateObject.TryGetComponent<XRGrabInteractable>(out var grabInteractable))
                     {
-                        item.IsValid = true;
+                        grabInteractable.selectEntered.Invoke(new SelectEnterEventArgs());
                     }
                 }
                 debugGrabMultipleButton = false;
@@ -80,12 +75,21 @@ namespace ODON.UsateManager
                 Debug.Log("Le step actuel n'est pas le bon.");
                 return;
             }
-            if (vRValidatorObject.ObjectToActivate != null && vRValidatorObject.ValidateObject != null)
+
+            foreach (Struct_VRValidatorObject item in validatorObjects)
             {
-                vRValidatorObject.ObjectToActivate.SetActive(true);
-                vRValidatorObject.ValidateObject.SetActive(false);
-                vRValidatorObject.IsValid = true;
-                this.enabled = false;
+                if (item.ValidateObject == vRValidatorObject.ValidateObject)
+                {
+                    item.IsValid = true;
+                    item.ObjectToActivate.SetActive(true);
+                    item.ValidateObject.SetActive(false);
+                }
+            }
+            this.enabled = false;
+
+            if (IsAllValid())
+            {
+                TryValidateCurrentItem(true);
             }
         }
 
@@ -100,16 +104,5 @@ namespace ODON.UsateManager
             if (!IsAllValid()) return;
             base.TryValidateCurrentItem(stepIsCorrect);
         }
-
-        public void ValidateObject(GameObject thisObject)
-        {
-            foreach (Struct_VRValidatorObject item in validatorObjects)
-            {
-                if (item.ValidateObject == thisObject)
-                {
-                    item.IsValid = true;
-                }
-            }
-        } 
     }
 }

@@ -56,7 +56,7 @@ namespace ODON.GameManager
 
             foreach (Data.Struct_Teeth teeth in teethStructList)
             {
-                if (teeth.tooth.name == GameHandler.Instance.PatientData[GameHandler.Instance.PatientDataIndex].TreatedToothWithSection.ToString())
+                if (teeth.tooth.name == GameHandler.Instance.PatientData.TreatedToothWithSection.ToString())
                 {
                     goodTeethToDig = teeth;
                 }

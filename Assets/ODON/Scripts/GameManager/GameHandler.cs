@@ -34,18 +34,12 @@ namespace ODON.GameManager
         /// This ID corresponds to the technique currently being performed by the player.
         /// </remarks>
         [Header("Patient Data")]
-        [SerializeField] private Data.PatientData[] patientData;
-        [SerializeField] private int patientDataIndex = 0;
+        [SerializeField] private Data.PatientData patientData;
         [SerializeField] private Data.PatientState patientState = Data.PatientState.InWaitingRoom;
-        public Data.PatientData[] PatientData
+        public Data.PatientData PatientData
         {
             get => patientData;
-            private set => patientData = value;
-        }
-        public int PatientDataIndex
-        {
-            get => patientDataIndex;
-            private set => patientDataIndex = value;
+            set => patientData = value;
         }
         public Data.PatientState PatientState
         {
@@ -69,10 +63,6 @@ namespace ODON.GameManager
             }
         }
 
-        void Start()
-        {
-            UIManager.Instance.InitClipBoard();
-        }
         #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////////

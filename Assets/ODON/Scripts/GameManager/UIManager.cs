@@ -30,7 +30,7 @@ namespace ODON.GameManager
         public void InitClipBoard()
         {
             UIClipBoard = FindFirstObjectByType<UI.UIClipBoard>();
-            uIClipBoard.UpdateUI(GameHandler.Instance.PatientData[GameHandler.Instance.PatientDataIndex]);
+            uIClipBoard.UpdateUI(GameHandler.Instance.PatientData);
         }
     }
 }
