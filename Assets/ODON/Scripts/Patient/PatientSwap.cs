@@ -13,12 +13,11 @@ namespace ODON
 
         [SerializeField] private BlendShapesDriver jawDriver;
         [SerializeField] private Transform digue;
-        [SerializeField] private Data.PatientMouth[] patientMouths;
+        [SerializeField] private Data.PatientMeta[] patientMouths;
 
         [SerializeField] private Data.PatientState patientState;
         [SerializeField] private Data.PatientState currentPatientState;
 
-        private Data.PatientMouth currentPatient;
         private float currentWeight = 0f;
         private float tempWeight = 0f;
 
@@ -64,7 +63,7 @@ namespace ODON
 
         private void BentFingers()
         {
-            foreach (Data.PatientMouth mouth in patientMouths)
+            foreach (Data.PatientMeta mouth in patientMouths)
             {
                 mouth.patientBody.GetComponent<SkinnedMeshRenderer>().SetBlendShapeWeight(50, 100);
             }
@@ -77,14 +76,13 @@ namespace ODON
 
         public void SetPatientMouth(Data.PatientNames patientNames)
         {
-            foreach (Data.PatientMouth patientMouth in patientMouths)
+            foreach (Data.PatientMeta patientMouth in patientMouths)
             {
-                if (patientMouth.patientName == patientNames)
+                if (patientMouth.patientMetaData.PatientName == patientNames)
                 {
-                    jawDriver.transform.localPosition = patientMouth.patientMouthPos.JawPos;
-                    digue.localPosition = patientMouth.patientMouthPos.DiguePos;
+                    jawDriver.transform.localPosition = patientMouth.patientMetaData.JawPos;
+                    digue.localPosition = patientMouth.patientMetaData.DiguePos;
                     patientMouth.patientBody.SetActive(true);
-                    currentPatient = patientMouth;
                 }
                 else
                 {
@@ -107,9 +105,29 @@ namespace ODON
         {
             Data.PatientNames randomPatientName = RandomPatient();
             SetPatientMouth(randomPatientName);
-            GameManager.GameHandler.Instance.PatientData[GameManager.GameHandler.Instance.PatientDataIndex].PatientName = System.Enum.GetName(typeof(Data.PatientNames), randomPatientName);
+            LoadPatientData(randomPatientName);
+
             BentFingers();
+
             patientPathFollower.GoToPoint(0);
+        }
+
+        public void LoadPatientData(Data.PatientNames patientName)
+        {
+            Data.PatientData patientData = GameManager.GameHandler.Instance.PatientData[GameManager.GameHandler.Instance.PatientDataIndex];
+
+            foreach (Data.PatientMeta patientMouth in patientMouths)
+            {
+                if (patientMouth.patientMetaData.PatientName == patientName)
+                {
+                    // Name
+                    patientData.PatientName = System.Enum.GetName(typeof(Data.PatientNames), patientMouth.patientMetaData.PatientName);
+                    // Age
+                    patientData.Age = patientMouth.patientMetaData.Age;
+                    // Gender
+                    patientData.Gender = patientMouth.patientMetaData.Gender;
+                }
+            }
         }
     }
 }

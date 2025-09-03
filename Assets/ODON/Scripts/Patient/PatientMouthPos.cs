@@ -1,9 +1,14 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PatientMouthPos", menuName = "ScriptableObjects/PatientMouthPos")]
-public class PatientMouthPos : ScriptableObject
+namespace ODON.Data
 {
-    public Vector3 JawPos;
-    public Vector3 DiguePos;
+    [CreateAssetMenu(fileName = "PatientMetaData", menuName = "ScriptableObjects/PatientMetaData")]
+    public class PatientMetaData : ScriptableObject
+    {
+        public PatientNames PatientName;
+        public int Age;
+        public Gender Gender;
+        public Vector3 JawPos;
+        public Vector3 DiguePos;
+    }
 }
