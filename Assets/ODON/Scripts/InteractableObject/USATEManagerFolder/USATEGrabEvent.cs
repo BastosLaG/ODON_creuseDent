@@ -2,9 +2,6 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.Events;
-using System;
-using UnityEditor.Build;
-
 
 namespace ODON.UsateManager
 {
