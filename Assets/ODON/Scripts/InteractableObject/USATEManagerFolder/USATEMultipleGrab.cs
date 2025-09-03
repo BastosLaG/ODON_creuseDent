@@ -10,13 +10,12 @@ namespace ODON.UsateManager
     {
         [Header("Multiple GrabSettings")]
         [SerializeField] private Struct_VRValidatorObject[] validatorObjects;
-        private bool isAllValid = false;
         [SerializeField] protected bool debugGrabMultipleButton;
 
         protected new void Start()
         {
             base.Start();
-            foreach (var validator in validatorObjects)
+            foreach (Struct_VRValidatorObject validator in validatorObjects)
             {
                 if (validator.ValidateObject.TryGetComponent<XRGrabInteractable>(out var grabInteractable))
                 {
@@ -45,10 +44,9 @@ namespace ODON.UsateManager
 
         void Update()
         {
-            if (IsAllValid() && isAllValid == false)
+            if (IsAllValid())
             {
                 TryValidateCurrentItem(true);
-                isAllValid = true;
             }
 
             if (debugGrabMultipleButton)
@@ -87,7 +85,7 @@ namespace ODON.UsateManager
                 vRValidatorObject.ObjectToActivate.SetActive(true);
                 vRValidatorObject.ValidateObject.SetActive(false);
                 vRValidatorObject.IsValid = true;
-                this.enabled = false; // Désactive ce script pour éviter de valider plusieurs fois le même objet
+                this.enabled = false;
             }
         }
 
@@ -102,5 +100,16 @@ namespace ODON.UsateManager
             if (!IsAllValid()) return;
             base.TryValidateCurrentItem(stepIsCorrect);
         }
+
+        public void ValidateObject(GameObject thisObject)
+        {
+            foreach (Struct_VRValidatorObject item in validatorObjects)
+            {
+                if (item.ValidateObject == thisObject)
+                {
+                    item.IsValid = true;
+                }
+            }
+        } 
     }
 }
