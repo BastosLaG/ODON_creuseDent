@@ -1,10 +1,11 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(Animator))]
 public class PatientPathFollower : MonoBehaviour
 {
     [System.Serializable]
@@ -80,8 +81,14 @@ public class PatientPathFollower : MonoBehaviour
     private IEnumerator Sit(float duration)
     {
         agent.enabled = false;
-        if (currentPoint.layTo) anim.SetTrigger("LieOn");
-        else anim.SetTrigger("Sit");
+        if (currentPoint.layTo)
+        {
+            anim.SetTrigger("LieOn");
+        }
+        else
+        {
+            anim.SetTrigger("Sit");
+        }
         transform.GetPositionAndRotation(out Vector3 startPosition, out Quaternion startRotation);
         float timeElapsed = 0f;
 
@@ -90,8 +97,10 @@ public class PatientPathFollower : MonoBehaviour
 
         while (timeElapsed < duration)
         {
-            transform.position = Vector3.Lerp(startPosition, destination, timeElapsed / duration);
-            transform.rotation = Quaternion.Slerp(startRotation, Quaternion.Euler(angularAngle), timeElapsed / duration);
+            transform.SetPositionAndRotation(
+                Vector3.Lerp(startPosition, destination, timeElapsed / duration),
+                Quaternion.Slerp(startRotation, Quaternion.Euler(angularAngle), timeElapsed / duration)
+                );
             timeElapsed += Time.deltaTime;
             yield return null;
         }

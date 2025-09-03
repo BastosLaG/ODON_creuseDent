@@ -42,19 +42,19 @@ namespace ODON.UI
 
         public void UpdateUI(PatientData data)
         {
-            SetNamePatient(data.patientName);
-            SetAgePatient(data.age);
-            SetTeintedToothText(data.teintedTooth);
+            SetNamePatient(data.PatientName);
+            SetAgePatient(data.Age);
+            SetTeintedToothText(data.TeintedTooth);
 
-            SetGenderCheck(data.gender);
-            SetAllergiesCheck(data.hasLatexAllergy);
-            SetNormalPoseCheck(data.hasNormalPose);
-            checkInlayCore.SetActive(data.inlayCore);
-            checkCastCrown.SetActive(data.castCrown);
-            checkMetalCeramicCrown.SetActive(data.metalCeramicCrown);
-            checkStellite.SetActive(data.stellite);
-            checkResinPartial.SetActive(data.resinPartial);
-            checkZirconia.SetActive(data.zirconia);
+            SetGenderCheck(data.Gender);
+            SetAllergiesCheck(data.HasLatexAllergy);
+            SetNormalPoseCheck(data.HasNormalPose);
+            checkInlayCore.SetActive(data.InlayCore);
+            checkCastCrown.SetActive(data.CastCrown);
+            checkMetalCeramicCrown.SetActive(data.MetalCeramicCrown);
+            checkStellite.SetActive(data.Stellite);
+            checkResinPartial.SetActive(data.ResinPartial);
+            checkZirconia.SetActive(data.Zirconia);
 
             HighlightTreatedTooth(data.TreatedToothWithSection);
             patientNumberToothText.text = data.TreatedToothWithSection.ToString();

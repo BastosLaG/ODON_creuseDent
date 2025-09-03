@@ -7,50 +7,50 @@ namespace ODON.Data
     {
         [Header("Patient Information")]
         [Tooltip("Name of the patient.")]
-        public string patientName;
+        public string PatientName;
 
         [Tooltip("Age of the patient.")]
         [Range(1, 120)]
-        public int age;
-        
+        public int Age;
+
         [Tooltip("TeintedThooth object representing the tooth condition of the patient.")]
-        public TeintedThooth teintedTooth;
+        public TeintedThooth TeintedTooth;
 
         [Tooltip("Gender of the patient.")]
-        public Gender gender;
+        public Gender Gender;
 
-        [Tooltip("Thooth section of the patient that was operated on.")]
+        [Tooltip("Tooth section of the patient that was operated on.")]
         [Range(1, 4)]
-        public int toothSection;
+        public int ToothSection;
 
         [Tooltip("Tooth that was operated on.")]
         [Range(1, 8)]
-        public int treatedTooth;
-        public int TreatedToothWithSection => (toothSection * 10) + treatedTooth;
+        public int TreatedTooth;
+        public int TreatedToothWithSection => (ToothSection * 10) + TreatedTooth;
 
         [Tooltip("Indicates if the patient has a latex allergy.")]
-        public bool hasLatexAllergy;
+        public bool HasLatexAllergy;
 
         [Header("Type of pose")]
-        public bool hasNormalPose;
+        public bool HasNormalPose;
 
         [Header("Prosthetic Information")]
         [Tooltip("Indicates if an inlay-core is used.")]
-        public bool inlayCore;
+        public bool InlayCore;
 
         [Tooltip("Indicates if a cast crown is used.")]
-        public bool castCrown;
+        public bool CastCrown;
 
         [Tooltip("Indicates if a metal-ceramic crown (CCM) is used.")]
-        public bool metalCeramicCrown;
+        public bool MetalCeramicCrown;
 
         [Tooltip("Indicates if a stellite prosthesis is used.")]
-        public bool stellite;
+        public bool Stellite;
 
         [Tooltip("Indicates if a resin partial denture is used.")]
-        public bool resinPartial;
+        public bool ResinPartial;
 
         [Tooltip("Indicates if a zirconia prosthesis is used.")]
-        public bool zirconia;
+        public bool Zirconia;
     }
 }

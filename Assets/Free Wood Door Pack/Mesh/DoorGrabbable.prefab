@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 7805344128938284877}
   - component: {fileID: 840862651866281574}
   - component: {fileID: 3338068439602809690}
+  - component: {fileID: 2182163480468783437}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -518,3 +519,35 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2182163480468783437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8824692016471227055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63391cc75998b7a41ad0dae34b7543a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  step: {fileID: 11400000, guid: ecb9c14b9770e914b94f99a711610c10, type: 2}
+  TargetHighlight: {fileID: 7159204295136228590}
+  grabInteractable: {fileID: 840862651866281574}
+  debugGrabButton: 0
+  OnGrabEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ODON.GameManager.GameHandler, AssemblyDefinitionOdon
+        m_MethodName: NewPatientEnterOnRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  debugPlayEventButton: 0

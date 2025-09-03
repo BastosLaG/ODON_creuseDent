@@ -17,10 +17,10 @@ namespace ODON.GameManager
         #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////////
-        
+
         #region Erreur Data
         [Header("Error Data")]
-        [SerializeField] private List<string> errorData = new ();
+        [SerializeField] private List<string> errorData = new();
         public List<string> ErrorData => errorData;
         #endregion
 
@@ -78,19 +78,24 @@ namespace ODON.GameManager
         //////////////////////////////////////////////////////////////////////////////////////////
 
         #region Patient Management
-        public void NewPatientEnterOnRoom()
+        public void PatientInCabinet()
         {
             patientState = Data.PatientState.InCabinet;
         }
 
-        public void PatientSitOnBed()
+        public void PatientInBed()
         {
             patientState = Data.PatientState.InBed;
         }
 
-        public void PatientExitFromRoom()
+        public void PatientInWaitingRoom()
         {
             patientState = Data.PatientState.InWaitingRoom;
+        }
+        
+        public void PatientLeaving()
+        {
+            patientState = Data.PatientState.Leaving;
         }
         #endregion
     }

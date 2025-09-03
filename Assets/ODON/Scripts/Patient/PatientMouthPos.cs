@@ -5,5 +5,5 @@ using UnityEngine;
 public class PatientMouthPos : ScriptableObject
 {
     public Vector3 JawPos;
-    public Vector3 diguePos;
+    public Vector3 DiguePos;
 }

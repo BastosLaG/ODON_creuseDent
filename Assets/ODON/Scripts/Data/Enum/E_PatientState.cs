@@ -5,5 +5,6 @@ namespace ODON.Data
         InWaitingRoom,
         InCabinet,
         InBed,
+        Leaving,
     }
 }
