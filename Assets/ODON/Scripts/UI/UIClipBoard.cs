@@ -40,6 +40,21 @@ namespace ODON.UI
             InitializeToothSections();
         }
 
+        void OnEnable()
+        {
+            GameManager.UIManager.Instance.onUpdatePatientData.AddListener(UpdateUI);
+        }
+
+        void Start()
+        {
+            
+        }
+
+        void OnDisable()
+        {
+            GameManager.UIManager.Instance.onUpdatePatientData.RemoveListener(UpdateUI);
+        }
+
         public void UpdateUI(PatientData data)
         {
             SetNamePatient(data.PatientName);

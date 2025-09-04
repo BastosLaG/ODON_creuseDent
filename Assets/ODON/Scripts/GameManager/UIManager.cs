@@ -1,19 +1,16 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ODON.GameManager
 {
-    
+
     public class UIManager : MonoBehaviour
     {
         private static UIManager instance;
         public static UIManager Instance => instance;
 
-        [SerializeField] private UI.UIClipBoard uIClipBoard;
-        public UI.UIClipBoard UIClipBoard
-        {
-            get => uIClipBoard;
-            set => uIClipBoard = value;
-        }
+        [SerializeField] private Data.PatientData patientData;
+        public UnityEvent<Data.PatientData> onUpdatePatientData = new();
 
         private void Awake()
         {
@@ -25,12 +22,11 @@ namespace ODON.GameManager
             {
                 Destroy(gameObject);
             }
-        }
+        }  
 
-        public void InitClipBoard()
+        public void UpdatePatientData()
         {
-            UIClipBoard = FindFirstObjectByType<UI.UIClipBoard>();
-            uIClipBoard.UpdateUI(GameHandler.Instance.PatientData);
+            onUpdatePatientData.Invoke(patientData);
         }
     }
 }

@@ -93,8 +93,7 @@ namespace ODON
             patientMeta.patientBody.SetActive(true);
 
             GameManager.GameHandler.Instance.PatientData.LoadMetaData(patientMeta.patientMetaData.PatientName.ToString(), patientMeta.patientMetaData.Age, patientMeta.patientMetaData.Gender);
-            
-            GameManager.UIManager.Instance.InitClipBoard();
+            GameManager.UIManager.Instance.UpdatePatientData();
         }
 
         public void ChangeMouseState()
