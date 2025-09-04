@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace ODON.Data
@@ -7,17 +8,31 @@ namespace ODON.Data
     {
         [Header("Patient Information")]
         [Tooltip("Name of the patient.")]
-        public string PatientName;
+        public string PatientName
+        {
+            get => PatientMetaData.PatientName.ToString();
+            set => PatientMetaData.PatientName = Enum.Parse<PatientNames>(value);
+        }
 
         [Tooltip("Age of the patient.")]
         [Range(1, 120)]
-        public int Age;
+        public int Age
+        {
+            get => PatientMetaData.Age;
+            set => PatientMetaData.Age = value;
+        }
+        [Tooltip("Gender of the patient.")]
+        public Gender Gender
+        {
+            get => PatientMetaData.Gender;
+            set => PatientMetaData.Gender = value;
+        }
+
+        public PatientMetaData PatientMetaData;
 
         [Tooltip("TeintedThooth object representing the tooth condition of the patient.")]
         public TeintedThooth TeintedTooth;
 
-        [Tooltip("Gender of the patient.")]
-        public Gender Gender;
 
         [Tooltip("Tooth section of the patient that was operated on.")]
         [Range(1, 4)]
@@ -52,13 +67,5 @@ namespace ODON.Data
 
         [Tooltip("Indicates if a zirconia prosthesis is used.")]
         public bool Zirconia;
-
-
-        public void LoadMetaData(string name, int age, Gender gender)
-        {
-            PatientName = name;
-            Age = age;
-            Gender = gender;
-        }
     }
 }

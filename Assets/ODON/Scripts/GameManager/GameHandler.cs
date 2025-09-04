@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ODON.GameManager
 {
@@ -35,6 +36,7 @@ namespace ODON.GameManager
         /// </remarks>
         [Header("Patient Data")]
         [SerializeField] private Data.PatientData patientData;
+        public UnityEvent<Data.PatientData> onUpdatePatientData = new();
         [SerializeField] private Data.PatientState patientState = Data.PatientState.InWaitingRoom;
         public Data.PatientData PatientData
         {
@@ -82,10 +84,16 @@ namespace ODON.GameManager
         {
             patientState = Data.PatientState.InWaitingRoom;
         }
-        
+
         public void PatientLeaving()
         {
             patientState = Data.PatientState.Leaving;
+        }
+
+        public void UpdatePatientData(Data.PatientMetaData patientMetaData)
+        {
+            PatientData.PatientMetaData = patientMetaData;
+            onUpdatePatientData?.Invoke(PatientData);
         }
         #endregion
     }

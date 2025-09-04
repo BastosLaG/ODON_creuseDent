@@ -78,8 +78,6 @@ namespace ODON
         {
             Data.PatientMeta patientMeta = Array.Find(patientsMeta, meta => meta.patientMetaData.PatientName == patientNames);
 
-            Debug.Log($"Setting mouth for patient: {patientNames} | PatientMeta: {patientMeta.patientMetaData.PatientName.ToString()}");
-
             foreach (Data.PatientMeta item in patientsMeta)
             {
                 if (item.patientBody != patientMeta.patientBody)
@@ -92,8 +90,8 @@ namespace ODON
             digue.localPosition = patientMeta.patientMetaData.DiguePos;
             patientMeta.patientBody.SetActive(true);
 
-            GameManager.GameHandler.Instance.PatientData.LoadMetaData(patientMeta.patientMetaData.PatientName.ToString(), patientMeta.patientMetaData.Age, patientMeta.patientMetaData.Gender);
-            GameManager.UIManager.Instance.UpdatePatientData();
+            GameManager.GameHandler.Instance.UpdatePatientData(patientMeta.patientMetaData);
+            
         }
 
         public void ChangeMouseState()

@@ -42,26 +42,21 @@ namespace ODON.UI
 
         void OnEnable()
         {
-            GameManager.UIManager.Instance.onUpdatePatientData.AddListener(UpdateUI);
-        }
-
-        void Start()
-        {
-            
+            GameManager.GameHandler.Instance.onUpdatePatientData.AddListener(UpdateUI);
         }
 
         void OnDisable()
         {
-            GameManager.UIManager.Instance.onUpdatePatientData.RemoveListener(UpdateUI);
+            GameManager.GameHandler.Instance.onUpdatePatientData.RemoveListener(UpdateUI);
         }
 
         public void UpdateUI(PatientData data)
         {
             SetNamePatient(data.PatientName);
             SetAgePatient(data.Age);
-            SetTeintedToothText(data.TeintedTooth);
-
             SetGenderCheck(data.Gender);
+
+            SetTeintedToothText(data.TeintedTooth);
             SetAllergiesCheck(data.HasLatexAllergy);
             SetNormalPoseCheck(data.HasNormalPose);
             checkInlayCore.SetActive(data.InlayCore);

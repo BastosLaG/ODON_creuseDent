@@ -9,8 +9,6 @@ namespace ODON.GameManager
         private static UIManager instance;
         public static UIManager Instance => instance;
 
-        [SerializeField] private Data.PatientData patientData;
-        public UnityEvent<Data.PatientData> onUpdatePatientData = new();
 
         private void Awake()
         {
@@ -23,10 +21,5 @@ namespace ODON.GameManager
                 Destroy(gameObject);
             }
         }  
-
-        public void UpdatePatientData()
-        {
-            onUpdatePatientData.Invoke(patientData);
-        }
     }
 }
