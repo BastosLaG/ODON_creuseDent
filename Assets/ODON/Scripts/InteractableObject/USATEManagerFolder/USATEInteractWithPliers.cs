@@ -21,14 +21,12 @@ namespace ODON.UsateManager
         [Header("Hover")]
         [SerializeField] private Material hoverMaterial;
 
-        private Material defaultMaterial;
+        [SerializeField] private Material defaultMaterial;
         private Renderer targetRenderer;
 
         private Transform targetPosParentReference;
 
-        bool isPlisersDam = false;
-        bool isGoodTarget = false;
-
+        bool isPliserDam = false;
 
         protected new void Start()
         {
@@ -45,12 +43,11 @@ namespace ODON.UsateManager
                 targetPosParentReference = targetPosForGrab.parent;
             }
             targetRenderer = targetObject.GetComponent<Renderer>();
-            defaultMaterial = targetRenderer.material;
 
             if (tag.CompareTo("PinceDigue") == 0)
             {
-                Debug.Log("The object is tagged as 'PinceDigue'.", this);
-                isPlisersDam = true;
+                // Debug.Log("The object is tagged as 'PinceDigue'.", this);
+                isPliserDam = true;
             }
         }
 
@@ -60,8 +57,7 @@ namespace ODON.UsateManager
             {
                 if (IsValidStep())
                 {
-                    Debug.Log("Interact triggered");
-                    TryValidateCurrentItem();
+                    interactInteractable.activated.Invoke(null);
                 }
                 debugInteractButton = false;
             }
@@ -71,26 +67,26 @@ namespace ODON.UsateManager
         #region Trigger System
         protected void OnTriggerEnter(Collider other)
         {
-            if (isPlisersDam && isOpen == false)
+            if (isPliserDam && isOpen == true)
             {
                 AddListenerToInteractable(other);
             }
-            else if (!isPlisersDam && isOpen == true)
+            else if (!isPliserDam && isOpen == false)
             {
                 AddListenerToInteractable(other);
             }
             else
             {
-                Debug.Log("Pliers state does not allow interaction.", this);
+                // Debug.Log("Pliers state does not allow interaction.", this);
             }
         }
         protected void OnTriggerExit(Collider other)
         {
-            if (isPlisersDam && isOpen == false)
+            if (isPliserDam && isOpen == true)
             {
                 RemoveListenerToInteractable(other);
             }
-            else if (!isPlisersDam && isOpen == true)
+            else if (!isPliserDam && isOpen == false)
             {
                 RemoveListenerToInteractable(other);
             }
@@ -117,7 +113,7 @@ namespace ODON.UsateManager
             }
             else
             {
-                Debug.Log($"{targetObject.tag} : {other.name} is not the target object.");
+                // Debug.Log($"{targetObject.tag} : {other.name} is not the target object.");
                 // TODO : Implement non-blocking error handling
             }
         }
@@ -133,7 +129,6 @@ namespace ODON.UsateManager
                         interactInteractable.activated.RemoveListener(DoSomething);
                     }
                 }
-                isGoodTarget = false;
             }
         }
         #endregion
@@ -144,7 +139,6 @@ namespace ODON.UsateManager
             other.transform.TryGetComponent<Renderer>(out targetRenderer);
             if (targetRenderer != null && hoverMaterial != null)
             {
-                defaultMaterial = targetRenderer.material;
                 targetRenderer.material = hoverMaterial;
             }
             else
@@ -168,6 +162,7 @@ namespace ODON.UsateManager
 
         public bool IsGoodTarget(Collider other)
         {
+            Debug.Log($" target tag : {other.CompareTag(targetObject.tag)} , GameObject : {other.gameObject == targetObject}");
             if (other.CompareTag(targetObject.tag) && other.gameObject == targetObject)
             {
                 return true;
@@ -175,18 +170,17 @@ namespace ODON.UsateManager
             return false;
         }
 
-        protected virtual void DoSomething(ActivateEventArgs args)
+        protected void DoSomething(ActivateEventArgs args)
         {
             // TODO : Implement the desired functionality here
-            if (isPlisersDam)
+            if (isPliserDam)
             {
                 if (targetObject.CompareTag(Tag.HoleDigue))
                 {
                     // Digue the dam
-                    if (isGoodTarget)
-                    {
-                        GameManager.HighlightsTeethManager.Instance.OnDigDam.Invoke(true);
-                    }
+                    GameManager.HighlightsTeethManager.Instance.OnDigDam.Invoke(true);
+                    TryValidateCurrentItem();
+                    ForceClose();                  
                 }
                 else
                 {

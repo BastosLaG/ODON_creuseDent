@@ -65,7 +65,7 @@ namespace ODON
                 damRenderer.GetComponent<Renderer>();
                 Debug.Log("Current Material used at runtime: " + damRenderer.material.name);
             }
-            if (teethToManage < 11 || teethToManage > 48)
+            if (teethToManage <= 11 || teethToManage >= 48)
             {
                 Debug.LogError("teethToManage must be between 11 and 48.");
                 return;

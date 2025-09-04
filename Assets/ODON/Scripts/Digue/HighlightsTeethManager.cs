@@ -63,6 +63,25 @@ namespace ODON.GameManager
             pliers.TargetObject = goodTeethToDig.tooth;
         }
 
+        void OnEnable()
+        {
+            OnDigDam.AddListener(HideAllTeeth);
+        }
+
+        void OnDisable()
+        {
+            OnDigDam.RemoveListener(HideAllTeeth);
+        }
+
+        public void HideAllTeeth(bool arg0)
+        {
+            foreach (Data.Struct_Teeth teeth in teethStructList)
+            {
+                // Non arg0 pour respecter le nom de la fonction et suite logique des autres fonctions
+                teeth.tooth.SetActive(!arg0);
+            }
+        }
+
         #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////
