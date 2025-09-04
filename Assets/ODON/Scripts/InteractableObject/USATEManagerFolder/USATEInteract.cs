@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -12,6 +13,7 @@ namespace ODON.UsateManager
         [Header("Interact Settings")]
         [SerializeField] protected XRGrabInteractable interactInteractable;
         [SerializeField] protected BlendShapesDriver blendShapesDriver;
+        [SerializeField] protected int rangeOfBlendShapesAction = 50;
 
         [Header("Debug Settings")]
         [SerializeField] protected bool isOpen = false;
@@ -20,7 +22,7 @@ namespace ODON.UsateManager
         protected new void Start()
         {
             base.Start();
-            
+
             blendShapesDriver = GetComponent<BlendShapesDriver>();
             if (blendShapesDriver == null)
             {
@@ -28,67 +30,38 @@ namespace ODON.UsateManager
             }
         }
 
-        protected void Update()
+        void OnEnable()
         {
-            if (debugInteractButton)
-            {
-                if (isOpen)
-                {
-                    blendShapesDriver.GoToValue("Open", 100);
-                }
-                else
-                {
-                    blendShapesDriver.GoToValue("Open", 0);
-                }
-                debugInteractButton = false;
-            }
-        }
-        
-        protected virtual void OnEnable()
-        {
-            interactInteractable = GetComponent<XRGrabInteractable>();
-            if (interactInteractable != null)
-            {
-                interactInteractable.activated.AddListener(OnActivedPressed);
-            }
+            interactInteractable.activated.AddListener(SwitchBlendShapesAction);
         }
 
-        protected virtual void OnDisable()
+        void OnDisable()
         {
-            if (interactInteractable != null)
-            {
-                interactInteractable.activated.RemoveListener(OnActivedPressed);
-            }
+            interactInteractable.activated.RemoveListener(SwitchBlendShapesAction);
         }
 
-        private void OnActivedPressed(ActivateEventArgs args)
+        private void SwitchBlendShapesAction(ActivateEventArgs arg0)
         {
-            isOpen = !isOpen;
             if (isOpen)
             {
-                blendShapesDriver.GoToValue("Open", 100);
-                // TODO : Implémenter la gestion des erreurs bloquante et non bloquante
-                if (!IsValidStep())
-                {
-                    Debug.Log("Le step actuel n'est pas le bon.");
-                    return;
-                }
-
-                if (TryValidAction())
-                {
-                    TryValidateCurrentItem(); 
-                }
+                ForceClose();
             }
             else
             {
-                blendShapesDriver.GoToValue("Open", 0);
+                ForceOpen();
             }
         }
 
-        protected virtual bool TryValidAction()
+        public void ForceClose()
         {
-            // Default implementation, override in derived classes if needed
-            return true;
+            isOpen = false;
+            blendShapesDriver.GoToValue("Open", 0);
+        }
+        
+        public void ForceOpen()
+        {
+            isOpen = true;
+            blendShapesDriver.GoToValue("Open", rangeOfBlendShapesAction);
         }
     }
 }

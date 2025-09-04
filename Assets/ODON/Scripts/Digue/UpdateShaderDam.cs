@@ -1,4 +1,3 @@
-using ODON.GameManager;
 using UnityEngine;
 
 namespace ODON
@@ -52,9 +51,6 @@ namespace ODON
         [SerializeField] private Vector2 HolePosition = new ();
         [SerializeField] private float HoleRadius = 0.1f;
         [SerializeField] private float HoleFalloff = 0.01f;
-        [SerializeField] private Transform pliersTransform = null;
-        [SerializeField] private HighlightsTeethManager highlightsTeethManager;
-        // [SerializeField] private UniversalSenderActionToEventManager uSATEManager;
         #endregion
 
         ///////////////////////////////////////////////////////////////////////////////////////
@@ -62,11 +58,8 @@ namespace ODON
         #region Unity Methods
         void Start()
         {
-            if (pliersTransform == null)
-            {
-                Debug.LogError("Pliers Transform is not assigned.");
-                return;
-            }
+            teethToManage = GameManager.HighlightsTeethManager.Instance.GoodTeethToDig.Id;
+
             if (damRenderer == null)
             {
                 damRenderer.GetComponent<Renderer>();
@@ -92,6 +85,16 @@ namespace ODON
             damRenderer.material.DisableKeyword("_ACTIVEHOLE");
         }
 
+        void OnEnable()
+        {
+            GameManager.HighlightsTeethManager.Instance.OnDigDam.AddListener(SwitchActiveHole);
+        }
+
+        void OnDisable()
+        {
+            GameManager.HighlightsTeethManager.Instance.OnDigDam.RemoveListener(SwitchActiveHole);
+        }
+
         #endregion
 
         ///////////////////////////////////////////////////////////////////////////////////////
@@ -102,13 +105,13 @@ namespace ODON
         {
             if (isActive)
             {
-                // uSATEManager.TryValidateCurrentItem();
+                GetHolePosition();
                 damRenderer.material.EnableKeyword("_ACTIVEHOLE");
                 // Active cloth ? 
             }
             else
             {
-                // uSATEManager.TryValidateCurrentItem(false);
+                GetHolePosition();
                 damRenderer.material.DisableKeyword("_ACTIVEHOLE");
             }
         }

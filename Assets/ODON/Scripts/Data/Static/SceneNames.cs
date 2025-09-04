@@ -1,5 +1,3 @@
-using System;
-
 namespace ODON.Data
 {
     public static class SceneNames
