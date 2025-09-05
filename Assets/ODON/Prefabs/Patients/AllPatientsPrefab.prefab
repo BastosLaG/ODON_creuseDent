@@ -2363,7 +2363,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2895064947943234598, guid: cf02fd602b911d646a6d4fad47eb1508, type: 3}
+  - {fileID: 2100000, guid: a6fde0ee7022ede468e043d256a70869, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5415,6 +5415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7558351108817161194}
   - component: {fileID: 142502816207887923}
+  - component: {fileID: 2865181920126013269}
   m_Layer: 0
   m_Name: Jaw
   m_TagString: Untagged
@@ -5576,6 +5577,61 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0000006109476, y: 1.5387746, z: 0.021124959}
     m_Extent: {x: 0.033669587, y: 0.038562894, z: 0.056511126}
   m_DirtyAABB: 0
+--- !u!114 &2865181920126013269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791423601869116313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb3abf8cee922244b2e95628abae325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  driver: {fileID: 142502816207887923}
+  meshToDrive:
+  - {fileID: 1353891928692290265}
+  - {fileID: 269800949308202213}
+  - {fileID: 7365733269063268983}
+  - {fileID: 7849791484064733105}
+  - {fileID: 3997598608166878731}
+  - {fileID: 6502522365428341122}
+  - {fileID: 5759946218403941183}
+  - {fileID: 1620538190219479503}
+  - {fileID: 3866174875407251799}
+  - {fileID: 2770564802237601073}
+  - {fileID: 6162032875475345900}
+  - {fileID: 8172666519802581656}
+  - {fileID: 5999374199671448851}
+  - {fileID: 1266160667066227124}
+  - {fileID: 2180631427930742828}
+  - {fileID: 428650404545771315}
+  - {fileID: 7004411915224339063}
+  - {fileID: 3680777487314692053}
+  - {fileID: 4342686226978409708}
+  - {fileID: 6227834176653164406}
+  - {fileID: 1324848875307095791}
+  - {fileID: 608841666462794725}
+  - {fileID: 4171147924361533658}
+  - {fileID: 3855705939756251254}
+  - {fileID: 7829741914086996305}
+  - {fileID: 7414533017644775732}
+  - {fileID: 832052841498469788}
+  - {fileID: 1640983313786981527}
+  - {fileID: 265983616221687082}
+  - {fileID: 1655943445423954404}
+  - {fileID: 5007324319081314088}
+  - {fileID: 1214719779125272806}
+  - {fileID: 462311009548046094}
+  - {fileID: 2681047178256344461}
+  - {fileID: 8746813268910932158}
+  - {fileID: 3824658431651135362}
+  - {fileID: 8339314196479624328}
+  - {fileID: 6710206314696275399}
+  - {fileID: 8581813085137571216}
+  - {fileID: 5831166278259119417}
+  _Speed: 100
 --- !u!1 &6812445919355204735
 GameObject:
   m_ObjectHideFlags: 0
@@ -6584,34 +6640,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ce4e0df9dfe4f47bec4d196ef88a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientToSwap: 0
-  jaw: {fileID: 142502816207887923}
+  jawDriver: {fileID: 2865181920126013269}
   digue: {fileID: 2432428589196561444}
-  patientMouths:
-  - patientName: 0
-    patientBody: {fileID: 628670328026853514}
-    patientMouthPos: {fileID: 11400000, guid: ce48c3ab73a97934c92d9379f05c333f, type: 2}
-  - patientName: 1
-    patientBody: {fileID: 7603271972502765607}
-    patientMouthPos: {fileID: 11400000, guid: 7c991f23d4389714181e7bf20e666c64, type: 2}
-  - patientName: 2
-    patientBody: {fileID: 6308216629291781751}
-    patientMouthPos: {fileID: 11400000, guid: eb1ebae1179476940b9fb30dcbbd661e, type: 2}
-  - patientName: 3
-    patientBody: {fileID: 5141710934928315488}
-    patientMouthPos: {fileID: 11400000, guid: 7f06d4728c020dc45bedb4fc0305664c, type: 2}
-  - patientName: 4
-    patientBody: {fileID: 2933878620161088953}
-    patientMouthPos: {fileID: 11400000, guid: 4bc9a390082e8a24dbb701b4c22948e5, type: 2}
-  - patientName: 5
-    patientBody: {fileID: 3562915123480591870}
-    patientMouthPos: {fileID: 11400000, guid: dffa16bbbd328214dbe53647087820df, type: 2}
-  - patientName: 6
-    patientBody: {fileID: 8885226581543083414}
-    patientMouthPos: {fileID: 11400000, guid: a64fddc503e49cd44a3ea5d8cd8e9049, type: 2}
-  - patientName: 7
-    patientBody: {fileID: 6561338415415008186}
-    patientMouthPos: {fileID: 11400000, guid: ba4565744c67e8240b628d3bd7c5ff8b, type: 2}
+  patientsMeta:
+  - patientBody: {fileID: 628670328026853514}
+    patientMetaData: {fileID: 11400000, guid: ce48c3ab73a97934c92d9379f05c333f, type: 2}
+  - patientBody: {fileID: 7603271972502765607}
+    patientMetaData: {fileID: 11400000, guid: 7c991f23d4389714181e7bf20e666c64, type: 2}
+  - patientBody: {fileID: 6308216629291781751}
+    patientMetaData: {fileID: 11400000, guid: eb1ebae1179476940b9fb30dcbbd661e, type: 2}
+  - patientBody: {fileID: 5141710934928315488}
+    patientMetaData: {fileID: 11400000, guid: 7f06d4728c020dc45bedb4fc0305664c, type: 2}
+  - patientBody: {fileID: 2933878620161088953}
+    patientMetaData: {fileID: 11400000, guid: 4bc9a390082e8a24dbb701b4c22948e5, type: 2}
+  - patientBody: {fileID: 3562915123480591870}
+    patientMetaData: {fileID: 11400000, guid: dffa16bbbd328214dbe53647087820df, type: 2}
+  - patientBody: {fileID: 8885226581543083414}
+    patientMetaData: {fileID: 11400000, guid: a64fddc503e49cd44a3ea5d8cd8e9049, type: 2}
+  - patientBody: {fileID: 6561338415415008186}
+    patientMetaData: {fileID: 11400000, guid: ba4565744c67e8240b628d3bd7c5ff8b, type: 2}
+  patientState: 0
+  currentPatientState: 0
 --- !u!114 &7940856823282868994
 MonoBehaviour:
   m_ObjectHideFlags: 0

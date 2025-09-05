@@ -107,8 +107,8 @@ namespace ODON.UsateManager
                 {
                     if (interactInteractable != null)
                     {
-                        interactInteractable.deactivated.RemoveListener(DoSomething);
-                        interactInteractable.deactivated.AddListener(DoSomething);
+                        interactInteractable.activated.RemoveListener(DoSomething);
+                        interactInteractable.activated.AddListener(DoSomething);
                     }
                 }
             }
@@ -127,7 +127,7 @@ namespace ODON.UsateManager
                 {
                     if (interactInteractable != null)
                     {
-                        interactInteractable.deactivated.RemoveListener(DoSomething);
+                        interactInteractable.activated.RemoveListener(DoSomething);
                     }
                 }
             }
@@ -171,7 +171,7 @@ namespace ODON.UsateManager
             return false;
         }
 
-        protected void DoSomething(DeactivateEventArgs  args)
+        protected void DoSomething(ActivateEventArgs  args = null)
         {
             // TODO : Implement the desired functionality here
             if (isPliserDam)

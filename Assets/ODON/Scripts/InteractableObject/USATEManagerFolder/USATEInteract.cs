@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -33,15 +34,20 @@ namespace ODON.UsateManager
 
         void OnEnable()
         {
-            interactInteractable.activated.AddListener(SwitchBlendShapesAction);
+            interactInteractable.activated.AddListener(AnimatorShapesAction);
+            interactInteractable.deactivated.AddListener(AnimatorShapesActionDeactivated);
         }
+
 
         void OnDisable()
         {
-            interactInteractable.activated.RemoveListener(SwitchBlendShapesAction);
+            interactInteractable.activated.RemoveListener(AnimatorShapesAction);
+            interactInteractable.deactivated.RemoveListener(AnimatorShapesActionDeactivated);
+
         }
 
-        private void SwitchBlendShapesAction(ActivateEventArgs arg0)
+
+        private void AnimatorShapesAction(ActivateEventArgs arg0 = null)
         {
             if (!isOpen)
             {
@@ -49,20 +55,29 @@ namespace ODON.UsateManager
             }
             else
             {
-                OpenPliers();
+                ClosePliers();
             }
-            isOpen = !isOpen;
+        }
+        private void AnimatorShapesActionDeactivated(DeactivateEventArgs arg0 = null)
+        {
+            AnimatorShapesAction();
+        }
+        public void SwitchAnimatorShapes()
+        {
+            AnimatorShapesAction();
         }
 
-        public void OpenPliers()
+        private void OpenPliers()
         {
             animator.SetBool("Close", false);
             animator.SetBool("Open", true);
+            isOpen = true;
         }
-        public void ClosePliers()
+        private void ClosePliers()
         {
             animator.SetBool("Close", true);
             animator.SetBool("Open", false);
+            isOpen = !true;
         }
     }
 }
