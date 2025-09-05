@@ -1,4 +1,3 @@
-using System;
 using ODON.Data;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -38,11 +37,12 @@ namespace ODON.UsateManager
             }
             pliersCollider.isTrigger = true;
 
-            if (targetPosParentReference != null)
+            if (targetPosForGrab != null)
             {
                 targetPosParentReference = targetPosForGrab.parent;
             }
-            targetRenderer = targetObject.GetComponent<Renderer>();
+
+            targetRenderer = targetObject.GetComponentInChildren<Renderer>();
 
             if (tag.CompareTo("PinceDigue") == 0)
             {
@@ -107,7 +107,8 @@ namespace ODON.UsateManager
                 {
                     if (interactInteractable != null)
                     {
-                        interactInteractable.activated.AddListener(DoSomething);
+                        interactInteractable.deactivated.RemoveListener(DoSomething);
+                        interactInteractable.deactivated.AddListener(DoSomething);
                     }
                 }
             }
@@ -126,7 +127,7 @@ namespace ODON.UsateManager
                 {
                     if (interactInteractable != null)
                     {
-                        interactInteractable.activated.RemoveListener(DoSomething);
+                        interactInteractable.deactivated.RemoveListener(DoSomething);
                     }
                 }
             }
@@ -139,7 +140,7 @@ namespace ODON.UsateManager
             other.transform.TryGetComponent<Renderer>(out targetRenderer);
             if (targetRenderer != null && hoverMaterial != null)
             {
-                targetRenderer.material = hoverMaterial;
+                targetRenderer.sharedMaterial = hoverMaterial;
             }
             else
             {
@@ -151,7 +152,7 @@ namespace ODON.UsateManager
             other.transform.TryGetComponent<Renderer>(out targetRenderer);
             if (targetRenderer != null && defaultMaterial != null)
             {
-                targetRenderer.material = defaultMaterial;
+                targetRenderer.sharedMaterial = defaultMaterial;
             }
             else
             {
@@ -170,7 +171,7 @@ namespace ODON.UsateManager
             return false;
         }
 
-        protected void DoSomething(ActivateEventArgs args)
+        protected void DoSomething(DeactivateEventArgs  args)
         {
             // TODO : Implement the desired functionality here
             if (isPliserDam)
@@ -193,24 +194,27 @@ namespace ODON.UsateManager
                 if (targetObject.CompareTag(Tag.Crampon))
                 {
                     // Grab a specific object
-                    if (isOpen)
+                    if (!isOpen)
                     {
-                        targetObject.transform.parent = targetPosForGrab;
-                        targetObject.transform.localPosition = Vector3.zero;
-                        if (targetObject.TryGetComponent<Rigidbody>(out var rb))
-                        {
-                            rb.isKinematic = true;
-                            rb.useGravity = false;
-                        }
-                    }
-                    else
-                    {
+                        // Grab
                         targetObject.transform.parent = targetPosParentReference;
                         targetObject.transform.localPosition = Vector3.zero;
                         if (targetObject.TryGetComponent<Rigidbody>(out var rb))
                         {
                             rb.isKinematic = true;
                             rb.useGravity = false;
+                        }
+                        TryValidateCurrentItem();
+                        ForceOpen();
+                    }
+                    else
+                    {
+                        // Drop
+                        targetObject.transform.parent = targetPosParentReference;
+                        targetObject.transform.localPosition = Vector3.zero;
+                        if (targetObject.TryGetComponent<Rigidbody>(out var rb))
+                        {
+                            rb.useGravity = true;
                         }
                     }
                 }

@@ -52,13 +52,13 @@ namespace ODON.UsateManager
             }
         }
 
-        public void ForceClose()
+        public virtual void ForceClose()
         {
             isOpen = false;
             blendShapesDriver.GoToValue("Open", 0);
         }
         
-        public void ForceOpen()
+        public virtual void ForceOpen()
         {
             isOpen = true;
             blendShapesDriver.GoToValue("Open", rangeOfBlendShapesAction);

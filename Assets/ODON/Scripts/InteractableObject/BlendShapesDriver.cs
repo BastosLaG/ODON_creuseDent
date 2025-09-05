@@ -52,6 +52,7 @@ public class BlendShapesDriver : MonoBehaviour
         if (actualWeight >= 0 && !inTranslation)
         {
             inTranslation = true;
+            StopAllCoroutines();
             StartCoroutine(TranslateBlendShapeValues(blendShapeName, actualWeight, value));
         }
     }
@@ -78,6 +79,7 @@ public class BlendShapesDriver : MonoBehaviour
     {
         SetBlendShapeValue(driver.sharedMesh.GetBlendShapeName(index), value);
     }
+
     /// <summary>
     /// Directly set the blendShape value on both the driver and the driven object.
     /// </summary>
