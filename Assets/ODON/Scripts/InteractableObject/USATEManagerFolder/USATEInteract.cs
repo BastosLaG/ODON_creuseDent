@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -7,13 +6,12 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 namespace ODON.UsateManager
 {
     [RequireComponent(typeof(XRGrabInteractable))]
-    [RequireComponent(typeof(BlendShapesDriver))]
+    [RequireComponent(typeof(Animator))]
     public abstract class USATEInteract : UniversalSenderActionToEventManager
     {
         [Header("Interact Settings")]
         [SerializeField] protected XRGrabInteractable interactInteractable;
-        [SerializeField] protected BlendShapesDriver blendShapesDriver;
-        [SerializeField] protected int rangeOfBlendShapesAction = 50;
+        [SerializeField] protected Animator animator;
 
         [Header("Debug Settings")]
         [SerializeField] protected bool isOpen = false;
@@ -23,8 +21,11 @@ namespace ODON.UsateManager
         {
             base.Start();
 
-            blendShapesDriver = GetComponent<BlendShapesDriver>();
-            if (blendShapesDriver == null)
+            if (animator == null)
+            {
+                animator = GetComponent<Animator>();
+            }
+            if (animator == null)
             {
                 Debug.LogError("No BlendShapesDriver found on the object.", this);
             }
@@ -42,26 +43,26 @@ namespace ODON.UsateManager
 
         private void SwitchBlendShapesAction(ActivateEventArgs arg0)
         {
-            if (isOpen)
+            if (!isOpen)
             {
-                ForceClose();
+                OpenPliers();
             }
             else
             {
-                ForceOpen();
+                OpenPliers();
             }
+            isOpen = !isOpen;
         }
 
-        public virtual void ForceClose()
+        public void OpenPliers()
         {
-            isOpen = false;
-            blendShapesDriver.GoToValue("Open", 0);
+            animator.SetBool("Close", false);
+            animator.SetBool("Open", true);
         }
-        
-        public virtual void ForceOpen()
+        public void ClosePliers()
         {
-            isOpen = true;
-            blendShapesDriver.GoToValue("Open", rangeOfBlendShapesAction);
+            animator.SetBool("Close", true);
+            animator.SetBool("Open", false);
         }
     }
 }

@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 1044017546280520584}
   - component: {fileID: 50942321589974384}
   - component: {fileID: 6935450662169977637}
+  - component: {fileID: 8758767156338040565}
   m_Layer: 0
   m_Name: Perforator_CD-220
   m_TagString: PinceDigue
@@ -333,8 +334,7 @@ MonoBehaviour:
   step: {fileID: 11400000, guid: 8525e1bb11006144a9189cda428974af, type: 2}
   TargetHighlight: {fileID: 0}
   interactInteractable: {fileID: 2132637916557587217}
-  blendShapesDriver: {fileID: 7106794993753491107}
-  rangeOfBlendShapesAction: 50
+  animator: {fileID: 0}
   isOpen: 0
   debugInteractButton: 0
   pliersCollider: {fileID: 50942321589974384}
@@ -385,7 +385,7 @@ CapsuleCollider:
   m_Radius: 0.0032047133
   m_Height: 0.016246213
   m_Direction: 0
-  m_Center: {x: 0.009126042, y: 0.00037037852, z: 0.070805825}
+  m_Center: {x: 0, y: 0, z: 0.074}
 --- !u!114 &6935450662169977637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4724583805099838440}
         m_TargetAssemblyTypeName: ODON.UsateManager.USATEInteract, AssemblyDefinitionOdon
-        m_MethodName: ForceOpen
+        m_MethodName: OpenPliers
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -418,6 +418,28 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   debugPlayEventButton: 0
+--- !u!95 &8758767156338040565
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424998391912964608}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3b6223b720e9d8f41b813988b85a4dad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6231457418835896913
 GameObject:
   m_ObjectHideFlags: 0

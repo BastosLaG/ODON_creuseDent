@@ -181,7 +181,6 @@ namespace ODON.UsateManager
                     // Digue the dam
                     GameManager.HighlightsTeethManager.Instance.OnDigDam.Invoke(true);
                     TryValidateCurrentItem();
-                    ForceClose();                  
                 }
                 else
                 {
@@ -205,7 +204,6 @@ namespace ODON.UsateManager
                             rb.useGravity = false;
                         }
                         TryValidateCurrentItem();
-                        ForceOpen();
                     }
                     else
                     {
