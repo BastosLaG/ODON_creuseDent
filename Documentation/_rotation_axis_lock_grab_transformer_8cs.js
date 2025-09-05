@@ -1,0 +1,4 @@
+var _rotation_axis_lock_grab_transformer_8cs =
+[
+    [ "UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.RotationAxisLockGrabTransformer", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_rotation_axis_lock_grab_transformer.html", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_rotation_axis_lock_grab_transformer" ]
+];

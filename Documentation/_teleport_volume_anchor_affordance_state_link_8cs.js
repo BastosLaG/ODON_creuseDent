@@ -1,0 +1,4 @@
+var _teleport_volume_anchor_affordance_state_link_8cs =
+[
+    [ "UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.TeleportVolumeAnchorAffordanceStateLink", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_telepo3bb758b1c2ec57999944864f50a36e18.html", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_telepo3bb758b1c2ec57999944864f50a36e18" ]
+];

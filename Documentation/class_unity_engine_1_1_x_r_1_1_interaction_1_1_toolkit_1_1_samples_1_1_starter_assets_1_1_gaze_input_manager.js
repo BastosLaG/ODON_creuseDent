@@ -1,0 +1,6 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_gaze_input_manager =
+[
+    [ "Awake", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_gaze_input_manager.html#a7472316471cb84287196977dea5ac27f", null ],
+    [ "OnDestroy", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_gaze_input_manager.html#a77c9423fd12fa8ad280d88a8d45b3bc4", null ],
+    [ "fallbackIfEyeTrackingUnavailable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_gaze_input_manager.html#a5bf54927aa649fc5a54cbf8f14351621", null ]
+];

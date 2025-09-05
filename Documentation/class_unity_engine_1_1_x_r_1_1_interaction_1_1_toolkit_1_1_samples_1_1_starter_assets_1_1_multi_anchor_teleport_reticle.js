@@ -1,0 +1,10 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_multi_anchor_teleport_reticle =
+[
+    [ "OnReticleAttached", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_multi_anchor_teleport_reticle.html#acaa005f6421ef28de5a70462ec976aa3", null ],
+    [ "OnReticleDetaching", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_multi_anchor_teleport_reticle.html#aedb666138335ed0950b1a153aa01fef1", null ],
+    [ "Update", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_multi_anchor_teleport_reticle.html#adb8ebf760643ec35f8ec24643779a181", null ],
+    [ "destinationIndicator", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_multi_anchor_teleport_reticle.html#a3902c954ea497cea99c18b7aeaa4eecf", null ],
+    [ "potentialDestinationIndicator", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_multi_anchor_teleport_reticle.html#a318cfeaef9f653d0fbb83a3e57fee4b7", null ],
+    [ "potentialIndicatorUpdateFrequency", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_multi_anchor_teleport_reticle.html#aee4b50acf8e2a2e2637cc051173237e1", null ],
+    [ "timerProgressFilledImage", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_multi_anchor_teleport_reticle.html#a675a1bdc34ce0da22e61ae955b3eadc7", null ]
+];

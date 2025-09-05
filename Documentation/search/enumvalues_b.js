@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['male_0',['Male',['../namespace_o_d_o_n_1_1_data.html#af5ee2a81b75e799f02f84fde36f6e276a63889cfb9d3cbe05d1bd2be5cc9953fd',1,'ODON::Data']]],
+  ['matching_1',['matching',['../class_student_record.html#a00e060bc8aa9829e5db087e2cba21009af7a03ccad486f0c5ad3123e0eb04732c',1,'StudentRecord']]]
+];

@@ -1,0 +1,5 @@
+var _material_pipeline_handler_8cs =
+[
+    [ "UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ShaderContainer", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_shader_container.html", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_shader_container" ],
+    [ "UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.MaterialPipelineHandler", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_material_pipeline_handler.html", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_material_pipeline_handler" ]
+];

@@ -1,0 +1,5 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_vector3_scale_affordance_receiver =
+[
+    [ "OnAffordanceValueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_vector3_scale_affordance_receiver.html#aa4434cbea35948757bcca9d6f919bd19", null ],
+    [ "OnEnable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_vector3_scale_affordance_receiver.html#a437730d7e3ec0ba93cbbc2db4bcdd174", null ]
+];
