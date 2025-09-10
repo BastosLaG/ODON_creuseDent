@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 namespace ODON.GameManager
 {
@@ -50,6 +52,16 @@ namespace ODON.GameManager
         }
         #endregion
 
+        //////////////////////////////////////////////////////////////////////////////////////////
+        #region 
+        [Header("Player Data")]
+        [SerializeField] private InputActionManager playerInput;
+        public InputActionManager PlayerInput
+        {
+            get => playerInput;
+            private set => playerInput = value;
+        }
+        #endregion
         //////////////////////////////////////////////////////////////////////////////////////////
 
         #region Unity Methods

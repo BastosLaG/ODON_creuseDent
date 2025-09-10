@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using ODON.Data;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 
 namespace ODON.GameManager
@@ -11,12 +12,15 @@ namespace ODON.GameManager
         [SerializeField] private List<Data.SO_Scenario> scenario;
         [SerializeField] private int eventManagerId = 0;
         public Data.SO_Scenario Scenario => (scenario != null && eventManagerId >= 0 && eventManagerId < scenario.Count)
-                                            ? scenario[eventManagerId] 
+                                            ? scenario[eventManagerId]
                                             : null;
 
         public static EventManager Instance { get; private set; }
-        public SO_Step CurrentStep { get; internal set; }
+        public Data.SO_Step CurrentStep { get; internal set; }
 
+        private InputActionManager playerInput;
+        private InputAction[] triggerActions = new InputAction[2];
+        
         ///////////////////////////////////////////////////////////////////////////////////
 
         #region Init
@@ -31,25 +35,44 @@ namespace ODON.GameManager
                 Destroy(gameObject);
             }
 
-        }
 
-        void Start()
-        {
-            Scenario.SetScenario(Scenario.Values);
-            CurrentStep = Scenario.Key.List[0];
+            playerInput = GameHandler.Instance.PlayerInput;
+
+            int i = 0;
+            var asset = playerInput.actionAssets[1];
+            foreach (var map in asset.actionMaps)
+            {
+                foreach (var action in map.actions)
+                {
+                    foreach (InputBinding binding in action.bindings)
+                    {
+                        if (binding.path.Contains("trigger"))
+                        {
+                            Debug.Log("Path Save");
+                            triggerActions[i] = action;
+                            i++;
+                        }
+                    }
+                }
+            }
         }
 
         private void OnEnable()
         {
-            if (Instance == null)
-            {
-                Instance = this;
-            }
-
             Scenario.OnActionPassed += ActionCorrectlyPassed;
             Scenario.OnActionFailed += ActionFailed;
 
             StartCoroutine(InvokeOnSetNewActionAfterFrame());
+
+            // In case triggerAction was found earlier and OnEnable is called again
+            foreach (InputAction triggerAction in triggerActions)
+            {
+                if (triggerAction != null)
+                {
+                    triggerAction.started += UIManager.Instance.OnTriggerStarted;
+                    triggerAction.Enable();
+                }
+            }
         }
 
         private void OnDisable()
@@ -61,7 +84,23 @@ namespace ODON.GameManager
 
             Scenario.OnActionPassed -= ActionCorrectlyPassed;
             Scenario.OnActionFailed -= ActionFailed;
+
+            foreach (InputAction triggerAction in triggerActions)
+            {
+                if (triggerAction != null)
+                {
+                    triggerAction.started -= UIManager.Instance.OnTriggerStarted;
+                    triggerAction.Enable();
+                }
+            }
         }
+
+        void Start()
+        {
+            Scenario.SetScenario(Scenario.Values);
+            CurrentStep = Scenario.Key.List[0];
+        }
+
         #endregion
 
         ///////////////////////////////////////////////////////////////////////////////////
@@ -93,7 +132,7 @@ namespace ODON.GameManager
         ///////////////////////////////////////////////////////////////////////////////////
 
         #region Public Methods
-        
+
         /// <summary>
         /// Attempts to validate the current item based on the provided step.
         /// This method checks if the step is valid and updates the scenario's current value index accordingly.
@@ -143,5 +182,6 @@ namespace ODON.GameManager
             yield return new WaitForEndOfFrame();
             Scenario.InvokeOnSetNewAction();
         }
+
     }
 }
