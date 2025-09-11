@@ -32,14 +32,14 @@ namespace ODON.UsateManager
             }
         }
 
-        void OnEnable()
+        protected void OnEnable()
         {
             interactInteractable.activated.AddListener(AnimatorShapesAction);
             interactInteractable.deactivated.AddListener(AnimatorShapesActionDeactivated);
         }
 
 
-        void OnDisable()
+        protected void OnDisable()
         {
             interactInteractable.activated.RemoveListener(AnimatorShapesAction);
             interactInteractable.deactivated.RemoveListener(AnimatorShapesActionDeactivated);

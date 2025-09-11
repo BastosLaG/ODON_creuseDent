@@ -69,18 +69,21 @@ namespace ODON.UsateManager
             }
         }
 
-        void OnEnable()
+        protected new void OnEnable()
         {
+            base.OnEnable();
             interactInteractable.activated.AddListener(DoSomething);
         }
-
-        void OnDisable()
+        protected new void OnDisable()
         {
+            base.OnDisable();
             interactInteractable.activated.RemoveListener(DoSomething);
         }
+
         #endregion
         ///////////////////////////////////////////////////////////////////
         #region Trigger System
+
         protected void OnTriggerEnter(Collider other)
         {
             SwapMaterialToHover(other);
