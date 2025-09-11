@@ -43,7 +43,6 @@ namespace ODON.UsateManager
         {
             interactInteractable.activated.RemoveListener(AnimatorShapesAction);
             interactInteractable.deactivated.RemoveListener(AnimatorShapesActionDeactivated);
-
         }
 
 

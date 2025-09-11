@@ -1,13 +1,15 @@
 using ODON.Data;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement;
 
 namespace ODON.UsateManager
 {
     [RequireComponent(typeof(CapsuleCollider))]
     public class USATEInteractWithPliers : USATEInteract
     {
+        #region Initialisation
+
         [Header("Brewer Settings")]
         [SerializeField] private CapsuleCollider pliersCollider;
         [SerializeField] private Transform targetPosForGrab;
@@ -26,8 +28,12 @@ namespace ODON.UsateManager
         private Transform targetPosParentReference;
 
         bool isPliserDam = false;
+        bool isGoodTarget = false;
 
-        GameManager.EventManager eventManager;
+        #endregion
+        ///////////////////////////////////////////////////////////////////
+        #region UnityFunction
+
         protected new void Start()
         {
             base.Start();
@@ -47,19 +53,10 @@ namespace ODON.UsateManager
 
             if (tag.CompareTo("PinceDigue") == 0)
             {
-                // Debug.Log("The object is tagged as 'PinceDigue'.", this);
                 isPliserDam = true;
             }
         }
 
-        void OnEnable()
-        {
-            
-        }
-        void OnDisable()
-        {
-            
-        }
         protected void Update()
         {
             if (debugInteractButton)
@@ -72,182 +69,143 @@ namespace ODON.UsateManager
             }
         }
 
+        void OnEnable()
+        {
+            interactInteractable.activated.AddListener(DoSomething);
+        }
+
+        void OnDisable()
+        {
+            interactInteractable.activated.RemoveListener(DoSomething);
+        }
+        #endregion
         ///////////////////////////////////////////////////////////////////
         #region Trigger System
         protected void OnTriggerEnter(Collider other)
         {
-            if (isPliserDam && isOpen == true)
-            {
-                AddListenerToInteractable(other);
-            }
-            else if (!isPliserDam && isOpen == false)
-            {
-                AddListenerToInteractable(other);
-            }
-            else
-            {
-                // Debug.Log("Pliers state does not allow interaction.", this);
-            }
+            SwapMaterialToHover(other);
+            IsGoodTarget(other);
         }
         protected void OnTriggerExit(Collider other)
         {
-            if (isPliserDam && isOpen == true)
-            {
-                RemoveListenerToInteractable(other);
-            }
-            else if (!isPliserDam && isOpen == false)
-            {
-                RemoveListenerToInteractable(other);
-            }
-            else
-            {
-                Debug.Log("Pliers state does not allow interaction.", this);
-            }
-        }
-        #endregion
-        ///////////////////////////////////////////////////////////////////
-        #region Event Systeme
-        private void AddListenerToInteractable(Collider other)
-        {
-            if (other.CompareTag(targetObject.tag))
-            {
-                SwapMaterialToHover(other);
-                if (IsGoodTarget(other))
-                {
-                    // In case triggerAction was found earlier and OnEnable is called again
-                    foreach (InputAction triggerAction in eventManager.triggerActions)
-                    {
-                        if (triggerAction != null)
-                        {
-                            triggerAction.started += DoSomething;
-                            triggerAction.Enable();
-                        }
-                    }
-                }
-            }
-            else
-            {
-                // Debug.Log($"{targetObject.tag} : {other.name} is not the target object.");
-                // TODO : Implement non-blocking error handling
-            }
-        }
-        private void RemoveListenerToInteractable(Collider other)
-        {
-            if (other.CompareTag(targetObject.tag))
-            {
-                SwapMaterialToDefault(other);
-                if (IsGoodTarget(other))
-                {
-                    foreach (InputAction triggerAction in eventManager.triggerActions)
-                    {
-                        if (triggerAction != null)
-                        {
-                            triggerAction.started -= DoSomething;
-                        }
-                    }
-                }
-            }
+            SwapMaterialToDefault(other);
+            IsGoodTarget(other);
         }
         #endregion
         ///////////////////////////////////////////////////////////////////
         #region Swap Material
         private void SwapMaterialToHover(Collider other)
         {
-            other.transform.TryGetComponent<Renderer>(out targetRenderer);
-            if (targetRenderer != null && hoverMaterial != null)
+            if (targetObject.CompareTag(other.tag))
             {
-                targetRenderer.sharedMaterial = hoverMaterial;
-            }
-            else
-            {
-                Debug.LogWarning("Renderer or Hover Material is missing.", this);
+                other.transform.TryGetComponent<Renderer>(out targetRenderer);
+                if (targetRenderer != null && hoverMaterial != null)
+                {
+                    targetRenderer.sharedMaterial = hoverMaterial;
+                }
+                else
+                {
+                    Debug.LogWarning("Renderer or Hover Material is missing.", this);
+                }
             }
         }
         private void SwapMaterialToDefault(Collider other)
         {
-            other.transform.TryGetComponent<Renderer>(out targetRenderer);
-            if (targetRenderer != null && defaultMaterial != null)
+            if (targetObject.CompareTag(other.tag))
             {
-                targetRenderer.sharedMaterial = defaultMaterial;
-            }
-            else
-            {
-                Debug.LogWarning("Renderer or Default Material is missing.", this);
+                other.transform.TryGetComponent<Renderer>(out targetRenderer);
+                if (targetRenderer != null && defaultMaterial != null)
+                {
+                    targetRenderer.sharedMaterial = defaultMaterial;
+                }
+                else
+                {
+                    Debug.LogWarning("Renderer or Default Material is missing.", this);
+                }
             }
         }
         #endregion
-
-        public bool IsGoodTarget(Collider other)
+        ///////////////////////////////////////////////////////////////////
+        #region Boolean 
+        public void IsGoodTarget(Collider other)
         {
             Debug.Log($" target tag : {other.CompareTag(targetObject.tag)} , GameObject : {other.gameObject == targetObject}");
             if (other.CompareTag(targetObject.tag) && other.gameObject == targetObject)
             {
-                return true;
+                isGoodTarget = !isGoodTarget;
+                Debug.Log($"Is good target set to : {isGoodTarget}");
             }
-            return false;
         }
 
-        protected void DoSomething(InputAction.CallbackContext  ctx)
+        #endregion
+        ///////////////////////////////////////////////////////////////////
+
+        public void DoSomething(UnityEngine.XR.Interaction.Toolkit.ActivateEventArgs args = null)
         {
-            GameManager.UIManager.Instance.DebugLogTextUI("Function Call");
-            // TODO : Implement the desired functionality here
-            if (isPliserDam)
-            {
-                if (targetObject.CompareTag(Tag.HoleDigue))
+            if (isGoodTarget)
+            {       
+                if (isPliserDam && isOpen)
                 {
-                    GameManager.UIManager.Instance.DebugLogTextUI("Digue the good one !!!");
                     // Digue the dam
-                    GameManager.HighlightsTeethManager.Instance.OnDigDam.Invoke(true);
-                    TryValidateCurrentItem();
-                }
-                else
-                {
-                    GameManager.UIManager.Instance.DebugLogTextUI("The bad one");
-                    Debug.LogWarning($"No action defined for the tag {targetObject.tag}");
-                    return;
-                }
-            }
-            else
-            {
-                GameManager.UIManager.Instance.DebugLogTextUI("What are you doing here !!!");
-                if (targetObject.CompareTag(Tag.Crampon))
-                {
-                    // Grab a specific object
-                    if (!isOpen)
+                    if (targetObject.CompareTag(Tag.HoleDigue))
                     {
-                        // Grab
-                        targetObject.transform.parent = targetPosParentReference;
-                        targetObject.transform.localPosition = Vector3.zero;
-                        if (targetObject.TryGetComponent<Rigidbody>(out var rb))
-                        {
-                            rb.isKinematic = true;
-                            rb.useGravity = false;
-                        }
+                        GameManager.HighlightsTeethManager.Instance.OnDigDam.Invoke(true);
                         TryValidateCurrentItem();
                     }
                     else
                     {
-                        // Drop
-                        targetObject.transform.parent = targetPosParentReference;
-                        targetObject.transform.localPosition = Vector3.zero;
-                        if (targetObject.TryGetComponent<Rigidbody>(out var rb))
-                        {
-                            rb.useGravity = true;
-                        }
+                        Debug.LogWarning($"No action defined for the tag {targetObject.tag}");
+                        return;
                     }
                 }
-                else if (targetObject.CompareTag(Tag.Preview))
+                else if (!isPliserDam && !isOpen)
                 {
-                    // Place an specifics objects
+                    // Grab the crampon
+                    if (targetObject.CompareTag(Tag.Crampon))
+                    {
+                        // Grab a specific object
+                        if (!isOpen)
+                        {
+                            // Grab
+                            // todo mettre dans des fonctions
+                            targetObject.transform.parent = targetPosParentReference;
+                            targetObject.transform.localPosition = Vector3.zero;
+                            if (targetObject.TryGetComponent<Rigidbody>(out var rb))
+                            {
+                                rb.isKinematic = true;
+                                rb.useGravity = false;
+                            }
+                            TryValidateCurrentItem();
+                        }
+                        else
+                        {
+                            // Drop
+                            // todo mettre dans des fonctions
+                            targetObject.transform.parent = targetPosParentReference;
+                            targetObject.transform.localPosition = Vector3.zero;
+                            if (targetObject.TryGetComponent<Rigidbody>(out var rb))
+                            {
+                                rb.useGravity = true;
+                            }
+                        }
+                    }
+                    // 
+                    else if (targetObject.CompareTag(Tag.Preview))
+                    {
+                        // Place an specifics objects
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"No action defined for the tag {targetObject.tag}");
+                        return;
+                    }
                 }
                 else
                 {
-                    Debug.LogWarning($"No action defined for the tag {targetObject.tag}");
-                    return;
+                    Debug.Log("Try somthing else");
                 }
             }
         }
-        
     }
 
 }
