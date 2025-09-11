@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.InputSystem;
 
 namespace ODON.GameManager
 {
@@ -9,11 +8,11 @@ namespace ODON.GameManager
         private static UIManager instance;
         public static UIManager Instance => instance;
 
-        [SerializeField] private TextMeshProUGUI DebugLogUGUI;
-        public string DebugLogTextUI
+        [SerializeField] private TextMeshProUGUI UGUIDebugLog;
+        public string TextUIDebugLog
         {
-            get => DebugLogUGUI.text;
-            set => DebugLogUGUI.text = value;
+            get => UGUIDebugLog.text;
+            set => UGUIDebugLog.text = value;
         }
 
         private void Awake()
@@ -24,10 +23,9 @@ namespace ODON.GameManager
                 Destroy(gameObject);
         }
 
-        public void OnTriggerStarted(InputAction.CallbackContext ctx)
+        public void DebugLogTextUI(string text)
         {
-            // Debug.Log("Trigger pressed!");
-            DebugLogTextUI = "Trigger pressed!";
+            TextUIDebugLog = text;
         }
     }
 }

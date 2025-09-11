@@ -85,7 +85,7 @@ namespace ODON.UsateManager
                     item.ValidateObject.SetActive(false);
                 }
             }
-            this.enabled = false;
+            enabled = false;
 
             if (IsAllValid())
             {

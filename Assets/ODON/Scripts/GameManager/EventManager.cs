@@ -19,7 +19,7 @@ namespace ODON.GameManager
         public Data.SO_Step CurrentStep { get; internal set; }
 
         private InputActionManager playerInput;
-        private InputAction[] triggerActions = new InputAction[2];
+        public InputAction[] triggerActions = new InputAction[2];
         
         ///////////////////////////////////////////////////////////////////////////////////
 
@@ -63,16 +63,6 @@ namespace ODON.GameManager
             Scenario.OnActionFailed += ActionFailed;
 
             StartCoroutine(InvokeOnSetNewActionAfterFrame());
-
-            // In case triggerAction was found earlier and OnEnable is called again
-            foreach (InputAction triggerAction in triggerActions)
-            {
-                if (triggerAction != null)
-                {
-                    triggerAction.started += UIManager.Instance.OnTriggerStarted;
-                    triggerAction.Enable();
-                }
-            }
         }
 
         private void OnDisable()
@@ -84,15 +74,6 @@ namespace ODON.GameManager
 
             Scenario.OnActionPassed -= ActionCorrectlyPassed;
             Scenario.OnActionFailed -= ActionFailed;
-
-            foreach (InputAction triggerAction in triggerActions)
-            {
-                if (triggerAction != null)
-                {
-                    triggerAction.started -= UIManager.Instance.OnTriggerStarted;
-                    triggerAction.Enable();
-                }
-            }
         }
 
         void Start()

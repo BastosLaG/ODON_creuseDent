@@ -1,5 +1,6 @@
 using ODON.Data;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
 namespace ODON.UsateManager
@@ -22,11 +23,11 @@ namespace ODON.UsateManager
 
         [SerializeField] private Material defaultMaterial;
         private Renderer targetRenderer;
-
         private Transform targetPosParentReference;
 
         bool isPliserDam = false;
 
+        GameManager.EventManager eventManager;
         protected new void Start()
         {
             base.Start();
@@ -51,6 +52,14 @@ namespace ODON.UsateManager
             }
         }
 
+        void OnEnable()
+        {
+            
+        }
+        void OnDisable()
+        {
+            
+        }
         protected void Update()
         {
             if (debugInteractButton)
@@ -105,10 +114,14 @@ namespace ODON.UsateManager
                 SwapMaterialToHover(other);
                 if (IsGoodTarget(other))
                 {
-                    if (interactInteractable != null)
+                    // In case triggerAction was found earlier and OnEnable is called again
+                    foreach (InputAction triggerAction in eventManager.triggerActions)
                     {
-                        interactInteractable.activated.RemoveListener(DoSomething);
-                        interactInteractable.activated.AddListener(DoSomething);
+                        if (triggerAction != null)
+                        {
+                            triggerAction.started += DoSomething;
+                            triggerAction.Enable();
+                        }
                     }
                 }
             }
@@ -125,9 +138,12 @@ namespace ODON.UsateManager
                 SwapMaterialToDefault(other);
                 if (IsGoodTarget(other))
                 {
-                    if (interactInteractable != null)
+                    foreach (InputAction triggerAction in eventManager.triggerActions)
                     {
-                        interactInteractable.activated.RemoveListener(DoSomething);
+                        if (triggerAction != null)
+                        {
+                            triggerAction.started -= DoSomething;
+                        }
                     }
                 }
             }
@@ -171,25 +187,29 @@ namespace ODON.UsateManager
             return false;
         }
 
-        protected void DoSomething(ActivateEventArgs  args = null)
+        protected void DoSomething(InputAction.CallbackContext  ctx)
         {
+            GameManager.UIManager.Instance.DebugLogTextUI("Function Call");
             // TODO : Implement the desired functionality here
             if (isPliserDam)
             {
                 if (targetObject.CompareTag(Tag.HoleDigue))
                 {
+                    GameManager.UIManager.Instance.DebugLogTextUI("Digue the good one !!!");
                     // Digue the dam
                     GameManager.HighlightsTeethManager.Instance.OnDigDam.Invoke(true);
                     TryValidateCurrentItem();
                 }
                 else
                 {
+                    GameManager.UIManager.Instance.DebugLogTextUI("The bad one");
                     Debug.LogWarning($"No action defined for the tag {targetObject.tag}");
                     return;
                 }
             }
             else
             {
+                GameManager.UIManager.Instance.DebugLogTextUI("What are you doing here !!!");
                 if (targetObject.CompareTag(Tag.Crampon))
                 {
                     // Grab a specific object
