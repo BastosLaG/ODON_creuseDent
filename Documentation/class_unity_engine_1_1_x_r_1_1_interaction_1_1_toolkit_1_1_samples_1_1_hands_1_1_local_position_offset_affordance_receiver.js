@@ -1,0 +1,7 @@
+var class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_local_position_offset_affordance_receiver =
+[
+    [ "GetCurrentValueForCapture", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_local_position_offset_affordance_receiver.html#a60a4afc5c19613f650b90bff0237fa59", null ],
+    [ "OnAffordanceValueUpdated", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_local_position_offset_affordance_receiver.html#a38f9488a686acb35865ece529717a2c5", null ],
+    [ "OnEnable", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_local_position_offset_affordance_receiver.html#a59240e6fb1020fbaeb1446a4f17aa4e7", null ],
+    [ "transformToTranslate", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_local_position_offset_affordance_receiver.html#a9c98b2b4efd2f41e1e108ef1934c6ae3", null ]
+];

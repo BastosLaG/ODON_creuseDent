@@ -1,0 +1,4 @@
+var _climb_teleport_destination_indicator_8cs =
+[
+    [ "UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ClimbTeleportDestinationIndicator", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_climb_teleport_destination_indicator.html", "class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_climb_teleport_destination_indicator" ]
+];

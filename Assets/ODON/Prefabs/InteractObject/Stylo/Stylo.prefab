@@ -184,7 +184,6 @@ GameObject:
   - component: {fileID: 2107362551122223372}
   - component: {fileID: 7675912857893635840}
   - component: {fileID: 4474089713484513196}
-  - component: {fileID: 1853226138211769835}
   m_Layer: 0
   m_Name: Stylo
   m_TagString: Untagged
@@ -224,7 +223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3f78e6ff5a6cb4ca678a99f9fdf412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _actionId: -1
   interactLayers:
     m_Bits: 2
   _dynamicAttach: 1
@@ -232,6 +230,19 @@ MonoBehaviour:
   _itemKinematic: 0
   _constrainRBody: 0
   _multipleGrab: 0
+  doEventOneTime: 0
+  SelectEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  SelectExit:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!136 &7675912857893635840
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -300,31 +311,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1853226138211769835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5108975534479965083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1259da91c24a6d34ba000c2454d018a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brush:
-    brushTexture: {fileID: 2800000, guid: e45f8f823c093d941855bb23b53b9414, type: 3}
-    brushNormalTexture: {fileID: 2800000, guid: e6aca82eec549a149b82e83f4d2b6bf0, type: 3}
-    brushHeightTexture: {fileID: 0}
-    brushScale: 0.01
-    rotateAngle: 0
-    brushNormalBlend: 0.1
-    brushHeightBlend: 0
-    brushColor: {r: 0, g: 0.3256297, b: 1, a: 1}
-    colorBlendType: 0
-    normalBlendType: 0
-    heightBlendType: 0
-  erase: 0
 --- !u!1 &7532824285772461371
 GameObject:
   m_ObjectHideFlags: 0
