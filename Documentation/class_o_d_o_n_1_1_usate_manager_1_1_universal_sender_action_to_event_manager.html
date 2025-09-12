@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,40 +108,52 @@ $(function() {
   <div class="headertitle"><div class="title">ODON.UsateManager.UniversalSenderActionToEventManager Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Abstract base class for sending actions to the event manager in the USATE system. Handles step registration, highlighting, and validation logic.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ODON.UsateManager.UniversalSenderActionToEventManager:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_o_d_o_n_1_1_usate_manager_1_1_universal_sender_action_to_event_manager.png" usemap="#ODON_2EUsateManager_2EUniversalSenderActionToEventManager_map" alt=""/>
   <map id="ODON_2EUsateManager_2EUniversalSenderActionToEventManager_map" name="ODON_2EUsateManager_2EUniversalSenderActionToEventManager_map">
-<area href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_grab.html" alt="ODON.UsateManager.USATEGrab" shape="rect" coords="0,112,367,136"/>
-<area href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_interact.html" alt="ODON.UsateManager.USATEInteract" shape="rect" coords="377,112,744,136"/>
-<area href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_multiple_grab.html" alt="ODON.UsateManager.USATEMultipleGrab" shape="rect" coords="754,112,1121,136"/>
-<area href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_grab_event.html" alt="ODON.UsateManager.USATEGrabEvent" shape="rect" coords="0,168,367,192"/>
-<area href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_interact_with_pliers.html" alt="ODON.UsateManager.USATEInteractWithPliers" shape="rect" coords="377,168,744,192"/>
+<area href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_grab.html" title="Handles grab interactions in the USATE system. Manages XRGrabInteractable events, step validation,..." alt="ODON.UsateManager.USATEGrab" shape="rect" coords="0,112,367,136"/>
+<area href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_interact.html" title="Abstract base class for USATE interactions. Handles animator and XRGrabInteractable setup,..." alt="ODON.UsateManager.USATEInteract" shape="rect" coords="377,112,744,136"/>
+<area href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_multiple_grab.html" title="Handles multiple grab interactions in the USATE system. Manages validation of multiple objects,..." alt="ODON.UsateManager.USATEMultipleGrab" shape="rect" coords="754,112,1121,136"/>
+<area href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_grab_event.html" title="Handles grab interactions with custom events in the USATE system. Extends USATEGrab to invoke UnityEv..." alt="ODON.UsateManager.USATEGrabEvent" shape="rect" coords="0,168,367,192"/>
+<area href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_interact_with_pliers.html" title="Manages interactions with pliers in the USATE system. Handles grabbing, dropping, and dam actions bas..." alt="ODON.UsateManager.USATEInteractWithPliers" shape="rect" coords="377,168,744,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad33cef67a352245ab2bae17ebfa8f960" id="r_ad33cef67a352245ab2bae17ebfa8f960"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad33cef67a352245ab2bae17ebfa8f960">IsValidStep</a> ()</td></tr>
+<tr class="memdesc:ad33cef67a352245ab2bae17ebfa8f960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the current step matches the required step.  <br /></td></tr>
 <tr class="memitem:a633c82ec9d624d089384bb7ba1119e82" id="r_a633c82ec9d624d089384bb7ba1119e82"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a633c82ec9d624d089384bb7ba1119e82">TryValidateCurrentItem</a> ()</td></tr>
+<tr class="memdesc:a633c82ec9d624d089384bb7ba1119e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to validate the current item for the associated step.  <br /></td></tr>
 <tr class="memitem:a99e20381ec6ba1c5846eb43fe198dcf7" id="r_a99e20381ec6ba1c5846eb43fe198dcf7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99e20381ec6ba1c5846eb43fe198dcf7">TryValidateCurrentItem</a> (bool stepIsCorrect)</td></tr>
+<tr class="memdesc:a99e20381ec6ba1c5846eb43fe198dcf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to validate the current item for the associated step, with a correctness flag.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5e836d58da31d853738c6a7227b54063" id="r_a5e836d58da31d853738c6a7227b54063"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e836d58da31d853738c6a7227b54063">Start</a> ()</td></tr>
+<tr class="memdesc:a5e836d58da31d853738c6a7227b54063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the highlight target and registers the step with the HighlightsManager.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a67875a76ca4f7defd44aa9ca921bfdbd" id="r_a67875a76ca4f7defd44aa9ca921bfdbd"><td class="memItemLeft" align="right" valign="top">Data.SO_Step&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67875a76ca4f7defd44aa9ca921bfdbd">step</a></td></tr>
+<tr class="memdesc:a67875a76ca4f7defd44aa9ca921bfdbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The step associated with this interactable.  <br /></td></tr>
 <tr class="memitem:aa0cf0b0630fcd88c97b73869d2f00ef1" id="r_aa0cf0b0630fcd88c97b73869d2f00ef1"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0cf0b0630fcd88c97b73869d2f00ef1">TargetHighlight</a> = null</td></tr>
+<tr class="memdesc:aa0cf0b0630fcd88c97b73869d2f00ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The transform used for highlighting in the <a class="el" href="namespace_o_d_o_n_1_1_u_i.html">UI</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:acb3305c39408fda588b61fcb5e7c4321" id="r_acb3305c39408fda588b61fcb5e7c4321"><td class="memItemLeft" align="right" valign="top">Data.SO_Step&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb3305c39408fda588b61fcb5e7c4321">Step</a><code> [get]</code></td></tr>
+<tr class="memdesc:acb3305c39408fda588b61fcb5e7c4321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the step associated with this interactable.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract base class for sending actions to the event manager in the USATE system. Handles step registration, highlighting, and validation logic. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ad33cef67a352245ab2bae17ebfa8f960" name="ad33cef67a352245ab2bae17ebfa8f960"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad33cef67a352245ab2bae17ebfa8f960">&#9670;&#160;</a></span>IsValidStep()</h2>
 
@@ -156,6 +168,9 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Checks if the current step matches the required step. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the step is valid, otherwise false.</dd></dl>
 
 </div>
 </div>
@@ -182,6 +197,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initializes the highlight target and registers the step with the HighlightsManager. </p>
+
 </div>
 </div>
 <a id="a633c82ec9d624d089384bb7ba1119e82" name="a633c82ec9d624d089384bb7ba1119e82"></a>
@@ -206,6 +223,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Attempts to validate the current item for the associated step. </p>
 
 <p>Reimplemented in <a class="el" href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_multiple_grab.html#ac4133e887609c0d069efb6589cef4d6b">ODON.UsateManager.USATEMultipleGrab</a>.</p>
 
@@ -234,6 +253,14 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Attempts to validate the current item for the associated step, with a correctness flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stepIsCorrect</td><td>Indicates if the step is correct.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented in <a class="el" href="class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_multiple_grab.html#a120e7222117aa0ce910edbb5871390e1">ODON.UsateManager.USATEMultipleGrab</a>.</p>
 
 </div>
@@ -259,6 +286,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The step associated with this interactable. </p>
+
 </div>
 </div>
 <a id="aa0cf0b0630fcd88c97b73869d2f00ef1" name="aa0cf0b0630fcd88c97b73869d2f00ef1"></a>
@@ -280,6 +309,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The transform used for highlighting in the <a class="el" href="namespace_o_d_o_n_1_1_u_i.html">UI</a>. </p>
 
 </div>
 </div>
@@ -303,6 +334,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets the step associated with this interactable. </p>
 
 </div>
 </div>

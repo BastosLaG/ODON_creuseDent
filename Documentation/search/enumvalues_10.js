@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['samanta_0',['Samanta',['../namespace_o_d_o_n_1_1_data.html#a05440d726259e0739367e5255dfa967fa26cf14da6635395a0b4f402a318dbf72',1,'ODON::Data']]],
-  ['selectdam_1',['SelectDam',['../namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56ac9c549d490e7b8b2451efb2f172238e3',1,'ODON::Data']]],
-  ['sequencing_2',['sequencing',['../class_student_record.html#a00e060bc8aa9829e5db087e2cba21009abafbea1eb53b054c12a63d7d586573f7',1,'StudentRecord']]],
-  ['silhouetteonly_3',['SilhouetteOnly',['../class_outline.html#a05be0e266b0a319593b0303d40f43592a8fe8a1d8cec2acbc9f85e081adf9ca6b',1,'Outline']]],
-  ['smoothing_4',['Smoothing',['../class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_visualizer_sample_1_1_hand_processor.html#a03efd3becd2203a9da770fa62bd5e9b2a7d2f4f11883a6048b4d25e8cfaff5d03',1,'UnityEngine::XR::Hands::Samples::VisualizerSample::HandProcessor']]],
-  ['start_5',['start',['../class_student_record.html#aab5d7b99c06530b6e8893b446f05d888aea2b2676c28c0db26d39331a336c6b92',1,'StudentRecord']]],
-  ['started_6',['Started',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_meta_system_gesture_detector.html#ad8c3332caae7b41a171a7dffe0068480a8428552d86c0d262a542a528af490afa',1,'UnityEngine::XR::Interaction::Toolkit::Samples::Hands::MetaSystemGestureDetector']]],
-  ['stephane_7',['Stephane',['../namespace_o_d_o_n_1_1_data.html#a05440d726259e0739367e5255dfa967fac320dc92c374906fbc071bb485150871',1,'ODON::Data']]],
-  ['suspend_8',['suspend',['../class_student_record.html#ad47a915212011045af181ea6012641efa497927fb538c4a1572d3b3a98313cab1',1,'StudentRecord']]]
+  ['takecrampon_0',['TakeCrampon',['../namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56afb841ee9206d213b617b79661b778fdc',1,'ODON::Data']]],
+  ['takedam_1',['TakeDam',['../namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56a398b287ae19c4009f273187789f3f6ac',1,'ODON::Data']]],
+  ['takedentalfloss_2',['TakeDentalFloss',['../namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56a3429092456b7acc25256d97993170d5b',1,'ODON::Data']]],
+  ['takenote_3',['TakeNote',['../namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56a2a73313547c7d3a6ab11433c96b7fb3a',1,'ODON::Data']]],
+  ['takeplierainsworth_4',['TakePlierAinsworth',['../namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56af33ae29205e4d467c04cff21563b69ab',1,'ODON::Data']]],
+  ['takeplierbrewer_5',['TakePlierBrewer',['../namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56a7bde4b666bf967ce470a8871a3c4bdbb',1,'ODON::Data']]],
+  ['takesecurityequipement_6',['TakeSecurityEquipement',['../namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56a3f91380cd70bd568cc1b9ab0809f761c',1,'ODON::Data']]],
+  ['taketablet_7',['TakeTablet',['../namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56a2135e2146907cf29c221a50de9e7bb13',1,'ODON::Data']]],
+  ['takeushapedframe_8',['TakeUShapedFrame',['../namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56afdace39f144c03c6b8b2c6482391359a',1,'ODON::Data']]],
+  ['thomas_9',['Thomas',['../namespace_o_d_o_n_1_1_data.html#a05440d726259e0739367e5255dfa967fa2042101ac1f6e7741bfe43f3672e6d7c',1,'ODON::Data']]]
 ];

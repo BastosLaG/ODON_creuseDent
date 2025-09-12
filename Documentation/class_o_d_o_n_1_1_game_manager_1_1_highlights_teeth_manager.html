@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,6 +108,9 @@ $(function() {
   <div class="headertitle"><div class="title">ODON.GameManager.HighlightsTeethManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages highlighting and visibility of teeth for the digue (dam) system in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Handles initialization of teeth, digue settings, pliers interactions, and events for hiding teeth.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ODON.GameManager.HighlightsTeethManager:</div>
 <div class="dyncontent">
@@ -118,17 +121,23 @@ Inheritance diagram for ODON.GameManager.HighlightsTeethManager:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab965139c009767f9084212463e21ee81" id="r_ab965139c009767f9084212463e21ee81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab965139c009767f9084212463e21ee81">HideAllTeeth</a> (bool arg0)</td></tr>
+<tr class="memdesc:ab965139c009767f9084212463e21ee81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hides or shows all teeth based on the argument.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af6c5593c163819faf872ad878401f1c3" id="r_af6c5593c163819faf872ad878401f1c3"><td class="memItemLeft" align="right" valign="top">UnityEvent&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6c5593c163819faf872ad878401f1c3">OnDigDam</a></td></tr>
+<tr class="memdesc:af6c5593c163819faf872ad878401f1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event invoked when the dam is dug, used to hide or show teeth.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:aa066ca4d6d7b6969d5f234be179dba65" id="r_aa066ca4d6d7b6969d5f234be179dba65"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_d_o_n_1_1_game_manager_1_1_highlights_teeth_manager.html">HighlightsTeethManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa066ca4d6d7b6969d5f234be179dba65">Instance</a><code> [get]</code></td></tr>
+<tr class="memdesc:aa066ca4d6d7b6969d5f234be179dba65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the singleton instance of <a class="el" href="class_o_d_o_n_1_1_game_manager_1_1_highlights_teeth_manager.html" title="Manages highlighting and visibility of teeth for the digue (dam) system in the ODON application....">HighlightsTeethManager</a>.  <br /></td></tr>
 <tr class="memitem:a764967d1dc1597e8ded47f05f27b1436" id="r_a764967d1dc1597e8ded47f05f27b1436"><td class="memItemLeft" align="right" valign="top">Data.Struct_Teeth&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a764967d1dc1597e8ded47f05f27b1436">GoodTeethToDig</a><code> [get]</code></td></tr>
+<tr class="memdesc:a764967d1dc1597e8ded47f05f27b1436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the tooth that should be dug (treated).  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages highlighting and visibility of teeth for the digue (dam) system in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Handles initialization of teeth, digue settings, pliers interactions, and events for hiding teeth. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ab965139c009767f9084212463e21ee81" name="ab965139c009767f9084212463e21ee81"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab965139c009767f9084212463e21ee81">&#9670;&#160;</a></span>HideAllTeeth()</h2>
 
@@ -144,6 +153,14 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Hides or shows all teeth based on the argument. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg0</td><td>If true, hides all teeth; if false, shows all teeth.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -158,6 +175,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Event invoked when the dam is dug, used to hide or show teeth. </p>
 
 </div>
 </div>
@@ -182,6 +201,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the tooth that should be dug (treated). </p>
+
 </div>
 </div>
 <a id="aa066ca4d6d7b6969d5f234be179dba65" name="aa066ca4d6d7b6969d5f234be179dba65"></a>
@@ -203,6 +224,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets the singleton instance of <a class="el" href="class_o_d_o_n_1_1_game_manager_1_1_highlights_teeth_manager.html" title="Manages highlighting and visibility of teeth for the digue (dam) system in the ODON application....">HighlightsTeethManager</a>. </p>
 
 </div>
 </div>

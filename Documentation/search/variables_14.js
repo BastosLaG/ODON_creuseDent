@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vrtarget_0',['vrTarget',['../class_v_r_map.html#aea728bffe29f413381d6bc12a082bac6',1,'VRMap']]]
+  ['zirconia_0',['Zirconia',['../class_o_d_o_n_1_1_data_1_1_patient_data.html#a38571f1e62a8a095a92043204b0286d4',1,'ODON::Data::PatientData']]]
 ];

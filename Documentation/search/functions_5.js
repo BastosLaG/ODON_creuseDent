@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['filter_0',['Filter',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#a4ca71e566d1fefe97fae3df57e7cd1f9',1,'UnityEngine.XR.Interaction.Toolkit.Samples.Hands.OneEuroFilterVector3.Filter(Vector3 rawValue, float deltaTime)'],['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html#ae5b3473098bf5875dc5b877e0251a937',1,'UnityEngine.XR.Interaction.Toolkit.Samples.Hands.OneEuroFilterVector3.Filter(Vector3 rawValue, float deltaTime, float minCutoff, float beta)']]],
-  ['follow_1',['Follow',['../class_o_d_o_n_1_1_patient.html#a542d4c62ff821abce6b2244c4d0b87ae',1,'ODON::Patient']]],
-  ['forceclose_2',['ForceClose',['../class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_interact.html#add28361f110de52580736c3d4f1a4b3a',1,'ODON::UsateManager::USATEInteract']]],
-  ['forceopen_3',['ForceOpen',['../class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_interact.html#abf1e21e2e62dc1f97fd1676fbd5af32e',1,'ODON::UsateManager::USATEInteract']]]
+  ['getcurrentvalueforcapture_0',['GetCurrentValueForCapture',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_local_position_offset_affordance_receiver.html#a60a4afc5c19613f650b90bff0237fa59',1,'UnityEngine::XR::Interaction::Toolkit::Samples::Hands::LocalPositionOffsetAffordanceReceiver']]],
+  ['getevents_1',['GetEvents',['../class_trigger_event.html#a964bd5998eff7f9536e264e9f211a782',1,'TriggerEvent']]],
+  ['getstepbehaviour_2',['GetStepBehaviour',['../class_o_d_o_n_1_1_game_manager_1_1_highlights_manager.html#a6146d4a3a34f6db106620d8555fbffd0',1,'ODON::GameManager::HighlightsManager']]],
+  ['gettriggercoll_3',['GetTriggerColl',['../class_trigger_event.html#a4234a515518cb6e859bef3e66d249c48',1,'TriggerEvent']]],
+  ['gotopoint_4',['GoToPoint',['../class_o_d_o_n_1_1_patient.html#af128412d1b5b0e6c49b4c7c0ebc2bf97',1,'ODON.Patient.GoToPoint()'],['../class_patient_path_follower.html#ab11e529c3668fd6b931a4df834048e3c',1,'PatientPathFollower.GoToPoint()']]],
+  ['gotovalue_5',['GoToValue',['../class_o_d_o_n_1_1_blend_shapes_driver.html#af1bbcc4fb6bbd7e1b71efd824d2206d8',1,'ODON::BlendShapesDriver']]]
 ];

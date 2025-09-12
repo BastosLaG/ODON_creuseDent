@@ -9,6 +9,5 @@ var searchData=
   ['webxr_3a_3ainteractions_3a_3asamples_3a_3axrinteractiontoolkit_3a_3aeditor_6',['Editor',['../namespace_web_x_r_1_1_interactions_1_1_samples_1_1_x_r_interaction_toolkit_1_1_editor.html',1,'WebXR::Interactions::Samples::XRInteractionToolkit']]],
   ['webxrinteractiontoolkitsampleprojectvalidation_7',['WebXRInteractionToolkitSampleProjectValidation',['../class_web_x_r_1_1_interactions_1_1_samples_1_1_x_r_interaction_toolkit_1_1_editor_1_1_web_x_r_in7eea0d40b0f34cde1996576fe93e83f1.html',1,'WebXR::Interactions::Samples::XRInteractionToolkit::Editor']]],
   ['webxrinteractiontoolkitsampleprojectvalidation_2ecs_8',['WebXRInteractionToolkitSampleProjectValidation.cs',['../_web_x_r_interaction_toolkit_sample_project_validation_8cs.html',1,'']]],
-  ['weighting_9',['weighting',['../class_student_record_1_1_learner_interaction_record.html#a7ecd0939a1acbcae1a293794c71417cd',1,'StudentRecord::LearnerInteractionRecord']]],
-  ['william_10',['William',['../namespace_o_d_o_n_1_1_data.html#a05440d726259e0739367e5255dfa967fa604c8dd5066ee30539037569a028dc9b',1,'ODON::Data']]]
+  ['william_9',['William',['../namespace_o_d_o_n_1_1_data.html#a05440d726259e0739367e5255dfa967fa604c8dd5066ee30539037569a028dc9b',1,'ODON::Data']]]
 ];

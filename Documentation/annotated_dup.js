@@ -1,21 +1,12 @@
 var annotated_dup =
 [
-    [ "DoorScript", "namespace_door_script.html", [
-      [ "Door", "class_door_script_1_1_door.html", "class_door_script_1_1_door" ]
-    ] ],
-    [ "Keyboard", "namespace_keyboard.html", [
-      [ "Key", "class_keyboard_1_1_key.html", "class_keyboard_1_1_key" ],
-      [ "KeyboardManager", "class_keyboard_1_1_keyboard_manager.html", "class_keyboard_1_1_keyboard_manager" ],
-      [ "KeyChannel", "class_keyboard_1_1_key_channel.html", "class_keyboard_1_1_key_channel" ],
-      [ "LetterKey", "class_keyboard_1_1_letter_key.html", "class_keyboard_1_1_letter_key" ]
-    ] ],
     [ "ODON", "namespace_o_d_o_n.html", [
       [ "Data", "namespace_o_d_o_n_1_1_data.html", [
         [ "PatientData", "class_o_d_o_n_1_1_data_1_1_patient_data.html", "class_o_d_o_n_1_1_data_1_1_patient_data" ],
         [ "PatientMeta", "struct_o_d_o_n_1_1_data_1_1_patient_meta.html", "struct_o_d_o_n_1_1_data_1_1_patient_meta" ],
-        [ "PatientMetaData", "class_o_d_o_n_1_1_data_1_1_patient_meta_data.html", "class_o_d_o_n_1_1_data_1_1_patient_meta_data" ],
         [ "SceneNames", "class_o_d_o_n_1_1_data_1_1_scene_names.html", "class_o_d_o_n_1_1_data_1_1_scene_names" ],
         [ "SO_ListStep", "class_o_d_o_n_1_1_data_1_1_s_o___list_step.html", "class_o_d_o_n_1_1_data_1_1_s_o___list_step" ],
+        [ "SO_PatientMetaData", "class_o_d_o_n_1_1_data_1_1_s_o___patient_meta_data.html", "class_o_d_o_n_1_1_data_1_1_s_o___patient_meta_data" ],
         [ "SO_Scenario", "class_o_d_o_n_1_1_data_1_1_s_o___scenario.html", "class_o_d_o_n_1_1_data_1_1_s_o___scenario" ],
         [ "SO_Step", "class_o_d_o_n_1_1_data_1_1_s_o___step.html", "class_o_d_o_n_1_1_data_1_1_s_o___step" ],
         [ "Struct_Teeth", "struct_o_d_o_n_1_1_data_1_1_struct___teeth.html", "struct_o_d_o_n_1_1_data_1_1_struct___teeth" ],
@@ -55,6 +46,7 @@ var annotated_dup =
         [ "USATEInteractWithPliers", "class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_interact_with_pliers.html", "class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_interact_with_pliers" ],
         [ "USATEMultipleGrab", "class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_multiple_grab.html", "class_o_d_o_n_1_1_usate_manager_1_1_u_s_a_t_e_multiple_grab" ]
       ] ],
+      [ "BlendShapesDriver", "class_o_d_o_n_1_1_blend_shapes_driver.html", "class_o_d_o_n_1_1_blend_shapes_driver" ],
       [ "CramponPreview", "class_o_d_o_n_1_1_crampon_preview.html", "class_o_d_o_n_1_1_crampon_preview" ],
       [ "Patient", "class_o_d_o_n_1_1_patient.html", "class_o_d_o_n_1_1_patient" ],
       [ "PatientSwap", "class_o_d_o_n_1_1_patient_swap.html", "class_o_d_o_n_1_1_patient_swap" ],
@@ -140,13 +132,7 @@ var annotated_dup =
         ] ]
       ] ]
     ] ],
-    [ "AnimateOnInput", "class_animate_on_input.html", "class_animate_on_input" ],
-    [ "AnimationInput", "class_animation_input.html", "class_animation_input" ],
-    [ "AnObjective", "class_an_objective.html", "class_an_objective" ],
-    [ "BeltSystem", "class_belt_system.html", "class_belt_system" ],
-    [ "BlendShapesDriver", "class_blend_shapes_driver.html", "class_blend_shapes_driver" ],
     [ "CadreEnUPreview", "class_cadre_en_u_preview.html", "class_cadre_en_u_preview" ],
-    [ "ControllerMain", "class_controller_main.html", "class_controller_main" ],
     [ "CramponAttached", "class_crampon_attached.html", "class_crampon_attached" ],
     [ "DigueManager", "class_digue_manager.html", "class_digue_manager" ],
     [ "DoorGrabbable", "class_door_grabbable.html", "class_door_grabbable" ],
@@ -159,13 +145,10 @@ var annotated_dup =
     [ "PatientPathFollower", "class_patient_path_follower.html", "class_patient_path_follower" ],
     [ "PrimaryButtonWatcher", "class_primary_button_watcher.html", "class_primary_button_watcher" ],
     [ "ReassignBoneWeightsToNewMesh", "class_reassign_bone_weights_to_new_mesh.html", "class_reassign_bone_weights_to_new_mesh" ],
-    [ "ScormAPIWrapper", "class_scorm_a_p_i_wrapper.html", "class_scorm_a_p_i_wrapper" ],
-    [ "ScormExport", "class_scorm_export.html", "class_scorm_export" ],
-    [ "ScormManager", "class_scorm_manager.html", "class_scorm_manager" ],
     [ "SendStatistics", "class_send_statistics.html", "class_send_statistics" ],
     [ "SetObjectGrabable", "class_set_object_grabable.html", "class_set_object_grabable" ],
-    [ "StudentRecord", "class_student_record.html", "class_student_record" ],
     [ "TakeAccessory", "class_take_accessory.html", "class_take_accessory" ],
+    [ "TakeGlove", "class_take_glove.html", "class_take_glove" ],
     [ "ToothEvent", "class_tooth_event.html", null ],
     [ "TriggerEvent", "class_trigger_event.html", "class_trigger_event" ],
     [ "UIButtonAudio", "class_u_i_button_audio.html", "class_u_i_button_audio" ],

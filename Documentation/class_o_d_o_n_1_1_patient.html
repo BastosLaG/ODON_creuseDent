@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,6 +108,9 @@ $(function() {
   <div class="headertitle"><div class="title">ODON.Patient Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages the patient character in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Handles movement between points, sitting/lying actions, and state transitions based on patient state.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ODON.Patient:</div>
 <div class="dyncontent">
@@ -118,14 +121,20 @@ Inheritance diagram for ODON.Patient:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af128412d1b5b0e6c49b4c7c0ebc2bf97" id="r_af128412d1b5b0e6c49b4c7c0ebc2bf97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af128412d1b5b0e6c49b4c7c0ebc2bf97">GoToPoint</a> (int index)</td></tr>
+<tr class="memdesc:af128412d1b5b0e6c49b4c7c0ebc2bf97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the patient to the specified point index, triggers sit/lay if needed.  <br /></td></tr>
 <tr class="memitem:a542d4c62ff821abce6b2244c4d0b87ae" id="r_a542d4c62ff821abce6b2244c4d0b87ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a542d4c62ff821abce6b2244c4d0b87ae">Follow</a> (Transform target)</td></tr>
+<tr class="memdesc:a542d4c62ff821abce6b2244c4d0b87ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the patient follow the specified target transform.  <br /></td></tr>
 <tr class="memitem:a6b82c19ccef404c3c9747a77a1e4c873" id="r_a6b82c19ccef404c3c9747a77a1e4c873"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b82c19ccef404c3c9747a77a1e4c873">SitTo</a> (Transform target, bool isOnBed=false)</td></tr>
+<tr class="memdesc:a6b82c19ccef404c3c9747a77a1e4c873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the patient sit to the specified target, optionally on the bed.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a31a4e2141f388239b27e54f6dc29aa7b" id="r_a31a4e2141f388239b27e54f6dc29aa7b"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31a4e2141f388239b27e54f6dc29aa7b">patientOnBed</a></td></tr>
+<tr class="memdesc:a31a4e2141f388239b27e54f6dc29aa7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the patient GameObject when on bed.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages the patient character in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Handles movement between points, sitting/lying actions, and state transitions based on patient state. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a542d4c62ff821abce6b2244c4d0b87ae" name="a542d4c62ff821abce6b2244c4d0b87ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a542d4c62ff821abce6b2244c4d0b87ae">&#9670;&#160;</a></span>Follow()</h2>
 
@@ -140,6 +149,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Makes the patient follow the specified target transform. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The target transform to follow.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -157,6 +174,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Moves the patient to the specified point index, triggers sit/lay if needed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index of the point to move to.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -179,6 +204,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Makes the patient sit to the specified target, optionally on the bed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The target transform to sit at.</td></tr>
+    <tr><td class="paramname">isOnBed</td><td>If true, sit on the bed.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -193,6 +227,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Reference to the patient GameObject when on bed. </p>
 
 </div>
 </div>

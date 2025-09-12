@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['buttonaddcommentpressed_0',['ButtonAddCommentPressed',['../class_controller_main.html#a90a3e69bd2550ae8d9ad59a786418e37',1,'ControllerMain']]],
-  ['buttonaddinteractionpressed_1',['ButtonAddInteractionPressed',['../class_controller_main.html#ab59eb9c8025b833878b514a4e1fd963f',1,'ControllerMain']]],
-  ['buttonaddobjectivepressed_2',['ButtonAddObjectivePressed',['../class_controller_main.html#a0cb492cf8145d487e2c26c8ebb2bbea8',1,'ControllerMain']]],
-  ['buttonexitpressed_3',['ButtonExitPressed',['../class_controller_main.html#a238022908c97a8ef223ed70694c46443',1,'ControllerMain']]],
-  ['buttonexitscormpressed_4',['ButtonExitSCORMPressed',['../class_controller_main.html#a8b7e99ab5a767935220734bbd1de3c03',1,'ControllerMain']]],
-  ['buttoninteractionspressed_5',['ButtonInteractionsPressed',['../class_controller_main.html#a0d9e3814904cdba1ba9c01475302fa67',1,'ControllerMain']]],
-  ['buttonlearnerdatapressed_6',['ButtonLearnerDataPressed',['../class_controller_main.html#af9ec0c66f6c6c2a06f7efa8d4e59372c',1,'ControllerMain']]],
-  ['buttonobjectivespressed_7',['ButtonObjectivesPressed',['../class_controller_main.html#a521e126b01b5747bbf2ad1e0fabf8f2e',1,'ControllerMain']]],
-  ['buttonscorepressed_8',['ButtonScorePressed',['../class_controller_main.html#aa42b0367a8df91b502177fb53fc525f5',1,'ControllerMain']]],
-  ['buttonscormdatapressed_9',['ButtonScormDataPressed',['../class_controller_main.html#a73f030a5eea25a42816a0689956fd511',1,'ControllerMain']]],
-  ['buttonsetlocationpressed_10',['ButtonSetLocationPressed',['../class_controller_main.html#a5983e8fdb69c05a4da0048f69f82b212',1,'ControllerMain']]]
+  ['calculatedistances_0',['CalculateDistances',['../class_digue_manager.html#a64bb25656973844f11f68ae15bc8c275',1,'DigueManager']]],
+  ['canselect_1',['CanSelect',['../class_o_d_o_n_1_1_scripts_1_1_single_item_socket.html#abb3be95f249c0cb76efcc15bb9c60c8d',1,'ODON::Scripts::SingleItemSocket']]],
+  ['changemousestate_2',['ChangeMouseState',['../class_o_d_o_n_1_1_patient_swap.html#a1518f8d5ba96ddeff142d2673f7c0804',1,'ODON::PatientSwap']]],
+  ['computedesiredmove_3',['ComputeDesiredMove',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_dynamic_move_provider.html#a5774552de225d71b883a3b4ac11fc2a9',1,'UnityEngine::XR::Interaction::Toolkit::Samples::StarterAssets::DynamicMoveProvider']]],
+  ['createerror_4',['CreateError',['../class_send_statistics.html#a474f1e05f5d64aa60a1e513cd0fefe82',1,'SendStatistics']]],
+  ['createnewpose_5',['CreateNewPose',['../class_send_statistics.html#a202201f526784deaa541a0bbb29314d1',1,'SendStatistics']]]
 ];

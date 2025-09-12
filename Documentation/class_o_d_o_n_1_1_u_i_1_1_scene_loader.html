@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,6 +108,9 @@ $(function() {
   <div class="headertitle"><div class="title">ODON.UI.SceneLoader Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages scene loading in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application, including a loading screen and progress indicators. Allows switching between game and tutorial scenes based on user input.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ODON.UI.SceneLoader:</div>
 <div class="dyncontent">
@@ -118,21 +121,31 @@ Inheritance diagram for ODON.UI.SceneLoader:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6351144b251ae38da06031eabf8e5f74" id="r_a6351144b251ae38da06031eabf8e5f74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6351144b251ae38da06031eabf8e5f74">LoadScene</a> ()</td></tr>
+<tr class="memdesc:a6351144b251ae38da06031eabf8e5f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates the scene loading process for the current scene name.  <br /></td></tr>
 <tr class="memitem:a24de9f77afb071e1c428e8c47d78e3ae" id="r_a24de9f77afb071e1c428e8c47d78e3ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24de9f77afb071e1c428e8c47d78e3ae">LoadScene</a> (string sceneName)</td></tr>
+<tr class="memdesc:a24de9f77afb071e1c428e8c47d78e3ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiates the scene loading process for a specified scene name.  <br /></td></tr>
 <tr class="memitem:adb2e6c2c1bc0e2f46b2b8b1a73c1cbc4" id="r_adb2e6c2c1bc0e2f46b2b8b1a73c1cbc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb2e6c2c1bc0e2f46b2b8b1a73c1cbc4">ToggleValueChanged</a> (Toggle change)</td></tr>
+<tr class="memdesc:adb2e6c2c1bc0e2f46b2b8b1a73c1cbc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the tutorial mode state based on the toggle value.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a54549fc5511fe6b047f479b29fdffd99" id="r_a54549fc5511fe6b047f479b29fdffd99"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54549fc5511fe6b047f479b29fdffd99">loadingScreen</a></td></tr>
+<tr class="memdesc:a54549fc5511fe6b047f479b29fdffd99"><td class="mdescLeft">&#160;</td><td class="mdescRight">The GameObject representing the loading screen <a class="el" href="namespace_o_d_o_n_1_1_u_i.html">UI</a>.  <br /></td></tr>
 <tr class="memitem:acf52129e09e533046dc6578eb3d0dca8" id="r_acf52129e09e533046dc6578eb3d0dca8"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf52129e09e533046dc6578eb3d0dca8">progressBar</a></td></tr>
+<tr class="memdesc:acf52129e09e533046dc6578eb3d0dca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Image component used to display the loading progress.  <br /></td></tr>
 <tr class="memitem:ab3415e0e282a26c11ca9746e23786106" id="r_ab3415e0e282a26c11ca9746e23786106"><td class="memItemLeft" align="right" valign="top">TextMeshProUGUI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3415e0e282a26c11ca9746e23786106">progressText</a></td></tr>
+<tr class="memdesc:ab3415e0e282a26c11ca9746e23786106"><td class="mdescLeft">&#160;</td><td class="mdescRight">The TextMeshProUGUI component used to display the loading progress percentage.  <br /></td></tr>
 <tr class="memitem:a384281350ee68e96dad5d73b9455ca98" id="r_a384281350ee68e96dad5d73b9455ca98"><td class="memItemLeft" align="right" valign="top">Toggle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a384281350ee68e96dad5d73b9455ca98">m_Toggle</a></td></tr>
+<tr class="memdesc:a384281350ee68e96dad5d73b9455ca98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle <a class="el" href="namespace_o_d_o_n_1_1_u_i.html">UI</a> element to switch between game and tutorial modes.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a797f6872dcf011d2201bcdea41bd9d3b" id="r_a797f6872dcf011d2201bcdea41bd9d3b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a797f6872dcf011d2201bcdea41bd9d3b">SceneName</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a797f6872dcf011d2201bcdea41bd9d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the current scene name based on the tutorial mode.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages scene loading in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application, including a loading screen and progress indicators. Allows switching between game and tutorial scenes based on user input. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a6351144b251ae38da06031eabf8e5f74" name="a6351144b251ae38da06031eabf8e5f74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6351144b251ae38da06031eabf8e5f74">&#9670;&#160;</a></span>LoadScene() <span class="overload">[1/2]</span></h2>
 
@@ -147,6 +160,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initiates the scene loading process for the current scene name. </p>
 
 </div>
 </div>
@@ -165,6 +180,14 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initiates the scene loading process for a specified scene name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sceneName</td><td>The name of the scene to load.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="adb2e6c2c1bc0e2f46b2b8b1a73c1cbc4" name="adb2e6c2c1bc0e2f46b2b8b1a73c1cbc4"></a>
@@ -182,6 +205,14 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Updates the tutorial mode state based on the toggle value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">change</td><td>The Toggle component that triggered the change.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -197,6 +228,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The GameObject representing the loading screen <a class="el" href="namespace_o_d_o_n_1_1_u_i.html">UI</a>. </p>
+
 </div>
 </div>
 <a id="a384281350ee68e96dad5d73b9455ca98" name="a384281350ee68e96dad5d73b9455ca98"></a>
@@ -210,6 +243,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Toggle <a class="el" href="namespace_o_d_o_n_1_1_u_i.html">UI</a> element to switch between game and tutorial modes. </p>
 
 </div>
 </div>
@@ -225,6 +260,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The Image component used to display the loading progress. </p>
+
 </div>
 </div>
 <a id="ab3415e0e282a26c11ca9746e23786106" name="ab3415e0e282a26c11ca9746e23786106"></a>
@@ -238,6 +275,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The TextMeshProUGUI component used to display the loading progress percentage. </p>
 
 </div>
 </div>
@@ -261,6 +300,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets or sets the current scene name based on the tutorial mode. </p>
 
 </div>
 </div>

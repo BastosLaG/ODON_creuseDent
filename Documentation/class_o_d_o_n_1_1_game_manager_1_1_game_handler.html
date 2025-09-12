@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,6 +108,9 @@ $(function() {
   <div class="headertitle"><div class="title">ODON.GameManager.GameHandler Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Handles the main game state and data management for the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Manages patient data, error tracking, player input, and ensures a single instance throughout the game.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ODON.GameManager.GameHandler:</div>
 <div class="dyncontent">
@@ -118,23 +121,37 @@ Inheritance diagram for ODON.GameManager.GameHandler:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7abba2653c78600dabffcede1d44e43" id="r_ab7abba2653c78600dabffcede1d44e43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7abba2653c78600dabffcede1d44e43">PatientInCabinet</a> ()</td></tr>
+<tr class="memdesc:ab7abba2653c78600dabffcede1d44e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the patient state to InCabinet.  <br /></td></tr>
 <tr class="memitem:ad6384dc9eefe8c6ad67af0701f29d1a9" id="r_ad6384dc9eefe8c6ad67af0701f29d1a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6384dc9eefe8c6ad67af0701f29d1a9">PatientInBed</a> ()</td></tr>
+<tr class="memdesc:ad6384dc9eefe8c6ad67af0701f29d1a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the patient state to InBed.  <br /></td></tr>
 <tr class="memitem:af3c7016c86d0ad950ae76680abe5de80" id="r_af3c7016c86d0ad950ae76680abe5de80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3c7016c86d0ad950ae76680abe5de80">PatientInWaitingRoom</a> ()</td></tr>
+<tr class="memdesc:af3c7016c86d0ad950ae76680abe5de80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the patient state to InWaitingRoom.  <br /></td></tr>
 <tr class="memitem:aaa8d7aecb53a924b8351061d9c9aa56f" id="r_aaa8d7aecb53a924b8351061d9c9aa56f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa8d7aecb53a924b8351061d9c9aa56f">PatientLeaving</a> ()</td></tr>
-<tr class="memitem:a2b9500ef7167097aede486aa0d0f66ea" id="r_a2b9500ef7167097aede486aa0d0f66ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b9500ef7167097aede486aa0d0f66ea">UpdatePatientData</a> (Data.PatientMetaData patientMetaData)</td></tr>
+<tr class="memdesc:aaa8d7aecb53a924b8351061d9c9aa56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the patient state to Leaving.  <br /></td></tr>
+<tr class="memitem:a965ffd16802f937571b4cd8a13b4c128" id="r_a965ffd16802f937571b4cd8a13b4c128"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a965ffd16802f937571b4cd8a13b4c128">UpdatePatientData</a> (Data.SO_PatientMetaData patientMetaData)</td></tr>
+<tr class="memdesc:a965ffd16802f937571b4cd8a13b4c128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the patient data and invokes the update event.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ae9eb2c6a3049b7973f7cc58595aa7781" id="r_ae9eb2c6a3049b7973f7cc58595aa7781"><td class="memItemLeft" align="right" valign="top">UnityEvent&lt; Data.PatientData &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9eb2c6a3049b7973f7cc58595aa7781">onUpdatePatientData</a> = new()</td></tr>
+<tr class="memdesc:ae9eb2c6a3049b7973f7cc58595aa7781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event invoked when patient data is updated.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:afa325109a3825a040ea2c565297c5a8a" id="r_afa325109a3825a040ea2c565297c5a8a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_d_o_n_1_1_game_manager_1_1_game_handler.html">GameHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa325109a3825a040ea2c565297c5a8a">Instance</a><code> [get]</code></td></tr>
+<tr class="memdesc:afa325109a3825a040ea2c565297c5a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the singleton instance of <a class="el" href="class_o_d_o_n_1_1_game_manager_1_1_game_handler.html" title="Handles the main game state and data management for the ODON application. Manages patient data,...">GameHandler</a>.  <br /></td></tr>
 <tr class="memitem:a3243bd21f2516567c751e5c8be248c0b" id="r_a3243bd21f2516567c751e5c8be248c0b"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3243bd21f2516567c751e5c8be248c0b">ErrorData</a><code> [get]</code></td></tr>
+<tr class="memdesc:a3243bd21f2516567c751e5c8be248c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the list of error messages.  <br /></td></tr>
 <tr class="memitem:ac13376e27aa31f79ec3aa488895a8a39" id="r_ac13376e27aa31f79ec3aa488895a8a39"><td class="memItemLeft" align="right" valign="top">Data.PatientData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac13376e27aa31f79ec3aa488895a8a39">PatientData</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac13376e27aa31f79ec3aa488895a8a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the patient data.  <br /></td></tr>
 <tr class="memitem:a63830b5b730c9a9712ec00923e9ae758" id="r_a63830b5b730c9a9712ec00923e9ae758"><td class="memItemLeft" align="right" valign="top">Data.PatientState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63830b5b730c9a9712ec00923e9ae758">PatientState</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a63830b5b730c9a9712ec00923e9ae758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the current patient state.  <br /></td></tr>
+<tr class="memitem:a5cdd82a2c30b80c4f21016f9198bbf80" id="r_a5cdd82a2c30b80c4f21016f9198bbf80"><td class="memItemLeft" align="right" valign="top">InputActionManager&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cdd82a2c30b80c4f21016f9198bbf80">PlayerInput</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5cdd82a2c30b80c4f21016f9198bbf80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the player's input action manager.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Handles the main game state and data management for the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Manages patient data, error tracking, player input, and ensures a single instance throughout the game. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ad6384dc9eefe8c6ad67af0701f29d1a9" name="ad6384dc9eefe8c6ad67af0701f29d1a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad6384dc9eefe8c6ad67af0701f29d1a9">&#9670;&#160;</a></span>PatientInBed()</h2>
 
@@ -149,6 +166,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the patient state to InBed. </p>
 
 </div>
 </div>
@@ -167,6 +186,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the patient state to InCabinet. </p>
+
 </div>
 </div>
 <a id="af3c7016c86d0ad950ae76680abe5de80" name="af3c7016c86d0ad950ae76680abe5de80"></a>
@@ -183,6 +204,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the patient state to InWaitingRoom. </p>
 
 </div>
 </div>
@@ -201,10 +224,12 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the patient state to Leaving. </p>
+
 </div>
 </div>
-<a id="a2b9500ef7167097aede486aa0d0f66ea" name="a2b9500ef7167097aede486aa0d0f66ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b9500ef7167097aede486aa0d0f66ea">&#9670;&#160;</a></span>UpdatePatientData()</h2>
+<a id="a965ffd16802f937571b4cd8a13b4c128" name="a965ffd16802f937571b4cd8a13b4c128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a965ffd16802f937571b4cd8a13b4c128">&#9670;&#160;</a></span>UpdatePatientData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,11 +237,19 @@ Properties</h2></td></tr>
         <tr>
           <td class="memname">void ODON.GameManager.GameHandler.UpdatePatientData </td>
           <td>(</td>
-          <td class="paramtype">Data.PatientMetaData</td>          <td class="paramname"><span class="paramname"><em>patientMetaData</em></span></td><td>)</td>
+          <td class="paramtype">Data.SO_PatientMetaData</td>          <td class="paramname"><span class="paramname"><em>patientMetaData</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Updates the patient data and invokes the update event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">patientMetaData</td><td>The new patient metadata.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -232,6 +265,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Event invoked when patient data is updated. </p>
 
 </div>
 </div>
@@ -256,6 +291,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the list of error messages. </p>
+
 </div>
 </div>
 <a id="afa325109a3825a040ea2c565297c5a8a" name="afa325109a3825a040ea2c565297c5a8a"></a>
@@ -277,6 +314,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets the singleton instance of <a class="el" href="class_o_d_o_n_1_1_game_manager_1_1_game_handler.html" title="Handles the main game state and data management for the ODON application. Manages patient data,...">GameHandler</a>. </p>
 
 </div>
 </div>
@@ -300,6 +339,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets or sets the patient data. </p>
+
 </div>
 </div>
 <a id="a63830b5b730c9a9712ec00923e9ae758" name="a63830b5b730c9a9712ec00923e9ae758"></a>
@@ -321,6 +362,32 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets or sets the current patient state. </p>
+
+</div>
+</div>
+<a id="a5cdd82a2c30b80c4f21016f9198bbf80" name="a5cdd82a2c30b80c4f21016f9198bbf80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cdd82a2c30b80c4f21016f9198bbf80">&#9670;&#160;</a></span>PlayerInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">InputActionManager ODON.GameManager.GameHandler.PlayerInput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the player's input action manager. </p>
 
 </div>
 </div>

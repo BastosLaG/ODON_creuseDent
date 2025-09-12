@@ -9,11 +9,10 @@ var searchData=
   ['vector3scaleaffordancereceiver_2ecs_6',['Vector3ScaleAffordanceReceiver.cs',['../_vector3_scale_affordance_receiver_8cs.html',1,'']]],
   ['velocitytype_7',['VelocityType',['../class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_visualizer_sample_1_1_hand_visualizer.html#aca59c8b71dd1f9e1f133d511d2c24cb1',1,'UnityEngine::XR::Hands::Samples::VisualizerSample::HandVisualizer']]],
   ['velocitytype_8',['velocityType',['../class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_visualizer_sample_1_1_hand_visualizer.html#a98df743d1561ad7db9fa0b25b89be800',1,'UnityEngine::XR::Hands::Samples::VisualizerSample::HandVisualizer']]],
-  ['version_9',['version',['../class_student_record.html#ae5a2277941e1e6378114d73747abffce',1,'StudentRecord']]],
-  ['videoclipplayerurl_10',['VideoClipPlayerURL',['../class_video_clip_player_u_r_l.html',1,'']]],
-  ['videoclipplayerurl_2ecs_11',['VideoClipPlayerURL.cs',['../_video_clip_player_u_r_l_8cs.html',1,'']]],
-  ['viewportperiphery_12',['viewportPeriphery',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a789c74309879e68cbd1fcf65a6b4058e',1,'UnityEngine::XR::Interaction::Toolkit::Samples::StarterAssets::ObjectSpawner']]],
-  ['visualizer_20sample_13',['Hand Visualizer Sample',['../C:/Users/SGRL/Documents/2025Odon/ODON_creuseDent/Assets/Samples/XR Hands/1.5.1/HandVisualizer/README.md#autotoc_md0',1,'']]],
-  ['vrmap_14',['VRMap',['../class_v_r_map.html',1,'']]],
-  ['vrtarget_15',['vrTarget',['../class_v_r_map.html#aea728bffe29f413381d6bc12a082bac6',1,'VRMap']]]
+  ['videoclipplayerurl_9',['VideoClipPlayerURL',['../class_video_clip_player_u_r_l.html',1,'']]],
+  ['videoclipplayerurl_2ecs_10',['VideoClipPlayerURL.cs',['../_video_clip_player_u_r_l_8cs.html',1,'']]],
+  ['viewportperiphery_11',['viewportPeriphery',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html#a789c74309879e68cbd1fcf65a6b4058e',1,'UnityEngine::XR::Interaction::Toolkit::Samples::StarterAssets::ObjectSpawner']]],
+  ['visualizer_20sample_12',['Hand Visualizer Sample',['../C:/Users/SGRL/Documents/2025Odon/ODON_creuseDent/Assets/Samples/XR Hands/1.5.1/HandVisualizer/README.md#autotoc_md0',1,'']]],
+  ['vrmap_13',['VRMap',['../class_v_r_map.html',1,'']]],
+  ['vrtarget_14',['vrTarget',['../class_v_r_map.html#aea728bffe29f413381d6bc12a082bac6',1,'VRMap']]]
 ];

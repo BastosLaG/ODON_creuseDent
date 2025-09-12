@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,6 +108,9 @@ $(function() {
   <div class="headertitle"><div class="title">ReassignBoneWeightsToNewMesh Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Réassigne dynamiquement les poids d’os d’un SkinnedMeshRenderer à une nouvelle armature.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ReassignBoneWeightsToNewMesh:</div>
 <div class="dyncontent">
@@ -118,10 +121,16 @@ Inheritance diagram for ReassignBoneWeightsToNewMesh:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a5d7444310ed5e48d2e2229c8f846878e" id="r_a5d7444310ed5e48d2e2229c8f846878e"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d7444310ed5e48d2e2229c8f846878e">_newArmature</a></td></tr>
+<tr class="memdesc:a5d7444310ed5e48d2e2229c8f846878e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Référence vers la nouvelle armature contenant la hiérarchie de bones.  <br /></td></tr>
 <tr class="memitem:a22bc6f7210e923515cc0d71cd137268f" id="r_a22bc6f7210e923515cc0d71cd137268f"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22bc6f7210e923515cc0d71cd137268f">_rootBoneName</a> = &quot;Hips&quot;</td></tr>
+<tr class="memdesc:a22bc6f7210e923515cc0d71cd137268f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nom du bone racine de la nouvelle armature (par défaut : "Hips").  <br /></td></tr>
 <tr class="memitem:a9bc3c8c2fbb6089120aa526c12402427" id="r_a9bc3c8c2fbb6089120aa526c12402427"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bc3c8c2fbb6089120aa526c12402427">_reassign</a></td></tr>
+<tr class="memdesc:a9bc3c8c2fbb6089120aa526c12402427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déclenche le processus de réassignation des bones lorsqu’il est défini sur <code>true</code>.  <br /></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Réassigne dynamiquement les poids d’os d’un SkinnedMeshRenderer à une nouvelle armature. </p>
+<p>Ce script est conçu pour être exécuté en mode Édition ou en mode Lecture grâce à l’attribut ExecuteInEditMode. Il permet de transférer les liaisons d’os d’un mesh skinné vers une nouvelle hiérarchie d’armature. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a5d7444310ed5e48d2e2229c8f846878e" name="a5d7444310ed5e48d2e2229c8f846878e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d7444310ed5e48d2e2229c8f846878e">&#9670;&#160;</a></span>_newArmature</h2>
 
@@ -133,6 +142,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Référence vers la nouvelle armature contenant la hiérarchie de bones. </p>
 
 </div>
 </div>
@@ -148,6 +159,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Déclenche le processus de réassignation des bones lorsqu’il est défini sur <code>true</code>. </p>
+
 </div>
 </div>
 <a id="a22bc6f7210e923515cc0d71cd137268f" name="a22bc6f7210e923515cc0d71cd137268f"></a>
@@ -162,10 +175,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Nom du bone racine de la nouvelle armature (par défaut : "Hips"). </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/ODON/Scripts/<a class="el" href="_reassign_bone_weights_to_new_mesh_8cs.html">ReassignBoneWeightsToNewMesh.cs</a></li>
+<li>Assets/ODON/Scripts/Player/<a class="el" href="_reassign_bone_weights_to_new_mesh_8cs.html">ReassignBoneWeightsToNewMesh.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,6 +108,9 @@ $(function() {
   <div class="headertitle"><div class="title">IKTargetFollowVRRig Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Follows the VR rig targets and applies IK mapping for head and hands in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Handles position and rotation smoothing for the player body.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for IKTargetFollowVRRig:</div>
 <div class="dyncontent">
@@ -118,13 +121,21 @@ Inheritance diagram for IKTargetFollowVRRig:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a00e4bc7a79a0a2ea502d2220455a3649" id="r_a00e4bc7a79a0a2ea502d2220455a3649"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00e4bc7a79a0a2ea502d2220455a3649">turnSmoothness</a> = 0.1f</td></tr>
+<tr class="memdesc:a00e4bc7a79a0a2ea502d2220455a3649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smoothing factor for body rotation when following the head yaw.  <br /></td></tr>
 <tr class="memitem:a995bda4b2687fa4d363ed0776bbd3820" id="r_a995bda4b2687fa4d363ed0776bbd3820"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_v_r_map.html">VRMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a995bda4b2687fa4d363ed0776bbd3820">head</a></td></tr>
+<tr class="memdesc:a995bda4b2687fa4d363ed0776bbd3820"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_v_r_map.html" title="Represents a mapping between a VR target and an IK target, including position and rotation offsets.">VRMap</a> for the head target.  <br /></td></tr>
 <tr class="memitem:a8b7341c3da611d6a6baff6b6c950c22d" id="r_a8b7341c3da611d6a6baff6b6c950c22d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_v_r_map.html">VRMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b7341c3da611d6a6baff6b6c950c22d">leftHand</a></td></tr>
+<tr class="memdesc:a8b7341c3da611d6a6baff6b6c950c22d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_v_r_map.html" title="Represents a mapping between a VR target and an IK target, including position and rotation offsets.">VRMap</a> for the left hand target.  <br /></td></tr>
 <tr class="memitem:a453728d9d51863412e1565091bf61b3c" id="r_a453728d9d51863412e1565091bf61b3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_v_r_map.html">VRMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a453728d9d51863412e1565091bf61b3c">rightHand</a></td></tr>
+<tr class="memdesc:a453728d9d51863412e1565091bf61b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_v_r_map.html" title="Represents a mapping between a VR target and an IK target, including position and rotation offsets.">VRMap</a> for the right hand target.  <br /></td></tr>
 <tr class="memitem:a1346f843cb22f0c2bb3407571f12faf3" id="r_a1346f843cb22f0c2bb3407571f12faf3"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1346f843cb22f0c2bb3407571f12faf3">headBodyPositionOffset</a></td></tr>
+<tr class="memdesc:a1346f843cb22f0c2bb3407571f12faf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position offset for the body relative to the head.  <br /></td></tr>
 <tr class="memitem:a1ed194bf8d5b27537b40acd70b04e003" id="r_a1ed194bf8d5b27537b40acd70b04e003"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ed194bf8d5b27537b40acd70b04e003">headBodyYawOffset</a></td></tr>
+<tr class="memdesc:a1ed194bf8d5b27537b40acd70b04e003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yaw offset for the body rotation relative to the head.  <br /></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Follows the VR rig targets and applies IK mapping for head and hands in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Handles position and rotation smoothing for the player body. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a995bda4b2687fa4d363ed0776bbd3820" name="a995bda4b2687fa4d363ed0776bbd3820"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a995bda4b2687fa4d363ed0776bbd3820">&#9670;&#160;</a></span>head</h2>
 
@@ -136,6 +147,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="class_v_r_map.html" title="Represents a mapping between a VR target and an IK target, including position and rotation offsets.">VRMap</a> for the head target. </p>
 
 </div>
 </div>
@@ -151,6 +164,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Position offset for the body relative to the head. </p>
+
 </div>
 </div>
 <a id="a1ed194bf8d5b27537b40acd70b04e003" name="a1ed194bf8d5b27537b40acd70b04e003"></a>
@@ -164,6 +179,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Yaw offset for the body rotation relative to the head. </p>
 
 </div>
 </div>
@@ -179,6 +196,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_v_r_map.html" title="Represents a mapping between a VR target and an IK target, including position and rotation offsets.">VRMap</a> for the left hand target. </p>
+
 </div>
 </div>
 <a id="a453728d9d51863412e1565091bf61b3c" name="a453728d9d51863412e1565091bf61b3c"></a>
@@ -193,6 +212,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_v_r_map.html" title="Represents a mapping between a VR target and an IK target, including position and rotation offsets.">VRMap</a> for the right hand target. </p>
+
 </div>
 </div>
 <a id="a00e4bc7a79a0a2ea502d2220455a3649" name="a00e4bc7a79a0a2ea502d2220455a3649"></a>
@@ -206,6 +227,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Smoothing factor for body rotation when following the head yaw. </p>
 
 </div>
 </div>

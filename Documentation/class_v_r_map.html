@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,19 +108,29 @@ $(function() {
   <div class="headertitle"><div class="title">VRMap Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a mapping between a VR target and an IK target, including position and rotation offsets.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa9eaf66aec5c1106052079708b249ff8" id="r_aa9eaf66aec5c1106052079708b249ff8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9eaf66aec5c1106052079708b249ff8">Map</a> ()</td></tr>
+<tr class="memdesc:aa9eaf66aec5c1106052079708b249ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps the VR target's position and rotation to the IK target, applying offsets.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aea728bffe29f413381d6bc12a082bac6" id="r_aea728bffe29f413381d6bc12a082bac6"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea728bffe29f413381d6bc12a082bac6">vrTarget</a></td></tr>
+<tr class="memdesc:aea728bffe29f413381d6bc12a082bac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The transform of the VR target (e.g., headset or controller).  <br /></td></tr>
 <tr class="memitem:ac0e7d98d1a18913d37512eb205ed1233" id="r_ac0e7d98d1a18913d37512eb205ed1233"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0e7d98d1a18913d37512eb205ed1233">ikTarget</a></td></tr>
+<tr class="memdesc:ac0e7d98d1a18913d37512eb205ed1233"><td class="mdescLeft">&#160;</td><td class="mdescRight">The transform of the IK target to be driven.  <br /></td></tr>
 <tr class="memitem:a65f6b626de53bc878cf9377260302edc" id="r_a65f6b626de53bc878cf9377260302edc"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65f6b626de53bc878cf9377260302edc">trackingPositionOffset</a></td></tr>
+<tr class="memdesc:a65f6b626de53bc878cf9377260302edc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position offset applied when mapping the VR target to the IK target.  <br /></td></tr>
 <tr class="memitem:a0cc773fa134af5ec90aadfeb904944ab" id="r_a0cc773fa134af5ec90aadfeb904944ab"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cc773fa134af5ec90aadfeb904944ab">trackingRotationOffset</a></td></tr>
+<tr class="memdesc:a0cc773fa134af5ec90aadfeb904944ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation offset applied when mapping the VR target to the IK target.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a mapping between a VR target and an IK target, including position and rotation offsets. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aa9eaf66aec5c1106052079708b249ff8" name="aa9eaf66aec5c1106052079708b249ff8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9eaf66aec5c1106052079708b249ff8">&#9670;&#160;</a></span>Map()</h2>
 
@@ -135,6 +145,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Maps the VR target's position and rotation to the IK target, applying offsets. </p>
 
 </div>
 </div>
@@ -151,6 +163,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The transform of the IK target to be driven. </p>
+
 </div>
 </div>
 <a id="a65f6b626de53bc878cf9377260302edc" name="a65f6b626de53bc878cf9377260302edc"></a>
@@ -164,6 +178,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Position offset applied when mapping the VR target to the IK target. </p>
 
 </div>
 </div>
@@ -179,6 +195,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Rotation offset applied when mapping the VR target to the IK target. </p>
+
 </div>
 </div>
 <a id="aea728bffe29f413381d6bc12a082bac6" name="aea728bffe29f413381d6bc12a082bac6"></a>
@@ -192,6 +210,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The transform of the VR target (e.g., headset or controller). </p>
 
 </div>
 </div>

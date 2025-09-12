@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['objectives_0',['Objectives',['../class_student_record_1_1_objectives.html',1,'StudentRecord']]],
-  ['objectresetplane_1',['ObjectResetPlane',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_object_reset_plane.html',1,'UnityEngine::XR::Interaction::Toolkit::Samples::Hands']]],
-  ['objectspawner_2',['ObjectSpawner',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_object_spawner.html',1,'UnityEngine::XR::Interaction::Toolkit::Samples::StarterAssets']]],
-  ['odonfeedbackmanager_3',['OdonFeedBackManager',['../class_odon_feed_back_manager.html',1,'']]],
-  ['oneeurofiltervector3_4',['OneEuroFilterVector3',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_one_euro_filter_vector3.html',1,'UnityEngine::XR::Interaction::Toolkit::Samples::Hands']]],
-  ['outline_5',['Outline',['../class_outline.html',1,'']]]
+  ['reassignboneweightstonewmesh_0',['ReassignBoneWeightsToNewMesh',['../class_reassign_bone_weights_to_new_mesh.html',1,'']]],
+  ['releasethresholdbuttonreader_1',['ReleaseThresholdButtonReader',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_release_threshold_button_reader.html',1,'UnityEngine::XR::Interaction::Toolkit::Samples::Hands']]],
+  ['rotationaxislockgrabtransformer_2',['RotationAxisLockGrabTransformer',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_rotation_axis_lock_grab_transformer.html',1,'UnityEngine::XR::Interaction::Toolkit::Samples::StarterAssets']]]
 ];

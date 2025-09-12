@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,6 +108,9 @@ $(function() {
   <div class="headertitle"><div class="title">ODON.UpdateShaderDam Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages the shader properties for the dam (digue) in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Handles the position and activation of holes in the dam material based on the treated tooth.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ODON.UpdateShaderDam:</div>
 <div class="dyncontent">
@@ -118,13 +121,18 @@ Inheritance diagram for ODON.UpdateShaderDam:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae234122cf54b3ba343cfb67cb5e74d6e" id="r_ae234122cf54b3ba343cfb67cb5e74d6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae234122cf54b3ba343cfb67cb5e74d6e">SwitchActiveHole</a> (bool isActive)</td></tr>
+<tr class="memdesc:ae234122cf54b3ba343cfb67cb5e74d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the active hole in the dam material based on the argument.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a1fcedb33e35634ac13f0649f151c548a" id="r_a1fcedb33e35634ac13f0649f151c548a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fcedb33e35634ac13f0649f151c548a">TeethToManage</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a1fcedb33e35634ac13f0649f151c548a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the tooth number to manage for the dam hole.  <br /></td></tr>
 <tr class="memitem:ab324c42d960b2b401bc91477dc3375d1" id="r_ab324c42d960b2b401bc91477dc3375d1"><td class="memItemLeft" align="right" valign="top">Renderer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab324c42d960b2b401bc91477dc3375d1">DamRenderer</a><code> [get]</code></td></tr>
+<tr class="memdesc:ab324c42d960b2b401bc91477dc3375d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the renderer for the dam material.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages the shader properties for the dam (digue) in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Handles the position and activation of holes in the dam material based on the treated tooth. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ae234122cf54b3ba343cfb67cb5e74d6e" name="ae234122cf54b3ba343cfb67cb5e74d6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae234122cf54b3ba343cfb67cb5e74d6e">&#9670;&#160;</a></span>SwitchActiveHole()</h2>
 
@@ -139,6 +147,14 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enables or disables the active hole in the dam material based on the argument. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isActive</td><td>If true, enables the hole; if false, disables it.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -163,6 +179,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the renderer for the dam material. </p>
+
 </div>
 </div>
 <a id="a1fcedb33e35634ac13f0649f151c548a" name="a1fcedb33e35634ac13f0649f151c548a"></a>
@@ -184,6 +202,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets or sets the tooth number to manage for the dam hole. </p>
 
 </div>
 </div>

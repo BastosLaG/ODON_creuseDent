@@ -38,7 +38,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Properties", "functions_prop.html", null ],
@@ -53,12 +53,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_an_objective_8cs.html",
-"class_keyboard_1_1_key.html",
-"class_o_d_o_n_1_1_game_manager_1_1_splash_screen_loader_scene.html",
-"class_scorm_manager.html#aafde70ac24b35a7c0a306f47478a6758",
-"class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_meta_system_gesture_detector.html#a2420064691685d31ef6ccc97d0f83184",
-"class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_x_r_poke_follow_affordance.html"
+"_bird_sounds_script_8cs.html",
+"class_o_d_o_n_1_1_data_1_1_tag.html",
+"class_o_d_o_n_1_1_usate_manager_1_1_universal_sender_action_to_event_manager.html#a67875a76ca4f7defd44aa9ca921bfdbd",
+"class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_starter_assets_1_1_climb_teleport_destination_indicator.html#afc46487d343173ac3449dc002dc24d49",
+"functions_s.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

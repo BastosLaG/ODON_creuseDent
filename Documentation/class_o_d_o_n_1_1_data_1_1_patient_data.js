@@ -5,7 +5,7 @@ var class_o_d_o_n_1_1_data_1_1_patient_data =
     [ "HasNormalPose", "class_o_d_o_n_1_1_data_1_1_patient_data.html#aaeae293ac6bb96bcaf6225e61596bb40", null ],
     [ "InlayCore", "class_o_d_o_n_1_1_data_1_1_patient_data.html#aa69e7014514312d81fa99d09ac74137b", null ],
     [ "MetalCeramicCrown", "class_o_d_o_n_1_1_data_1_1_patient_data.html#afe9931626f1bd0769af39cbb1a896523", null ],
-    [ "PatientMetaData", "class_o_d_o_n_1_1_data_1_1_patient_data.html#a3f06555e4bcd4f483e41e3de90838652", null ],
+    [ "PatientMetaData", "class_o_d_o_n_1_1_data_1_1_patient_data.html#a890aebfeb4fcb3cc987bf436c1ff3f6a", null ],
     [ "ResinPartial", "class_o_d_o_n_1_1_data_1_1_patient_data.html#a27dd4b8ec0ba980d0bac48262cfd1303", null ],
     [ "Stellite", "class_o_d_o_n_1_1_data_1_1_patient_data.html#a6b2a9ebf23852d76f28d4b121ffd9efc", null ],
     [ "TeintedTooth", "class_o_d_o_n_1_1_data_1_1_patient_data.html#a1a9f29b5cdfe911b332d1bdb250e6626", null ],

@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,6 +108,9 @@ $(function() {
   <div class="headertitle"><div class="title">ODON.Data.PatientData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>ScriptableObject representing patient data in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> system. Stores patient information, tooth condition, allergies, and prosthetic details.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ODON.Data.PatientData:</div>
 <div class="dyncontent">
@@ -117,27 +120,45 @@ Inheritance diagram for ODON.Data.PatientData:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3f06555e4bcd4f483e41e3de90838652" id="r_a3f06555e4bcd4f483e41e3de90838652"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_d_o_n_1_1_data_1_1_patient_meta_data.html">PatientMetaData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f06555e4bcd4f483e41e3de90838652">PatientMetaData</a></td></tr>
+<tr class="memitem:a890aebfeb4fcb3cc987bf436c1ff3f6a" id="r_a890aebfeb4fcb3cc987bf436c1ff3f6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_d_o_n_1_1_data_1_1_s_o___patient_meta_data.html">SO_PatientMetaData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a890aebfeb4fcb3cc987bf436c1ff3f6a">PatientMetaData</a></td></tr>
+<tr class="memdesc:a890aebfeb4fcb3cc987bf436c1ff3f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadata containing patient information.  <br /></td></tr>
 <tr class="memitem:a1a9f29b5cdfe911b332d1bdb250e6626" id="r_a1a9f29b5cdfe911b332d1bdb250e6626"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_o_d_o_n_1_1_data.html#ab9f02d5328d66b24913a8fbe4aad4149">TeintedThooth</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a9f29b5cdfe911b332d1bdb250e6626">TeintedTooth</a></td></tr>
+<tr class="memdesc:a1a9f29b5cdfe911b332d1bdb250e6626"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_o_d_o_n_1_1_data.html#ab9f02d5328d66b24913a8fbe4aad4149" title="Enumeration representing the possible tooth colors in the ODON system.">TeintedThooth</a> object representing the tooth condition of the patient.  <br /></td></tr>
 <tr class="memitem:a4a16a9b79d1863d75f65ea7d7e868d1c" id="r_a4a16a9b79d1863d75f65ea7d7e868d1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a16a9b79d1863d75f65ea7d7e868d1c">ToothSection</a></td></tr>
+<tr class="memdesc:a4a16a9b79d1863d75f65ea7d7e868d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tooth section of the patient that was operated on.  <br /></td></tr>
 <tr class="memitem:af7d181cb8e6f8eb154a40079d4838f06" id="r_af7d181cb8e6f8eb154a40079d4838f06"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7d181cb8e6f8eb154a40079d4838f06">TreatedTooth</a></td></tr>
+<tr class="memdesc:af7d181cb8e6f8eb154a40079d4838f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tooth that was operated on.  <br /></td></tr>
 <tr class="memitem:a501a3c45479058ce7e9e62b9babf3302" id="r_a501a3c45479058ce7e9e62b9babf3302"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a501a3c45479058ce7e9e62b9babf3302">HasLatexAllergy</a></td></tr>
+<tr class="memdesc:a501a3c45479058ce7e9e62b9babf3302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if the patient has a latex allergy.  <br /></td></tr>
 <tr class="memitem:aaeae293ac6bb96bcaf6225e61596bb40" id="r_aaeae293ac6bb96bcaf6225e61596bb40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeae293ac6bb96bcaf6225e61596bb40">HasNormalPose</a></td></tr>
+<tr class="memdesc:aaeae293ac6bb96bcaf6225e61596bb40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if the patient has a normal pose.  <br /></td></tr>
 <tr class="memitem:aa69e7014514312d81fa99d09ac74137b" id="r_aa69e7014514312d81fa99d09ac74137b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa69e7014514312d81fa99d09ac74137b">InlayCore</a></td></tr>
+<tr class="memdesc:aa69e7014514312d81fa99d09ac74137b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if an inlay-core is used.  <br /></td></tr>
 <tr class="memitem:aa7471ed77f3ef2d5973fddae593bbaab" id="r_aa7471ed77f3ef2d5973fddae593bbaab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7471ed77f3ef2d5973fddae593bbaab">CastCrown</a></td></tr>
+<tr class="memdesc:aa7471ed77f3ef2d5973fddae593bbaab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if a cast crown is used.  <br /></td></tr>
 <tr class="memitem:afe9931626f1bd0769af39cbb1a896523" id="r_afe9931626f1bd0769af39cbb1a896523"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe9931626f1bd0769af39cbb1a896523">MetalCeramicCrown</a></td></tr>
+<tr class="memdesc:afe9931626f1bd0769af39cbb1a896523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if a metal-ceramic crown (CCM) is used.  <br /></td></tr>
 <tr class="memitem:a6b2a9ebf23852d76f28d4b121ffd9efc" id="r_a6b2a9ebf23852d76f28d4b121ffd9efc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b2a9ebf23852d76f28d4b121ffd9efc">Stellite</a></td></tr>
+<tr class="memdesc:a6b2a9ebf23852d76f28d4b121ffd9efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if a stellite prosthesis is used.  <br /></td></tr>
 <tr class="memitem:a27dd4b8ec0ba980d0bac48262cfd1303" id="r_a27dd4b8ec0ba980d0bac48262cfd1303"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27dd4b8ec0ba980d0bac48262cfd1303">ResinPartial</a></td></tr>
+<tr class="memdesc:a27dd4b8ec0ba980d0bac48262cfd1303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if a resin partial denture is used.  <br /></td></tr>
 <tr class="memitem:a38571f1e62a8a095a92043204b0286d4" id="r_a38571f1e62a8a095a92043204b0286d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38571f1e62a8a095a92043204b0286d4">Zirconia</a></td></tr>
+<tr class="memdesc:a38571f1e62a8a095a92043204b0286d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if a zirconia prosthesis is used.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a83911f6f2e2a7b6bef018cf52dc2bef4" id="r_a83911f6f2e2a7b6bef018cf52dc2bef4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83911f6f2e2a7b6bef018cf52dc2bef4">PatientName</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a83911f6f2e2a7b6bef018cf52dc2bef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the patient.  <br /></td></tr>
 <tr class="memitem:ac3d270eb89447255b19ccf4a5f48a877" id="r_ac3d270eb89447255b19ccf4a5f48a877"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3d270eb89447255b19ccf4a5f48a877">Age</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac3d270eb89447255b19ccf4a5f48a877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Age of the patient.  <br /></td></tr>
 <tr class="memitem:a05fd6cebb0395ebb03397b25beac9fc7" id="r_a05fd6cebb0395ebb03397b25beac9fc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_o_d_o_n_1_1_data.html#af5ee2a81b75e799f02f84fde36f6e276">Gender</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05fd6cebb0395ebb03397b25beac9fc7">Gender</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a05fd6cebb0395ebb03397b25beac9fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gender of the patient.  <br /></td></tr>
 <tr class="memitem:a784e7648bf7c787fed194ef30b2c6c8c" id="r_a784e7648bf7c787fed194ef30b2c6c8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a784e7648bf7c787fed194ef30b2c6c8c">TreatedToothWithSection</a><code> [get]</code></td></tr>
+<tr class="memdesc:a784e7648bf7c787fed194ef30b2c6c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the treated tooth with section as a combined integer.  <br /></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>ScriptableObject representing patient data in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> system. Stores patient information, tooth condition, allergies, and prosthetic details. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="aa7471ed77f3ef2d5973fddae593bbaab" name="aa7471ed77f3ef2d5973fddae593bbaab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa7471ed77f3ef2d5973fddae593bbaab">&#9670;&#160;</a></span>CastCrown</h2>
 
@@ -149,6 +170,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Indicates if a cast crown is used. </p>
 
 </div>
 </div>
@@ -164,6 +187,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Indicates if the patient has a latex allergy. </p>
+
 </div>
 </div>
 <a id="aaeae293ac6bb96bcaf6225e61596bb40" name="aaeae293ac6bb96bcaf6225e61596bb40"></a>
@@ -177,6 +202,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Indicates if the patient has a normal pose. </p>
 
 </div>
 </div>
@@ -192,6 +219,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Indicates if an inlay-core is used. </p>
+
 </div>
 </div>
 <a id="afe9931626f1bd0769af39cbb1a896523" name="afe9931626f1bd0769af39cbb1a896523"></a>
@@ -206,19 +235,23 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Indicates if a metal-ceramic crown (CCM) is used. </p>
+
 </div>
 </div>
-<a id="a3f06555e4bcd4f483e41e3de90838652" name="a3f06555e4bcd4f483e41e3de90838652"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f06555e4bcd4f483e41e3de90838652">&#9670;&#160;</a></span>PatientMetaData</h2>
+<a id="a890aebfeb4fcb3cc987bf436c1ff3f6a" name="a890aebfeb4fcb3cc987bf436c1ff3f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a890aebfeb4fcb3cc987bf436c1ff3f6a">&#9670;&#160;</a></span>PatientMetaData</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_d_o_n_1_1_data_1_1_patient_meta_data.html">PatientMetaData</a> ODON.Data.PatientData.PatientMetaData</td>
+          <td class="memname"><a class="el" href="class_o_d_o_n_1_1_data_1_1_s_o___patient_meta_data.html">SO_PatientMetaData</a> ODON.Data.PatientData.PatientMetaData</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Metadata containing patient information. </p>
 
 </div>
 </div>
@@ -234,6 +267,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Indicates if a resin partial denture is used. </p>
+
 </div>
 </div>
 <a id="a6b2a9ebf23852d76f28d4b121ffd9efc" name="a6b2a9ebf23852d76f28d4b121ffd9efc"></a>
@@ -247,6 +282,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Indicates if a stellite prosthesis is used. </p>
 
 </div>
 </div>
@@ -262,6 +299,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="namespace_o_d_o_n_1_1_data.html#ab9f02d5328d66b24913a8fbe4aad4149" title="Enumeration representing the possible tooth colors in the ODON system.">TeintedThooth</a> object representing the tooth condition of the patient. </p>
+
 </div>
 </div>
 <a id="a4a16a9b79d1863d75f65ea7d7e868d1c" name="a4a16a9b79d1863d75f65ea7d7e868d1c"></a>
@@ -275,6 +314,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Tooth section of the patient that was operated on. </p>
 
 </div>
 </div>
@@ -290,6 +331,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Tooth that was operated on. </p>
+
 </div>
 </div>
 <a id="a38571f1e62a8a095a92043204b0286d4" name="a38571f1e62a8a095a92043204b0286d4"></a>
@@ -303,6 +346,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Indicates if a zirconia prosthesis is used. </p>
 
 </div>
 </div>
@@ -327,6 +372,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Age of the patient. </p>
+
 </div>
 </div>
 <a id="a05fd6cebb0395ebb03397b25beac9fc7" name="a05fd6cebb0395ebb03397b25beac9fc7"></a>
@@ -348,6 +395,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gender of the patient. </p>
 
 </div>
 </div>
@@ -371,6 +420,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Name of the patient. </p>
+
 </div>
 </div>
 <a id="a784e7648bf7c787fed194ef30b2c6c8c" name="a784e7648bf7c787fed194ef30b2c6c8c"></a>
@@ -392,6 +443,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets the treated tooth with section as a combined integer. </p>
 
 </div>
 </div>

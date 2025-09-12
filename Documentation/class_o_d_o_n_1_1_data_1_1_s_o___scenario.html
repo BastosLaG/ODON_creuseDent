@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,6 +108,9 @@ $(function() {
   <div class="headertitle"><div class="title">ODON.Data.SO_Scenario Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>ScriptableObject representing a scenario in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> system. Manages a sequence of steps, tracks progress, and handles events for step validation and scenario progression.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ODON.Data.SO_Scenario:</div>
 <div class="dyncontent">
@@ -118,23 +121,35 @@ Inheritance diagram for ODON.Data.SO_Scenario:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a37cdf2916a65365062b3a20ae1550287" id="r_a37cdf2916a65365062b3a20ae1550287"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37cdf2916a65365062b3a20ae1550287">ResetScenario</a> ()</td></tr>
+<tr class="memdesc:a37cdf2916a65365062b3a20ae1550287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the scenario to the first step.  <br /></td></tr>
 <tr class="memitem:a801f9d0ae4bfbde01512d91a5a525c8a" id="r_a801f9d0ae4bfbde01512d91a5a525c8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a801f9d0ae4bfbde01512d91a5a525c8a">SetScenario</a> (List&lt; <a class="el" href="namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56">E_NameActionInteractable</a> &gt; setValues)</td></tr>
+<tr class="memdesc:a801f9d0ae4bfbde01512d91a5a525c8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scenario steps and reorders the step list to match the provided action IDs.  <br /></td></tr>
 <tr class="memitem:a20708511c0a35d1e154699eb4155b206" id="r_a20708511c0a35d1e154699eb4155b206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20708511c0a35d1e154699eb4155b206">UpdateCurrentValueIndex</a> (<a class="el" href="namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56">E_NameActionInteractable</a> stepId, bool stepIsCorrect, string stepDescription)</td></tr>
+<tr class="memdesc:a20708511c0a35d1e154699eb4155b206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current step index based on the result of the step validation. Invokes events for action passed, failed, and new action set.  <br /></td></tr>
 <tr class="memitem:abf9e75421559edd6a982824ee6210959" id="r_abf9e75421559edd6a982824ee6210959"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf9e75421559edd6a982824ee6210959">InvokeOnSetNewAction</a> ()</td></tr>
+<tr class="memdesc:abf9e75421559edd6a982824ee6210959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes the event to set a new action for the current step.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:ab02fab0e70e6b4bb261abbab43a5ad5f" id="r_ab02fab0e70e6b4bb261abbab43a5ad5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_d_o_n_1_1_data_1_1_s_o___list_step.html">SO_ListStep</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab02fab0e70e6b4bb261abbab43a5ad5f">Key</a><code> [get]</code></td></tr>
+<tr class="memdesc:ab02fab0e70e6b4bb261abbab43a5ad5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the list of steps for the scenario.  <br /></td></tr>
 <tr class="memitem:ac7d32f261e249856bb23fcece39b2805" id="r_ac7d32f261e249856bb23fcece39b2805"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56">E_NameActionInteractable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7d32f261e249856bb23fcece39b2805">Values</a><code> [get]</code></td></tr>
+<tr class="memdesc:ac7d32f261e249856bb23fcece39b2805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the ordered list of action IDs for the scenario.  <br /></td></tr>
 <tr class="memitem:a876c6d9d9987ec500311e5db37b1fffc" id="r_a876c6d9d9987ec500311e5db37b1fffc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a876c6d9d9987ec500311e5db37b1fffc">CurrentValueIndex</a><code> [get]</code></td></tr>
+<tr class="memdesc:a876c6d9d9987ec500311e5db37b1fffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index of the current step in the scenario.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-events" class="groupheader"><a id="events" name="events"></a>
 Events</h2></td></tr>
 <tr class="memitem:a8d39d847cebb4113256db7e26741585b" id="r_a8d39d847cebb4113256db7e26741585b"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56">E_NameActionInteractable</a>, bool, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d39d847cebb4113256db7e26741585b">OnActionPassed</a></td></tr>
+<tr class="memdesc:a8d39d847cebb4113256db7e26741585b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event invoked when an action is successfully passed.  <br /></td></tr>
 <tr class="memitem:a2c6c36536ce7dc279db12d8b4cab5405" id="r_a2c6c36536ce7dc279db12d8b4cab5405"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="class_o_d_o_n_1_1_data_1_1_s_o___step.html">SO_Step</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c6c36536ce7dc279db12d8b4cab5405">OnSetNewAction</a></td></tr>
+<tr class="memdesc:a2c6c36536ce7dc279db12d8b4cab5405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event invoked when a new action is set.  <br /></td></tr>
 <tr class="memitem:ab63ea05a463a19b968372b7cc6a934d8" id="r_ab63ea05a463a19b968372b7cc6a934d8"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56">E_NameActionInteractable</a>, bool, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab63ea05a463a19b968372b7cc6a934d8">OnActionFailed</a></td></tr>
+<tr class="memdesc:ab63ea05a463a19b968372b7cc6a934d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event invoked when an action fails.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>ScriptableObject representing a scenario in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> system. Manages a sequence of steps, tracks progress, and handles events for step validation and scenario progression. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="abf9e75421559edd6a982824ee6210959" name="abf9e75421559edd6a982824ee6210959"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf9e75421559edd6a982824ee6210959">&#9670;&#160;</a></span>InvokeOnSetNewAction()</h2>
 
@@ -149,6 +164,8 @@ Events</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Invokes the event to set a new action for the current step. </p>
 
 </div>
 </div>
@@ -167,6 +184,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Resets the scenario to the first step. </p>
+
 </div>
 </div>
 <a id="a801f9d0ae4bfbde01512d91a5a525c8a" name="a801f9d0ae4bfbde01512d91a5a525c8a"></a>
@@ -183,6 +202,14 @@ Events</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the scenario steps and reorders the step list to match the provided action IDs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">setValues</td><td>List of action IDs to set for the scenario.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -210,6 +237,16 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Updates the current step index based on the result of the step validation. Invokes events for action passed, failed, and new action set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stepId</td><td>The action ID of the step.</td></tr>
+    <tr><td class="paramname">stepIsCorrect</td><td>Indicates if the step was completed correctly.</td></tr>
+    <tr><td class="paramname">stepDescription</td><td>Description of the step.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
@@ -233,6 +270,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the index of the current step in the scenario. </p>
+
 </div>
 </div>
 <a id="ab02fab0e70e6b4bb261abbab43a5ad5f" name="ab02fab0e70e6b4bb261abbab43a5ad5f"></a>
@@ -254,6 +293,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets the list of steps for the scenario. </p>
 
 </div>
 </div>
@@ -277,6 +318,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the ordered list of action IDs for the scenario. </p>
+
 </div>
 </div>
 <a name="doc-event-members" id="doc-event-members"></a><h2 id="header-doc-event-members" class="groupheader">Event Documentation</h2>
@@ -292,6 +335,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Event invoked when an action fails. </p>
+
 </div>
 </div>
 <a id="a8d39d847cebb4113256db7e26741585b" name="a8d39d847cebb4113256db7e26741585b"></a>
@@ -306,6 +351,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Event invoked when an action is successfully passed. </p>
+
 </div>
 </div>
 <a id="a2c6c36536ce7dc279db12d8b4cab5405" name="a2c6c36536ce7dc279db12d8b4cab5405"></a>
@@ -319,6 +366,8 @@ Events</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Event invoked when a new action is set. </p>
 
 </div>
 </div>

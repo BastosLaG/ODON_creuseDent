@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,6 +108,9 @@ $(function() {
   <div class="headertitle"><div class="title">ODON.GameManager.HighlightsManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages the highlighting of steps in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Registers steps with their highlight targets, controls outline visibility, and provides access to step targets.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ODON.GameManager.HighlightsManager:</div>
 <div class="dyncontent">
@@ -120,15 +123,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a39fee2684c696b718cfe7d0d6f829101" id="r_a39fee2684c696b718cfe7d0d6f829101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39fee2684c696b718cfe7d0d6f829101">RegisterStep</a> (Data.SO_Step step, Transform target)</td></tr>
 <tr class="memdesc:a39fee2684c696b718cfe7d0d6f829101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a step with its corresponding highlights target. This method ensures that the step is only registered once and initializes highlighting if necessary.  <br /></td></tr>
 <tr class="memitem:a6146d4a3a34f6db106620d8555fbffd0" id="r_a6146d4a3a34f6db106620d8555fbffd0"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6146d4a3a34f6db106620d8555fbffd0">GetStepBehaviour</a> (Data.SO_Step step)</td></tr>
+<tr class="memdesc:a6146d4a3a34f6db106620d8555fbffd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the highlight target transform for a given step.  <br /></td></tr>
 <tr class="memitem:a52553123d54e6057b845c0ead2acfc2f" id="r_a52553123d54e6057b845c0ead2acfc2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52553123d54e6057b845c0ead2acfc2f">InitHighLight</a> (GameObject obj)</td></tr>
 <tr class="memdesc:a52553123d54e6057b845c0ead2acfc2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the highlight for a given GameObject. This method adds an outline component to the GameObject if it does not already have one.  <br /></td></tr>
 <tr class="memitem:af5f2cbead66eff7e68ded3a6a49f64ac" id="r_af5f2cbead66eff7e68ded3a6a49f64ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5f2cbead66eff7e68ded3a6a49f64ac">OnSetNewAction</a> (Data.SO_Step step)</td></tr>
+<tr class="memdesc:af5f2cbead66eff7e68ded3a6a49f64ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the outline for the target associated with the given step when a new action is set.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a0bd6e8a7f802cb7f8fb85cab2899245e" id="r_a0bd6e8a7f802cb7f8fb85cab2899245e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_d_o_n_1_1_game_manager_1_1_highlights_manager.html">HighlightsManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bd6e8a7f802cb7f8fb85cab2899245e">Instance</a><code> [get]</code></td></tr>
+<tr class="memdesc:a0bd6e8a7f802cb7f8fb85cab2899245e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the singleton instance of <a class="el" href="class_o_d_o_n_1_1_game_manager_1_1_highlights_manager.html" title="Manages the highlighting of steps in the ODON application. Registers steps with their highlight targe...">HighlightsManager</a>.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages the highlighting of steps in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Registers steps with their highlight targets, controls outline visibility, and provides access to step targets. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a6146d4a3a34f6db106620d8555fbffd0" name="a6146d4a3a34f6db106620d8555fbffd0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6146d4a3a34f6db106620d8555fbffd0">&#9670;&#160;</a></span>GetStepBehaviour()</h2>
 
@@ -143,6 +151,15 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the highlight target transform for a given step. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">step</td><td>The scenario step.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The transform associated with the step, or null if not found.</dd></dl>
 
 </div>
 </div>
@@ -164,7 +181,7 @@ Properties</h2></td></tr>
 <p>Initializes the highlight for a given GameObject. This method adds an outline component to the GameObject if it does not already have one. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj</td><td></td></tr>
+    <tr><td class="paramname">obj</td><td>The GameObject to initialize highlighting for.</td></tr>
   </table>
   </dd>
 </dl>
@@ -185,6 +202,14 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enables the outline for the target associated with the given step when a new action is set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">step</td><td>The scenario step for which to enable highlighting.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -210,8 +235,8 @@ Properties</h2></td></tr>
 <p>Registers a step with its corresponding highlights target. This method ensures that the step is only registered once and initializes highlighting if necessary. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">step</td><td></td></tr>
-    <tr><td class="paramname">target</td><td></td></tr>
+    <tr><td class="paramname">step</td><td>The scenario step to register.</td></tr>
+    <tr><td class="paramname">target</td><td>The transform to highlight for this step.</td></tr>
   </table>
   </dd>
 </dl>
@@ -238,6 +263,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets the singleton instance of <a class="el" href="class_o_d_o_n_1_1_game_manager_1_1_highlights_manager.html" title="Manages the highlighting of steps in the ODON application. Registers steps with their highlight targe...">HighlightsManager</a>. </p>
 
 </div>
 </div>

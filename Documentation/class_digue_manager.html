@@ -33,7 +33,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="SGRL_Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.0.12</span>
+   <div id="projectname">ODON<span id="projectnumber">&#160;V0.4.1</span>
    </div>
    <div id="projectbrief">SeriousGame pour le CHU de Toulouse</div>
   </td>
@@ -108,6 +108,9 @@ $(function() {
   <div class="headertitle"><div class="title">DigueManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages the digue (dam) system in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Handles initialization, position updates, distance calculations, and resetting logic for the dam points and joints.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for DigueManager:</div>
 <div class="dyncontent">
@@ -118,10 +121,15 @@ Inheritance diagram for DigueManager:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac2e8708dd1c9a5bc10c13433318d63b8" id="r_ac2e8708dd1c9a5bc10c13433318d63b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2e8708dd1c9a5bc10c13433318d63b8">UpdateRigsPosition</a> ()</td></tr>
+<tr class="memdesc:ac2e8708dd1c9a5bc10c13433318d63b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the positions of the rig joints based on the parent points.  <br /></td></tr>
 <tr class="memitem:a64bb25656973844f11f68ae15bc8c275" id="r_a64bb25656973844f11f68ae15bc8c275"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64bb25656973844f11f68ae15bc8c275">CalculateDistances</a> ()</td></tr>
+<tr class="memdesc:a64bb25656973844f11f68ae15bc8c275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the maximum distance between any two joints.  <br /></td></tr>
 <tr class="memitem:a426702d1e78850114d70060eb58519c8" id="r_a426702d1e78850114d70060eb58519c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a426702d1e78850114d70060eb58519c8">ResetDigue</a> ()</td></tr>
+<tr class="memdesc:a426702d1e78850114d70060eb58519c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the digue to the root point and restores parent points and joints to their initial state.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages the digue (dam) system in the <a class="el" href="namespace_o_d_o_n.html">ODON</a> application. Handles initialization, position updates, distance calculations, and resetting logic for the dam points and joints. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a64bb25656973844f11f68ae15bc8c275" name="a64bb25656973844f11f68ae15bc8c275"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64bb25656973844f11f68ae15bc8c275">&#9670;&#160;</a></span>CalculateDistances()</h2>
 
@@ -136,6 +144,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculates the maximum distance between any two joints. </p>
+<dl class="section return"><dt>Returns</dt><dd>The maximum distance found between joints.</dd></dl>
 
 </div>
 </div>
@@ -154,6 +165,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Resets the digue to the root point and restores parent points and joints to their initial state. </p>
+
 </div>
 </div>
 <a id="ac2e8708dd1c9a5bc10c13433318d63b8" name="ac2e8708dd1c9a5bc10c13433318d63b8"></a>
@@ -170,6 +183,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Updates the positions of the rig joints based on the parent points. </p>
 
 </div>
 </div>

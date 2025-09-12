@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['completionstatustype_0',['CompletionStatusType',['../class_student_record.html#a487f0e8da76439d84ecd995b99ca0016',1,'StudentRecord']]],
-  ['credittype_1',['CreditType',['../class_student_record.html#a42f1f138eb19eefe263c9678a59da2b6',1,'StudentRecord']]]
+  ['e_5fnameactioninteractable_0',['E_NameActionInteractable',['../namespace_o_d_o_n_1_1_data.html#a8732f0678a21eada50e07a9a21cb6e56',1,'ODON::Data']]]
 ];

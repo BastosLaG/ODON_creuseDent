@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['stateteeth_0',['StateTeeth',['../namespace_o_d_o_n_1_1_data.html#a2937870793df7a2e636422681206d1d9',1,'ODON::Data']]],
-  ['successstatustype_1',['SuccessStatusType',['../class_student_record.html#abf2d771fac5d96dd844821618eb029d3',1,'StudentRecord']]],
-  ['systemgesturestate_2',['SystemGestureState',['../class_unity_engine_1_1_x_r_1_1_interaction_1_1_toolkit_1_1_samples_1_1_hands_1_1_meta_system_gesture_detector.html#ad8c3332caae7b41a171a7dffe0068480',1,'UnityEngine::XR::Interaction::Toolkit::Samples::Hands::MetaSystemGestureDetector']]]
+  ['xrdetectedhandmeshlayout_0',['XRDetectedHandMeshLayout',['../class_unity_engine_1_1_x_r_1_1_hands_1_1_samples_1_1_visualizer_sample_1_1_hand_visualizer.html#a44d71d487cbf286580d66c6fef9451b3',1,'UnityEngine::XR::Hands::Samples::VisualizerSample::HandVisualizer']]]
 ];

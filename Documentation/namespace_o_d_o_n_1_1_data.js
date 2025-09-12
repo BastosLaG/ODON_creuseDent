@@ -2,9 +2,9 @@ var namespace_o_d_o_n_1_1_data =
 [
     [ "PatientData", "class_o_d_o_n_1_1_data_1_1_patient_data.html", "class_o_d_o_n_1_1_data_1_1_patient_data" ],
     [ "PatientMeta", "struct_o_d_o_n_1_1_data_1_1_patient_meta.html", "struct_o_d_o_n_1_1_data_1_1_patient_meta" ],
-    [ "PatientMetaData", "class_o_d_o_n_1_1_data_1_1_patient_meta_data.html", "class_o_d_o_n_1_1_data_1_1_patient_meta_data" ],
     [ "SceneNames", "class_o_d_o_n_1_1_data_1_1_scene_names.html", "class_o_d_o_n_1_1_data_1_1_scene_names" ],
     [ "SO_ListStep", "class_o_d_o_n_1_1_data_1_1_s_o___list_step.html", "class_o_d_o_n_1_1_data_1_1_s_o___list_step" ],
+    [ "SO_PatientMetaData", "class_o_d_o_n_1_1_data_1_1_s_o___patient_meta_data.html", "class_o_d_o_n_1_1_data_1_1_s_o___patient_meta_data" ],
     [ "SO_Scenario", "class_o_d_o_n_1_1_data_1_1_s_o___scenario.html", "class_o_d_o_n_1_1_data_1_1_s_o___scenario" ],
     [ "SO_Step", "class_o_d_o_n_1_1_data_1_1_s_o___step.html", "class_o_d_o_n_1_1_data_1_1_s_o___step" ],
     [ "Struct_Teeth", "struct_o_d_o_n_1_1_data_1_1_struct___teeth.html", "struct_o_d_o_n_1_1_data_1_1_struct___teeth" ],
