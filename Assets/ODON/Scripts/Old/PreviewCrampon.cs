@@ -1,8 +1,10 @@
 using UnityEngine;
+using System;
 
 
 namespace ODON
 {
+    [Obsolete("PreviewCrampon is deprecated, use the new interaction system.")]
     public class CramponPreview : MonoBehaviour
     {
         [SerializeField] private Renderer rd;

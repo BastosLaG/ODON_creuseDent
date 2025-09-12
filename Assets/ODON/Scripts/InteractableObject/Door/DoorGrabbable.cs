@@ -6,8 +6,7 @@ public class DoorGrabbable : MonoBehaviour
     
     public void ApplyForceAtGrabPoint()
     {
-        transform.position = handler.position;
-        transform.rotation = handler.rotation;
+        transform.SetPositionAndRotation(handler.position, handler.rotation);
         transform.localScale = handler.localScale;
     }
 }

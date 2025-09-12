@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+[Obsolete("SendStatistics is deprecated.")]
 public class SendStatistics : MonoBehaviour
 {
     //==========================
@@ -106,7 +107,7 @@ public class SendStatistics : MonoBehaviour
         etapeTimes.Add((float)(now - stepTime).TotalSeconds);
         stepTime = now;
     }
-    
+
     public void CreateError(string errorMessage)
     {
         Debug.Log("Erreur du joueur : " + errorMessage);

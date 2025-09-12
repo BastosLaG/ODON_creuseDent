@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace ODON.InteractableObject
 {
+    [System.Obsolete("PinceAnimator is deprecated, use the new interaction system.")]
     public class PinceAnimator : MonoBehaviour
     {
         [Header("Crampon Anchor")]

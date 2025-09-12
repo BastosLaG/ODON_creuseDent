@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace ODON.InteractableObject
 {
+    [Obsolete("PreviewDigDam is deprecated, use the new interaction system.")]
     public class PreviewDigDam : MonoBehaviour
     {
         [SerializeField] private MeshRenderer meshRenderer;
@@ -16,7 +17,7 @@ namespace ODON.InteractableObject
             }
 
             // Initially disable the mesh renderer
-            meshRenderer.enabled = false; 
+            meshRenderer.enabled = false;
         }
 
         public void SetPreview(bool isActive)

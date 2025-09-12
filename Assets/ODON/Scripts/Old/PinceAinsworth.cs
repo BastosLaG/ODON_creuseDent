@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 namespace ODON.InteractableObject
 {
+    [Obsolete("PinceAinsworth is deprecated, use the new interaction system.")]
     public class PinceAinsworth : MonoBehaviour
     {
         [Header("Preview Dig Dam Components")]
@@ -26,7 +28,7 @@ namespace ODON.InteractableObject
                 other.GetComponent<PreviewDigDam>().SetPreview(true);
             }
         }
-        
+
         private void OnTriggerExit(Collider other)
         {
             if (other.GetComponent<PreviewDigDam>() != null)

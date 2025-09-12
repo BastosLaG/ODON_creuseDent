@@ -5,6 +5,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
+
+[Obsolete("SetObjectGrabable is deprecated, use the new interaction system.")]
 public class SetObjectGrabable : MonoBehaviour
 {
     [SerializeField] private InteractionLayerMask interactLayers = 2;
@@ -34,7 +36,7 @@ public class SetObjectGrabable : MonoBehaviour
     {
         Rigidbody rb = GetComponent<Rigidbody>() ?? gameObject.AddComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
-        
+
         rb.isKinematic = _itemKinematic;
         rb.constraints = _constrainRBody ? RigidbodyConstraints.FreezeAll : RigidbodyConstraints.None;
 

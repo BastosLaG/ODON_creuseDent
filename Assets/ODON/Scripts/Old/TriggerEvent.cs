@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+[Obsolete("TriggerEvent is deprecated")]
 public class TriggerEvent : MonoBehaviour
 {
     [SerializeField] private LayerMask _triggerLayers;
@@ -41,6 +43,6 @@ public class TriggerEvent : MonoBehaviour
 
     public (UnityEvent, UnityEvent, UnityEvent) GetEvents()
     {
-        return new ( _triggerEnterEvent, _triggerStayEvent, _triggerExitEvent);
+        return new(_triggerEnterEvent, _triggerStayEvent, _triggerExitEvent);
     }
 }

@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 
+[Obsolete("ToothEvent is deprecated, use the new interaction system.")]
 public class ToothEvent : MonoBehaviour
 {
     [SerializeField] Material _cramponMat;
@@ -23,7 +25,7 @@ public class ToothEvent : MonoBehaviour
         if (!_cramponplaced)
         {
             GetComponent<MeshRenderer>().enabled = isShowed;
-            
+
             GameObject coll = _tEvent.GetTriggerColl();
             if (_tEvent.GetTriggerColl() != null && !_tEvent.GetTriggerColl().GetComponent<SetObjectGrabable>().ItemIsSelected)
             {
@@ -35,7 +37,7 @@ public class ToothEvent : MonoBehaviour
     }
     private void ChangeTexture(bool isPlaced)
     {
-        print("here"+ isPlaced);
+        print("here" + isPlaced);
         if (isPlaced) GetComponent<MeshRenderer>().material = _cramponMat;
         GetComponent<MeshRenderer>().enabled = true;
     }

@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Feedback))]
+[RequireComponent(typeof(Feedback)), Obsolete("OdonFeedBackManager is deprecated, use the new feedback system.")]
 public class OdonFeedBackManager : MonoBehaviour
 {
 
@@ -12,7 +13,7 @@ public class OdonFeedBackManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Ajoute le nom d'utilisateur au formulaire de données.
+    /// Ajoute le nom d'utilisateur au formulaire de donnï¿½es.
     /// </summary>
     /// <param name="nomPrenom"> nom d'utilisateur </param>
     public void AddFeedBack(string nomPrenom)
@@ -21,10 +22,10 @@ public class OdonFeedBackManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Ajoute une donnée dont la réponse est pré-enregistré au formulaire de données.
+    /// Ajoute une donnï¿½e dont la rï¿½ponse est prï¿½-enregistrï¿½ au formulaire de donnï¿½es.
     /// </summary>
-    /// <param name="feedbackName"> identifiant de la donnée : "PoseEffectuee" | "Patient". </param>
-    /// <param name="feedbackAnswerId"> identifiant de la réponse ex: 0 -> pose classique, 1 -> pose parachute (voir fonction pour plus de details...) </param>
+    /// <param name="feedbackName"> identifiant de la donnï¿½e : "PoseEffectuee" | "Patient". </param>
+    /// <param name="feedbackAnswerId"> identifiant de la rï¿½ponse ex: 0 -> pose classique, 1 -> pose parachute (voir fonction pour plus de details...) </param>
     public void AddFeedBack(string feedbackName, int feedbackAnswerId)
     {
         switch (feedbackName)
@@ -39,18 +40,18 @@ public class OdonFeedBackManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Ajoute les équipements équipées du joueur au formulaire de données.
+    /// Ajoute les ï¿½quipements ï¿½quipï¿½es du joueur au formulaire de donnï¿½es.
     /// </summary>
-    /// <param name="equipements"> liste de 3 booléens correspondant aux trois équipements équipés ou non par le joueur. </param>
+    /// <param name="equipements"> liste de 3 boolï¿½ens correspondant aux trois ï¿½quipements ï¿½quipï¿½s ou non par le joueur. </param>
     public void AddFeedBack(bool[] equipements)
     {
         feedback.AssignData(2, (equipements[0] ? "Gants ok, " : "Pas de gants, ") + (equipements[1] ? "blouse ok, " : "pas de blouse, ") + (equipements[2] ? "masque ok." : "pas de masque."));
     }
 
     /// <summary>
-    ///  Ajoute une donnée dont la réponse est correcte ou non.
+    ///  Ajoute une donnï¿½e dont la rï¿½ponse est correcte ou non.
     /// </summary>
-    /// <param name="feedbackName"> identifiant de la donnée : "BonDessinDigue" | "BonnePoseCrampon" | "BonPoseDigue" | "CorrectionFilDentaire" | "PoseCadreEnU". </param>
+    /// <param name="feedbackName"> identifiant de la donnï¿½e : "BonDessinDigue" | "BonnePoseCrampon" | "BonPoseDigue" | "CorrectionFilDentaire" | "PoseCadreEnU". </param>
     /// <param name="feedbackAnswer"></param>
     public void AddFeedBack(string feedbackName, bool feedbackAnswer)
     {

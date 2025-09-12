@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 
+[Obsolete("TakeAccessory is deprecated")]
 public class TakeAccessory : MonoBehaviour
 {
     [Header("Options d'équipement")]
@@ -21,7 +23,7 @@ public class TakeAccessory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isEquipped) return; 
+        if (isEquipped) return;
 
         if (!isGloves && other.CompareTag("Player"))
         {
@@ -42,7 +44,7 @@ public class TakeAccessory : MonoBehaviour
 
     private void AttachToTarget(Transform parent, Transform positionTarget)
     {
-        
+
         transform.SetParent(parent);
         transform.localPosition = positionTarget.localPosition;
         transform.localRotation = Quaternion.identity;
@@ -53,7 +55,7 @@ public class TakeAccessory : MonoBehaviour
 
     private void EquipGlove(bool isRightHand, Transform handTarget)
     {
-       
+
         GameObject glovePrefab = isRightHand ? rightglovePrefab : leftglovePrefab;
         GameObject glove = Instantiate(glovePrefab, handTarget);
         glove.transform.localPosition = Vector3.zero;

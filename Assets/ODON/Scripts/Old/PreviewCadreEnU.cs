@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
+[Obsolete("CadreEnUPreview is deprecated, use the new interaction system.")]
 public class CadreEnUPreview : MonoBehaviour
 {
     [SerializeField] private Transform cadreEnUFinalTransform;

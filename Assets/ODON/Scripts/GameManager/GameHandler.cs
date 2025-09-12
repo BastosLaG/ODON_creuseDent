@@ -6,24 +6,37 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 namespace ODON.GameManager
 {
+    /// <summary>
+    /// Handles the main game state and data management for the ODON application.
+    /// Manages patient data, error tracking, player input, and ensures a single instance throughout the game.
+    /// </summary>
     public class GameHandler : MonoBehaviour
     {
         #region Singleton
         /// <summary>
         /// Singleton instance of GameHandler.
+        /// Ensures only one instance exists throughout the game.
         /// </summary>
-        /// <remarks>
-        /// This class manages the game state, including patient data, interactive items, and security items.
-        /// It ensures that only one instance of GameHandler exists throughout the game.
         private static GameHandler instance;
+
+        /// <summary>
+        /// Gets the singleton instance of GameHandler.
+        /// </summary>
         public static GameHandler Instance => instance;
         #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////////
 
         #region Erreur Data
+        /// <summary>
+        /// List of error messages encountered during gameplay.
+        /// </summary>
         [Header("Error Data")]
         [SerializeField] private List<string> errorData = new();
+
+        /// <summary>
+        /// Gets the list of error messages.
+        /// </summary>
         public List<string> ErrorData => errorData;
         #endregion
 
@@ -31,20 +44,33 @@ namespace ODON.GameManager
 
         #region Patient Data
         /// <summary>
-        /// The ID of the current technique being used.
+        /// The patient data for the current session.
         /// </summary>
-        /// <remarks>
-        /// This ID corresponds to the technique currently being performed by the player.
-        /// </remarks>
         [Header("Patient Data")]
         [SerializeField] private Data.PatientData patientData;
+
+        /// <summary>
+        /// Event invoked when patient data is updated.
+        /// </summary>
         public UnityEvent<Data.PatientData> onUpdatePatientData = new();
+
+        /// <summary>
+        /// The current state of the patient.
+        /// </summary>
         [SerializeField] private Data.PatientState patientState = Data.PatientState.InWaitingRoom;
+
+        /// <summary>
+        /// Gets or sets the patient data.
+        /// </summary>
         public Data.PatientData PatientData
         {
             get => patientData;
             set => patientData = value;
         }
+
+        /// <summary>
+        /// Gets or sets the current patient state.
+        /// </summary>
         public Data.PatientState PatientState
         {
             get => patientState;
@@ -53,9 +79,16 @@ namespace ODON.GameManager
         #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////////
-        #region 
+        #region Player Data
+        /// <summary>
+        /// Reference to the player's input action manager.
+        /// </summary>
         [Header("Player Data")]
         [SerializeField] private InputActionManager playerInput;
+
+        /// <summary>
+        /// Gets the player's input action manager.
+        /// </summary>
         public InputActionManager PlayerInput
         {
             get => playerInput;
@@ -65,6 +98,9 @@ namespace ODON.GameManager
         //////////////////////////////////////////////////////////////////////////////////////////
 
         #region Unity Methods
+        /// <summary>
+        /// Initializes the singleton instance on Awake.
+        /// </summary>
         private void Awake()
         {
             if (instance == null)
@@ -76,33 +112,48 @@ namespace ODON.GameManager
                 Destroy(gameObject);
             }
         }
-
         #endregion
 
         //////////////////////////////////////////////////////////////////////////////////////////
 
         #region Patient Management
+        /// <summary>
+        /// Sets the patient state to InCabinet.
+        /// </summary>
         public void PatientInCabinet()
         {
             patientState = Data.PatientState.InCabinet;
         }
 
+        /// <summary>
+        /// Sets the patient state to InBed.
+        /// </summary>
         public void PatientInBed()
         {
             patientState = Data.PatientState.InBed;
         }
 
+        /// <summary>
+        /// Sets the patient state to InWaitingRoom.
+        /// </summary>
         public void PatientInWaitingRoom()
         {
             patientState = Data.PatientState.InWaitingRoom;
         }
 
+        /// <summary>
+        /// Sets the patient state to Leaving.
+        /// </summary>
         public void PatientLeaving()
         {
             patientState = Data.PatientState.Leaving;
         }
 
-        public void UpdatePatientData(Data.PatientMetaData patientMetaData)
+        /// <summary>
+        /// Updates the patient data and invokes the update event.
+        /// </summary>
+        /// <param name="patientMetaData">The new patient metadata.</param>
+        public void UpdatePatientData(Data.SO_PatientMetaData patientMetaData)
         {
             PatientData.PatientMetaData = patientMetaData;
             onUpdatePatientData?.Invoke(PatientData);

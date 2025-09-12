@@ -14,7 +14,7 @@ public class PrimaryButtonWatcher : MonoBehaviour
     {
         if (primaryButtonPress == null)
         {
-            primaryButtonPress = new ();
+            primaryButtonPress = new();
         }
 
         devicesWithPrimaryButton = new List<InputDevice>();
@@ -22,7 +22,7 @@ public class PrimaryButtonWatcher : MonoBehaviour
 
     void OnEnable()
     {
-        List<InputDevice> allDevices = new ();
+        List<InputDevice> allDevices = new();
         InputDevices.GetDevices(allDevices);
         foreach (InputDevice device in allDevices)
             InputDevices_deviceConnected(device);

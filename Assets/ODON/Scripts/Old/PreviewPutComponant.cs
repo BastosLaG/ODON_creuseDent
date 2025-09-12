@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace ODON
 {
+    [Obsolete("PreviewPutComponent is deprecated, use the new interaction system.")]
     public class PreviewPutComponent : MonoBehaviour
     {
         [SerializeField] private Material baseMaterial;

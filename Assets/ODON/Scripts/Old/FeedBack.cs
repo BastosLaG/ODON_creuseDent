@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 
+[Obsolete("Feedback is deprecated, use the new feedback system.")]
 public class Feedback : MonoBehaviour
 {
     private string formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeuA82XVzL6SUEzNIhZAp3_nYok95jLcAybFuUT6QJwBztRdw/formResponse";

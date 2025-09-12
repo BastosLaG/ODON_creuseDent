@@ -1,31 +1,74 @@
+using System;
 using UnityEngine;
 
+/// <summary>
+/// Manages the digue (dam) system in the ODON application.
+/// Handles initialization, position updates, distance calculations, and resetting logic for the dam points and joints.
+/// </summary>
+[Obsolete("DigueManager is deprecated.")]
 public class DigueManager : MonoBehaviour
 {
+    /// <summary>
+    /// The point at which the digue will start. If null, defaults to this GameObject's transform.
+    /// </summary>
     [Header("Root Point")]
     [Tooltip("The point at which the digue will start. If null, the root will default to this GameObject's transform.")]
     [SerializeField] private Transform rootPoint;
+
+    /// <summary>
+    /// Array of root parent points for the digue.
+    /// </summary>
     [SerializeField] private Transform[] rootParentsPoints;
+
+    /// <summary>
+    /// Array of root joints for the digue.
+    /// </summary>
     [SerializeField] private Transform[] rootJoints;
 
+    /// <summary>
+    /// The maximum allowed distance between any two points. If exceeded, the digue will reset to the root point.
+    /// </summary>
     [Header("Limit Distance")]
     [Tooltip("The maximum allowed distance between any two points. If exceeded, the digue will reset to the root point.")]
     [Range(0f, 1.0f)]
     [SerializeField] private float limitsDistance = 0.4f;
 
+    /// <summary>
+    /// Number of parent points.
+    /// </summary>
     [SerializeField] private int nbrParentPoints;
+
+    /// <summary>
+    /// Number of joints.
+    /// </summary>
     [SerializeField] private int nbrJoints;
+
+    /// <summary>
+    /// Array of parent points for the digue.
+    /// </summary>
     [SerializeField] private Transform[] parentsPoints;
+
+    /// <summary>
+    /// Array of joints for the digue.
+    /// </summary>
     [SerializeField] private Transform[] joints;
 
-
+    /// <summary>
+    /// Enables debug logging.
+    /// </summary>
     [Header("Debug")]
     [SerializeField] private bool debugger = false;
+
+    /// <summary>
+    /// Enables debug logging for distance calculations.
+    /// </summary>
     [SerializeField] private bool debugDistanceCalculated = false;
 
+    /// <summary>
+    /// Initializes the digue manager, sets up points and joints, and performs initial calculations.
+    /// </summary>
     void Start()
     {
-
         // Ensure rootPoint is set
         if (rootPoint == null)
         {
@@ -77,6 +120,11 @@ public class DigueManager : MonoBehaviour
         UpdateRigsPosition();
         CalculateDistances();
     }
+
+    /// <summary>
+    /// Updates the positions of the rig joints and checks distances each frame.
+    /// Resets the digue if the maximum distance is exceeded.
+    /// </summary>
     void Update()
     {
         UpdateRigsPosition();
@@ -87,6 +135,9 @@ public class DigueManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Updates the positions of the rig joints based on the parent points.
+    /// </summary>
     public void UpdateRigsPosition()
     {
         if (parentsPoints.Length == 0 || parentsPoints[0] == null)
@@ -107,6 +158,10 @@ public class DigueManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Calculates the maximum distance between any two joints.
+    /// </summary>
+    /// <returns>The maximum distance found between joints.</returns>
     public float CalculateDistances()
     {
         if (joints == null || joints.Length == 0)
@@ -137,7 +192,9 @@ public class DigueManager : MonoBehaviour
         return maxDistance;
     }
 
-
+    /// <summary>
+    /// Resets the digue to the root point and restores parent points and joints to their initial state.
+    /// </summary>
     public void ResetDigue()
     {
         if (rootPoint == null)

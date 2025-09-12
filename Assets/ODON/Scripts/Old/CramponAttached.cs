@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 
+[Obsolete("CramponAttached is deprecated, use the new interaction system.")]
 public class CramponAttached : MonoBehaviour
 {
     [Header("This attachment point")]
-    public Transform attachPoint1; 
+    public Transform attachPoint1;
     public Transform attachPoint2;
     [Header("Target attachment point")]
     public Transform targetAttachPoint1;
@@ -12,10 +14,12 @@ public class CramponAttached : MonoBehaviour
 
     [Header("Booléen")]
     public bool isCanAttach = false;
-    private bool isAttached = false; 
+    private bool isAttached = false;
 
-    private void Update() {
-        if (isAttached) {
+    private void Update()
+    {
+        if (isAttached)
+        {
             transform.position = targetAttachPoint1.position;
             // transform.rotation = targetAttachPoint1.rotation;
 
